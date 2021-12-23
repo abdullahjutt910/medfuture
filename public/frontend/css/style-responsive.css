@@ -1,0 +1,670 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+.register-inner-tab-1{
+    display: none;
+}
+.registerSection .sideImg{
+    width: 100% !important;
+    max-width: 529px !important;
+}
+.registerSection .headPara{
+    max-width: 450px !important;
+    width: 100% !important;
+}
+
+
+@media (min-width: 1399px){
+    .margn-top-82 {
+        margin-top: -44px !important;
+    }
+   
+    .margn-top {
+        margin-top: -40px !important;
+    }
+    .margn-top-122 {
+        margin-top: -70px !important;
+    }
+    .margn-top-155 {
+        margin-top: -90px  !important;
+    }
+.job-seaker-inner {
+    margin-right: 20px;
+}
+.affiliate-inner .col-lg-5{
+    width: 36%;
+}
+.forms-colored-div {
+    padding-right: 28px !important;
+}
+.upload-resume .forms-colored-div{
+    margin-right: -28px !important;
+}
+}
+
+    /* 1360px css start here */
+
+
+@media (max-width: 1360px){
+    .margn-top {
+        margin-top: -45px !important;
+    }
+    .margn-top-122 {
+        margin-top: -100px !important;
+    }
+    .margn-top-155 {
+        margin-top: -141px !important;
+    }
+    
+    .navbar-brand img{
+        width: 180px;
+    }
+    .navbar .nav-item{
+        padding: 0px;
+    }
+    .navbar .nav-item a{
+        padding: 35px 15px !important;
+    }   
+
+    .live-chat{
+    right: 0px;
+    }
+
+/* /////////////////////////////////////////// australia css start here //////////////////////////////// */
+
+
+/* australia home start here */
+
+.registerSection .registerSectionInner {
+    padding: 142px 0 60px 70px !important;
+}
+
+.margn-top-82 {
+    margin-top: -60px !important;
+}
+
+}
+
+/* 1360px css end here*/
+
+
+
+@media (max-width: 1199px){
+    .upload-resume .forms-colored-div{
+        margin-right: -18px !important;
+    }
+    .forms-colored-div {
+        padding-right: 18px !important;
+    }
+    .sec-footer-bottom .copyright, .sec-footer-bottom .footer-menu {
+        padding-top: 11px;
+        padding-bottom: 11px;
+    }
+    .margn-top {
+        margin-top: -70px !important;
+    }
+    .margn-top-155 {
+        margin-top: -135px !important;
+    }
+    .margn-top-82 {
+        margin-top: -70px !important;
+    }
+    
+    .jobs-section .jobs-col:last-child {
+        width: 100% !important;
+    }
+    /* header css start here 1199px*/
+    .sec-topbar .country-icon li:first-child{
+        margin-left: 0px;
+    }
+    .navbar{
+        padding: 0px 10px;
+    }
+    .register-inner a{
+        padding: 11px 5px;
+    }
+    .register-inner{
+        padding: 0px 11px !important;
+        padding-right: 13px !important;
+    }
+    .navbar .nav-item a{
+        padding: 35px 6px !important;
+    }
+    .navbar .nav-item:last-child a {
+        padding-right: 13px !important;
+    }
+    
+    /* header css end here 1199px*/
+    /* footer css start here 1199px*/
+    .footer-img-wdth1{
+        height: 74px;
+    }
+    .sec-footer .affiliate .footer-img-wdth3 {
+        width: 160px;
+    }
+    .live-chat {
+        right: -8px;
+    }
+
+    /* footer css end here 1199px*/
+    
+    .registerSection .registerSectionInner {
+        padding: 142px 0 60px 40px !important;
+    }
+    /* .registerSection .headPara {
+        width: 255px !important;
+    } */
+
+
+/* home page main start here */
+.sec-blog h1 {
+    font-size: 29px;
+}
+.general-txt h2{
+    font-size: 20px;
+}
+
+.sec-doctor-banner h1{
+    font-size: 50px !important;
+}
+
+.registerSection .sideImg{
+    width: 392px;
+    object-fit: cover;
+    object-position: 74%;
+}
+.register-section-right{
+    padding-left: 70px;
+}
+
+/* home page main end here */
+
+
+
+
+    
+}
+@media (max-width: 991px){
+    .upload-resume .forms-colored-div{
+        margin-right: -12px !important;
+    }
+    .forms-colored-div {
+        padding-right: 12px !important;
+    }
+    .margn-top-155 {
+        margin-top: -204px !important;
+    }
+    .margn-top {
+        margin-top: -120px !important;
+    }
+    .margn-top-82 {
+        margin-top: -115px !important;
+    }
+    .margn-top-122 {
+        margin-top: -161px !important;
+    }
+    /* header css start here 991px*/
+    .we-word-inner ul{
+        flex-wrap: wrap;
+    }
+    .we-word-inner ul li:first-child,.we-word-inner ul li:nth-child(2){
+        width: 50%;
+        text-align: center;
+    }
+    .country-icon{
+        order: 2;
+    }
+    .sec-topbar .contact-info,.contact-info ul, .sec-topbar .contact-info li:first-child{
+        padding-left: 0px;
+    } 
+    .contact-info ul li p{
+        content-visibility: hidden;
+    }
+    .sec-topbar .contact-info ul{
+        justify-content: flex-start;
+    }
+    .sec-topbar .country-icon{
+        padding-right: 0px;
+    }
+    .sec-topbar .country-icon ul{
+        justify-content: end;
+    }
+    .navbar {
+        padding: 12px 10px;
+    }
+    .navbar-toggler{
+        display: none;
+    }
+    .collapse:not(.show) {
+        display: block;
+    }
+    .navbar-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .register-inner-tab-1{
+        display: block !important;
+    }
+    .register-inner-tab-2{
+        display: none;
+    }
+    .register-inner {
+        padding: 8px 11px !important;
+    }
+    .register-inner a:first-child::after{
+        top: 15px;
+    }
+    .down-arrow {
+        top: -2px;
+    }
+    .navbar .nav-item a {
+        padding: 35px 13px !important;
+    }
+    .navbar .nav-item:last-child a{
+        padding-right: 11px !important;
+    }
+    /* header css end here 991px*/
+   /* footer css start here 991px*/
+
+   .affiliate-inner{
+       display: flex;
+   }
+   .affiliate-inner .footer-img-3{
+       padding-left: 7px;
+       padding-top: 0px !important;
+   }
+   .footer-img-wdth3{
+    height: 75px;
+   }
+
+   .hotline,.footer-sign-up{ 
+        margin-top: 100px;
+    }
+    .copyright{
+        order: 2;
+        width: 100%;
+        text-align: center;
+    }
+    .footer-menu{
+        width: 100%;
+    }
+    .sec-footer-bottom .footer-menu ul{
+        justify-content: center;
+    }
+    .sec-footer-bottom .footer-menu ul li {
+        padding-left: 25px;
+    }
+    .live-chat{
+        display: none;
+    }
+
+    /* footer css end here 991px*/
+   
+   
+    /* home page main start here */
+    .bolg-right p{
+        margin-bottom: 40px;
+    }
+    .job-seaker-inner img{
+        width: 100%;
+    }
+    .job-seaker-inner {
+        margin-right: 20px; 
+    }
+    .sec-job-seaker .box-shadow{
+        border-radius: 40px !important;        
+    }
+    .job-seaker-col{
+        margin-top: 50px;
+    }
+    .register-section-img img{
+        width: 100%;
+    }
+    .register-section-img {
+        height: 100%;
+    }
+    .general-txt::after{
+        display: none;
+    }
+    .sec-latest-job .job-date, .sec-latest-job .general-inner{
+        padding-left: 30px;
+    }
+    .general-inner .job-disc{
+        padding-left: 20px;
+    }
+    .sec-latest-job .latest-job-txtarea .job-disc-right{
+        margin-top: -25px;
+    }
+    .sec-latest-job .job-disc-right p {
+        margin-bottom: 130px;
+    }
+    .Explore-btn{
+        text-align: center;
+    }
+
+    .country-inner {
+        margin-top: 50px;
+    }
+    .country-inner .country-img {
+        margin-top: 50px;
+    }
+    .sec-country .job-search{
+        display: none;
+    }
+    .heading-botm::after {
+        left: 298px;
+    }
+    .bolg-right{
+        padding-top: 100px;
+    }
+    .sec-blog h1, .sec-we-work h1, .sec-latest-job h1{
+        text-align: center;
+    }
+    .sec-we-work .heading-botm::after {
+        left: 100px;
+    }
+    .sec-latest-job .heading-botm::after {
+        left: 65px;
+    }
+    .Read-More-btn{
+        text-align: center;
+    }
+   /* home page main end here */
+   /*//////////////////////////////// AUS page main start here ///////////////////////////// */
+   .doctor-navbar .register-btn a{
+    padding: 13px 14px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+   }
+   .doctor-navbar .register-btn a:nth-child(2){
+       padding-left: 2px !important;
+
+   }
+   .doctor-navbar .register-inner-doc a:first-child::after{
+    top: 18px;
+    width: 10px;
+   }
+   .doctor-navbar .register-inner-doc .down-arrow {
+    right: 12px !important;
+}
+   .doctor-header .register-inner-doc .down-arrow{
+    right: 6px !important;
+   }
+   .registerSection{
+    height: 1370px !important;
+    flex-direction: column;
+   }
+
+   .registerSection .sideImg{
+    width: 100% !important;
+   }
+   .registerSection .registerSectionInner{
+    padding-left: 0px !important;
+    margin: 0 auto;
+   }
+   
+   .abm .row{
+    flex-direction: column;
+    margin: 0 175px !important;
+   }
+   .abm .abmInner{
+       width: 100% !important;
+       margin-top: 50px;
+   }
+   .abm .abmInner:first-child{
+    margin-top: 0px !important;
+
+   }
+   .job-search{
+    margin-top: -40px !important;
+   }
+   .job-form-inner .col-2{
+       width: 50% !important;
+   }
+   .job-form-inner .col-2:last-child{
+       width: 100% !important;
+   }
+   .job-seaker-col{
+       width: 50% !important;
+   }
+   
+   
+}
+@media (max-width: 767px) { 
+    
+    .upload-resume .forms-colored-div{
+        margin-right: -7px !important;
+    }
+    .forms-colored-div {
+        padding-right: 5px !important;
+    }
+    .margn-top,.margn-top-82, .margn-top-122, .margn-top-155 {
+        margin-top: 0px !important;
+    }
+    .doctor-navbar .navbar-brand {
+        padding-top: 20px;
+    }
+    /* header css start here 767px*/
+    .sec-topbar .contact-info{
+        padding-left: 16px;
+    }
+    .sec-topbar .country-icon{
+        padding-right: 16px;
+    }
+    .navbar-brand{
+        width: 100%;
+        margin-right: 0px;
+        text-align: center;
+        border-bottom: 2px solid #d1d1d1;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    .navbar-toggler {
+        display: block;
+        margin-left: 10px;
+    }
+    .collapse:not(.show) {
+        display: none;
+    }
+    .navbar-nav {
+        display: contents;
+    }
+    .navbar-inner{
+        order: 1;
+    }
+    .register-inner-tab-1 {
+        display: none !important;
+    }
+    .register-inner-tab-2 {
+        display: block !important;
+        margin-right: 10px;
+    }
+    .navbar{
+        padding: 0px;
+    margin-bottom: 15px;
+    }
+    .navbar .navbar-inner .dropdown-list{
+        width: 100%;
+    }
+    /* header css end here 767px*/
+
+   /* footer css start here 767px*/
+   .footer-submit-pad{
+       padding-left: 8px;
+       margin-top: 7px;
+   }
+   .news-letter button{
+    width: 100%;
+   }
+   .footer-menu{
+       padding: 0px;
+       margin-top: 20px;
+   }
+   .sec-footer-bottom .footer-menu p{
+    font-size: 15px;
+} 
+    .social-icons{
+        width: 100%;
+    }
+    .affiliate{
+        padding-top: 40px;
+    }
+    .testi-txt::before{
+        display: none;
+    }
+    .testi-slider .slick-prev, .testi-slider .slick-next{
+        display: none !important;
+    }
+    /* footer css end here 767px*/
+
+    .latest-job-btn ul li, .latest-job-btn ul li button{
+        width: 100%;
+    }
+    .sec-latest-job .latest-job-txtarea .job-disc-right {
+        margin-top: -50px;
+    }
+    .job-disc-right p {
+        margin-bottom: 190px;
+    }
+
+    .sec-country .job-search{
+        display: block;
+    }
+    .sec-country .container{
+        max-width: 100%;
+    }
+    .sec-blog h1 {
+        text-align: left;
+    }
+    .heading-botm::after {
+        left: 0;
+    }
+    .blog-left .card{
+        margin-bottom: 50px;
+    }
+    .blog-left ul li::after{
+        display: none;
+    }
+    .bolg-right .tab-txt-center{
+        text-align: left !important;
+    }
+    .sec-job-seaker h1 {
+        text-align: left;
+    }
+    .sec-job-seaker .heading-botm::after {
+        left: 0px;
+    }
+    .sec-job-seaker .job-seaker-col .job-seaker-inner .box-shadow:hover .country-dropdown{
+        display: none;
+    }
+    .sec-latest-job .Read-More-btn a{
+        width: 70%;
+    }
+    .read-more-btn {
+        padding: 13px 33px !important;
+    }
+    .sec-we-work .we-word-inner ul{
+        flex-direction: column;
+    }
+    .sec-we-work .we-word-inner ul li{
+        margin-bottom: 50px;
+    }
+
+
+    .job-search .job-form-inner .col-4{
+        width: 100%;
+    }
+    .job-form-inner .col-2{
+        width: 100% !important;
+    }
+    .job-seaker-col {
+        width: 100% !important;
+    }
+    .register-detail-inner img{
+        width: 100% !important;
+    }
+    .abm .row {
+        margin: 0 84px !important;
+    }
+}
+ @media (max-width: 575px) { 
+    .upload-resume .forms-colored-div{
+        margin-right: -3px !important;
+    }
+    .forms-colored-div {
+        padding-right: 5px !important;
+    }
+    .heading-botm::after{
+        left: 120px;
+    }
+
+    .news-letter .padd-right-0,.news-letter .footer-submit-pad{
+        padding-right: 6px;
+    }
+    .affiliate-inner .col-md-6{
+        width: 50%;
+    }
+
+    .country-icon, .contact-info{
+        width: 50%;
+    }
+    .footer-menu ul{
+        padding-right: 10px;
+        padding-left: 10px !important;
+    }
+    .sec-footer-bottom .footer-menu p{
+        font-size: 11px !important;
+    }
+    .sec-footer-bottom .footer-menu ul li{
+        padding-left: 7px;
+    }
+    .copyright p{
+        font-size: 15px;
+    }
+    .bannerData {
+        width: 340px !important;
+    }
+    .sec-doctor-banner h1{
+        font-size: 44px !important;
+    }
+    .sec-job-seaker .job-seaker-col .job-seaker-inner{
+        margin: 0px;
+    }
+    .sec-latest-job .job-date{
+        width: 75%;
+    }
+    .sec-latest-job .general-inner{
+        width: 78%;
+    }
+    .sec-latest-job .job-disc-right{
+        width: 22%;
+    }
+    .sec-latest-job .latest-job-txtarea .general-btm ul li p{
+        font-size: 13px;
+    }
+    .heading-botm::after {
+        left: 0px;
+    }
+    .bolg-right .card .col-sm-2{
+        width: 16%;
+    }
+    .bolg-right .card .col-sm-10{
+        width: 84%;
+    }
+
+    .register-section-right {
+        padding-left: 20px !important;
+    }
+    .register-section-right{
+        padding: 20px !important;
+    }
+    .register-heading{
+        padding: 5px !important;
+    }
+    .abm .row {
+        margin: 0 15px !important;
+    }
+}

@@ -1,0 +1,258 @@
+@media (max-width: 1360px){
+    .doctor-list-left .nav-link {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+    .doctor-list-left .active::after{
+        border-top: 24px solid transparent;
+        border-bottom: 24px solid transparent;
+        border-left: 26px solid #0b5291;
+    }
+    .chance-earn h5 {
+        font-size: 17px;
+        margin-bottom: 4px;
+    }
+}
+@media (max-width: 1199px){
+    .doctor-list-left .nav-link {
+        font-size: 17px;
+    }
+    .general-txt::after{
+        right:10px
+    }
+    .latest-job-txtarea {
+        padding-bottom: 22px;
+    }
+    .doctor-list-left .active::after{
+        border-top: 23px solid transparent;
+        border-bottom: 22px solid transparent;
+        border-left: 25px solid #0b5291;
+    }
+}
+@media (max-width: 991px){
+    .sec-doctor-banner{
+        min-height: 300px;
+    }
+    .chance-earn h5 {
+        font-size: 14px;
+        margin-bottom: 7px;
+    }
+    .doctor-list-right-box{
+        margin-left: -11px;
+    }
+    .doctor-list-left .active{
+        margin-right: 0px;
+    }
+    .doctor-list-left .nav-link {
+        padding: 2px 17px;
+        font-size: 14px;
+        height: 46px;
+    }
+    .blog-card{
+        justify-content: center;
+    }
+    .blog-card-detail{
+        width: 550px;
+    }
+    .sec-testi{
+        margin-top: 0;
+    }
+    .general-txt{
+        margin-left: 15px;
+    }
+    .job-disc{
+        margin-left: 31px;
+    }
+    .job-discMain .btn-prmry{
+        display: block !important;
+        font-family: 'Lato-Regular', sans-serif;
+        border: none;
+        background-color: #11335e;
+        margin-top: 10px;
+        padding: 5px 30px;
+        width: 110px;
+        margin-left: 15px;
+    }
+    .general-txt .btn-prmry{
+        display: none;
+    }
+    .general-txt::after{
+        display: none;
+    }
+    .job-disc-right p {
+        margin-bottom: 122px;
+    }
+    /* .doctor-list-right-detail {
+        padding: 56px 40px;
+    } */
+    .job-form-inner .widthFull{
+        width: 100%;
+        margin-bottom: 10px;
+        box-shadow: 0px 4px 26px #0000004a;
+    }
+    .adv-search .job-form-inner {
+        box-shadow: none;
+    }
+    .permanent-btn {
+        justify-content: center;
+    }
+    .sort-by ul li {
+        margin-left: 2px;
+    }
+    .news-letter .padd-right-0 {
+        width: 90%;
+    }
+    .sort-by ul li:nth-child(2) {
+        width: 150px;
+    }
+    .doctor-list-left{
+        width: 310px;
+    }
+    .scrollbar{
+        overflow: auto;
+        height: auto;
+    }
+    span.select-arrow{
+        right: 25px;
+    }
+    .sort-by .up-arrow::after{
+        top: 6px;
+    }
+    .registration-form .col-6{
+        width: 100%;
+    }
+    .registration-form-inner .regis-btn{
+        padding: 10px 100px;
+    }
+}
+@media (max-width: 767px) {
+    .sec-doctor-list{
+        display: none;
+    }
+    .sec-doctor-banner {
+        background: url(../img/RectangleMob\ 1.png) no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .sec-doctor-list-accordians{
+        display: block !important;
+    }
+    .doctor-list-right-detail {
+        padding: 6px 10px 50px 10px;
+    }
+    .pagination-row ul{
+        justify-content: center !important;
+    }
+    .sec-testi{
+        padding-top: 150px;
+    }
+    .testi-txt::before{
+        display: none;
+    }
+    .job-disc-right p {
+        margin-bottom: 240px;
+    }
+    .latest-job-txtarea .job-date{
+        margin-left: 15px;
+    }
+    .testi-txt p{
+        padding-left: unset;
+        text-align: center;
+    }
+    .sec-adv-search-adsearch{
+        margin: 0;
+    }
+    .blog-heading img {
+        width: 150px;
+    }
+    .blog-card {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .sec-blog {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .scrollbar{
+        overflow-y: scroll;
+        height: 630px;
+    }
+    .adv-search .search-icon::after{
+        top: 9px;
+    }
+}
+ @media (max-width: 575px) {
+    .chance-earn h5 {
+        font-size: 10px;
+        margin-bottom: 1px;
+        padding-left: 0;
+    }
+    .general-btm ul li p{
+        font-size: 14px;
+    }
+    .job-date p{
+        font-size: 30px;
+    }
+    .latest-job-txtarea-col-11{
+        width: 80%;
+    }
+    .latest-job-txtarea-col-1{
+        width: 20%;
+    }
+    .pagination li:nth-child(7) .page-link, .pagination li:last-child .page-link {
+        padding: 6px 12px;
+    }
+    .pagination li .page-link {
+        padding: 6px 10px;
+    }
+    .blog-heading h2 {
+        font-size: 35px;
+        color: #03a7ee;
+        padding-top: 15px;
+    }
+
+}
+.registration-form-inner .select-arrow.country-select-arrow {
+    right: 25px;
+}
+.registration-form-inner .select-arrow::after {
+    top: 28px;
+}
+.accordion-button::after{
+    display: none;
+}
+.accordion-button .plusIcon{
+    display: none;
+}
+.collapsed .plusIcon{
+    display: block;
+}
+.collapsed .minusIcon{
+    display: none;
+}
+.accordion-button{
+    background-color: #838383;
+    color: #fff;
+    font-size: 18px;
+    justify-content: space-between;
+}
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: #0b5291;
+    box-shadow: inset 0 -1px 0 rgb(0 0 0 / 13%);
+    font-size: 18px;
+}
+.accordion-button:focus{
+    outline: none !important;
+    box-shadow:none
+}
+.doctor-list-right-detail h2{
+    font-size: 39px;
+    font-family: 'Lato-Bold', sans-serif;
+    font-weight: 600;
+    color: #002748;
+}
+.doctor-list-right-detail p{
+    font-family: 'Lato-Light', sans-serif;
+    font-size: 18px;
+}

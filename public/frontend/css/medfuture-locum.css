@@ -1,0 +1,1067 @@
+html{
+	box-sizing: border-box;
+}
+ :before, *:after {
+  box-sizing: inherit;
+}
+body{
+	margin:0;
+	color:#6d6e71;
+	font:18px/23px "Open Sans", Helvetica, sans-serif;
+	background:#fff;
+}
+p{
+	margin:0;
+}
+/* div{
+    width: 100%;
+} */
+h1{
+	font-size:36px;
+	line-height:42px;
+	margin:0;
+	color:#fff;
+}
+h2{
+	font-size:27px;
+	line-height:36px;
+	margin:0;
+	color:#414042;
+}
+h3{
+	font-size:24px;
+	line-height:30px;
+	margin:0;
+	color:#808080;
+}
+img{
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+a{
+	color: #0075b2;
+	text-decoration:none;
+}
+a:hover{
+	/* text-decoration:underline; */
+}
+ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+input{
+	font:100% "Open Sans", Helvetica, sans-serif;
+	vertical-align:middle;
+	color:#000;
+}
+form,
+fieldset{
+	margin:0;
+	padding:0;
+	border-style:none;
+}
+.wrapper{
+    position: relative;
+    overflow: hidden;
+}
+/* ==================== banner section ================== */
+.sec-locum-banner{
+    background-image: url(../img/Layer\ 1100.png);
+    min-height: 520px; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.banner-text{
+    color: white;
+    font-size: 68px;
+}
+/* ==================== End of banner section ================== */
+
+/* ==================== main paragragh section ================== */
+.locum-main-paragraph{
+    padding: 100px 0 150px 0;
+}
+.locum-main-paragraph h1{
+    font-size: 52px;
+    color: #000000;
+    margin-bottom: 35px;
+    font-weight: lighter;
+    
+}
+.locum-main-paragraph p{
+    font-size: 18px;
+    line-height: 23px;
+    color: #000000;
+    padding-right: 80px;
+    margin-top: 30px;
+}
+.scrollbar{
+    height: 220px;
+}
+/* ==================== End of main paragraph section ================== */
+
+
+
+/* ///////////////// jobs section styling ////////////// */
+
+.jobs-sec-container{
+    max-width: 1435px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+.jobs-main-row{
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin: 0 -35px;
+}
+
+.jobs-col{
+    padding: 0 35px;   
+}
+.jobs-col-left{
+    max-width: 360px;
+    width: 100%;
+}
+.jobs-col-right{
+    max-width: 960px;
+    width: 100%;
+    padding: 35px 30px 55px 30px;
+    box-shadow: 0px 2px 43px 0px rgba(160, 160, 160, 0.75);
+}
+.alert-box-holder{
+    margin-bottom: 50px;
+}
+.alert-box-holder .blue{    background-color: #0b5291;}
+.alert-box-holder .purple{    background-color: #650e82;}
+.alert-box-holder .pink{    background-color: #f42793;}
+.alert-box{
+    padding: 16px 20px;
+    color: white;
+    display: flex;
+    font-size: 15px;
+    margin-bottom: 5px;
+
+    /* flex-wrap: wrap; */
+}
+.blue-img{background-color: #2971b0;}
+.purple-img{background-color:#81309c;}
+.pink-img{background-color: #f365b0;}
+
+.img-holder{
+    width: 67px;
+    height: 67px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+.cont-holder h2{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: white;
+    line-height: 20px;
+}
+
+/* ========== End of alert-box-holder ======= */
+
+.jobs-filter{
+    padding: 55px 0 40px 0;
+    box-shadow: 0px 2px 43px 0px rgba(160, 160, 160, 0.75);
+    background-color: rgb(255, 255, 255);
+    margin-bottom: 55px;
+}
+.for-padding{
+    padding: 0 30px 0 54px;
+}
+.filter-heading{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-heading{
+    margin-bottom: 30px;
+}
+.filter-heading h5{
+    font-size: 22px;
+    color: #003175;
+}
+.heading-box{
+    width: 26px;
+    height: 26px;
+    border: 1px solid black;
+    background-color: #003175;
+    color: white;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.doted-hr{
+    border-top: 2px dotted #b8b8b8;
+    margin: 0;
+}
+.jobs-filter ul li{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 5px 14px 0;
+    cursor: pointer;
+    font-size: 17px;
+    color: #686768;
+}
+.jobs-filter ul li input[type="checkbox"]{
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+.mar-top-bottom{
+    margin-bottom: 18px;
+    margin-top: 18px;
+}
+/* =========== ENd of job filter ========== */
+
+.tagcloud05 ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.tagcloud05 ul li{
+    max-width: 172px;
+    width: 100%;
+    background-color: #d4d4d4;
+    text-align: center;
+    margin-bottom: 17px;
+    padding: 15px 15px;
+    
+}
+.tagcloud05 ul li a{
+  font-size: 17px;
+  color: #686768;
+}
+.tagcloud05 ul li a:hover{
+    cursor: pointer;
+    text-decoration: none;
+}
+/* =========== end of job col left ================ */
+
+
+.latest-jobs-top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.jobs-top-left{
+    font-size: 39px;
+    font-weight: bold;
+    color: #002748;
+}
+.jobs-top-middle{
+    font-size: 22px;
+    color: #002748;
+}
+.jobs-top-right{
+    display: flex;
+    max-width: 309px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.jobs-top-right a{
+    text-align: center;
+    max-width: 150px;
+    width: 100%;
+    display: block;
+    padding: 12px 23px;
+    color: white;
+    background: #0b518f;
+    border-radius: 24px;
+    border:1px solid #0b518f; 
+    font-size: 17px;
+}
+.jobs-top-right a:hover{
+    background: #acacac;
+    border: 1px solid #acacac;
+    transition: 0.5s;
+}
+.jobs-top-right .mr-right{
+    margin-right: 5px;
+}
+.latest-jobs-middle{
+    box-shadow: 0px 2px 43px 0px rgba(160, 160, 160, 0.75);
+    background: #fcfcfc;
+    margin-bottom: 25px;
+}
+
+.latest-jobs-middle table td{
+    padding: 15px;
+}
+.main-data{
+    /* padding: 5px; */
+    width: 50px;
+}
+.latest-jobs-middle table th td{
+    /* width: 30px; */
+    text-align: center;
+}
+.firstsp{
+    font-size: 23px;
+    color: grey;
+}
+.secondsp{
+    font-size: 14px;
+    color: grey;
+}
+.locum-logo{
+    display: flex;
+    justify-content: center;
+    padding: 55px 0;
+}
+.middle-main-cont{
+    padding: 0 15px;
+}
+.middle-cont-left{
+    padding: 0 15px;
+    border-right: 1px solid grey;
+}
+.middle-cont-left ul li{
+    width: 100%;
+    padding: 11px 0;
+    border-top: 2px  dotted grey;
+}
+.list-div {
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; */
+    font-size: 15px;
+    color: #656565;
+    line-height: 20px;
+}
+.middle-cont-left ul:last-child{
+    border-bottom: 2px  dotted grey;
+}
+.middle-cont-right{
+    padding: 24px 10px 30px 30px;
+    background: #f4f4f4;
+}
+.middle-cont-right ul li{
+    padding-left: 30px;
+    position: relative;
+    font-size: 16px;
+    line-height: 30px;
+    color: #000000;
+    margin-bottom: 20px;
+}
+.middle-cont-right ul li::before{
+    content: "";
+    height: 100%;
+    width: 20px;
+    left: 0px;
+    top:7px;
+    position: absolute;
+    background: url(../img/Group\ 37\ copy\ 4.png);
+    background-repeat: no-repeat;
+}
+.middle-cont-right-p{
+    font-size: 16px;
+    line-height: 30px;
+    margin-top: 50px;
+    color: #000000;
+    margin-bottom: 20px ;
+}
+.apply-btn button{
+    background-color: #0b5291;
+    border: 1px solid #0b5291;
+    padding: 15px 33px;
+    font-size: 17px;
+    color: white;
+    border-radius: 25px;
+}
+.apply-btn button:hover{
+    background-color: #a5a5a5;
+    border: 1px solid#a5a5a5;
+}
+.details a{
+    font-size: 16px;
+    line-height: 24px;
+    color: #0b5291;
+}
+.details div{
+    margin-bottom: 15px;
+}
+.print-and-social-icons{
+    padding: 42px 0 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: end;
+}
+.print-and-social-icons div{
+    margin-right: 13px;
+}
+.print, .save{
+    display: flex;
+    align-items: center;
+}
+.print img, .save img{
+    margin-right: 10px;
+}
+.print-and-social-icons span , .print-and-social-icons a{
+    font-size: 16px;
+    color: #000000;
+}
+.table-multi{
+    margin-bottom: 25px;
+    box-shadow: 0px 2px 43px 0px rgba(160, 160, 160, 0.75);
+}
+  
+.top-table table tr td,.table-multi table tr td{
+    /* text-align: center; */
+    font-size: 14px;
+    padding-top: 20px;
+}
+.top-table table tr td:first-child, .table-multi table tr td:first-child{
+    background-color: white;
+    width: 5%;
+    text-align: center;
+}
+.top-table button, .table-multi button{
+    margin-right: 5px;
+    padding: 7px 20px;
+    border-radius: 24px;
+    color: white;
+    font-size: 15px
+}
+.table .sky{
+    background-color:#03aaf3 ;
+    border: 1px solid #03aaf3 ;
+}
+.table .dark{
+    background-color:#00326d ;
+    border: 1px solid #00326d ;
+}
+.button-holder{
+    padding: 100px 0 80px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 745px;
+    width: 100%;
+    margin: 0 auto;
+}
+.button-holder .buttons{
+    background-color: #0b5292;
+    padding: 25px 40px;
+    color:white;
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 22px;
+    max-width: 360px;
+    width: 100%;
+    border-radius: 35px;
+}
+/* .button-holder .buttons:hover{
+    background-color: #a5a5a5;
+} */
+.button-holder a:last-child{
+    background-color: #a5a5a5 !important;
+}
+
+.pagination li{
+    margin: 5px!important;
+    padding: 0 !important;
+    display: inline !important;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    line-height: 50px !important;
+    color: #454545 !important;
+    text-align: center !important;
+}
+.pagination li a {
+    display: inline-block !important;
+    line-height: 50px !important;
+    width: 50px!important;
+    height: 50px!important;
+    border-radius: 10px!important;
+    box-shadow: 0 0 10px rgb(0 0 0 / 35%) !important;
+    text-decoration: none;
+}
+.pagination li a:active,.pagination li a:focus{
+    color: #FFFFFF !important;
+    background-color: #003175 !important;
+    transition: all .4s ease-in-out;
+}
+.paginations{
+    max-width: 240px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 75px 0 27px 0;
+}
+.table .table-para{
+    font-size: 23px;
+    color: #000000;
+}
+.table .table-paratwo{
+    font-size: 15px;
+    color: #000000;
+}
+.butn-img{
+    font-size: 40px;
+    margin-right: 20px;
+}
+.colored-heading-table{
+    display: flex;
+}
+.colored-heading-table .left-side{
+    padding: 30px 15px 50px;
+    background: white;
+    width: 7%;
+    text-align: center;
+    color: #000000;
+}
+.colored-heading-table .left-side p:first-child{
+    font-size: 23px;
+}
+.colored-heading-table .left-side p:last-child{
+    font-size: 14px;
+}
+.colored-heading-table .right-side{
+    
+    width: 93%;
+}
+.colored-heading-table .right-row{
+    display: flex;
+    padding: 15px 0;
+    font-size: 14px;
+    color: #000000;
+
+    
+}
+.right-side .colored-heading{
+    background-color: #0b5291;
+    color: white;
+
+}
+.right-row .right-col1, .right-row .right-col2,.right-row .right-col4,.right-row .right-col5,.right-row .right-col6{
+    width: 11%;
+}
+.right-row .right-col1{
+    margin-left: 10px;
+}
+.right-row .right-col3{
+    width: 22%;
+}
+.right-row .right-col7{
+    width: 23%;
+}
+.right-col7 button{
+    margin-right: 5px;
+    padding: 7px 20px;
+    border-radius: 11px;
+    color: white;
+    font-size: 15px;
+}
+.right-col7 .sky{
+    background-color: #03aaf3;
+    border: 1px solid #03aaf3;
+}
+.right-col7 .dark {
+    background-color: #00326d;
+    border: 1px solid #00326d;
+}
+.coloer-less {
+    margin-bottom: 25px;
+    box-shadow: 0px 2px 43px 0px rgb(160 160 160 / 75%);
+    align-items: center;
+}
+.mob-view-alert-box .alert-box-holder{
+    display: none;
+}
+/* .sort-by{
+    display: none;
+} */
+/* ///////////////// End of jobs section styling ////////////// */
+@media(max-width:1410px){
+    .latest-jobs-middle table td {
+        padding: 10px;
+        text-align: center;
+    }
+    .tagcloud05 ul li {
+        max-width: 168px;
+        margin-bottom: 7px;
+    }
+    .for-padding {
+        padding: 0 25px 0 35px;
+    }
+}
+@media(max-width:1360px){
+    .jobs-main-row{
+        margin: 0 -15px;
+    }
+    .jobs-col{
+        padding: 0 15px;
+    }
+    .alert-box {
+        padding: 10px 15px;
+        font-size: 13px;
+    }
+    .img-holder {
+        width: 55px;
+        height: 55px;
+    }
+    .cont-holder h2 {
+        font-size: 17px;
+    }
+    .filter-heading h5 {
+        font-size: 18px;
+    }
+    .jobs-filter ul li{
+        font-size: 14px;
+    }
+    .tagcloud05 ul li{
+        max-width: 152px;
+    }
+    .tagcloud05 ul li a{
+        font-size: 14px;
+    }
+    .jobs-top-left {
+        font-size: 32px;
+    }
+    .jobs-top-right a {
+        max-width: 142px;
+        padding: 9px 10px;
+    }
+    .for-padding {
+        padding: 0 20px 0 30px;
+    }
+    .right-row .right-col1 {
+        margin-left: 5px;
+    }
+    .colored-heading-table .right-row{
+        font-size: 12px;
+    }
+    .right-col7 button {
+        padding: 7px 17px;
+        font-size: 13px;
+    }
+    .list-div {
+        font-size: 14px;
+    }
+    .middle-cont-right ul li{
+        font-size: 14px;
+    }
+}
+@media(max-width:1199px){
+    .jobs-main-row{
+        margin: 0 -10px;
+    }
+    .jobs-col{
+        padding: 0 10px;
+    }
+    .alert-box {
+        padding: 8px 12px;
+        font-size: 10px;
+        line-height: 15px;
+        align-items: center;
+    }
+    .cont-holder h2 {
+        font-size: 14px;
+        line-height: 17px;
+    }
+    .img-holder {
+        width: 45px;
+        height: 45px;
+        /* padding: 5px; */
+        overflow: hidden;
+    }
+    .for-padding {
+        padding: 0 15px;
+    }
+    .filter-heading h5 {
+        font-size: 16px;
+    }
+
+    .jobs-filter ul li {
+        font-size: 13px;
+    }
+    .heading-box {
+        height: 20px;
+        width: 20px;
+    }
+    .tagcloud05 ul li {
+        max-width: 124px;
+    }
+    .tagcloud05 ul li a {
+        font-size: 11px;
+    }
+    .colored-heading-table .left-side {
+        padding: 30px 7px 61px;
+    }
+    .colored-heading-table .left-side p:first-child {
+        font-size: 15px;
+    }
+    .colored-heading-table .left-side p:last-child {
+        font-size: 10px;
+    }
+    .colored-heading-table .right-row {
+        font-size: 11px;
+    }
+    .right-row .right-col1, .right-row .right-col2,.right-row .right-col4,.right-row .right-col5,.right-row .right-col6{
+        width: 10%;
+    }
+    .right-row .right-col3{
+        width: 24%;
+    }
+    .right-row .right-col7{
+        width: 26%;
+    }
+    .right-col7 button {
+        padding: 7px 15px;
+    }
+    .list-div {
+        font-size: 13px;
+    }
+    .middle-cont-right-p {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    .details a {
+        font-size: 15px;
+    }
+    .button-holder .buttons{
+        padding: 16px 30px;
+        max-width: 315px;
+        font-size: 16px !important;
+    }
+    .banner-text {
+        font-size: 50px;
+    }
+    .locum-main-paragraph h1 {
+        font-size: 40px;
+        margin-bottom: 25px;
+    }
+    .locum-main-paragraph p {
+        font-size: 16px;
+        line-height: 23px;
+        padding-right: 80px;
+        margin-top: 7px;
+    }
+}
+    @media(max-width:991px){
+        .locum-main-paragraph {
+            padding: 45px 0 50px 0;
+        }
+        .scrollbar {
+            height: unset;
+            overflow: auto;
+        }
+        .jobs-main-row{
+            flex-wrap: wrap;
+        }
+        .jobs-col-left {
+            max-width: unset;
+            margin-bottom: 80px;
+        }
+        .jobs-col-right{
+            max-width: unset;
+        }
+        .alert-box{
+            justify-content: center;
+        }
+      .cont-holder p{
+          max-width: 326px;
+          width: 100%;
+      }
+      .alert-box{
+        padding: 16px 20px;
+        font-size: 15px;
+        line-height: 21px;
+        }
+    .img-holder{
+        width: 67px;
+        height: 67px;
+    }
+    .cont-holder h2{
+        text-transform: uppercase;
+        font-size: 20px;
+        color: white;
+        line-height: 20px;
+    }
+        
+    .jobs-filter{
+        padding: 55px 0 40px 0;
+        box-shadow: 0px 2px 43px 0px rgba(160, 160, 160, 0.75);
+        background-color: rgb(255, 255, 255);
+        margin-bottom: 55px;
+    }
+    .for-padding{
+        padding: 0 30px 0 54px;
+    }
+    .top-heading{
+        margin-bottom: 30px;
+    }
+    .filter-heading h5{
+        font-size: 22px;
+    }
+    .heading-box{
+        width: 26px;
+        height: 26px;
+        font-size: 12px;
+    }
+    .jobs-filter ul li{
+        padding: 14px 5px 14px 0;
+        cursor: pointer;
+        font-size: 17px;
+    }
+    .jobs-filter ul li input[type="checkbox"]{
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
+    }
+    .mar-top-bottom{
+        margin-bottom: 18px;
+        margin-top: 18px;
+    }
+    /* .tagcloud05{
+        max-width: 360px;
+        width: 100%;
+    } */
+    .tagcloud05 ul li{
+        max-width: 172px;
+        width: 100%;
+        padding: 15px 15px;
+        
+    }
+    .tagcloud05 ul li a{
+    font-size: 17px;
+    }
+    .jobs-main-row{
+        margin: 0;
+    }
+    .jobs-col{
+        padding: 0;
+    }
+    .middle-cont-left{
+        border-right: unset;
+        margin-bottom: 55px;
+    }
+    .latest-jobs-top{
+        flex-direction: column;
+        align-items: unset;
+    }
+    .jobs-top-left, .jobs-top-middle, .jobs-top-right{
+        margin-bottom: 10px;
+    }
+    .colored-heading-table{
+        flex-direction: column;
+        padding: 30px 30px;
+    }
+    .right-row{
+        flex-direction: column;
+    }
+    .colored-heading-table .left-side{
+        width: 7%;
+        text-align: center;
+        background-color: unset;
+        padding: unset;
+    }
+    .colored-heading-table .left-side p:first-child{
+        font-size: 23px;
+    }
+    .colored-heading-table .left-side p:last-child{
+        font-size: 14px;
+    }
+    .colored-heading-table .right-side{
+        
+        width: 93%;
+    }
+    .colored-heading-table .right-row{
+        padding: 15px 0;
+        font-size: 14px;
+    
+        
+    }
+    .right-side .colored-heading{
+        display: none;
+    
+    }
+    .right-row .right-col1, .right-row .right-col2,.right-row .right-col4,.right-row .right-col5,.right-row .right-col6{
+        width: 11%;
+    }
+    .right-row .right-col1, .right-row .right-col2,.right-row .right-col3,.right-row .right-col4,.right-row .right-col5,.right-row .right-col6,.right-row .right-col7{
+        margin-bottom: 15px;
+        display: flex;
+        width: 100% !important;
+    }
+    .right-row .right-col1{
+        margin-left: 0;
+    }
+    .right-row .right-col3{
+        width: 22%;
+    }
+    .right-row .right-col7{
+        width: 23%;
+        display: flex;
+    }
+    .right-col7 button{
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+    .coloer-less {
+        margin-bottom: 25px;
+    }
+    .colored-heading-table{
+        align-items: baseline;
+    }
+    .jobs-main-row {
+        flex-direction: column;
+    }
+    .tagcloud05{
+        max-width: 360px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .tagcloud05 ul li{
+        max-width: 176px;
+    }
+    .job-page-blue-heading, .job-page-black-heading{
+        font-size: 55px !important;
+    line-height: 60px !important;
+    }
+    .latest-jobs-heading{
+        /* text-align: center; */
+        border: none !important;
+    }
+    .pagination-row{
+        padding-bottom: 0 !important;
+    }
+
+}
+@media(max-width:767px){
+    .latest-jobs-heading{
+        text-align: center;
+    }
+    .job-page-blue-heading, .job-page-black-heading{
+        font-size: 42px  !important;
+    line-height: 40px  !important;
+    }
+    .mob-view-alert-box .alert-box-holder{
+        display: block;
+        
+    }
+    .mob-view-alert-box .alert-box-holder .alert-box{
+        flex-direction: column;
+        text-align: center;
+        max-width: 245px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    .mob-view-alert-box .alert-box-holder .alert-box .img-holder{
+        margin-bottom: 15px;
+    }
+    .mob-view-alert-box .alert-box-holder .cont-holder p{
+        max-width: 155px;
+    }
+    .sort-by{
+        display: flex;
+        margin-bottom: 35px;
+        justify-content: center;
+    }
+    .jobs-top-right{
+        margin: 0 auto;
+    }
+    .latest-jobs-top{
+        text-align: center;
+    }
+    .scrollbar{
+        height: 540px;
+        overflow-y: scroll;
+    }
+    .button-holder{
+        max-width: 296px;
+    }
+    .button-holder .buttons{
+        margin-bottom: 20px;
+    }
+    .middle-main-cont{
+        padding: 0;
+    }
+   
+    .pagination-row{
+        flex-direction: column;
+    }
+    .pagination-row .sort-by{
+        order: 3;
+    }
+    .pagination-row .pagination-col:first-child{
+        order: 2 !important;
+    }
+    .pagination-row .pagination-col{
+        margin-bottom: 25px;
+    }
+    .button-holder {
+        max-width: 308px;
+    }
+    .alert-box-container .alert-box-holder{
+        flex-direction: column;
+    align-items: center;
+    }
+    .alert-box-holder .alert-box{
+        margin-bottom: 25px;
+    }
+}
+@media(max-width:575px){
+    .jobs-col{
+        width: 100%;
+    }
+    .for-padding {
+        padding: 0 15px 0 15px;
+    }
+    .tagcloud05 ul li {
+        max-width: 160px;
+    }
+    .tagcloud05 ul li a {
+        font-size: 14px;
+    }
+    .jobs-top-right button {
+        max-width: 125px;
+    }
+    .colored-heading-table .right-row {
+        font-size: 13px;
+    }
+    .jobs-col-right {
+        padding: 30px 15px 35px 15px;
+    }
+    .print-and-social-icons div{
+        margin-right: 5px;
+    }
+    .print-and-social-icons img{
+        width: 20px;
+        height: 20px;
+    }
+    .print-and-social-icons span, .print-and-social-icons a{
+        font-size: 14px;
+    }
+
+
+
+}
+
+
