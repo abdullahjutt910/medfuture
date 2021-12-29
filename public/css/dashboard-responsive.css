@@ -1,0 +1,61 @@
+
+@media (max-width: 575px){
+
+}
+@media (min-width: 576px) and (max-width: 767px){
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .sidebar-mini.sidebar-collapse .sidebar-menu>li>a {
+        border-radius: 23px;
+        padding: 3px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px){
+
+}
+
+@media (min-width: 992px) {
+    .sidebar-mini.sidebar-collapse .main-sidebar{
+        width: 60px !important;
+    }
+    .sidebar-mini.sidebar-collapse .main-header .navbar {
+        margin-left: 60px !important;
+    }
+    .sidebar-mini.sidebar-collapse .main-sidebar:hover{
+        width: 260px !important;
+    }
+    .main-sidebar:hover .sidebar-menu .treeview  .menu-txt{
+        display: initial !important;
+    }
+    .main-sidebar:hover .sidebar-menu .treeview a .pull-right-container{
+        display: none !important;
+    }
+    .treeview:hover .pull-right-container{
+        display: none !important;
+    }
+    /* .sidebar-menu .treeview:hover .treeview-menu {
+        display: none !important;
+    } */
+    .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu>li:hover>.treeview-menu{
+        display: none !important;
+    }
+    .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu>li:hover>a>span{
+        padding: 12px 5px 12px 0px;
+    }
+    .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu>li:hover>a>.pull-right-container:not(.pull-right){
+        display: none !important;
+    }
+}
+@media (min-width: 1400px) {
+    .profile-right {
+        padding: 40px;
+    }
+    .candidate-progress-bar .progress {
+        margin-right: 23px !important;
+    }
+    .notification-btns .btn {
+        width: 190px;
+    }
+}

@@ -45,7 +45,6 @@ class CandidateController extends Controller
         $user->password = Hash::make($request->password);
 
         $user->save();
-
         $candidate = new Candidate();
         $candidate->user_id = $user->id;
         $candidate->title = $request->title;

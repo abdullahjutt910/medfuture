@@ -4,9 +4,11 @@ namespace App\Http\Controllers\frontend;
 
 use App\Models\User;
 use App\Models\Candidate;
+use App\Mail\RegisterMail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 
 class PostController extends Controller
 {
@@ -89,6 +91,25 @@ class PostController extends Controller
         $candidate->username = $request->username;
         $candidate->password = $request->password;
         $candidate->save();
+        $data = array(
+            'title' => $request->title,
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'dob' => $request->dob,
+            'mobile' => $request->mobile,
+            'email' => $request->email,
+            'address_1' => $request->address_1,
+            'town'=> $request->town,
+            'state'=> $request->state,
+            'country'=> $request->country,
+            'post_code'=> $request->post_code,
+            'specialty' => $request->specialty,
+            'senority' => $request->senority,
+            'work_rights_status'=> $request->work_rights_status,
+            'password'=> $request->password,
+
+        );
+        Mail::to($request->email)->send(new RegisterMail($data));
         return back();
     }
 

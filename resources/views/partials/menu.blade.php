@@ -3,23 +3,23 @@
         <ul class="sidebar-menu tree" data-widget="tree">
             <li>
                 <a href="{{ route("admin.home") }}">
-                    <i class="fas fa-fw fa-tachometer-alt">
-
-                    </i>
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                   
+                    <!-- <img src="{{asset('img/dashboard/dashboard-icon-1.png')}}" alt=""> -->
                     {{ trans('global.dashboard') }}
                 </a>
             </li>
             @can('user_management_access')
                 <li class="treeview">
                     <a href="#">
-                        <i class="fa-fw fas fa-users">
-
-                        </i>
-                        <span>{{ trans('cruds.userManagement.title') }}</span>
+                        <i class="fa-fw fas fa-users"></i>
+                        <!-- <img src="{{asset('img/dashboard/portfolio-icon.png')}}" alt=""> -->
+                        <span class="menu-txt">{{ trans('cruds.userManagement.title') }}</span>
                         <span class="pull-right-container"><i class="fa fa-fw fa-angle-left pull-right"></i></span>
                     </a>
                     <ul class="treeview-menu">
                         @can('permission_access')
+                        <hr class="hr-line">
                             <li class="{{ request()->is("admin/permissions") || request()->is("admin/permissions/*") ? "active" : "" }}">
                                 <a href="{{ route("admin.permissions.index") }}">
                                     <i class="fa-fw fas fa-unlock-alt">
@@ -29,8 +29,10 @@
 
                                 </a>
                             </li>
+                            
                         @endcan
                         @can('role_access')
+                        <hr class="hr-line">
                             <li class="{{ request()->is("admin/roles") || request()->is("admin/roles/*") ? "active" : "" }}">
                                 <a href="{{ route("admin.roles.index") }}">
                                     <i class="fa-fw fas fa-briefcase">
@@ -42,6 +44,7 @@
                             </li>
                         @endcan
                         @can('user_access')
+                        <hr class="hr-line">
                             <li class="{{ request()->is("admin/users") || request()->is("admin/users/*") ? "active" : "" }}">
                                 <a href="{{ route("admin.users.index") }}">
                                     <i class="fa-fw fas fa-user">
@@ -51,6 +54,7 @@
 
                                 </a>
                             </li>
+                            <hr class="hr-line">
                         @endcan
                     </ul>
                 </li>
@@ -61,11 +65,12 @@
                         <i class="fa-fw far fa-user">
 
                         </i>
-                        <span>{{ trans('cruds.candidatesManagement.title') }}</span>
+                        <span class="menu-txt">{{ trans('cruds.candidatesManagement.title') }}</span>
                         <span class="pull-right-container"><i class="fa fa-fw fa-angle-left pull-right"></i></span>
                     </a>
                     <ul class="treeview-menu">
                         @can('candidate_access')
+                        <hr class="hr-line">
                             <li class="{{ request()->is("admin/candidates") || request()->is("admin/candidates/*") ? "active" : "" }}">
                                 <a href="{{ route("admin.candidates.index") }}">
                                     <i class="fa-fw fas fa-user-plus">
@@ -77,6 +82,7 @@
                             </li>
                         @endcan
                         @can('view_candidate_access')
+                        <hr class="hr-line">
                             <li class="{{ request()->is("admin/view-candidates") || request()->is("admin/view-candidates/*") ? "active" : "" }}">
                                 <a href="{{ route("admin.view-candidates.index") }}">
                                     <i class="fa-fw fas fa-user-friends">
@@ -86,6 +92,7 @@
 
                                 </a>
                             </li>
+                            <hr class="hr-line">
                         @endcan
                     </ul>
                 </li>

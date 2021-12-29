@@ -21,22 +21,24 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
+    <link href="{{ asset('css/dashboard-responsive.css') }}" rel="stylesheet" />
     @yield('styles')
+
 </head>
 
 <body class="sidebar-mini skin-purple" style="height: auto; min-height: 100%;">
     <div class="wrapper" style="height: auto; min-height: 100%;">
         <header class="main-header">
             <a href="#" class="logo">
-                <span class="logo-mini"><b>{{ trans('panel.site_title') }}</b></span>
-                <span class="logo-lg">{{ trans('panel.site_title') }}</span>
-            </a>
+                <img src="{{asset('img/dashboard/Medfuture_Logo.png')}}" class="img-fluid" alt="logo"> 
+              </a>
 
             <nav class="navbar navbar-static-top">
+              <div class="toggle-btn">
                 <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                     <span class="sr-only">{{ trans('global.toggleNavigation') }}</span>
                 </a>
-
+              </div>
                 @if(count(config('panel.available_languages', [])) > 1)
                     <div class="navbar-custom-menu">
                         <ul class="nav navbar-nav">
@@ -59,8 +61,50 @@
                         </ul>
                     </div>
                 @endif
-
-
+                <div class="form-search">  
+                    <form action="#" method="">
+                      <div class="search-bar">
+                      <i class="fas fa-search"></i>
+                      <!-- <img src="img/loupe.png" alt="search_icon"> -->
+                      <input type="text" name="quick_access" placeholder="Quick Access">
+                      </div>
+                    </form>
+                </div>
+                <div class="nav-icons">
+                  <div class="nav-icons-inner">
+                    <a href="#">
+                    <img src="{{asset('img/dashboard/bell-icon.png')}}" alt="bell-icon">
+                    </a>
+                  </div>
+                  <div class="nav-icons-inner">
+                    <a href="#">
+                    <img src="{{asset('img/dashboard/Medkit.png')}}" alt="Medkit">
+                    </a>
+                  </div>
+                  <div class="nav-icons-inner">
+                  <a href="#">
+                    <img src="{{asset('img/dashboard/doctors-logo.png')}}" alt="doctors-logo">
+                    </a>
+                  </div>
+                  <div class="nav-icons-inner">
+                  <a href="#">
+                    <img src="{{asset('img/dashboard/job_icon.png')}}" alt="job_icon">
+                    </a>
+                  </div>
+                  <div class="nav-icons-inner">
+                  <a href="#">
+                    <img src="{{asset('img/dashboard/document-icon.png')}}" alt="document-icon">
+                    </a>
+                  </div>
+                </div>
+                <div class="nav-profile">
+                  <span>
+                    <p>Peter Adams</p>
+                    <p>peter23@gmail.com</p>
+                  </span>
+                    <img src="{{asset('img/dashboard/profile_img.png')}}" alt="profile_img">
+                </div>
+               
             </nav>
         </header>
 
@@ -156,39 +200,47 @@
     pageLength: 100,
     dom: 'lBfrtip<"actions">',
     buttons: [
+      // {
+      //   extend: 'selectAll',
+      //   className: 'btn-primary',
+      //   text: selectAllButtonTrans,
+      //   exportOptions: {
+      //     columns: ':visible'
+      //   },
+      //   action: function(e, dt) {
+      //     e.preventDefault()
+      //     dt.rows().deselect();
+      //     dt.rows({ search: 'applied' }).select();
+      //   }
+      // },
+      // {
+      //   extend: 'selectNone',
+      //   className: 'btn-primary',
+      //   text: selectNoneButtonTrans,
+      //   exportOptions: {
+      //     columns: ':visible'
+      //   }
+      // },
+      // {
+      //   extend: 'copy',
+      //   className: 'btn-default',
+      //   text: copyButtonTrans,
+      //   exportOptions: {
+      //     columns: ':visible'
+      //   }
+      // },
+      // {
+      //   extend: 'csv',
+      //   className: 'btn-default',
+      //   text: csvButtonTrans,
+      //   exportOptions: {
+      //     columns: ':visible'
+      //   }
+      // },
       {
-        extend: 'selectAll',
-        className: 'btn-primary',
-        text: selectAllButtonTrans,
-        exportOptions: {
-          columns: ':visible'
-        },
-        action: function(e, dt) {
-          e.preventDefault()
-          dt.rows().deselect();
-          dt.rows({ search: 'applied' }).select();
-        }
-      },
-      {
-        extend: 'selectNone',
-        className: 'btn-primary',
-        text: selectNoneButtonTrans,
-        exportOptions: {
-          columns: ':visible'
-        }
-      },
-      {
-        extend: 'copy',
+        extend: 'print',
         className: 'btn-default',
-        text: copyButtonTrans,
-        exportOptions: {
-          columns: ':visible'
-        }
-      },
-      {
-        extend: 'csv',
-        className: 'btn-default',
-        text: csvButtonTrans,
+        text: 'Print',
         exportOptions: {
           columns: ':visible'
         }
@@ -209,18 +261,12 @@
           columns: ':visible'
         }
       },
-      {
-        extend: 'print',
-        className: 'btn-default',
-        text: printButtonTrans,
-        exportOptions: {
-          columns: ':visible'
-        }
-      },
+     
       {
         extend: 'colvis',
         className: 'btn-default',
-        text: colvisButtonTrans,
+        // text: colvisButtonTrans,
+        text: 'Panel',
         exportOptions: {
           columns: ':visible'
         }

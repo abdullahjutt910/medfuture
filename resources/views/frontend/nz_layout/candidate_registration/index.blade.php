@@ -246,8 +246,8 @@
                                  </div>
                                  <div class="col-lg-6 col-md-12 col-sm-12">
                                      <span class="select-arrow profession-select"></span>
-                                     <select class="form-select form-select-lg boder-btm1 single-selected" name="seniority"  aria-label=".form-select-lg example">
-                                         <option selected="">Seniority / Grade / Band</option>
+                                     <select class="form-select form-select-lg boder-btm1 single-selected" name="senority"  aria-label=".form-select-lg example">
+                                         <option selected="">Senority / Grade / Band</option>
                                          <option value="1">One</option>
                                          <option value="2">Two</option>
                                          <option value="3">Three</option>
