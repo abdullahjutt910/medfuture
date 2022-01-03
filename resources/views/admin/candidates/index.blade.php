@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 @section('content')
 <div class="content">
-
     <div class="row candidate-all">
         <div class="col-lg-12">
             <div class="panel panel-default">
