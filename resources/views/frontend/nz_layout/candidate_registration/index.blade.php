@@ -265,7 +265,7 @@
                                  </div>
                                  <div class=" upload-resume">
                                      <span class="upload-icon"></span>
-                                     <input  type="file" class="form-control form-control-lg cv-upload"  name="file"  list="datalistOptions" id="exampleDataList" value="" placeholder="UPLOAD RESUME">
+                                     <input  type="file" class="form-control form-control-lg cv-upload"  name="cv_document"  list="datalistOptions" id="exampleDataList" value="" placeholder="UPLOAD RESUME">
                                      <span class="upload-btn"><img src="img/upload.png" alt="">UPLOAD RESUME</span>
                                      <div class="forms-colored-div">
                                          <div class="blue"></div>

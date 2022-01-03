@@ -1,7 +1,7 @@
 @extends('layouts.admin')
 @section('content')
 <div class="content">
-    
+
     <div class="row candidate-all">
         <div class="col-lg-12">
             <div class="panel panel-default">
@@ -46,7 +46,7 @@
                             <li>
                                 <a href="#" class="btn btn-filter"> Healthcare Executive Units </a>
                             </li>
-                           
+
                         </ul>
                     </div>
                 </div>
@@ -305,7 +305,7 @@
                                         <td>
                                             <input class="search" type="text" placeholder="{{ trans('global.search') }}">
                                         </td>
-                                        
+
                                     </tr>
                                 </thead>
                             </table>
@@ -322,7 +322,7 @@
                     <div class="table-responsive">
                         <table class=" table table-bordered table-striped table-hover datatable datatable-Candidate">
                             <thead>
-                                
+
                                  <tr>
                                     <td>
                                     </td>
@@ -590,7 +590,7 @@
                                     </td>
                                 </tr>
 
-                                
+
                                 <tr>
                                     <th width="10">
 
@@ -725,17 +725,17 @@
                                         &nbsp;
                                     </th>
                                 </tr>
-                              
+
                             </thead>
                             <tbody>
-                           
+
                                 @foreach($candidates as $key => $candidate)
                                     <tr data-entry-id="{{ $candidate->id }}">
                                         <td>
 
                                         </td>
                                         <td>
-                                            {{ App\Models\Candidate::TITLE_SELECT[$candidate->title] ?? '' }}
+                                            {{ $candidate->title ?? '' }}
                                         </td>
                                         <td>
                                             {{ $candidate->first_name ?? '' }}
@@ -795,7 +795,7 @@
                                             {{ App\Models\Candidate::DEVISION_SELECT[$candidate->devision] ?? '' }}
                                         </td>
                                         <td>
-                                            {{ App\Models\Candidate::SENORITY_SELECT[$candidate->senority] ?? '' }}
+                                            {{ $candidate->senority ?? '' }}
                                         </td>
                                         <td>
                                             {{ App\Models\Candidate::SPECIALTY_SELECT[$candidate->specialty] ?? '' }}
@@ -961,7 +961,7 @@
       $($.fn.dataTable.tables(true)).DataTable()
           .columns.adjust();
   });
-  
+
 let visibleColumnsIndexes = null;
 $('.datatable thead').on('input', '.search', function () {
       let strict = $(this).attr('strict') || false

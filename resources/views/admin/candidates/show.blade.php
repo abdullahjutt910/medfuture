@@ -23,7 +23,6 @@
                     </div>
                 </div>
 
-
                 <section class="profile-sec">
                     <div class="container-fluid">
                         <div class="row">
@@ -31,29 +30,29 @@
                                 <div class="card">
                                     <img src=" {{asset('img/dashboard/profile.png')}}" class="card-img-top img-fluid" alt="profile-img">
                                     <div class="card-body">
-                                        <h5 class="card-title">Mr Ben Johnson</h5>
-                                        <p class="card-text">Male</p>
-                                        <p class="card-text">DOB: 25th June 1988</p>
-                                        <a href="#" class="btn">ID: AH5841</a>
+                                        <h5 class="card-title">{{ $candidate->first_name . ' ' .$candidate->last_name}}</h5>
+                                        <p class="card-text">{{ $candidate->gender ?? '' }}</p>
+                                        <p class="card-text">{{ $candidate->dob ?? '' }}</p>
+                                        <a href="#" class="btn">ID: {{ $candidate->id ?? '' }}</a>
                                     </div>
                                 </div>
                                 <div class="profile-info">
                                     <ul>
                                         <li>
                                             <h3>Home Address</h3>
-                                            <p>6 Manorwood Place, Mitcham VIC 2132, Australia</p>
+                                            <p>{{ $candidate->home ?? '' }}</p>
                                         </li>
                                         <li>
                                             <h3>Mobile Number</h3>
-                                            <p>0400 713 855</p>
+                                            <p>{{ $candidate->mobile ?? '' }}</p>
                                         </li>
                                         <li>
                                             <h3>Office Number</h3>
-                                            <p>0400 713 855</p>
+                                            <p>{{ $candidate->work ?? '' }}</p>
                                         </li>
                                         <li>
                                             <h3>Email</h3>
-                                            <p>benjohnson54@gmail.com</p>
+                                            <p>{{ $candidate->email ?? '' }}</p>
                                         </li>
                                     </ul>
 
@@ -62,7 +61,7 @@
                                     <ul>
                                         <li>
                                             <h3>Profession</h3>
-                                            <p>Allied Health Professionals</p>
+                                            <p>{{ $candidate->profession ?? '' }}</p>
                                         </li>
                                         <li>
                                             <h3>Engagement Term</h3>
@@ -70,7 +69,7 @@
                                         </li>
                                         <li>
                                             <h3>Employement Type</h3>
-                                            <p>Full Time</p>
+                                            <p>{{ $candidate->current_employment_status ?? '' }}</p>
                                         </li>
                                         <li>
                                             <h3>Placement Type</h3>
@@ -143,7 +142,7 @@
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">CV Recived Date</h5>
-                                                        <p class="card-text"><small class="text-muted">12/08/2021</small></p>
+                                                        <p class="card-text"><small class="text-muted">{{ $candidate->created_at ?? '' }}</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -299,7 +298,7 @@
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Working Status</h5>
-                                                        <p class="card-text"><small class="text-muted"></small></p>
+                                                        <p class="card-text"><small class="text-muted">{{ $candidate->work_rights_status ?? '' }}</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -331,7 +330,7 @@
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Graduation</h5>
-                                                        <p class="card-text"><small class="text-muted">No</small></p>
+                                                        <p class="card-text"><small class="text-muted">{{ $candidate->graduation ?? '' }}</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -393,7 +392,7 @@
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Prof Qualification</h5>
-                                                        <p class="card-text"><small class="text-muted">Bsc Physical therapy</small></p>
+                                                        <p class="card-text"><small class="text-muted">{{ $candidate->professional_qualification ?? '' }}</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -455,7 +454,7 @@
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Visa Status</h5>
-                                                        <p class="card-text"><small class="text-muted"></small></p>
+                                                        <p class="card-text"><small class="text-muted">{{ $candidate->visa_type ?? '' }}</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -497,7 +496,11 @@
                                                         <div class="col-md-10 padd-12">
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Original CV .pdf</h5>
-                                                                <p class="card-text"><small class="text-muted">58KB</small></p>
+                                                                @if($candidate->cv_document)
+                                                                <a href="{{ $candidate->cv_document->getUrl() }}" target="_blank">
+                                                                    {{ trans('global.view_file') }}
+                                                                </a>
+                                                            @endif
                                                             </div>
                                                         </div>
                                                     </div>
@@ -512,7 +515,110 @@
                                                         <div class="col-md-11 padd-12">
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Applied Date</h5>
-                                                                <p class="card-text"><small class="text-muted">12/1/2021</small></p>
+                                                                <p class="card-text"><small class="text-muted">{{ $candidate->created_at ?? '' }}</small></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="profile-buttons">
+                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
+                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download">
+                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid" alt="Upload">
+                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="row profile-details-upload">
+                                    <div class="col-md-12">
+                                        <div class="row profile-details">
+                                            <div class="col-md-4">
+                                                <div class="card mb-3">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2 card-img">
+                                                            <img src="{{asset('img/dashboard/PDF.png')}}" class="img-fluid rounded-start" alt="...">
+                                                        </div>
+                                                        <div class="col-md-10 padd-12">
+
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">registration_form.pdf</h5>
+                                                                @if($candidate->registration_form_document)
+                                                <a href="{{ $candidate->registration_form_document->getUrl() }}" target="_blank">
+                                                    {{ trans('global.view_file') }}
+                                                </a>
+                                            @endif
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="card mb-3">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-1 card-img">
+                                                            <img src="{{asset('img/dashboard/Calendar.png')}}" class="img-fluid rounded-start" alt="...">
+                                                        </div>
+                                                        <div class="col-md-11 padd-12">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Applied Date</h5>
+                                                                <p class="card-text"><small class="text-muted">{{ $candidate->created_at ?? '' }}</small></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="profile-buttons">
+                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
+                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download">
+                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid" alt="Upload">
+                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash">
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                                <div class="row profile-details-upload">
+                                    <div class="col-md-12">
+                                        <div class="row profile-details">
+                                            <div class="col-md-4">
+                                                <div class="card mb-3">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-2 card-img">
+                                                            <img src="{{asset('img/dashboard/PDF.png')}}" class="img-fluid rounded-start" alt="...">
+                                                        </div>
+                                                        <div class="col-md-10 padd-12">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">privacy_concerns.pdf</h5>
+                                                                @if($candidate->privacy_concerns)
+                                                <a href="{{ $candidate->privacy_concerns->getUrl() }}" target="_blank">
+                                                    {{ trans('global.view_file') }}
+                                                </a>
+                                            @endif
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="card mb-3">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-1 card-img">
+                                                            <img src="{{asset('img/dashboard/Calendar.png')}}" class="img-fluid rounded-start" alt="...">
+                                                        </div>
+                                                        <div class="col-md-11 padd-12">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Applied Date</h5>
+                                                                <p class="card-text"><small class="text-muted">{{ $candidate->created_at ?? '' }}</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -544,7 +650,11 @@
                                                         <div class="col-md-10 padd-12">
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Original CV .pdf</h5>
-                                                                <p class="card-text"><small class="text-muted">58KB</small></p>
+                                                                @if($candidate->cv_document)
+                                                                <a href="{{ $candidate->cv_document->getUrl() }}" target="_blank">
+                                                                    {{ trans('global.view_file') }}
+                                                                </a>
+                                                            @endif
                                                             </div>
                                                         </div>
                                                     </div>
@@ -559,101 +669,7 @@
                                                         <div class="col-md-11 padd-12">
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Applied Date</h5>
-                                                                <p class="card-text"><small class="text-muted">12/1/2021</small></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="profile-buttons">
-                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
-                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download">
-                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid" alt="Upload">
-                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash">
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-
-                                </div>
-                                <div class="row profile-details-upload">
-                                    <div class="col-md-12">
-                                        <div class="row profile-details">
-                                            <div class="col-md-4">
-                                                <div class="card mb-3">
-                                                    <div class="row g-0">
-                                                        <div class="col-md-2 card-img">
-                                                            <img src="{{asset('img/dashboard/PDF.png')}}" class="img-fluid rounded-start" alt="...">
-                                                        </div>
-                                                        <div class="col-md-10 padd-12">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">Original CV .pdf</h5>
-                                                                <p class="card-text"><small class="text-muted">58KB</small></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="card mb-3">
-                                                    <div class="row g-0">
-                                                        <div class="col-md-1 card-img">
-                                                            <img src="{{asset('img/dashboard/Calendar.png')}}" class="img-fluid rounded-start" alt="...">
-                                                        </div>
-                                                        <div class="col-md-11 padd-12">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">Applied Date</h5>
-                                                                <p class="card-text"><small class="text-muted">12/1/2021</small></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="profile-buttons">
-                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
-                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download">
-                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid" alt="Upload">
-                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash">
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-
-                                </div>
-                                <div class="row profile-details-upload">
-                                    <div class="col-md-12">
-                                        <div class="row profile-details">
-                                            <div class="col-md-4">
-                                                <div class="card mb-3">
-                                                    <div class="row g-0">
-                                                        <div class="col-md-2 card-img">
-                                                            <img src="{{asset('img/dashboard/PDF.png')}}" class="img-fluid rounded-start" alt="...">
-                                                        </div>
-                                                        <div class="col-md-10 padd-12">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">Original CV .pdf</h5>
-                                                                <p class="card-text"><small class="text-muted">58KB</small></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="card mb-3">
-                                                    <div class="row g-0">
-                                                        <div class="col-md-1 card-img">
-                                                            <img src="{{asset('img/dashboard/Calendar.png')}}" class="img-fluid rounded-start" alt="...">
-                                                        </div>
-                                                        <div class="col-md-11 padd-12">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">Applied Date</h5>
-                                                                <p class="card-text"><small class="text-muted">12/1/2021</small></p>
+                                                                <p class="card-text"><small class="text-muted">{{ $candidate->created_at ?? '' }}</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2127,7 +2143,8 @@
             </div>
 
 
-            <div class="panel-body">
+            {{-- <div class="panel-body">
+
                     <div class="form-group">
                         <div class="form-group">
                             <a class="btn btn-default" href="{{ route('admin.candidates.index') }}">
@@ -2505,7 +2522,7 @@
 
 
                     </div>
-                </div>
+                </div> --}}
 
         </div>
     </div>

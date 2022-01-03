@@ -130,7 +130,7 @@
                  <div class="row">
                      <div class="padd-0">
                          <div class="registration-form">
-                             <form class="row registration-form-inner" action="{{route('store')}}" method="POST">
+                             <form class="row registration-form-inner" action="{{route('store')}}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                  <div class="row reg-top-heading register-candi">
                                      <div class="col-6 register-text">
@@ -265,7 +265,7 @@
                                  </div>
                                  <div class=" upload-resume">
                                      <span class="upload-icon"></span>
-                                     <input  type="file" class="form-control form-control-lg cv-upload"  name="file"  list="datalistOptions" id="exampleDataList" value="" placeholder="UPLOAD RESUME">
+                                     <input  type="file" class="form-control form-control-lg cv-upload"  name="cv_document"  list="datalistOptions" id="exampleDataList" placeholder="UPLOAD RESUME">
                                      <span class="upload-btn"><img src="img/upload.png" alt="">UPLOAD RESUME</span>
                                      <div class="forms-colored-div">
                                          <div class="blue"></div>

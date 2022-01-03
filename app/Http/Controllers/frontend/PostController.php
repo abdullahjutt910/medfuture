@@ -40,6 +40,7 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
+
         $user = new User();
         $user->name= $request->first_name;
         $user->email = $request->email;
@@ -91,6 +92,10 @@ class PostController extends Controller
         $candidate->username = $request->username;
         $candidate->password = $request->password;
         $candidate->save();
+        if ($request->hasFile('cv_document')) {
+           // dd('dfdf');
+            $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->file('cv_document'))))->toMediaCollection('cv_document');
+        }
         $data = array(
             'title' => $request->title,
             'first_name' => $request->first_name,
