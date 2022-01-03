@@ -11,42 +11,62 @@
         border-radius: 23px;
         padding: 3px;
     }
+    
+    
 }
 @media (min-width: 992px) and (max-width: 1199px){
-
+    .nav-icons .nav-icons-inner {
+        margin: 0px 10px;
+    }
 }
 
 @media (min-width: 992px) {
-    .sidebar-mini.sidebar-collapse .main-sidebar{
-        width: 60px !important;
-    }
-    .sidebar-mini.sidebar-collapse .main-header .navbar {
-        margin-left: 60px !important;
-    }
-    .sidebar-mini.sidebar-collapse .main-sidebar:hover{
-        width: 260px !important;
-    }
-    .main-sidebar:hover .sidebar-menu .treeview  .menu-txt{
-        display: initial !important;
-    }
-    .main-sidebar:hover .sidebar-menu .treeview a .pull-right-container{
-        display: none !important;
-    }
-    .treeview:hover .pull-right-container{
-        display: none !important;
-    }
-    /* .sidebar-menu .treeview:hover .treeview-menu {
-        display: none !important;
-    } */
-    .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu>li:hover>.treeview-menu{
-        display: none !important;
-    }
-    .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu>li:hover>a>span{
-        padding: 12px 5px 12px 0px;
-    }
-    .sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu>li:hover>a>.pull-right-container:not(.pull-right){
-        display: none !important;
-    }
+    /* sidebar hover */
+.sidebar-mini.sidebar-collapse .main-sidebar{
+    width: 60px !important;
+}
+.sidebar-mini.sidebar-collapse .main-header .navbar {
+    margin-left: 60px !important;
+}
+.sidebar-mini.sidebar-collapse .main-sidebar:hover{
+    width: 260px !important;
+} 
+
+/* .sidebar-mini.sidebar-collapse .main-sidebar:hover .treeview:hover .treeview-menu{
+    display: none !important;
+}  */
+.sidebar-mini.sidebar-collapse .main-sidebar:hover .treeview:hover .pull-right-container{
+    display: none !important;
+}
+.sidebar-mini.sidebar-collapse .main-sidebar:hover .treeview:hover .menu-txt{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.sidebar-mini.sidebar-collapse  li.treeview .treeview-menu {
+    display: none !important;
+}
+
+.sidebar-mini.sidebar-collapse li.treeview.menu-open .treeview-menu, .sidebar-mini.sidebar-collapse li.treeview.menu-open:hover .treeview-menu {
+    display: block !important;
+    z-index: 9999999;
+    position: relative;
+    position: relative;
+    min-height: 143px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    top: 0;
+}
+.sidebar-mini:not(.sidebar-mini-expand-feature).sidebar-collapse .sidebar-menu>li:hover>.treeview-menu {
+    top: 0px;
+    display: block !important;
+    min-height: 143px;
+    left: 0px;
+    z-index: 999;
+    position: relative;
+    width: 100%;
+}
+/* sidebar hover */
 }
 @media (min-width: 1400px) {
     .profile-right {

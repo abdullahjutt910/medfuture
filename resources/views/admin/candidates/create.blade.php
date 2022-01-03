@@ -9,7 +9,8 @@
 
                 <div class="panel-heading">
                     <div class="less-then-icon"> <i class="fas fa-chevron-left"></i> </div>
-                    <h4> {{ trans('global.create') }} {{ trans('cruds.candidate.title_singular') }}</h4>
+                    <h4> {{ trans('cruds.candidate.title_singular') }}</h4>
+                    <!-- <h4> {{ trans('global.create') }} {{ trans('cruds.candidate.title_singular') }}</h4>    -->
                 </div>
 
                 <div class="panel-body">
@@ -171,8 +172,7 @@
                                     <div class="col-md-12 second-top-field">
                                         <div class="row">
                                             <div class="col-md-4">
-                                                <div
-                                                    class="form-group {{ $errors->has('address_1') ? 'has-error' : '' }}">
+                                                <div class="form-group {{ $errors->has('address_1') ? 'has-error' : '' }}">
                                                     <!-- <label for="address_1">{{ trans('cruds.candidate.fields.address_1') }}</label> -->
                                                     <input class="form-control" type="text" name="address_1"
                                                         id="address_1" placeholder="Address Line 1"
@@ -695,8 +695,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div
-                                            class="form-group {{ $errors->has('country_of_citizenship') ? 'has-error' : '' }}">
+                                        <div class="form-group {{ $errors->has('country_of_citizenship') ? 'has-error' : '' }}">
                                             <!-- <label>{{ trans('cruds.candidate.fields.country_of_citizenship') }}</label> -->
                                             <select class="form-control" name="country_of_citizenship"
                                                 id="country_of_citizenship">
@@ -895,8 +894,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div
-                                            class="form-group {{ $errors->has('privacy_concerns') ? 'has-error' : '' }}">
+                                        <div class="form-group {{ $errors->has('privacy_concerns') ? 'has-error' : '' }}">
                                             <!-- <label for="privacy_concerns">{{ trans('cruds.candidate.fields.privacy_concerns') }}</label> -->
                                             <div class="needsclick dropzone" id="privacy_concerns-dropzone">
                                                 <div class="upload-icon">

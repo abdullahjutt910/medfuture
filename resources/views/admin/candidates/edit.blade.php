@@ -5,26 +5,43 @@
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
-                <div class="panel-heading">
-                    {{ trans('global.edit') }} {{ trans('cruds.candidate.title_singular') }}
+
+            <div class="panel-heading">
+                <div class="less-then-icon"> <i class="fas fa-chevron-left"></i> </div>
+                <h4> Edit Candidate</h4>   
+                <!-- <h4>   {{ trans('global.edit') }} {{ trans('cruds.candidate.title_singular') }}</h4>    -->
+                </div>
                 </div>
                 <div class="panel-body">
                     <form method="POST" action="{{ route("admin.candidates.update", [$candidate->id]) }}" enctype="multipart/form-data">
                         @method('PUT')
                         @csrf
-                        <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
-                            <label class="required">{{ trans('cruds.candidate.fields.title') }}</label>
-                            <select class="form-control" name="title" id="title" required>
-                                <option value disabled {{ old('title', null) === null ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
-                                @foreach(App\Models\Candidate::TITLE_SELECT as $key => $label)
-                                    <option value="{{ $key }}" {{ old('title', $candidate->title) === (string) $key ? 'selected' : '' }}>{{ $label }}</option>
-                                @endforeach
-                            </select>
-                            @if($errors->has('title'))
-                                <span class="help-block" role="alert">{{ $errors->first('title') }}</span>
-                            @endif
-                            <span class="help-block">{{ trans('cruds.candidate.fields.title_helper') }}</span>
-                        </div>
+
+                        <div class="box-bg-shadow">
+                            <div class="box-inner">
+                                <div class="personal-info">
+                                    <h2> Personal Information</h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 first-top-field">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                    <div class="form-group {{ $errors->has('title') ? 'has-error' : '' }}">
+                                                <label class="required">{{ trans('cruds.candidate.fields.title') }}</label>
+                                                <select class="form-control" name="title" id="title" required>
+                                                    <option value disabled {{ old('title', null) === null ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    @foreach(App\Models\Candidate::TITLE_SELECT as $key => $label)
+                                                        <option value="{{ $key }}" {{ old('title', $candidate->title) === (string) $key ? 'selected' : '' }}>{{ $label }}</option>
+                                                    @endforeach
+                                                </select>
+                                                @if($errors->has('title'))
+                                                    <span class="help-block" role="alert">{{ $errors->first('title') }}</span>
+                                                @endif
+                                                <span class="help-block">{{ trans('cruds.candidate.fields.title_helper') }}</span>
+                        
+                                            </div>
+                                            </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('first_name') ? 'has-error' : '' }}">
                             <label class="required" for="first_name">{{ trans('cruds.candidate.fields.first_name') }}</label>
                             <input class="form-control" type="text" name="first_name" id="first_name" value="{{ old('first_name', $candidate->first_name) }}" required>
@@ -33,6 +50,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.first_name_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('last_name') ? 'has-error' : '' }}">
                             <label class="required" for="last_name">{{ trans('cruds.candidate.fields.last_name') }}</label>
                             <input class="form-control" type="text" name="last_name" id="last_name" value="{{ old('last_name', $candidate->last_name) }}" required>
@@ -41,6 +60,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.last_name_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('gender') ? 'has-error' : '' }}">
                             <label class="required">{{ trans('cruds.candidate.fields.gender') }}</label>
                             <select class="form-control" name="gender" id="gender" required>
@@ -54,6 +75,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.gender_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('dob') ? 'has-error' : '' }}">
                             <label class="required" for="dob">{{ trans('cruds.candidate.fields.dob') }}</label>
                             <input class="form-control date" type="text" name="dob" id="dob" value="{{ old('dob', $candidate->dob) }}" required>
@@ -62,6 +85,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.dob_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('mobile') ? 'has-error' : '' }}">
                             <label class="required" for="mobile">{{ trans('cruds.candidate.fields.mobile') }}</label>
                             <input class="form-control" type="text" name="mobile" id="mobile" value="{{ old('mobile', $candidate->mobile) }}" required>
@@ -70,6 +95,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.mobile_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('home') ? 'has-error' : '' }}">
                             <label class="required" for="home">{{ trans('cruds.candidate.fields.home') }}</label>
                             <input class="form-control" type="text" name="home" id="home" value="{{ old('home', $candidate->home) }}" required>
@@ -78,6 +105,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.home_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('work') ? 'has-error' : '' }}">
                             <label class="required" for="work">{{ trans('cruds.candidate.fields.work') }}</label>
                             <input class="form-control" type="text" name="work" id="work" value="{{ old('work', $candidate->work) }}" required>
@@ -86,6 +115,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.work_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
                             <label class="required" for="email">{{ trans('cruds.candidate.fields.email') }}</label>
                             <input class="form-control" type="email" name="email" id="email" value="{{ old('email', $candidate->email) }}" required>
@@ -94,6 +125,16 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.email_helper') }}</span>
                         </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 line-border">
+                    <hr>
+                </div>
+                <div class="col-md-12 second-top-field">
+                    <div class="row">
+                        
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('address_1') ? 'has-error' : '' }}">
                             <label for="address_1">{{ trans('cruds.candidate.fields.address_1') }}</label>
                             <input class="form-control" type="text" name="address_1" id="address_1" value="{{ old('address_1', $candidate->address_1) }}">
@@ -102,6 +143,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.address_1_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('address_2') ? 'has-error' : '' }}">
                             <label for="address_2">{{ trans('cruds.candidate.fields.address_2') }}</label>
                             <input class="form-control" type="text" name="address_2" id="address_2" value="{{ old('address_2', $candidate->address_2) }}">
@@ -110,6 +153,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.address_2_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('distance_to_main') ? 'has-error' : '' }}">
                             <label for="distance_to_main">{{ trans('cruds.candidate.fields.distance_to_main') }}</label>
                             <input class="form-control" type="text" name="distance_to_main" id="distance_to_main" value="{{ old('distance_to_main', $candidate->distance_to_main) }}">
@@ -118,6 +163,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.distance_to_main_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('town') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.town') }}</label>
                             <select class="form-control" name="town" id="town">
@@ -131,6 +178,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.town_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('state') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.state') }}</label>
                             <select class="form-control" name="state" id="state">
@@ -144,6 +193,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.state_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('district') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.district') }}</label>
                             <select class="form-control" name="district" id="district">
@@ -157,6 +208,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.district_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('country') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.country') }}</label>
                             <select class="form-control" name="country" id="country">
@@ -170,6 +223,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.country_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('post_code') ? 'has-error' : '' }}">
                             <label for="post_code">{{ trans('cruds.candidate.fields.post_code') }}</label>
                             <input class="form-control" type="text" name="post_code" id="post_code" value="{{ old('post_code', $candidate->post_code) }}">
@@ -178,6 +233,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.post_code_helper') }}</span>
                         </div>
+                        </div>
+                                            <div class="col-md-4">
                         <div class="form-group {{ $errors->has('main_city') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.main_city') }}</label>
                             <select class="form-control" name="main_city" id="main_city">
@@ -190,7 +247,25 @@
                                 <span class="help-block" role="alert">{{ $errors->first('main_city') }}</span>
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.main_city_helper') }}</span>
+                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="forms-colored-div">
+                                    <div class="blue"></div>
+                                    <div class="purple"></div>
+                                    <div class="pink"></div>
+                                </div>
                         </div>
+                        <div class="box-bg-shadow">
+                            <div class="box-inner">
+                                <div class="personal-info">
+                                    <h2> Professional Information </h2>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('profession') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.profession') }}</label>
                             <select class="form-control" name="profession" id="profession">
@@ -204,6 +279,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.profession_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('devision') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.devision') }}</label>
                             <select class="form-control" name="devision" id="devision">
@@ -217,6 +294,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.devision_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('senority') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.senority') }}</label>
                             <select class="form-control" name="senority" id="senority">
@@ -230,6 +309,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.senority_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('specialty') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.specialty') }}</label>
                             <select class="form-control" name="specialty" id="specialty">
@@ -243,6 +324,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.specialty_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('professional_qualification') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.professional_qualification') }}</label>
                             <select class="form-control" name="professional_qualification" id="professional_qualification">
@@ -256,6 +339,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.professional_qualification_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('graduation') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.graduation') }}</label>
                             <select class="form-control" name="graduation" id="graduation">
@@ -269,6 +354,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.graduation_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('country_of_primary_degree') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.country_of_primary_degree') }}</label>
                             <select class="form-control" name="country_of_primary_degree" id="country_of_primary_degree">
@@ -282,6 +369,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.country_of_primary_degree_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('medical_school') ? 'has-error' : '' }}">
                             <label for="medical_school">{{ trans('cruds.candidate.fields.medical_school') }}</label>
                             <input class="form-control" type="text" name="medical_school" id="medical_school" value="{{ old('medical_school', $candidate->medical_school) }}">
@@ -290,6 +379,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.medical_school_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('practice_country') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.practice_country') }}</label>
                             <select class="form-control" name="practice_country" id="practice_country">
@@ -303,6 +394,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.practice_country_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('practice_licensing_body') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.practice_licensing_body') }}</label>
                             <select class="form-control" name="practice_licensing_body" id="practice_licensing_body">
@@ -316,6 +409,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.practice_licensing_body_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('license_type') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.license_type') }}</label>
                             <select class="form-control" name="license_type" id="license_type">
@@ -329,6 +424,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.license_type_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('experience_from_home') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.experience_from_home') }}</label>
                             <select class="form-control" name="experience_from_home" id="experience_from_home">
@@ -342,6 +439,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.experience_from_home_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('experience_from_residing') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.experience_from_residing') }}</label>
                             <select class="form-control" name="experience_from_residing" id="experience_from_residing">
@@ -355,6 +454,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.experience_from_residing_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('recognised_comparable_experience') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.recognised_comparable_experience') }}</label>
                             <select class="form-control" name="recognised_comparable_experience" id="recognised_comparable_experience">
@@ -368,6 +469,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.recognised_comparable_experience_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('current_employment_status') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.current_employment_status') }}</label>
                             <select class="form-control" name="current_employment_status" id="current_employment_status">
@@ -381,6 +484,23 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.current_employment_status_helper') }}</span>
                         </div>
+                    </div>
+                    </div>
+                            
+                        </div>
+                        <div class="forms-colored-div">
+                            <div class="blue"></div>
+                            <div class="purple"></div>
+                            <div class="pink"></div>
+                        </div>
+                        </div>
+                        <div class="box-bg-shadow">
+                            <div class="box-inner">
+                                <div class="personal-info">
+                                    <h2> Residential Status & Working Rights</h2>
+                                </div>
+                                <div class="row">
+                    <div class="col-md-6">
                         <div class="form-group {{ $errors->has('country_of_citizenship') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.country_of_citizenship') }}</label>
                             <select class="form-control" name="country_of_citizenship" id="country_of_citizenship">
@@ -394,6 +514,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.country_of_citizenship_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-6">
                         <div class="form-group {{ $errors->has('country_of_residence') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.country_of_residence') }}</label>
                             <select class="form-control" name="country_of_residence" id="country_of_residence">
@@ -407,6 +529,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.country_of_residence_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-6">
                         <div class="form-group {{ $errors->has('visa_type') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.visa_type') }}</label>
                             <select class="form-control" name="visa_type" id="visa_type">
@@ -420,6 +544,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.visa_type_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-6">
                         <div class="form-group {{ $errors->has('work_rights_status') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.work_rights_status') }}</label>
                             <select class="form-control" name="work_rights_status" id="work_rights_status">
@@ -433,6 +559,22 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.work_rights_status_helper') }}</span>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <div class="forms-colored-div">
+                <div class="blue"></div>
+                <div class="purple"></div>
+                <div class="pink"></div>
+            </div>
+                        </div>
+            <div class="box-bg-shadow">
+                <div class="box-inner">
+                    <div class="personal-info">
+                        <h2> Login Credentials</h2>
+                    </div>
+                    <div class="row">
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('profession_login') ? 'has-error' : '' }}">
                             <label>{{ trans('cruds.candidate.fields.profession_login') }}</label>
                             <select class="form-control" name="profession_login" id="profession_login">
@@ -446,6 +588,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.profession_login_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('username') ? 'has-error' : '' }}">
                             <label for="username">{{ trans('cruds.candidate.fields.username') }}</label>
                             <input class="form-control" type="text" name="username" id="username" value="{{ old('username', $candidate->username) }}">
@@ -454,6 +598,8 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.username_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('password') ? 'has-error' : '' }}">
                             <label for="password">{{ trans('cruds.candidate.fields.password') }}</label>
                             <input class="form-control" type="password" name="password" id="password">
@@ -462,39 +608,81 @@
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.password_helper') }}</span>
                         </div>
+                    </div>
+                    </div>
+                </div>
+                    <div class="forms-colored-div">
+                        <div class="blue"></div>
+                        <div class="purple"></div>
+                        <div class="pink"></div>
+                    </div>
+            </div>
+        <div class="box-bg-shadow">
+            <div class="box-inner">
+                <div class="row">
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('cv_document') ? 'has-error' : '' }}">
                             <label for="cv_document">{{ trans('cruds.candidate.fields.cv_document') }}</label>
                             <div class="needsclick dropzone" id="cv_document-dropzone">
+                                <div class="upload-icon">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <p>Upload</p>
+                                </div>
                             </div>
                             @if($errors->has('cv_document'))
                                 <span class="help-block" role="alert">{{ $errors->first('cv_document') }}</span>
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.cv_document_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('registration_form_document') ? 'has-error' : '' }}">
                             <label for="registration_form_document">{{ trans('cruds.candidate.fields.registration_form_document') }}</label>
                             <div class="needsclick dropzone" id="registration_form_document-dropzone">
+                                <div class="upload-icon">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <p>Upload</p>
+                                </div>
                             </div>
                             @if($errors->has('registration_form_document'))
                                 <span class="help-block" role="alert">{{ $errors->first('registration_form_document') }}</span>
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.registration_form_document_helper') }}</span>
                         </div>
+                    </div>
+                    <div class="col-md-4">
                         <div class="form-group {{ $errors->has('privacy_concerns') ? 'has-error' : '' }}">
                             <label for="privacy_concerns">{{ trans('cruds.candidate.fields.privacy_concerns') }}</label>
                             <div class="needsclick dropzone" id="privacy_concerns-dropzone">
+                                <div class="upload-icon">
+                                    <i class="fas fa-arrow-up"></i>
+                                    <p>Upload</p>
+                                </div>
                             </div>
                             @if($errors->has('privacy_concerns'))
                                 <span class="help-block" role="alert">{{ $errors->first('privacy_concerns') }}</span>
                             @endif
                             <span class="help-block">{{ trans('cruds.candidate.fields.privacy_concerns_helper') }}</span>
                         </div>
-                        <div class="form-group">
-                            <button class="btn btn-danger" type="submit">
-                                {{ trans('global.save') }}
-                            </button>
-                        </div>
-                    </form>
+                    </div>
+                </div>
+            </div>
+            <div class="forms-colored-div">
+                <div class="blue"></div>
+                <div class="purple"></div>
+                <div class="pink"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 submit_btn">
+                <div class="form-group">
+                    <button class="btn btn-danger" type="submit">
+                        {{ trans('global.save') }}
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
                 </div>
             </div>
 
