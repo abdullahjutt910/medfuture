@@ -38,6 +38,7 @@ class CandidateController extends Controller
 
     public function store(StoreCandidateRequest $request)
     {
+
         $user = new User();
         $user->name= $request->first_name;
         $user->email = $request->email;
@@ -52,7 +53,6 @@ class CandidateController extends Controller
         $candidate->last_name = $request->last_name;
         $candidate->gender = $request->gender;
         $candidate->dob = $request->dob;
-
         $candidate->mobile = $request->mobile;
         $candidate->home = $request->home;
         $candidate->work = $request->work;
@@ -89,6 +89,7 @@ class CandidateController extends Controller
         $candidate->username = $request->username;
         $candidate->password = $request->password;
         $candidate->save();
+
 
         if ($request->input('cv_document', false)) {
             $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('cv_document'))))->toMediaCollection('cv_document');

@@ -92,9 +92,8 @@ class PostController extends Controller
         $candidate->username = $request->username;
         $candidate->password = $request->password;
         $candidate->save();
-        if ($request->hasFile('cv_document')) {
-           // dd('dfdf');
-            $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->file('cv_document'))))->toMediaCollection('cv_document');
+        if ($request->input('cv_document', false)) {
+            $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('cv_document'))))->toMediaCollection('cv_document');
         }
         $data = array(
             'title' => $request->title,

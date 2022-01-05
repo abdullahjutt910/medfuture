@@ -305,7 +305,7 @@
                                         <td>
                                             <input class="search" type="text" placeholder="{{ trans('global.search') }}">
                                         </td>
-                                        
+
                                     </tr>
                                 </thead>
                             </table>
@@ -334,14 +334,14 @@
                                         </select>
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('First Name') }}">
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('Last Name') }}">
                                     </td>
                                     <td>
                                         <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
+                                            <option value>{{ trans('Gender') }}</option>
                                             @foreach(App\Models\Candidate::GENDER_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
@@ -350,33 +350,34 @@
                                     <td>
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('Address Line 1') }}">
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('Address Line 2') }}">
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('State/Region') }}">
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('Map address') }}">
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('Country') }}">
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('Post Code') }}">
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('Mobile Number') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('Suburb/City') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::TOWN_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
                                         <select class="search" strict="true">
@@ -591,13 +592,13 @@
                                     <td>
                                     </td> -->
                                 </tr>
-                               
+
                                 <tr>
                                     <th width="10">
 
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.title') }}
+                                        {{ trans('cruds.candidate.fields.id') }}
                                     </th>
                                     <th>
                                         {{ trans('cruds.candidate.fields.first_name') }}
@@ -606,22 +607,10 @@
                                         {{ trans('cruds.candidate.fields.last_name') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.gender') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.candidate.fields.dob') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.candidate.fields.mobile') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.candidate.fields.home') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.candidate.fields.work') }}
-                                    </th>
-                                    <th>
                                         {{ trans('cruds.candidate.fields.email') }}
+                                    </th>
+                                    <th>
+                                        {{ trans('cruds.candidate.fields.gender') }}
                                     </th>
                                     <th>
                                         {{ trans('cruds.candidate.fields.address_1') }}
@@ -630,16 +619,10 @@
                                         {{ trans('cruds.candidate.fields.address_2') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.distance_to_main') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('cruds.candidate.fields.town') }}
-                                    </th>
-                                    <th>
                                         {{ trans('cruds.candidate.fields.state') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.district') }}
+                                        Map Address
                                     </th>
                                     <th>
                                         {{ trans('cruds.candidate.fields.country') }}
@@ -647,6 +630,30 @@
                                     <th>
                                         {{ trans('cruds.candidate.fields.post_code') }}
                                     </th>
+                                    <th>
+                                        Mobile Number
+                                    </th>
+                                    <th>
+                                        {{ trans('cruds.candidate.fields.dob') }}
+                                    </th>
+
+
+                                    <th>
+                                        {{ trans('cruds.candidate.fields.work') }}
+                                    </th>
+
+
+                                    <th>
+                                        {{ trans('cruds.candidate.fields.distance_to_main') }}
+                                    </th>
+                                    <th>
+                                        {{ trans('cruds.candidate.fields.town') }}
+                                    </th>
+
+                                    <th>
+                                        {{ trans('cruds.candidate.fields.district') }}
+                                    </th>
+
                                     <th>
                                         {{ trans('cruds.candidate.fields.main_city') }}
                                     </th>
@@ -736,7 +743,7 @@
 
                                     </td>
                                     <td>
-                                        {{ App\Models\Candidate::TITLE_SELECT[$candidate->title] ?? '' }}
+                                        {{ $candidate->id ?? '' }}
                                     </td>
                                     <td>
                                         {{ $candidate->first_name ?? '' }}
@@ -745,22 +752,10 @@
                                         {{ $candidate->last_name ?? '' }}
                                     </td>
                                     <td>
-                                        {{ App\Models\Candidate::GENDER_SELECT[$candidate->gender] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->dob ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->mobile ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->home ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->work ?? '' }}
-                                    </td>
-                                    <td>
                                         {{ $candidate->email ?? '' }}
+                                    </td>
+                                    <td>
+                                        {{ $candidate->gender ?? '' }}
                                     </td>
                                     <td>
                                         {{ $candidate->address_1 ?? '' }}
@@ -769,107 +764,103 @@
                                         {{ $candidate->address_2 ?? '' }}
                                     </td>
                                     <td>
-                                        {{ $candidate->distance_to_main ?? '' }}
+                                        {{ $candidate->state ?? '' }}
                                     </td>
                                     <td>
-                                        {{ App\Models\Candidate::TOWN_SELECT[$candidate->town] ?? '' }}
+                                        {{ $candidate->home ?? '' }}
                                     </td>
                                     <td>
-                                        {{ App\Models\Candidate::STATE_SELECT[$candidate->state] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::DISTRICT_SELECT[$candidate->district] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::COUNTRY_SELECT[$candidate->country] ?? '' }}
+                                        {{ $candidate->country ?? '' }}
                                     </td>
                                     <td>
                                         {{ $candidate->post_code ?? '' }}
                                     </td>
                                     <td>
-                                        {{ App\Models\Candidate::MAIN_CITY_SELECT[$candidate->main_city] ?? '' }}
+                                        {{ $candidate->mobile ?? '' }}
                                     </td>
                                     <td>
-                                        {{ App\Models\Candidate::PROFESSION_SELECT[$candidate->profession] ?? '' }}
+                                        {{ $candidate->dob ?? '' }}
+                                    </td>
+
+
+                                    <td>
+                                        {{ $candidate->work ?? '' }}
+                                    </td>
+
+
+                                    <td>
+                                        {{ $candidate->distance_to_main ?? '' }}
                                     </td>
                                     <td>
-                                        {{ App\Models\Candidate::DEVISION_SELECT[$candidate->devision] ?? '' }}
+                                        {{ $candidate->town ?? '' }}
+                                    </td>
+
+                                    <td>
+                                        {{ $candidate->district ?? '' }}
+                                    </td>
+
+                                    <td>
+                                        {{ $candidate->main_city ?? '' }}
                                     </td>
                                     <td>
-                                        {{ App\Models\Candidate::SENORITY_SELECT[$candidate->senority] ?? '' }}
+                                        {{ $candidate->profession ?? '' }}
                                     </td>
                                     <td>
-                                        {{ App\Models\Candidate::SPECIALTY_SELECT[$candidate->specialty] ?? '' }}
+                                        {{ $candidate->devision ?? '' }}
                                     </td>
                                     <td>
-                                        {{
-                                        App\Models\Candidate::PROFESSIONAL_QUALIFICATION_SELECT[$candidate->professional_qualification]
-                                        ?? '' }}
+                                        {{ $candidate->senority ?? '' }}
                                     </td>
                                     <td>
-                                        {{ App\Models\Candidate::GRADUATION_SELECT[$candidate->graduation] ?? '' }}
+                                        {{ $candidate->specialty ?? '' }}
                                     </td>
                                     <td>
-                                        {{
-                                        App\Models\Candidate::COUNTRY_OF_PRIMARY_DEGREE_SELECT[$candidate->country_of_primary_degree]
-                                        ?? '' }}
+                                        {{ $candidate->professional_qualification ?? '' }}
+                                    </td>
+                                    <td>
+                                        {{ $candidate->graduation ?? '' }}
+                                    </td>
+                                    <td>
+                                        {{ $candidate->country_of_primary_degree ?? '' }}
                                     </td>
                                     <td>
                                         {{ $candidate->medical_school ?? '' }}
                                     </td>
                                     <td>
-                                        {{ App\Models\Candidate::PRACTICE_COUNTRY_SELECT[$candidate->practice_country]
-                                        ?? '' }}
+                                        {{ $candidate->practice_country ?? '' }}
                                     </td>
                                     <td>
-                                        {{
-                                        App\Models\Candidate::PRACTICE_LICENSING_BODY_SELECT[$candidate->practice_licensing_body]
-                                        ?? '' }}
+                                        {{ $candidate->practice_licensing_body ?? '' }}
                                     </td>
                                     <td>
-                                        {{ App\Models\Candidate::LICENSE_TYPE_SELECT[$candidate->license_type] ?? '' }}
+                                        {{ $candidate->license_type ?? '' }}
                                     </td>
                                     <td>
-                                        {{
-                                        App\Models\Candidate::EXPERIENCE_FROM_HOME_SELECT[$candidate->experience_from_home]
-                                        ?? '' }}
+                                        {{ $candidate->experience_from_home ?? '' }}
                                     </td>
                                     <td>
-                                        {{
-                                        App\Models\Candidate::EXPERIENCE_FROM_RESIDING_SELECT[$candidate->experience_from_residing]
-                                        ?? '' }}
+                                        {{ $candidate->experience_from_residing ?? '' }}
                                     </td>
                                     <td>
-                                        {{
-                                        App\Models\Candidate::RECOGNISED_COMPARABLE_EXPERIENCE_SELECT[$candidate->recognised_comparable_experience]
-                                        ?? '' }}
+                                        {{ $candidate->recognised_comparable_experience ?? '' }}
                                     </td>
                                     <td>
-                                        {{
-                                        App\Models\Candidate::CURRENT_EMPLOYMENT_STATUS_SELECT[$candidate->current_employment_status]
-                                        ?? '' }}
+                                        {{ $candidate->current_employment_status ?? '' }}
                                     </td>
                                     <td>
-                                        {{
-                                        App\Models\Candidate::COUNTRY_OF_CITIZENSHIP_SELECT[$candidate->country_of_citizenship]
-                                        ?? '' }}
+                                        {{ $candidate->country_of_citizenship ?? '' }}
                                     </td>
                                     <td>
-                                        {{
-                                        App\Models\Candidate::COUNTRY_OF_RESIDENCE_SELECT[$candidate->country_of_residence]
-                                        ?? '' }}
+                                        {{ $candidate->country_of_residence ?? '' }}
                                     </td>
                                     <td>
-                                        {{ App\Models\Candidate::VISA_TYPE_SELECT[$candidate->visa_type] ?? '' }}
+                                        {{ $candidate->visa_type ?? '' }}
                                     </td>
                                     <td>
-                                        {{
-                                        App\Models\Candidate::WORK_RIGHTS_STATUS_SELECT[$candidate->work_rights_status]
-                                        ?? '' }}
+                                        {{ $candidate->work_rights_status ?? '' }}
                                     </td>
                                     <td>
-                                        {{ App\Models\Candidate::PROFESSION_LOGIN_SELECT[$candidate->profession_login]
-                                        ?? '' }}
+                                        {{ $candidate->profession_login ?? '' }}
                                     </td>
                                     <td>
                                         {{ $candidate->username ?? '' }}
