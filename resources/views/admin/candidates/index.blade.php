@@ -755,6 +755,9 @@
                                         {{ trans('cruds.candidate.fields.privacy_concerns') }}
                                     </th>
                                     <th>
+                                        action
+                                    </th>
+                                    <th>
                                         &nbsp;
                                     </th>
                                 </tr>
@@ -892,7 +895,7 @@
                                     </td>
                                     <td>
 
-                                        <a href="{{ url('public/files/'. $candidate->cv_document) }}123" target="_blank"> View File </a>
+                                        <a href="{{ url('public/files/'. $candidate->cv_document) }}" target="_blank"> View File </a>
                                         {{-- @if($candidate->cv_document)
                                         <a href="{{ $candidate->cv_document->getUrl('files') }}" target="_blank">
                                             {{ trans('global.view_file') }}
