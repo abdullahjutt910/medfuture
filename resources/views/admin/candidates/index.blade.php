@@ -326,7 +326,7 @@
                                     <td>
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('ID') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('Candidate ID') }}">
                                         {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::TITLE_SELECT as $key => $item)
@@ -891,11 +891,13 @@
                                         {{ $candidate->username ?? '' }}
                                     </td>
                                     <td>
-                                        @if($candidate->cv_document)
-                                        <a href="{{ $candidate->cv_document->getUrl() }}" target="_blank">
+
+                                        <a href="{{ url('public/files/'. $candidate->cv_document) }}123" target="_blank"> View File </a>
+                                        {{-- @if($candidate->cv_document)
+                                        <a href="{{ $candidate->cv_document->getUrl('files') }}" target="_blank">
                                             {{ trans('global.view_file') }}
                                         </a>
-                                        @endif
+                                        @endif --}}
                                     </td>
                                     <td>
                                         @if($candidate->registration_form_document)

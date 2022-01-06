@@ -6,6 +6,7 @@ use Gate;
 use App\Models\User;
 use App\Models\Candidate;
 use Illuminate\Http\Request;
+use Intervention\Image\File;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -22,9 +23,11 @@ class CandidateController extends Controller
 
     public function index()
     {
+
         abort_if(Gate::denies('candidate_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $candidates = Candidate::with(['media'])->get();
+
 
         return view('admin.candidates.index', compact('candidates'));
     }
@@ -89,23 +92,33 @@ class CandidateController extends Controller
         $candidate->username = $request->username;
         $candidate->password = $request->password;
         $candidate->save();
-
-
-        if ($request->input('cv_document', false)) {
-            $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('cv_document'))))->toMediaCollection('cv_document');
+        if($request->hasfile('cv_document')) {
+            $file = $request->file('cv_document')->getClientOriginalName();
+            $request->cv_document->move(public_path('/files'), $file);
+            $candidate->cv_document =$file;
         }
-
-        if ($request->input('registration_form_document', false)) {
-            $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('registration_form_document'))))->toMediaCollection('registration_form_document');
+        if($request->hasfile('registration_form_document')) {
+            $file = $request->file('registration_form_document')->getClientOriginalName();
+            $request->registration_form_document->move(public_path('/files'), $file);
+            $candidate->registration_form_document =$file;
         }
-
-        if ($request->input('privacy_concerns', false)) {
-            $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('privacy_concerns'))))->toMediaCollection('privacy_concerns');
+        if($request->hasfile('privacy_concerns')) {
+            $file = $request->file('privacy_concerns')->getClientOriginalName();
+            $request->privacy_concerns->move(public_path('/files'), $file);
+            $candidate->privacy_concerns =$file;
         }
+        $candidate->save();
+        // if ($request->input('registration_form_document', false)) {
+        //     $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('registration_form_document'))))->toMediaCollection('registration_form_document');
+        // }
 
-        if ($media = $request->input('ck-media', false)) {
-            Media::whereIn('id', $media)->update(['model_id' => $candidate->id]);
-        }
+        // if ($request->input('privacy_concerns', false)) {
+        //     $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('privacy_concerns'))))->toMediaCollection('privacy_concerns');
+        // }
+
+        // if ($media = $request->input('ck-media', false)) {
+        //     Media::whereIn('id', $media)->update(['model_id' => $candidate->id]);
+        // }
 
         return redirect()->route('admin.candidates.index');
     }

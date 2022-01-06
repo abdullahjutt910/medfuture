@@ -91,10 +91,15 @@ class PostController extends Controller
         $candidate->profession_login = $request->profession_login;
         $candidate->username = $request->username;
         $candidate->password = $request->password;
-        $candidate->save();
-        if ($request->input('cv_document', false)) {
-            $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('cv_document'))))->toMediaCollection('cv_document');
+        if($request->hasfile('cv_document')) {
+            $file = $request->file('cv_document')->getClientOriginalName();
+            $request->cv_document->move(public_path('/files'), $file);
+            $candidate->cv_document =$file;
         }
+        $candidate->save();
+        // if ($request->input('cv_document', false)) {
+        //     $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('cv_document'))))->toMediaCollection('cv_document');
+        // }
         $data = array(
             'title' => $request->title,
             'first_name' => $request->first_name,

@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 class CreateCandidatesTable extends Migration
 {
@@ -11,7 +12,7 @@ class CreateCandidatesTable extends Migration
         Schema::create('candidates', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->foreignId('user_id')->unsigned();
-            $table->string('title');
+            $table->string('title')->nullable();
             $table->string('first_name');
             $table->string('last_name');
             $table->string('gender')->nullable();
@@ -51,6 +52,9 @@ class CreateCandidatesTable extends Migration
             $table->string('profession_login')->nullable();
             $table->string('username')->nullable();
             $table->string('password')->nullable();
+            $table->string('cv_document')->nullable();
+            $table->string('registration_form_document')->nullable();
+            $table->string('privacy_concerns')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

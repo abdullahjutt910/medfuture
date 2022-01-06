@@ -151,7 +151,7 @@
                                  </div>
                                  <div class="col-12">
                                      <span class="select-arrow profession-select"></span>
-                                     <select class="form-select form-select-lg boder-btm1 single-selected" name="Profession" required aria-label=".form-select-lg example">
+                                     <select class="form-select form-select-lg boder-btm1 single-selected" name="title" required aria-label=".form-select-lg example">
                                          <option selected="" disabled>Profession *</option>
                                          <option value="Doctor">Doctor</option>
                                          <option value="Nurse">Nurse</option>
@@ -480,7 +480,7 @@
                                  </div>
                                  <div class=" upload-resume">
                                      <span class="upload-icon"></span>
-                                     <input  type="file" class="form-control form-control-lg cv-upload"  name="cv_document"  list="datalistOptions" id="exampleDataList" placeholder="UPLOAD RESUME">
+                                     <input type="file" name="cv_document" class="form-control" placeholder="UPLOAD RESUME">
                                      <span class="upload-btn"><img src="img/upload.png" alt="">UPLOAD RESUME</span>
                                      <div class="forms-colored-div">
                                          <div class="blue"></div>
