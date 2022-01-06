@@ -326,12 +326,13 @@
                                     <td>
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('ID') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::TITLE_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
                                         <input class="search" type="text" placeholder="{{ trans('First Name') }}">
@@ -340,12 +341,13 @@
                                         <input class="search" type="text" placeholder="{{ trans('Last Name') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('Gender') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('Gender') }}</option>
                                             @foreach(App\Models\Candidate::GENDER_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
                                     </td>
@@ -371,7 +373,7 @@
                                         <input class="search" type="text" placeholder="{{ trans('Mobile Number') }}">
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('Suburb/City') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('Date of Birth') }}">
                                         {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::TOWN_SELECT as $key => $item)
@@ -380,208 +382,231 @@
                                         </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
+                                        <input class="search" type="text" placeholder="{{ trans('Work') }}">
+                                        {{-- <select class="search" strict="true">
+                                            <option value>{{ trans('Work') }}</option>
                                             @foreach(App\Models\Candidate::STATE_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::DISTRICT_SELECT as $key => $item)
+                                        <input class="search" type="text" placeholder="{{ trans('Distance to Main') }}">
+                                        {{-- <select class="search" strict="true">
+                                            <option value>{{ trans('MAIN_CITY_SELECT') }}</option>
+                                            @foreach(App\Models\Candidate::MAIN_CITY_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <!-- </tr>
                                     <tr> -->
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::COUNTRY_SELECT as $key => $item)
+                                        <input class="search" type="text" placeholder="{{ trans('Town') }}">
+                                        {{-- <select class="search" strict="true">
+                                            <option value>{{ trans('Town') }}</option>
+                                            @foreach(App\Models\Candidate::TOWN_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('District') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('City') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::MAIN_CITY_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('profession') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::PROFESSION_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('Devision') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::DEVISION_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('Senority') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::SENORITY_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('Specialty') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::SPECIALTY_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('professional Qualification') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::PROFESSIONAL_QUALIFICATION_SELECT as $key =>
                                             $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('Graduation') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::GRADUATION_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('Country of Degree') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::COUNTRY_OF_PRIMARY_DEGREE_SELECT as $key =>
                                             $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('Medical School') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('Practice Country') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::PRACTICE_COUNTRY_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('Practice Licensing Body') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::PRACTICE_LICENSING_BODY_SELECT as $key =>
                                             $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('License Type') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::LICENSE_TYPE_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                 <!-- </tr>
                                 <tr> -->
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('Experience Home Country') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::EXPERIENCE_FROM_HOME_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('Experience Residing Country') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::EXPERIENCE_FROM_RESIDING_SELECT as $key =>
                                             $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('Recognised Comparable Experience') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::RECOGNISED_COMPARABLE_EXPERIENCE_SELECT as
                                             $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('CURRENT EMPLOYMENT STATUS') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::CURRENT_EMPLOYMENT_STATUS_SELECT as $key =>
                                             $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('COUNTRY OF CITIZENSHIP') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::COUNTRY_OF_CITIZENSHIP_SELECT as $key =>
                                             $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('COUNTRY OF RESIDENCE') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::COUNTRY_OF_RESIDENCE_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('VISA TYPE') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::VISA_TYPE_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('Work Rights Status') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::WORK_RIGHTS_STATUS_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                        <input class="search" type="text" placeholder="{{ trans('PROFESSION LOGIN') }}">
+                                        {{-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::PROFESSION_LOGIN_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> --}}
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('Username') }}">
                                     </td>
                                     <!-- <td>
                                     </td>
