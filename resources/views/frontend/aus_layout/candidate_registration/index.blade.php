@@ -83,7 +83,7 @@
                                          <div class="col-12">
                                              <span class="select-arrow profession-select"></span>
                                      <select class="form-select form-select-lg boder-btm1 single-selected" name="title" required aria-label=".form-select-lg example">
-                                        <option selected="" disabled>Profession *</option>
+                                        <option selected="" disabled>Profession </option>
                                         <option value="Doctor">Doctor</option>
                                         <option value="Nurse">Nurse</option>
                                         <option value="Allied Health Professionals">Allied Health Professionals</option>

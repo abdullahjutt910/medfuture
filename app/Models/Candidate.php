@@ -1370,20 +1370,20 @@ class Candidate extends Model implements HasMedia
         $this->attributes['dob'] = $value ? Carbon::createFromFormat(config('panel.date_format'), $value)->format('Y-m-d') : null;
     }
 
-    public function getCvDocumentAttribute()
-    {
-        return $this->getMedia('cv_document')->last();
-    }
+    // public function getCvDocumentAttribute()
+    // {
+    //     return $this->getMedia('cv_document')->last();
+    // }
 
-    public function getRegistrationFormDocumentAttribute()
-    {
-        return $this->getMedia('registration_form_document')->last();
-    }
+    // public function getRegistrationFormDocumentAttribute()
+    // {
+    //     return $this->getMedia('registration_form_document')->last();
+    // }
 
-    public function getPrivacyConcernsAttribute()
-    {
-        return $this->getMedia('privacy_concerns')->last();
-    }
+    // public function getPrivacyConcernsAttribute()
+    // {
+    //     return $this->getMedia('privacy_concerns')->last();
+    // }
 
     protected function serializeDate(DateTimeInterface $date)
     {

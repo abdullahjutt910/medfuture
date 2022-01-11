@@ -3308,11 +3308,11 @@
                                         {{ trans('cruds.candidate.fields.cv_document') }}
                                     </th>
                                     <td>
-                                        @if($candidate->cv_document)
+                                        {{-- @if($candidate->cv_document)
                                             <a href="{{ $candidate->cv_document->getUrl() }}" target="_blank">
                                                 {{ trans('global.view_file') }}
                                             </a>
-                                        @endif
+                                        @endif --}}
                                     </td>
                                 </tr>
                                 <tr>
@@ -3320,11 +3320,11 @@
                                         {{ trans('cruds.candidate.fields.registration_form_document') }}
                                     </th>
                                     <td>
-                                        @if($candidate->registration_form_document)
+                                        {{-- @if($candidate->registration_form_document)
                                             <a href="{{ $candidate->registration_form_document->getUrl() }}" target="_blank">
                                                 {{ trans('global.view_file') }}
                                             </a>
-                                        @endif
+                                        @endif --}}
                                     </td>
                                 </tr>
                                 <tr>
@@ -3332,11 +3332,11 @@
                                         {{ trans('cruds.candidate.fields.privacy_concerns') }}
                                     </th>
                                     <td>
-                                        @if($candidate->privacy_concerns)
+                                        {{-- @if($candidate->privacy_concerns)
                                             <a href="{{ $candidate->privacy_concerns->getUrl() }}" target="_blank">
                                                 {{ trans('global.view_file') }}
                                             </a>
-                                        @endif
+                                        @endif --}}
                                     </td>
                                 </tr>
                             </tbody>

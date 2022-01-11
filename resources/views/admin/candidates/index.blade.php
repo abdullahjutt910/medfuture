@@ -894,27 +894,20 @@
                                         {{ $candidate->username ?? '' }}
                                     </td>
                                     <td>
-
-                                        <a href="{{ url('public/files/'. $candidate->cv_document) }}" target="_blank"> View File </a>
-                                        {{-- @if($candidate->cv_document)
-                                        <a href="{{ $candidate->cv_document->getUrl('files') }}" target="_blank">
-                                            {{ trans('global.view_file') }}
-                                        </a>
-                                        @endif --}}
-                                    </td>
-                                    <td>
-                                        @if($candidate->registration_form_document)
-                                        <a href="{{ $candidate->registration_form_document->getUrl() }}"
-                                            target="_blank">
-                                            {{ trans('global.view_file') }}
-                                        </a>
+                                        @if($candidate->cv_document)
+                                        <a href="{{ url('files/'. $candidate->cv_document) }}" target="_blank">{{ trans('global.view_file') }}</a>
                                         @endif
                                     </td>
                                     <td>
+
+                                        @if($candidate->registration_form_document)
+                                        <a href="{{ url('files/'. $candidate->registration_form_document) }}" target="_blank">{{ trans('global.view_file') }}</a>
+                                        @endif
+                                    </td>
+                                    <td>
+
                                         @if($candidate->privacy_concerns)
-                                        <a href="{{ $candidate->privacy_concerns->getUrl() }}" target="_blank">
-                                            {{ trans('global.view_file') }}
-                                        </a>
+                                        <a href="{{ url('files/'. $candidate->privacy_concerns) }}" target="_blank">{{ trans('global.view_file') }}</a>
                                         @endif
                                     </td>
                                     <td class="candidate-crud-list-btn">

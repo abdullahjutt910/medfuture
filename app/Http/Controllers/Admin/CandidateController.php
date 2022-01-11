@@ -134,37 +134,21 @@ class CandidateController extends Controller
     {
         $candidate->update($request->all());
 
-        if ($request->input('cv_document', false)) {
-            if (!$candidate->cv_document || $request->input('cv_document') !== $candidate->cv_document->file_name) {
-                if ($candidate->cv_document) {
-                    $candidate->cv_document->delete();
-                }
-                $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('cv_document'))))->toMediaCollection('cv_document');
-            }
-        } elseif ($candidate->cv_document) {
-            $candidate->cv_document->delete();
+        if($request->hasfile('cv_document')) {
+            $file = $request->file('cv_document')->getClientOriginalName();
+            $request->cv_document->move(public_path('/files'), $file);
+            $candidate->cv_document =$file;
         }
 
-        if ($request->input('registration_form_document', false)) {
-            if (!$candidate->registration_form_document || $request->input('registration_form_document') !== $candidate->registration_form_document->file_name) {
-                if ($candidate->registration_form_document) {
-                    $candidate->registration_form_document->delete();
-                }
-                $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('registration_form_document'))))->toMediaCollection('registration_form_document');
-            }
-        } elseif ($candidate->registration_form_document) {
-            $candidate->registration_form_document->delete();
+        if($request->hasfile('registration_form_document')) {
+            $file = $request->file('registration_form_document')->getClientOriginalName();
+            $request->registration_form_document->move(public_path('/files'), $file);
+            $candidate->registration_form_document =$file;
         }
-
-        if ($request->input('privacy_concerns', false)) {
-            if (!$candidate->privacy_concerns || $request->input('privacy_concerns') !== $candidate->privacy_concerns->file_name) {
-                if ($candidate->privacy_concerns) {
-                    $candidate->privacy_concerns->delete();
-                }
-                $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('privacy_concerns'))))->toMediaCollection('privacy_concerns');
-            }
-        } elseif ($candidate->privacy_concerns) {
-            $candidate->privacy_concerns->delete();
+        if($request->hasfile('privacy_concerns')) {
+            $file = $request->file('privacy_concerns')->getClientOriginalName();
+            $request->privacy_concerns->move(public_path('/files'), $file);
+            $candidate->privacy_concerns =$file;
         }
 
         return redirect()->route('admin.candidates.index');
