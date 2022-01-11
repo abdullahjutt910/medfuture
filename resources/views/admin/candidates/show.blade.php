@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 @section('content')
 <div class="content single-candidate">
-
     <div class="row">
         <div class="col-lg-12">
             <div class="panel panel-default">
@@ -10,8 +9,12 @@
                 </div> -->
                 <div class="panel-heading">
                     <div class="view-candi">
-                        <div class="less-then-icon"> <i class="fas fa-chevron-left"></i> </div>
-                        <h4> {{ trans('global.create') }} {{ trans('cruds.candidate.title_singular') }}</h4>
+                        <a class="btn btn-default back-candidate" href="{{ route('admin.candidates.index') }}">
+                            <div class="less-then-icon"> <i class="fas fa-chevron-left"></i> </div>
+                        </a>
+                        <h4>View Candidate Profile</h4>
+                       
+                        <!-- <h4> {{ trans('global.create') }} {{ trans('cruds.candidate.title_singular') }}</h4> -->
                     </div>
                     <div class="dashbord-button">
                         <a href="#" class="btn dashbord-btn dashbord-primary ">
@@ -28,8 +31,9 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-4 profile-left">
-                                <div class="card">
-                                    <img src=" {{asset('img/dashboard/profile.png')}}" class="card-img-top img-fluid" alt="profile-img">
+                                <div class="card candi-profile">
+                                    <img src=" {{asset('img/dashboard/profile.png')}}" class="card-img-top img-fluid"
+                                        alt="profile-img">
                                     <div class="card-body">
                                         <h5 class="card-title">Mr Ben Johnson</h5>
                                         <p class="card-text">Male</p>
@@ -79,7 +83,8 @@
                                     </ul>
                                     <div class="edit-brn">
 
-                                        <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> Edit</button>
+                                        <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                                class="img-fluid" alt="Edit-img"> Edit</button>
                                     </div>
 
                                 </div>
@@ -91,7 +96,8 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Add-User-Male.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/Add-User-Male.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
@@ -106,7 +112,8 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/verified.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/verified.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
@@ -121,12 +128,14 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Resume.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/Resume.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Candidate Manager</h5>
-                                                        <p class="card-text"><small class="text-muted">Mary Roshella Silva</small></p>
+                                                        <p class="card-text"><small class="text-muted">Mary Roshella
+                                                                Silva</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -138,12 +147,14 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/CV-receive.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/CV-receive.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">CV Recived Date</h5>
-                                                        <p class="card-text"><small class="text-muted">12/08/2021</small></p>
+                                                        <p class="card-text"><small
+                                                                class="text-muted">12/08/2021</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -153,7 +164,8 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Privacy-team.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/Privacy-team.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
@@ -168,12 +180,14 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/first-refister.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/first-refister.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">First Registered Date</h5>
-                                                        <p class="card-text"><small class="text-muted">Mary Roshella Silva</small></p>
+                                                        <p class="card-text"><small class="text-muted">Mary Roshella
+                                                                Silva</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -185,7 +199,8 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/candidate-terms.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/candidate-terms.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
@@ -200,12 +215,14 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/source-name.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/source-name.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Source Name</h5>
-                                                        <p class="card-text"><small class="text-muted">Indeed</small></p>
+                                                        <p class="card-text"><small class="text-muted">Indeed</small>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -215,7 +232,8 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/register-type.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/register-type.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
@@ -232,7 +250,8 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/cdf.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/cdf.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
@@ -247,12 +266,14 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/register-by.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/register-by.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Registered By</h5>
-                                                        <p class="card-text"><small class="text-muted">Medfuture</small></p>
+                                                        <p class="card-text"><small class="text-muted">Medfuture</small>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -262,12 +283,14 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/division.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/division.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Division</h5>
-                                                        <p class="card-text"><small class="text-muted">AHP /HSS</small></p>
+                                                        <p class="card-text"><small class="text-muted">AHP /HSS</small>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -279,12 +302,14 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/availability.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/availability.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Availability</h5>
-                                                        <p class="card-text"><small class="text-muted">In Active</small></p>
+                                                        <p class="card-text"><small class="text-muted">In Active</small>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -294,7 +319,8 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/work-status.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/work-status.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
@@ -309,12 +335,14 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/access-status.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/access-status.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Access Status</h5>
-                                                        <p class="card-text"><small class="text-muted">Enable</small></p>
+                                                        <p class="card-text"><small class="text-muted">Enable</small>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -326,7 +354,8 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Graduation.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/Graduation.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
@@ -341,7 +370,8 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Consultant.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/Consultant.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
@@ -356,7 +386,8 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/register-body.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/register-body.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
@@ -373,12 +404,14 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Health-Sources.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/Health-Sources.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Source Type</h5>
-                                                        <p class="card-text"><small class="text-muted">Indeed</small></p>
+                                                        <p class="card-text"><small class="text-muted">Indeed</small>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -388,12 +421,14 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/prof-qualification.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/prof-qualification.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Prof Qualification</h5>
-                                                        <p class="card-text"><small class="text-muted">Bsc Physical therapy</small></p>
+                                                        <p class="card-text"><small class="text-muted">Bsc Physical
+                                                                therapy</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -403,12 +438,14 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Email-Send.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/Email-Send.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Email - Verify</h5>
-                                                        <p class="card-text"><small class="text-muted">Enable</small></p>
+                                                        <p class="card-text"><small class="text-muted">Enable</small>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -420,12 +457,14 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/profile-grade.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/profile-grade.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Profile Grade</h5>
-                                                        <p class="card-text"><small class="text-muted">Diamond</small></p>
+                                                        <p class="card-text"><small class="text-muted">Diamond</small>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -435,12 +474,14 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/rigistration-via.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/rigistration-via.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Registration Via</h5>
-                                                        <p class="card-text"><small class="text-muted">Back End</small></p>
+                                                        <p class="card-text"><small class="text-muted">Back End</small>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -450,7 +491,8 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Passport.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/Passport.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
@@ -467,12 +509,14 @@
                                         <div class="card mb-3">
                                             <div class="row g-0">
                                                 <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/lead-method.png')}}" class="img-fluid rounded-start" alt="...">
+                                                    <img src="{{asset('img/dashboard/lead-method.png')}}"
+                                                        class="img-fluid rounded-start" alt="...">
                                                 </div>
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Lead Method</h5>
-                                                        <p class="card-text"><small class="text-muted">LinkedIn</small></p>
+                                                        <p class="card-text"><small class="text-muted">LinkedIn</small>
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -482,7 +526,8 @@
 
 
                                 <div class="edit-brn">
-                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> Edit</button>
+                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                            class="img-fluid" alt="Edit-img"> Edit</button>
                                 </div>
 
                                 <div class="row profile-details-upload">
@@ -492,12 +537,14 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-2 card-img">
-                                                            <img src="{{asset('img/dashboard/PDF.png')}}" class="img-fluid rounded-start" alt="...">
+                                                            <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                                class="img-fluid pdf-upload rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-10 padd-12">
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Original CV .pdf</h5>
-                                                                <p class="card-text"><small class="text-muted">58KB</small></p>
+                                                                <p class="card-text"><small
+                                                                        class="text-muted">58KB</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -507,12 +554,14 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-1 card-img">
-                                                            <img src="{{asset('img/dashboard/Calendar.png')}}" class="img-fluid rounded-start" alt="...">
+                                                            <img src="{{asset('img/dashboard/Calendar.png')}}"
+                                                                class="img-fluid rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-11 padd-12">
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Applied Date</h5>
-                                                                <p class="card-text"><small class="text-muted">12/1/2021</small></p>
+                                                                <p class="card-text"><small
+                                                                        class="text-muted">12/1/2021</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -520,10 +569,14 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
-                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
-                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download">
-                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid" alt="Upload">
-                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash">
+                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
+                                                        alt="Eye">
+                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
+                                                        alt="download">
+                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid"
+                                                        alt="Upload">
+                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                        class="img-fluid" alt="Delete-Trash">
                                                 </div>
                                             </div>
                                         </div>
@@ -539,12 +592,14 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-2 card-img">
-                                                            <img src="{{asset('img/dashboard/PDF.png')}}" class="img-fluid rounded-start" alt="...">
+                                                            <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                                class="img-fluid pdf-upload rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-10 padd-12">
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Original CV .pdf</h5>
-                                                                <p class="card-text"><small class="text-muted">58KB</small></p>
+                                                                <p class="card-text"><small
+                                                                        class="text-muted">58KB</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -554,12 +609,14 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-1 card-img">
-                                                            <img src="{{asset('img/dashboard/Calendar.png')}}" class="img-fluid rounded-start" alt="...">
+                                                            <img src="{{asset('img/dashboard/Calendar.png')}}"
+                                                                class="img-fluid rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-11 padd-12">
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Applied Date</h5>
-                                                                <p class="card-text"><small class="text-muted">12/1/2021</small></p>
+                                                                <p class="card-text"><small
+                                                                        class="text-muted">12/1/2021</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -567,10 +624,14 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
-                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
-                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download">
-                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid" alt="Upload">
-                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash">
+                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
+                                                        alt="Eye">
+                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
+                                                        alt="download">
+                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid"
+                                                        alt="Upload">
+                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                        class="img-fluid" alt="Delete-Trash">
                                                 </div>
                                             </div>
                                         </div>
@@ -586,12 +647,14 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-2 card-img">
-                                                            <img src="{{asset('img/dashboard/PDF.png')}}" class="img-fluid rounded-start" alt="...">
+                                                            <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                                class="img-fluid  pdf-upload rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-10 padd-12">
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Original CV .pdf</h5>
-                                                                <p class="card-text"><small class="text-muted">58KB</small></p>
+                                                                <p class="card-text"><small
+                                                                        class="text-muted">58KB</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -601,12 +664,14 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-1 card-img">
-                                                            <img src="{{asset('img/dashboard/Calendar.png')}}" class="img-fluid rounded-start" alt="...">
+                                                            <img src="{{asset('img/dashboard/Calendar.png')}}"
+                                                                class="img-fluid rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-11 padd-12">
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Applied Date</h5>
-                                                                <p class="card-text"><small class="text-muted">12/1/2021</small></p>
+                                                                <p class="card-text"><small
+                                                                        class="text-muted">12/1/2021</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -614,10 +679,14 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
-                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
-                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download">
-                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid" alt="Upload">
-                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash">
+                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
+                                                        alt="Eye">
+                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
+                                                        alt="download">
+                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid"
+                                                        alt="Upload">
+                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                        class="img-fluid" alt="Delete-Trash">
                                                 </div>
                                             </div>
                                         </div>
@@ -633,12 +702,14 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-2 card-img">
-                                                            <img src="{{asset('img/dashboard/PDF.png')}}" class="img-fluid rounded-start" alt="...">
+                                                            <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                                class="img-fluid  pdf-upload rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-10 padd-12">
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Original CV .pdf</h5>
-                                                                <p class="card-text"><small class="text-muted">58KB</small></p>
+                                                                <p class="card-text"><small
+                                                                        class="text-muted">58KB</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -648,12 +719,14 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-1 card-img">
-                                                            <img src="{{asset('img/dashboard/Calendar.png')}}" class="img-fluid rounded-start" alt="...">
+                                                            <img src="{{asset('img/dashboard/Calendar.png')}}"
+                                                                class="img-fluid rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-11 padd-12">
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Applied Date</h5>
-                                                                <p class="card-text"><small class="text-muted">12/1/2021</small></p>
+                                                                <p class="card-text"><small
+                                                                        class="text-muted">12/1/2021</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -661,10 +734,14 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
-                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
-                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download">
-                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid" alt="Upload">
-                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash">
+                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
+                                                        alt="Eye">
+                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
+                                                        alt="download">
+                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid"
+                                                        alt="Upload">
+                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                        class="img-fluid" alt="Delete-Trash">
                                                 </div>
                                             </div>
                                         </div>
@@ -674,7 +751,8 @@
 
                                 </div>
                                 <div class="edit-brn">
-                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> Edit</button>
+                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                            class="img-fluid" alt="Edit-img"> Edit</button>
                                 </div>
                                 <div class="forms-colored-div">
                                     <div class="blue"></div>
@@ -692,29 +770,34 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-5 referrals-left">
-                                <div class="row">
-                                <div class="progress-bar">23</div>
-
-                                <!-- <div class="clearfix">
-                                    <canvas class="loader" width="200" height="200"></canvas>
-                                   
-                                    <br>
-                                </div> -->
-                                </div>
                                 <div class="row candidate-referrals">
                                     <div class="col-md-12">
                                         <div class="referrals-txt">
                                             <h3>My Referrals</h3>
-                                            <input type="date" name="date">
-                                            <!-- <i class="fas fa-sort-down"></i> -->
+                                            <div class="candidate-date">
+                                                <div class="form-group">
+                                                    <select class="form-control" name="title" id="title" required="">
+                                                        <option value="" selected="">2020-2021</option>
+                                                            <option value="2019-2020">2019-2020</option>
+                                                            <option value="2018-2019">2018-2019</option>
+                                                            <option value="2017-2018">2017-2018</option>
+                                                            <option value="2016-2017">2016-2017</option>
+                                                            <option value="2015-2016">2015-2016</option>
+                                                    </select>
+                                                    <i class="fas fa-sort-down"></i>
+                                                </div>
+                                                    <span class="date-background"></span>
+                                            </div>
                                         </div>
 
                                         <div class="referrals-award">
                                             <div class="referrals-award-inner">
                                                 <h5>Medfuture <br> Doctor</h5>
                                                 <div>
-                                                    <img src=" {{asset('img/dashboard/credit-card-chip.png')}}" class="img-fluid" alt="Edit-img">
-                                                    <img src=" {{asset('img/dashboard/Spotlight.png')}}" class="img-fluid" alt="Edit-img">
+                                                    <img src=" {{asset('img/dashboard/credit-card-chip.png')}}"
+                                                        class="img-fluid" alt="Edit-img">
+                                                    <img src=" {{asset('img/dashboard/Spotlight.png')}}"
+                                                        class="img-fluid" alt="Edit-img">
                                                 </div>
                                             </div>
                                             <div class="award">
@@ -725,7 +808,8 @@
                                                 </div>
                                             </div>
                                             <div class="master-card">
-                                                <img src=" {{asset('img/dashboard/master-card.png')}}" class="img-fluid" alt="Edit-img">
+                                                <img src=" {{asset('img/dashboard/master-card.png')}}" class="img-fluid"
+                                                    alt="Edit-img">
                                             </div>
                                             <div class="forms-colored-div">
                                                 <div class="blue"></div>
@@ -736,7 +820,8 @@
 
                                         <p>Refer a friend today and boost your income !</p>
                                         <div class="edit-brn">
-                                            <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> Edit</button>
+                                            <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                                    class="img-fluid" alt="Edit-img"> Edit</button>
                                         </div>
                                     </div>
                                     <div class="forms-colored-div">
@@ -749,58 +834,100 @@
 
                                 <div class="row candidate-progress">
                                     <div class="col-md-12">
+                                        <div class="candidate-date">
+                                            <div class="form-group">
+                                                <select class="form-control" name="title" id="title" required="">
+                                                    <option value="" selected="">2020-2021</option>
+                                                        <option value="2019-2020">2019-2020</option>
+                                                        <option value="2018-2019">2018-2019</option>
+                                                        <option value="2017-2018">2017-2018</option>
+                                                        <option value="2016-2017">2016-2017</option>
+                                                        <option value="2015-2016">2015-2016</option>
+                                                </select>
+                                                <i class="fas fa-sort-down"></i>
+                                            </div>
+                                                <span class="date-background"></span>
+                                        </div>
                                         <div class="candidate-progress-txt">
-                                            <div class="candidate-date"><input type="date" name="date"></div>
                                             <h3>Candidate Recruitment Progress</h3>
                                         </div>
                                         <div class="candidate-progress-bar">
                                             <div class="progress vertical">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span class="bar-txt">25</span></div>
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="0"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">25</span></div>
                                             </div>
                                             <div class="progress vertical">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span class="bar-txt">25</span></div>
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">25</span></div>
                                             </div>
                                             <div class="progress vertical">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"><span class="bar-txt">25</span></div>
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="50"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">25</span></div>
                                             </div>
                                             <div class="progress vertical">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="bar-txt">25</span></div>
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">25</span></div>
                                             </div>
                                             <div class="progress vertical">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="bar-txt">25</span></div>
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">25</span></div>
                                             </div>
                                             <div class="progress vertical">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="bar-txt">25</span></div>
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">25</span></div>
                                             </div>
                                             <div class="progress vertical">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="bar-txt">25</span></div>
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">25</span></div>
                                             </div>
                                             <div class="progress vertical">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="bar-txt">25</span></div>
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">25</span></div>
                                             </div>
                                             <div class="progress vertical">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="bar-txt">25</span></div>
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">25</span></div>
                                             </div>
                                             <div class="progress vertical">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="bar-txt">25</span></div>
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">25</span></div>
                                             </div>
                                             <div class="progress vertical">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="bar-txt">25</span></div>
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">25</span></div>
                                             </div>
                                             <div class="progress vertical">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="bar-txt">25</span></div>
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">25</span></div>
                                             </div>
                                             <div class="progress vertical">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"><span class="bar-txt">25</span></div>
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="75"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">25</span></div>
                                             </div>
                                             <div class="progress vertical">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"><span class="bar-txt">25</span></div>
+                                                <div class="progress-bar" role="progressbar" aria-valuenow="100"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">25</span></div>
                                             </div>
 
 
                                         </div>
                                         <div class="edit-brn">
-                                            <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> Edit</button>
+                                            <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                                    class="img-fluid" alt="Edit-img"> Edit</button>
                                         </div>
                                     </div>
                                     <div class="forms-colored-div">
@@ -813,7 +940,20 @@
 
                                 <div class="row candidate-counter">
                                     <div class="col-md-12">
-                                        <div class="candidate-date"><input type="date" name="date"></div>
+                                        <div class="candidate-date">
+                                            <div class="form-group">
+                                                <select class="form-control" name="title" id="title" required="">
+                                                    <option value="" selected="">2020-2021</option>
+                                                        <option value="2019-2020">2019-2020</option>
+                                                        <option value="2018-2019">2018-2019</option>
+                                                        <option value="2017-2018">2017-2018</option>
+                                                        <option value="2016-2017">2016-2017</option>
+                                                        <option value="2015-2016">2015-2016</option>
+                                                </select>
+                                                <i class="fas fa-sort-down"></i>
+                                            </div>
+                                                <span class="date-background"></span>
+                                        </div>
                                         <div class="row m-20">
                                             <div class="col-md-4">
                                                 <div class="counter-div">
@@ -994,7 +1134,8 @@
 
                                         </div>
                                         <div class="edit-brn">
-                                            <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> Edit</button>
+                                            <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                                    class="img-fluid" alt="Edit-img"> Edit</button>
                                         </div>
                                     </div>
                                     <div class="forms-colored-div">
@@ -1007,7 +1148,20 @@
                                 <div class="row candidate-assign-to">
                                     <div class="col-md-12">
                                         <div class="candidate-assign-txt">
-                                            <div class="candidate-date"><input type="date" name="date"></div>
+                                            <div class="candidate-date">
+                                                <div class="form-group">
+                                                    <select class="form-control" name="title" id="title" required="">
+                                                        <option value="" selected="">2020-2021</option>
+                                                            <option value="2019-2020">2019-2020</option>
+                                                            <option value="2018-2019">2018-2019</option>
+                                                            <option value="2017-2018">2017-2018</option>
+                                                            <option value="2016-2017">2016-2017</option>
+                                                            <option value="2015-2016">2015-2016</option>
+                                                    </select>
+                                                    <i class="fas fa-sort-down"></i>
+                                                </div>
+                                                    <span class="date-background"></span>
+                                            </div>
                                             <h3>Assigned to</h3>
                                         </div>
                                         <div class="assign-form">
@@ -1015,8 +1169,10 @@
                                                 <div class="row">
                                                     <div class="col-md-12 form-group">
                                                         <label for="Candidate_Manager">Candidate Manager</label>
-                                                        <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
-                                                            <option value="" disabled="" selected="">Mary Rosella Silva</option>
+                                                        <select class="form-select form-select-lg mb-3" name="job_title"
+                                                            aria-label=".form-select-lg example">
+                                                            <option value="" disabled="" selected="">Mary Rosella Silva
+                                                            </option>
                                                             <option value="1">One</option>
                                                             <option value="2">Two</option>
                                                             <option value="3">Three</option>
@@ -1025,7 +1181,8 @@
                                                     </div>
                                                     <div class="col-md-12 form-group">
                                                         <label for="Recruitement">Recruitement Consultant</label>
-                                                        <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                        <select class="form-select form-select-lg mb-3" name="job_title"
+                                                            aria-label=".form-select-lg example">
                                                             <option value="" disabled="" selected="">Username</option>
                                                             <option value="1">One</option>
                                                             <option value="2">Two</option>
@@ -1035,8 +1192,10 @@
                                                     </div>
                                                     <div class="col-md-12 form-group">
                                                         <label for="Administrator">Data Administrator</label>
-                                                        <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
-                                                            <option value="" disabled="" selected="">Purnima Purnima</option>
+                                                        <select class="form-select form-select-lg mb-3" name="job_title"
+                                                            aria-label=".form-select-lg example">
+                                                            <option value="" disabled="" selected="">Purnima Purnima
+                                                            </option>
                                                             <option value="1">One</option>
                                                             <option value="2">Two</option>
                                                             <option value="3">Three</option>
@@ -1046,7 +1205,8 @@
 
                                                 </div>
                                                 <div class="edit-brn">
-                                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> Edit</button>
+                                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                                            class="img-fluid" alt="Edit-img"> Edit</button>
                                                 </div>
                                             </form>
 
@@ -1081,8 +1241,22 @@
                                         <div class="reference-txt">
                                             <h3>Reference</h3>
                                             <div class="reference-lock">
-                                                <img src=" {{asset('img/dashboard/Lock.png')}}" class="img-fluid" alt="Edit-img">
-                                                <input type="date" name="date">
+                                                <img src=" {{asset('img/dashboard/Lock.png')}}" class="img-fluid"
+                                                    alt="Edit-img">
+                                                    <div class="candidate-date">
+                                                        <div class="form-group">
+                                                            <select class="form-control" name="title" id="title" required="">
+                                                                <option value="" selected="">2020-2021</option>
+                                                                    <option value="2019-2020">2019-2020</option>
+                                                                    <option value="2018-2019">2018-2019</option>
+                                                                    <option value="2017-2018">2017-2018</option>
+                                                                    <option value="2016-2017">2016-2017</option>
+                                                                    <option value="2015-2016">2015-2016</option>
+                                                            </select>
+                                                            <i class="fas fa-sort-down"></i>
+                                                        </div>
+                                                            <span class="date-background"></span>
+                                                    </div>
                                             </div>
                                         </div>
                                         <div class="reference-form">
@@ -1091,35 +1265,44 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile" id="title" placeholder="Title" value="" required>
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="title" placeholder="Title" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile" id="first_name" placeholder="First Name" value="" required>
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="first_name" placeholder="First Name" value=""
+                                                                required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile" id="title" placeholder="Last Name" value="" required>
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="title" placeholder="Last Name" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="number" name="mobile" id="first_name" placeholder="Telephone" value="" required>
+                                                            <input class="form-control" type="number" name="mobile"
+                                                                id="first_name" placeholder="Telephone" value=""
+                                                                required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="email" name="mobile" id="title" placeholder="Email" value="" required>
+                                                            <input class="form-control" type="email" name="mobile"
+                                                                id="title" placeholder="Email" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile" id="first_name" placeholder="Referee’s Job Titile" value="" required>
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="first_name" placeholder="Referee’s Job Titile"
+                                                                value="" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1127,35 +1310,44 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile" id="title" placeholder="Title" value="" required>
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="title" placeholder="Title" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile" id="first_name" placeholder="First Name" value="" required>
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="first_name" placeholder="First Name" value=""
+                                                                required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile" id="title" placeholder="Last Name" value="" required>
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="title" placeholder="Last Name" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="number" name="mobile" id="first_name" placeholder="Telephone" value="" required>
+                                                            <input class="form-control" type="number" name="mobile"
+                                                                id="first_name" placeholder="Telephone" value=""
+                                                                required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="email" name="mobile" id="title" placeholder="Email" value="" required>
+                                                            <input class="form-control" type="email" name="mobile"
+                                                                id="title" placeholder="Email" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile" id="first_name" placeholder="Referee’s Job Titile" value="" required>
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="first_name" placeholder="Referee’s Job Titile"
+                                                                value="" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1163,41 +1355,51 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile" id="title" placeholder="Title" value="" required>
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="title" placeholder="Title" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile" id="first_name" placeholder="First Name" value="" required>
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="first_name" placeholder="First Name" value=""
+                                                                required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile" id="title" placeholder="Last Name" value="" required>
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="title" placeholder="Last Name" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="number" name="mobile" id="first_name" placeholder="Telephone" value="" required>
+                                                            <input class="form-control" type="number" name="mobile"
+                                                                id="first_name" placeholder="Telephone" value=""
+                                                                required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="email" name="mobile" id="title" placeholder="Email" value="" required>
+                                                            <input class="form-control" type="email" name="mobile"
+                                                                id="title" placeholder="Email" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile" id="first_name" placeholder="Referee’s Job Titile" value="" required>
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="first_name" placeholder="Referee’s Job Titile"
+                                                                value="" required>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </form>
                                             <div class="edit-brn">
-                                                <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> Edit</button>
+                                                <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                                        class="img-fluid" alt="Edit-img"> Edit</button>
                                             </div>
                                             <div class="referee-document">
                                                 <h4>Referee Documents</h4>
@@ -1208,12 +1410,17 @@
                                                                 <div class="card mb-3">
                                                                     <div class="row g-0">
                                                                         <div class="col-md-1 card-img">
-                                                                            <img src="{{asset('img/dashboard/PDF.png')}}" class="img-fluid rounded-start" alt="...">
+                                                                            <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                                                class="img-fluid pdf-upload rounded-start"
+                                                                                alt="...">
                                                                         </div>
                                                                         <div class="col-md-11 padd-l-0">
                                                                             <div class="card-body">
-                                                                                <h5 class="card-title">Referee Report 1 .pdf</h5>
-                                                                                <p class="card-text"><small class="text-muted">32KB | 12/3/2021 </small></p>
+                                                                                <h5 class="card-title">Referee Report 1
+                                                                                    .pdf</h5>
+                                                                                <p class="card-text"><small
+                                                                                        class="text-muted">32KB |
+                                                                                        12/3/2021 </small></p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1221,10 +1428,14 @@
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <div class="profile-buttons">
-                                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
-                                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download">
-                                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid" alt="Upload">
-                                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash">
+                                                                    <img src="{{asset('img/dashboard/Eye.png')}}"
+                                                                        class="img-fluid" alt="Eye">
+                                                                    <img src="{{asset('img/dashboard/Download.png')}}"
+                                                                        class="img-fluid" alt="download">
+                                                                    <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                                        class="img-fluid" alt="Upload">
+                                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                                        class="img-fluid" alt="Delete-Trash">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1237,12 +1448,17 @@
                                                                 <div class="card mb-3">
                                                                     <div class="row g-0">
                                                                         <div class="col-md-1 card-img">
-                                                                            <img src="{{asset('img/dashboard/Video-File.png')}}" class="img-fluid rounded-start" alt="...">
+                                                                            <img src="{{asset('img/dashboard/Video-File.png')}}"
+                                                                                class="img-fluid pdf-upload rounded-start"
+                                                                                alt="...">
                                                                         </div>
                                                                         <div class="col-md-11 padd-l-0">
                                                                             <div class="card-body">
-                                                                                <h5 class="card-title">Referee Report 2 .pdf</h5>
-                                                                                <p class="card-text"><small class="text-muted">32KB | 12/3/2021</small></p>
+                                                                                <h5 class="card-title">Referee Report 2
+                                                                                    .pdf</h5>
+                                                                                <p class="card-text"><small
+                                                                                        class="text-muted">32KB |
+                                                                                        12/3/2021</small></p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1250,10 +1466,14 @@
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <div class="profile-buttons">
-                                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
-                                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download">
-                                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid" alt="Upload">
-                                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash">
+                                                                    <img src="{{asset('img/dashboard/Eye.png')}}"
+                                                                        class="img-fluid" alt="Eye">
+                                                                    <img src="{{asset('img/dashboard/Download.png')}}"
+                                                                        class="img-fluid" alt="download">
+                                                                    <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                                        class="img-fluid" alt="Upload">
+                                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                                        class="img-fluid" alt="Delete-Trash">
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1266,12 +1486,17 @@
                                                                 <div class="card mb-3">
                                                                     <div class="row g-0">
                                                                         <div class="col-md-1 card-img">
-                                                                            <img src="{{asset('img/dashboard/MP3.png')}}" class="img-fluid rounded-start" alt="...">
+                                                                            <img src="{{asset('img/dashboard/MP3.png')}}"
+                                                                                class="img-fluid pdf-upload rounded-start"
+                                                                                alt="...">
                                                                         </div>
                                                                         <div class="col-md-11 padd-l-0">
                                                                             <div class="card-body">
-                                                                                <h5 class="card-title">Referee Report 3 .pdf</h5>
-                                                                                <p class="card-text"><small class="text-muted">56KB | 12/3/2021</small></p>
+                                                                                <h5 class="card-title">Referee Report 3
+                                                                                    .pdf</h5>
+                                                                                <p class="card-text"><small
+                                                                                        class="text-muted">56KB |
+                                                                                        12/3/2021</small></p>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -1279,27 +1504,32 @@
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <div class="profile-buttons">
-                                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
-                                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download">
-                                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid" alt="Upload">
-                                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash">
+                                                                    <img src="{{asset('img/dashboard/Eye.png')}}"
+                                                                        class="img-fluid" alt="Eye">
+                                                                    <img src="{{asset('img/dashboard/Download.png')}}"
+                                                                        class="img-fluid" alt="download">
+                                                                    <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                                        class="img-fluid" alt="Upload">
+                                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                                        class="img-fluid" alt="Delete-Trash">
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="edit-brn">
-                                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> Edit</button>
+                                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                                            class="img-fluid" alt="Edit-img"> Edit</button>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="forms-colored-div">
-                                        <div class="blue"></div>
-                                        <div class="purple"></div>
-                                        <div class="pink"></div>
+                                            <div class="blue"></div>
+                                            <div class="purple"></div>
+                                            <div class="pink"></div>
+                                        </div>
                                     </div>
-                                </div>
-                                   
+
                                 </div>
 
                             </div>
@@ -1308,15 +1538,31 @@
                             <div class="col-md-7 job-summary">
                                 <div class="job-summary-inner">
                                     <div class="job-summary-top">
-                                        <div class="candidate-date"><input type="date" name="date"></div>
+                                        <div class="candidate-date">
+                                            <div class="form-group">
+                                                <select class="form-control" name="title" id="title" required="">
+                                                    <option value="" selected="">2020-2021</option>
+                                                        <option value="2019-2020">2019-2020</option>
+                                                        <option value="2018-2019">2018-2019</option>
+                                                        <option value="2017-2018">2017-2018</option>
+                                                        <option value="2016-2017">2016-2017</option>
+                                                        <option value="2015-2016">2015-2016</option>
+                                                </select>
+                                                <i class="fas fa-sort-down"></i>
+                                            </div>
+                                                <span class="date-background"></span>
+                                        </div>
 
                                         <h3>Job Summary</h3>
                                         <p class="summary-id">ID: AH5841</p>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem est rerum placeat nobis voluptates fuga in laudantium cumque veniam! Suscipit at esse tenetur neque cumque, amet quasi incidunt voluptatibus?</p>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem est rerum
+                                            placeat nobis voluptates fuga in laudantium cumque veniam! Suscipit at esse
+                                            tenetur neque cumque, amet quasi incidunt voluptatibus?</p>
                                         <div class="summary-bottom">
                                             <p>Last Updated Date</p>
                                             <div class="edit-brn">
-                                                <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> Edit</button>
+                                                <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                                        class="img-fluid" alt="Edit-img"> Edit</button>
                                             </div>
                                         </div>
                                     </div>
@@ -1333,7 +1579,9 @@
                                                                 Title
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1378,7 +1626,9 @@
                                                                 Profession
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1391,7 +1641,9 @@
                                                                 Division
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1404,7 +1656,9 @@
                                                                 Seniority
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1417,7 +1671,9 @@
                                                                 Specialty
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1456,7 +1712,9 @@
                                                                 Job Seeking location
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1549,7 +1807,9 @@
                                                                 Registration/ License Type
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1562,7 +1822,9 @@
                                                                 Country of Primary Degree
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1584,7 +1846,9 @@
                                                                 Practice Licensing Country
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1605,7 +1869,9 @@
                                                                 Experience From Home Country
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1618,7 +1884,9 @@
                                                                 Experience From Residing Country
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1631,7 +1899,9 @@
                                                                 Recognised Comparable Experience
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1644,7 +1914,9 @@
                                                                 Current Employment Status
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1661,7 +1933,9 @@
                                                                 Engagement Type
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1674,7 +1948,9 @@
                                                                 Employment Term
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1687,7 +1963,9 @@
                                                                 Placement Type
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1732,7 +2010,9 @@
                                                                 Country of Citizenship
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1745,7 +2025,9 @@
                                                                 Country of Residence
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1758,7 +2040,9 @@
                                                                 VISA Type or Subclass
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1771,7 +2055,9 @@
                                                                 Work Right Status
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1784,7 +2070,9 @@
                                                                 VISA Sponsorship
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1801,7 +2089,9 @@
                                                                 Accommodation
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1814,7 +2104,9 @@
                                                                 Travel Allowances
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1827,7 +2119,9 @@
                                                                 Meal Allowances
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1840,7 +2134,9 @@
                                                                 Uniform Allowances
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1860,7 +2156,9 @@
                                                                 Moratorium Restriction
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1873,7 +2171,9 @@
                                                                 Location Restrictions
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1886,7 +2186,9 @@
                                                                 Training Program Requirement
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1899,7 +2201,9 @@
                                                                 Training Program Type
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1912,7 +2216,9 @@
                                                                 Medical Board Conditions
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1925,7 +2231,9 @@
                                                                 Medical Board Undertakings
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3" name="job_title" aria-label=".form-select-lg example">
+                                                                <select class="form-select form-select-lg mb-3"
+                                                                    name="job_title"
+                                                                    aria-label=".form-select-lg example">
                                                                     <option value="1">One</option>
                                                                     <option value="2">Two</option>
                                                                     <option value="3">Three</option>
@@ -1936,8 +2244,11 @@
                                                         <tr>
                                                             <td colspan="2">
                                                                 <div class="mb-3 text-area">
-                                                                    <label for="exampleFormControlTextarea1" class="form-label">Skills & Interests</label>
-                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </textarea>
+                                                                    <label for="exampleFormControlTextarea1"
+                                                                        class="form-label">Skills & Interests</label>
+                                                                    <textarea class="form-control"
+                                                                        id="exampleFormControlTextarea1"
+                                                                        rows="3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </textarea>
                                                                 </div>
                                                             </td>
                                                             <td></td>
@@ -1945,8 +2256,11 @@
                                                         <tr>
                                                             <td colspan="2">
                                                                 <div class="mb-3 text-area">
-                                                                    <label for="exampleFormControlTextarea1" class="form-label">Interviewer Notes</label>
-                                                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3">Interviewer Complete Notes</textarea>
+                                                                    <label for="exampleFormControlTextarea1"
+                                                                        class="form-label">Interviewer Notes</label>
+                                                                    <textarea class="form-control"
+                                                                        id="exampleFormControlTextarea1"
+                                                                        rows="3">Interviewer Complete Notes</textarea>
                                                                 </div>
                                                             </td>
                                                             <td></td>
@@ -1957,13 +2271,34 @@
 
                                                 <div class="interview-btns">
                                                     <div class="edit-brn">
-                                                        <button class="btn"><img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download"> Download</button>
-                                                        <button class="btn"><img src=" {{asset('img/dashboard/Print-1.png')}}" class="img-fluid" alt="Edit-img"> Print </button>
-                                                        <button class="btn"><img src=" {{asset('img/dashboard/Share.png')}}" class="img-fluid" alt="Edit-img"> Share</button>
-                                                        <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> Edit</button>
+                                                        <button class="btn"><img
+                                                                src="{{asset('img/dashboard/Download.png')}}"
+                                                                class="img-fluid" alt="download"> Download</button>
+                                                        <button class="btn"><img
+                                                                src=" {{asset('img/dashboard/Print-1.png')}}"
+                                                                class="img-fluid" alt="Edit-img"> Print </button>
+                                                        <button class="btn"><img
+                                                                src=" {{asset('img/dashboard/Share.png')}}"
+                                                                class="img-fluid" alt="Edit-img"> Share</button>
+                                                        <button class="btn"><img
+                                                                src=" {{asset('img/dashboard/Edit.png')}}"
+                                                                class="img-fluid" alt="Edit-img"> Edit</button>
                                                     </div>
                                                 </div>
-                                                <div class="candidate-date"><input type="date" name="date"></div>
+                                                <div class="candidate-date">
+                                                    <div class="form-group">
+                                                        <select class="form-control" name="title" id="title" required="">
+                                                            <option value="" selected="">2020-2021</option>
+                                                                <option value="2019-2020">2019-2020</option>
+                                                                <option value="2018-2019">2018-2019</option>
+                                                                <option value="2017-2018">2017-2018</option>
+                                                                <option value="2016-2017">2016-2017</option>
+                                                                <option value="2015-2016">2015-2016</option>
+                                                        </select>
+                                                        <i class="fas fa-sort-down"></i>
+                                                    </div>
+                                                        <span class="date-background"></span>
+                                                </div>
                                                 <div class="audio-video-file">
                                                     <h4>Audio or Video File Recording</h4>
                                                     <div class="row profile-details-upload">
@@ -1973,12 +2308,17 @@
                                                                     <div class="card mb-3">
                                                                         <div class="row g-0">
                                                                             <div class="col-md-1 card-img">
-                                                                                <img src="{{asset('img/dashboard/PDF.png')}}" class="img-fluid rounded-start" alt="...">
+                                                                                <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                                                    class="img-fluid pdf-upload rounded-start"
+                                                                                    alt="...">
                                                                             </div>
                                                                             <div class="col-md-11 padd-l-0">
                                                                                 <div class="card-body">
-                                                                                    <h5 class="card-title">Primary Interview Sheet .pdf</h5>
-                                                                                    <p class="card-text"><small class="text-muted">58KB | 12/3/2021</small></p>
+                                                                                    <h5 class="card-title">Primary
+                                                                                        Interview Sheet .pdf</h5>
+                                                                                    <p class="card-text"><small
+                                                                                            class="text-muted">58KB |
+                                                                                            12/3/2021</small></p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -1986,10 +2326,14 @@
                                                                 </div>
                                                                 <div class="col-md-4">
                                                                     <div class="profile-buttons">
-                                                                        <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
-                                                                        <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download">
-                                                                        <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid" alt="Upload">
-                                                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash">
+                                                                        <img src="{{asset('img/dashboard/Eye.png')}}"
+                                                                            class="img-fluid" alt="Eye">
+                                                                        <img src="{{asset('img/dashboard/Download.png')}}"
+                                                                            class="img-fluid" alt="download">
+                                                                        <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                                            class="img-fluid" alt="Upload">
+                                                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                                            class="img-fluid" alt="Delete-Trash">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -2002,12 +2346,17 @@
                                                                     <div class="card mb-3">
                                                                         <div class="row g-0">
                                                                             <div class="col-md-1 card-img">
-                                                                                <img src="{{asset('img/dashboard/Video-File.png')}}" class="img-fluid rounded-start" alt="...">
+                                                                                <img src="{{asset('img/dashboard/Video-File.png')}}"
+                                                                                    class="img-fluid pdf-upload rounded-start"
+                                                                                    alt="...">
                                                                             </div>
                                                                             <div class="col-md-11 padd-l-0">
                                                                                 <div class="card-body">
-                                                                                    <h5 class="card-title">Video Recording</h5>
-                                                                                    <p class="card-text"><small class="text-muted">32KB | 12/3/2021</small></p>
+                                                                                    <h5 class="card-title">Video
+                                                                                        Recording</h5>
+                                                                                    <p class="card-text"><small
+                                                                                            class="text-muted">32KB |
+                                                                                            12/3/2021</small></p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -2015,10 +2364,14 @@
                                                                 </div>
                                                                 <div class="col-md-4">
                                                                     <div class="profile-buttons">
-                                                                        <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
-                                                                        <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download">
-                                                                        <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid" alt="Upload">
-                                                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash">
+                                                                        <img src="{{asset('img/dashboard/Eye.png')}}"
+                                                                            class="img-fluid" alt="Eye">
+                                                                        <img src="{{asset('img/dashboard/Download.png')}}"
+                                                                            class="img-fluid" alt="download">
+                                                                        <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                                            class="img-fluid" alt="Upload">
+                                                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                                            class="img-fluid" alt="Delete-Trash">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -2031,12 +2384,17 @@
                                                                     <div class="card mb-3">
                                                                         <div class="row g-0">
                                                                             <div class="col-md-1 card-img">
-                                                                                <img src="{{asset('img/dashboard/MP3.png')}}" class="img-fluid rounded-start" alt="...">
+                                                                                <img src="{{asset('img/dashboard/MP3.png')}}"
+                                                                                    class="img-fluid pdf-upload rounded-start"
+                                                                                    alt="...">
                                                                             </div>
                                                                             <div class="col-md-11 padd-l-0">
                                                                                 <div class="card-body">
-                                                                                    <h5 class="card-title">Audio Recording</h5>
-                                                                                    <p class="card-text"><small class="text-muted">56KB | 12/3/2021</small></p>
+                                                                                    <h5 class="card-title">Audio
+                                                                                        Recording</h5>
+                                                                                    <p class="card-text"><small
+                                                                                            class="text-muted">56KB |
+                                                                                            12/3/2021</small></p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -2044,27 +2402,33 @@
                                                                 </div>
                                                                 <div class="col-md-4">
                                                                     <div class="profile-buttons">
-                                                                        <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
-                                                                        <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid" alt="download">
-                                                                        <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid" alt="Upload">
-                                                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash">
+                                                                        <img src="{{asset('img/dashboard/Eye.png')}}"
+                                                                            class="img-fluid" alt="Eye">
+                                                                        <img src="{{asset('img/dashboard/Download.png')}}"
+                                                                            class="img-fluid" alt="download">
+                                                                        <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                                            class="img-fluid" alt="Upload">
+                                                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                                            class="img-fluid" alt="Delete-Trash">
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                     <div class="edit-brn">
-                                                        <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> Edit</button>
+                                                        <button class="btn"><img
+                                                                src=" {{asset('img/dashboard/Edit.png')}}"
+                                                                class="img-fluid" alt="Edit-img"> Edit</button>
                                                     </div>
                                                 </div>
                                                 <div class="forms-colored-div">
-                                            <div class="blue"></div>
-                                            <div class="purple"></div>
-                                            <div class="pink"></div>
-                                        </div>
+                                                    <div class="blue"></div>
+                                                    <div class="purple"></div>
+                                                    <div class="pink"></div>
+                                                </div>
                                             </div>
                                         </div>
-                                        
+
 
                                     </div>
                                 </div>
@@ -2079,17 +2443,32 @@
                             <div class="col-md-12">
                                 <div class="testimonial-heading">
                                     <h3>Testimonial</h3>
-                                    <input type="date" name="date">
-                                    <!-- <i class="fas fa-sort-down"></i> -->
+                                    <div class="candidate-date">
+                                        <div class="form-group">
+                                            <select class="form-control" name="title" id="title" required="">
+                                                <option value="" selected="">2020-2021</option>
+                                                    <option value="2019-2020">2019-2020</option>
+                                                    <option value="2018-2019">2018-2019</option>
+                                                    <option value="2017-2018">2017-2018</option>
+                                                    <option value="2016-2017">2016-2017</option>
+                                                    <option value="2015-2016">2015-2016</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
+                                        </div>
+                                            <span class="date-background"></span>
+                                    </div>
                                 </div>
                                 <div class="testimonial-txt">
-                                    <p>"Medfuture takes time to understand our need as a medical center and successfully place great practitioner that match our value and ethos"
+                                    <p>"Medfuture takes time to understand our need as a medical center and successfully
+                                        place great practitioner that match our value and ethos"
                                     </p>
                                     <p>– KIM CHING, FEBRUARY 21, 2021</p>
                                 </div>
                                 <div class="edit-brn">
-                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> Edit</button>
-                                    <button class="btn"><img src=" {{asset('img/dashboard/Delete-Chat.png')}}" class="img-fluid" alt="Edit-img"> Remove</button>
+                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                            class="img-fluid" alt="Edit-img"> Edit</button>
+                                    <button class="btn"><img src=" {{asset('img/dashboard/Delete-Chat.png')}}"
+                                            class="img-fluid" alt="Edit-img"> Remove</button>
                                 </div>
                                 <div class="row testimonial-upload">
                                     <div class="col-md-5">
@@ -2098,12 +2477,14 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-1 card-img">
-                                                            <img src="http://127.0.0.1:8000/img/dashboard/MP3.png" class="img-fluid rounded-start" alt="...">
+                                                            <img src="http://127.0.0.1:8000/img/dashboard/MP3.png"
+                                                                class="img-fluid pdf-upload rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-11 padd-l-0">
                                                             <div class="card-body">
                                                                 <h5 class="card-title">Referee Report 3 .pdf</h5>
-                                                                <p class="card-text"><small class="text-muted">56KB | 12/3/2021</small></p>
+                                                                <p class="card-text"><small class="text-muted">56KB |
+                                                                        12/3/2021</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -2111,10 +2492,14 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
-                                                    <img src="http://127.0.0.1:8000/img/dashboard/Eye.png" class="img-fluid" alt="Eye">
-                                                    <img src="http://127.0.0.1:8000/img/dashboard/Download.png" class="img-fluid" alt="download">
-                                                    <img src="http://127.0.0.1:8000/img/dashboard/Upload.png" class="img-fluid" alt="Upload">
-                                                    <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png" class="img-fluid" alt="Delete-Trash">
+                                                    <img src="http://127.0.0.1:8000/img/dashboard/Eye.png"
+                                                        class="img-fluid" alt="Eye">
+                                                    <img src="http://127.0.0.1:8000/img/dashboard/Download.png"
+                                                        class="img-fluid" alt="download">
+                                                    <img src="http://127.0.0.1:8000/img/dashboard/Upload.png"
+                                                        class="img-fluid" alt="Upload">
+                                                    <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png"
+                                                        class="img-fluid" alt="Delete-Trash">
                                                 </div>
                                             </div>
                                         </div>
@@ -2515,7 +2900,7 @@
 
 
 
-                <!-- <table id="data_table" class="table table-bordered table-striped table-hover datatable  candidate-profile-table" style="width:100%">
+            <!-- <table id="data_table" class="table table-bordered table-striped table-hover datatable  candidate-profile-table" style="width:100%">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -2995,8 +3380,131 @@
                         </tr>
                     </tfoot>
                 </table> -->
-                
+            
+            
+            <!-- counter -->
+           <!-- <div class="percent">
+            <p style="display:none;">70%</p>
+      </div> -->
+           <!-- counter end -->
+                <div class="candidate-profile-table">
+                <div class="testimonial-heading">
+                    <h3>Job Order Pipeline</h3>
+                </div>
+            <table id="dtpipeline" class="table  table-striped table-bordered table-sm" cellspacing="0" width="100%">
+                <thead>
+                    <tr>
+                        <th class="th-sm">Title
+                        </th>
+                        <th class="th-sm">Clients
+                        </th>
+                        <th class="th-sm">Owner
+                        </th>
+                        <th class="th-sm">Added
+                        </th>
+                        <th class="th-sm">Submitted
+                        </th>
+                        <th class="th-sm">Action
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tiger Nixon</td>
+                        <td>System Architect</td>
+                        <td>Edinburgh</td>
+                        <td>61</td>
+                        <td>2011/04/25</td>
+                        <td>$320,800</td>
+                    </tr>
+                    <tr>
+                        <td>Shad Decker</td>
+                        <td>Regional Director</td>
+                        <td>Edinburgh</td>
+                        <td>51</td>
+                        <td>2008/11/13</td>
+                        <td>$183,000</td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+            <div class="pipeline-btn">
+                <div class="add-pipeline">
+                    <button class="btn">Add This Candidate To Job Order Pipeline </button>
+                </div>
 
+                <div class="edit-brn">
+                    <button class="btn"><img
+                            src=" {{asset('img/dashboard/Edit.png')}}"
+                            class="img-fluid" alt="Edit-img"> Edit</button>
+                </div>
+            </div>
+           
+        </div>
+        <div class="forms-colored-div">
+            <div class="blue"></div>
+            <div class="purple"></div>
+            <div class="pink"></div>
+        </div>
+        <div class="candidate-profile-table activity-heading">
+            <div class="testimonial-heading ">
+                <h3>Activity</h3>
+            </div>
+        <table id="dtActivity" class="table  table-striped table-bordered table-sm" cellspacing="0" width="100%">
+            <thead>
+                <tr>
+                    <th class="th-sm">Title
+                    </th>
+                    <th class="th-sm">Clients
+                    </th>
+                    <th class="th-sm">Owner
+                    </th>
+                    <th class="th-sm">Added
+                    </th>
+                    <th class="th-sm">Submitted
+                    </th>
+                    <th class="th-sm">Action
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tiger Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                </tr>
+                <tr>
+                    <td>Shad Decker</td>
+                    <td>Regional Director</td>
+                    <td>Edinburgh</td>
+                    <td>51</td>
+                    <td>2008/11/13</td>
+                    <td>$183,000</td>
+                </tr>
+              
+            </tbody>
+        </table>
+        <div class="pipeline-btn">
+            <div class="add-pipeline">
+                <button class="btn">Add This Candidate To Job Order Pipeline </button>
+            </div>
+
+            <div class="edit-brn">
+                <button class="btn"><img
+                        src=" {{asset('img/dashboard/Edit.png')}}"
+                        class="img-fluid" alt="Edit-img"> Edit</button>
+            </div>
+        </div>
+        
+    </div>
+    <div class="forms-colored-div">
+        <div class="blue"></div>
+        <div class="purple"></div>
+        <div class="pink"></div>
+    </div>
         </div>
     </div>
 </div>

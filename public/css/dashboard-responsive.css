@@ -73,9 +73,9 @@
         padding: 40px;
     }
     .candidate-progress-bar .progress {
-        margin-right: 23px !important;
+        margin-right: 10px !important;
     }
-    .notification-btns .btn {
+    /* .notification-btns .btn {
         width: 190px;
-    }
+    } */
 }

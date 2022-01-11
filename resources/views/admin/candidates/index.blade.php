@@ -15,8 +15,9 @@
                             <a class="btn btn-success" href="{{ route('admin.candidates.create') }}">
                                 Add New
                                 <!-- {{ trans('global.add') }} {{ trans('cruds.candidate.title_singular') }} -->
-                            </a>
+                           
                             <i class="fas fa-plus"></i>
+                            </a>
                         </div>
                     </div>
                     @endcan
@@ -41,10 +42,10 @@
                             </li>
 
                             <li>
-                                <a href="#" class="btn btn-filter"> AHP - HSS Unit </a>
+                                <a href="#" class="btn btn-filter white-space-nor"> AHP - HSS Unit </a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-filter"> Healthcare Executive Units </a>
+                                <a href="#" class="btn btn-filter white-space-nor"> Healthcare Executive Units </a>
                             </li>
 
                         </ul>
@@ -319,9 +320,156 @@
                     </div>
                 </div> -->
                 <div class="panel-body">
-                    <div class="table-responsive">
+                    <div class="table-responsive table-cus">
                         <table class=" table table-bordered table-striped table-hover datatable datatable-Candidate">
                             <thead>
+                                <!-- <tr class="no-row">
+                                    <td>
+                                       
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                       
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                       
+                                    </td>
+                                    <td>
+                                       
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                       
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                       
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    
+                                    <td>
+                                       
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                       
+                                    </td>
+                                    <td>
+                                      
+                                    </td>
+                                    <td>
+                                       
+                                    </td>
+                                    <td>
+                                       
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td >
+                                       
+                                    </td>
+                                    <td >
+                                     
+                                    </td>
+ 
+                                </tr> -->
+                                <tr class="no-row">
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <select class="search" strict="true">
+                                            <option value>{{ trans('global.all') }}</option>
+                                            @foreach(App\Models\Candidate::TITLE_SELECT as $key => $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                    </td>
+                                    <td>
+                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                    </td>
+                                    <td>
+                                        <select class="search" strict="true">
+                                            <option value>{{ trans('global.all') }}</option>
+                                            @foreach(App\Models\Candidate::GENDER_SELECT as $key => $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                    </td>
+                                    <td>
+                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                    </td>
+                                    <td>
+                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                    </td>
+                                    <td>
+                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                    </td>
+                                    <td>
+                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                    </td>
+                                    <td>
+                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                    </td>
+                                    <td>
+                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                    </td>
+                                    <td>
+                                        <select class="search" strict="true">
+                                            <option value>{{ trans('global.all') }}</option>
+                                            @foreach(App\Models\Candidate::TOWN_SELECT as $key => $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="search" strict="true">
+                                            <option value>{{ trans('global.all') }}</option>
+                                            @foreach(App\Models\Candidate::STATE_SELECT as $key => $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="search" strict="true">
+                                            <option value>{{ trans('global.all') }}</option>
+                                            @foreach(App\Models\Candidate::DISTRICT_SELECT as $key => $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                </tr>
                                 <tr>
                                     <td>
                                     </td>
@@ -394,8 +542,8 @@
                                             @endforeach
                                         </select>
                                     </td>
-                                    <!-- </tr>
-                                    <tr> -->
+                                </tr>
+                                <tr>
                                     <td>
                                         <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
@@ -501,7 +649,7 @@
                                             @endforeach
                                         </select>
                                     </td>
-                                <!-- </tr>
+                                    <!-- </tr>
                                 <tr> -->
                                     <td>
                                         <select class="search" strict="true">
@@ -591,7 +739,7 @@
                                     <td>
                                     </td> -->
                                 </tr>
-                               
+
                                 <tr>
                                     <th width="10">
 
@@ -896,38 +1044,46 @@
                                         </a>
                                         @endif
                                     </td>
-                                    <td class="candidate-crud-list-btn">
-                                        @can('candidate_show')
-                                        <a class="btn btn-xs"
-                                            href="{{ route('admin.candidates.show', $candidate->id) }}">
-                                            <i class="far fa-eye"></i>
-                                            <!-- <img src="http://127.0.0.1:8000/img/dashboard/Eye.png" class="img-fluid" alt="Eye"> -->
-                                            <!-- {{ trans('global.view') }} -->
-                                        </a>
-                                        @endcan
 
-                                        @can('candidate_edit')
-                                        <a class="btn btn-xs"
-                                            href="{{ route('admin.candidates.edit', $candidate->id) }}">
-                                            <i class="fas fa-pencil-alt"></i>
-                                            <!-- <img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> -->
-                                            <!-- {{ trans('global.edit') }} -->
-                                        </a>
-                                        @endcan
-
-                                        @can('candidate_delete')
-                                        <form action="{{ route('admin.candidates.destroy', $candidate->id) }}"
-                                            method="POST" onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
-                                            style="display: inline-block;">
-                                            <input type="hidden" name="_method" value="DELETE">
-                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                            <button type="submit" class="btn btn-xs">
-                                                <i class="far fa-trash-alt"></i>
-                                            </button>
-                                            <!-- <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash"> -->
-                                        </form>
-                                        @endcan
-
+                                    <td class="candidate-crud-list-btn ">
+                                        <span class="three-dots btn btn-xs"><i class="fas fa-ellipsis-v"></i></span>
+                                        <div class="candidate-update v-hide">
+                                            @can('candidate_edit')
+                                            <a class="btn btn-xs"
+                                                href="{{ route('admin.candidates.edit', $candidate->id) }}">
+                                                <i class="fas fa-pencil-alt"></i>
+                                                <!-- <img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img"> -->
+                                                <!-- {{ trans('global.edit') }} -->
+                                            </a>
+                                            @endcan
+                                            @can('candidate_show')
+                                            <a class="btn btn-xs"
+                                                href="{{ route('admin.candidates.show', $candidate->id) }}">
+                                                <i class="far fa-eye"></i>
+                                                <!-- <img src="http://127.0.0.1:8000/img/dashboard/Eye.png" class="img-fluid" alt="Eye"> -->
+                                                <!-- {{ trans('global.view') }} -->
+                                            </a>
+                                            @endcan
+                                            @can('candidate_edit')
+                                            <a class="btn btn-xs"
+                                                href="{{ route('admin.candidates.edit', $candidate->id) }}">
+                                                <i class="fas fa-upload"></i>
+                                            </a>
+                                            @endcan
+                                            @can('candidate_delete')
+                                            <form action="{{ route('admin.candidates.destroy', $candidate->id) }}"
+                                                method="POST"
+                                                onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                                style="display: inline-block;">
+                                                <input type="hidden" name="_method" value="DELETE">
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                <button type="submit" class="btn btn-xs">
+                                                    <i class="far fa-trash-alt"></i>
+                                                </button>
+                                                <!-- <img src="{{asset('img/dashboard/Delete-Trash.png')}}" class="img-fluid" alt="Delete-Trash"> -->
+                                            </form>
+                                            @endcan
+                                        </div>
                                     </td>
 
                                 </tr>

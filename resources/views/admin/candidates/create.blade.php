@@ -8,7 +8,9 @@
 
 
                 <div class="panel-heading">
+                <a class="btn btn-default back-candidate" href="{{ route('admin.candidates.index') }}">
                     <div class="less-then-icon"> <i class="fas fa-chevron-left"></i> </div>
+                </a>
                     <h4> {{ trans('cruds.candidate.title_singular') }}</h4>
                     <!-- <h4> {{ trans('global.create') }} {{ trans('cruds.candidate.title_singular') }}</h4>    -->
                 </div>
