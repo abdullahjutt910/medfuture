@@ -401,26 +401,28 @@
                                     <td>
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                    <input class="search" type="text" placeholder="{{ trans('Candidate ID') }}">
+                                        <!-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::TITLE_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> -->
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('First Name') }}">
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('Last Name') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                    <input class="search" type="text" placeholder="{{ trans('Gender') }}">
+                                        <!-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::GENDER_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> -->
                                     </td>
                                     <td>
                                     </td>
@@ -469,31 +471,29 @@
                                             @endforeach
                                         </select>
                                     </td>
-                                </tr>
-                                <tr>
                                     <td>
-                                    </td>
-                                    <td>
-                                        <select class="search" strict="true">
+                                    <input class="search" type="text" placeholder="{{ trans('Candidate ID') }}">
+                                        <!-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::TITLE_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> -->
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('First Name') }}">
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        <input class="search" type="text" placeholder="{{ trans('Last Name') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                    <input class="search" type="text" placeholder="{{ trans('Gender') }}">
+                                        <!-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::GENDER_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> -->
                                     </td>
                                     <td>
                                     </td>
@@ -542,194 +542,232 @@
                                             @endforeach
                                         </select>
                                     </td>
+                                    <td>
+                                        <select class="search" strict="true">
+                                            <option value>{{ trans('global.all') }}</option>
+                                            @foreach(App\Models\Candidate::DISTRICT_SELECT as $key => $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="search" strict="true">
+                                            <option value>{{ trans('global.all') }}</option>
+                                            @foreach(App\Models\Candidate::DISTRICT_SELECT as $key => $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="search" strict="true">
+                                            <option value>{{ trans('global.all') }}</option>
+                                            @foreach(App\Models\Candidate::DISTRICT_SELECT as $key => $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="search" strict="true">
+                                            <option value>{{ trans('global.all') }}</option>
+                                            @foreach(App\Models\Candidate::DISTRICT_SELECT as $key => $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="search" strict="true">
+                                            <option value>{{ trans('global.all') }}</option>
+                                            @foreach(App\Models\Candidate::DISTRICT_SELECT as $key => $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="search" strict="true">
+                                            <option value>{{ trans('global.all') }}</option>
+                                            @foreach(App\Models\Candidate::DISTRICT_SELECT as $key => $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="search" strict="true">
+                                            <option value>{{ trans('global.all') }}</option>
+                                            @foreach(App\Models\Candidate::DISTRICT_SELECT as $key => $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="search" strict="true">
+                                            <option value>{{ trans('global.all') }}</option>
+                                            @foreach(App\Models\Candidate::DISTRICT_SELECT as $key => $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
+                                    <td>
+                                        <select class="search" strict="true">
+                                            <option value>{{ trans('global.all') }}</option>
+                                            @foreach(App\Models\Candidate::DISTRICT_SELECT as $key => $item)
+                                            <option value="{{ $item }}">{{ $item }}</option>
+                                            @endforeach
+                                        </select>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <select class="search" strict="true">
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('Candidate ID') }}">
+                                        <!-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::COUNTRY_SELECT as $key => $item)
+                                            @foreach(App\Models\Candidate::TITLE_SELECT as $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> -->
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                    <input class="search" type="text" placeholder="{{ trans('First Name') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::MAIN_CITY_SELECT as $key => $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('Last Name') }}">
+                                    </td>
+                                    <!-- <td>
+                                    <input class="search" type="text" placeholder="{{ trans('email') }}">
+                                    </td> -->
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('Gender') }}">
+                                        
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::PROFESSION_SELECT as $key => $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::DEVISION_SELECT as $key => $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('Address Line 1') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::SENORITY_SELECT as $key => $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('Address Line 2') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::SPECIALTY_SELECT as $key => $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('State/Region') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::PROFESSIONAL_QUALIFICATION_SELECT as $key =>
-                                            $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('Map address') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::GRADUATION_SELECT as $key => $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('Country') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::COUNTRY_OF_PRIMARY_DEGREE_SELECT as $key =>
-                                            $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('Post Code') }}">
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                    <input class="search" type="text" placeholder="{{ trans('Mobile Number') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::PRACTICE_COUNTRY_SELECT as $key => $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('Date of Birth') }}">
+                                        
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::PRACTICE_LICENSING_BODY_SELECT as $key =>
-                                            $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('Work') }}">
+                                        
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::LICENSE_TYPE_SELECT as $key => $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
-                                    </td>
-                                    <!-- </tr>
-                                <tr> -->
-                                    <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::EXPERIENCE_FROM_HOME_SELECT as $key => $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('Distance to Main') }}">
+                                       
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::EXPERIENCE_FROM_RESIDING_SELECT as $key =>
-                                            $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('Town') }}">
+                                       
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
+                                    <input class="search" type="text" placeholder="{{ trans('District') }}">
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('City') }}">
+                                        
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('profession') }}">
+                                        
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('Devision') }}">
+                                        
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('Senority') }}">
+                                       
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('Specialty') }}">
+                                        
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('professional Qualification') }}">
+                                        
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('Graduation') }}">
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('Country of Degree') }}">
+                                    
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('Medical School') }}">
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('Practice Country') }}">
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('Practice Licensing Body') }}">
+                                        
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('License Type') }}">
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('Experience Home Country') }}">
+                                        
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('Experience Residing Country') }}">
+                                        
+                                    </td>
+                                    <td>
+                                    <input class="search" type="text" placeholder="{{ trans('Recognised Comparable Experience') }}">
+                                        <!-- <select class="search" strict="true">
                                             <option value>{{ trans('global.all') }}</option>
                                             @foreach(App\Models\Candidate::RECOGNISED_COMPARABLE_EXPERIENCE_SELECT as
                                             $key => $item)
                                             <option value="{{ $item }}">{{ $item }}</option>
                                             @endforeach
-                                        </select>
+                                        </select> -->
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::CURRENT_EMPLOYMENT_STATUS_SELECT as $key =>
-                                            $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('CURRENT EMPLOYMENT STATUS') }}">
+                                        
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::COUNTRY_OF_CITIZENSHIP_SELECT as $key =>
-                                            $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('COUNTRY OF CITIZENSHIP') }}">
+                                        
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::COUNTRY_OF_RESIDENCE_SELECT as $key => $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('COUNTRY OF RESIDENCE') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::VISA_TYPE_SELECT as $key => $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('VISA TYPE') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::WORK_RIGHTS_STATUS_SELECT as $key => $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('Work Rights Status') }}">
                                     </td>
                                     <td>
-                                        <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::PROFESSION_LOGIN_SELECT as $key => $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select>
+                                    <input class="search" type="text" placeholder="{{ trans('PROFESSION LOGIN') }}">
                                     </td>
                                     <td>
-                                        <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                    <input class="search" type="text" placeholder="{{ trans('Username') }}">
                                     </td>
+                                    
                                     <!-- <td>
                                     </td>
                                     <td>
@@ -745,307 +783,288 @@
 
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.title') }}
+                                        {{ trans('Candidate ID') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.first_name') }}
+                                        {{ trans('First Name') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.last_name') }}
+                                        {{ trans('Last Name') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.gender') }}
+                                        {{ trans('Email') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.dob') }}
+                                        {{ trans('Gender') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.mobile') }}
+                                        {{ trans('Address 1') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.home') }}
+                                        {{ trans('Address 2') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.work') }}
+                                        {{ trans('State/Region') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.email') }}
+                                        {{ trans('Map Address') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.address_1') }}
+                                        {{ trans('Country') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.address_2') }}
+                                        {{ trans('Postcode') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.distance_to_main') }}
+                                        {{ trans('Mobile Number') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.town') }}
+                                        {{ trans('DOB') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.state') }}
+                                        {{ trans('Work') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.district') }}
+                                        {{ trans('Distance To main') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.country') }}
+                                        {{ trans('Town') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.post_code') }}
+                                        {{ trans('District') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.main_city') }}
+                                        {{ trans('Main City') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.profession') }}
+                                        {{ trans('Profession') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.devision') }}
+                                        {{ trans('Devision') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.senority') }}
+                                        {{ trans('Senority') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.specialty') }}
+                                        {{ trans('Specialty') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.professional_qualification') }}
+                                        {{ trans('Professional Qualification') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.graduation') }}
+                                        {{ trans('Graduation') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.country_of_primary_degree') }}
+                                        {{ trans('Country Of Primary Degree') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.medical_school') }}
+                                        {{ trans('Medical School') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.practice_country') }}
+                                        {{ trans('Practice Country') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.practice_licensing_body') }}
+                                        {{ trans('Practice Licensing Body') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.license_type') }}
+                                        {{ trans('License Type') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.experience_from_home') }}
+                                        {{ trans('Experience From Home') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.experience_from_residing') }}
+                                        {{ trans('Experience From Residing') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.recognised_comparable_experience') }}
+                                        {{ trans('Recognised Comparable Experience') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.current_employment_status') }}
+                                        {{ trans('Current Employment Status') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.country_of_citizenship') }}
+                                        {{ trans('Country Of Citizenship') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.country_of_residence') }}
+                                        {{ trans('Country Of Residence') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.visa_type') }}
+                                        {{ trans('Visa Type') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.work_rights_status') }}
+                                        {{ trans('Work Rights Status') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.profession_login') }}
+                                        {{ trans('Profession Login') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.username') }}
+                                        {{ trans('Username') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.cv_document') }}
+                                        {{ trans('CV Document') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.registration_form_document') }}
+                                        {{ trans('Registration Form Document') }}
                                     </th>
                                     <th>
-                                        {{ trans('cruds.candidate.fields.privacy_concerns') }}
+                                        {{ trans('Privacy Concerns') }}
                                     </th>
                                     <th>
+                                        Action
+                                    </th>
+                                    <!-- <th>
                                         &nbsp;
-                                    </th>
+                                    </th> -->
                                 </tr>
 
                             </thead>
                             <tbody>
 
-                                @foreach($candidates as $key => $candidate)
-                                <tr data-entry-id="{{ $candidate->id }}">
-                                    <td>
+                                    @foreach($candidates as $key => $candidate)
+                                    <tr data-entry-id="{{ $candidate->id }}">
+                                        <td>
 
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::TITLE_SELECT[$candidate->title] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->first_name ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->last_name ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::GENDER_SELECT[$candidate->gender] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->dob ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->mobile ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->home ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->work ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->email ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->address_1 ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->address_2 ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->distance_to_main ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::TOWN_SELECT[$candidate->town] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::STATE_SELECT[$candidate->state] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::DISTRICT_SELECT[$candidate->district] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::COUNTRY_SELECT[$candidate->country] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->post_code ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::MAIN_CITY_SELECT[$candidate->main_city] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::PROFESSION_SELECT[$candidate->profession] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::DEVISION_SELECT[$candidate->devision] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::SENORITY_SELECT[$candidate->senority] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::SPECIALTY_SELECT[$candidate->specialty] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{
-                                        App\Models\Candidate::PROFESSIONAL_QUALIFICATION_SELECT[$candidate->professional_qualification]
-                                        ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::GRADUATION_SELECT[$candidate->graduation] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{
-                                        App\Models\Candidate::COUNTRY_OF_PRIMARY_DEGREE_SELECT[$candidate->country_of_primary_degree]
-                                        ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->medical_school ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::PRACTICE_COUNTRY_SELECT[$candidate->practice_country]
-                                        ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{
-                                        App\Models\Candidate::PRACTICE_LICENSING_BODY_SELECT[$candidate->practice_licensing_body]
-                                        ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::LICENSE_TYPE_SELECT[$candidate->license_type] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{
-                                        App\Models\Candidate::EXPERIENCE_FROM_HOME_SELECT[$candidate->experience_from_home]
-                                        ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{
-                                        App\Models\Candidate::EXPERIENCE_FROM_RESIDING_SELECT[$candidate->experience_from_residing]
-                                        ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{
-                                        App\Models\Candidate::RECOGNISED_COMPARABLE_EXPERIENCE_SELECT[$candidate->recognised_comparable_experience]
-                                        ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{
-                                        App\Models\Candidate::CURRENT_EMPLOYMENT_STATUS_SELECT[$candidate->current_employment_status]
-                                        ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{
-                                        App\Models\Candidate::COUNTRY_OF_CITIZENSHIP_SELECT[$candidate->country_of_citizenship]
-                                        ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{
-                                        App\Models\Candidate::COUNTRY_OF_RESIDENCE_SELECT[$candidate->country_of_residence]
-                                        ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::VISA_TYPE_SELECT[$candidate->visa_type] ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{
-                                        App\Models\Candidate::WORK_RIGHTS_STATUS_SELECT[$candidate->work_rights_status]
-                                        ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ App\Models\Candidate::PROFESSION_LOGIN_SELECT[$candidate->profession_login]
-                                        ?? '' }}
-                                    </td>
-                                    <td>
-                                        {{ $candidate->username ?? '' }}
-                                    </td>
-                                    <td>
-                                        @if($candidate->cv_document)
-                                        <a href="{{ $candidate->cv_document->getUrl() }}" target="_blank">
-                                            {{ trans('global.view_file') }}
-                                        </a>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        @if($candidate->registration_form_document)
-                                        <a href="{{ $candidate->registration_form_document->getUrl() }}"
-                                            target="_blank">
-                                            {{ trans('global.view_file') }}
-                                        </a>
-                                        @endif
-                                    </td>
-                                    <td>
-                                        @if($candidate->privacy_concerns)
-                                        <a href="{{ $candidate->privacy_concerns->getUrl() }}" target="_blank">
-                                            {{ trans('global.view_file') }}
-                                        </a>
-                                        @endif
-                                    </td>
+                                        </td>
+                                        <td>
+                                            {{ $candidate->id ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->first_name ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->last_name ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->email ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->gender ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->address_1 ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->address_2 ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->state ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->home ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->country ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->post_code ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->mobile ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->dob ?? '' }}
+                                        </td>
 
-                                    <td class="candidate-crud-list-btn ">
+
+                                        <td>
+                                            {{ $candidate->work ?? '' }}
+                                        </td>
+
+
+                                        <td>
+                                            {{ $candidate->distance_to_main ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->town ?? '' }}
+                                        </td>
+
+                                        <td>
+                                            {{ $candidate->district ?? '' }}
+                                        </td>
+
+                                        <td>
+                                            {{ $candidate->main_city ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->profession ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->devision ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->senority ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->specialty ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->professional_qualification ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->graduation ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->country_of_primary_degree ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->medical_school ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->practice_country ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->practice_licensing_body ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->license_type ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->experience_from_home ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->experience_from_residing ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->recognised_comparable_experience ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->current_employment_status ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->country_of_citizenship ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->country_of_residence ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->visa_type ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->work_rights_status ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->profession_login ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->username ?? '' }}
+                                        </td>
+                                        <td>
+                                            @if($candidate->cv_document)
+                                            <a href="{{ url('files/'. $candidate->cv_document) }}" target="_blank">{{ trans('global.view_file') }}</a>
+                                            @endif
+                                        </td>
+                                        <td>
+
+                                            @if($candidate->registration_form_document)
+                                            <a href="{{ url('files/'. $candidate->registration_form_document) }}" target="_blank">{{ trans('global.view_file') }}</a>
+                                            @endif
+                                        </td>
+                                        <td>
+
+                                            @if($candidate->privacy_concerns)
+                                            <a href="{{ url('files/'. $candidate->privacy_concerns) }}" target="_blank">{{ trans('global.view_file') }}</a>
+                                            @endif
+                                        </td>
+                                        <td class="candidate-crud-list-btn ">
                                         <span class="three-dots btn btn-xs"><i class="fas fa-ellipsis-v"></i></span>
                                         <div class="candidate-update v-hide">
                                             @can('candidate_edit')
@@ -1086,9 +1105,9 @@
                                         </div>
                                     </td>
 
-                                </tr>
-                                @endforeach
-                            </tbody>
+                                    </tr>
+                                    @endforeach
+                                </tbody>
                         </table>
                     </div>
                 </div>

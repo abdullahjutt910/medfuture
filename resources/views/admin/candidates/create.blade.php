@@ -31,10 +31,10 @@
                                                     <!-- <label class="required">{{ trans('cruds.candidate.fields.title') }}</label> -->
                                                     <select class="form-control" name="title" id="title" required>
                                                         <option value disabled {{ old('title', null)===null ? 'selected'
-                                                            : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                            : '' }}>{{ trans('title') }}</option>
                                                         @foreach(App\Models\Candidate::TITLE_SELECT as $key => $label)
                                                         <option value="{{ $key }}" {{ old('title', '' )===(string) $key
-                                                            ? 'selected' : '' }}>{{ $label }}</option>
+                                                            ? 'selected' : '' }} >{{ $label }}</option>
                                                         @endforeach
                                                     </select>
                                                     <i class="fas fa-sort-down"></i>
@@ -82,7 +82,7 @@
                                                     <!-- <label class="required">{{ trans('cruds.candidate.fields.gender') }}</label> -->
                                                     <select class="form-control" name="gender" id="gender" required>
                                                         <option value disabled {{ old('gender', null)===null
-                                                            ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}
+                                                            ? 'selected' : '' }}>{{ trans('gender') }}
                                                         </option>
                                                         @foreach(App\Models\Candidate::GENDER_SELECT as $key => $label)
                                                         <option value="{{ $key }}" {{ old('gender', '' )===(string) $key
@@ -223,7 +223,7 @@
                                                     <!-- <label>{{ trans('cruds.candidate.fields.town') }}</label> -->
                                                     <select class="form-control" name="town" id="town">
                                                         <option value disabled {{ old('town', null)===null ? 'selected'
-                                                            : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                            : '' }}>{{ trans('Suburb/Town') }}</option>
                                                         @foreach(App\Models\Candidate::TOWN_SELECT as $key => $label)
                                                         <option value="{{ $key }}" {{ old('town', '' )===(string) $key
                                                             ? 'selected' : '' }}>{{ $label }}</option>
@@ -243,7 +243,7 @@
                                                     <!-- <label>{{ trans('cruds.candidate.fields.state') }}</label> -->
                                                     <select class="form-control" name="state" id="state">
                                                         <option value disabled {{ old('state', null)===null ? 'selected'
-                                                            : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                            : '' }}>{{ trans('State/Region') }}</option>
                                                         @foreach(App\Models\Candidate::STATE_SELECT as $key => $label)
                                                         <option value="{{ $key }}" {{ old('state', '' )===(string) $key
                                                             ? 'selected' : '' }}>{{ $label }}</option>
@@ -264,7 +264,7 @@
                                                     <!-- <label>{{ trans('cruds.candidate.fields.district') }}</label> -->
                                                     <select class="form-control" name="district" id="district">
                                                         <option value disabled {{ old('district', null)===null
-                                                            ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}
+                                                            ? 'selected' : '' }}>{{ trans('Sub-Regions/district') }}
                                                         </option>
                                                         @foreach(App\Models\Candidate::DISTRICT_SELECT as $key =>
                                                         $label)
@@ -287,7 +287,7 @@
                                                     <!-- <label>{{ trans('cruds.candidate.fields.country') }}</label> -->
                                                     <select class="form-control" name="country" id="country">
                                                         <option value disabled {{ old('country', null)===null
-                                                            ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}
+                                                            ? 'selected' : '' }}>{{ trans('Country') }}
                                                         </option>
                                                         @foreach(App\Models\Candidate::COUNTRY_SELECT as $key => $label)
                                                         <option value="{{ $key }}" {{ old('country', '' )===(string)
@@ -324,7 +324,7 @@
                                                     <!-- <label>{{ trans('cruds.candidate.fields.main_city') }}</label> -->
                                                     <select class="form-control" name="main_city" id="main_city">
                                                         <option value disabled {{ old('main_city', null)===null
-                                                            ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}
+                                                            ? 'selected' : '' }}>{{ trans('Main city') }}
                                                         </option>
                                                         @foreach(App\Models\Candidate::MAIN_CITY_SELECT as $key =>
                                                         $label)
@@ -363,7 +363,7 @@
                                             <!-- <label>{{ trans('cruds.candidate.fields.profession') }}</label> -->
                                             <select class="form-control" name="profession" id="profession">
                                                 <option value disabled {{ old('profession', null)===null ? 'selected'
-                                                    : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    : '' }}>{{ trans('profession') }}</option>
                                                 @foreach(App\Models\Candidate::PROFESSION_SELECT as $key => $label)
                                                 <option value="{{ $key }}" {{ old('profession', '' )===(string) $key
                                                     ? 'selected' : '' }}>{{ $label }}</option>
@@ -383,7 +383,7 @@
                                             <!-- <label>{{ trans('cruds.candidate.fields.devision') }}</label> -->
                                             <select class="form-control" name="devision" id="devision">
                                                 <option value disabled {{ old('devision', null)===null ? 'selected' : ''
-                                                    }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    }}>{{ trans('devision') }}</option>
                                                 @foreach(App\Models\Candidate::DEVISION_SELECT as $key => $label)
                                                 <option value="{{ $key }}" {{ old('devision', '' )===(string) $key
                                                     ? 'selected' : '' }}>{{ $label }}</option>
@@ -403,7 +403,7 @@
                                             <!-- <label>{{ trans('cruds.candidate.fields.senority') }}</label> -->
                                             <select class="form-control" name="senority" id="senority">
                                                 <option value disabled {{ old('senority', null)===null ? 'selected' : ''
-                                                    }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    }}>{{ trans('senority') }}</option>
                                                 @foreach(App\Models\Candidate::SENORITY_SELECT as $key => $label)
                                                 <option value="{{ $key }}" {{ old('senority', '' )===(string) $key
                                                     ? 'selected' : '' }}>{{ $label }}</option>
@@ -423,7 +423,7 @@
                                             <!-- <label>{{ trans('cruds.candidate.fields.specialty') }}</label> -->
                                             <select class="form-control" name="specialty" id="specialty">
                                                 <option value disabled {{ old('specialty', null)===null ? 'selected'
-                                                    : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    : '' }}>{{ trans('specialty') }}</option>
                                                 @foreach(App\Models\Candidate::SPECIALTY_SELECT as $key => $label)
                                                 <option value="{{ $key }}" {{ old('specialty', '' )===(string) $key
                                                     ? 'selected' : '' }}>{{ $label }}</option>
@@ -445,7 +445,7 @@
                                             <select class="form-control" name="professional_qualification"
                                                 id="professional_qualification">
                                                 <option value disabled {{ old('professional_qualification', null)===null
-                                                    ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    ? 'selected' : '' }}>{{ trans('Professional Qualification') }}</option>
                                                 @foreach(App\Models\Candidate::PROFESSIONAL_QUALIFICATION_SELECT as $key
                                                 => $label)
                                                 <option value="{{ $key }}" {{ old('professional_qualification', ''
@@ -467,7 +467,7 @@
                                             <!-- <label>{{ trans('cruds.candidate.fields.graduation') }}</label> -->
                                             <select class="form-control" name="graduation" id="graduation">
                                                 <option value disabled {{ old('graduation', null)===null ? 'selected'
-                                                    : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    : '' }}>{{ trans('graduation') }}</option>
                                                 @foreach(App\Models\Candidate::GRADUATION_SELECT as $key => $label)
                                                 <option value="{{ $key }}" {{ old('graduation', '' )===(string) $key
                                                     ? 'selected' : '' }}>{{ $label }}</option>
@@ -489,7 +489,7 @@
                                             <select class="form-control" name="country_of_primary_degree"
                                                 id="country_of_primary_degree">
                                                 <option value disabled {{ old('country_of_primary_degree', null)===null
-                                                    ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    ? 'selected' : '' }}>{{ trans('Country of Primary Degree') }}</option>
                                                 @foreach(App\Models\Candidate::COUNTRY_OF_PRIMARY_DEGREE_SELECT as $key
                                                 => $label)
                                                 <option value="{{ $key }}" {{ old('country_of_primary_degree', ''
@@ -526,7 +526,7 @@
                                             <!-- <label>{{ trans('cruds.candidate.fields.practice_country') }}</label> -->
                                             <select class="form-control" name="practice_country" id="practice_country">
                                                 <option value disabled {{ old('practice_country', null)===null
-                                                    ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    ? 'selected' : '' }}>{{ trans('Practice Licensing Country') }}</option>
                                                 @foreach(App\Models\Candidate::PRACTICE_COUNTRY_SELECT as $key =>
                                                 $label)
                                                 <option value="{{ $key }}" {{ old('practice_country', '' )===(string)
@@ -549,7 +549,7 @@
                                             <select class="form-control" name="practice_licensing_body"
                                                 id="practice_licensing_body">
                                                 <option value disabled {{ old('practice_licensing_body', null)===null
-                                                    ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    ? 'selected' : '' }}>{{ trans('Practice Licensing Body') }}</option>
                                                 @foreach(App\Models\Candidate::PRACTICE_LICENSING_BODY_SELECT as $key =>
                                                 $label)
                                                 <option value="{{ $key }}" {{ old('practice_licensing_body', ''
@@ -570,7 +570,7 @@
                                             <!-- <label>{{ trans('cruds.candidate.fields.license_type') }}</label> -->
                                             <select class="form-control" name="license_type" id="license_type">
                                                 <option value disabled {{ old('license_type', null)===null ? 'selected'
-                                                    : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    : '' }}>{{ trans('Registeration/License_Type') }}</option>
                                                 @foreach(App\Models\Candidate::LICENSE_TYPE_SELECT as $key => $label)
                                                 <option value="{{ $key }}" {{ old('license_type', '' )===(string) $key
                                                     ? 'selected' : '' }}>{{ $label }}</option>
@@ -592,7 +592,7 @@
                                             <select class="form-control" name="experience_from_home"
                                                 id="experience_from_home">
                                                 <option value disabled {{ old('experience_from_home', null)===null
-                                                    ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    ? 'selected' : '' }}>{{ trans('Experience from home Country') }}</option>
                                                 @foreach(App\Models\Candidate::EXPERIENCE_FROM_HOME_SELECT as $key =>
                                                 $label)
                                                 <option value="{{ $key }}" {{ old('experience_from_home', ''
@@ -615,7 +615,7 @@
                                             <select class="form-control" name="experience_from_residing"
                                                 id="experience_from_residing">
                                                 <option value disabled {{ old('experience_from_residing', null)===null
-                                                    ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    ? 'selected' : '' }}>{{ trans('Experience from residing Country') }}</option>
                                                 @foreach(App\Models\Candidate::EXPERIENCE_FROM_RESIDING_SELECT as $key
                                                 => $label)
                                                 <option value="{{ $key }}" {{ old('experience_from_residing', ''
@@ -639,7 +639,7 @@
                                             <select class="form-control" name="recognised_comparable_experience"
                                                 id="recognised_comparable_experience">
                                                 <option value disabled {{ old('recognised_comparable_experience',
-                                                    null)===null ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}
+                                                    null)===null ? 'selected' : '' }}>{{ trans('Recognised Comparable Experience') }}
                                                 </option>
                                                 @foreach(App\Models\Candidate::RECOGNISED_COMPARABLE_EXPERIENCE_SELECT
                                                 as $key => $label)
@@ -664,7 +664,7 @@
                                             <select class="form-control" name="current_employment_status"
                                                 id="current_employment_status">
                                                 <option value disabled {{ old('current_employment_status', null)===null
-                                                    ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    ? 'selected' : '' }}>{{ trans('Current Employment Status') }}</option>
                                                 @foreach(App\Models\Candidate::CURRENT_EMPLOYMENT_STATUS_SELECT as $key
                                                 => $label)
                                                 <option value="{{ $key }}" {{ old('current_employment_status', ''
@@ -702,7 +702,7 @@
                                             <select class="form-control" name="country_of_citizenship"
                                                 id="country_of_citizenship">
                                                 <option value disabled {{ old('country_of_citizenship', null)===null
-                                                    ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    ? 'selected' : '' }}>{{ trans('Country of Citizenship') }}</option>
                                                 @foreach(App\Models\Candidate::COUNTRY_OF_CITIZENSHIP_SELECT as $key =>
                                                 $label)
                                                 <option value="{{ $key }}" {{ old('country_of_citizenship', ''
@@ -725,7 +725,7 @@
                                             <select class="form-control" name="country_of_residence"
                                                 id="country_of_residence">
                                                 <option value disabled {{ old('country_of_residence', null)===null
-                                                    ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    ? 'selected' : '' }}>{{ trans('Country of Residence') }}</option>
                                                 @foreach(App\Models\Candidate::COUNTRY_OF_RESIDENCE_SELECT as $key =>
                                                 $label)
                                                 <option value="{{ $key }}" {{ old('country_of_residence', ''
@@ -746,7 +746,7 @@
                                             <!-- <label>{{ trans('cruds.candidate.fields.visa_type') }}</label> -->
                                             <select class="form-control" name="visa_type" id="visa_type">
                                                 <option value disabled {{ old('visa_type', null)===null ? 'selected'
-                                                    : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    : '' }}>{{ trans('Visa type') }}</option>
                                                 @foreach(App\Models\Candidate::VISA_TYPE_SELECT as $key => $label)
                                                 <option value="{{ $key }}" {{ old('visa_type', '' )===(string) $key
                                                     ? 'selected' : '' }}>{{ $label }}</option>
@@ -768,7 +768,7 @@
                                             <select class="form-control" name="work_rights_status"
                                                 id="work_rights_status">
                                                 <option value disabled {{ old('work_rights_status', null)===null
-                                                    ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    ? 'selected' : '' }}>{{ trans('Work rights Status') }}</option>
                                                 @foreach(App\Models\Candidate::WORK_RIGHTS_STATUS_SELECT as $key =>
                                                 $label)
                                                 <option value="{{ $key }}" {{ old('work_rights_status', '' )===(string)
@@ -804,7 +804,7 @@
                                             <!-- <label>{{ trans('cruds.candidate.fields.profession_login') }}</label> -->
                                             <select class="form-control" name="profession_login" id="profession_login">
                                                 <option value disabled {{ old('profession_login', null)===null
-                                                    ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
+                                                    ? 'selected' : '' }}>{{ trans('Profession') }}</option>
                                                 @foreach(App\Models\Candidate::PROFESSION_LOGIN_SELECT as $key =>
                                                 $label)
                                                 <option value="{{ $key }}" {{ old('profession_login', '' )===(string)
@@ -859,8 +859,10 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group {{ $errors->has('cv_document') ? 'has-error' : '' }}">
-                                            <!-- <label for="cv_document">{{ trans('cruds.candidate.fields.cv_document') }}</label> -->
-                                            <div class="needsclick dropzone" id="cv_document-dropzone">
+                                            <div class="upload-add-candi">
+                                                <input type="file" name="cv_document" class="form-control">
+                                               
+                                                <span  class="upload-add-candi-txt"><p>Drop files here to upload</p></span>
                                                 <div class="upload-icon">
                                                     <i class="fas fa-arrow-up"></i>
                                                     <p>Upload</p>
@@ -877,10 +879,10 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div
-                                            class="form-group {{ $errors->has('registration_form_document') ? 'has-error' : '' }}">
-                                            <!-- <label for="registration_form_document">{{ trans('cruds.candidate.fields.registration_form_document') }}</label> -->
-                                            <div class="needsclick dropzone" id="registration_form_document-dropzone">
+                                        <div class="form-group {{ $errors->has('registration_form_document') ? 'has-error' : '' }}">
+                                        <div class="upload-add-candi">
+                                            <input type="file" name="registration_form_document" class="form-control">
+                                            <span  class="upload-add-candi-txt"><p>Drop files here to upload</p></span>
                                                 <div class="upload-icon">
                                                     <i class="fas fa-arrow-up"></i>
                                                     <p>Upload</p>
@@ -897,8 +899,9 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group {{ $errors->has('privacy_concerns') ? 'has-error' : '' }}">
-                                            <!-- <label for="privacy_concerns">{{ trans('cruds.candidate.fields.privacy_concerns') }}</label> -->
-                                            <div class="needsclick dropzone" id="privacy_concerns-dropzone">
+                                        <div class="upload-add-candi">
+                                            <input type="file" name="privacy_concerns" class="form-control">
+                                            <span  class="upload-add-candi-txt"><p>Drop files here to upload</p></span>
                                                 <div class="upload-icon">
                                                     <i class="fas fa-arrow-up"></i>
                                                     <p>Upload</p>

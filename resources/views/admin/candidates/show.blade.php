@@ -35,21 +35,21 @@
                                     <img src=" {{asset('img/dashboard/profile.png')}}" class="card-img-top img-fluid"
                                         alt="profile-img">
                                     <div class="card-body">
-                                        <h5 class="card-title">Mr Ben Johnson</h5>
-                                        <p class="card-text">Male</p>
-                                        <p class="card-text">DOB: 25th June 1988</p>
-                                        <a href="#" class="btn">ID: AH5841</a>
+                                        <h5 class="card-title">{{$candidate->first_name.' '.$candidate->last_name}}</h5>
+                                        <p class="card-text">{{$candidate->gender}}</p>
+                                        <p class="card-text">DOB: {{$candidate->dob}}</p>
+                                        <a href="#" class="btn">ID: {{$candidate->user_id}}</a>
                                     </div>
                                 </div>
                                 <div class="profile-info">
                                     <ul>
                                         <li>
                                             <h3>Home Address</h3>
-                                            <p>6 Manorwood Place, Mitcham VIC 2132, Australia</p>
+                                            <p>{{$candidate->home}}</p>
                                         </li>
                                         <li>
                                             <h3>Mobile Number</h3>
-                                            <p>0400 713 855</p>
+                                            <p>{{$candidate->mobile}}</p>
                                         </li>
                                         <li>
                                             <h3>Office Number</h3>
@@ -57,7 +57,7 @@
                                         </li>
                                         <li>
                                             <h3>Email</h3>
-                                            <p>benjohnson54@gmail.com</p>
+                                            <p>{{$candidate->email}}</p>
                                         </li>
                                     </ul>
 
@@ -66,7 +66,7 @@
                                     <ul>
                                         <li>
                                             <h3>Profession</h3>
-                                            <p>Allied Health Professionals</p>
+                                            <p>{{$candidate->profession}}</p>
                                         </li>
                                         <li>
                                             <h3>Engagement Term</h3>
@@ -74,7 +74,7 @@
                                         </li>
                                         <li>
                                             <h3>Employement Type</h3>
-                                            <p>Full Time</p>
+                                            <p>{{$candidate->current_employment_status}}</p>
                                         </li>
                                         <li>
                                             <h3>Placement Type</h3>
@@ -289,8 +289,7 @@
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Division</h5>
-                                                        <p class="card-text"><small class="text-muted">AHP /HSS</small>
-                                                        </p>
+                                                        <p class="card-text"><small class="text-muted">{{$candidate->devision}}</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -325,7 +324,7 @@
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Working Status</h5>
-                                                        <p class="card-text"><small class="text-muted"></small></p>
+                                                        <p class="card-text">{{$candidate->work_rights_status}}<small class="text-muted"></small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -360,7 +359,7 @@
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Graduation</h5>
-                                                        <p class="card-text"><small class="text-muted">No</small></p>
+                                                        <p class="card-text"><small class="text-muted">{{$candidate->graduation}}</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -427,8 +426,7 @@
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Prof Qualification</h5>
-                                                        <p class="card-text"><small class="text-muted">Bsc Physical
-                                                                therapy</small></p>
+                                                        <p class="card-text"><small class="text-muted">{{$candidate->professional_qualification}}</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -497,7 +495,7 @@
                                                 <div class="col-md-11">
                                                     <div class="card-body">
                                                         <h5 class="card-title">Visa Status</h5>
-                                                        <p class="card-text"><small class="text-muted"></small></p>
+                                                        <p class="card-text"><small class="text-muted">{{$candidate->visa_type}}</small></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1579,12 +1577,15 @@
                                                                 Title
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="title" aria-label=".form-select-lg example">
+                                                                    <option value="0" disabled>title</option>
+                                                                    <option value="Mr"  >Mr</option>
+                                                                    <option value="Mrs"  >Mrs</option>
+                                                                    <option value="Miss"  >Miss</option>
+                                                                    <option value="Ms"  >Ms</option>
+                                                                    <option value="Dr"  >Dr</option>
+                                                                    <option value="Prof"  >Prof</option>
+                                                                    <option value="Other"  >Other</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -1626,12 +1627,12 @@
                                                                 Profession
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="profession" aria-label=".form-select-lg example">
+                                                                                                <option value="Doctor" >Doctor</option>
+                                                                                                <option value="Nurse" >Nurse</option>
+                                                                                                <option value="Allied Health Professionals" >Allied Health Professionals</option>
+                                                                                                <option value="Healthcare Executives" >Healthcare Executives</option>
+                                                                                                <option value="Dentists" >Dentists</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -1641,12 +1642,36 @@
                                                                 Division
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="devision" aria-label=".form-select-lg example">
+                                                                                                <option value="General Practitioners " >General Practitioners </option>
+                                                                                                <option value="Healthcare Executives " >Healthcare Executives </option>
+                                                                                                <option value="Hospital Doctors" >Hospital Doctors</option>
+                                                                                                <option value="Locum Doctors" >Locum Doctors</option>
+                                                                                                <option value="Nurses &amp; Carers" >Nurses &amp; Carers</option>
+                                                                                                <option value="Allergologist" >Allergologist</option>
+                                                                                                <option value="Arts Therapist " >Arts Therapist </option>
+                                                                                                <option value="Audiologist" >Audiologist</option>
+                                                                                                <option value="Chiropractor " >Chiropractor </option>
+                                                                                                <option value="Dietitians " >Dietitians </option>
+                                                                                                <option value="Exercise Physiologist " >Exercise Physiologist </option>
+                                                                                                <option value="Genetic Counsellor" >Genetic Counsellor</option>
+                                                                                                <option value="Medical Radiologist " >Medical Radiologist </option>
+                                                                                                <option value="Music Therapist" >Music Therapist</option>
+                                                                                                <option value="Occupational Therapist" >Occupational Therapist</option>
+                                                                                                <option value="Optometrist" >Optometrist</option>
+                                                                                                <option value="Orthotist and prosthetist" >Orthotist and prosthetist</option>
+                                                                                                <option value="Osteopathist " >Osteopathist </option>
+                                                                                                <option value="Perfusionist " >Perfusionist </option>
+                                                                                                <option value="Physiotherapist" >Physiotherapist</option>
+                                                                                                <option value="Podiatrist" >Podiatrist</option>
+                                                                                                <option value="Psychologist" >Psychologist</option>
+                                                                                                <option value="Psychology &amp; Mental health" >Psychology &amp; Mental health</option>
+                                                                                                <option value="Rehabilitation Counsellor " >Rehabilitation Counsellor </option>
+                                                                                                <option value="Sonographer" >Sonographer</option>
+                                                                                                <option value="Specialist service" >Specialist service</option>
+                                                                                                <option value="Speech-pathology" >Speech-pathology</option>
+                                                                                                <option value="Midwife" >Midwife</option>
+                                                                                                <option value="Dentists" >Dentists</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -1656,12 +1681,13 @@
                                                                 Seniority
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="senority" aria-label=".form-select-lg example">
+                                                                                                <option value="Internship - PGY Year 1 " >Internship - PGY Year 1 </option>
+                                                                                                <option value="Junior House Officer - PGY Year 2 " >Junior House Officer - PGY Year 2 </option>
+                                                                                                <option value="Senior House Officer - PGY Year 3 " >Senior House Officer - PGY Year 3 </option>
+                                                                                                <option value="Principal Health Officer – PGY Year 4 " >Principal Health Officer – PGY Year 4 </option>
+                                                                                                <option value="Registrars" >Registrars</option>
+                                                                                                <option value="Consultant" >Consultant</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -1671,12 +1697,19 @@
                                                                 Specialty
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="specialty" aria-label=".form-select-lg example">
+                                                                                                <option value="Anaesthetics" >Anaesthetics</option>
+                                                                                                <option value="Emergency Medicine " >Emergency Medicine </option>
+                                                                                                <option value="General Practice " >General Practice </option>
+                                                                                                <option value="Gastroenterologist" >Gastroenterologist</option>
+                                                                                                <option value="Intensive care " >Intensive care </option>
+                                                                                                <option value="Medicine" >Medicine</option>
+                                                                                                <option value="Obtetrics &amp; Gynaecology " >Obtetrics &amp; Gynaecology </option>
+                                                                                                <option value="Pathologist" >Pathologist</option>
+                                                                                                <option value="Peadiatrics" >Peadiatrics</option>
+                                                                                                <option value="Psychiatry " >Psychiatry </option>
+                                                                                                <option value="Radiology" >Radiology</option>
+                                                                                                <option value="Surgery " >Surgery </option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -1731,7 +1764,7 @@
                                                                 Country
                                                             </th>
                                                             <td>
-
+                                                                {{$candidate->country}}
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1739,7 +1772,7 @@
                                                                 State / Region / County
                                                             </th>
                                                             <td>
-
+                                                                {{$candidate->state}}
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1747,7 +1780,7 @@
                                                                 Post Code
                                                             </th>
                                                             <td>
-
+                                                                {{$candidate->post_code}}
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1755,7 +1788,7 @@
                                                                 Suburb/ Town
                                                             </th>
                                                             <td>
-
+                                                                {{$candidate->town}}
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1763,7 +1796,7 @@
                                                                 Sub-Region/ District
                                                             </th>
                                                             <td>
-
+                                                                {{$candidate->district}}
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1771,7 +1804,7 @@
                                                                 Main City
                                                             </th>
                                                             <td>
-
+                                                                {{$candidate->main_city}}
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1779,7 +1812,7 @@
                                                                 Distance to Main City
                                                             </th>
                                                             <td>
-
+                                                                {{$candidate->distance_to_main}}
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1807,12 +1840,17 @@
                                                                 Registration/ License Type
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="license_type" aria-label=".form-select-lg example">
+                                                                                                <option value="Eligible for General Registration " >Eligible for General Registration </option>
+                                                                                                <option value="Eligible for Limited Registration " >Eligible for Limited Registration </option>
+                                                                                                <option value="Eligible for Provisional Registration " >Eligible for Provisional Registration </option>
+                                                                                                <option value="General" >General</option>
+                                                                                                <option value="Limited" >Limited</option>
+                                                                                                <option value="Non-Practising Registration " >Non-Practising Registration </option>
+                                                                                                <option value="Not Applicable" >Not Applicable</option>
+                                                                                                <option value="Provisional" >Provisional</option>
+                                                                                                <option value="Specialist" >Specialist</option>
+                                                                                                <option value="Student" >Student</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -1822,12 +1860,204 @@
                                                                 Country of Primary Degree
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="country_of_primary_degree" aria-label=".form-select-lg example">
+                                                                    <option value="Australia " >Australia </option>
+                                                                    <option value="New Zealand" >New Zealand</option>
+                                                                    <option value="United Kingdom " >United Kingdom </option>
+                                                                    <option value="Austria  " >Austria  </option>
+                                                                    <option value="Belgium" >Belgium</option>
+                                                                    <option value="Canada " >Canada </option>
+                                                                    <option value="Czech Republic  " >Czech Republic  </option>
+                                                                    <option value="Denmark  " >Denmark  </option>
+                                                                    <option value="Finland  " >Finland  </option>
+                                                                    <option value="France " >France </option>
+                                                                    <option value="Germany  " >Germany  </option>
+                                                                    <option value="Greece" >Greece</option>
+                                                                    <option value="Iceland " >Iceland </option>
+                                                                    <option value="Israel  " >Israel  </option>
+                                                                    <option value="Italy " >Italy </option>
+                                                                    <option value="Norway " >Norway </option>
+                                                                    <option value="Portugal  " >Portugal  </option>
+                                                                    <option value="Republic of Ireland  " >Republic of Ireland  </option>
+                                                                    <option value="Singapore  " >Singapore  </option>
+                                                                    <option value="Spain " >Spain </option>
+                                                                    <option value="Sweden " >Sweden </option>
+                                                                    <option value="Switzerland " >Switzerland </option>
+                                                                    <option value="The Netherlands " >The Netherlands </option>
+                                                                    <option value="United States of America " >United States of America </option>
+                                                                    <option value="Afghanistan" >Afghanistan</option>
+                                                                    <option value="Albania" >Albania</option>
+                                                                    <option value="Algeria" >Algeria</option>
+                                                                    <option value="Andorra" >Andorra</option>
+                                                                    <option value="Angola" >Angola</option>
+                                                                    <option value="Antigua and Barbuda" >Antigua and Barbuda</option>
+                                                                    <option value="Argentina" >Argentina</option>
+                                                                    <option value="Armenia" >Armenia</option>
+                                                                    <option value="Azerbaijan" >Azerbaijan</option>
+                                                                    <option value="The Bahamas" >The Bahamas</option>
+                                                                    <option value="Bahrain" >Bahrain</option>
+                                                                    <option value="Bangladesh" >Bangladesh</option>
+                                                                    <option value="Barbados" >Barbados</option>
+                                                                    <option value="Belarus" >Belarus</option>
+                                                                    <option value="Belize" >Belize</option>
+                                                                    <option value="Benin" >Benin</option>
+                                                                    <option value="Bhutan" >Bhutan</option>
+                                                                    <option value="Bolivia" >Bolivia</option>
+                                                                    <option value="Bosnia and Herzegovina" >Bosnia and Herzegovina</option>
+                                                                    <option value="Botswana" >Botswana</option>
+                                                                    <option value="Brazil" >Brazil</option>
+                                                                    <option value="Brunei" >Brunei</option>
+                                                                    <option value="Bulgaria" >Bulgaria</option>
+                                                                    <option value="Burkina Faso" >Burkina Faso</option>
+                                                                    <option value="Burundi" >Burundi</option>
+                                                                    <option value="Cambodia" >Cambodia</option>
+                                                                    <option value="Cameroon" >Cameroon</option>
+                                                                    <option value="Cape Verde" >Cape Verde</option>
+                                                                    <option value="Central African Republic" >Central African Republic</option>
+                                                                    <option value="Chad" >Chad</option>
+                                                                    <option value="Chile" >Chile</option>
+                                                                    <option value="China" >China</option>
+                                                                    <option value="Colombia" >Colombia</option>
+                                                                    <option value="Comoros" >Comoros</option>
+                                                                    <option value="Congo, Republic of the" >Congo, Republic of the</option>
+                                                                    <option value="Congo, Democratic Republic of the" >Congo, Democratic Republic of the</option>
+                                                                    <option value="Costa Rica" >Costa Rica</option>
+                                                                    <option value="Cote d-Ivoire" >Cote d-Ivoire</option>
+                                                                    <option value="Croatia" >Croatia</option>
+                                                                    <option value="Cuba" >Cuba</option>
+                                                                    <option value="Cyprus" >Cyprus</option>
+                                                                    <option value="Djibouti" >Djibouti</option>
+                                                                    <option value="Dominica" >Dominica</option>
+                                                                    <option value="Dominican Republic" >Dominican Republic</option>
+                                                                    <option value="East Timor (Timor-Leste)" >East Timor (Timor-Leste)</option>
+                                                                    <option value="Ecuador" >Ecuador</option>
+                                                                    <option value="Egypt" >Egypt</option>
+                                                                    <option value="El Salvador" >El Salvador</option>
+                                                                    <option value="Equatorial Guinea" >Equatorial Guinea</option>
+                                                                    <option value="Eritrea" >Eritrea</option>
+                                                                    <option value="Estonia" >Estonia</option>
+                                                                    <option value="Ethiopia" >Ethiopia</option>
+                                                                    <option value="Fiji" >Fiji</option>
+                                                                    <option value="Gabon" >Gabon</option>
+                                                                    <option value="The Gambia" >The Gambia</option>
+                                                                    <option value="Georgia" >Georgia</option>
+                                                                    <option value="Ghana" >Ghana</option>
+                                                                    <option value="Grenada" >Grenada</option>
+                                                                    <option value="Guatemala" >Guatemala</option>
+                                                                    <option value="Guinea" >Guinea</option>
+                                                                    <option value="Guinea-Bissau" >Guinea-Bissau</option>
+                                                                    <option value="Guyana" >Guyana</option>
+                                                                    <option value="Haiti" >Haiti</option>
+                                                                    <option value="Honduras" >Honduras</option>
+                                                                    <option value="Hungary" >Hungary</option>
+                                                                    <option value="India" >India</option>
+                                                                    <option value="Indonesia" >Indonesia</option>
+                                                                    <option value="Iran" >Iran</option>
+                                                                    <option value="Iraq" >Iraq</option>
+                                                                    <option value="Ireland" >Ireland</option>
+                                                                    <option value="Jamaica" >Jamaica</option>
+                                                                    <option value="Japan" >Japan</option>
+                                                                    <option value="Jordan" >Jordan</option>
+                                                                    <option value="Kazakhstan" >Kazakhstan</option>
+                                                                    <option value="Kenya" >Kenya</option>
+                                                                    <option value="Kiribati" >Kiribati</option>
+                                                                    <option value="Korea, North" >Korea, North</option>
+                                                                    <option value="Korea, South" >Korea, South</option>
+                                                                    <option value="Kosovo" >Kosovo</option>
+                                                                    <option value="Kuwait" >Kuwait</option>
+                                                                    <option value="Kyrgyzstan" >Kyrgyzstan</option>
+                                                                    <option value="Laos" >Laos</option>
+                                                                    <option value="Latvia" >Latvia</option>
+                                                                    <option value="Lebanon" >Lebanon</option>
+                                                                    <option value="Lesotho" >Lesotho</option>
+                                                                    <option value="Liberia" >Liberia</option>
+                                                                    <option value="Libya" >Libya</option>
+                                                                    <option value="Liechtenstein" >Liechtenstein</option>
+                                                                    <option value="Lithuania" >Lithuania</option>
+                                                                    <option value="Luxembourg" >Luxembourg</option>
+                                                                    <option value="Macedonia" >Macedonia</option>
+                                                                    <option value="Madagascar" >Madagascar</option>
+                                                                    <option value="Malawi" >Malawi</option>
+                                                                    <option value="Malaysia" >Malaysia</option>
+                                                                    <option value="Maldives" >Maldives</option>
+                                                                    <option value="Mali" >Mali</option>
+                                                                    <option value="Malta" >Malta</option>
+                                                                    <option value="Marshall Islands" >Marshall Islands</option>
+                                                                    <option value="Mauritania" >Mauritania</option>
+                                                                    <option value="Mauritius" >Mauritius</option>
+                                                                    <option value="Mexico" >Mexico</option>
+                                                                    <option value="Micronesia, Federated States of" >Micronesia, Federated States of</option>
+                                                                    <option value="Moldova" >Moldova</option>
+                                                                    <option value="Monaco" >Monaco</option>
+                                                                    <option value="Mongolia" >Mongolia</option>
+                                                                    <option value="Montenegro" >Montenegro</option>
+                                                                    <option value="Morocco" >Morocco</option>
+                                                                    <option value="Mozambique" >Mozambique</option>
+                                                                    <option value="Myanmar (Burma)" >Myanmar (Burma)</option>
+                                                                    <option value="Namibia" >Namibia</option>
+                                                                    <option value="Nauru" >Nauru</option>
+                                                                    <option value="Nepal" >Nepal</option>
+                                                                    <option value="Nicaragua" >Nicaragua</option>
+                                                                    <option value="Niger" >Niger</option>
+                                                                    <option value="Nigeria" >Nigeria</option>
+                                                                    <option value="Oman" >Oman</option>
+                                                                    <option value="Pakistan" >Pakistan</option>
+                                                                    <option value="Palau" >Palau</option>
+                                                                    <option value="Panama" >Panama</option>
+                                                                    <option value="Papua New Guinea" >Papua New Guinea</option>
+                                                                    <option value="Paraguay" >Paraguay</option>
+                                                                    <option value="Peru" >Peru</option>
+                                                                    <option value="Philippines" >Philippines</option>
+                                                                    <option value="Poland" >Poland</option>
+                                                                    <option value="Qatar" >Qatar</option>
+                                                                    <option value="Romania" >Romania</option>
+                                                                    <option value="Russia" >Russia</option>
+                                                                    <option value="Rwanda" >Rwanda</option>
+                                                                    <option value="Saint Kitts and Nevis" >Saint Kitts and Nevis</option>
+                                                                    <option value="Saint Lucia" >Saint Lucia</option>
+                                                                    <option value="Saint Vincent and the Grenadines" >Saint Vincent and the Grenadines</option>
+                                                                    <option value="Samoa" >Samoa</option>
+                                                                    <option value="San Marino" >San Marino</option>
+                                                                    <option value="Sao Tome and Principe" >Sao Tome and Principe</option>
+                                                                    <option value="Saudi Arabia" >Saudi Arabia</option>
+                                                                    <option value="Senegal" >Senegal</option>
+                                                                    <option value="Serbia" >Serbia</option>
+                                                                    <option value="Seychelles" >Seychelles</option>
+                                                                    <option value="Sierra Leone" >Sierra Leone</option>
+                                                                    <option value="Slovakia" >Slovakia</option>
+                                                                    <option value="Slovenia" >Slovenia</option>
+                                                                    <option value="Solomon Islands" >Solomon Islands</option>
+                                                                    <option value="Somalia" >Somalia</option>
+                                                                    <option value="South Africa" >South Africa</option>
+                                                                    <option value="South Sudan" >South Sudan</option>
+                                                                    <option value="Sri Lanka" >Sri Lanka</option>
+                                                                    <option value="Sudan" >Sudan</option>
+                                                                    <option value="Suriname" >Suriname</option>
+                                                                    <option value="Swaziland" >Swaziland</option>
+                                                                    <option value="Syria" >Syria</option>
+                                                                    <option value="Taiwan" >Taiwan</option>
+                                                                    <option value="Tajikistan" >Tajikistan</option>
+                                                                    <option value="Tanzania" >Tanzania</option>
+                                                                    <option value="Thailand" >Thailand</option>
+                                                                    <option value="Togo" >Togo</option>
+                                                                    <option value="Tonga" >Tonga</option>
+                                                                    <option value="Trinidad and Tobago" >Trinidad and Tobago</option>
+                                                                    <option value="Tunisia" >Tunisia</option>
+                                                                    <option value="Turkey" >Turkey</option>
+                                                                    <option value="Turkmenistan" >Turkmenistan</option>
+                                                                    <option value="Tuvalu" >Tuvalu</option>
+                                                                    <option value="Uganda" >Uganda</option>
+                                                                    <option value="Ukraine" >Ukraine</option>
+                                                                    <option value="United Arab Emirates" >United Arab Emirates</option>
+                                                                    <option value="Uruguay" >Uruguay</option>
+                                                                    <option value="Uzbekistan" >Uzbekistan</option>
+                                                                    <option value="Vanuatu" >Vanuatu</option>
+                                                                    <option value="Vatican City (Holy See)" >Vatican City (Holy See)</option>
+                                                                    <option value="Venezuela" >Venezuela</option>
+                                                                    <option value="Vietnam" >Vietnam</option>
+                                                                    <option value="Yemen" >Yemen</option>
+                                                                    <option value="Zambia" >Zambia</option>
+                                                                    <option value="Zimbabwe" >Zimbabwe</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -1837,7 +2067,7 @@
                                                                 Medical School
                                                             </th>
                                                             <td>
-
+                                                                {{$candidate->medical_school}}
                                                             </td>
                                                         </tr>
 
@@ -1846,12 +2076,204 @@
                                                                 Practice Licensing Country
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="practice_country" aria-label=".form-select-lg example">
+                                                                                                <option value="Australia " >Australia </option>
+                                                                                                <option value="New Zealand" >New Zealand</option>
+                                                                                                <option value="United Kingdom " >United Kingdom </option>
+                                                                                                <option value="Austria  " >Austria  </option>
+                                                                                                <option value="Belgium" >Belgium</option>
+                                                                                                <option value="Canada " >Canada </option>
+                                                                                                <option value="Czech Republic  " >Czech Republic  </option>
+                                                                                                <option value="Denmark  " >Denmark  </option>
+                                                                                                <option value="Finland  " >Finland  </option>
+                                                                                                <option value="France " >France </option>
+                                                                                                <option value="Germany  " >Germany  </option>
+                                                                                                <option value="Greece" >Greece</option>
+                                                                                                <option value="Iceland " >Iceland </option>
+                                                                                                <option value="Israel  " >Israel  </option>
+                                                                                                <option value="Italy " >Italy </option>
+                                                                                                <option value="Norway " >Norway </option>
+                                                                                                <option value="Portugal  " >Portugal  </option>
+                                                                                                <option value="Republic of Ireland  " >Republic of Ireland  </option>
+                                                                                                <option value="Singapore  " >Singapore  </option>
+                                                                                                <option value="Spain " >Spain </option>
+                                                                                                <option value="Sweden " >Sweden </option>
+                                                                                                <option value="Switzerland " >Switzerland </option>
+                                                                                                <option value="The Netherlands " >The Netherlands </option>
+                                                                                                <option value="United States of America " >United States of America </option>
+                                                                                                <option value="Afghanistan" >Afghanistan</option>
+                                                                                                <option value="Albania" >Albania</option>
+                                                                                                <option value="Algeria" >Algeria</option>
+                                                                                                <option value="Andorra" >Andorra</option>
+                                                                                                <option value="Angola" >Angola</option>
+                                                                                                <option value="Antigua and Barbuda" >Antigua and Barbuda</option>
+                                                                                                <option value="Argentina" >Argentina</option>
+                                                                                                <option value="Armenia" >Armenia</option>
+                                                                                                <option value="Azerbaijan" >Azerbaijan</option>
+                                                                                                <option value="The Bahamas" >The Bahamas</option>
+                                                                                                <option value="Bahrain" >Bahrain</option>
+                                                                                                <option value="Bangladesh" >Bangladesh</option>
+                                                                                                <option value="Barbados" >Barbados</option>
+                                                                                                <option value="Belarus" >Belarus</option>
+                                                                                                <option value="Belize" >Belize</option>
+                                                                                                <option value="Benin" >Benin</option>
+                                                                                                <option value="Bhutan" >Bhutan</option>
+                                                                                                <option value="Bolivia" >Bolivia</option>
+                                                                                                <option value="Bosnia and Herzegovina" >Bosnia and Herzegovina</option>
+                                                                                                <option value="Botswana" >Botswana</option>
+                                                                                                <option value="Brazil" >Brazil</option>
+                                                                                                <option value="Brunei" >Brunei</option>
+                                                                                                <option value="Bulgaria" >Bulgaria</option>
+                                                                                                <option value="Burkina Faso" >Burkina Faso</option>
+                                                                                                <option value="Burundi" >Burundi</option>
+                                                                                                <option value="Cambodia" >Cambodia</option>
+                                                                                                <option value="Cameroon" >Cameroon</option>
+                                                                                                <option value="Cape Verde" >Cape Verde</option>
+                                                                                                <option value="Central African Republic" >Central African Republic</option>
+                                                                                                <option value="Chad" >Chad</option>
+                                                                                                <option value="Chile" >Chile</option>
+                                                                                                <option value="China" >China</option>
+                                                                                                <option value="Colombia" >Colombia</option>
+                                                                                                <option value="Comoros" >Comoros</option>
+                                                                                                <option value="Congo, Republic of the" >Congo, Republic of the</option>
+                                                                                                <option value="Congo, Democratic Republic of the" >Congo, Democratic Republic of the</option>
+                                                                                                <option value="Costa Rica" >Costa Rica</option>
+                                                                                                <option value="Cote d-Ivoire" >Cote d-Ivoire</option>
+                                                                                                <option value="Croatia" >Croatia</option>
+                                                                                                <option value="Cuba" >Cuba</option>
+                                                                                                <option value="Cyprus" >Cyprus</option>
+                                                                                                <option value="Djibouti" >Djibouti</option>
+                                                                                                <option value="Dominica" >Dominica</option>
+                                                                                                <option value="Dominican Republic" >Dominican Republic</option>
+                                                                                                <option value="East Timor (Timor-Leste)" >East Timor (Timor-Leste)</option>
+                                                                                                <option value="Ecuador" >Ecuador</option>
+                                                                                                <option value="Egypt" >Egypt</option>
+                                                                                                <option value="El Salvador" >El Salvador</option>
+                                                                                                <option value="Equatorial Guinea" >Equatorial Guinea</option>
+                                                                                                <option value="Eritrea" >Eritrea</option>
+                                                                                                <option value="Estonia" >Estonia</option>
+                                                                                                <option value="Ethiopia" >Ethiopia</option>
+                                                                                                <option value="Fiji" >Fiji</option>
+                                                                                                <option value="Gabon" >Gabon</option>
+                                                                                                <option value="The Gambia" >The Gambia</option>
+                                                                                                <option value="Georgia" >Georgia</option>
+                                                                                                <option value="Ghana" >Ghana</option>
+                                                                                                <option value="Grenada" >Grenada</option>
+                                                                                                <option value="Guatemala" >Guatemala</option>
+                                                                                                <option value="Guinea" >Guinea</option>
+                                                                                                <option value="Guinea-Bissau" >Guinea-Bissau</option>
+                                                                                                <option value="Guyana" >Guyana</option>
+                                                                                                <option value="Haiti" >Haiti</option>
+                                                                                                <option value="Honduras" >Honduras</option>
+                                                                                                <option value="Hungary" >Hungary</option>
+                                                                                                <option value="India" >India</option>
+                                                                                                <option value="Indonesia" >Indonesia</option>
+                                                                                                <option value="Iran" >Iran</option>
+                                                                                                <option value="Iraq" >Iraq</option>
+                                                                                                <option value="Ireland" >Ireland</option>
+                                                                                                <option value="Jamaica" >Jamaica</option>
+                                                                                                <option value="Japan" >Japan</option>
+                                                                                                <option value="Jordan" >Jordan</option>
+                                                                                                <option value="Kazakhstan" >Kazakhstan</option>
+                                                                                                <option value="Kenya" >Kenya</option>
+                                                                                                <option value="Kiribati" >Kiribati</option>
+                                                                                                <option value="Korea, North" >Korea, North</option>
+                                                                                                <option value="Korea, South" >Korea, South</option>
+                                                                                                <option value="Kosovo" >Kosovo</option>
+                                                                                                <option value="Kuwait" >Kuwait</option>
+                                                                                                <option value="Kyrgyzstan" >Kyrgyzstan</option>
+                                                                                                <option value="Laos" >Laos</option>
+                                                                                                <option value="Latvia" >Latvia</option>
+                                                                                                <option value="Lebanon" >Lebanon</option>
+                                                                                                <option value="Lesotho" >Lesotho</option>
+                                                                                                <option value="Liberia" >Liberia</option>
+                                                                                                <option value="Libya" >Libya</option>
+                                                                                                <option value="Liechtenstein" >Liechtenstein</option>
+                                                                                                <option value="Lithuania" >Lithuania</option>
+                                                                                                <option value="Luxembourg" >Luxembourg</option>
+                                                                                                <option value="Macedonia" >Macedonia</option>
+                                                                                                <option value="Madagascar" >Madagascar</option>
+                                                                                                <option value="Malawi" >Malawi</option>
+                                                                                                <option value="Malaysia" >Malaysia</option>
+                                                                                                <option value="Maldives" >Maldives</option>
+                                                                                                <option value="Mali" >Mali</option>
+                                                                                                <option value="Malta" >Malta</option>
+                                                                                                <option value="Marshall Islands" >Marshall Islands</option>
+                                                                                                <option value="Mauritania" >Mauritania</option>
+                                                                                                <option value="Mauritius" >Mauritius</option>
+                                                                                                <option value="Mexico" >Mexico</option>
+                                                                                                <option value="Micronesia, Federated States of" >Micronesia, Federated States of</option>
+                                                                                                <option value="Moldova" >Moldova</option>
+                                                                                                <option value="Monaco" >Monaco</option>
+                                                                                                <option value="Mongolia" >Mongolia</option>
+                                                                                                <option value="Montenegro" >Montenegro</option>
+                                                                                                <option value="Morocco" >Morocco</option>
+                                                                                                <option value="Mozambique" >Mozambique</option>
+                                                                                                <option value="Myanmar (Burma)" >Myanmar (Burma)</option>
+                                                                                                <option value="Namibia" >Namibia</option>
+                                                                                                <option value="Nauru" >Nauru</option>
+                                                                                                <option value="Nepal" >Nepal</option>
+                                                                                                <option value="Nicaragua" >Nicaragua</option>
+                                                                                                <option value="Niger" >Niger</option>
+                                                                                                <option value="Nigeria" >Nigeria</option>
+                                                                                                <option value="Oman" >Oman</option>
+                                                                                                <option value="Pakistan" >Pakistan</option>
+                                                                                                <option value="Palau" >Palau</option>
+                                                                                                <option value="Panama" >Panama</option>
+                                                                                                <option value="Papua New Guinea" >Papua New Guinea</option>
+                                                                                                <option value="Paraguay" >Paraguay</option>
+                                                                                                <option value="Peru" >Peru</option>
+                                                                                                <option value="Philippines" >Philippines</option>
+                                                                                                <option value="Poland" >Poland</option>
+                                                                                                <option value="Qatar" >Qatar</option>
+                                                                                                <option value="Romania" >Romania</option>
+                                                                                                <option value="Russia" >Russia</option>
+                                                                                                <option value="Rwanda" >Rwanda</option>
+                                                                                                <option value="Saint Kitts and Nevis" >Saint Kitts and Nevis</option>
+                                                                                                <option value="Saint Lucia" >Saint Lucia</option>
+                                                                                                <option value="Saint Vincent and the Grenadines" >Saint Vincent and the Grenadines</option>
+                                                                                                <option value="Samoa" >Samoa</option>
+                                                                                                <option value="San Marino" >San Marino</option>
+                                                                                                <option value="Sao Tome and Principe" >Sao Tome and Principe</option>
+                                                                                                <option value="Saudi Arabia" >Saudi Arabia</option>
+                                                                                                <option value="Senegal" >Senegal</option>
+                                                                                                <option value="Serbia" >Serbia</option>
+                                                                                                <option value="Seychelles" >Seychelles</option>
+                                                                                                <option value="Sierra Leone" >Sierra Leone</option>
+                                                                                                <option value="Slovakia" >Slovakia</option>
+                                                                                                <option value="Slovenia" >Slovenia</option>
+                                                                                                <option value="Solomon Islands" >Solomon Islands</option>
+                                                                                                <option value="Somalia" >Somalia</option>
+                                                                                                <option value="South Africa" >South Africa</option>
+                                                                                                <option value="South Sudan" >South Sudan</option>
+                                                                                                <option value="Sri Lanka" >Sri Lanka</option>
+                                                                                                <option value="Sudan" >Sudan</option>
+                                                                                                <option value="Suriname" >Suriname</option>
+                                                                                                <option value="Swaziland" >Swaziland</option>
+                                                                                                <option value="Syria" >Syria</option>
+                                                                                                <option value="Taiwan" >Taiwan</option>
+                                                                                                <option value="Tajikistan" >Tajikistan</option>
+                                                                                                <option value="Tanzania" >Tanzania</option>
+                                                                                                <option value="Thailand" >Thailand</option>
+                                                                                                <option value="Togo" >Togo</option>
+                                                                                                <option value="Tonga" >Tonga</option>
+                                                                                                <option value="Trinidad and Tobago" >Trinidad and Tobago</option>
+                                                                                                <option value="Tunisia" >Tunisia</option>
+                                                                                                <option value="Turkey" >Turkey</option>
+                                                                                                <option value="Turkmenistan" >Turkmenistan</option>
+                                                                                                <option value="Tuvalu" >Tuvalu</option>
+                                                                                                <option value="Uganda" >Uganda</option>
+                                                                                                <option value="Ukraine" >Ukraine</option>
+                                                                                                <option value="United Arab Emirates" >United Arab Emirates</option>
+                                                                                                <option value="Uruguay" >Uruguay</option>
+                                                                                                <option value="Uzbekistan" >Uzbekistan</option>
+                                                                                                <option value="Vanuatu" >Vanuatu</option>
+                                                                                                <option value="Vatican City (Holy See)" >Vatican City (Holy See)</option>
+                                                                                                <option value="Venezuela" >Venezuela</option>
+                                                                                                <option value="Vietnam" >Vietnam</option>
+                                                                                                <option value="Yemen" >Yemen</option>
+                                                                                                <option value="Zambia" >Zambia</option>
+                                                                                                <option value="Zimbabwe" >Zimbabwe</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -1861,7 +2283,7 @@
                                                                 Practice Licensing Body
                                                             </th>
                                                             <td>
-
+                                                                {{$candidate->practice_licensing_body}}
                                                             </td>
                                                         </tr>
                                                         <tr>
@@ -1869,12 +2291,11 @@
                                                                 Experience From Home Country
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="experience_from_home" aria-label=".form-select-lg example">
+                                                                                                <option value="1-3" >1-3</option>
+                                                                                                <option value="3-5" >3-5</option>
+                                                                                                <option value="5-10" >5-10</option>
+                                                                                                <option value="Above 10" >Above 10</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -1884,12 +2305,11 @@
                                                                 Experience From Residing Country
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="experience_from_residing" aria-label=".form-select-lg example">
+                                                                                                <option value="1-3" >1-3</option>
+                                                                                                <option value="3-5" >3-5</option>
+                                                                                                <option value="5-10" >5-10</option>
+                                                                                                <option value="Above 10" >Above 10</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -1899,12 +2319,11 @@
                                                                 Recognised Comparable Experience
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="recognised_comparable_experience" aria-label=".form-select-lg example">
+                                                                                                <option value="1-3" >1-3</option>
+                                                                                                <option value="3-5" >3-5</option>
+                                                                                                <option value="5-10" >5-10</option>
+                                                                                                <option value="Above 10" >Above 10</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -1914,12 +2333,14 @@
                                                                 Current Employment Status
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="current_employment_status" aria-label=".form-select-lg example">
+                                                                                                <option value="Employed" >Employed</option>
+                                                                                                <option value="Non-employed" >Non-employed</option>
+                                                                                                <option value="Student" >Student</option>
+                                                                                                <option value="Paternity Break" >Paternity Break</option>
+                                                                                                <option value="Maternity Break" >Maternity Break</option>
+                                                                                                <option value="Redundant" >Redundant</option>
+                                                                                                <option value="Phase of Career Break" >Phase of Career Break</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -2010,12 +2431,204 @@
                                                                 Country of Citizenship
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="country_of_citizenship" aria-label=".form-select-lg example">
+                                                                                                <option value="Australia " >Australia </option>
+                                                                                                <option value="New Zealand" >New Zealand</option>
+                                                                                                <option value="United Kingdom " >United Kingdom </option>
+                                                                                                <option value="Austria  " >Austria  </option>
+                                                                                                <option value="Belgium" >Belgium</option>
+                                                                                                <option value="Canada " >Canada </option>
+                                                                                                <option value="Czech Republic  " >Czech Republic  </option>
+                                                                                                <option value="Denmark  " >Denmark  </option>
+                                                                                                <option value="Finland  " >Finland  </option>
+                                                                                                <option value="France " >France </option>
+                                                                                                <option value="Germany  " >Germany  </option>
+                                                                                                <option value="Greece" >Greece</option>
+                                                                                                <option value="Iceland " >Iceland </option>
+                                                                                                <option value="Israel  " >Israel  </option>
+                                                                                                <option value="Italy " >Italy </option>
+                                                                                                <option value="Norway " >Norway </option>
+                                                                                                <option value="Portugal  " >Portugal  </option>
+                                                                                                <option value="Republic of Ireland  " >Republic of Ireland  </option>
+                                                                                                <option value="Singapore  " >Singapore  </option>
+                                                                                                <option value="Spain " >Spain </option>
+                                                                                                <option value="Sweden " >Sweden </option>
+                                                                                                <option value="Switzerland " >Switzerland </option>
+                                                                                                <option value="The Netherlands " >The Netherlands </option>
+                                                                                                <option value="United States of America " >United States of America </option>
+                                                                                                <option value="Afghanistan" >Afghanistan</option>
+                                                                                                <option value="Albania" >Albania</option>
+                                                                                                <option value="Algeria" >Algeria</option>
+                                                                                                <option value="Andorra" >Andorra</option>
+                                                                                                <option value="Angola" >Angola</option>
+                                                                                                <option value="Antigua and Barbuda" >Antigua and Barbuda</option>
+                                                                                                <option value="Argentina" >Argentina</option>
+                                                                                                <option value="Armenia" >Armenia</option>
+                                                                                                <option value="Azerbaijan" >Azerbaijan</option>
+                                                                                                <option value="The Bahamas" >The Bahamas</option>
+                                                                                                <option value="Bahrain" >Bahrain</option>
+                                                                                                <option value="Bangladesh" >Bangladesh</option>
+                                                                                                <option value="Barbados" >Barbados</option>
+                                                                                                <option value="Belarus" >Belarus</option>
+                                                                                                <option value="Belize" >Belize</option>
+                                                                                                <option value="Benin" >Benin</option>
+                                                                                                <option value="Bhutan" >Bhutan</option>
+                                                                                                <option value="Bolivia" >Bolivia</option>
+                                                                                                <option value="Bosnia and Herzegovina" >Bosnia and Herzegovina</option>
+                                                                                                <option value="Botswana" >Botswana</option>
+                                                                                                <option value="Brazil" >Brazil</option>
+                                                                                                <option value="Brunei" >Brunei</option>
+                                                                                                <option value="Bulgaria" >Bulgaria</option>
+                                                                                                <option value="Burkina Faso" >Burkina Faso</option>
+                                                                                                <option value="Burundi" >Burundi</option>
+                                                                                                <option value="Cambodia" >Cambodia</option>
+                                                                                                <option value="Cameroon" >Cameroon</option>
+                                                                                                <option value="Cape Verde" >Cape Verde</option>
+                                                                                                <option value="Central African Republic" >Central African Republic</option>
+                                                                                                <option value="Chad" >Chad</option>
+                                                                                                <option value="Chile" >Chile</option>
+                                                                                                <option value="China" >China</option>
+                                                                                                <option value="Colombia" >Colombia</option>
+                                                                                                <option value="Comoros" >Comoros</option>
+                                                                                                <option value="Congo, Republic of the" >Congo, Republic of the</option>
+                                                                                                <option value="Congo, Democratic Republic of the" >Congo, Democratic Republic of the</option>
+                                                                                                <option value="Costa Rica" >Costa Rica</option>
+                                                                                                <option value="Cote d-Ivoire" >Cote d-Ivoire</option>
+                                                                                                <option value="Croatia" >Croatia</option>
+                                                                                                <option value="Cuba" >Cuba</option>
+                                                                                                <option value="Cyprus" >Cyprus</option>
+                                                                                                <option value="Djibouti" >Djibouti</option>
+                                                                                                <option value="Dominica" >Dominica</option>
+                                                                                                <option value="Dominican Republic" >Dominican Republic</option>
+                                                                                                <option value="East Timor (Timor-Leste)" >East Timor (Timor-Leste)</option>
+                                                                                                <option value="Ecuador" >Ecuador</option>
+                                                                                                <option value="Egypt" >Egypt</option>
+                                                                                                <option value="El Salvador" >El Salvador</option>
+                                                                                                <option value="Equatorial Guinea" >Equatorial Guinea</option>
+                                                                                                <option value="Eritrea" >Eritrea</option>
+                                                                                                <option value="Estonia" >Estonia</option>
+                                                                                                <option value="Ethiopia" >Ethiopia</option>
+                                                                                                <option value="Fiji" >Fiji</option>
+                                                                                                <option value="Gabon" >Gabon</option>
+                                                                                                <option value="The Gambia" >The Gambia</option>
+                                                                                                <option value="Georgia" >Georgia</option>
+                                                                                                <option value="Ghana" >Ghana</option>
+                                                                                                <option value="Grenada" >Grenada</option>
+                                                                                                <option value="Guatemala" >Guatemala</option>
+                                                                                                <option value="Guinea" >Guinea</option>
+                                                                                                <option value="Guinea-Bissau" >Guinea-Bissau</option>
+                                                                                                <option value="Guyana" >Guyana</option>
+                                                                                                <option value="Haiti" >Haiti</option>
+                                                                                                <option value="Honduras" >Honduras</option>
+                                                                                                <option value="Hungary" >Hungary</option>
+                                                                                                <option value="India" >India</option>
+                                                                                                <option value="Indonesia" >Indonesia</option>
+                                                                                                <option value="Iran" >Iran</option>
+                                                                                                <option value="Iraq" >Iraq</option>
+                                                                                                <option value="Ireland" >Ireland</option>
+                                                                                                <option value="Jamaica" >Jamaica</option>
+                                                                                                <option value="Japan" >Japan</option>
+                                                                                                <option value="Jordan" >Jordan</option>
+                                                                                                <option value="Kazakhstan" >Kazakhstan</option>
+                                                                                                <option value="Kenya" >Kenya</option>
+                                                                                                <option value="Kiribati" >Kiribati</option>
+                                                                                                <option value="Korea, North" >Korea, North</option>
+                                                                                                <option value="Korea, South" >Korea, South</option>
+                                                                                                <option value="Kosovo" >Kosovo</option>
+                                                                                                <option value="Kuwait" >Kuwait</option>
+                                                                                                <option value="Kyrgyzstan" >Kyrgyzstan</option>
+                                                                                                <option value="Laos" >Laos</option>
+                                                                                                <option value="Latvia" >Latvia</option>
+                                                                                                <option value="Lebanon" >Lebanon</option>
+                                                                                                <option value="Lesotho" >Lesotho</option>
+                                                                                                <option value="Liberia" >Liberia</option>
+                                                                                                <option value="Libya" >Libya</option>
+                                                                                                <option value="Liechtenstein" >Liechtenstein</option>
+                                                                                                <option value="Lithuania" >Lithuania</option>
+                                                                                                <option value="Luxembourg" >Luxembourg</option>
+                                                                                                <option value="Macedonia" >Macedonia</option>
+                                                                                                <option value="Madagascar" >Madagascar</option>
+                                                                                                <option value="Malawi" >Malawi</option>
+                                                                                                <option value="Malaysia" >Malaysia</option>
+                                                                                                <option value="Maldives" >Maldives</option>
+                                                                                                <option value="Mali" >Mali</option>
+                                                                                                <option value="Malta" >Malta</option>
+                                                                                                <option value="Marshall Islands" >Marshall Islands</option>
+                                                                                                <option value="Mauritania" >Mauritania</option>
+                                                                                                <option value="Mauritius" >Mauritius</option>
+                                                                                                <option value="Mexico" >Mexico</option>
+                                                                                                <option value="Micronesia, Federated States of" >Micronesia, Federated States of</option>
+                                                                                                <option value="Moldova" >Moldova</option>
+                                                                                                <option value="Monaco" >Monaco</option>
+                                                                                                <option value="Mongolia" >Mongolia</option>
+                                                                                                <option value="Montenegro" >Montenegro</option>
+                                                                                                <option value="Morocco" >Morocco</option>
+                                                                                                <option value="Mozambique" >Mozambique</option>
+                                                                                                <option value="Myanmar (Burma)" >Myanmar (Burma)</option>
+                                                                                                <option value="Namibia" >Namibia</option>
+                                                                                                <option value="Nauru" >Nauru</option>
+                                                                                                <option value="Nepal" >Nepal</option>
+                                                                                                <option value="Nicaragua" >Nicaragua</option>
+                                                                                                <option value="Niger" >Niger</option>
+                                                                                                <option value="Nigeria" >Nigeria</option>
+                                                                                                <option value="Oman" >Oman</option>
+                                                                                                <option value="Pakistan" >Pakistan</option>
+                                                                                                <option value="Palau" >Palau</option>
+                                                                                                <option value="Panama" >Panama</option>
+                                                                                                <option value="Papua New Guinea" >Papua New Guinea</option>
+                                                                                                <option value="Paraguay" >Paraguay</option>
+                                                                                                <option value="Peru" >Peru</option>
+                                                                                                <option value="Philippines" >Philippines</option>
+                                                                                                <option value="Poland" >Poland</option>
+                                                                                                <option value="Qatar" >Qatar</option>
+                                                                                                <option value="Romania" >Romania</option>
+                                                                                                <option value="Russia" >Russia</option>
+                                                                                                <option value="Rwanda" >Rwanda</option>
+                                                                                                <option value="Saint Kitts and Nevis" >Saint Kitts and Nevis</option>
+                                                                                                <option value="Saint Lucia" >Saint Lucia</option>
+                                                                                                <option value="Saint Vincent and the Grenadines" >Saint Vincent and the Grenadines</option>
+                                                                                                <option value="Samoa" >Samoa</option>
+                                                                                                <option value="San Marino" >San Marino</option>
+                                                                                                <option value="Sao Tome and Principe" >Sao Tome and Principe</option>
+                                                                                                <option value="Saudi Arabia" >Saudi Arabia</option>
+                                                                                                <option value="Senegal" >Senegal</option>
+                                                                                                <option value="Serbia" >Serbia</option>
+                                                                                                <option value="Seychelles" >Seychelles</option>
+                                                                                                <option value="Sierra Leone" >Sierra Leone</option>
+                                                                                                <option value="Slovakia" >Slovakia</option>
+                                                                                                <option value="Slovenia" >Slovenia</option>
+                                                                                                <option value="Solomon Islands" >Solomon Islands</option>
+                                                                                                <option value="Somalia" >Somalia</option>
+                                                                                                <option value="South Africa" >South Africa</option>
+                                                                                                <option value="South Sudan" >South Sudan</option>
+                                                                                                <option value="Sri Lanka" >Sri Lanka</option>
+                                                                                                <option value="Sudan" >Sudan</option>
+                                                                                                <option value="Suriname" >Suriname</option>
+                                                                                                <option value="Swaziland" >Swaziland</option>
+                                                                                                <option value="Syria" >Syria</option>
+                                                                                                <option value="Taiwan" >Taiwan</option>
+                                                                                                <option value="Tajikistan" >Tajikistan</option>
+                                                                                                <option value="Tanzania" >Tanzania</option>
+                                                                                                <option value="Thailand" >Thailand</option>
+                                                                                                <option value="Togo" >Togo</option>
+                                                                                                <option value="Tonga" >Tonga</option>
+                                                                                                <option value="Trinidad and Tobago" >Trinidad and Tobago</option>
+                                                                                                <option value="Tunisia" >Tunisia</option>
+                                                                                                <option value="Turkey" >Turkey</option>
+                                                                                                <option value="Turkmenistan" >Turkmenistan</option>
+                                                                                                <option value="Tuvalu" >Tuvalu</option>
+                                                                                                <option value="Uganda" >Uganda</option>
+                                                                                                <option value="Ukraine" >Ukraine</option>
+                                                                                                <option value="United Arab Emirates" >United Arab Emirates</option>
+                                                                                                <option value="Uruguay" >Uruguay</option>
+                                                                                                <option value="Uzbekistan" >Uzbekistan</option>
+                                                                                                <option value="Vanuatu" >Vanuatu</option>
+                                                                                                <option value="Vatican City (Holy See)" >Vatican City (Holy See)</option>
+                                                                                                <option value="Venezuela" >Venezuela</option>
+                                                                                                <option value="Vietnam" >Vietnam</option>
+                                                                                                <option value="Yemen" >Yemen</option>
+                                                                                                <option value="Zambia" >Zambia</option>
+                                                                                                <option value="Zimbabwe" >Zimbabwe</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -2025,12 +2638,204 @@
                                                                 Country of Residence
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="country_of_residence" aria-label=".form-select-lg example">
+                                                                                                <option value="Australia " >Australia </option>
+                                                                                                <option value="New Zealand" >New Zealand</option>
+                                                                                                <option value="United Kingdom " >United Kingdom </option>
+                                                                                                <option value="Austria  " >Austria  </option>
+                                                                                                <option value="Belgium" >Belgium</option>
+                                                                                                <option value="Canada " >Canada </option>
+                                                                                                <option value="Czech Republic  " >Czech Republic  </option>
+                                                                                                <option value="Denmark  " >Denmark  </option>
+                                                                                                <option value="Finland  " >Finland  </option>
+                                                                                                <option value="France " >France </option>
+                                                                                                <option value="Germany  " >Germany  </option>
+                                                                                                <option value="Greece" >Greece</option>
+                                                                                                <option value="Iceland " >Iceland </option>
+                                                                                                <option value="Israel  " >Israel  </option>
+                                                                                                <option value="Italy " >Italy </option>
+                                                                                                <option value="Norway " >Norway </option>
+                                                                                                <option value="Portugal  " >Portugal  </option>
+                                                                                                <option value="Republic of Ireland  " >Republic of Ireland  </option>
+                                                                                                <option value="Singapore  " >Singapore  </option>
+                                                                                                <option value="Spain " >Spain </option>
+                                                                                                <option value="Sweden " >Sweden </option>
+                                                                                                <option value="Switzerland " >Switzerland </option>
+                                                                                                <option value="The Netherlands " >The Netherlands </option>
+                                                                                                <option value="United States of America " >United States of America </option>
+                                                                                                <option value="Afghanistan" >Afghanistan</option>
+                                                                                                <option value="Albania" >Albania</option>
+                                                                                                <option value="Algeria" >Algeria</option>
+                                                                                                <option value="Andorra" >Andorra</option>
+                                                                                                <option value="Angola" >Angola</option>
+                                                                                                <option value="Antigua and Barbuda" >Antigua and Barbuda</option>
+                                                                                                <option value="Argentina" >Argentina</option>
+                                                                                                <option value="Armenia" >Armenia</option>
+                                                                                                <option value="Azerbaijan" >Azerbaijan</option>
+                                                                                                <option value="The Bahamas" >The Bahamas</option>
+                                                                                                <option value="Bahrain" >Bahrain</option>
+                                                                                                <option value="Bangladesh" >Bangladesh</option>
+                                                                                                <option value="Barbados" >Barbados</option>
+                                                                                                <option value="Belarus" >Belarus</option>
+                                                                                                <option value="Belize" >Belize</option>
+                                                                                                <option value="Benin" >Benin</option>
+                                                                                                <option value="Bhutan" >Bhutan</option>
+                                                                                                <option value="Bolivia" >Bolivia</option>
+                                                                                                <option value="Bosnia and Herzegovina" >Bosnia and Herzegovina</option>
+                                                                                                <option value="Botswana" >Botswana</option>
+                                                                                                <option value="Brazil" >Brazil</option>
+                                                                                                <option value="Brunei" >Brunei</option>
+                                                                                                <option value="Bulgaria" >Bulgaria</option>
+                                                                                                <option value="Burkina Faso" >Burkina Faso</option>
+                                                                                                <option value="Burundi" >Burundi</option>
+                                                                                                <option value="Cambodia" >Cambodia</option>
+                                                                                                <option value="Cameroon" >Cameroon</option>
+                                                                                                <option value="Cape Verde" >Cape Verde</option>
+                                                                                                <option value="Central African Republic" >Central African Republic</option>
+                                                                                                <option value="Chad" >Chad</option>
+                                                                                                <option value="Chile" >Chile</option>
+                                                                                                <option value="China" >China</option>
+                                                                                                <option value="Colombia" >Colombia</option>
+                                                                                                <option value="Comoros" >Comoros</option>
+                                                                                                <option value="Congo, Republic of the" >Congo, Republic of the</option>
+                                                                                                <option value="Congo, Democratic Republic of the" >Congo, Democratic Republic of the</option>
+                                                                                                <option value="Costa Rica" >Costa Rica</option>
+                                                                                                <option value="Cote d-Ivoire" >Cote d-Ivoire</option>
+                                                                                                <option value="Croatia" >Croatia</option>
+                                                                                                <option value="Cuba" >Cuba</option>
+                                                                                                <option value="Cyprus" >Cyprus</option>
+                                                                                                <option value="Djibouti" >Djibouti</option>
+                                                                                                <option value="Dominica" >Dominica</option>
+                                                                                                <option value="Dominican Republic" >Dominican Republic</option>
+                                                                                                <option value="East Timor (Timor-Leste)" >East Timor (Timor-Leste)</option>
+                                                                                                <option value="Ecuador" >Ecuador</option>
+                                                                                                <option value="Egypt" >Egypt</option>
+                                                                                                <option value="El Salvador" >El Salvador</option>
+                                                                                                <option value="Equatorial Guinea" >Equatorial Guinea</option>
+                                                                                                <option value="Eritrea" >Eritrea</option>
+                                                                                                <option value="Estonia" >Estonia</option>
+                                                                                                <option value="Ethiopia" >Ethiopia</option>
+                                                                                                <option value="Fiji" >Fiji</option>
+                                                                                                <option value="Gabon" >Gabon</option>
+                                                                                                <option value="The Gambia" >The Gambia</option>
+                                                                                                <option value="Georgia" >Georgia</option>
+                                                                                                <option value="Ghana" >Ghana</option>
+                                                                                                <option value="Grenada" >Grenada</option>
+                                                                                                <option value="Guatemala" >Guatemala</option>
+                                                                                                <option value="Guinea" >Guinea</option>
+                                                                                                <option value="Guinea-Bissau" >Guinea-Bissau</option>
+                                                                                                <option value="Guyana" >Guyana</option>
+                                                                                                <option value="Haiti" >Haiti</option>
+                                                                                                <option value="Honduras" >Honduras</option>
+                                                                                                <option value="Hungary" >Hungary</option>
+                                                                                                <option value="India" >India</option>
+                                                                                                <option value="Indonesia" >Indonesia</option>
+                                                                                                <option value="Iran" >Iran</option>
+                                                                                                <option value="Iraq" >Iraq</option>
+                                                                                                <option value="Ireland" >Ireland</option>
+                                                                                                <option value="Jamaica" >Jamaica</option>
+                                                                                                <option value="Japan" >Japan</option>
+                                                                                                <option value="Jordan" >Jordan</option>
+                                                                                                <option value="Kazakhstan" >Kazakhstan</option>
+                                                                                                <option value="Kenya" >Kenya</option>
+                                                                                                <option value="Kiribati" >Kiribati</option>
+                                                                                                <option value="Korea, North" >Korea, North</option>
+                                                                                                <option value="Korea, South" >Korea, South</option>
+                                                                                                <option value="Kosovo" >Kosovo</option>
+                                                                                                <option value="Kuwait" >Kuwait</option>
+                                                                                                <option value="Kyrgyzstan" >Kyrgyzstan</option>
+                                                                                                <option value="Laos" >Laos</option>
+                                                                                                <option value="Latvia" >Latvia</option>
+                                                                                                <option value="Lebanon" >Lebanon</option>
+                                                                                                <option value="Lesotho" >Lesotho</option>
+                                                                                                <option value="Liberia" >Liberia</option>
+                                                                                                <option value="Libya" >Libya</option>
+                                                                                                <option value="Liechtenstein" >Liechtenstein</option>
+                                                                                                <option value="Lithuania" >Lithuania</option>
+                                                                                                <option value="Luxembourg" >Luxembourg</option>
+                                                                                                <option value="Macedonia" >Macedonia</option>
+                                                                                                <option value="Madagascar" >Madagascar</option>
+                                                                                                <option value="Malawi" >Malawi</option>
+                                                                                                <option value="Malaysia" >Malaysia</option>
+                                                                                                <option value="Maldives" >Maldives</option>
+                                                                                                <option value="Mali" >Mali</option>
+                                                                                                <option value="Malta" >Malta</option>
+                                                                                                <option value="Marshall Islands" >Marshall Islands</option>
+                                                                                                <option value="Mauritania" >Mauritania</option>
+                                                                                                <option value="Mauritius" >Mauritius</option>
+                                                                                                <option value="Mexico" >Mexico</option>
+                                                                                                <option value="Micronesia, Federated States of" >Micronesia, Federated States of</option>
+                                                                                                <option value="Moldova" >Moldova</option>
+                                                                                                <option value="Monaco" >Monaco</option>
+                                                                                                <option value="Mongolia" >Mongolia</option>
+                                                                                                <option value="Montenegro" >Montenegro</option>
+                                                                                                <option value="Morocco" >Morocco</option>
+                                                                                                <option value="Mozambique" >Mozambique</option>
+                                                                                                <option value="Myanmar (Burma)" >Myanmar (Burma)</option>
+                                                                                                <option value="Namibia" >Namibia</option>
+                                                                                                <option value="Nauru" >Nauru</option>
+                                                                                                <option value="Nepal" >Nepal</option>
+                                                                                                <option value="Nicaragua" >Nicaragua</option>
+                                                                                                <option value="Niger" >Niger</option>
+                                                                                                <option value="Nigeria" >Nigeria</option>
+                                                                                                <option value="Oman" >Oman</option>
+                                                                                                <option value="Pakistan" >Pakistan</option>
+                                                                                                <option value="Palau" >Palau</option>
+                                                                                                <option value="Panama" >Panama</option>
+                                                                                                <option value="Papua New Guinea" >Papua New Guinea</option>
+                                                                                                <option value="Paraguay" >Paraguay</option>
+                                                                                                <option value="Peru" >Peru</option>
+                                                                                                <option value="Philippines" >Philippines</option>
+                                                                                                <option value="Poland" >Poland</option>
+                                                                                                <option value="Qatar" >Qatar</option>
+                                                                                                <option value="Romania" >Romania</option>
+                                                                                                <option value="Russia" >Russia</option>
+                                                                                                <option value="Rwanda" >Rwanda</option>
+                                                                                                <option value="Saint Kitts and Nevis" >Saint Kitts and Nevis</option>
+                                                                                                <option value="Saint Lucia" >Saint Lucia</option>
+                                                                                                <option value="Saint Vincent and the Grenadines" >Saint Vincent and the Grenadines</option>
+                                                                                                <option value="Samoa" >Samoa</option>
+                                                                                                <option value="San Marino" >San Marino</option>
+                                                                                                <option value="Sao Tome and Principe" >Sao Tome and Principe</option>
+                                                                                                <option value="Saudi Arabia" >Saudi Arabia</option>
+                                                                                                <option value="Senegal" >Senegal</option>
+                                                                                                <option value="Serbia" >Serbia</option>
+                                                                                                <option value="Seychelles" >Seychelles</option>
+                                                                                                <option value="Sierra Leone" >Sierra Leone</option>
+                                                                                                <option value="Slovakia" >Slovakia</option>
+                                                                                                <option value="Slovenia" >Slovenia</option>
+                                                                                                <option value="Solomon Islands" >Solomon Islands</option>
+                                                                                                <option value="Somalia" >Somalia</option>
+                                                                                                <option value="South Africa" >South Africa</option>
+                                                                                                <option value="South Sudan" >South Sudan</option>
+                                                                                                <option value="Sri Lanka" >Sri Lanka</option>
+                                                                                                <option value="Sudan" >Sudan</option>
+                                                                                                <option value="Suriname" >Suriname</option>
+                                                                                                <option value="Swaziland" >Swaziland</option>
+                                                                                                <option value="Syria" >Syria</option>
+                                                                                                <option value="Taiwan" >Taiwan</option>
+                                                                                                <option value="Tajikistan" >Tajikistan</option>
+                                                                                                <option value="Tanzania" >Tanzania</option>
+                                                                                                <option value="Thailand" >Thailand</option>
+                                                                                                <option value="Togo" >Togo</option>
+                                                                                                <option value="Tonga" >Tonga</option>
+                                                                                                <option value="Trinidad and Tobago" >Trinidad and Tobago</option>
+                                                                                                <option value="Tunisia" >Tunisia</option>
+                                                                                                <option value="Turkey" >Turkey</option>
+                                                                                                <option value="Turkmenistan" >Turkmenistan</option>
+                                                                                                <option value="Tuvalu" >Tuvalu</option>
+                                                                                                <option value="Uganda" >Uganda</option>
+                                                                                                <option value="Ukraine" >Ukraine</option>
+                                                                                                <option value="United Arab Emirates" >United Arab Emirates</option>
+                                                                                                <option value="Uruguay" >Uruguay</option>
+                                                                                                <option value="Uzbekistan" >Uzbekistan</option>
+                                                                                                <option value="Vanuatu" >Vanuatu</option>
+                                                                                                <option value="Vatican City (Holy See)" >Vatican City (Holy See)</option>
+                                                                                                <option value="Venezuela" >Venezuela</option>
+                                                                                                <option value="Vietnam" >Vietnam</option>
+                                                                                                <option value="Yemen" >Yemen</option>
+                                                                                                <option value="Zambia" >Zambia</option>
+                                                                                                <option value="Zimbabwe" >Zimbabwe</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -2040,12 +2845,14 @@
                                                                 VISA Type or Subclass
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="visa_type" aria-label=".form-select-lg example">
+                                                                    <option value="Visitor visas" >Visitor visas</option>
+                                                                    <option value="Studying and training visas" >Studying and training visas</option>
+                                                                    <option value="Family and partner visas" >Family and partner visas</option>
+                                                                    <option value="Working and skilled visas" >Working and skilled visas</option>
+                                                                    <option value="Refugee and humanitarian visas" >Refugee and humanitarian visas</option>
+                                                                    <option value="Other visas" >Other visas</option>
+                                                                    <option value="Repealed visas" >Repealed visas</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -2055,12 +2862,10 @@
                                                                 Work Right Status
                                                             </th>
                                                             <td>
-                                                                <select class="form-select form-select-lg mb-3"
-                                                                    name="job_title"
-                                                                    aria-label=".form-select-lg example">
-                                                                    <option value="1">One</option>
-                                                                    <option value="2">Two</option>
-                                                                    <option value="3">Three</option>
+                                                                <select class="form-select form-select-lg mb-3" name="work_rights_status" aria-label=".form-select-lg example">
+                                                                    <option value="No Limits" >No Limits</option>
+                                                                    <option value="Limited Working Hours" >Limited Working Hours</option>
+                                                                    <option value="No Working Rights" >No Working Rights</option>
                                                                 </select>
                                                                 <i class="fas fa-sort-down"></i>
                                                             </td>
@@ -2526,7 +3331,7 @@
                             </a>
                         </div>
 
-                        
+
                          <table class="table table-bordered table-striped">
                             <tbody>
                                 <tr>
@@ -2854,11 +3659,11 @@
                                         {{ trans('cruds.candidate.fields.cv_document') }}
                                     </th>
                                     <td>
-                                        @if($candidate->cv_document)
+                                        {{-- @if($candidate->cv_document)
                                             <a href="{{ $candidate->cv_document->getUrl() }}" target="_blank">
                                                 {{ trans('global.view_file') }}
                                             </a>
-                                        @endif
+                                        @endif --}}
                                     </td>
                                 </tr>
                                 <tr>
@@ -2866,11 +3671,11 @@
                                         {{ trans('cruds.candidate.fields.registration_form_document') }}
                                     </th>
                                     <td>
-                                        @if($candidate->registration_form_document)
+                                        {{-- @if($candidate->registration_form_document)
                                             <a href="{{ $candidate->registration_form_document->getUrl() }}" target="_blank">
                                                 {{ trans('global.view_file') }}
                                             </a>
-                                        @endif
+                                        @endif --}}
                                     </td>
                                 </tr>
                                 <tr>
@@ -2878,11 +3683,11 @@
                                         {{ trans('cruds.candidate.fields.privacy_concerns') }}
                                     </th>
                                     <td>
-                                        @if($candidate->privacy_concerns)
+                                        {{-- @if($candidate->privacy_concerns)
                                             <a href="{{ $candidate->privacy_concerns->getUrl() }}" target="_blank">
                                                 {{ trans('global.view_file') }}
                                             </a>
-                                        @endif
+                                        @endif --}}
                                     </td>
                                 </tr>
                             </tbody>
@@ -2891,9 +3696,9 @@
                             <a class="btn btn-default" href="{{ route('admin.candidates.index') }}">
                                 {{ trans('global.back_to_list') }}
                             </a>
-                        </div> 
+                        </div>
 
-                      
+
 
                     </div>
                 </div> -->
