@@ -8,7 +8,7 @@
 
             <div class="panel-heading">
                 <div class="less-then-icon"> <i class="fas fa-chevron-left"></i> </div>
-                <h4> Edit Candidate</h4>   
+                <h4> Edit Candidate</h4>
                 <!-- <h4>   {{ trans('global.edit') }} {{ trans('cruds.candidate.title_singular') }}</h4>    -->
                 </div>
                 </div>
@@ -38,7 +38,7 @@
                                                     <span class="help-block" role="alert">{{ $errors->first('title') }}</span>
                                                 @endif
                                                 <span class="help-block">{{ trans('cruds.candidate.fields.title_helper') }}</span>
-                        
+
                                             </div>
                                             </div>
                                             <div class="col-md-4">
@@ -133,7 +133,7 @@
                 </div>
                 <div class="col-md-12 second-top-field">
                     <div class="row">
-                        
+
                                             <div class="col-md-4">
                         <div class="form-group {{ $errors->has('address_1') ? 'has-error' : '' }}">
                             <label for="address_1">{{ trans('cruds.candidate.fields.address_1') }}</label>
@@ -486,7 +486,7 @@
                         </div>
                     </div>
                     </div>
-                            
+
                         </div>
                         <div class="forms-colored-div">
                             <div class="blue"></div>
@@ -622,13 +622,14 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group {{ $errors->has('cv_document') ? 'has-error' : '' }}">
-                            <label for="cv_document">{{ trans('cruds.candidate.fields.cv_document') }}</label>
+                            <input type="file" name="cv_document" class="form-control" value="{{ old('cv_document', $candidate->cv_document) }}">
+                            {{-- <label for="cv_document">{{ trans('cruds.candidate.fields.cv_document') }}</label>
                             <div class="needsclick dropzone" id="cv_document-dropzone">
                                 <div class="upload-icon">
                                     <i class="fas fa-arrow-up"></i>
                                     <p>Upload</p>
                                 </div>
-                            </div>
+                            </div> --}}
                             @if($errors->has('cv_document'))
                                 <span class="help-block" role="alert">{{ $errors->first('cv_document') }}</span>
                             @endif
@@ -637,13 +638,14 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group {{ $errors->has('registration_form_document') ? 'has-error' : '' }}">
-                            <label for="registration_form_document">{{ trans('cruds.candidate.fields.registration_form_document') }}</label>
+                            <input type="file" name="registration_form_document" class="form-control">
+                            {{-- <label for="registration_form_document">{{ trans('cruds.candidate.fields.registration_form_document') }}</label>
                             <div class="needsclick dropzone" id="registration_form_document-dropzone">
                                 <div class="upload-icon">
                                     <i class="fas fa-arrow-up"></i>
                                     <p>Upload</p>
                                 </div>
-                            </div>
+                            </div> --}}
                             @if($errors->has('registration_form_document'))
                                 <span class="help-block" role="alert">{{ $errors->first('registration_form_document') }}</span>
                             @endif
@@ -652,13 +654,14 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group {{ $errors->has('privacy_concerns') ? 'has-error' : '' }}">
-                            <label for="privacy_concerns">{{ trans('cruds.candidate.fields.privacy_concerns') }}</label>
+                            <input type="file" name="privacy_concerns" class="form-control">
+                            {{-- <label for="privacy_concerns">{{ trans('cruds.candidate.fields.privacy_concerns') }}</label>
                             <div class="needsclick dropzone" id="privacy_concerns-dropzone">
                                 <div class="upload-icon">
                                     <i class="fas fa-arrow-up"></i>
                                     <p>Upload</p>
                                 </div>
-                            </div>
+                            </div> --}}
                             @if($errors->has('privacy_concerns'))
                                 <span class="help-block" role="alert">{{ $errors->first('privacy_concerns') }}</span>
                             @endif

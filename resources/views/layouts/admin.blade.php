@@ -30,7 +30,7 @@
     <div class="wrapper" style="height: auto; min-height: 100%;">
         <header class="main-header">
             <a href="#" class="logo">
-                <img src="{{asset('img/dashboard/Medfuture_Logo.png')}}" class="img-fluid" alt="logo"> 
+                <img src="{{asset('img/dashboard/Medfuture_Logo.png')}}" class="img-fluid" alt="logo">
               </a>
 
             <nav class="navbar navbar-static-top">
@@ -61,7 +61,7 @@
                         </ul>
                     </div>
                 @endif
-                <div class="form-search">  
+                <div class="form-search">
                     <form action="#" method="">
                       <div class="search-bar">
                       <i class="fas fa-search"></i>
@@ -104,7 +104,7 @@
                   </span>
                     <img src="{{asset('img/dashboard/profile_img.png')}}" alt="profile_img">
                 </div>
-               
+
             </nav>
         </header>
 
@@ -161,7 +161,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js'></script>
     <script src="{{ asset('js/main.js') }}"></script>
+    <script type='text/javascript'>
+        !function(a){a.fn.percentageLoader=function(b){this.each(function(){function q(){p.customAttributes.arc=function(a,b,c){var h,d=360/b*a,e=(90-d)*Math.PI/180,f=j+c*Math.cos(e),g=k-c*Math.sin(e);return h=b==a?[["M",j,k-c],["A",c,c,0,1,1,j-.01,k-c]]:[["M",j,k-c],["A",c,c,0,+(d>180),1,f,g]],{path:h}},p.path().attr({arc:[100,100,l],"stroke-width":d.strokeWidth,stroke:d.bgColor}),e&&(m=p.path().attr({arc:[.01,100,l],"stroke-width":d.strokeWidth,stroke:d.ringColor,cursor:"pointer"}),r(e,100,l,m,2)),n=p.text(j,k,e).attr({font:d.fontWeight+" "+d.fontSize+" Arial",fill:d.textColor})}function r(a,b,c,d){f?d.animate({arc:[a,b,c]},900,">"):a&&a!=b?d.animate({arc:[a,b,c]},750,"elastic"):(a=b,d.animate({arc:[a,b,c]},750,"bounce",function(){d.attr({arc:[0,b,c]})}))}var c=a(this),d=a.extend({},a.fn.percentageLoader.defaultConfig,b),e=parseInt(c.children(d.valElement).text()),f=!0,h=parseInt(c.css("width")),i=parseInt(c.css("height")),j=h/2,k=i/2,l=j-d.strokeWidth/2,m=null,n=null,p=Raphael(this,h,i);q()})},a.fn.percentageLoader.defaultConfig={valElement:"p",strokeWidth:20,bgColor:"#D9D9D9",ringColor:"#D53F3F",textColor:"#9A9A9A",fontSize:"12px",fontWeight:"normal"}}(jQuery);
+      </script>
+      <script type="text/javascript">
+        $('.percent').percentageLoader({
+          bgColor: 'rgba(0,0,0,.2)',
+          ringColor: '#0ABDE3',
+          textColor: '#fff',
+          fontSize: '20px',
+          strokeWidth: 10
+        });
+      </script>
     <script>
         $(function() {
   let copyButtonTrans = '{{ trans('global.datatables.copy') }}'
@@ -261,7 +274,7 @@
           columns: ':visible'
         }
       },
-     
+
       {
         extend: 'colvis',
         className: 'btn-default',

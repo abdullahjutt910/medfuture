@@ -133,7 +133,6 @@ class CandidateController extends Controller
     public function update(UpdateCandidateRequest $request, Candidate $candidate)
     {
         $candidate->update($request->all());
-
         if($request->hasfile('cv_document')) {
             $file = $request->file('cv_document')->getClientOriginalName();
             $request->cv_document->move(public_path('/files'), $file);

@@ -816,15 +816,9 @@
                                         <div class="candidate-date"><input type="date" name="date"></div>
                                         <div class="row m-20">
                                             <div class="col-md-4">
-                                                <div class="counter-div">
-                                                    <div class="counter-inner">
-                                                        <span>2</span>
-                                                    </div>
-                                                    <div class="counter-txt">
-                                                        <p>Contacted</p>
-                                                    </div>
-
-                                                </div>
+                                                <div class="percent">
+                                                    <p style="display:none;">50</p>
+                                              </div>
 
                                             </div>
                                             <div class="col-md-4">
