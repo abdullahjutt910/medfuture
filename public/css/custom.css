@@ -1231,9 +1231,9 @@ div.dataTables_wrapper div.dataTables_info {
     background-color: #fff;
     position: relative;
 }
-/* .referrals-left{
-    max-width: 448px;
-} */
+.referrals-left{
+   width: 441px;
+}
 .notification-btns{
     max-width: 448px;
 }
@@ -1503,6 +1503,8 @@ div.dataTables_wrapper div.dataTables_info {
 .counter-txt p {
     margin-bottom: 3px;
     font-size: 12px;
+    text-align: center;
+    margin-left: 19px;
 }
 
 .m-20 {
@@ -1672,6 +1674,7 @@ div.dataTables_wrapper div.dataTables_info {
 
 .job-summary {
     position: relative;
+    width: calc(100% - 441px);
     /* background-color: #fff; */
 }
 
@@ -1968,9 +1971,17 @@ textarea{
     border: none;
     font-size: 16px;
 }
-.candidate-profile-table .pagination li:nth-child(2){
+.candidate-profile-table .dataTables_paginate .pagination .active a {
+    background-color: #fff;
+    color: #10468E;
+    border-radius: 10px;
+    border: 2px solid #10468E;
+    font-size: 16px;
     display: none;
-} 
+}
+/* .candidate-profile-table .pagination li:nth-child(2){
+    display: none;
+}  */
 .candidate-profile-table .dataTables_length select{
     line-height: 1;
     background: grey;
@@ -2011,12 +2022,19 @@ textarea{
 
 /* counter start here */
 .percent{
-	width:120px;
-	height:120px;
+    width:120px;
+    height:120px;
+    background-color: #F0F1F3;
 }
 .percent svg{
-	stroke-linecap:round;
+    stroke-linecap:round;
+    transform: scale(.5);
+    top: -7.125px;
+    left: -3px;
 }
+.percent svg text{
+    font-family: 'lato', sans-serif !important;
+}  
 /* counter end here */
 .dt-buttons .buttons-print{
     position: relative;
@@ -2120,5 +2138,9 @@ textarea{
     top: 8px;
     left: 10px;
     font-size: 13px;
+}
+.datatable-Candidate tbody .candi-name-color{
+    box-shadow: none;
+    color: #000;
 }
 /*//////////////////////////////////// Single Candidate Profile   styling end here /////////////////////////////////////*/

@@ -954,7 +954,7 @@
                                         </div>
                                         <div class="row m-20">
                                             <div class="col-md-4">
-                                                <div class="counter-div">
+                                                <!-- <div class="counter-div">
                                                     <div class="counter-inner">
                                                         <span>2</span>
                                                     </div>
@@ -962,11 +962,16 @@
                                                         <p>Contacted</p>
                                                     </div>
 
+                                                </div> -->
+                                                <div class="percent">
+                                                    <p style="display:none;">5</p>
+                                                    <div class="counter-txt">
+                                                        <p>Contacted</p>
+                                                    </div>
                                                 </div>
-
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="counter-div">
+                                                <!-- <div class="counter-div">
                                                     <div class="counter-inner">
                                                         <span>2</span>
                                                     </div>
@@ -974,11 +979,16 @@
                                                         <p>Initial Screening</p>
                                                     </div>
 
+                                                </div> -->
+                                                <div class="percent">
+                                                    <p style="display:none;">40</p>
+                                                    <div class="counter-txt">
+                                                        <p>Initial Screening</p>
+                                                    </div>
                                                 </div>
-
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="counter-div">
+                                                <!-- <div class="counter-div">
                                                     <div class="counter-inner">
                                                         <span>1</span>
                                                     </div>
@@ -986,13 +996,18 @@
                                                         <p>Short Listed</p>
                                                     </div>
 
+                                                </div> -->
+                                                <div class="percent">
+                                                    <p style="display:none;">50</p>
+                                                    <div class="counter-txt">
+                                                        <p>Short Listed</p>
+                                                    </div>
                                                 </div>
-
                                             </div>
                                         </div>
                                         <div class="row m-20">
                                             <div class="col-md-4">
-                                                <div class="counter-div">
+                                                <!-- <div class="counter-div">
                                                     <div class="counter-inner">
                                                         <span>2</span>
                                                     </div>
@@ -1000,11 +1015,17 @@
                                                         <p>Shelved</p>
                                                     </div>
 
+                                                </div> -->
+                                                <div class="percent">
+                                                    <p style="display:none;">2</p>
+                                                    <div class="counter-txt">
+                                                        <p>Shelved</p>
+                                                    </div>
                                                 </div>
 
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="counter-div">
+                                                <!-- <div class="counter-div">
                                                     <div class="counter-inner">
                                                         <span>1</span>
                                                     </div>
@@ -1012,11 +1033,17 @@
                                                         <p>Job Matching </p>
                                                     </div>
 
+                                                </div> -->
+                                                <div class="percent">
+                                                    <p style="display:none;">30</p>
+                                                    <div class="counter-txt">
+                                                        <p>Job Matching</p>
+                                                    </div>
                                                 </div>
 
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="counter-div">
+                                                <!-- <div class="counter-div">
                                                     <div class="counter-inner">
                                                         <span>0</span>
                                                     </div>
@@ -1024,13 +1051,19 @@
                                                         <p>Submissions</p>
                                                     </div>
 
+                                                </div> -->
+                                                <div class="percent">
+                                                    <p style="display:none;">20</p>
+                                                    <div class="counter-txt">
+                                                        <p>Submissions</p>
+                                                    </div>
                                                 </div>
 
                                             </div>
                                         </div>
                                         <div class="row m-20">
                                             <div class="col-md-4">
-                                                <div class="counter-div">
+                                                <!-- <div class="counter-div">
                                                     <div class="counter-inner">
                                                         <span>0</span>
                                                     </div>
@@ -1038,11 +1071,17 @@
                                                         <p>Declined</p>
                                                     </div>
 
+                                                </div> -->
+                                                <div class="percent">
+                                                    <p style="display:none;">10</p>
+                                                    <div class="counter-txt">
+                                                        <p>Declined</p>
+                                                    </div>
                                                 </div>
 
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="counter-div">
+                                                <!-- <div class="counter-div">
                                                     <div class="counter-inner">
                                                         <span>0</span>
                                                     </div>
@@ -1050,11 +1089,17 @@
                                                         <p>Interviews</p>
                                                     </div>
 
+                                                </div> -->
+                                                <div class="percent">
+                                                    <p style="display:none;">10</p>
+                                                    <div class="counter-txt">
+                                                        <p>Interviews</p>
+                                                    </div>
                                                 </div>
 
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="counter-div">
+                                                <!-- <div class="counter-div">
                                                     <div class="counter-inner">
                                                         <span>0</span>
                                                     </div>
@@ -1062,13 +1107,19 @@
                                                         <p>Due Diligence Check</p>
                                                     </div>
 
+                                                </div> -->
+                                                <div class="percent">
+                                                    <p style="display:none;">30</p>
+                                                    <div class="counter-txt">
+                                                        <p>Due Diligence Check</p>
+                                                    </div>
                                                 </div>
 
                                             </div>
                                         </div>
                                         <div class="row m-20">
                                             <div class="col-md-4">
-                                                <div class="counter-div">
+                                                <!-- <div class="counter-div">
                                                     <div class="counter-inner">
                                                         <span>0</span>
                                                     </div>
@@ -1076,11 +1127,17 @@
                                                         <p>Offered</p>
                                                     </div>
 
+                                                </div> -->
+                                                <div class="percent">
+                                                    <p style="display:none;">2</p>
+                                                    <div class="counter-txt">
+                                                        <p>Offered</p>
+                                                    </div>
                                                 </div>
 
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="counter-div">
+                                                <!-- <div class="counter-div">
                                                     <div class="counter-inner">
                                                         <span>0</span>
                                                     </div>
@@ -1088,11 +1145,17 @@
                                                         <p>Rejected / Accepted</p>
                                                     </div>
 
+                                                </div> -->
+                                                <div class="percent">
+                                                    <p style="display:none;">2</p>
+                                                    <div class="counter-txt">
+                                                        <p>Rejected / Accepted</p>
+                                                    </div>
                                                 </div>
 
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="counter-div">
+                                                <!-- <div class="counter-div">
                                                     <div class="counter-inner">
                                                         <span>0</span>
                                                     </div>
@@ -1100,13 +1163,19 @@
                                                         <p>Placed</p>
                                                     </div>
 
+                                                </div> -->
+                                                <div class="percent">
+                                                    <p style="display:none;">2</p>
+                                                    <div class="counter-txt">
+                                                        <p>Placed</p>
+                                                    </div>
                                                 </div>
 
                                             </div>
                                         </div>
                                         <div class="row m-20">
                                             <div class="col-md-4">
-                                                <div class="counter-div">
+                                                <!-- <div class="counter-div">
                                                     <div class="counter-inner">
                                                         <span>0</span>
                                                     </div>
@@ -1114,11 +1183,17 @@
                                                         <p>Archived</p>
                                                     </div>
 
+                                                </div> -->
+                                                <div class="percent">
+                                                    <p style="display:none;">2</p>
+                                                    <div class="counter-txt">
+                                                        <p>Archived</p>
+                                                    </div>
                                                 </div>
 
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="counter-div">
+                                                <!-- <div class="counter-div">
                                                     <div class="counter-inner">
                                                         <span>0</span>
                                                     </div>
@@ -1126,6 +1201,12 @@
                                                         <p>Testimony</p>
                                                     </div>
 
+                                                </div> -->
+                                                <div class="percent">
+                                                    <p style="display:none;">2</p>
+                                                    <div class="counter-txt">
+                                                        <p>Testimony</p>
+                                                    </div>
                                                 </div>
 
                                             </div>

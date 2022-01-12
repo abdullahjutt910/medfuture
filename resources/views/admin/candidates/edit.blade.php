@@ -624,13 +624,24 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group {{ $errors->has('cv_document') ? 'has-error' : '' }}">
-                            <label for="cv_document">{{ trans('cruds.candidate.fields.cv_document') }}</label>
+                        <label for="cv_document">{{ trans('cruds.candidate.fields.cv_document') }}</label>
+                        <div class="upload-add-candi">
+                                                <input type="file" name="cv_document" class="form-control">
+                                               
+                                                <span  class="upload-add-candi-txt"><p>Drop files here to upload</p></span>
+                                                <div class="upload-icon">
+                                                    <i class="fas fa-arrow-up"></i>
+                                                    <p>Upload</p>
+                                                </div>
+                                            </div>
+                            <!-- <label for="cv_document">{{ trans('cruds.candidate.fields.cv_document') }}</label>
                             <div class="needsclick dropzone" id="cv_document-dropzone">
                                 <div class="upload-icon">
                                     <i class="fas fa-arrow-up"></i>
                                     <p>Upload</p>
                                 </div>
                             </div>
+                             -->
                             @if($errors->has('cv_document'))
                                 <span class="help-block" role="alert">{{ $errors->first('cv_document') }}</span>
                             @endif
@@ -640,12 +651,15 @@
                     <div class="col-md-4">
                         <div class="form-group {{ $errors->has('registration_form_document') ? 'has-error' : '' }}">
                             <label for="registration_form_document">{{ trans('cruds.candidate.fields.registration_form_document') }}</label>
-                            <div class="needsclick dropzone" id="registration_form_document-dropzone">
-                                <div class="upload-icon">
-                                    <i class="fas fa-arrow-up"></i>
-                                    <p>Upload</p>
-                                </div>
-                            </div>
+                            <div class="upload-add-candi">
+                                                <input type="file" name="cv_document" class="form-control">
+                                               
+                                                <span  class="upload-add-candi-txt"><p>Drop files here to upload</p></span>
+                                                <div class="upload-icon">
+                                                    <i class="fas fa-arrow-up"></i>
+                                                    <p>Upload</p>
+                                                </div>
+                                            </div>
                             @if($errors->has('registration_form_document'))
                                 <span class="help-block" role="alert">{{ $errors->first('registration_form_document') }}</span>
                             @endif
@@ -655,12 +669,15 @@
                     <div class="col-md-4">
                         <div class="form-group {{ $errors->has('privacy_concerns') ? 'has-error' : '' }}">
                             <label for="privacy_concerns">{{ trans('cruds.candidate.fields.privacy_concerns') }}</label>
-                            <div class="needsclick dropzone" id="privacy_concerns-dropzone">
-                                <div class="upload-icon">
-                                    <i class="fas fa-arrow-up"></i>
-                                    <p>Upload</p>
-                                </div>
-                            </div>
+                            <div class="upload-add-candi">
+                                                <input type="file" name="cv_document" class="form-control">
+                                               
+                                                <span  class="upload-add-candi-txt"><p>Drop files here to upload</p></span>
+                                                <div class="upload-icon">
+                                                    <i class="fas fa-arrow-up"></i>
+                                                    <p>Upload</p>
+                                                </div>
+                                            </div>
                             @if($errors->has('privacy_concerns'))
                                 <span class="help-block" role="alert">{{ $errors->first('privacy_concerns') }}</span>
                             @endif
