@@ -531,6 +531,9 @@ h5 {
     border-radius: 5px;
     cursor: pointer !important;
     font-size: 12px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
 }
 
 .upload-icon i {
@@ -967,6 +970,14 @@ div.dataTables_wrapper div.dataTables_info {
     font-size: 16px;
 }
 
+.candidate-profile-table .dataTables_paginate .pagination .active a {
+    background-color: #fff;
+    color: #10468E;
+    border-radius: 10px;
+    border: 2px solid #10468E;
+    font-size: 16px;
+    display: none;
+}
 
 /*//////////////////////////////////// Candidate View All  styling end here /////////////////////////////////////*/
 
@@ -1506,6 +1517,7 @@ div.dataTables_wrapper div.dataTables_info {
 .counter-txt p {
     margin-bottom: 3px;
     font-size: 12px;
+    text-align: center;
 }
 
 .m-20 {
@@ -1971,9 +1983,9 @@ textarea{
     border: none;
     font-size: 16px;
 }
-.candidate-profile-table .pagination li:nth-child(2){
+/* .candidate-profile-table .pagination li:nth-child(2){
     display: none;
-}
+} */
 .candidate-profile-table .dataTables_length select{
     line-height: 1;
     background: grey;
@@ -2016,10 +2028,16 @@ textarea{
 .percent{
 	width:120px;
 	height:120px;
-    background: #f0f1f3;
+    background-color: #F0F1F3;
 }
 .percent svg{
 	stroke-linecap:round;
+    transform: scale(.5);
+    top: -7.125px;
+    left: -3px;
+}
+.percent svg text{
+    font-family: 'lato', sans-serif !important;
 }
 /* counter end here */
 .dt-buttons .buttons-print{
@@ -2104,5 +2122,25 @@ textarea{
     position: absolute;
     padding: 10px;
     left: 0;
+}
+
+
+.upload-add-candi{
+    position: relative;
+    border: 1px solid #000;
+}
+.upload-add-candi input{
+    cursor: pointer;
+    min-height: 40px;
+    text-align: center;
+    opacity: 0;
+    position: relative;
+    z-index: 999999999;
+}
+.upload-add-candi-txt{
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 13px;
 }
 /*//////////////////////////////////// Single Candidate Profile   styling end here /////////////////////////////////////*/

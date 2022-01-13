@@ -25,6 +25,8 @@ $(document).ready(function () {
     $select2.find('option').prop('selected', 'selected')
     $select2.trigger('change')
   })
+
+ 
   $('.deselect-all').click(function () {
     let $select2 = $(this).parent().siblings('.select2')
     $select2.find('option').prop('selected', '')
@@ -50,4 +52,22 @@ $(document).ready(function () {
       $($.fn.dataTable.tables(true)).DataTable().columns.adjust();
     }, 350);
   })
-})
+
+
+  
+
+
+
+});
+
+// single candidate table js
+$(document).ready(function () {
+  $('#dtpipeline').DataTable();
+  $('.dataTables_length').addClass('bs-select');
+  });
+
+  $(document).ready(function () {
+    $('#dtActivity').DataTable();
+    $('.dataTables_length').addClass('bs-select');
+    });
+// end table

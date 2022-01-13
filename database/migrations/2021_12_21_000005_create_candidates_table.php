@@ -11,7 +11,7 @@ class CreateCandidatesTable extends Migration
     {
         Schema::create('candidates', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreignId('user_id')->unsigned();
+            $table->foreignId('user_id')->unsigned()->nullable();
             $table->string('title')->nullable();
             $table->string('first_name');
             $table->string('last_name');

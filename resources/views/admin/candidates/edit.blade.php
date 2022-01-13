@@ -7,7 +7,9 @@
             <div class="panel panel-default">
 
             <div class="panel-heading">
+            <a class="btn btn-default back-candidate" href="{{ route('admin.candidates.index') }}">
                 <div class="less-then-icon"> <i class="fas fa-chevron-left"></i> </div>
+            </a>
                 <h4> Edit Candidate</h4>
                 <!-- <h4>   {{ trans('global.edit') }} {{ trans('cruds.candidate.title_singular') }}</h4>    -->
                 </div>
@@ -89,7 +91,7 @@
                                             <div class="col-md-4">
                         <div class="form-group {{ $errors->has('mobile') ? 'has-error' : '' }}">
                             <label class="required" for="mobile">{{ trans('cruds.candidate.fields.mobile') }}</label>
-                            <input class="form-control" type="text" name="mobile" id="mobile" value="{{ old('mobile', $candidate->mobile) }}" required>
+                            <input class="form-control" type="number" name="mobile" id="mobile" value="{{ old('mobile', $candidate->mobile) }}" required>
                             @if($errors->has('mobile'))
                                 <span class="help-block" role="alert">{{ $errors->first('mobile') }}</span>
                             @endif

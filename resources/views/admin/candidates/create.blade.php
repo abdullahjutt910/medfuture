@@ -8,7 +8,9 @@
 
 
                 <div class="panel-heading">
+                <a class="btn btn-default back-candidate" href="{{ route('admin.candidates.index') }}">
                     <div class="less-then-icon"> <i class="fas fa-chevron-left"></i> </div>
+                </a>
                     <h4> {{ trans('cruds.candidate.title_singular') }}</h4>
                     <!-- <h4> {{ trans('global.create') }} {{ trans('cruds.candidate.title_singular') }}</h4>    -->
                 </div>
@@ -115,7 +117,7 @@
                                             <div class="col-md-4">
                                                 <div class="form-group {{ $errors->has('mobile') ? 'has-error' : '' }}">
                                                     <!-- <label class="required" for="mobile">{{ trans('cruds.candidate.fields.mobile') }}</label> -->
-                                                    <input class="form-control" type="text" name="mobile" id="mobile"
+                                                    <input class="form-control" type="number" name="mobile" id="mobile"
                                                         placeholder="Mobile" value="{{ old('mobile', '') }}" required>
                                                     @if($errors->has('mobile'))
                                                     <span class="help-block" role="alert">{{ $errors->first('mobile')
@@ -857,14 +859,15 @@
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group {{ $errors->has('cv_document') ? 'has-error' : '' }}">
-                                            <input type="file" name="cv_document" class="form-control">
-                                            <!-- <label for="cv_document">{{ trans('cruds.candidate.fields.cv_document') }}</label> -->
-                                            {{-- <div class="needsclick dropzone" id="cv_document-dropzone">
+                                            <div class="upload-add-candi">
+                                                <input type="file" name="cv_document" class="form-control">
+
+                                                <span  class="upload-add-candi-txt"><p>Drop files here to upload</p></span>
                                                 <div class="upload-icon">
                                                     <i class="fas fa-arrow-up"></i>
                                                     <p>Upload</p>
                                                 </div>
-                                            </div> --}}
+                                            </div>
 
                                             @if($errors->has('cv_document'))
                                             <span class="help-block" role="alert">{{ $errors->first('cv_document')
@@ -876,16 +879,15 @@
                                         </div>
                                     </div>
                                     <div class="col-md-4">
-                                        <div
-                                            class="form-group {{ $errors->has('registration_form_document') ? 'has-error' : '' }}">
+                                        <div class="form-group {{ $errors->has('registration_form_document') ? 'has-error' : '' }}">
+                                        <div class="upload-add-candi">
                                             <input type="file" name="registration_form_document" class="form-control">
-                                            <!-- <label for="registration_form_document">{{ trans('cruds.candidate.fields.registration_form_document') }}</label> -->
-                                            {{-- <div class="needsclick dropzone" id="registration_form_document-dropzone">
+                                            <span  class="upload-add-candi-txt"><p>Drop files here to upload</p></span>
                                                 <div class="upload-icon">
                                                     <i class="fas fa-arrow-up"></i>
                                                     <p>Upload</p>
                                                 </div>
-                                            </div> --}}
+                                            </div>
                                             @if($errors->has('registration_form_document'))
                                             <span class="help-block" role="alert">{{
                                                 $errors->first('registration_form_document') }}</span>
@@ -897,14 +899,14 @@
                                     </div>
                                     <div class="col-md-4">
                                         <div class="form-group {{ $errors->has('privacy_concerns') ? 'has-error' : '' }}">
+                                        <div class="upload-add-candi">
                                             <input type="file" name="privacy_concerns" class="form-control">
-                                            <!-- <label for="privacy_concerns">{{ trans('cruds.candidate.fields.privacy_concerns') }}</label> -->
-                                            {{-- <div class="needsclick dropzone" id="privacy_concerns-dropzone">
+                                            <span  class="upload-add-candi-txt"><p>Drop files here to upload</p></span>
                                                 <div class="upload-icon">
                                                     <i class="fas fa-arrow-up"></i>
                                                     <p>Upload</p>
                                                 </div>
-                                            </div> --}}
+                                            </div>
                                             @if($errors->has('privacy_concerns'))
                                             <span class="help-block" role="alert">{{ $errors->first('privacy_concerns')
                                                 }}</span>
