@@ -2144,14 +2144,14 @@ textarea{
     color: #000;
 }
 
-.profile-eidt-form{
+.profile-eidt-form, .profile-details-eidt-form, .assign-eidt-form, .reference-form-inner-d-none{
     display: none;
 }
 .profile-eidt-form form{
     margin: 0;
     padding: 20px;
 }
-.profile-eidt-form .profile-eidt-form-inner{
+.profile-eidt-form-inner{
     margin-top: 20px;
 }
 .profile-eidt-form-btn{
@@ -2165,12 +2165,15 @@ textarea{
     font-family: 'Roboto', sans-serif !important;
     font-weight: 500;
 }
+.profile-eidt-form-btn .btn::placeholder{
+    color: #fff;
+}
 .profile-eidt-form-btn .back-btn{
     background-color: #686868;
 }
 .profile-eidt-form-btn input {
     float: right;
     background-color: #00326D;
-
 }
+
 /*//////////////////////////////////// Single Candidate Profile   styling end here /////////////////////////////////////*/

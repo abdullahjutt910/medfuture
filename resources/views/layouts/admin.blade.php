@@ -360,6 +360,34 @@
         $(".profile-information").show();
 
       });
+      $(".profile-right-edit").click(function(){
+        $(".profile-details-d-none").hide();
+        $(".profile-details-eidt-form").show();
+      });
+      $(".back-btn").click(function(){
+        $(".profile-details-eidt-form").hide();
+        $(".profile-details-d-none").show();
+
+      });
+
+      $(".assign-edit-btn").click(function(){
+        $(".assign-form-d-none").hide();
+        $(".assign-eidt-form").show();
+      });
+      $(".back-btn").click(function(){
+        $(".assign-eidt-form").hide();
+        $(".assign-form-d-none").show();
+      });
+
+      $(".reference-edit-btn").click(function(){
+        $(".reference-form-inner").hide();
+        $(".areference-form-inner-d-none").show();
+      });
+      $(".back-btn").click(function(){
+        $(".areference-form-inner-d-none").hide();
+        $(".reference-form-inner").show();
+      });
+      
     })
      
     </script>
