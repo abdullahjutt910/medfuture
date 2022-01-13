@@ -71,6 +71,7 @@
 @media (min-width: 1400px) {
     .profile-right {
         padding: 40px;
+        padding-bottom: 21px !important;
     }
     .candidate-progress-bar .progress {
         margin-right: 10px !important;
@@ -78,4 +79,5 @@
     /* .notification-btns .btn {
         width: 190px;
     } */
+
 }
