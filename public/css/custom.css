@@ -1139,7 +1139,7 @@ div.dataTables_wrapper div.dataTables_info {
     position: relative;
     padding: 50px 40px;
     background-color: #fff;
-    padding-bottom: 21px !important;
+    padding-bottom: 11px !important;
 }
 
 .profile-right .profile-details {
@@ -1245,9 +1245,9 @@ div.dataTables_wrapper div.dataTables_info {
     background-color: #fff;
     position: relative;
 }
-/* .referrals-left{
-    max-width: 448px;
-} */
+.referrals-left{
+   width: 441px;
+}
 .notification-btns{
     max-width: 448px;
 }
@@ -1518,6 +1518,7 @@ div.dataTables_wrapper div.dataTables_info {
     margin-bottom: 3px;
     font-size: 12px;
     text-align: center;
+    margin-left: 19px;
 }
 
 .m-20 {
@@ -1687,6 +1688,7 @@ div.dataTables_wrapper div.dataTables_info {
 
 .job-summary {
     position: relative;
+    width: calc(100% - 441px);
     /* background-color: #fff; */
 }
 
@@ -1983,9 +1985,17 @@ textarea{
     border: none;
     font-size: 16px;
 }
+.candidate-profile-table .dataTables_paginate .pagination .active a {
+    background-color: #fff;
+    color: #10468E;
+    border-radius: 10px;
+    border: 2px solid #10468E;
+    font-size: 16px;
+    display: none;
+}
 /* .candidate-profile-table .pagination li:nth-child(2){
     display: none;
-} */
+}  */
 .candidate-profile-table .dataTables_length select{
     line-height: 1;
     background: grey;
@@ -2026,12 +2036,12 @@ textarea{
 
 /* counter start here */
 .percent{
-	width:120px;
-	height:120px;
+    width:120px;
+    height:120px;
     background-color: #F0F1F3;
 }
 .percent svg{
-	stroke-linecap:round;
+    stroke-linecap:round;
     transform: scale(.5);
     top: -7.125px;
     left: -3px;
@@ -2142,5 +2152,39 @@ textarea{
     top: 8px;
     left: 10px;
     font-size: 13px;
+}
+.datatable-Candidate tbody .candi-name-color{
+    box-shadow: none;
+    color: #000;
+}
+
+.profile-eidt-form{
+    display: none;
+}
+.profile-eidt-form form{
+    margin: 0;
+    padding: 20px;
+}
+.profile-eidt-form .profile-eidt-form-inner{
+    margin-top: 20px;
+}
+.profile-eidt-form-btn{
+    margin-top: 20px;
+}
+.profile-eidt-form-btn .btn {
+    padding: 6px 20px;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 500;
+}
+.profile-eidt-form-btn .back-btn{
+    background-color: #686868;
+}
+.profile-eidt-form-btn input {
+    float: right;
+    background-color: #00326D;
+
 }
 /*//////////////////////////////////// Single Candidate Profile   styling end here /////////////////////////////////////*/

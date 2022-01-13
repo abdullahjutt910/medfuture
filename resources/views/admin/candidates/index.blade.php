@@ -928,10 +928,14 @@
                                             {{ $candidate->id ?? '' }}
                                         </td>
                                         <td>
+                                        <a class="btn btn-xs candi-name-color" href="{{ route('admin.candidates.show', $candidate->id) }}">
                                             {{ $candidate->first_name ?? '' }}
+                                        </a>
                                         </td>
                                         <td>
-                                            {{ $candidate->last_name ?? '' }}
+                                            <a class="btn btn-xs candi-name-color" href="{{ route('admin.candidates.show', $candidate->id) }}">
+                                                {{ $candidate->last_name ?? '' }}
+                                            </a>
                                         </td>
                                         <td>
                                             {{ $candidate->email ?? '' }}
