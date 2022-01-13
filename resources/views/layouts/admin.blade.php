@@ -349,7 +349,18 @@
          $(".candidate-profile-table .pagination .previous a").html(" ");
          $(".candidate-profile-table .pagination .next a").html(" ");
         //  $(".candidate-profile-table #dtpipeline_filter label").html('<input type="search" class="form-control input-sm" placeholder="" aria-controls="dtpipeline">');
-      })
+      
+      $(".candidate-edit-btn").click(function(){
+        $(".profile-information").hide();
+        $(".profile-eidt-form").show();
+      });
+
+      $(".back-btn").click(function(){
+        $(".profile-eidt-form").hide();
+        $(".profile-information").show();
+
+      });
+    })
      
     </script>
 

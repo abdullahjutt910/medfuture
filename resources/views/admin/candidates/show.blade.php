@@ -41,6 +41,7 @@
                                         <a href="#" class="btn">ID: {{$candidate->user_id}}</a>
                                     </div>
                                 </div>
+                                <div class="profile-information">
                                 <div class="profile-info">
                                     <ul>
                                         <li>
@@ -87,6 +88,56 @@
                                                 class="img-fluid" alt="Edit-img"> Edit</button>
                                     </div>
 
+                                </div>
+                                </div>
+                                <div class="profile-eidt-form">
+                                    <form action="" class="row">
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="Profession">Home Address</label>
+                                            <input class="form-control" type="text" name="profession" id="profession"
+                                                    value="{{$candidate->home}}">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="Profession">Mobile Number</label>
+                                            <input class="form-control" type="text" name="profession" id="profession"
+                                                    value="{{$candidate->mobile}}">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="Profession">Office Number</label>
+                                            <input class="form-control" type="text" name="profession" id="profession"
+                                                    value="0400 713 855">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="Profession">Email</label>
+                                            <input class="form-control" type="text" name="profession" id="profession"
+                                                    value="{{$candidate->email}}">
+                                        </div>
+
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="Profession">Profession</label>
+                                            <input class="form-control" type="text" name="profession" id="profession"
+                                                    value="{{$candidate->profession}}">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="Profession">Engagement Term</label>
+                                            <input class="form-control" type="text" name="profession" id="profession"
+                                                    value="Permanent">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="Profession">Employement Type</label>
+                                            <input class="form-control" type="text" name="profession" id="profession"
+                                                    value="{{$candidate->current_employment_status}}">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="Profession">Placement Type</label>
+                                            <input class="form-control" type="text" name="profession" id="profession"
+                                                    value="Introductory">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-btn">
+                                            <button class="btn back-btn">Back</button>
+                                            <input type="submit" class="btn" value="Submit">
+                                        </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-md-8 profile-right">
