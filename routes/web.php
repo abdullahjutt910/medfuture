@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\CandidateController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\frontend\PostController;
@@ -60,4 +61,7 @@ Route::get('aus_registration',[MainController::class,'aus_candidate_register'])-
 Route::get('nz_registration',[MainController::class,'nz_candidate_register'])->name('nz_candidate_registration');
 Route::post('store',[PostController::class,'store'])->name('store');
 Route::post('nz_store',[PostController::class,'store'])->name('nz_store');
+Route::post('update1/{id}',[CandidateController::class,'update1']);
+Route::post('update2/{id}',[CandidateController::class,'update2']);
+
 

@@ -15,7 +15,7 @@
                             <a class="btn btn-success" href="{{ route('admin.candidates.create') }}">
                                 Add New
                                 <!-- {{ trans('global.add') }} {{ trans('cruds.candidate.title_singular') }} -->
-                           
+
                             <i class="fas fa-plus"></i>
                             </a>
                         </div>
@@ -306,7 +306,7 @@
                                         <td>
                                             <input class="search" type="text" placeholder="{{ trans('global.search') }}">
                                         </td>
-                                        
+
                                     </tr>
                                 </thead>
                             </table>
@@ -325,77 +325,77 @@
                             <thead>
                                 <!-- <tr class="no-row">
                                     <td>
-                                       
+
                                     </td>
                                     <td>
                                     </td>
                                     <td>
-                                       
+
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                     <td>
-                                       
+
                                     </td>
                                     <td>
-                                       
+
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                     <td>
-                                       
+
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                     <td>
                                     </td>
                                     <td>
-                                       
+
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                     <td>
-                                        
+
                                     </td>
-                                    
+
                                     <td>
-                                       
-                                    </td>
-                                    <td>
-                                        
+
                                     </td>
                                     <td>
-                                       
+
                                     </td>
                                     <td>
-                                      
+
                                     </td>
                                     <td>
-                                       
+
                                     </td>
                                     <td>
-                                       
+
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                     <td>
-                                        
+
+                                    </td>
+                                    <td>
+
                                     </td>
                                     <td >
-                                       
+
                                     </td>
                                     <td >
-                                     
+
                                     </td>
- 
+
                                 </tr> -->
                                 <tr class="no-row">
                                     <td>
@@ -638,7 +638,7 @@
                                     </td> -->
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Gender') }}">
-                                        
+
                                     </td>
                                     <td>
                                     </td>
@@ -665,53 +665,53 @@
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Date of Birth') }}">
-                                        
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Work') }}">
-                                        
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Distance to Main') }}">
-                                       
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Town') }}">
-                                       
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('District') }}">
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('City') }}">
-                                        
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('profession') }}">
-                                        
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Devision') }}">
-                                        
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Senority') }}">
-                                       
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Specialty') }}">
-                                        
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('professional Qualification') }}">
-                                        
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Graduation') }}">
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Country of Degree') }}">
-                                    
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Medical School') }}">
@@ -721,18 +721,18 @@
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Practice Licensing Body') }}">
-                                        
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('License Type') }}">
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Experience Home Country') }}">
-                                        
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Experience Residing Country') }}">
-                                        
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Recognised Comparable Experience') }}">
@@ -746,11 +746,11 @@
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('CURRENT EMPLOYMENT STATUS') }}">
-                                        
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('COUNTRY OF CITIZENSHIP') }}">
-                                        
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('COUNTRY OF RESIDENCE') }}">
@@ -767,7 +767,7 @@
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Username') }}">
                                     </td>
-                                    
+
                                     <!-- <td>
                                     </td>
                                     <td>
@@ -783,7 +783,7 @@
 
                                     </th>
                                     <th>
-                                        {{ trans('Candidate ID') }}
+                                        {{ trans('Candidate ID') }} ({{$count ? $count : '0'}})
                                     </th>
                                     <th>
                                         {{ trans('First Name') }}
@@ -925,7 +925,7 @@
 
                                         </td>
                                         <td>
-                                            {{ $candidate->id ?? '' }}
+                                            {!! $candidate->profession !!}  {{ $candidate->id ?? '' }}
                                         </td>
                                         <td>
                                         <a class="btn btn-xs candi-name-color" href="{{ route('admin.candidates.show', $candidate->id) }}">
@@ -1195,3 +1195,6 @@
 
 </script>
 @endsection
+
+
+

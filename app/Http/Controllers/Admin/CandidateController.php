@@ -29,7 +29,8 @@ class CandidateController extends Controller
         $candidates = Candidate::with(['media'])->get();
 
 
-        return view('admin.candidates.index', compact('candidates'));
+        $count = Candidate::with(['media'])->get()->count();
+        return view('admin.candidates.index', compact('candidates', 'count'));
     }
 
     public function create()
@@ -92,6 +93,7 @@ class CandidateController extends Controller
         $candidate->username = $request->username;
         $candidate->password = $request->password;
 
+
         if($request->hasfile('cv_document')) {
             $file = $request->file('cv_document')->getClientOriginalName();
             $request->cv_document->move(public_path('/files'), $file);
@@ -108,6 +110,7 @@ class CandidateController extends Controller
             $candidate->privacy_concerns =$file;
         }
         $candidate->save();
+
         // if ($request->input('registration_form_document', false)) {
         //     $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('registration_form_document'))))->toMediaCollection('registration_form_document');
         // }
@@ -132,6 +135,7 @@ class CandidateController extends Controller
 
     public function update(UpdateCandidateRequest $request,$id)
     {
+        // dd('Arsal');
         $candidate = Candidate::find($id);
         $candidate->title = $request->title;
         $candidate->first_name = $request->first_name;
@@ -172,6 +176,8 @@ class CandidateController extends Controller
         $candidate->work_rights_status = $request->work_rights_status;
         $candidate->profession_login = $request->profession_login;
         $candidate->username = $request->username;
+        // $candidate->engagement_term = $request->engagement_term;
+        // $candidate->placement_term = $request->placement_term;
         $candidate->password = $request->password;
 
         if($request->hasfile('cv_document')) {
@@ -204,7 +210,7 @@ class CandidateController extends Controller
     public function destroy(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
+        $candidate->current_employment_status = $request->current_employment_status;
         $candidate->delete();
 
         return back();
@@ -227,5 +233,31 @@ class CandidateController extends Controller
         $media         = $model->addMediaFromRequest('upload')->toMediaCollection('ck-media');
 
         return response()->json(['id' => $media->id, 'url' => $media->getUrl()], Response::HTTP_CREATED);
+    }
+    public function update1(Request $request,$id)
+    {
+        $candidate = Candidate::find($id);
+        $candidate->mobile = $request->mobile;
+        $candidate->home = $request->home;
+        $candidate->email = $request->email;
+        $candidate->engagement_term = $request->engagement_term;
+        $candidate->placement_term = $request->placement_term;
+        $candidate->office_number = $request->office_number;
+        $candidate->Profession = $request->Profession;
+        $candidate->current_employment_status = $request->current_employment_status;
+        $candidate->candidate_manager = $request->candidate_manager;
+        $candidate->recruitement = $request->recruitement;
+        $candidate->administrator = $request->administrator;
+        $candidate->save();
+        return back();
+    }
+    public function update2(Request $request,$id)
+    {
+        $candidate = Candidate::find($id);
+        $candidate->candidate_manager = $request->candidate_manager;
+        $candidate->recruitement = $request->recruitement;
+        $candidate->administrator = $request->administrator;
+        $candidate->save();
+        return back();
     }
 }

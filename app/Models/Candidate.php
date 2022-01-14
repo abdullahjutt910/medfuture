@@ -22,6 +22,8 @@ class Candidate extends Model implements HasMedia
         'abc' => 'abc',
     ];
 
+    protected $guarded = ['created_at'];
+
     public const STATE_SELECT = [
 
         'New South Wales (NSW)' => 'New South Wales (NSW)',

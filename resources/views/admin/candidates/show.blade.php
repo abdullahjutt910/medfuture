@@ -54,7 +54,7 @@
                                             </li>
                                             <li>
                                                 <h3>Office Number</h3>
-                                                <p>0400 713 855</p>
+                                                <p>{{$candidate->office_number}}</p>
                                             </li>
                                             <li>
                                                 <h3>Email</h3>
@@ -71,7 +71,7 @@
                                             </li>
                                             <li>
                                                 <h3>Engagement Term</h3>
-                                                <p>Permanent</p>
+                                                <p>{{$candidate->engagement_term}}</p>
                                             </li>
                                             <li>
                                                 <h3>Employement Type</h3>
@@ -79,7 +79,7 @@
                                             </li>
                                             <li>
                                                 <h3>Placement Type</h3>
-                                                <p>Introductory</p>
+                                                <p>{{$candidate->placement_term}}</p>
                                             </li>
                                         </ul>
                                         <div class="edit-brn">
@@ -92,563 +92,693 @@
                                     </div>
                                 </div>
                                 <div class="profile-eidt-form">
-                                    <form action="#" class="row" method="POST">
+                                    <form action="{{ url("update1", [$candidate->id]) }}" class="row" method="POST" enctype="multipart/form-data">
+                                        @csrf
 
                                         <div class="col-md-12 profile-eidt-form-inner">
-                                            <div class="form-group {{ $errors->has('home') ? 'has-error' : '' }}">
-                                                <label class="required" for="home">{{
-                                                    trans('cruds.candidate.fields.home') }}</label>
-                                                <input class="form-control" type="text" name="home" id="home"
-                                                    value="{{ old('home', $candidate->home) }}" required>
-                                                @if($errors->has('home'))
-                                                <span class="help-block" role="alert">{{ $errors->first('home')
-                                                    }}</span>
-                                                @endif
-                                                <span class="help-block">{{ trans('cruds.candidate.fields.home_helper')
-                                                    }}</span>
-                                            </div>
+                                            <label for="home">Home</label>
+                                            <input class="form-control" type="text" name="home"
+                                                id="home" value="{{ old('home', $candidate->home) }}">
+
                                         </div>
                                         <div class="col-md-12 profile-eidt-form-inner">
-                                            <div class="form-group {{ $errors->has('mobile') ? 'has-error' : '' }}">
-                                                <label class="required" for="mobile">{{
-                                                    trans('cruds.candidate.fields.mobile') }}</label>
-                                                <input class="form-control" type="number" name="mobile" id="mobile"
-                                                    value="{{ old('mobile', $candidate->mobile) }}" required>
-                                                @if($errors->has('mobile'))
-                                                <span class="help-block" role="alert">{{ $errors->first('mobile')
-                                                    }}</span>
-                                                @endif
-                                                <span class="help-block">{{
-                                                    trans('cruds.candidate.fields.mobile_helper') }}</span>
-                                            </div>
+                                            <label for="mobile">Mobile</label>
+                                            <input class="form-control" type="text" name="mobile"
+                                                id="mobile" value="{{ old('mobile', $candidate->mobile) }}">
+
                                         </div>
                                         <div class="col-md-12 profile-eidt-form-inner">
-                                            <label for="Profession">Office Number</label>
+                                            <label for="office_number">Office Number</label>
                                             <input class="form-control" type="text" name="office_number"
-                                                id="office_number" value="0400 713 855">
+                                                id="office_number" value="{{ old('office_number', $candidate->office_number) }}">
                                         </div>
                                         <div class="col-md-12 profile-eidt-form-inner">
-                                            <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
-                                                <label class="required" for="email">{{
-                                                    trans('cruds.candidate.fields.email') }}</label>
-                                                <input class="form-control" type="email" name="email" id="email"
-                                                    value="{{ old('email', $candidate->email) }}" required>
-                                                @if($errors->has('email'))
-                                                <span class="help-block" role="alert">{{ $errors->first('email')
-                                                    }}</span>
-                                                @endif
-                                                <span class="help-block">{{ trans('cruds.candidate.fields.email_helper')
-                                                    }}</span>
-                                            </div>
+                                            <label for="email">Email</label>
+                                            <input class="form-control" type="text" name="email"
+                                                id="email" value="{{ old('mobile', $candidate->mobile) }}">
+
                                         </div>
 
                                         <div class="col-md-12 profile-eidt-form-inner">
-                                            <div class="form-group {{ $errors->has('profession') ? 'has-error' : '' }}">
-                                                <label>{{ trans('cruds.candidate.fields.profession') }}</label>
-                                                <select class="form-control" name="profession" id="profession">
-                                                    <option value disabled {{ old('profession', null)===null
-                                                        ? 'selected' : '' }}>{{ trans('global.pleaseSelect') }}</option>
-                                                    @foreach(App\Models\Candidate::PROFESSION_SELECT as $key => $label)
-                                                    <option value="{{ $key }}" {{ old('profession', $candidate->
-                                                        profession) === (string) $key ? 'selected' : '' }}>{{ $label }}
-                                                    </option>
-                                                    @endforeach
-                                                </select>
-                                                @if($errors->has('profession'))
-                                                <span class="help-block" role="alert">{{ $errors->first('profession')
-                                                    }}</span>
-                                                @endif
-                                                <span class="help-block">{{
-                                                    trans('cruds.candidate.fields.profession_helper') }}</span>
-                                            </div>
+                                            <label for="Profession">Profession</label>
+                                            <input class="form-control" type="text" name="Profession"
+                                                id="Profession" value="{{ old('profession', $candidate->
+                                                profession) }}">
+
                                         </div>
                                         <div class="col-md-12 profile-eidt-form-inner">
-                                            <label for="Profession">Engagement Term</label>
-                                            <input class="form-control" type="text" name="engagement_term"
-                                                id="engagement_term" value="Permanent">
+                                            <label for="engagement_term">Engagement Term</label>
+                                            <select name="engagement_term" id="engagement_term" class="form-control">
+                                                <option value="Full Time" {{ old('engagement_term',$candidate->engagement_term =="Full Time")? "selected" : "" }} >Full Time</option>
+                                                <option value="Part Time" {{ old('engagement_term',$candidate->engagement_term =="Part Time")? "selected" : "" }} >Part Time</option>
+                                            </select>
+
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner"><option value="Active jobs">Active jobs</option>
+                                            <option value="Medfuture Direct Registration">Medfuture Direct Registration</option>
+                                            <option value="Medfuture Job Apply">Medfuture Job Apply</option>
+                                            <option value="Medfuture Quick Job Apply">Medfuture Quick Job Apply</option>
+                                            <option value="Adzuna ">Adzuna </option>
+                                            <option value="CareerOne">CareerOne</option>
+                                            <option value="Direct Job Board ">Direct Job Board </option>
+                                            <option value="Black Pearl">Black Pearl</option>
+                                            <option value="Direct Mail">Direct Mail</option>
+                                            <option value="Friends ">Friends </option>
+                                            <option value="Recruitment Consultant">Recruitment Consultant</option>
+                                            <option value="Indeed ">Indeed </option>
+                                            <option value="Jooble">Jooble</option>
+                                            <option value="Jora">Jora</option>
+                                            <option value="Linkedin ">Linkedin </option>
+                                            <option value="Medhire ">Medhire </option>
+                                            <option value="Mycarieer">Mycarieer</option>
+                                            <option value="Online Chat">Online Chat</option>
+                                            <option value="Other">Other</option>
+                                            <option value="Quick Apply Job ">Quick Apply Job </option>
+                                            <option value="Referal">Referal</option>
+                                            <option value="Referred By Doctor">Referred By Doctor</option>
+                                            <option value="Referred By Friend">Referred By Friend</option>
+                                            <option value="Seek">Seek</option>
+                                            <option value="SEO">SEO</option>
+                                            <option value="Twk">Twk</option>
+                                            <option value="Twitter">Twitter</option>
+                                            <label for="current_employment_status">current employment status</label>
+                                            <input class="form-control" type="text" name="current_employment_status"
+                                                id="current_employment_status" value="{{ old('current_employment_status',
+                                                $candidate->current_employment_status) }}">
                                         </div>
                                         <div class="col-md-12 profile-eidt-form-inner">
-                                            <div
-                                                class="form-group {{ $errors->has('current_employment_status') ? 'has-error' : '' }}">
-                                                <label>{{ trans('cruds.candidate.fields.current_employment_status')
-                                                    }}</label>
-                                                <select class="form-control" name="current_employment_status"
-                                                    id="current_employment_status">
-                                                    <option value disabled {{ old('current_employment_status',
-                                                        null)===null ? 'selected' : '' }}>{{
-                                                        trans('global.pleaseSelect') }}</option>
-                                                    @foreach(App\Models\Candidate::CURRENT_EMPLOYMENT_STATUS_SELECT as
-                                                    $key => $label)
-                                                    <option value="{{ $key }}" {{ old('current_employment_status',
-                                                        $candidate->current_employment_status) === (string) $key ?
-                                                        'selected' : '' }}>{{ $label }}</option>
-                                                    @endforeach
-                                                </select>
-                                                @if($errors->has('current_employment_status'))
-                                                <span class="help-block" role="alert">{{
-                                                    $errors->first('current_employment_status') }}</span>
-                                                @endif
-                                                <span class="help-block">{{
-                                                    trans('cruds.candidate.fields.current_employment_status_helper')
-                                                    }}</span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 profile-eidt-form-inner">
-                                            <label for="Profession">Placement Type</label>
-                                            <input class="form-control" type="text" name="placement_term"
-                                                id="placement_term" value="Introductory">
+                                            <label for="placement_term">Placement Type</label>
+                                            <select name="placement_term" id="placement_term" class="form-control">
+                                                <option value="Introductory Placement  " {{ old('placement_term',$candidate->placement_term =="Introductory Placement  ")? "selected" : "" }} >Introductory Placement  </option>
+                                                <option value="Agency Work Force    " {{ old('placement_term',$candidate->placement_term =="Agency Work Force    ")? "selected" : "" }} >Agency Work Force    </option>
+                                            </select>
+
                                         </div>
                                         <div class="col-md-12 profile-eidt-form-btn">
                                             <button class="btn back-btn">Back</button>
-                                            <input type="submit" class="btn" value="Submit">
+                                            <input type="submit" class="btn" placeholder="Submit">
                                         </div>
                                     </form>
                                 </div>
                             </div>
                             <div class="col-md-8 profile-right">
                                 <div class="profile-right-color"></div>
-                                <div class="row profile-details">
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Add-User-Male.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
+                                <div class="profile-details-d-none">
+                                    <div class="row profile-details">
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/Add-User-Male.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Registered</h5>
+                                                            <p class="card-text"><small class="text-muted">Yes</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Registered</h5>
-                                                        <p class="card-text"><small class="text-muted">Yes</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/verified.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Verified</h5>
+                                                            <p class="card-text"><small class="text-muted">Yes</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/Resume.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Candidate Manager</h5>
+                                                            <p class="card-text"><small class="text-muted">Mary Roshella
+                                                                    Silva</small></p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/verified.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
+                                    <div class="row profile-details">
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/CV-receive.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">CV Recived Date</h5>
+                                                            <p class="card-text"><small
+                                                                    class="text-muted">12/08/2021</small></p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Verified</h5>
-                                                        <p class="card-text"><small class="text-muted">Yes</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/Privacy-team.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Privacy Term</h5>
+                                                            <p class="card-text"><small class="text-muted">No</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/first-refister.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">First Registered Date</h5>
+                                                            <p class="card-text"><small class="text-muted">Mary Roshella
+                                                                    Silva</small></p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Resume.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
+                                    <div class="row profile-details">
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/candidate-terms.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Candidate Terms</h5>
+                                                            <p class="card-text"><small class="text-muted">No</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Candidate Manager</h5>
-                                                        <p class="card-text"><small class="text-muted">Mary Roshella
-                                                                Silva</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/source-name.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Source Name</h5>
+                                                            <p class="card-text"><small
+                                                                    class="text-muted">Indeed</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/register-type.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Registration Type</h5>
+                                                            <p class="card-text"><small class="text-muted"></small></p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row profile-details">
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/CV-receive.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
+                                    <div class="row profile-details">
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/cdf.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">CDF</h5>
+                                                            <p class="card-text"><small class="text-muted">No</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">CV Recived Date</h5>
-                                                        <p class="card-text"><small
-                                                                class="text-muted">12/08/2021</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/register-by.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Registered By</h5>
+                                                            <p class="card-text"><small
+                                                                    class="text-muted">Medfuture</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/division.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Division</h5>
+                                                            <p class="card-text"><small
+                                                                    class="text-muted">{{$candidate->devision}}</small>
+                                                            </p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Privacy-team.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
+                                    <div class="row profile-details">
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/availability.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Availability</h5>
+                                                            <p class="card-text"><small class="text-muted">In
+                                                                    Active</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Privacy Term</h5>
-                                                        <p class="card-text"><small class="text-muted">No</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/work-status.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Working Status</h5>
+                                                            <p class="card-text">
+                                                                {{$candidate->work_rights_status}}<small
+                                                                    class="text-muted"></small></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/access-status.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Access Status</h5>
+                                                            <p class="card-text"><small
+                                                                    class="text-muted">Enable</small>
+                                                            </p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/first-refister.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
+                                    <div class="row profile-details">
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/Graduation.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Graduation</h5>
+                                                            <p class="card-text"><small
+                                                                    class="text-muted">{{$candidate->graduation}}</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">First Registered Date</h5>
-                                                        <p class="card-text"><small class="text-muted">Mary Roshella
-                                                                Silva</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/Consultant.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Rec Consultant</h5>
+                                                            <p class="card-text"><small class="text-muted"></small></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/register-body.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Registration Body</h5>
+                                                            <p class="card-text"><small class="text-muted"></small></p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row profile-details">
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/candidate-terms.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
+                                    <div class="row profile-details">
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/Health-Sources.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Source Type</h5>
+                                                            <p class="card-text"><small
+                                                                    class="text-muted">Indeed</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Candidate Terms</h5>
-                                                        <p class="card-text"><small class="text-muted">No</small></p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/prof-qualification.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Prof Qualification</h5>
+                                                            <p class="card-text"><small
+                                                                    class="text-muted">{{$candidate->professional_qualification}}</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/Email-Send.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Email - Verify</h5>
+                                                            <p class="card-text"><small
+                                                                    class="text-muted">Enable</small>
+                                                            </p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/source-name.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
+                                    <div class="row profile-details">
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/profile-grade.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Profile Grade</h5>
+                                                            <p class="card-text"><small
+                                                                    class="text-muted">Diamond</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Source Name</h5>
-                                                        <p class="card-text"><small class="text-muted">Indeed</small>
-                                                        </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/rigistration-via.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Registration Via</h5>
+                                                            <p class="card-text"><small class="text-muted">Back
+                                                                    End</small>
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/Passport.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Visa Status</h5>
+                                                            <p class="card-text"><small
+                                                                    class="text-muted">{{$candidate->visa_type}}</small>
+                                                            </p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/register-type.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Registration Type</h5>
-                                                        <p class="card-text"><small class="text-muted"></small></p>
+                                    <div class="row profile-details">
+                                        <div class="col-md-4">
+                                            <div class="card mb-3">
+                                                <div class="row g-0">
+                                                    <div class="col-md-1 card-img">
+                                                        <img src="{{asset('img/dashboard/lead-method.png')}}"
+                                                            class="img-fluid rounded-start" alt="...">
+                                                    </div>
+                                                    <div class="col-md-11">
+                                                        <div class="card-body">
+                                                            <h5 class="card-title">Lead Method</h5>
+                                                            <p class="card-text"><small
+                                                                    class="text-muted">LinkedIn</small>
+                                                            </p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row profile-details">
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/cdf.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">CDF</h5>
-                                                        <p class="card-text"><small class="text-muted">No</small></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/register-by.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Registered By</h5>
-                                                        <p class="card-text"><small class="text-muted">Medfuture</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/division.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Division</h5>
-                                                        <p class="card-text"><small
-                                                                class="text-muted">{{$candidate->devision}}</small></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row profile-details">
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/availability.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Availability</h5>
-                                                        <p class="card-text"><small class="text-muted">In Active</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/work-status.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Working Status</h5>
-                                                        <p class="card-text">{{$candidate->work_rights_status}}<small
-                                                                class="text-muted"></small></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/access-status.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Access Status</h5>
-                                                        <p class="card-text"><small class="text-muted">Enable</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row profile-details">
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Graduation.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Graduation</h5>
-                                                        <p class="card-text"><small
-                                                                class="text-muted">{{$candidate->graduation}}</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Consultant.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Rec Consultant</h5>
-                                                        <p class="card-text"><small class="text-muted"></small></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/register-body.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Registration Body</h5>
-                                                        <p class="card-text"><small class="text-muted"></small></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row profile-details">
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Health-Sources.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Source Type</h5>
-                                                        <p class="card-text"><small class="text-muted">Indeed</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/prof-qualification.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Prof Qualification</h5>
-                                                        <p class="card-text"><small
-                                                                class="text-muted">{{$candidate->professional_qualification}}</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Email-Send.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Email - Verify</h5>
-                                                        <p class="card-text"><small class="text-muted">Enable</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row profile-details">
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/profile-grade.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Profile Grade</h5>
-                                                        <p class="card-text"><small class="text-muted">Diamond</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/rigistration-via.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Registration Via</h5>
-                                                        <p class="card-text"><small class="text-muted">Back End</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/Passport.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Visa Status</h5>
-                                                        <p class="card-text"><small
-                                                                class="text-muted">{{$candidate->visa_type}}</small></p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row profile-details">
-                                    <div class="col-md-4">
-                                        <div class="card mb-3">
-                                            <div class="row g-0">
-                                                <div class="col-md-1 card-img">
-                                                    <img src="{{asset('img/dashboard/lead-method.png')}}"
-                                                        class="img-fluid rounded-start" alt="...">
-                                                </div>
-                                                <div class="col-md-11">
-                                                    <div class="card-body">
-                                                        <h5 class="card-title">Lead Method</h5>
-                                                        <p class="card-text"><small class="text-muted">LinkedIn</small>
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
 
 
-                                <div class="edit-brn">
-                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
-                                            class="img-fluid" alt="Edit-img"> Edit</button>
+                                    <div class="edit-brn">
+                                        <button class="btn profile-right-edit"><img
+                                                src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
+                                                alt="Edit-img"> Edit</button>
+                                    </div>
+                                </div>
+                                <div class="profile-details-eidt-form">
+                                    <form action="" class="row">
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="register">Registered</label>
+                                            <input class="form-control" type="text" name="register" id="register"
+                                                value="{{$candidate->home}}">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="verified">Verified</label>
+                                            <input class="form-control" type="text" name="verified" id="verified"
+                                                value="{{$candidate->mobile}}">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="candidate_manager">Candidate Manager</label>
+                                            <input class="form-control" type="text" name="candidate_manager" id="candidate_manager"
+                                                value="0400 713 855">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="created_at">CV Recived Date</label>
+                                            <input class="form-control" type="text" name="created_at" id="created_at"
+                                                value="{{$candidate->email}}">
+                                        </div>
+
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="privacy_term">Privacy Term</label>
+                                            <input class="form-control" type="text" name="privacy_term" id="privacy_term"
+                                                value="{{$candidate->profession}}">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="registerd_date">First Registered Date</label>
+                                            <input class="form-control" type="text" name="registerd_date" id="registerd_date"
+                                                value="Permanent">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="candidate_term">Candidate Terms</label>
+                                            <input class="form-control" type="text" name="candidate_term" id="candidate_term"
+                                                value="{{$candidate->current_employment_status}}">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="source_name">Source Name</label>
+                                            <input class="form-control" type="text" name="source_type" id="source_type"
+                                                value="Introductory">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="registration_type">Registration Type</label>
+                                            <input class="form-control" type="text" name="registration_type" id="registration_type"
+                                                value="Introductory">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="CDF">CDF</label>
+                                            <input class="form-control" type="text" name="CDF" id="CDF"
+                                                value="Permanent">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="registered_by">Registered By</label>
+                                            <input class="form-control" type="text" name="registered_by" id="registered_by"
+                                                value="{{$candidate->current_employment_status}}">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="devision">Devision</label>
+                                            <input class="form-control" type="text" name="devision" id="devision"
+                                                value="Introductory">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="availability">Availability</label>
+                                            <input class="form-control" type="text" name="availability" id="availability"
+                                                value="Introductory">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="work_rights_status">Working Status</label>
+                                            <input class="form-control" type="text" name="work_rights_status" id="work_rights_status"
+                                                value="Permanent">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="access_status">Access Status</label>
+                                            <input class="form-control" type="text" name="access_status" id="access_status"
+                                                value="{{$candidate->current_employment_status}}">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="graduation">Graduation</label>
+                                            <input class="form-control" type="text" name="graduation" id="graduation"
+                                                value="Introductory">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="recruitement">Rec Consultant</label>
+                                            <input class="form-control" type="text" name="recruitement" id="recruitement"
+                                                value="Introductory">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="registeration_body">Registration Body</label>
+                                            <input class="form-control" type="text" name="registeration_body" id="registeration_body"
+                                                value="Permanent">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="source_type">Source Type</label>
+                                            <input class="form-control" type="text" name="source_type" id="source_type"
+                                                value="{{$candidate->current_employment_status}}">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="professional_qualification">Prof Qualification</label>
+                                            <input class="form-control" type="text" name="professional_qualification" id="professional_qualification"
+                                                value="Introductory">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="email_verified">Email - Verify</label>
+                                            <input class="form-control" type="text" name="email_verified" id="email_verified"
+                                                value="Introductory">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="profile_grade">Profile Grade</label>
+                                            <input class="form-control" type="text" name="profile_grade" id="profile_grade"
+                                                value="Permanent">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="registration_via">Registration Via</label>
+                                            <input class="form-control" type="text" name="registration_via" id="registration_via"
+                                                value="{{$candidate->current_employment_status}}">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="visa_status">Visa Status</label>
+                                            <input class="form-control" type="text" name="visa_status" id="visa_status"
+                                                value="Introductory">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="lead_method">Lead Method</label>
+                                            <input class="form-control" type="text" name="lead_method" id="lead_method"
+                                                value="Introductory">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-btn">
+                                            <button class="btn back-btn">Back</button>
+                                            <input type="submit" class="btn" placeholder="Submit">
+                                        </div>
+                                    </form>
                                 </div>
 
                                 <div class="row profile-details-upload">
@@ -690,14 +820,22 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
-                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
-                                                        alt="Eye">
-                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
-                                                        alt="download">
-                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid"
-                                                        alt="Upload">
-                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                        class="img-fluid" alt="Delete-Trash">
+                                                    <a href="#">
+                                                        <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
+                                                            alt="Eye">
+                                                    </a>
+                                                    <a href="#">
+                                                        <img src="{{asset('img/dashboard/Download.png')}}"
+                                                            class="img-fluid" alt="download">
+                                                    </a>
+                                                    <a href="#">
+                                                        <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                            class="img-fluid" alt="Upload">
+                                                    </a>
+                                                    <a href="#">
+                                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                            class="img-fluid" alt="Delete-Trash">
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -745,14 +883,22 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
+                                                    <a href="#">
                                                     <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                         alt="Eye">
+                                                        </a>
+                                                        <a href="#">
                                                     <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
                                                         alt="download">
+                                                        </a>
+                                                        <a href="#">
                                                     <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid"
                                                         alt="Upload">
+                                                        </a>
+                                                        <a href="#">
                                                     <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                                         class="img-fluid" alt="Delete-Trash">
+                                                        </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1251,51 +1397,97 @@
                                             <h3>Assigned to</h3>
                                         </div>
                                         <div class="assign-form">
-                                            <form action="submit" method="POST" class="assign-form-inner">
+                                            <div class="assign-form-d-none">
+                                            <form action="" method="" class="assign-form-inner">
                                                 <div class="row">
+
                                                     <div class="col-md-12 form-group">
                                                         <label for="Candidate_Manager">Candidate Manager</label>
-                                                        <select class="form-select form-select-lg mb-3" name="job_title"
+                                                        <select class="form-select form-select-lg mb-3" name="candidate_manager"
                                                             aria-label=".form-select-lg example">
-                                                            <option value="" disabled="" selected="">Mary Rosella Silva
+                                                            <option value=""  selected="">{{$candidate->candidate_manager}}
                                                             </option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
+                                                            <option value="1" disabled>One</option>
+                                                            <option value="2" disabled>Two</option>
+                                                            <option value="3" disabled>Three</option>
                                                         </select>
                                                         <i class="fas fa-sort-down"></i>
                                                     </div>
                                                     <div class="col-md-12 form-group">
                                                         <label for="Recruitement">Recruitement Consultant</label>
-                                                        <select class="form-select form-select-lg mb-3" name="job_title"
+                                                        <select class="form-select form-select-lg mb-3" name="recruitement"
                                                             aria-label=".form-select-lg example">
-                                                            <option value="" disabled="" selected="">Username</option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
+                                                            <option value="">{{$candidate->recruitement}}</option>
+                                                            <option value="1" disabled>One</option>
+                                                            <option value="2" disabled>Two</option>
+                                                            <option value="3" disabled>Three</option>
                                                         </select>
                                                         <i class="fas fa-sort-down"></i>
                                                     </div>
                                                     <div class="col-md-12 form-group">
                                                         <label for="Administrator">Data Administrator</label>
-                                                        <select class="form-select form-select-lg mb-3" name="job_title"
+                                                        <select class="form-select form-select-lg mb-3" name="administrator"
                                                             aria-label=".form-select-lg example">
-                                                            <option value="" disabled="" selected="">Purnima Purnima
+                                                            <option value="">{{$candidate->administrator}}
                                                             </option>
-                                                            <option value="1">One</option>
-                                                            <option value="2">Two</option>
-                                                            <option value="3">Three</option>
+                                                            <option value="1" disabled>One</option>
+                                                            <option value="2" disabled>Two</option>
+                                                            <option value="3" disabled>Three</option>
                                                         </select>
                                                         <i class="fas fa-sort-down"></i>
                                                     </div>
 
                                                 </div>
-                                                <div class="edit-brn">
-                                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
-                                                            class="img-fluid" alt="Edit-img"> Edit</button>
-                                                </div>
                                             </form>
+                                            <div class="edit-brn">
+                                                <button class="btn assign-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                                        class="img-fluid" alt="Edit-img"> Edit</button>
+                                            </div>
+                                        </div>
+                                            <div class="assign-eidt-form">
+                                                <form action="{{ url("update2", [$candidate->id]) }}" method="post" class="assign-form-edit assign-form-inner">
+                                                    @csrf
+                                                    <div class="row">
+                                                        <div class="col-md-12 form-group">
+                                                            <label for="Candidate_Manager">Candidate Manager</label>
+                                                            <select class="form-select form-select-lg mb-3" id="candidate_manager" name="candidate_manager"
+                                                                aria-label=".form-select-lg example">
 
+                                                                <option value="one"{{ old('candidate_manager',$candidate->candidate_manager =="one")? "selected" : "" }}>One</option>
+                                                                <option value="two"{{ old('candidate_manager',$candidate->candidate_manager =="two")? "selected" : "" }}>Two</option>
+                                                                <option value="three"{{ old('candidate_manager',$candidate->candidate_manager =="three")? "selected" : "" }}>Three</option>
+                                                            </select>
+                                                            <i class="fas fa-sort-down"></i>
+                                                        </div>
+                                                        <div class="col-md-12 form-group">
+                                                            <label for="Recruitement">Recruitement Consultant</label>
+                                                            <select class="form-select form-select-lg mb-3" name="recruitement" id="recruitement"
+                                                                aria-label=".form-select-lg example">
+
+                                                                <option value="no"{{ old('recruitement',$candidate->recruitement =="no")? "selected" : "" }}>no</option>
+                                                                <option value="yes"{{ old('recruitement',$candidate->recruitement =="yes")? "selected" : "" }}>yes</option>
+                                                                <option value="false"{{ old('recruitement',$candidate->recruitement =="false")? "selected" : "" }}>false</option>
+                                                            </select>
+                                                            <i class="fas fa-sort-down"></i>
+                                                        </div>
+                                                        <div class="col-md-12 form-group">
+                                                            <label for="Administrator">Data Administrator</label>
+                                                            <select class="form-select form-select-lg mb-3" name="administrator"
+                                                                aria-label=".form-select-lg example">
+
+                                                                <option value="ali"{{ old('administrator',$candidate->administrator =="no")? "selected" : "" }}>ali</option>
+                                                                <option value="hassan"{{ old('administrator',$candidate->administrator =="no")? "selected" : "" }}>hassan</option>
+                                                                <option value="amir"{{ old('administrator',$candidate->administrator =="no")? "selected" : "" }}>amir</option>
+                                                            </select>
+                                                            <i class="fas fa-sort-down"></i>
+                                                        </div>
+                                                        <div class="col-md-12 profile-eidt-form-btn">
+                                                            <button class="btn back-btn">Back</button>
+                                                            <input type="submit" class="btn" placeholder="Submit">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="forms-colored-div">
@@ -1347,7 +1539,144 @@
                                             </div>
                                         </div>
                                         <div class="reference-form">
-                                            <form action="submit" method="post">
+                                            <form action="submit" method="post" class="reference-form-inner">
+                                                <h4>Referee 1</h4>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="title" placeholder="Title" value="" required>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="first_name" placeholder="First Name" value=""
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="title" placeholder="Last Name" value="" required>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="number" name="mobile"
+                                                                id="first_name" placeholder="Telephone" value=""
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="email" name="mobile"
+                                                                id="title" placeholder="Email" value="" required>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="first_name" placeholder="Referee’s Job Titile"
+                                                                value="" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h4>Referee 2</h4>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="title" placeholder="Title" value="" required>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="first_name" placeholder="First Name" value=""
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="title" placeholder="Last Name" value="" required>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="number" name="mobile"
+                                                                id="first_name" placeholder="Telephone" value=""
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="email" name="mobile"
+                                                                id="title" placeholder="Email" value="" required>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="first_name" placeholder="Referee’s Job Titile"
+                                                                value="" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <h4>Referee 3</h4>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="title" placeholder="Title" value="" required>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="first_name" placeholder="First Name" value=""
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="title" placeholder="Last Name" value="" required>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="number" name="mobile"
+                                                                id="first_name" placeholder="Telephone" value=""
+                                                                required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="email" name="mobile"
+                                                                id="title" placeholder="Email" value="" required>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" name="mobile"
+                                                                id="first_name" placeholder="Referee’s Job Titile"
+                                                                value="" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <form action="submit" method="post" class="reference-form-inner-d-none">
                                                 <h4>Referee 1</h4>
                                                 <div class="row">
                                                     <div class="col-md-6">
@@ -1485,7 +1814,7 @@
                                                 </div>
                                             </form>
                                             <div class="edit-brn">
-                                                <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                                <button class="btn reference-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
                                                         class="img-fluid" alt="Edit-img"> Edit</button>
                                             </div>
                                             <div class="referee-document">
