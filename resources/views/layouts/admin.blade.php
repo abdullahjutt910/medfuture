@@ -294,8 +294,8 @@
         }
       },
       {
-        extend: 'selectNone',
-        className: 'btn-default',
+        extend: '',
+        className: 'btn-default hide-search',
         text: '',
         exportOptions: {
           columns: ':visible'
@@ -349,7 +349,11 @@
          $(".candidate-profile-table .pagination .previous a").html(" ");
          $(".candidate-profile-table .pagination .next a").html(" ");
         //  $(".candidate-profile-table #dtpipeline_filter label").html('<input type="search" class="form-control input-sm" placeholder="" aria-controls="dtpipeline">');
-      
+         
+         $(".hide-search").click(function(){
+           $(".search-fields").toggleClass("search-fields-toggle");
+         });
+
       $(".candidate-edit-btn").click(function(){
         $(".profile-information").hide();
         $(".profile-eidt-form").show();
@@ -358,7 +362,6 @@
       $(".back-btn").click(function(){
         $(".profile-eidt-form").hide();
         $(".profile-information").show();
-
       });
       $(".profile-right-edit").click(function(){
         $(".profile-details-d-none").hide();
@@ -381,13 +384,17 @@
 
       $(".reference-edit-btn").click(function(){
         $(".reference-form-inner").hide();
-        $(".areference-form-inner-d-none").show();
+        $(".reference-form-inner-d-none").show();
       });
       $(".back-btn").click(function(){
-        $(".areference-form-inner-d-none").hide();
+        $(".reference-form-inner-d-none").hide();
         $(".reference-form-inner").show();
       });
-      
+     
+      $(".counter-edit-btn").click(function(){
+        $(".counter-circle-d-none").hide();
+        $(".counter-circle-form").show();
+      });
     })
      
     </script>
