@@ -1437,7 +1437,9 @@ div.dataTables_wrapper div.dataTables_info {
     margin-bottom: 23px;
     margin-top: 0px;
 }
-
+.candidate-progress-bar{
+    position: relative;
+}
 .candidate-progress-bar .progress {
     border-radius: 5px;
     width: 16px !important;
@@ -1448,6 +1450,7 @@ div.dataTables_wrapper div.dataTables_info {
 .candidate-progress-bar .progress-bar {
     transition: height .6s ease;
     background-color: #F0F1F3;
+    position: relative !important;
 }
 
 .candidate-progress-bar .progress:first-child .progress-bar,
@@ -1464,7 +1467,6 @@ div.dataTables_wrapper div.dataTables_info {
     left: 2px;
     color: #000;
     transform: rotate(-90deg);
-    /* padding-top: 8px; */
 }
 
 
@@ -2221,10 +2223,11 @@ textarea{
 .interview-form-d-none{
     margin-bottom: 100px;
 }
-.interview-form-d-none input{
+.interview-form-d-none table input{
     width: 100%;
     height: 36px;
     border: none;
+    outline: none;
 }
 .interview-inner .padd-8{
     padding: 8px;
@@ -2232,5 +2235,10 @@ textarea{
 
 .testimonial-txt-d-none .calendar{
     top: 32px;
+}
+
+
+.nurse-seniority-d-none, .nurse-specialty-d-none, .AHP-Specialty-d-none, .HE-Specialty-d-none{
+    display: none;
 }
 /*//////////////////////////////////// Single Candidate Profile   styling end here /////////////////////////////////////*/
