@@ -395,6 +395,42 @@
         $(".counter-circle-d-none").hide();
         $(".counter-circle-form").show();
       });
+      
+      $(".back-btn").click(function(){
+        $(".counter-circle-form").hide();
+        $(".counter-circle-d-none").show();
+      });
+
+      $(".interview-edit-btn").click(function(){
+        $(".interview-table").hide();
+        $(".interview-form-d-none").show();
+      });
+      
+      $(".back-btn").click(function(){
+        $(".interview-form-d-none").hide();
+        $(".interview-table").show();
+      });
+
+      $(".job-summary-eidt-btn").click(function(){
+        $(".job-summary-eidt").hide();
+        $(".job-summary-d-none").show();
+      });
+      
+      $(".back-btn").click(function(){
+        $(".interview-form-d-none").hide();
+        $(".interview-table").show();
+      });
+
+      $(".testimonial-edit-btn").click(function(){
+        $(".testimonial-txt-edit").hide();
+        $(".testimonial-txt-d-none").show();
+      });
+      
+      $(".back-btn").click(function(){
+        $(".testimonial-txt-d-none").hide();
+        $(".testimonial-txt-edit").show();
+      });
+      
     })
 
     </script>

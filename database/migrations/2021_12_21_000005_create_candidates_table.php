@@ -55,6 +55,12 @@ class CreateCandidatesTable extends Migration
             $table->string('cv_document')->nullable();
             $table->string('registration_form_document')->nullable();
             $table->string('privacy_concerns')->nullable();
+            $table->string('office_number')->nullable();
+            $table->string('engagement_term')->nullable();
+            $table->string('placement_term')->nullable();
+            $table->string('candidate_manager')->nullable();
+            $table->string('recruitement')->nullable();
+            $table->string('administrator')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });
