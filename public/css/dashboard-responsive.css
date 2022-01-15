@@ -68,6 +68,14 @@
 }
 /* sidebar hover */
 }
+@media (min-width: 1199px){
+    .referrals-left{
+        width: 441px;
+     }
+     .job-summary {
+        width: calc(100% - 441px);
+    }
+}
 @media (min-width: 1400px) {
     .profile-right {
         padding: 40px;
