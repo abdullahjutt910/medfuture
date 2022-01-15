@@ -31,17 +31,18 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-4 profile-left">
-                                <div class="card candi-profile">
-                                    <img src=" {{asset('img/dashboard/profile.png')}}" class="card-img-top img-fluid"
-                                        alt="profile-img">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{$candidate->first_name.' '.$candidate->last_name}}</h5>
-                                        <p class="card-text">{{$candidate->gender}}</p>
-                                        <p class="card-text">DOB: {{$candidate->dob}}</p>
-                                        <a href="#" class="btn">ID: {{$candidate->user_id}}</a>
-                                    </div>
-                                </div>
                                 <div class="profile-information">
+                                    <div class="card candi-profile">
+                                        <img src=" {{asset('img/dashboard/profile.png')}}"
+                                            class="card-img-top img-fluid" alt="profile-img">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{$candidate->first_name.' '.$candidate->last_name}}
+                                            </h5>
+                                            <p class="card-text">{{$candidate->gender}}</p>
+                                            <p class="card-text">DOB: {{$candidate->dob}}</p>
+                                            <a href="#" class="btn">ID: {{$candidate->user_id}}</a>
+                                        </div>
+                                    </div>
                                     <div class="profile-info">
                                         <ul>
                                             <li>
@@ -61,7 +62,6 @@
                                                 <p>{{$candidate->email}}</p>
                                             </li>
                                         </ul>
-
                                     </div>
                                     <div class="profession-info">
                                         <ul>
@@ -83,7 +83,6 @@
                                             </li>
                                         </ul>
                                         <div class="edit-brn">
-
                                             <button class="btn candidate-edit-btn"><img
                                                     src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
                                                     alt="Edit-img"> Edit</button>
@@ -95,11 +94,50 @@
                                     <form action="{{ url("update1", [$candidate->id]) }}" class="row" method="POST" enctype="multipart/form-data">
                                         @csrf
 
+                                        {{-- <div class="col-md-12 profile-eidt-form-inner">
+                                            <div class="upload-add-candi">
+                                                <input class="form-control" type="file" name="profession"
+                                                    id="profession" value="">
+                                                <span class="upload-add-candi-txt">
+                                                    <p>Drop files here to upload</p>
+                                                </span>
+                                                <div class="upload-icon">
+                                                    <i class="fas fa-arrow-up"></i>
+                                                    <p>Upload</p>
+                                                </div>
+                                            </div>
+                                        </div> --}}
                                         <div class="col-md-12 profile-eidt-form-inner">
-                                            <label for="home">Home</label>
-                                            <input class="form-control" type="text" name="home"
-                                                id="home" value="{{ old('home', $candidate->home) }}">
-
+                                            <label for="first_name">First Name</label>
+                                            <input class="form-control" type="text" name="first_name" id="first_name"
+                                                value="{{ old('first_name', $candidate->first_name) }}">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="last_name">Last Name</label>
+                                            <input class="form-control" type="text" name="last_name" id="last_name"
+                                                value="{{ old('last_name', $candidate->last_name) }}">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="gender">Gender</label>
+                                            <input class="form-control" type="text" name="gender" id="gender"
+                                                value="{{ old('gender', $candidate->gender) }}">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="dob">DOB</label>
+                                            <input class="form-control date" type="calander" name="dob"
+                                                        placeholder="" id="dob" value="{{ old('dob', $candidate->dob) }}">
+                                                    <img src="{{asset('img/dashboard/calendar-icon.png')}}"
+                                                        class="calendar" alt="calendar-icon">
+                                        </div>
+                                        {{-- <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="Profession">ID</label>
+                                            <input class="form-control" type="text" name="profession" id="profession"
+                                                value="{{$candidate->home}}">
+                                        </div> --}}
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="home">Home Address</label>
+                                            <input class="form-control" type="text" name="home" id="home"
+                                                value="{{ old('home', $candidate->home) }}">
                                         </div>
                                         <div class="col-md-12 profile-eidt-form-inner">
                                             <label for="mobile">Mobile</label>
@@ -134,38 +172,7 @@
                                             </select>
 
                                         </div>
-                                        <div class="col-md-12 profile-eidt-form-inner"><option value="Active jobs">Active jobs</option>
-                                            <option value="Medfuture Direct Registration">Medfuture Direct Registration</option>
-                                            <option value="Medfuture Job Apply">Medfuture Job Apply</option>
-                                            <option value="Medfuture Quick Job Apply">Medfuture Quick Job Apply</option>
-                                            <option value="Adzuna ">Adzuna </option>
-                                            <option value="CareerOne">CareerOne</option>
-                                            <option value="Direct Job Board ">Direct Job Board </option>
-                                            <option value="Black Pearl">Black Pearl</option>
-                                            <option value="Direct Mail">Direct Mail</option>
-                                            <option value="Friends ">Friends </option>
-                                            <option value="Recruitment Consultant">Recruitment Consultant</option>
-                                            <option value="Indeed ">Indeed </option>
-                                            <option value="Jooble">Jooble</option>
-                                            <option value="Jora">Jora</option>
-                                            <option value="Linkedin ">Linkedin </option>
-                                            <option value="Medhire ">Medhire </option>
-                                            <option value="Mycarieer">Mycarieer</option>
-                                            <option value="Online Chat">Online Chat</option>
-                                            <option value="Other">Other</option>
-                                            <option value="Quick Apply Job ">Quick Apply Job </option>
-                                            <option value="Referal">Referal</option>
-                                            <option value="Referred By Doctor">Referred By Doctor</option>
-                                            <option value="Referred By Friend">Referred By Friend</option>
-                                            <option value="Seek">Seek</option>
-                                            <option value="SEO">SEO</option>
-                                            <option value="Twk">Twk</option>
-                                            <option value="Twitter">Twitter</option>
-                                            <label for="current_employment_status">current employment status</label>
-                                            <input class="form-control" type="text" name="current_employment_status"
-                                                id="current_employment_status" value="{{ old('current_employment_status',
-                                                $candidate->current_employment_status) }}">
-                                        </div>
+
                                         <div class="col-md-12 profile-eidt-form-inner">
                                             <label for="placement_term">Placement Type</label>
                                             <select name="placement_term" id="placement_term" class="form-control">
@@ -195,7 +202,7 @@
                                                     <div class="col-md-11">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Registered</h5>
-                                                            <p class="card-text"><small class="text-muted">Yes</small>
+                                                            <p class="card-text"><small class="text-muted">{{$candidate->candidate_profile->register ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -212,7 +219,7 @@
                                                     <div class="col-md-11">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Verified</h5>
-                                                            <p class="card-text"><small class="text-muted">Yes</small>
+                                                            <p class="card-text"><small class="text-muted">{{$candidate->candidate_profile->verified ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -229,8 +236,7 @@
                                                     <div class="col-md-11">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Candidate Manager</h5>
-                                                            <p class="card-text"><small class="text-muted">Mary Roshella
-                                                                    Silva</small></p>
+                                                            <p class="card-text"><small class="text-muted">{{$candidate->candidate_manager ?? '' }}</small></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -249,7 +255,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">CV Recived Date</h5>
                                                             <p class="card-text"><small
-                                                                    class="text-muted">12/08/2021</small></p>
+                                                                    class="text-muted">{{$candidate->candidate_profile->cv_receive_date ?? '' }}</small></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -265,7 +271,7 @@
                                                     <div class="col-md-11">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Privacy Term</h5>
-                                                            <p class="card-text"><small class="text-muted">No</small>
+                                                            <p class="card-text"><small class="text-muted">{{$candidate->candidate_profile->privacy_term ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -282,8 +288,7 @@
                                                     <div class="col-md-11">
                                                         <div class="card-body">
                                                             <h5 class="card-title">First Registered Date</h5>
-                                                            <p class="card-text"><small class="text-muted">Mary Roshella
-                                                                    Silva</small></p>
+                                                            <p class="card-text"><small class="text-muted">{{$candidate->candidate_profile->registerd_date ?? '' }}</small></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -301,7 +306,7 @@
                                                     <div class="col-md-11">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Candidate Terms</h5>
-                                                            <p class="card-text"><small class="text-muted">No</small>
+                                                            <p class="card-text"><small class="text-muted">{{$candidate->candidate_profile->candidate_term ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -319,7 +324,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Source Name</h5>
                                                             <p class="card-text"><small
-                                                                    class="text-muted">Indeed</small>
+                                                                    class="text-muted">{{$candidate->candidate_profile->source_name ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -336,7 +341,7 @@
                                                     <div class="col-md-11">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Registration Type</h5>
-                                                            <p class="card-text"><small class="text-muted"></small></p>
+                                                            <p class="card-text"><small class="text-muted">{{$candidate->candidate_profile->registration_type ?? '' }}</small></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -354,7 +359,7 @@
                                                     <div class="col-md-11">
                                                         <div class="card-body">
                                                             <h5 class="card-title">CDF</h5>
-                                                            <p class="card-text"><small class="text-muted">No</small>
+                                                            <p class="card-text"><small class="text-muted">{{$candidate->candidate_profile->CDF ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -372,7 +377,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Registered By</h5>
                                                             <p class="card-text"><small
-                                                                    class="text-muted">Medfuture</small>
+                                                                    class="text-muted">{{$candidate->candidate_profile->registered_by ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -390,7 +395,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Division</h5>
                                                             <p class="card-text"><small
-                                                                    class="text-muted">{{$candidate->devision}}</small>
+                                                                    class="text-muted">{{$candidate->devision ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -409,8 +414,7 @@
                                                     <div class="col-md-11">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Availability</h5>
-                                                            <p class="card-text"><small class="text-muted">In
-                                                                    Active</small>
+                                                            <p class="card-text"><small class="text-muted">{{$candidate->candidate_profile->availability ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -428,8 +432,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Working Status</h5>
                                                             <p class="card-text">
-                                                                {{$candidate->work_rights_status}}<small
-                                                                    class="text-muted"></small></p>
+                                                                <small class="text-muted">{{$candidate->candidate_profile->working_status ?? '' }}</small></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -446,7 +449,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Access Status</h5>
                                                             <p class="card-text"><small
-                                                                    class="text-muted">Enable</small>
+                                                                    class="text-muted">{{$candidate->candidate_profile->access_status ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -466,7 +469,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Graduation</h5>
                                                             <p class="card-text"><small
-                                                                    class="text-muted">{{$candidate->graduation}}</small>
+                                                                    class="text-muted">{{$candidate->graduation ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -483,7 +486,7 @@
                                                     <div class="col-md-11">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Rec Consultant</h5>
-                                                            <p class="card-text"><small class="text-muted"></small></p>
+                                                            <p class="card-text"><small class="text-muted">{{$candidate->recruitement ?? '' }}</small></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -499,7 +502,7 @@
                                                     <div class="col-md-11">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Registration Body</h5>
-                                                            <p class="card-text"><small class="text-muted"></small></p>
+                                                            <p class="card-text"><small class="text-muted">{{$candidate->candidate_profile->registeration_body ?? '' }}</small></p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -518,7 +521,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Source Type</h5>
                                                             <p class="card-text"><small
-                                                                    class="text-muted">Indeed</small>
+                                                                    class="text-muted">{{$candidate->candidate_profile->source_type ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -536,7 +539,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Prof Qualification</h5>
                                                             <p class="card-text"><small
-                                                                    class="text-muted">{{$candidate->professional_qualification}}</small>
+                                                                    class="text-muted">{{$candidate->professional_qualification ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -554,7 +557,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Email - Verify</h5>
                                                             <p class="card-text"><small
-                                                                    class="text-muted">Enable</small>
+                                                                    class="text-muted">{{$candidate->candidate_profile->email_verified ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -574,7 +577,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Profile Grade</h5>
                                                             <p class="card-text"><small
-                                                                    class="text-muted">Diamond</small>
+                                                                    class="text-muted">{{$candidate->candidate_profile->profile_grade ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -591,8 +594,7 @@
                                                     <div class="col-md-11">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Registration Via</h5>
-                                                            <p class="card-text"><small class="text-muted">Back
-                                                                    End</small>
+                                                            <p class="card-text"><small class="text-muted">{{$candidate->candidate_profile->registration_via ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -610,7 +612,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Visa Status</h5>
                                                             <p class="card-text"><small
-                                                                    class="text-muted">{{$candidate->visa_type}}</small>
+                                                                    class="text-muted">{{$candidate->candidate_profile->visa_status ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -630,7 +632,7 @@
                                                         <div class="card-body">
                                                             <h5 class="card-title">Lead Method</h5>
                                                             <p class="card-text"><small
-                                                                    class="text-muted">LinkedIn</small>
+                                                                    class="text-muted">{{$candidate->candidate_profile->lead_method ?? '' }}</small>
                                                             </p>
                                                         </div>
                                                     </div>
@@ -647,132 +649,292 @@
                                     </div>
                                 </div>
                                 <div class="profile-details-eidt-form">
-                                    <form action="" class="row">
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                    <form action="{{url("update3",[$candidate->id])}}" class="row select-dropdown" method="post">
+                                        @csrf
+                                        <div class="col-md-4 form-group">
                                             <label for="register">Registered</label>
-                                            <input class="form-control" type="text" name="register" id="register"
-                                                value="{{$candidate->home}}">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="register" aria-label=".form-select-lg example">
+                                                <option value="Yes"{{ old('register',$candidate->register =="Yes")? "selected" : "" }}>Yes</option>
+                                                <option value="No" {{ old('register',$candidate->register =="No")? "selected" : "" }}>No</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="verified">Verified</label>
-                                            <input class="form-control" type="text" name="verified" id="verified"
-                                                value="{{$candidate->mobile}}">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="verified" aria-label=".form-select-lg example">
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="candidate_manager">Candidate Manager</label>
                                             <input class="form-control" type="text" name="candidate_manager" id="candidate_manager"
-                                                value="0400 713 855">
+                                               placeholder="Candidate_Manager" value="candidate_manager">
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
-                                            <label for="created_at">CV Recived Date</label>
-                                            <input class="form-control" type="text" name="created_at" id="created_at"
-                                                value="{{$candidate->email}}">
+                                        <div class="col-md-4 form-group">
+                                            <label for="cv_receive_date">CV Recived Date</label>
+                                            <input class="form-control date" type="calander" name="cv_receive_date"
+                                                        placeholder="cv_receive_date" id="cv_receive_date" value="{{ old('cv_receive_date') }}"
+                                                        required>
+                                                    <img src="{{asset('img/dashboard/calendar-icon.png')}}"
+                                                        class="calendar" alt="calendar-icon">
                                         </div>
 
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="privacy_term">Privacy Term</label>
-                                            <input class="form-control" type="text" name="privacy_term" id="privacy_term"
-                                                value="{{$candidate->profession}}">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="privacy_term" aria-label=".form-select-lg example">
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="registerd_date">First Registered Date</label>
-                                            <input class="form-control" type="text" name="registerd_date" id="registerd_date"
-                                                value="Permanent">
+                                            <input class="form-control date" type="calander" name="registerd_date"
+                                                        placeholder="" id="registerd_date" value="">
+                                                    <img src="{{asset('img/dashboard/calendar-icon.png')}}"
+                                                        class="calendar" alt="calendar-icon">
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="candidate_term">Candidate Terms</label>
                                             <input class="form-control" type="text" name="candidate_term" id="candidate_term"
-                                                value="{{$candidate->current_employment_status}}">
+                                            placeholder="Candidate_Terms" value="Candidate Terms">
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="source_name">Source Name</label>
-                                            <input class="form-control" type="text" name="source_type" id="source_type"
-                                                value="Introductory">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="source_name" aria-label=".form-select-lg example">
+                                                <option value="Active jobs">Active jobs</option>
+                                                <option value="Medfuture Direct Registration">Medfuture Direct Registration</option>
+                                                <option value="Medfuture Job Apply">Medfuture Job Apply</option>
+                                                <option value="Medfuture Quick Job Apply">Medfuture Quick Job Apply</option>
+                                                <option value="Adzuna ">Adzuna </option>
+                                                <option value="CareerOne">CareerOne</option>
+                                                <option value="Direct Job Board ">Direct Job Board </option>
+                                                <option value="Black Pearl">Black Pearl</option>
+                                                <option value="Direct Mail">Direct Mail</option>
+                                                <option value="Friends ">Friends </option>
+                                                <option value="Recruitment Consultant">Recruitment Consultant</option>
+                                                <option value="Indeed ">Indeed </option>
+                                                <option value="Jooble">Jooble</option>
+                                                <option value="Jora">Jora</option>
+                                                <option value="Linkedin ">Linkedin </option>
+                                                <option value="Medhire ">Medhire </option>
+                                                <option value="Mycarieer">Mycarieer</option>
+                                                <option value="Online Chat">Online Chat</option>
+                                                <option value="Other">Other</option>
+                                                <option value="Quick Apply Job ">Quick Apply Job </option>
+                                                <option value="Referal">Referal</option>
+                                                <option value="Referred By Doctor">Referred By Doctor</option>
+                                                <option value="Referred By Friend">Referred By Friend</option>
+                                                <option value="Seek">Seek</option>
+                                                <option value="SEO">SEO</option>
+                                                <option value="Twk">Twk</option>
+                                                <option value="Twitter">Twitter</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="registration_type">Registration Type</label>
-                                            <input class="form-control" type="text" name="registration_type" id="registration_type"
-                                                value="Introductory">
+                                            <select class="form-control form-select-lg mb-3"
+                                            name="registration_type" aria-label=".form-select-lg example">
+                                            <option value="Eligible for General Registration">Eligible for General Registration</option>
+                                            <option value="Eligible for Limited Registration">Eligible for Limited Registration </option>
+                                            <option value="Eligible for Provisional Registration">Eligible for Provisional Registration  </option>
+                                            <option value="General">General</option>
+                                            <option value="Limited">Limited</option>
+                                            <option value="Non-Practising Registration ">Non-Practising Registration </option>
+                                            <option value="Not Applicable">Not Applicable</option>
+                                            <option value="Provisional">Provisional</option>
+                                            <option value="Specialist">Specialist</option>
+                                            <option value="Student">Student</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="CDF">CDF</label>
-                                            <input class="form-control" type="text" name="CDF" id="CDF"
-                                                value="Permanent">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="CDF" aria-label=".form-select-lg example">
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="registered_by">Registered By</label>
                                             <input class="form-control" type="text" name="registered_by" id="registered_by"
-                                                value="{{$candidate->current_employment_status}}">
+                                            placeholder="" value="Registered By">
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
-                                            <label for="devision">Devision</label>
-                                            <input class="form-control" type="text" name="devision" id="devision"
-                                                value="Introductory">
+                                        <div class="col-md-4 form-group">
+                                            <label for="devision">Division</label>
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="devision" aria-label=".form-select-lg example">
+                                                <option value="General Practitioners ">General Practitioners </option>
+                                                <option value="Healthcare Executives ">Healthcare Executives </option>
+                                                <option value="Hospital Doctors ">Hospital Doctors </option>
+                                                <option value="Locum Doctors">Locum Doctors</option>
+                                                <option value="Nurses & Carers">Nurses & Carers</option>
+                                                <option value="Allergologist">Allergologist</option>
+                                                <option value="Arts Therapist ">Arts Therapist </option>
+                                                <option value="Audiologist">Audiologist</option>
+                                                <option value="Chiropractor ">Chiropractor </option>
+                                                <option value="Dietitians ">Dietitians </option>
+                                                <option value="Exercise Physiologist">Exercise Physiologist</option>
+                                                <option value="Genetic Counsellor">Genetic Counsellor</option>
+                                                <option value="Medical Radiologist">Medical Radiologist</option>
+                                                <option value="Music Therapist">Music Therapist</option>
+                                                <option value="Occupational Therapist">Occupational Therapist</option>
+                                                <option value="Optometrist">Optometrist</option>
+                                                <option value="Orthotist and prosthetist">Orthotist and prosthetist</option>
+                                                <option value="Osteopathist">Osteopathist</option>
+                                                <option value="Perfusionist">Perfusionist</option>
+                                                <option value="Physiotherapist">Physiotherapist</option>
+                                                <option value="Podiatrist">Podiatrist</option>
+                                                <option value="Psychologist">Psychologist</option>
+                                                <option value="Psychology & Mental health">Psychology & Mental health</option>
+                                                <option value="Rehabilitation Counsellor ">Rehabilitation Counsellor </option>
+                                                <option value="Sonographer">Sonographer</option>
+                                                <option value="Specialist service">Specialist service</option>
+                                                <option value="Speech-pathology">Speech-pathology</option>
+                                                <option value="Midwife">Midwife</option>
+                                                <option value="Dentists">Dentists</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="availability">Availability</label>
-                                            <input class="form-control" type="text" name="availability" id="availability"
-                                                value="Introductory">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="availability" aria-label=".form-select-lg example">
+                                                <option value="Active">Active</option>
+                                                <option value="In Active">In Active</option>
+                                                <option value="Active">Not Known</option>
+                                                <option value="In Active">Lost</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
-                                            <label for="work_rights_status">Working Status</label>
-                                            <input class="form-control" type="text" name="work_rights_status" id="work_rights_status"
-                                                value="Permanent">
+                                        <div class="col-md-4 form-group">
+                                            <label for="working_status">Working Status</label>
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="working_status" aria-label=".form-select-lg example">
+                                                <option value="Awaiting Review">Awaiting Review</option>
+                                                <option value="Contacted">Contacted</option>
+                                                <option value="CV Submitted">CV Submitted</option>
+                                                <option value="Declined">Declined</option>
+                                                <option value="Do Not Contact">Do Not Contact</option>
+                                                <option value="Interview">Interview</option>
+                                                <option value="Not Contacted">Not Contacted</option>
+                                                <option value="Offer">Offer</option>
+                                                <option value="Phone / Direct Screen">Phone / Direct Screen</option>
+                                                <option value="Rejected">Rejected</option>
+                                                <option value="Reviewed">Reviewed</option>
+                                                <option value="Short Listed">Short Listed</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="access_status">Access Status</label>
-                                            <input class="form-control" type="text" name="access_status" id="access_status"
-                                                value="{{$candidate->current_employment_status}}">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="access_status" aria-label=".form-select-lg example">
+                                                <option value="Enable">Enable</option>
+                                                <option value="Disable">Disable</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="graduation">Graduation</label>
-                                            <input class="form-control" type="text" name="graduation" id="graduation"
-                                                value="Introductory">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="graduation" aria-label=".form-select-lg example">
+                                                <option value="Local Graduate">Local Graduate</option>
+                                                <option value="Overseas Graduate">Overseas Graduate</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="recruitement">Rec Consultant</label>
                                             <input class="form-control" type="text" name="recruitement" id="recruitement"
-                                                value="Introductory">
+                                            placeholder="" value="Rec Consultant">
+
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="registeration_body">Registration Body</label>
-                                            <input class="form-control" type="text" name="registeration_body" id="registeration_body"
-                                                value="Permanent">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="registeration_body" aria-label=".form-select-lg example">
+                                                <option value="AHPRA">AHPRA</option>
+                                                <option value="GMC">GMC</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="source_type">Source Type</label>
-                                            <input class="form-control" type="text" name="source_type" id="source_type"
-                                                value="{{$candidate->current_employment_status}}">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="source_type" aria-label=".form-select-lg example">
+                                                <option value="Social Media Platforms">Social Media Platforms</option>
+                                                <option value="External Job Board">External Job Board</option>
+                                                <option value="Medfuture">Medfuture</option>
+                                                <option value="Referral ">Referral</option>
+                                                <option value="Email Marketing">Email Marketing</option>
+                                                <option value="Search Engine">Search Engine</option>
+                                                <option value="Headhunting">Headhunting</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="professional_qualification">Prof Qualification</label>
                                             <input class="form-control" type="text" name="professional_qualification" id="professional_qualification"
-                                                value="Introductory">
+                                            placeholder="" value="Prof Qualification">
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="email_verified">Email - Verify</label>
-                                            <input class="form-control" type="text" name="email_verified" id="email_verified"
-                                                value="Introductory">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="email_verified" aria-label=".form-select-lg example">
+                                                <option value="Enable">Enable</option>
+                                                <option value="Disable">Disable</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="profile_grade">Profile Grade</label>
-                                            <input class="form-control" type="text" name="profile_grade" id="profile_grade"
-                                                value="Permanent">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="profile_grade" aria-label=".form-select-lg example">
+                                                <option value="Platinum">Platinum</option>
+                                                <option value="Diamond">Diamond</option>
+                                                <option value="Gold">Gold</option>
+                                                <option value="Silver">Silver</option>
+                                                <option value="Bronz">Bronz</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="registration_via">Registration Via</label>
-                                            <input class="form-control" type="text" name="registration_via" id="registration_via"
-                                                value="{{$candidate->current_employment_status}}">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="registration_via" aria-label=".form-select-lg example">
+                                                <option value="Direct">Direct</option>
+                                                <option value="Back-end">Back-end</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="visa_status">Visa Status</label>
-                                            <input class="form-control" type="text" name="visa_status" id="visa_status"
-                                                value="Introductory">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="visa_status" aria-label=".form-select-lg example">
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
+                                        <div class="col-md-4 form-group">
                                             <label for="lead_method">Lead Method</label>
-                                            <input class="form-control" type="text" name="lead_method" id="lead_method"
-                                                value="Introductory">
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="lead_method" aria-label=".form-select-lg example">
+                                                <option value="Sourced">Sourced</option>
+                                                <option value="Applied">Applied</option>
+                                                <option value="Referred">Referred</option>
+                                            </select>
+                                            <i class="fas fa-sort-down"></i>
                                         </div>
                                         <div class="col-md-12 profile-eidt-form-btn">
                                             <button class="btn back-btn">Back</button>
@@ -884,21 +1046,21 @@
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
                                                     <a href="#">
-                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
-                                                        alt="Eye">
-                                                        </a>
-                                                        <a href="#">
-                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
-                                                        alt="download">
-                                                        </a>
-                                                        <a href="#">
-                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid"
-                                                        alt="Upload">
-                                                        </a>
-                                                        <a href="#">
-                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                        class="img-fluid" alt="Delete-Trash">
-                                                        </a>
+                                                        <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
+                                                            alt="Eye">
+                                                    </a>
+                                                    <a href="#">
+                                                        <img src="{{asset('img/dashboard/Download.png')}}"
+                                                            class="img-fluid" alt="download">
+                                                    </a>
+                                                    <a href="#">
+                                                        <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                            class="img-fluid" alt="Upload">
+                                                    </a>
+                                                    <a href="#">
+                                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                            class="img-fluid" alt="Delete-Trash">
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -1221,153 +1383,234 @@
                                             </div>
                                             <span class="date-background"></span>
                                         </div>
-                                        <div class="row m-20">
-                                            <div class="col-md-4">
-                                                <!-- <div class="counter-div">
-                                                    <div class="counter-inner">
-                                                        <span>2</span>
-                                                    </div>
-                                                    <div class="counter-txt">
-                                                        <p>Initial Screening</p>
-                                                    </div>
+                                        <div class="counter-circle-d-none">
+                                            <div class="row m-20 ">
+                                                <div class="col-md-4">
+                                                    <!-- <div class="counter-div">
+                                                        <div class="counter-inner">
+                                                            <span>2</span>
+                                                        </div>
+                                                        <div class="counter-txt">
+                                                            <p>Contacted</p>
+                                                        </div>
 
-                                                </div> -->
-                                                <div class="percent">
-                                                    <p style="display:none;">5</p>
-                                                    <div class="counter-txt">
-                                                        <p>Contacted</p>
+                                                    </div> -->
+                                                    <div class="percent">
+                                                        <p style="display:none;">5</p>
+                                                        <div class="counter-txt">
+                                                            <p>Contacted</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+
+                                                    <div class="percent">
+                                                        <p style="display:none;">40</p>
+                                                        <div class="counter-txt">
+                                                            <p>Initial Screening</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="percent">
+                                                        <p style="display:none;">50</p>
+                                                        <div class="counter-txt">
+                                                            <p>Short Listed</p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-
-                                                <div class="percent">
-                                                    <p style="display:none;">40</p>
-                                                    <div class="counter-txt">
-                                                        <p>Initial Screening</p>
+                                            <div class="row m-20">
+                                                <div class="col-md-4">
+                                                    <div class="percent">
+                                                        <p style="display:none;">2</p>
+                                                        <div class="counter-txt">
+                                                            <p>Shelved</p>
+                                                        </div>
                                                     </div>
+
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="percent">
+                                                        <p style="display:none;">30</p>
+                                                        <div class="counter-txt">
+                                                            <p>Job Matching</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="percent">
+                                                        <p style="display:none;">20</p>
+                                                        <div class="counter-txt">
+                                                            <p>Submissions</p>
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                             </div>
-                                            <div class="col-md-4">
-                                                <div class="percent">
-                                                    <p style="display:none;">50</p>
-                                                    <div class="counter-txt">
-                                                        <p>Short Listed</p>
+                                            <div class="row m-20">
+                                                <div class="col-md-4">
+                                                    <div class="percent">
+                                                        <p style="display:none;">10</p>
+                                                        <div class="counter-txt">
+                                                            <p>Declined</p>
+                                                        </div>
                                                     </div>
+
                                                 </div>
+                                                <div class="col-md-4">
+                                                    <div class="percent">
+                                                        <p style="display:none;">10</p>
+                                                        <div class="counter-txt">
+                                                            <p>Interviews</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="percent">
+                                                        <p style="display:none;">30</p>
+                                                        <div class="counter-txt">
+                                                            <p>Due Diligence Check</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="row m-20">
+                                                <div class="col-md-4">
+                                                    <div class="percent">
+                                                        <p style="display:none;">2</p>
+                                                        <div class="counter-txt">
+                                                            <p>Offered</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="percent">
+                                                        <p style="display:none;">2</p>
+                                                        <div class="counter-txt">
+                                                            <p>Rejected / Accepted</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="percent">
+                                                        <p style="display:none;">2</p>
+                                                        <div class="counter-txt">
+                                                            <p>Placed</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="row m-20">
+                                                <div class="col-md-4">
+                                                    <div class="percent">
+                                                        <p style="display:none;">2</p>
+                                                        <div class="counter-txt">
+                                                            <p>Archived</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <div class="percent">
+                                                        <p style="display:none;">2</p>
+                                                        <div class="counter-txt">
+                                                            <p>Testimony</p>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                            <div class="edit-brn">
+                                                <button class="btn counter-edit-btn"><img
+                                                        src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
+                                                        alt="Edit-img"> Edit</button>
                                             </div>
                                         </div>
-                                        <div class="row m-20">
-                                            <div class="col-md-4">
-                                                <div class="percent">
-                                                    <p style="display:none;">2</p>
-                                                    <div class="counter-txt">
-                                                        <p>Shelved</p>
-                                                    </div>
+                                        <div class="counter-circle-form">
+                                            <form action="" class="row">
+                                                <div class="col-md-4 profile-eidt-form-inner">
+                                                    <label for="Contacted">Contacted</label>
+                                                    <input class="form-control" type="text" name="contacted"
+                                                        id="contacted" value="5">
                                                 </div>
-
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="percent">
-                                                    <p style="display:none;">30</p>
-                                                    <div class="counter-txt">
-                                                        <p>Job Matching</p>
-                                                    </div>
+                                                <div class="col-md-4 profile-eidt-form-inner">
+                                                    <label for="Initial_Screening">Initial Screening</label>
+                                                    <input class="form-control" type="text" name="Initial_Screening"
+                                                        id="Initial_Screening" value="40">
                                                 </div>
-
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="percent">
-                                                    <p style="display:none;">20</p>
-                                                    <div class="counter-txt">
-                                                        <p>Submissions</p>
-                                                    </div>
+                                                <div class="col-md-4 profile-eidt-form-inner">
+                                                    <label for="Short_Listed">Short Listed</label>
+                                                    <input class="form-control" type="text" name="Short_Listed"
+                                                        id="Short_Listed" value="50">
                                                 </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="row m-20">
-                                            <div class="col-md-4">
-                                                <div class="percent">
-                                                    <p style="display:none;">10</p>
-                                                    <div class="counter-txt">
-                                                        <p>Declined</p>
-                                                    </div>
+                                                <div class="col-md-4 profile-eidt-form-inner">
+                                                    <label for="Shelved">Shelved</label>
+                                                    <input class="form-control" type="text" name="Shelved" id="Shelved"
+                                                        value="5">
                                                 </div>
-
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="percent">
-                                                    <p style="display:none;">10</p>
-                                                    <div class="counter-txt">
-                                                        <p>Interviews</p>
-                                                    </div>
+                                                <div class="col-md-4 profile-eidt-form-inner">
+                                                    <label for="Job_Matching">Job Matching</label>
+                                                    <input class="form-control" type="text" name="Job_Matching"
+                                                        id="Job_Matching" value="40">
                                                 </div>
-
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="percent">
-                                                    <p style="display:none;">30</p>
-                                                    <div class="counter-txt">
-                                                        <p>Due Diligence Check</p>
-                                                    </div>
+                                                <div class="col-md-4 profile-eidt-form-inner">
+                                                    <label for="Submissions">Submissions</label>
+                                                    <input class="form-control" type="text" name="Submissions"
+                                                        id="Submissions" value="50">
                                                 </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="row m-20">
-                                            <div class="col-md-4">
-                                                <div class="percent">
-                                                    <p style="display:none;">2</p>
-                                                    <div class="counter-txt">
-                                                        <p>Offered</p>
-                                                    </div>
+                                                <div class="col-md-4 profile-eidt-form-inner">
+                                                    <label for="Declined">Declined</label>
+                                                    <input class="form-control" type="text" name="Declined"
+                                                        id="Declined" value="5">
                                                 </div>
-
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="percent">
-                                                    <p style="display:none;">2</p>
-                                                    <div class="counter-txt">
-                                                        <p>Rejected / Accepted</p>
-                                                    </div>
+                                                <div class="col-md-4 profile-eidt-form-inner">
+                                                    <label for="Interviews">Interviews</label>
+                                                    <input class="form-control" type="text" name="Interviews"
+                                                        id="Interviews" value="40">
                                                 </div>
-
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="percent">
-                                                    <p style="display:none;">2</p>
-                                                    <div class="counter-txt">
-                                                        <p>Placed</p>
-                                                    </div>
+                                                <div class="col-md-4 profile-eidt-form-inner">
+                                                    <label for="Due_Check">Due Diligence Check</label>
+                                                    <input class="form-control" type="text" name="Due_Check"
+                                                        id="Due_Check" value="50">
                                                 </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="row m-20">
-                                            <div class="col-md-4">
-                                                <div class="percent">
-                                                    <p style="display:none;">2</p>
-                                                    <div class="counter-txt">
-                                                        <p>Archived</p>
-                                                    </div>
+                                                <div class="col-md-4 profile-eidt-form-inner">
+                                                    <label for="Offered">Offered</label>
+                                                    <input class="form-control" type="text" name="Offered" id="Offered"
+                                                        value="5">
                                                 </div>
-
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="percent">
-                                                    <p style="display:none;">2</p>
-                                                    <div class="counter-txt">
-                                                        <p>Testimony</p>
-                                                    </div>
+                                                <div class="col-md-4 profile-eidt-form-inner">
+                                                    <label for="Rejected ">Rejected / Accepted</label>
+                                                    <input class="form-control" type="text" name="Rejected "
+                                                        id="Rejected " value="40">
                                                 </div>
-
-                                            </div>
-
-                                        </div>
-                                        <div class="edit-brn">
-                                            <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
-                                                    class="img-fluid" alt="Edit-img"> Edit</button>
+                                                <div class="col-md-4 profile-eidt-form-inner">
+                                                    <label for="Placed">Placed</label>
+                                                    <input class="form-control" type="text" name="Placed" id="Placed"
+                                                        value="50">
+                                                </div>
+                                                <div class="col-md-4 profile-eidt-form-inner">
+                                                    <label for="Archived ">Archived</label>
+                                                    <input class="form-control" type="text" name="Archived "
+                                                        id="Archived " value="40">
+                                                </div>
+                                                <div class="col-md-4 profile-eidt-form-inner">
+                                                    <label for="Testimony">Testimony</label>
+                                                    <input class="form-control" type="text" name="Testimony"
+                                                        id="Testimony" value="50">
+                                                </div>
+                                                <div class="col-md-12 profile-eidt-form-btn">
+                                                    <button class="btn back-btn">Back</button>
+                                                    <input type="submit" class="btn" placeholder="Submit">
+                                                </div>
+                                            </form>
                                         </div>
                                     </div>
                                     <div class="forms-colored-div">
@@ -1437,13 +1680,14 @@
                                                         <i class="fas fa-sort-down"></i>
                                                     </div>
 
+                                                    </div>
+                                                </form>
+                                                <div class="edit-brn">
+                                                    <button class="btn assign-edit-btn"><img
+                                                            src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
+                                                            alt="Edit-img"> Edit</button>
                                                 </div>
-                                            </form>
-                                            <div class="edit-brn">
-                                                <button class="btn assign-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
-                                                        class="img-fluid" alt="Edit-img"> Edit</button>
                                             </div>
-                                        </div>
                                             <div class="assign-eidt-form">
                                                 <form action="{{ url("update2", [$candidate->id]) }}" method="post" class="assign-form-edit assign-form-inner">
                                                     @csrf
@@ -1675,6 +1919,11 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="edit-brn">
+                                                    <button class="btn reference-edit-btn"><img
+                                                            src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
+                                                            alt="Edit-img"> Edit</button>
+                                                </div>
                                             </form>
                                             <form action="submit" method="post" class="reference-form-inner-d-none">
                                                 <h4>Referee 1</h4>
@@ -1682,43 +1931,43 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="Title" value="" required>
+                                                                id="title" placeholder="" value="Title" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="First Name" value=""
+                                                                id="first_name" placeholder="" value="First Name"
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="Last Name" value="" required>
+                                                                id="title" placeholder="" value="Last Name" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="number" name="mobile"
-                                                                id="first_name" placeholder="Telephone" value=""
+                                                                id="first_name" placeholder="" value="Telephone"
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="email" name="mobile"
-                                                                id="title" placeholder="Email" value="" required>
+                                                                id="title" placeholder="" value="Email" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="Referee’s Job Titile"
-                                                                value="" required>
+                                                                id="first_name" placeholder=""
+                                                                value="Referee’s Job Titile" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1734,36 +1983,36 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="First Name" value=""
+                                                                id="first_name" placeholder="" value="First Name"
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="Last Name" value="" required>
+                                                                id="title" placeholder="" value="Last Name" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="number" name="mobile"
-                                                                id="first_name" placeholder="Telephone" value=""
+                                                                id="first_name" placeholder="" value="Telephone"
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="email" name="mobile"
-                                                                id="title" placeholder="Email" value="" required>
+                                                                id="title" placeholder="" value="Email" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="Referee’s Job Titile"
-                                                                value="" required>
+                                                                id="first_name" placeholder=""
+                                                                value="Referee’s Job Titile" required>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1772,51 +2021,52 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="Title" value="" required>
+                                                                id="title" placeholder="" value="Title" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="First Name" value=""
+                                                                id="first_name" placeholder="" value="First Name"
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="Last Name" value="" required>
+                                                                id="title" placeholder="" value="Last Name" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="number" name="mobile"
-                                                                id="first_name" placeholder="Telephone" value=""
+                                                                id="first_name" placeholder="" value="Telephone"
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="email" name="mobile"
-                                                                id="title" placeholder="Email" value="" required>
+                                                                id="title" placeholder="" value="Email" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="Referee’s Job Titile"
-                                                                value="" required>
+                                                                id="first_name" placeholder=""
+                                                                value="Referee’s Job Titile" required>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="col-md-12 profile-eidt-form-btn">
+                                                    <button class="btn back-btn">Back</button>
+                                                    <input type="submit" class="btn" placeholder="Submit">
+                                                </div>
                                             </form>
-                                            <div class="edit-brn">
-                                                <button class="btn reference-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
-                                                        class="img-fluid" alt="Edit-img"> Edit</button>
-                                            </div>
+
                                             <div class="referee-document">
                                                 <h4>Referee Documents</h4>
                                                 <div class="row profile-details-upload">

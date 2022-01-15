@@ -2,13 +2,14 @@
 
 namespace App\Models;
 
-use \DateTimeInterface;
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+use \DateTimeInterface;
+use App\Models\CandidateProfile;
 use Spatie\MediaLibrary\HasMedia;
+use Illuminate\Database\Eloquent\Model;
 use Spatie\MediaLibrary\InteractsWithMedia;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Candidate extends Model implements HasMedia
@@ -16,6 +17,7 @@ class Candidate extends Model implements HasMedia
     use SoftDeletes;
     use InteractsWithMedia;
     use HasFactory;
+
 
     public const TOWN_SELECT = [
 
@@ -1386,6 +1388,10 @@ class Candidate extends Model implements HasMedia
     // {
     //     return $this->getMedia('privacy_concerns')->last();
     // }
+    public function candidate_profile()
+    {
+        return $this->belongsTo(CandidateProfile::class,'id','candidate_id');
+    }
 
     protected function serializeDate(DateTimeInterface $date)
     {

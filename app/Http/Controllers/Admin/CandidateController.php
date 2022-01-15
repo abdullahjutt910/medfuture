@@ -15,6 +15,7 @@ use App\Http\Requests\UpdateCandidateRequest;
 use Symfony\Component\HttpFoundation\Response;
 use App\Http\Requests\MassDestroyCandidateRequest;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
+use App\Models\CandidateProfile;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class CandidateController extends Controller
@@ -26,8 +27,7 @@ class CandidateController extends Controller
 
         abort_if(Gate::denies('candidate_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $candidates = Candidate::with(['media'])->get();
-
+        $candidates = Candidate::with(['media','candidate_profile'])->get();
 
         $count = Candidate::with(['media'])->get()->count();
         return view('admin.candidates.index', compact('candidates', 'count'));
@@ -203,14 +203,14 @@ class CandidateController extends Controller
     public function show(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-
+         $candidates = $candidate->with('candidate_profile')->first();
+        //  dd($candidates);
         return view('admin.candidates.show', compact('candidate'));
     }
 
     public function destroy(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-        $candidate->current_employment_status = $request->current_employment_status;
         $candidate->delete();
 
         return back();
@@ -237,6 +237,10 @@ class CandidateController extends Controller
     public function update1(Request $request,$id)
     {
         $candidate = Candidate::find($id);
+        $candidate->first_name = $request->first_name;
+        $candidate->last_name = $request->last_name;
+        $candidate->gender = $request->gender;
+        $candidate->dob = $request->dob;
         $candidate->mobile = $request->mobile;
         $candidate->home = $request->home;
         $candidate->email = $request->email;
@@ -260,4 +264,40 @@ class CandidateController extends Controller
         $candidate->save();
         return back();
     }
+    public function update3(Request $request,$id)
+    {
+        $candidate = Candidate::find($id);
+        $candidate->devision = $request->devision;
+        $candidate->professional_qualification = $request->professional_qualification;
+        $candidate->recruitement = $request->recruitement;
+        $candidate->graduation = $request->graduation;
+        $candidate->candidate_manager = $request->candidate_manager;
+        $candidate->save();
+
+        $candidate_profile =new CandidateProfile();
+        $candidate_profile->candidate_id = $candidate->id;
+        $candidate_profile->register = $request->register;
+        $candidate_profile->verified = $request->verified;
+        $candidate_profile->cv_receive_date = $request->cv_receive_date;
+        $candidate_profile->privacy_term = $request->privacy_term;
+        $candidate_profile->registerd_date = $request->registerd_date;
+        $candidate_profile->candidate_term = $request->candidate_term;
+        $candidate_profile->source_type = $request->cv_recieve_datesource_type;
+        $candidate_profile->registration_type = $request->registration_type;
+        $candidate_profile->CDF = $request->CDF;
+        $candidate_profile->registered_by = $request->registered_by;
+        $candidate_profile->working_status = $request->working_status;
+        $candidate_profile->availability = $request->availability;
+        $candidate_profile->access_status = $request->access_status;
+        $candidate_profile->registeration_body = $request->registeration_body;
+        $candidate_profile->source_name = $request->source_name;
+        $candidate_profile->email_verified = $request->email_verified;
+        $candidate_profile->profile_grade = $request->profile_grade;
+        $candidate_profile->registration_via = $request->registration_via;
+        $candidate_profile->lead_method = $request->lead_method;
+        $candidate_profile->visa_status = $request->visa_status;
+        $candidate_profile->save();
+        return back();
+    }
+
 }

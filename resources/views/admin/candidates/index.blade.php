@@ -615,7 +615,8 @@
                                         </select>
                                     </td>
                                 </tr>
-                                <tr>
+                                
+                                <tr class="search-fields">
                                     <td>
                                     </td>
                                     <td>
@@ -777,7 +778,108 @@
                                     <td>
                                     </td> -->
                                 </tr>
-
+                                <tr>
+                                    <td class="total-candi">
+                                       <h4>Total Candidates: <span>7</span></h4> 
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                       
+                                    </td>
+                                    <td>
+                                       
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                       
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                    
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                </tr>
+                               
                                 <tr>
                                     <th width="10">
 

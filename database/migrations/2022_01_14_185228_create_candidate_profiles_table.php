@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddFieldsToCandidatesTable extends Migration
+class CreateCandidateProfilesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class AddFieldsToCandidatesTable extends Migration
      */
     public function up()
     {
-        Schema::table('candidates', function (Blueprint $table) {
-            $table->string('register')->nullable()->after('placement_term');
+        Schema::create('candidate_profiles', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->foreignId('candidate_id')->unsigned()->nullable();
+            $table->string('register')->nullable();
             $table->string('verified')->nullable();
             $table->string('cv_receive_date')->nullable();
             $table->string('privacy_term')->nullable();
@@ -35,6 +37,7 @@ class AddFieldsToCandidatesTable extends Migration
             $table->string('lead_method')->nullable();
             $table->string('visa_status')->nullable();
 
+            $table->timestamps();
         });
     }
 
@@ -45,6 +48,6 @@ class AddFieldsToCandidatesTable extends Migration
      */
     public function down()
     {
-
+        Schema::dropIfExists('candidate_profiles');
     }
 }

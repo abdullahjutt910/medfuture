@@ -969,14 +969,21 @@ div.dataTables_wrapper div.dataTables_info {
     border: 2px solid #10468E;
     font-size: 16px;
 }
-
-.candidate-profile-table .dataTables_paginate .pagination .active a {
-    background-color: #fff;
-    color: #10468E;
+.total-candi{
+    width: 1% !important;
+}
+.total-candi h4{
+    font-size: 14px !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 600;
+}
+.total-candi span{
+    background-color: #00326D;
+    color: #fff;
     border-radius: 10px;
-    border: 2px solid #10468E;
-    font-size: 16px;
-    display: none;
+    padding: 6px 25px;
+    font-size: 14px !important;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 /*//////////////////////////////////// Candidate View All  styling end here /////////////////////////////////////*/
@@ -1704,6 +1711,7 @@ div.dataTables_wrapper div.dataTables_info {
 .job-summary-top {
     background-color: #fff;
     padding: 20px 12px;
+    border-bottom: 1px solid #8B8484;
 }
 
 .summary-bottom {
@@ -1728,9 +1736,9 @@ div.dataTables_wrapper div.dataTables_info {
     position: absolute;
     content: "";
     background: url(../img/dashboard/Calendar.png) no-repeat;
-    background-size: 20px;
+    background-size: 15px;
     background-position: top right;
-    height: 40px;
+    height: 30px;
     width: 40px;
     margin-top: 5px;
     image-rendering: -webkit-optimize-contrast;
@@ -1740,6 +1748,7 @@ div.dataTables_wrapper div.dataTables_info {
     position: relative;
     background-color: #fff;
     padding: 0px 12px;
+    padding-top: 21px;
 }
 
 .interview table tr {
@@ -2087,7 +2096,7 @@ textarea{
     image-rendering: -webkit-optimize-contrast;
     font-family: "FontAwesome";
 }
-.dt-buttons .buttons-select-none::after{
+.dt-buttons .hide-search::after{
     position: absolute;
     content: "\f068";
     width: 20px;
@@ -2098,7 +2107,7 @@ textarea{
     image-rendering: -webkit-optimize-contrast;
     font-family: "FontAwesome";
 }
-.dt-buttons .buttons-select-none{
+.dt-buttons .hide-search{
     width: 52px;
     height: 50px;
     text-align: center;
@@ -2158,7 +2167,7 @@ textarea{
     color: #000;
 }
 
-.profile-eidt-form, .profile-details-eidt-form, .assign-eidt-form, .reference-form-inner-d-none{
+.profile-eidt-form, .profile-details-eidt-form, .assign-eidt-form, .reference-form-inner-d-none, .counter-circle-form{
     display: none;
 }
 .profile-eidt-form form{
@@ -2189,5 +2198,32 @@ textarea{
     float: right;
     background-color: #00326D;
 }
+.reference-form-inner-d-none .profile-eidt-form-btn{
+    margin-bottom: 50px;
+}
+.profile-eidt-form .upload-add-candi {
+    background-color: #fff;
+}
+.counter-circle-form .profile-eidt-form-btn{
+    margin-bottom: 20px;
+}
+.counter-circle-form label{
+    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 400;
+}
+.search-fields-toggle{
+    display: none !important;
+}
 
+.select-dropdown .fa-sort-down{
+    top: 30px !important;
+    right: 20px !important;
+}
+.select-dropdown .calendar {
+    top: 33px;
+}
+.select-dropdown .form-group{
+    margin-top: 20px;
+}
 /*//////////////////////////////////// Single Candidate Profile   styling end here /////////////////////////////////////*/
