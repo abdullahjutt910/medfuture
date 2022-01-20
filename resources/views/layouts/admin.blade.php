@@ -350,9 +350,103 @@
          $(".candidate-profile-table .pagination .next a").html(" ");
         //  $(".candidate-profile-table #dtpipeline_filter label").html('<input type="search" class="form-control input-sm" placeholder="" aria-controls="dtpipeline">');
 
-         $(".hide-search").click(function(){
-           $(".search-fields").toggleClass("search-fields-toggle");
-         });
+          
+        $(document).on('click', '.hide-search', function() {
+        $(this).toggleClass("plus-toggle");
+          $(".search-fields").toggleClass("search-fields-toggle");
+        })
+        $(".candidate-profile-table .dataTables_filter input").keypress(function(){
+          console.log("click");
+          $(".pagination .previous a").html("");
+          $(".pagination .next a").html("");
+        })
+
+
+        //  select options change
+        $('.interview-table td .profession-doctor').change(function () {
+        var text = $('option:selected', this).text();
+        if(text === "Doctor"){
+          $(".interview-table  .doctor-specialty").show();
+          $(".interview-table .nurse-specialty-d-none, .interview-table .AHP-Specialty-d-none, .interview-table .HE-Specialty-d-none").hide();
+          $(".interview-table .seniority-doctor").show();
+          $(".interview-table .nurse-seniority-d-none").hide();
+         }
+        if(text === "Nurse"){
+          $(".interview-table .nurse-specialty-d-none").show();
+          $(".interview-table .doctor-specialty, .interview-table .AHP-Specialty-d-none, .interview-table .HE-Specialty-d-none").hide();
+          $(".interview-table .nurse-seniority-d-none").show();
+          $(".interview-table .seniority-doctor").hide();
+         }
+         if(text === "Allied Health Professionals"){
+          $(".interview-table  .AHP-Specialty-d-none").show();
+          $(".interview-table .doctor-specialty, .interview-table .nurse-specialty-d-none, .interview-table .HE-Specialty-d-none").hide();
+         }
+         if(text === "Healthcare Executives"){
+          $(".interview-table .HE-Specialty-d-none").show();
+          $(".interview-table .doctor-specialty, .interview-table .AHP-Specialty-d-none, .interview-table .nurse-specialty-d-none").hide();
+         }
+
+        });
+        // counter background color change
+
+        var counter_num_1 = $(".Contacted.percent p").html();
+        var counter_num_2 = $(".Int-scr.percent p").html();
+        var counter_num_3 = $(".Short-Listed.percent p").html();
+        var counter_num_4 = $(".Shelved.percent p").html();
+        var counter_num_5 = $(".Job-Match.percent p").html();
+        var counter_num_6 = $(".Submissions.percent p").html();
+        var counter_num_7 = $(".Declined.percent p").html();
+        var counter_num_8 = $(".Interviews.percent p").html();
+        var counter_num_9 = $(".Due-check.percent p").html();
+        var counter_num_10 = $(".Offered.percent p").html();
+        var counter_num_11 = $(".Rejected-accpt.percent p").html();
+        var counter_num_12 = $(".Placed.percent p").html();
+        var counter_num_13 = $(".Archived.percent p").html();
+        var counter_num_14 = $(".Testimony.percent p").html();
+
+        if(counter_num_1 > 0) {
+          $('.progress-bar.Contacted').addClass('progress-color');
+        }
+        if(counter_num_2 > 0) {
+          $('.progress-bar.Int-scr').addClass('progress-color');
+        }
+        if(counter_num_3 > 0) {
+          $('.progress-bar.Short-Listed').addClass('progress-color');
+        }
+        if(counter_num_4 > 0) {
+          $('.progress-bar.Shelved').addClass('progress-color');
+        }
+        if(counter_num_5 > 0) {
+          $('.progress-bar.Job-Match').addClass('progress-color');
+        }
+        if(counter_num_6 > 0) {
+          $('.progress-bar.Submissions').addClass('progress-color');
+        }
+        if(counter_num_7 > 0) {
+          $('.progress-bar.Declined').addClass('progress-color');
+        }
+        if(counter_num_8 > 0) {
+          $('.progress-bar.Interviews').addClass('progress-color');
+        }
+        if(counter_num_9 > 0) {
+          $('.progress-bar.Due-check').addClass('progress-color');
+        }
+        if(counter_num_10 > 0) {
+          $('.progress-bar.Offered').addClass('progress-color');
+        }
+        if(counter_num_11 > 0) {
+          $('.progress-bar.Rejected-accpt').addClass('progress-color');
+        }
+        if(counter_num_12 > 0) {
+          $('.progress-bar.Placed').addClass('progress-color');
+        }
+        if(counter_num_13 > 0) {
+          $('.progress-bar.Archived').addClass('progress-color');
+        }
+        if(counter_num_14 > 0) {
+          $('.progress-bar.Testimony').addClass('progress-color');
+        }
+ 
 
       $(".candidate-edit-btn").click(function(){
         $(".profile-information").hide();
@@ -367,20 +461,20 @@
         $(".profile-details-d-none").hide();
         $(".profile-details-eidt-form").show();
       });
-    //   $(".back-btn").click(function(){
-    //     $(".profile-details-eidt-form").hide();
-    //     $(".profile-details-d-none").show();
+      $(".back-btn").click(function(){
+        $(".profile-details-eidt-form").hide();
+        $(".profile-details-d-none").show();
 
-    //   });
+      });
 
       $(".assign-edit-btn").click(function(){
         $(".assign-form-d-none").hide();
         $(".assign-eidt-form").show();
       });
-    //   $(".back-btn").click(function(){
-    //     $(".assign-eidt-form").hide();
-    //     $(".assign-form-d-none").show();
-    //   });
+      $(".back-btn").click(function(){
+        $(".assign-eidt-form").hide();
+        $(".assign-form-d-none").show();
+      });
 
       $(".reference-edit-btn").click(function(){
         $(".reference-form-inner").hide();
@@ -390,7 +484,7 @@
         $(".reference-form-inner-d-none").hide();
         $(".reference-form-inner").show();
       });
-
+     
       $(".counter-edit-btn").click(function(){
         $(".counter-circle-d-none").hide();
         $(".counter-circle-form").show();
@@ -430,7 +524,39 @@
         $(".testimonial-txt-d-none").hide();
         $(".testimonial-txt-edit").show();
       });
+
+      $(".testimonial-remove-btn").click(function(){
+        $(".testimonial-txt").hide();
+      });
+
+
+      $(".pipeline-edit-btn").click(function(){
+        $(".pipeline-data").hide();
+        $(".pipeline-btn-d-none").hide();
+        $(".pipeline-data-d-none").show();
+        $(".pipeline-back-btn").css("display", "flex");
+      });
       
+      $(".back-btn").click(function(){
+        $(".pipeline-data-d-none").hide();
+        $(".pipeline-back-btn").hide();
+        $(".pipeline-data").show();
+        $(".pipeline-btn-d-none").show();
+      });
+
+      $(".activity-edit-btn").click(function(){
+        $(".activity-data").hide();
+        $(".activity-btn-d-none").hide();
+        $(".activity-data-d-none").show();
+        $(".activity-back-btn").css("display", "flex");
+      });
+      
+      $(".back-btn").click(function(){
+        $(".activity-data-d-none").hide();
+        $(".activity-back-btn").hide();
+        $(".activity-data").show();
+        $(".activity-btn-d-none").show();
+      });
     })
 
     </script>

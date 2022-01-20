@@ -2,13 +2,7 @@
 textarea {
     min-height: 150px;
 }
-.percent{
-    width:120px;
-    height:120px;
-}
-.percent svg{
-    stroke-linecap:round;
-}
+
 .datatable {
     width: 100% !important;
 }
@@ -515,7 +509,7 @@ h5 {
 }
 
 
-/*
+/* 
 .dz-message span {
     font-size: 20px;
 } */
@@ -853,7 +847,7 @@ table.dataTable tbody tr{
 .datatable-Candidate tbody tr .candidate-crud-list-btn form .btn{
     color: red;
 }
-.datatable-Candidate tbody tr .candidate-crud-list-btn .btn:focus-visible,.datatable-Candidate tbody tr .candidate-crud-list-btn .btn:active,.datatable-Candidate tbody tr .candidate-crud-list-btn .btn:focus{
+.datatable-Candidate tbody tr .candidate-crud-list-btn .btn:focus-visible,.datatable-Candidate tbody tr .candidate-crud-list-btn .btn:active,.datatable-Candidate tbody tr .candidate-crud-list-btn .btn:focus{ 
     outline: none;
     background-color: transparent;
     box-shadow: none;
@@ -1201,7 +1195,7 @@ div.dataTables_wrapper div.dataTables_info {
     align-items: center;
     padding: 6px 0px;
     justify-content: end;
-
+    
 }
 
 .padd-12 {
@@ -1335,7 +1329,7 @@ div.dataTables_wrapper div.dataTables_info {
     background-color: #10213F;
     border-radius: 10px;
     position: relative;
-    margin: 20px 50px;
+    margin: 20px 70px;
 }
 
 .referrals-award-inner {
@@ -1375,7 +1369,34 @@ div.dataTables_wrapper div.dataTables_info {
     border-radius: 0px 0px 10px 0px;
 }
 
-.award {
+.referrals-award .referrals_dollar{
+    position: relative;
+    width: 140px;
+    height: 140px;
+    background-color: transparent;
+    margin: 50px auto;
+}
+.referrals-award .referrals_dollar svg{
+    stroke-linecap: round;
+    transform: scale(1);
+}
+.referrals-award .referrals_dollar svg text{
+    position: relative;
+    font-size: 45px !important;
+    font-family: 'lato', sans-serif !important;
+    transform: translate(29px, 0px);
+}
+.referrals-award .referrals_dollar span{
+    position: absolute;
+    top: 38px;
+    left: 16px;
+    right: 0;
+    color: #fff;
+    width: 55px;
+    font-size: 45px;
+    font-family: 'lato', sans-serif !important;
+}
+/* .award {
     position: relative;
 }
 
@@ -1397,7 +1418,7 @@ div.dataTables_wrapper div.dataTables_info {
 }
 .dollar h2{
     font-size: 45px;
-}
+} */
 .master-card {
     text-align: right;
     padding-right: 20px;
@@ -1444,38 +1465,96 @@ div.dataTables_wrapper div.dataTables_info {
     margin-top: 0px;
 }
 
+ .candidate-progress-bar{
+    position: relative;
+    margin-bottom: 20px;
+    padding-left: 10px;
+}
+.progress-line{
+    position: absolute;
+    border-left: 1px solid #171942;
+    border-bottom: 1px solid #171942;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    bottom: 1px;
+}
+.progress-line::before{
+    content: "\f0de";
+    position: absolute;
+    left: -3px;
+    top: -4px;
+    color: #171942;
+    font-size: 9px;
+    image-rendering: -webkit-optimize-contrast;
+    font-family: "FontAwesome";
+    z-index: 1;
+}
+.progress-line::after{
+    content: "\f0da";
+    position: absolute;
+    right: -3px;
+    bottom: -8px;
+    color: #171942;
+    font-size: 9px;
+    image-rendering: -webkit-optimize-contrast;
+    font-family: "FontAwesome";
+    z-index: 1;
+}
 .candidate-progress-bar .progress {
-    border-radius: 5px;
-    width: 16px !important;
-    height: 230px !important;
-    margin-right: 8px !important;
+    border-radius: 3px;
+    width: 12px !important;
+    height: 225px !important;
+    margin-right: 12px !important;
+    margin-bottom: 0px;
+    margin-top: 20px;
 }
 
 .candidate-progress-bar .progress-bar {
     transition: height .6s ease;
     background-color: #F0F1F3;
+    position: relative !important;
 }
 
-.candidate-progress-bar .progress:first-child .progress-bar,
-.candidate-progress-bar .progress:nth-child(2) .progress-bar,
-.candidate-progress-bar .progress:nth-child(3) .progress-bar,
-.candidate-progress-bar .progress:nth-child(4) .progress-bar {
-    background-color: #2A93E7;
+.progress-color{
+    background-color: #2A93E7 !important;
+    transition:  background-color .6s ease;
 }
 
 .bar-txt {
     position: absolute;
-    display: block;
-    bottom: 0;
-    left: 2px;
-    color: #000;
+    display: inline-block;
+    bottom: 25px;
+    left: -15px;
+    width: 42px;
+    font-size: 8px;
+    font-family: "lato", sans-serif;
+    line-height: 8px;
+    font-weight: 700;
+    text-align: left;
+    white-space: nowrap;
+    color: #171942;
     transform: rotate(-90deg);
-    /* padding-top: 8px; */
 }
 
 
+/* .prog {
+    position: relative;
+    background: red;
+    width: 28px;
+    height: 160px;
+}
+.prog-inner {
+    position: absolute;
+    bottom: 0;
+    transform: rotate( 
+-90deg
+ );
+    white-space: nowrap;
+    bottom: 13px;
+    left: -6px;
+} */
 /*  progress */
-
 
 /* counter */
 
@@ -1581,7 +1660,8 @@ div.dataTables_wrapper div.dataTables_info {
     background-color: #00326D;
     border-radius: 5px;
     color: #fff;
-    font-size: 15px;
+    font-size: 14px;
+    margin-left: 7px;
     padding: 10px 0px;
     width: 100%;
 }
@@ -1805,7 +1885,8 @@ textarea{
 }
 
 .interview h4 {
-    font-size: 20px;
+    font-size: 17px;
+    font-weight: 700;
     padding-left: 15px;
     margin: 25px 0px;
     color: #171942;
@@ -1820,10 +1901,9 @@ textarea{
     width: 100%;
 }
 
-/* .interview-btns {
+.interview-btns {
     padding-right: 15px;
-    padding-left: 15px;
-} */
+}
 
 .interview-btns .btn {
     margin: 0px 2px;
@@ -1841,7 +1921,10 @@ textarea{
 .audio-video-file {
     padding-bottom: 20px;
 }
-
+.audio-video-file h4{
+    font-weight: 400 !important;
+    font-size: 18px;
+}
 .audio-video-file .profile-details-upload {
     margin: 18px 15px;
 }
@@ -1874,6 +1957,7 @@ textarea{
 
 .testimonial-heading h3 {
     font-size: 20px;
+    color: #171942;
 }
 
 .testimonial-sec input[type="date"] {
@@ -1942,9 +2026,8 @@ textarea{
 }
 .candidate-profile-table .dataTables_paginate{
     position: absolute;
-    position: absolute;
-    top: -290px;
-    right: 0;
+    bottom: 223px;
+    right: 25px;
 }
 .candidate-profile-table .dataTables_filter{
     position: absolute;
@@ -1956,6 +2039,9 @@ textarea{
     border: 1px solid #000;
     background-color: #F2F3F7;
     border: none;
+}
+.candidate-profile-table .pagination .active{
+    display: none;
 }
 .candidate-profile-table .dataTables_filter label{
     position: relative;
@@ -1976,10 +2062,10 @@ textarea{
 .candidate-profile-table .previous a::before, .candidate-profile-table .next a::before{
     position: absolute;
     content: "\f053";
-    font-size: 16px;
+    font-size: 12px;
     image-rendering: -webkit-optimize-contrast;
     font-family: "FontAwesome";
-    color: #000;
+    color: #171942;
 }
 .candidate-profile-table .next a::before{
     content: "\f054" !important;
@@ -2021,10 +2107,10 @@ textarea{
 .pipeline-btn{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between;  
     padding-top: 30px;
     padding-bottom: 30px;
-
+    
 }
 .add-pipeline .btn{
     background-color: #00326D;
@@ -2055,7 +2141,7 @@ textarea{
 }
 .percent svg text{
     font-family: 'lato', sans-serif !important;
-}
+}  
 /* counter end here */
 .dt-buttons .buttons-print{
     position: relative;
@@ -2165,7 +2251,7 @@ textarea{
     color: #000;
 }
 
-.profile-eidt-form, .profile-details-eidt-form, .assign-eidt-form, .reference-form-inner-d-none, .counter-circle-form, .interview-form-d-none, .job-summary-d-none,.testimonial-txt-d-none{
+.profile-eidt-form, .profile-details-eidt-form, .assign-eidt-form, .reference-form-inner-d-none, .counter-circle-form, .interview-form-d-none, .job-summary-d-none,.testimonial-txt-d-none,.pipeline-data-d-none{
     display: none;
 }
 .profile-eidt-form form{
@@ -2213,6 +2299,17 @@ textarea{
 .search-fields-toggle{
     display: none !important;
 }
+.dt-buttons .plus-toggle::after{
+    position: absolute;
+    content: "\f067" !important;
+    width: 20px;
+    height: 20px;
+    right: 24px;
+    top: 44px;
+    font-size: 12px;
+    image-rendering: -webkit-optimize-contrast;
+    font-family: "FontAwesome";
+}
 
 .select-dropdown .fa-sort-down{
     top: 30px !important;
@@ -2231,6 +2328,7 @@ textarea{
     width: 100%;
     height: 36px;
     border: none;
+    outline: none;
 }
 .interview-inner .padd-8{
     padding: 8px;
@@ -2238,5 +2336,79 @@ textarea{
 
 .testimonial-txt-d-none .calendar{
     top: 32px;
+}
+
+
+.nurse-seniority-d-none, .nurse-specialty-d-none, .AHP-Specialty-d-none, .HE-Specialty-d-none{
+    display: none;
+}
+
+.candidate-profile-table .dataTables_length label{
+    position: relative;
+}
+.candidate-profile-table .dataTables_length label::after{
+    content: "\f078";
+    position: absolute;
+    color: #fff;
+    top: 12px;
+    font-size: 9px;
+    right: 58px;
+    font-family: 'FontAwesome';
+}
+.candidate-profile-table .dataTables_length select{
+    color: #fff;
+}
+
+/* .candidate-progress-bar  .progress:first-child .progress-bar, .candidate-progress-bar .progress:nth-child(2) .progress-bar, .candidate-progress-bar .progress:nth-child(3) .progress-bar, .candidate-progress-bar .progress:nth-child(4) .progress-bar {
+    background-color: #2A93E7;
+} */
+.candidate-profile-table .check-box{
+    display: none;
+}
+.candidate-profile-table table{
+    border-bottom: none !important;
+    border-spacing: 0px 10px;
+}
+.candidate-profile-table table tbody td{
+    border-left: 0px solid #686868 !important;
+    border-right: 0px solid #686868 !important;
+    border-top: 2px solid #686868 !important;
+    border-bottom: 2px solid #686868 !important;
+}
+.candidate-profile-table table tbody td:first-child{
+    border-left: 2px solid #686868 !important;
+}
+.candidate-profile-table table tbody td:last-child{
+    border-right: 2px solid #686868 !important;
+}
+
+.pipeline-date{
+    position: relative;
+}
+.pipeline-data-d-none input,.activity-data-d-none input {
+    height: 34px;
+    width: 100%;
+}
+.pipeline-data-d-none .calendar, .activity-data-d-none .calendar{
+    top: 16px;
+}
+.pipeline-data-d-none input::-webkit-outer-spin-button,
+.pipeline-data-d-none input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.activity-data-d-none input::-webkit-outer-spin-button,
+.activity-data-d-none input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.submit-table-head{
+    width: 168px;
+}
+.pipeline-back-btn, .activity-back-btn{
+    display: none;
+    padding: 30px 0px;
+}
+
+.activity-data-d-none{
+    display: none;
 }
 /*//////////////////////////////////// Single Candidate Profile   styling end here /////////////////////////////////////*/
