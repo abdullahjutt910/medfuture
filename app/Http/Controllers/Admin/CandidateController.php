@@ -5,8 +5,10 @@ namespace App\Http\Controllers\Admin;
 use Gate;
 use App\Models\User;
 use App\Models\Candidate;
+use App\Models\Interview;
 use Illuminate\Http\Request;
 use Intervention\Image\File;
+use App\Models\CandidateProfile;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -15,7 +17,6 @@ use App\Http\Requests\UpdateCandidateRequest;
 use Symfony\Component\HttpFoundation\Response;
 use App\Http\Requests\MassDestroyCandidateRequest;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
-use App\Models\CandidateProfile;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class CandidateController extends Controller
@@ -134,17 +135,33 @@ class CandidateController extends Controller
         $candidate_profile->lead_method = $request->lead_method;
         $candidate_profile->visa_status = $request->visa_status;
         $candidate_profile->save();
-        // if ($request->input('registration_form_document', false)) {
-        //     $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('registration_form_document'))))->toMediaCollection('registration_form_document');
-        // }
 
-        // if ($request->input('privacy_concerns', false)) {
-        //     $candidate->addMedia(storage_path('tmp/uploads/' . basename($request->input('privacy_concerns'))))->toMediaCollection('privacy_concerns');
-        // }
 
-        // if ($media = $request->input('ck-media', false)) {
-        //     Media::whereIn('id', $media)->update(['model_id' => $candidate->id]);
-        // }
+        $interview = new Interview;
+        $interview->candidate_id = $candidate->id;
+        $interview->start_date = $request->start_date;
+        $interview->end_date = $request->end_date;
+        $interview->distance = $request->distance;
+        $interview->job_location = $request->job_location;
+        $interview->practise_licence_number = $request->practise_licence_number;
+        $interview->licence_board = $request->licence_board;
+        $interview->gross_salary = $request->gross_salary;
+        $interview->hourly_rate_expectation = $request->hourly_rate_expectation;
+        $interview->billing_share = $request->billing_share;
+        $interview->visa_sponsorship = $request->visa_sponsorship;
+        $interview->accommodation = $request->accommodation;
+        $interview->travel_allowance = $request->travel_allowance;
+        $interview->meal_allowance = $request->meal_allowance;
+        $interview->uniform_allowance = $request->uniform_allowance;
+        $interview->moratorium_restriction = $request->moratorium_restriction;
+        $interview->location_restriction = $request->location_restriction;
+        $interview->training_program = $request->training_program;
+        $interview->medical_board_condition = $request->medical_board_condition;
+        $interview->medical_board_undertaking = $request->medical_board_undertaking;
+        $interview->skill = $request->skill;
+        $interview->program_type = $request->program_type;
+        $interview->interview_notes = $request->interview_notes;
+        $interview->save();
 
         return redirect()->route('admin.candidates.index');
     }
@@ -220,14 +237,76 @@ class CandidateController extends Controller
         }
         $candidate->save();
 
+
         return redirect()->route('admin.candidates.index');
+    }
+    public function updateInterview(Request $request,$id)
+    {
+        $candidate = Candidate::find($id);
+        $candidate->title = $request->title;
+        $candidate->Profession = $request->Profession;
+        $candidate->devision = $request->devision;
+        $candidate->senority = $request->senority;
+        $candidate->specialty = $request->specialty;
+        $candidate->town = $request->town;
+        $candidate->state = $request->state;
+        $candidate->district = $request->district;
+        $candidate->country = $request->country;
+        $candidate->post_code = $request->post_code;
+        $candidate->main_city = $request->main_city;
+        $candidate->distance_to_main = $request->distance_to_main;
+        $candidate->medical_school = $request->medical_school;
+        $candidate->license_type = $request->license_type;
+        $candidate->country_of_primary_degree = $request->country_of_primary_degree;
+        $candidate->practice_country = $request->practice_country;
+        $candidate->practice_licensing_body = $request->practice_licensing_body;
+        $candidate->experience_from_home = $request->experience_from_home;
+        $candidate->experience_from_residing = $request->experience_from_residing;
+        $candidate->recognised_comparable_experience = $request->recognised_comparable_experience;
+        $candidate->current_employment_status = $request->current_employment_status;
+        $candidate->engagement_term = $request->engagement_term;
+        $candidate->country_of_citizenship = $request->country_of_citizenship;
+        $candidate->country_of_residence = $request->country_of_residence;
+        $candidate->visa_type = $request->visa_type;
+        $candidate->work_rights_status = $request->work_rights_status;
+        $candidate->placement_term = $request->placement_term;
+        $candidate->save();
+
+        $interview = Interview::where('candidate_id',$candidate->id)->first();
+        // $interview->candidate_id = $candidate->id;
+        $interview->start_date = $request->start_date;
+        $interview->end_date = $request->end_date;
+        $interview->distance = $request->distance;
+        $interview->job_location = $request->job_location;
+        $interview->practise_licence_number = $request->practise_licence_number;
+        $interview->licence_board = $request->licence_board;
+        $interview->employment_type = $request->employment_type;
+        $interview->gross_salary = $request->gross_salary;
+        $interview->hourly_rate_expectation = $request->hourly_rate_expectation;
+        $interview->billing_share = $request->billing_share;
+        $interview->visa_sponsorship = $request->visa_sponsorship;
+        $interview->accommodation = $request->accommodation;
+        $interview->travel_allowance = $request->travel_allowance;
+        $interview->meal_allowance = $request->meal_allowance;
+        $interview->uniform_allowance = $request->uniform_allowance;
+        $interview->moratorium_restriction = $request->moratorium_restriction;
+        $interview->location_restriction = $request->location_restriction;
+        $interview->training_program = $request->training_program;
+        $interview->medical_board_condition = $request->medical_board_condition;
+        $interview->medical_board_undertaking = $request->medical_board_undertaking;
+        $interview->skill = $request->skill;
+        $interview->program_type = $request->program_type;
+        $interview->interview_notes = $request->interview_notes;
+        $interview->save();
+        return back();
+
     }
 
     public function show(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-         $candidates = $candidate->with('candidate_profile')->first();
-        //  dd($candidates);
+         $candidates = $candidate->with('candidate_profile','interview')->first();
+        //dd($candidates);
         return view('admin.candidates.show', compact('candidate'));
     }
 
@@ -322,5 +401,6 @@ class CandidateController extends Controller
         $candidate_profile->save();
         return back();
     }
+
 
 }
