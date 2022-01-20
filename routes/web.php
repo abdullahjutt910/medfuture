@@ -64,6 +64,8 @@ Route::post('nz_store',[PostController::class,'store'])->name('nz_store');
 Route::post('update1/{id}',[CandidateController::class,'update1']);
 Route::post('update2/{id}',[CandidateController::class,'update2']);
 Route::post('update3/{id}',[CandidateController::class,'update3']);
+Route::post('update_interview/{id}',[CandidateController::class,'updateInterview'])->name('interview');
+
 
 
 

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use \DateTimeInterface;
+use App\Models\Interview;
 use App\Models\CandidateProfile;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
@@ -1391,6 +1392,10 @@ class Candidate extends Model implements HasMedia
     public function candidate_profile()
     {
         return $this->belongsTo(CandidateProfile::class,'id','candidate_id');
+    }
+    public function interview()
+    {
+        return $this->belongsTo(Interview::class,'id','candidate_id');
     }
 
     protected function serializeDate(DateTimeInterface $date)

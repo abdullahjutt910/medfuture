@@ -1,9 +1,21 @@
 
 @media (max-width: 575px){
-
+    .referrals-award{
+        margin: 20px 0px;
+    }
+    .referrals-award .referrals_dollar svg {
+        transform: scale(0.5);
+    }
+    .referrals-award .referrals_dollar span{
+        font-size: 22px;
+        top: 54px;
+        left: 42px;
+    }
 }
 @media (min-width: 576px) and (max-width: 767px){
-
+.referrals-award{
+    margin: 20px 10px;
+}
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -18,6 +30,15 @@
     .nav-icons .nav-icons-inner {
         margin: 0px 10px;
     }
+    .referrals-award {
+        margin: 20px 10px;
+    }
+    .candidate-progress-bar .progress{
+        margin-right: 1px !important;
+    }
+    /* .percent{
+
+    } */
 }
 
 @media (min-width: 992px) {
@@ -82,7 +103,7 @@
         padding-bottom: 21px !important;
     }
     .candidate-progress-bar .progress {
-        margin-right: 9px !important;
+        margin-right: 12px !important;
     }
     /* .notification-btns .btn {
         width: 190px;
