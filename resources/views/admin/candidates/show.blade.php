@@ -2665,7 +2665,7 @@
                                                                     Start Date
                                                                 </th>
                                                                 <td>
-                                                                    {{$candidate->start_date ?? ''}}
+                                                                    {{$candidate->interview->start_date ?? ''}}
 
                                                                     {{-- <input type="date" name="date"> --}}
                                                                     <!-- <img src="{{asset('img/dashboard/Calendar.png')}}" class="calendar" alt="calendar-icon"> -->
@@ -2676,7 +2676,7 @@
                                                                     End Date
                                                                 </th>
                                                                 <td>
-                                                                    {{$candidate->end_date ?? ''}}
+                                                                    {{$candidate->interview->end_date ?? ''}}
 
                                                                     {{-- <input type="date" name="date"> --}}
                                                                     <!-- <img src="{{asset('img/dashboard/Calendar.png')}}" class="calendar" alt="calendar-icon"> -->
@@ -2687,7 +2687,7 @@
                                                                     Distance
                                                                 </th>
                                                                 <td>
-                                                                    {{$candidate->distance ?? ''}}
+                                                                    {{$candidate->interview->distance ?? ''}}
 
                                                                 </td>
                                                             </tr>
@@ -2696,7 +2696,7 @@
                                                                     Job Seeking location
                                                                 </th>
                                                                 <td>
-                                                                    {{$candidate->job_location ?? ''}}
+                                                                    {{$candidate->interview->job_location ?? ''}}
 
                                                                     {{-- <select class="form-select form-select-lg mb-3"
                                                                         name="job_title"
@@ -4206,7 +4206,7 @@
                                                                     Training Program Requirement
                                                                 </th>
                                                                 <td>
-                                                                    {{$candidate->interview->training_program ?? ''}}
+                                                                    {{$candidate->interview->program_type ?? ''}}
 
                                                                     {{-- <select class="form-select form-select-lg mb-3"
                                                                         name="job_title"
@@ -4269,8 +4269,8 @@
                                                                             Interests</label>
                                                                         <textarea class="form-control"
                                                                             id="exampleFormControlTextarea1"
-                                                                    {{$candidate->interview->skill ?? ''}}
-                                                                    rows="3"></textarea>
+
+                                                                    rows="3">{{$candidate->interview->skill ?? ''}}</textarea>
                                                                     </div>
                                                                 </td>
                                                                 <td></td>
@@ -6511,15 +6511,18 @@
                                                                 </th>
                                                                 <td>
                                                                     <select class="form-select form-select-lg mb-3"
-                                                                        name="training_program"
+                                                                        name="program_type"
                                                                         aria-label=".form-select-lg example">
-                                                                        <option value="Yes" {{ (isset($candidate->interview->training_program) && $candidate->interview->training_program == 'Yes')?'selected':'' }}>Yes</option>
-                                                                        <option value="No" {{ (isset($candidate->interview->training_program) && $candidate->interview->training_program == 'No')?'selected':'' }}>No</option>
-                                                                        <option value="N/A" {{ (isset($candidate->interview->training_program) && $candidate->interview->training_program == 'N/A')?'selected':'' }}>N/A</option>
+                                                                        <option value="Yes" {{ (isset($candidate->interview->program_type) && $candidate->interview->program_type == 'Yes')?'selected':'' }}>Yes</option>
+                                                                        <option value="No" {{ (isset($candidate->interview->program_type) && $candidate->interview->program_type == 'No')?'selected':'' }}>No</option>
+                                                                        <option value="N/A" {{ (isset($candidate->interview->program_type) && $candidate->interview->program_type == 'N/A')?'selected':'' }}>N/A</option>
                                                                     </select>
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
                                                             </tr>
+<<<<<<< HEAD
+
+=======
                                                             <tr>
                                                                 <th>
                                                                     Training Program Type
@@ -6528,6 +6531,7 @@
                                                                     Training Program Type
                                                                 </td>
                                                             </tr>
+>>>>>>> 2090d1ae4ab656fd4cabd5fcbc20e9eb7fc7d10f
                                                             <tr>
                                                                 <th>
                                                                     Medical Board Conditions

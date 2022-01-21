@@ -615,7 +615,7 @@
                                         </select>
                                     </td>
                                 </tr>
-                                
+
                                 <tr class="search-fields">
                                     <td>
                                     </td>
@@ -780,7 +780,7 @@
                                 </tr>
                                 <tr>
                                     <td class="total-candi">
-                                       <h4>Total Candidates: <span>7</span></h4> 
+                                       <h4>Total Candidates: <span>{{$count ? $count : '0'}}</span></h4>
                                     </td>
                                     <td>
                                     </td>
@@ -789,7 +789,7 @@
                                     <td>
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                     <td>
                                     </td>
@@ -808,65 +808,65 @@
                                     <td>
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                     <td>
-                                       
+
                                     </td>
                                     <td>
-                                       
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-                                        
-                                    </td>
-                                    <td>
-                                        
-                                    </td>
-                                    <td>
-                                        
-                                    </td>
-                                    <td>
-                                       
-                                    </td>
-                                    <td>
-                                        
-                                    </td>
-                                    <td>
-                                        
+
                                     </td>
                                     <td>
                                     </td>
                                     <td>
-                                    
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+
                                     </td>
                                     <td>
                                     </td>
                                     <td>
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                     <td>
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                     <td>
-                                    
+
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                     <td>
                                     </td>
@@ -879,13 +879,13 @@
                                     <td>
                                     </td>
                                 </tr>
-                               
+
                                 <tr>
                                     <th width="10">
 
                                     </th>
                                     <th>
-                                        {{ trans('Candidate ID') }} ({{$count ? $count : '0'}})
+                                        {{ trans('Candidate ID') }}
                                     </th>
                                     <th>
                                         {{ trans('First Name') }}

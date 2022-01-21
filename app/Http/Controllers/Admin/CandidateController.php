@@ -138,7 +138,7 @@ class CandidateController extends Controller
 
 
         $interview = new Interview;
-        $interview->candidate_id = $candidate->id;
+        $interview->candidate_id = $candidate_profile->candidate_id;
         $interview->start_date = $request->start_date;
         $interview->end_date = $request->end_date;
         $interview->distance = $request->distance;
@@ -155,7 +155,7 @@ class CandidateController extends Controller
         $interview->uniform_allowance = $request->uniform_allowance;
         $interview->moratorium_restriction = $request->moratorium_restriction;
         $interview->location_restriction = $request->location_restriction;
-        $interview->training_program = $request->training_program;
+        $interview->program_type = $request->program_type;
         $interview->medical_board_condition = $request->medical_board_condition;
         $interview->medical_board_undertaking = $request->medical_board_undertaking;
         $interview->skill = $request->skill;
@@ -271,8 +271,9 @@ class CandidateController extends Controller
         $candidate->work_rights_status = $request->work_rights_status;
         $candidate->placement_term = $request->placement_term;
         $candidate->save();
-
+        // dd($request->all());
         $interview = Interview::where('candidate_id',$candidate->id)->first();
+
         // $interview->candidate_id = $candidate->id;
         $interview->start_date = $request->start_date;
         $interview->end_date = $request->end_date;
@@ -291,7 +292,7 @@ class CandidateController extends Controller
         $interview->uniform_allowance = $request->uniform_allowance;
         $interview->moratorium_restriction = $request->moratorium_restriction;
         $interview->location_restriction = $request->location_restriction;
-        $interview->training_program = $request->training_program;
+        $interview->program_type = $request->program_type;
         $interview->medical_board_condition = $request->medical_board_condition;
         $interview->medical_board_undertaking = $request->medical_board_undertaking;
         $interview->skill = $request->skill;
