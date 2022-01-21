@@ -1272,7 +1272,51 @@
                                     </div>
                                 </div>
 
+                                <div class="row candidate-progress client-progress">
+                                    <div class="col-md-12">
+                                        <div class="candidate-date">
+                                            <div class="form-group">
+                                                <select class="form-control" name="title" id="title" required="">
+                                                    <option value="" selected="">2020-2021</option>
+                                                    <option value="2019-2020">2019-2020</option>
+                                                    <option value="2018-2019">2018-2019</option>
+                                                    <option value="2017-2018">2017-2018</option>
+                                                    <option value="2016-2017">2016-2017</option>
+                                                    <option value="2015-2016">2015-2016</option>
+                                                </select>
+                                                <i class="fas fa-sort-down"></i>
+                                            </div>
+                                            <span class="date-background"></span>
+                                        </div>
+                                        <div class="candidate-progress-txt">
+                                            <h3>Candidate Recruitment Progress</h3>
+                                        </div>
+                                        <div class="candidate-progress-bar">
+                                            <span class="progress-line"></span>
+                                            <div class="progress vertical">
+                                                <div class="progress-bar Contacted" role="progressbar" aria-valuenow="0"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">Contacted</span></div>
+                                            </div>
+                                            <div class="progress vertical">
+                                                <div class="progress-bar Int-scr" role="progressbar" aria-valuenow="25"
+                                                    aria-valuemin="0" aria-valuemax="100"><span
+                                                        class="bar-txt">Initial Screening</span></div>
+                                            </div>
 
+
+                                        </div>
+                                        <div class="edit-brn">
+                                            <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                                    class="img-fluid" alt="Edit-img"> Edit</button>
+                                        </div>
+                                    </div>
+                                    <div class="forms-colored-div">
+                                        <div class="blue"></div>
+                                        <div class="purple"></div>
+                                        <div class="pink"></div>
+                                    </div>
+                                </div>
                                 <div class="row candidate-progress">
                                     <div class="col-md-12">
                                         <div class="candidate-date">
@@ -2261,8 +2305,9 @@
                                         </div>
 
                                         <h3>Job Summary</h3>
-                                        <div class="job-summary-eidt">
+                                       
                                             <p class="summary-id">ID: AH5841</p>
+                                            <div class="job-summary-eidt">
                                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem est
                                                 rerum
                                                 placeat nobis voluptates fuga in laudantium cumque veniam! Suscipit at
@@ -2279,11 +2324,6 @@
                                         </div>
                                         <div class="job-summary-d-none">
                                             <form action="" class="row">
-                                                <div class="col-md-12 profile-eidt-form-inner">
-                                                    <label for="ID">ID</label>
-                                                    <input class="form-control" type="text" name="ID" id="ID"
-                                                        value="ID">
-                                                </div>
                                                 <div class="col-md-12 profile-eidt-form-inner">
                                                     <label for="Job Summary">Job Summary Note</label>
                                                     <textarea name="Job_Summary" id="Job_Summary" cols="76" rows="7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem est rerum placeat nobis voluptates fuga in laudantium cumque veniam! Suscipit at esse</textarea>
@@ -2449,7 +2489,7 @@
                                                                 </th>
                                                                 <td>
                                                                     {{$candidate->senority ?? ''}}
-                                                                    {{-- <select class="seniority-doctor form-select form-select-lg mb-3"
+                                                                    <select class="seniority-doctor-d-none form-select form-select-lg mb-3"
                                                                         name="senority"
                                                                         aria-label=".form-select-lg example">
                                                                         <option value="Internship - PGY Year 1 ">
@@ -2509,7 +2549,7 @@
                                                                             Director of Nursing Practice (DNP)</option>
                                                                         <option value="Chief Nursing Officer (CNO)">
                                                                             Chief Nursing Officer (CNO)</option>
-                                                                    </select> --}}
+                                                                    </select> 
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
                                                             </tr>
@@ -2519,7 +2559,7 @@
                                                                 </th>
                                                                 <td>
                                                                     {{$candidate->specialty ?? ''}}
-                                                                    {{-- <select class="doctor-specialty form-select form-select-lg mb-3"
+                                                                    <select class="doctor-specialty-d-none form-select form-select-lg mb-3"
                                                                         name="specialty"
                                                                         aria-label=".form-select-lg example">
                                                                         <option value="Anaesthetics">Anaesthetics
@@ -2535,8 +2575,8 @@
                                                                         <option value="Psychiatry ">Psychiatry </option>
                                                                         <option value="Radiology">Radiology</option>
                                                                         <option value="Surgery ">Surgery </option>
-                                                                    </select> --}}
-                                                                    {{-- <select
+                                                                    </select> 
+                                                                    <select
                                                                         class="nurse-specialty-d-none form-select form-select-lg mb-3 "
                                                                         name="specialty"
                                                                         aria-label=".form-select-lg example">
@@ -2565,8 +2605,8 @@
                                                                         <option value="Rural & Remote">Rural & Remote</option>
                                                                         <option value="Theatre & Recovery">Theatre & Recovery</option>
 
-                                                                    </select> --}}
-                                                                    {{-- <select
+                                                                    </select>
+                                                                    <select
                                                                         class=" AHP-Specialty-d-none form-select form-select-lg mb-3"
                                                                         name="specialty"
                                                                         aria-label=".form-select-lg example">
@@ -2616,7 +2656,7 @@
                                                                         <option value="Practice Manager">Practice Manager</option>
                                                                         <option value="Professional Management Consultants">Professional Management Consultants</option>
 
-                                                                    </select> --}}
+                                                                    </select>
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
                                                             </tr>
@@ -4335,11 +4375,8 @@
                                                                         aria-label=".form-select-lg example">
                                                                         <option value="Doctor" {{old ('profession',$candidate->profession == "Doctor")? "selected" : ""}}>Doctor</option>
                                                                         <option value="Nurse" {{old ('profession',$candidate->profession == "Nurse")? "selected" : ""}}>Nurse</option>
-                                                                        <option value="Allied Health Professionals" {{old ('profession',$candidate->profession == "Allied Health Professionals")? "selected" : ""}}>
-                                                                            Allied
-                                                                            Health Professionals</option>
-                                                                        <option value="Healthcare Executives" {{old ('profession',$candidate->profession == "Healthcare Executives")? "selected" : ""}}>Healthcare
-                                                                            Executives</option>
+                                                                        <option value="Allied Health Professionals" {{old ('profession',$candidate->profession == "Allied Health Professionals")? "selected" : ""}}>Allied Health Professionals</option>
+                                                                        <option value="Healthcare Executives" {{old ('profession',$candidate->profession == "Healthcare Executives")? "selected" : ""}}>Healthcare Executives</option>
                                                                         <!-- <option value="Dentists">Dentists</option> -->
                                                                     </select>
                                                                     <i class="fas fa-sort-down"></i>
@@ -4635,7 +4672,7 @@
                                                                 </th>
                                                                 <td>
                                                                     <select class="form-select form-select-lg mb-3"
-                                                                        name="job_location"
+                                                                        name="job_title"
                                                                         aria-label=".form-select-lg example">
 
                                                                         <option value="one" <?= $candidate->interview? ($candidate->interview->job_location == "one"? "selected" : '') : '' ?>>One</option>
@@ -6483,7 +6520,18 @@
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
                                                             </tr>
+<<<<<<< HEAD
 
+=======
+                                                            <tr>
+                                                                <th>
+                                                                    Training Program Type
+                                                                </th>
+                                                                <td  class="padd-8">
+                                                                    Training Program Type
+                                                                </td>
+                                                            </tr>
+>>>>>>> 2090d1ae4ab656fd4cabd5fcbc20e9eb7fc7d10f
                                                             <tr>
                                                                 <th>
                                                                     Medical Board Conditions
@@ -6885,12 +6933,89 @@
                 </table>
                 <div class="pipeline-btn pipeline-btn-d-none ">
                     <div class="add-pipeline">
-                        <button class="btn">Add This Candidate To Job Order Pipeline </button>
+                        <button class="btn add-pipeline-btn">Add This Candidate To Job Order Pipeline</button>
                     </div>
-
                     <div class="edit-brn">
                         <button class="btn pipeline-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
                                 alt="Edit-img"> Edit</button>
+                    </div>
+                    <div class="popup-pipeline">
+                    <i class="fas fa-times cross-icon"></i>
+                         <h3>Add this candidate to the pipeline for a job order.</h3>
+                         <div class="padd-20">
+                         <p class="popup-pipeline-heading-1">Add this candidate to the pipeline for a job order.</p>
+                        <p>Search for a job order below, and then click on the job title to add the candidate to the selected job order pipeline.</p>
+                        <div>
+                            <form action="" class="row pipeline-search-form">
+                            <div class="col-md-6">
+                                <label for="search job title"> Search by Job Title:</label>
+                                <div class="pipeline-search">
+                                <input type="text" class="form-control">
+                                <span class="pipeline-search-txt search-job-title-btn">Go</span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="search job title"> Search by Client Name:</label>
+                                <div class="pipeline-search">
+                                <input type="text" class="form-control">
+                                <span class="pipeline-search-txt search-client-btn">Go</span>
+                                </div>
+                            </div>
+                            </form>
+                        </div>  
+                        </div>                              
+                    </div>
+                    <div class="popup-pipeline-form">
+                        <form action="" class="pipeline-form row">
+                            <div class="col-md-8 profile-eidt-form-inner form-group">
+                                    <select name="placement_term" id="placement_term" class="form-control">
+                                        <option value="Other " selected diable > Other </option>
+                                        <option value="Contacted">Contacted</option>
+                                        <option value="Initial Screening">Initial Screening</option>
+                                        <option value="Short Listed">Short Listed</option>
+                                        <option value="Shelved">Shelved</option>
+                                        <option value="Job Matching">Job Matching</option>
+                                        <option value="Submissions">Submissions</option>
+                                        <option value="Declined">Declined</option>
+                                        <option value="Interviews">Interviews</option>
+                                        <option value="Due Diligence Check">Due Diligence Check</option>
+                                        <option value="Rejected / Accepted">Rejected / Accepted</option>
+                                        <option value="Placed">Placed</option>
+                                        <option value="Archived">Archived</option>
+                                        <option value="Testimony">Testimony</option>
+                                    </select>
+                                    <i class="fas fa-sort-down"></i>
+                            </div>
+                            <div class="col-md-8 profile-eidt-form-inner form-group">
+                                    <select name="placement_term" id="placement_term" class="form-control">
+                                        <option value="General" selected diable > General </option>
+                                        <option value="Contacted">Contacted</option>
+                                        <option value="Initial Screening">Initial Screening</option>
+                                        <!-- <option value="Short Listed">Short Listed</option>
+                                        <option value="Shelved">Shelved</option>
+                                        <option value="Job Matching">Job Matching</option>
+                                        <option value="Submissions">Submissions</option>
+                                        <option value="Declined">Declined</option>
+                                        <option value="Interviews">Interviews</option>
+                                        <option value="Due Diligence Check">Due Diligence Check</option>
+                                        <option value="Rejected / Accepted">Rejected / Accepted</option>
+                                        <option value="Placed">Placed</option>
+                                        <option value="Archived">Archived</option>
+                                        <option value="Testimony">Testimony</option> -->
+                                    </select>
+                                    <i class="fas fa-sort-down"></i>
+                            </div>
+                            <div class="col-md-8 profile-eidt-form-inner">
+                            <textarea name="activity-textarea" id="activity-textarea" cols="30" rows="5" placeholder="Your Notes"></textarea>
+                            </div>
+                                <div class=" col-md-12 activity-form-back-btn">
+                                    <div class=" profile-eidt-form-btn">
+                                        <button class="btn back-btn pipeline-cancel-btn">Cancel</button>
+                                        <input type="submit" class="btn" placeholder="Submit">
+                                    </div>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
                 <div class="pipeline-back-btn">
@@ -6953,12 +7078,63 @@
                 </table>
                 <div class="pipeline-btn activity-btn-d-none">
                     <div class="add-pipeline">
-                        <button class="btn">Add This Candidate To Job Order Pipeline </button>
+                        <button class="btn add-activity-btn">Add Activity </button>
                     </div>
-
                     <div class="edit-brn">
                         <button class="btn activity-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
                                 alt="Edit-img"> Edit</button>
+                    </div>
+                    <div class="popup-activity">
+                        <form action="" class="activity-form row">
+                            <div class="col-md-8 profile-eidt-form-inner form-group">
+                                    <select name="placement_term" id="placement_term" class="form-control">
+                                        <option value="Other " selected diable > Other </option>
+                                        <option value="Contacted">Contacted</option>
+                                        <option value="Initial Screening">Initial Screening</option>
+                                        <option value="Short Listed">Short Listed</option>
+                                        <option value="Shelved">Shelved</option>
+                                        <option value="Job Matching">Job Matching</option>
+                                        <option value="Submissions">Submissions</option>
+                                        <option value="Declined">Declined</option>
+                                        <option value="Interviews">Interviews</option>
+                                        <option value="Due Diligence Check">Due Diligence Check</option>
+                                        <option value="Rejected / Accepted">Rejected / Accepted</option>
+                                        <option value="Placed">Placed</option>
+                                        <option value="Archived">Archived</option>
+                                        <option value="Testimony">Testimony</option>
+                                    </select>
+                                    <i class="fas fa-sort-down"></i>
+                            </div>
+                            <div class="col-md-8 profile-eidt-form-inner form-group">
+                                    <select name="placement_term" id="placement_term" class="form-control">
+                                        <option value="General" selected diable > General </option>
+                                        <option value="Contacted">Contacted</option>
+                                        <option value="Initial Screening">Initial Screening</option>
+                                        <!-- <option value="Short Listed">Short Listed</option>
+                                        <option value="Shelved">Shelved</option>
+                                        <option value="Job Matching">Job Matching</option>
+                                        <option value="Submissions">Submissions</option>
+                                        <option value="Declined">Declined</option>
+                                        <option value="Interviews">Interviews</option>
+                                        <option value="Due Diligence Check">Due Diligence Check</option>
+                                        <option value="Rejected / Accepted">Rejected / Accepted</option>
+                                        <option value="Placed">Placed</option>
+                                        <option value="Archived">Archived</option>
+                                        <option value="Testimony">Testimony</option> -->
+                                    </select>
+                                    <i class="fas fa-sort-down"></i>
+                            </div>
+                            <div class="col-md-8 profile-eidt-form-inner">
+                            <textarea name="activity-textarea" id="activity-textarea" cols="30" rows="5" placeholder="Your Notes"></textarea>
+                            </div>
+                                <div class=" col-md-12 activity-form-back-btn">
+                                    <div class=" profile-eidt-form-btn">
+                                        <button class="btn back-btn cancel-btn">Cancel</button>
+                                        <input type="submit" class="btn" placeholder="Submit">
+                                    </div>
+                            </div>
+
+                        </form>
                     </div>
                 </div>
                 <div class="activity-back-btn">

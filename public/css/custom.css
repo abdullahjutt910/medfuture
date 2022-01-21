@@ -1503,7 +1503,7 @@ div.dataTables_wrapper div.dataTables_info {
 }
 .candidate-progress-bar .progress {
     border-radius: 3px;
-    width: 12px !important;
+    width: 11px !important;
     height: 225px !important;
     margin-right: 12px !important;
     margin-bottom: 0px;
@@ -1525,7 +1525,7 @@ div.dataTables_wrapper div.dataTables_info {
     position: absolute;
     display: inline-block;
     bottom: 25px;
-    left: -15px;
+    left: -16px;
     width: 42px;
     font-size: 8px;
     font-family: "lato", sans-serif;
@@ -2025,8 +2025,8 @@ textarea{
     border: none;
 }
 .candidate-profile-table .dataTables_paginate{
-    position: absolute;
-    bottom: 223px;
+    position: relative;
+    bottom: 258px;
     right: 25px;
 }
 .candidate-profile-table .dataTables_filter{
@@ -2339,7 +2339,7 @@ textarea{
 }
 
 
-.nurse-seniority-d-none, .nurse-specialty-d-none, .AHP-Specialty-d-none, .HE-Specialty-d-none{
+.doctor-specialty-d-none, .nurse-seniority-d-none, .nurse-specialty-d-none, .AHP-Specialty-d-none, .HE-Specialty-d-none{
     display: none;
 }
 
@@ -2411,4 +2411,88 @@ textarea{
 .activity-data-d-none{
     display: none;
 }
+.profile-eidt-form .profile-eidt-form-inner .calendar{
+    top: 33px;
+}
+.popup-activity, .popup-pipeline-form, .popup-pipeline{
+    display: none;
+    position: fixed;
+    width: 500px;
+    border-radius: 10px;
+    min-height: 300px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgb(14 14 14 / 35%);
+    z-index: 9999;
+    left: 37%;
+    top: 17%;
+}
+.activity-form .profile-eidt-form-btn input, .pipeline-form .profile-eidt-form-btn input{
+    float: left;
+    margin-right: 10px;
+}
+.popup-pipeline{
+    width: 700px;
+    min-height: 500px;
+    top: 14%;
+    left: 33%;
+    padding: 30px 0px;
+}
+.pipeline-search{
+    display: flex;
+}
+.pipeline-search input{
+    border-right: 0px;
+}
+.pipeline-search-txt{
+    background: #1060A9;
+    min-width: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #1060A9;
+    color: #fff;
+}
+.pipeline-search-form{
+    padding-top: 20px;
+}
+.popup-pipeline h3{
+    margin-top: 0px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #d1d1d1;
+}
+.popup-pipeline-heading-1{
+    background: grey;
+    padding: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: #fff;
+}
+.cross-icon{
+    position: absolute;
+    top: 30px;
+    right: 22px;
+    cursor: pointer;
+}
+.search-client-btn, .search-job-title-btn{
+    cursor: pointer;
+}
+.padd-20{
+    padding: 0px 20px;
+}
 /*//////////////////////////////////// Single Candidate Profile   styling end here /////////////////////////////////////*/
+
+
+
+
+/* client profile start here*/
+.client-progress{
+    display: none;
+}
+.client-progress .candidate-progress-bar .progress{
+    margin-right: 50px !important;
+}
+/*  */
