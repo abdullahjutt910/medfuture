@@ -32,7 +32,6 @@ class CreateInterviewsTable extends Migration
             $table->string('uniform_allowance')->nullable();
             $table->string('moratorium_restriction')->nullable();
             $table->string('location_restriction')->nullable();
-            $table->string('training_program')->nullable();
             $table->string('medical_board_condition')->nullable();
             $table->string('medical_board_undertaking')->nullable();
             $table->string('skill')->nullable();

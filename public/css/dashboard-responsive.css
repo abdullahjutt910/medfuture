@@ -34,14 +34,35 @@
         margin: 20px 10px;
     }
     .candidate-progress-bar .progress{
-        margin-right: 1px !important;
+        margin-right: 4px !important;
     }
-    /* .percent{
-
-    } */
+    .progress-line::after{
+        bottom: -7px;
+    }
+    .percent {
+        width: 80px;
+        height: 80px;
+    }
+    .percent svg{
+        transform: scale(.4) !important;
+        left: -21px !important;
+        top: -28px !important;
+    }
+    .counter-txt p {
+        font-size: 8px;
+    }
+    .notification-btns .btn{
+        font-size: 10px;
+    }
 }
 
 @media (min-width: 992px) {
+    .referrals-left{
+        width: 330px;
+     }
+     .job-summary {
+        width: calc(100% - 330px);
+    }
     /* sidebar hover */
 .sidebar-mini.sidebar-collapse .main-sidebar{
     width: 60px !important;

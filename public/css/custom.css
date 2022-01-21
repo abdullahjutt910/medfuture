@@ -671,6 +671,7 @@ tr.no-row {
 }
 
 .table thead tr:last-child th:first-child{
+    border-radius: 10px 0px 0px 10px;
     vertical-align: middle !important;
 }
 table.dataTable tbody td.select-checkbox:before, table.dataTable tbody th.select-checkbox:before{
@@ -2483,6 +2484,9 @@ textarea{
 .padd-20{
     padding: 0px 20px;
 }
+.gray-color{
+    background-color: gray !important;
+}
 /*//////////////////////////////////// Single Candidate Profile   styling end here /////////////////////////////////////*/
 
 
@@ -2494,5 +2498,8 @@ textarea{
 }
 .client-progress .candidate-progress-bar .progress{
     margin-right: 50px !important;
+}
+.client-progress .candidate-progress-bar .progress{
+    width: 50px !important;
 }
 /*  */

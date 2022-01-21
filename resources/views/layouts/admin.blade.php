@@ -596,8 +596,10 @@
         $(".popup-activity").hide();
       })
 
-     
-      
+      $(".files-edit-btn, .refere-doc-edit-btn, .audio-edit-btn").click(function(){
+        $(".profile-buttons img").removeClass("gray-color");
+      })
+
     })
 
     </script>
