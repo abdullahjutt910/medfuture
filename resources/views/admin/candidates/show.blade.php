@@ -2264,11 +2264,7 @@
 
                                             <p class="summary-id">ID: AH5841</p>
                                             <div class="job-summary-eidt">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem est
-                                                rerum
-                                                placeat nobis voluptates fuga in laudantium cumque veniam! Suscipit at
-                                                esse
-                                                tenetur neque cumque, amet quasi incidunt voluptatibus?</p>
+                                            <p>{{$candidate->interview->Job_Summary ?? ''}}</p>
                                             <div class="summary-bottom">
                                                 <p>Last Updated Date 01st November, 2021</p>
                                                 <div class="edit-brn">

@@ -159,7 +159,8 @@ class CandidateController extends Controller
         $interview->medical_board_condition = $request->medical_board_condition;
         $interview->medical_board_undertaking = $request->medical_board_undertaking;
         $interview->skill = $request->skill;
-        $interview->program_type = $request->program_type;
+        $interview->employment_type = $request->employment_type;
+        $interview->Job_Summary = $request->Job_Summary;
         $interview->interview_notes = $request->interview_notes;
         $interview->save();
 
@@ -296,7 +297,7 @@ class CandidateController extends Controller
         $interview->medical_board_condition = $request->medical_board_condition;
         $interview->medical_board_undertaking = $request->medical_board_undertaking;
         $interview->skill = $request->skill;
-        $interview->program_type = $request->program_type;
+        $interview->Job_Summary = $request->Job_Summary;
         $interview->interview_notes = $request->interview_notes;
         $interview->save();
         return back();
