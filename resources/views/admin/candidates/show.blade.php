@@ -963,7 +963,7 @@
                                                         </div>
                                                         <div class="col-md-10 padd-12">
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Original CV .pdf</h5>
+                                                                <h5 class="card-title">{{$candidate->cv_document ?? 'no file'}}</h5>
                                                                 <p class="card-text"><small
                                                                         class="text-muted">58KB</small></p>
                                                             </div>
@@ -990,9 +990,12 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
-                                                    <a href="#">
+                                                    {{-- @if($candidate->cv_document)
+                                            <a href="{{ url('files/'. $candidate->cv_document) }}" target="_blank">{{ trans('global.view_file') }}</a>
+                                            @endif --}}
+                                                    <a href="{{ url('files/'. $candidate->cv_document ?? 'no file') }}" target="_blank">
                                                         <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
-                                                            alt="Eye">
+                                                            alt="Eye" >
                                                     </a>
                                                     <a href="#">
                                                         <img src="{{asset('img/dashboard/Download.png')}}"
@@ -1026,7 +1029,7 @@
                                                         </div>
                                                         <div class="col-md-10 padd-12">
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Original CV .pdf</h5>
+                                                                <h5 class="card-title">{{$candidate->registration_form_document ?? 'no file'}}</h5>
                                                                 <p class="card-text"><small
                                                                         class="text-muted">58KB</small></p>
                                                             </div>
@@ -1053,7 +1056,7 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
-                                                    <a href="#">
+                                                    <a href="{{ url('files/'. $candidate->registration_form_document ?? 'no file') }}" target="_blank">
                                                         <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                             alt="Eye">
                                                     </a>
@@ -1089,7 +1092,7 @@
                                                         </div>
                                                         <div class="col-md-10 padd-12">
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Original CV .pdf</h5>
+                                                                <h5 class="card-title">{{$candidate->privacy_concerns ?? 'no file'}}</h5>
                                                                 <p class="card-text"><small
                                                                         class="text-muted">58KB</small></p>
                                                             </div>
@@ -1116,8 +1119,10 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
-                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
-                                                        alt="Eye">
+                                                    <a href="{{ url('files/'. $candidate->privacy_concerns ?? 'no file') }}" target="_blank">
+                                                        <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
+                                                            alt="Eye">
+                                                    </a>
                                                     <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
                                                         alt="download">
                                                     <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
@@ -1551,72 +1556,72 @@
                                             <form action="" class="row">
                                                 <div class="col-md-4 profile-eidt-form-inner">
                                                     <label for="contacted">Contacted</label>
-                                                    <input class="form-control" type="text" name="contacted"
+                                                    <input class="form-control" type="number" name="contacted"
                                                         id="contacted" value="5">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
                                                     <label for="initial_screening">Initial Screening</label>
-                                                    <input class="form-control" type="text" name="initial_screening"
+                                                    <input class="form-control" type="number" name="initial_screening"
                                                         id="initial_screening" value="40">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
                                                     <label for="short_listed">Short Listed</label>
-                                                    <input class="form-control" type="text" name="short_listed"
+                                                    <input class="form-control" type="number" name="short_listed"
                                                         id="short_listed" value="50">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
                                                     <label for="shelved">Shelved</label>
-                                                    <input class="form-control" type="text" name="shelved" id="shelved"
+                                                    <input class="form-control" type="number" name="shelved" id="shelved"
                                                         value="5">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
                                                     <label for="job_matching">Job Matching</label>
-                                                    <input class="form-control" type="text" name="job_matching"
+                                                    <input class="form-control" type="number" name="job_matching"
                                                         id="job_matching" value="40">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
                                                     <label for="submissions">Submissions</label>
-                                                    <input class="form-control" type="text" name="submissions"
+                                                    <input class="form-control" type="number" name="submissions"
                                                         id="submissions" value="50">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
                                                     <label for="declined">Declined</label>
-                                                    <input class="form-control" type="text" name="declined"
+                                                    <input class="form-control" type="number" name="declined"
                                                         id="declined" value="5">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
                                                     <label for="interviews">Interviews</label>
-                                                    <input class="form-control" type="text" name="interviews"
+                                                    <input class="form-control" type="number" name="interviews"
                                                         id="interviews" value="40">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
                                                     <label for="due_check">Due Diligence Check</label>
-                                                    <input class="form-control" type="text" name="due_check"
+                                                    <input class="form-control" type="number" name="due_check"
                                                         id="due_check" value="50">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
                                                     <label for="offered">Offered</label>
-                                                    <input class="form-control" type="text" name="offered" id="offered"
+                                                    <input class="form-control" type="number" name="offered" id="offered"
                                                         value="5">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
                                                     <label for="rejected ">Rejected / Accepted</label>
-                                                    <input class="form-control" type="text" name="rejected "
+                                                    <input class="form-control" type="number" name="rejected "
                                                         id="rejected " value="40">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
                                                     <label for="placed">Placed</label>
-                                                    <input class="form-control" type="text" name="placed" id="placed"
+                                                    <input class="form-control" type="number" name="placed" id="placed"
                                                         value="50">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
                                                     <label for="archived ">Archived</label>
-                                                    <input class="form-control" type="text" name="archived "
+                                                    <input class="form-control" type="number" name="archived "
                                                         id="Archived " value="40">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
                                                     <label for="testimony">Testimony</label>
-                                                    <input class="form-control" type="text" name="testimony"
+                                                    <input class="form-control" type="number" name="testimony"
                                                         id="Testimony" value="50">
                                                 </div>
                                                 <div class="col-md-12 profile-eidt-form-btn">
@@ -2266,7 +2271,7 @@
                                             <div class="job-summary-eidt">
                                             <p>{{$candidate->interview->job_summary ?? ''}}</p>
                                             <div class="summary-bottom">
-                                                <p>Last Updated Date 01st November, 2021</p>
+                                                <p>Last Updated Date : {{$candidate->interview->updated_at ?? ''}}</p>
                                                 <div class="edit-brn">
                                                     <button class="btn job-summary-eidt-btn"><img
                                                             src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"

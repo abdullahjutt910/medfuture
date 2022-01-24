@@ -327,14 +327,6 @@ class CandidateController extends Controller
 
         return back();
     }
-    public function update_interviewsummary(Request $request,$id)
-    {
-        $interviewsumery = Interview::where('candidate_id',$id)->first();
-        // dd($request->all());
-        $interviewsumery->job_summary = $request->job_summary;
-        $interviewsumery->save();
-        return back();
-    }
 
     public function massDestroy(MassDestroyCandidateRequest $request)
     {
