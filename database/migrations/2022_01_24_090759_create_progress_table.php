@@ -16,19 +16,19 @@ class CreateProgressTable extends Migration
         Schema::create('progress', function (Blueprint $table) {
             $table->id();
             $table->string('contacted')->nullable();
-            $table->string('Initial_Screening')->nullable();
-            $table->string('Short_Listed')->nullable();
-            $table->string('Shelved')->nullable();
-            $table->string('Job_Matching')->nullable();
-            $table->string('Submissions')->nullable();
-            $table->string('Declined')->nullable();
-            $table->string('Interviews')->nullable();
-            $table->string('Due_Check')->nullable();
-            $table->string('Offered')->nullable();
-            $table->string('Rejected')->nullable();
-            $table->string('Placed')->nullable();
-            $table->string('Archived')->nullable();
-            $table->string('Testimony')->nullable();
+            $table->string('initial_screening')->nullable();
+            $table->string('short_listed')->nullable();
+            $table->string('shelved')->nullable();
+            $table->string('job_matching')->nullable();
+            $table->string('submissions')->nullable();
+            $table->string('declined')->nullable();
+            $table->string('interviews')->nullable();
+            $table->string('due_Check')->nullable();
+            $table->string('offered')->nullable();
+            $table->string('rejected')->nullable();
+            $table->string('placed')->nullable();
+            $table->string('archived')->nullable();
+            $table->string('testimony')->nullable();
             $table->timestamps();
         });
     }
