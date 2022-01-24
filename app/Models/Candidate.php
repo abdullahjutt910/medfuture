@@ -1398,6 +1398,11 @@ class Candidate extends Model implements HasMedia
         return $this->belongsTo(Interview::class,'id','candidate_id');
     }
 
+    public function progbar()
+    {
+        return $this->belongsTo(Progbar::class,'id','candidate_id');
+    }
+
     protected function serializeDate(DateTimeInterface $date)
     {
         return $date->format('Y-m-d H:i:s');

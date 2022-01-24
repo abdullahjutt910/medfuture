@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Progress extends Model
+class Progbar extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -17,11 +17,12 @@ class Progress extends Model
         'submissions',
         'declined',
         'interviews',
-        'due_Check',
+        'due_check',
         'offered',
         'rejected',
         'placed',
         'archived',
         'testimony',
     ];
+   
 }
