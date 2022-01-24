@@ -33,6 +33,7 @@ class Interview extends Model
         'interview_notes',
         'employment_type',
         'program_type',
+        'Job_Summary',
         'created_at',
         'updated_at',
     ];
