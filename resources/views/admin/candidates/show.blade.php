@@ -1550,73 +1550,73 @@
                                         <div class="counter-circle-form">
                                             <form action="" class="row">
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Contacted">Contacted</label>
+                                                    <label for="contacted">Contacted</label>
                                                     <input class="form-control" type="text" name="contacted"
                                                         id="contacted" value="5">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Initial_Screening">Initial Screening</label>
-                                                    <input class="form-control" type="text" name="Initial_Screening"
-                                                        id="Initial_Screening" value="40">
+                                                    <label for="initial_screening">Initial Screening</label>
+                                                    <input class="form-control" type="text" name="initial_screening"
+                                                        id="initial_screening" value="40">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Short_Listed">Short Listed</label>
-                                                    <input class="form-control" type="text" name="Short_Listed"
-                                                        id="Short_Listed" value="50">
+                                                    <label for="short_listed">Short Listed</label>
+                                                    <input class="form-control" type="text" name="short_listed"
+                                                        id="short_listed" value="50">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Shelved">Shelved</label>
-                                                    <input class="form-control" type="text" name="Shelved" id="Shelved"
+                                                    <label for="shelved">Shelved</label>
+                                                    <input class="form-control" type="text" name="shelved" id="shelved"
                                                         value="5">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Job_Matching">Job Matching</label>
-                                                    <input class="form-control" type="text" name="Job_Matching"
-                                                        id="Job_Matching" value="40">
+                                                    <label for="job_matching">Job Matching</label>
+                                                    <input class="form-control" type="text" name="job_matching"
+                                                        id="job_matching" value="40">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Submissions">Submissions</label>
-                                                    <input class="form-control" type="text" name="Submissions"
-                                                        id="Submissions" value="50">
+                                                    <label for="submissions">Submissions</label>
+                                                    <input class="form-control" type="text" name="submissions"
+                                                        id="submissions" value="50">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Declined">Declined</label>
-                                                    <input class="form-control" type="text" name="Declined"
-                                                        id="Declined" value="5">
+                                                    <label for="declined">Declined</label>
+                                                    <input class="form-control" type="text" name="declined"
+                                                        id="declined" value="5">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Interviews">Interviews</label>
-                                                    <input class="form-control" type="text" name="Interviews"
-                                                        id="Interviews" value="40">
+                                                    <label for="interviews">Interviews</label>
+                                                    <input class="form-control" type="text" name="interviews"
+                                                        id="interviews" value="40">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Due_Check">Due Diligence Check</label>
-                                                    <input class="form-control" type="text" name="Due_Check"
-                                                        id="Due_Check" value="50">
+                                                    <label for="due_check">Due Diligence Check</label>
+                                                    <input class="form-control" type="text" name="due_check"
+                                                        id="due_check" value="50">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Offered">Offered</label>
-                                                    <input class="form-control" type="text" name="Offered" id="Offered"
+                                                    <label for="offered">Offered</label>
+                                                    <input class="form-control" type="text" name="offered" id="offered"
                                                         value="5">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Rejected ">Rejected / Accepted</label>
-                                                    <input class="form-control" type="text" name="Rejected "
-                                                        id="Rejected " value="40">
+                                                    <label for="rejected ">Rejected / Accepted</label>
+                                                    <input class="form-control" type="text" name="rejected "
+                                                        id="rejected " value="40">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Placed">Placed</label>
-                                                    <input class="form-control" type="text" name="Placed" id="Placed"
+                                                    <label for="placed">Placed</label>
+                                                    <input class="form-control" type="text" name="placed" id="placed"
                                                         value="50">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Archived ">Archived</label>
-                                                    <input class="form-control" type="text" name="Archived "
+                                                    <label for="archived ">Archived</label>
+                                                    <input class="form-control" type="text" name="archived "
                                                         id="Archived " value="40">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Testimony">Testimony</label>
-                                                    <input class="form-control" type="text" name="Testimony"
+                                                    <label for="testimony">Testimony</label>
+                                                    <input class="form-control" type="text" name="testimony"
                                                         id="Testimony" value="50">
                                                 </div>
                                                 <div class="col-md-12 profile-eidt-form-btn">
