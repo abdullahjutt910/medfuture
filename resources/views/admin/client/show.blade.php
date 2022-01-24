@@ -33,12 +33,12 @@
                             <div class="col-md-4 profile-left">
                                 <div class="profile-information">
                                     <div class="card candi-profile">
-                                        <img src=" {{asset('img/dashboard/profile.png')}}"
+                                        <img src=" {{asset('img/dashboard/company-logo.png')}}"
                                             class="card-img-top img-fluid" alt="profile-img">
                                         <div class="card-body">
                                             <h5 class="card-title">Register Company Name</h5>
                                             <p class="card-text">Company Name</p>
-                                            <!-- <img src="{{asset('img/dashboard/profile.png')}}" class="card-img-top img-fluid" alt=""> -->
+                                            <img src="{{asset('img/dashboard/Company.png')}}" class="company-icon card-img-top img-fluid" alt="">
                                             <p class="card-text">ABN Number</p>
                                             <a href="#" class="btn">ID: AH5841</a>
                                         </div>
@@ -772,61 +772,6 @@
                                     </div>
 
                                 </div>
-                                <div class="row profile-details-upload">
-                                    <div class="col-md-12">
-                                        <div class="row profile-details">
-                                            <div class="col-md-4">
-                                                <div class="card mb-3">
-                                                    <div class="row g-0">
-                                                        <div class="col-md-2 card-img">
-                                                            <img src="{{asset('img/dashboard/PDF.png')}}"
-                                                                class="img-fluid  pdf-upload rounded-start" alt="...">
-                                                        </div>
-                                                        <div class="col-md-10 padd-12">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">Original CV .pdf</h5>
-                                                                <p class="card-text"><small
-                                                                        class="text-muted">58KB</small></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="card mb-3">
-                                                    <div class="row g-0">
-                                                        <div class="col-md-1 card-img">
-                                                            <img src="{{asset('img/dashboard/Calendar.png')}}"
-                                                                class="img-fluid rounded-start" alt="...">
-                                                        </div>
-                                                        <div class="col-md-11 padd-12">
-                                                            <div class="card-body">
-                                                                <h5 class="card-title">Applied Date</h5>
-                                                                <p class="card-text"><small
-                                                                        class="text-muted">12/1/2021</small></p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-md-4">
-                                                <div class="profile-buttons">
-                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
-                                                        alt="Eye">
-                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
-                                                        alt="download">
-                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid"
-                                                        alt="Upload">
-                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                        class="img-fluid" alt="Delete-Trash">
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                    </div>
-
-                                </div>
                                 <div class="edit-brn">
                                     <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
                                             class="img-fluid" alt="Edit-img"> Edit</button>
@@ -847,7 +792,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-5 referrals-left">
-                                <div class="row candidate-referrals">
+                                <div class="row candidate-referrals client-progress">
                                     <div class="col-md-12">
                                         <div class="referrals-txt">
                                             <h3>Value Proposition</h3>
@@ -866,85 +811,45 @@
                                                 <span class="date-background"></span>
                                             </div>
                                         </div>
-
-                                        <div class="referrals-award">
-                                            <div class="referrals-award-inner">
-                                                <h5>Medfuture <br> Doctor</h5>
-                                                <div>
-                                                    <img src=" {{asset('img/dashboard/credit-card-chip.png')}}"
-                                                        class="img-fluid" alt="Edit-img">
-                                                    <img src=" {{asset('img/dashboard/Spotlight.png')}}"
-                                                        class="img-fluid" alt="Edit-img">
+                                        <div class="revenue-bar">
+                                            <div class="candidate-progress-bar">
+                                                <span class="progress-line"></span>
+                                                <div class="progress vertical">
+                                                    <div class="progress-bar Contacted" role="progressbar" aria-valuenow="0"
+                                                        aria-valuemin="0" aria-valuemax="100"><span
+                                                            class="bar-txt">A$20</span></div>
                                                 </div>
-                                            </div>
-                                            <div class=" referrals_dollar">
-                                                <p style="display:none;">20</p>
-                                                <span>A$</span>
-                                            </div>
-                                            <!-- <div class="award">
-                                                <div class="award-circle">
-                                                    <span class="dollar">
-                                                        <h2>A$20</h2>
-                                                    </span>
+                                                <span class="revenue-bar-perm">Permanent</span>
+
+                                                <div class="progress vertical">
+                                                    <div class="progress-bar Int-scr" role="progressbar" aria-valuenow="25"
+                                                        aria-valuemin="0" aria-valuemax="100"><span
+                                                            class="bar-txt">A$10</span></div>
                                                 </div>
-                                            </div> -->
-                                            <div class="master-card">
-                                                <img src=" {{asset('img/dashboard/master-card.png')}}" class="img-fluid"
-                                                    alt="Edit-img">
-                                            </div>
-                                            <div class="forms-colored-div">
-                                                <div class="blue"></div>
-                                                <div class="purple"></div>
-                                                <div class="pink"></div>
-                                            </div>
-                                        </div>
+                                                <span class="revenue-bar-locum">Locum</span>
 
-                                        <p>Refer a friend today and boost your income !</p>
-                                        <div class="edit-brn">
-                                            <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
-                                                    class="img-fluid" alt="Edit-img"> Edit</button>
-                                        </div>
-                                    </div>
-                                    <div class="forms-colored-div">
-                                        <div class="blue"></div>
-                                        <div class="purple"></div>
-                                        <div class="pink"></div>
-                                    </div>
-                                </div>
-
-                                <div class="row candidate-progress client-progress">
-                                    <div class="col-md-12">
-                                        <div class="candidate-date">
-                                            <div class="form-group">
-                                                <select class="form-control" name="title" id="title" required="">
-                                                    <option value="" selected="">2020-2021</option>
-                                                    <option value="2019-2020">2019-2020</option>
-                                                    <option value="2018-2019">2018-2019</option>
-                                                    <option value="2017-2018">2017-2018</option>
-                                                    <option value="2016-2017">2016-2017</option>
-                                                    <option value="2015-2016">2015-2016</option>
-                                                </select>
-                                                <i class="fas fa-sort-down"></i>
                                             </div>
-                                            <span class="date-background"></span>
+                                            <span class="revenue-txt">Revenue</span>
                                         </div>
-                                        <div class="candidate-progress-txt">
-                                            <h3>Placement Progress</h3>
-                                        </div>
-                                        <div class="candidate-progress-bar">
-                                            <span class="progress-line"></span>
-                                            <div class="progress vertical">
-                                                <div class="progress-bar Contacted" role="progressbar" aria-valuenow="0"
-                                                    aria-valuemin="0" aria-valuemax="100"><span
-                                                        class="bar-txt">Contacted</span></div>
-                                            </div>
-                                            <div class="progress vertical">
-                                                <div class="progress-bar Int-scr" role="progressbar" aria-valuenow="25"
-                                                    aria-valuemin="0" aria-valuemax="100"><span
-                                                        class="bar-txt">Initial Screening</span></div>
-                                            </div>
+                                        <div class="revenue-bar">
+                                            <div class="candidate-progress-bar">
+                                                <span class="progress-line"></span>
+                                                <div class="progress vertical">
+                                                    <div class="progress-bar Contacted" role="progressbar" aria-valuenow="0"
+                                                        aria-valuemin="0" aria-valuemax="100"><span
+                                                            class="bar-txt">A$20</span></div>
+                                                </div>
+                                                <span class="revenue-bar-perm">Promotional</span>
 
+                                                <div class="progress vertical">
+                                                    <div class="progress-bar Int-scr" role="progressbar" aria-valuenow="25"
+                                                        aria-valuemin="0" aria-valuemax="100"><span
+                                                            class="bar-txt">A$10</span></div>
+                                                </div>
+                                                <span class="revenue-bar-locum">Refunds</span>
 
+                                            </div>
+                                            <span class="revenue-txt">Expenses</span>
                                         </div>
                                         <div class="edit-brn">
                                             <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
@@ -974,7 +879,7 @@
                                             <span class="date-background"></span>
                                         </div>
                                         <div class="candidate-progress-txt">
-                                            <h3>Candidate Recruitment Progress</h3>
+                                            <h3>Placement Progress</h3>
                                         </div>
                                         <div class="candidate-progress-bar">
                                             <span class="progress-line"></span>
