@@ -2275,7 +2275,7 @@
                                             </div>
                                         </div>
                                         <div class="job-summary-d-none">
-                                            <form action="{{url('update_interviewSummary')}}/{{$candidate->id}}" class="row" method="POST">
+                                            <form action="{{url('update_interviewsummary')}}/{{$candidate->id}}" class="row" method="POST">
                                                 @csrf
                                                 {{-- <input type="hidden" name="id" value="{{$candidate->id}}"> --}}
                                                 <div class="col-md-12 profile-eidt-form-inner">

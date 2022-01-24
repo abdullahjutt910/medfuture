@@ -302,7 +302,7 @@ class CandidateController extends Controller
         return back();
 
     }
-    public function update_interviewSummary(Request $request,$id)
+    public function update_interviewsummary(Request $request,$id)
     {
 
         $interviewsumery = Interview::where('candidate_id',$id)->first();
