@@ -66,8 +66,11 @@ Route::post('update1/{id}',[CandidateController::class,'update1']);
 Route::post('update2/{id}',[CandidateController::class,'update2']);
 Route::post('update3/{id}',[CandidateController::class,'update3']);
 Route::post('update_interview/{id}',[CandidateController::class,'updateInterview'])->name('interview');
+Route::post('update_interviewsummary/{id}',[CandidateController::class,'update_interviewsummary'])->name('update_interviewsummary');
 Route::get('add_client',[ClientController::class,'index'])->name('add_client');
 Route::get('show_client',[ClientController::class,'show'])->name('show_client');
+Route::post('update_progress/{id}',[CandidateController::class,'updateProgress'])->name('update_progress');
+
 
 
 

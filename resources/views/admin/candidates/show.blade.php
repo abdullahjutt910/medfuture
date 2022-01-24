@@ -963,7 +963,7 @@
                                                         </div>
                                                         <div class="col-md-10 padd-12">
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Original CV .pdf</h5>
+                                                                <h5 class="card-title">{{$candidate->cv_document ?? 'no file'}}</h5>
                                                                 <p class="card-text"><small
                                                                         class="text-muted">58KB</small></p>
                                                             </div>
@@ -990,9 +990,12 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
-                                                    <a href="#">
+                                                    {{-- @if($candidate->cv_document)
+                                            <a href="{{ url('files/'. $candidate->cv_document) }}" target="_blank">{{ trans('global.view_file') }}</a>
+                                            @endif --}}
+                                                    <a href="{{ url('files/'. $candidate->cv_document ?? 'no file') }}" target="_blank">
                                                         <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
-                                                            alt="Eye">
+                                                            alt="Eye" >
                                                     </a>
                                                     <a href="#">
                                                         <img src="{{asset('img/dashboard/Download.png')}}"
@@ -1026,7 +1029,7 @@
                                                         </div>
                                                         <div class="col-md-10 padd-12">
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Original CV .pdf</h5>
+                                                                <h5 class="card-title">{{$candidate->registration_form_document ?? 'no file'}}</h5>
                                                                 <p class="card-text"><small
                                                                         class="text-muted">58KB</small></p>
                                                             </div>
@@ -1053,7 +1056,7 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
-                                                    <a href="#">
+                                                    <a href="{{ url('files/'. $candidate->registration_form_document ?? 'no file') }}" target="_blank">
                                                         <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                             alt="Eye">
                                                     </a>
@@ -1089,7 +1092,7 @@
                                                         </div>
                                                         <div class="col-md-10 padd-12">
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Original CV .pdf</h5>
+                                                                <h5 class="card-title">{{$candidate->privacy_concerns ?? 'no file'}}</h5>
                                                                 <p class="card-text"><small
                                                                         class="text-muted">58KB</small></p>
                                                             </div>
@@ -1116,8 +1119,10 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
-                                                    <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
-                                                        alt="Eye">
+                                                    <a href="{{ url('files/'. $candidate->privacy_concerns ?? 'no file') }}" target="_blank">
+                                                        <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
+                                                            alt="Eye">
+                                                    </a>
                                                     <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
                                                         alt="download">
                                                     <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
@@ -1408,7 +1413,8 @@
 
                                                     </div> -->
                                                     <div class="percent Contacted">
-                                                        <p style="display:none;">50</p>
+                                                        <p style="display:none;">{{$candidate->progbar->contacted ?? ''}}</p>
+
                                                         <div class="counter-txt">
                                                             <p>Contacted</p>
                                                         </div>
@@ -1417,7 +1423,7 @@
                                                 <div class="col-md-4">
 
                                                     <div class="percent Int-scr">
-                                                        <p style="display:none;">0</p>
+                                                        <p style="display:none;">{{$candidate->progbar->initial_screening ?? ''}}</p>
                                                         <div class="counter-txt">
                                                             <p>Initial Screening</p>
                                                         </div>
@@ -1425,7 +1431,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="percent Short-Listed">
-                                                        <p style="display:none;">0</p>
+                                                        <p style="display:none;">{{$candidate->progbar->short_listed ?? ''}}</p>
                                                         <div class="counter-txt">
                                                             <p>Short Listed</p>
                                                         </div>
@@ -1435,7 +1441,7 @@
                                             <div class="row m-20">
                                                 <div class="col-md-4">
                                                     <div class="percent Shelved">
-                                                        <p style="display:none;">2</p>
+                                                        <p style="display:none;">{{$candidate->progbar->shelved ?? ''}}</p>
                                                         <div class="counter-txt">
                                                             <p>Shelved</p>
                                                         </div>
@@ -1444,7 +1450,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="percent Job-Match">
-                                                        <p style="display:none;">0</p>
+                                                        <p style="display:none;">{{$candidate->progbar->job_matching ?? ''}}</p>
                                                         <div class="counter-txt">
                                                             <p>Job Matching</p>
                                                         </div>
@@ -1453,7 +1459,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="percent Submissions">
-                                                        <p style="display:none;">20</p>
+                                                        <p style="display:none;">{{$candidate->progbar->submissions ?? ''}}</p>
                                                         <div class="counter-txt">
                                                             <p>Submissions</p>
                                                         </div>
@@ -1464,7 +1470,7 @@
                                             <div class="row m-20">
                                                 <div class="col-md-4">
                                                     <div class="percent Declined">
-                                                        <p style="display:none;">10</p>
+                                                        <p style="display:none;">{{$candidate->progbar->declined ?? ''}}</p>
                                                         <div class="counter-txt">
                                                             <p>Declined</p>
                                                         </div>
@@ -1473,7 +1479,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="percent Interviews">
-                                                        <p style="display:none;">10</p>
+                                                        <p style="display:none;">{{$candidate->progbar->interviews ?? ''}}</p>
                                                         <div class="counter-txt">
                                                             <p>Interviews</p>
                                                         </div>
@@ -1482,7 +1488,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="percent Due-check">
-                                                        <p style="display:none;">0</p>
+                                                        <p style="display:none;">{{$candidate->progbar->due_check ?? ''}}</p>
                                                         <div class="counter-txt">
                                                             <p>Due Diligence Check</p>
                                                         </div>
@@ -1493,7 +1499,7 @@
                                             <div class="row m-20">
                                                 <div class="col-md-4">
                                                     <div class="percent Offered">
-                                                        <p style="display:none;">2</p>
+                                                        <p style="display:none;">{{$candidate->progbar->offered ?? ''}}</p>
                                                         <div class="counter-txt">
                                                             <p>Offered</p>
                                                         </div>
@@ -1502,7 +1508,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="percent Rejected-accpt">
-                                                        <p style="display:none;">2</p>
+                                                        <p style="display:none;">{{$candidate->progbar->rejected ?? ''}}</p>
                                                         <div class="counter-txt">
                                                             <p>Rejected / Accepted</p>
                                                         </div>
@@ -1511,7 +1517,7 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="percent Placed">
-                                                        <p style="display:none;">0</p>
+                                                        <p style="display:none;">{{$candidate->progbar->placed ?? ''}}</p>
                                                         <div class="counter-txt">
                                                             <p>Placed</p>
                                                         </div>
@@ -1522,7 +1528,7 @@
                                             <div class="row m-20">
                                                 <div class="col-md-4">
                                                     <div class="percent Archived">
-                                                        <p style="display:none;">2</p>
+                                                        <p style="display:none;">{{$candidate->progbar->archived ?? ''}}</p>
                                                         <div class="counter-txt">
                                                             <p>Archived</p>
                                                         </div>
@@ -1531,92 +1537,91 @@
                                                 </div>
                                                 <div class="col-md-4">
                                                     <div class="percent Testimony">
-                                                        <p style="display:none;">0</p>
+                                                        <p style="display:none;">{{$candidate->progbar->testimony ?? ''}}</p>
                                                         <div class="counter-txt">
                                                             <p>Testimony</p>
                                                         </div>
                                                     </div>
-
                                                 </div>
-
                                             </div>
                                             <div class="edit-brn">
                                                 <button class="btn counter-edit-btn"><img
-                                                        src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
-                                                        alt="Edit-img"> Edit</button>
+                                                    src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
+                                                alt="Edit-img"> Edit</button>
                                             </div>
                                         </div>
                                         <div class="counter-circle-form">
-                                            <form action="" class="row">
+                                            <form action="{{ url('update_progress')}}/{{$candidate->id}}" method="POST" class="row">
+                                                @csrf
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Contacted">Contacted</label>
-                                                    <input class="form-control" type="text" name="contacted"
-                                                        id="contacted" value="5">
+                                                    <label for="contacted">Contacted</label>
+                                                    <input class="form-control" type="number" name="contacted"
+                                                        id="contacted" value="{{old('contacted',$candidate->progbar->contacted ?? '')}}">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Initial_Screening">Initial Screening</label>
-                                                    <input class="form-control" type="text" name="Initial_Screening"
-                                                        id="Initial_Screening" value="40">
+                                                    <label for="initial_screening">Initial Screening</label>
+                                                    <input class="form-control" type="number" name="initial_screening"
+                                                        id="initial_screening" value="{{old('initial_screening',$candidate->progbar->initial_screening ?? '') }}">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Short_Listed">Short Listed</label>
-                                                    <input class="form-control" type="text" name="Short_Listed"
-                                                        id="Short_Listed" value="50">
+                                                    <label for="short_listed">Short Listed</label>
+                                                    <input class="form-control" type="number" name="short_listed"
+                                                        id="short_listed" value="{{old('short_listed',$candidate->progbar->short_listed ?? '') }}">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Shelved">Shelved</label>
-                                                    <input class="form-control" type="text" name="Shelved" id="Shelved"
-                                                        value="5">
+                                                    <label for="shelved">Shelved</label>
+                                                    <input class="form-control" type="number" name="shelved" id="shelved"
+                                                        value="{{old('shelved',$candidate->progbar->shelved ?? '') }}">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Job_Matching">Job Matching</label>
-                                                    <input class="form-control" type="text" name="Job_Matching"
-                                                        id="Job_Matching" value="40">
+                                                    <label for="job_matching">Job Matching</label>
+                                                    <input class="form-control" type="number" name="job_matching"
+                                                        id="job_matching" value="{{old('job_matching',$candidate->progbar->job_matching ?? '') }}">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Submissions">Submissions</label>
-                                                    <input class="form-control" type="text" name="Submissions"
-                                                        id="Submissions" value="50">
+                                                    <label for="submissions">Submissions</label>
+                                                    <input class="form-control" type="number" name="submissions"
+                                                        id="submissions" value="{{old('submissions',$candidate->progbar->submissions ?? '') }}">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Declined">Declined</label>
-                                                    <input class="form-control" type="text" name="Declined"
-                                                        id="Declined" value="5">
+                                                    <label for="declined">Declined</label>
+                                                    <input class="form-control" type="number" name="declined"
+                                                        id="declined" value="{{old('declined',$candidate->progbar->declined ?? '') }}">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Interviews">Interviews</label>
-                                                    <input class="form-control" type="text" name="Interviews"
-                                                        id="Interviews" value="40">
+                                                    <label for="interviews">Interviews</label>
+                                                    <input class="form-control" type="number" name="interviews"
+                                                        id="interviews" value="{{old('interviews',$candidate->progbar->interviews ?? '') }}">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Due_Check">Due Diligence Check</label>
-                                                    <input class="form-control" type="text" name="Due_Check"
-                                                        id="Due_Check" value="50">
+                                                    <label for="due_check">Due Diligence Check</label>
+                                                    <input class="form-control" type="number" name="due_check"
+                                                        id="due_check" value="{{old('due_check',$candidate->progbar->due_check ?? '') }}">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Offered">Offered</label>
-                                                    <input class="form-control" type="text" name="Offered" id="Offered"
-                                                        value="5">
+                                                    <label for="offered">Offered</label>
+                                                    <input class="form-control" type="number" name="offered" id="offered"
+                                                        value="{{old('offered',$candidate->progbar->offered ?? '') }}">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Rejected ">Rejected / Accepted</label>
-                                                    <input class="form-control" type="text" name="Rejected "
-                                                        id="Rejected " value="40">
+                                                    <label for="rejected">Rejected / Accepted</label>
+                                                    <input class="form-control" type="number" name="rejected"
+                                                        id="rejected" value="{{old('rejected',$candidate->progbar->rejected ?? '') }}">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Placed">Placed</label>
-                                                    <input class="form-control" type="text" name="Placed" id="Placed"
-                                                        value="50">
+                                                    <label for="placed">Placed</label>
+                                                    <input class="form-control" type="number" name="placed" id="placed"
+                                                        value="{{old('placed',$candidate->progbar->placed ?? '') }}">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Archived ">Archived</label>
-                                                    <input class="form-control" type="text" name="Archived "
-                                                        id="Archived " value="40">
+                                                    <label for="archived">Archived</label>
+                                                    <input class="form-control" type="number" name="archived"
+                                                        id="Archived" value="{{old('archived',$candidate->progbar->archived ?? '') }}">
                                                 </div>
                                                 <div class="col-md-4 profile-eidt-form-inner">
-                                                    <label for="Testimony">Testimony</label>
-                                                    <input class="form-control" type="text" name="Testimony"
-                                                        id="Testimony" value="50">
+                                                    <label for="testimony">Testimony</label>
+                                                    <input class="form-control" type="number" name="testimony"
+                                                        id="Testimony" value="{{old('testimony',$candidate->progbar->testimony ?? '') }}">
                                                 </div>
                                                 <div class="col-md-12 profile-eidt-form-btn">
                                                     <button class="btn back-btn">Back</button>
@@ -2260,16 +2265,12 @@
                                         </div>
 
                                         <h3>Job Summary</h3>
-                                       
-                                            <p class="summary-id">ID: AH5841</p>
+
+                                            <p class="summary-id">ID: {{$candidate->id}}</p>
                                             <div class="job-summary-eidt">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem est
-                                                rerum
-                                                placeat nobis voluptates fuga in laudantium cumque veniam! Suscipit at
-                                                esse
-                                                tenetur neque cumque, amet quasi incidunt voluptatibus?</p>
+                                            <p>{{$candidate->interview->job_summary ?? ''}}</p>
                                             <div class="summary-bottom">
-                                                <p>Last Updated Date 01st November, 2021</p>
+                                                <p>Last Updated Date : {{$candidate->interview->updated_at ?? ''}}</p>
                                                 <div class="edit-brn">
                                                     <button class="btn job-summary-eidt-btn"><img
                                                             src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
@@ -2278,10 +2279,12 @@
                                             </div>
                                         </div>
                                         <div class="job-summary-d-none">
-                                            <form action="" class="row">
+                                            <form action="{{url('update_interviewsummary')}}/{{$candidate->id}}" class="row" method="POST">
+                                                @csrf
+                                                {{-- <input type="hidden" name="id" value="{{$candidate->id}}"> --}}
                                                 <div class="col-md-12 profile-eidt-form-inner">
                                                     <label for="Job Summary">Job Summary Note</label>
-                                                    <textarea name="Job_Summary" id="Job_Summary" cols="76" rows="7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem est rerum placeat nobis voluptates fuga in laudantium cumque veniam! Suscipit at esse</textarea>
+                                                    <textarea name="job_summary" id="Job_Summary" cols="76" rows="7" >{{old('job_summary',$candidate->interview->job_summary)?? ''}}</textarea>
                                                 </div>
                                                 <div class="col-md-12 profile-eidt-form-btn">
                                                     <button class="btn back-btn">Back</button>
@@ -2504,7 +2507,7 @@
                                                                             Director of Nursing Practice (DNP)</option>
                                                                         <option value="Chief Nursing Officer (CNO)">
                                                                             Chief Nursing Officer (CNO)</option>
-                                                                    </select> 
+                                                                    </select>
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
                                                             </tr>
@@ -2530,7 +2533,7 @@
                                                                         <option value="Psychiatry ">Psychiatry </option>
                                                                         <option value="Radiology">Radiology</option>
                                                                         <option value="Surgery ">Surgery </option>
-                                                                    </select> 
+                                                                    </select>
                                                                     <select
                                                                         class="nurse-specialty-d-none form-select form-select-lg mb-3 "
                                                                         name="specialty"
@@ -4627,7 +4630,7 @@
                                                                 </th>
                                                                 <td>
                                                                     <select class="form-select form-select-lg mb-3"
-                                                                        name="job_title"
+                                                                        name="job_location"
                                                                         aria-label=".form-select-lg example">
 
                                                                         <option value="one" <?= $candidate->interview? ($candidate->interview->job_location == "one"? "selected" : '') : '' ?>>One</option>
@@ -6905,8 +6908,8 @@
                                 </div>
                             </div>
                             </form>
-                        </div>  
-                        </div>                              
+                        </div>
+                        </div>
                     </div>
                     <div class="popup-pipeline-form">
                         <form action="" class="pipeline-form row">
