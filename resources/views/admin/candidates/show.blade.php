@@ -1272,51 +1272,6 @@
                                     </div>
                                 </div>
 
-                                <div class="row candidate-progress client-progress">
-                                    <div class="col-md-12">
-                                        <div class="candidate-date">
-                                            <div class="form-group">
-                                                <select class="form-control" name="title" id="title" required="">
-                                                    <option value="" selected="">2020-2021</option>
-                                                    <option value="2019-2020">2019-2020</option>
-                                                    <option value="2018-2019">2018-2019</option>
-                                                    <option value="2017-2018">2017-2018</option>
-                                                    <option value="2016-2017">2016-2017</option>
-                                                    <option value="2015-2016">2015-2016</option>
-                                                </select>
-                                                <i class="fas fa-sort-down"></i>
-                                            </div>
-                                            <span class="date-background"></span>
-                                        </div>
-                                        <div class="candidate-progress-txt">
-                                            <h3>Candidate Recruitment Progress</h3>
-                                        </div>
-                                        <div class="candidate-progress-bar">
-                                            <span class="progress-line"></span>
-                                            <div class="progress vertical">
-                                                <div class="progress-bar Contacted" role="progressbar" aria-valuenow="0"
-                                                    aria-valuemin="0" aria-valuemax="100"><span
-                                                        class="bar-txt">Contacted</span></div>
-                                            </div>
-                                            <div class="progress vertical">
-                                                <div class="progress-bar Int-scr" role="progressbar" aria-valuenow="25"
-                                                    aria-valuemin="0" aria-valuemax="100"><span
-                                                        class="bar-txt">Initial Screening</span></div>
-                                            </div>
-
-
-                                        </div>
-                                        <div class="edit-brn">
-                                            <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
-                                                    class="img-fluid" alt="Edit-img"> Edit</button>
-                                        </div>
-                                    </div>
-                                    <div class="forms-colored-div">
-                                        <div class="blue"></div>
-                                        <div class="purple"></div>
-                                        <div class="pink"></div>
-                                    </div>
-                                </div>
                                 <div class="row candidate-progress">
                                     <div class="col-md-12">
                                         <div class="candidate-date">
@@ -1849,42 +1804,42 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
+                                                            <input class="form-control" disabled type="text" name="mobile"
                                                                 id="title" placeholder="Title" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
+                                                            <input class="form-control" disabled type="text" name="mobile"
                                                                 id="first_name" placeholder="First Name" value=""
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
+                                                            <input class="form-control" disabled type="text" name="mobile"
                                                                 id="title" placeholder="Last Name" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="number" name="mobile"
+                                                            <input class="form-control" disabled type="number" name="mobile"
                                                                 id="first_name" placeholder="Telephone" value=""
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="email" name="mobile"
+                                                            <input class="form-control" disabled type="email" name="mobile"
                                                                 id="title" placeholder="Email" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
+                                                            <input class="form-control" disabled type="text" name="mobile"
                                                                 id="first_name" placeholder="Referee’s Job Titile"
                                                                 value="" required>
                                                         </div>
@@ -1894,42 +1849,42 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
+                                                            <input class="form-control" disabled type="text" name="mobile"
                                                                 id="title" placeholder="Title" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
+                                                            <input class="form-control" disabled type="text" name="mobile"
                                                                 id="first_name" placeholder="First Name" value=""
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
+                                                            <input class="form-control" disabled type="text" name="mobile"
                                                                 id="title" placeholder="Last Name" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="number" name="mobile"
+                                                            <input class="form-control" disabled type="number" name="mobile"
                                                                 id="first_name" placeholder="Telephone" value=""
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="email" name="mobile"
+                                                            <input class="form-control" disabled type="email" name="mobile"
                                                                 id="title" placeholder="Email" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
+                                                            <input class="form-control" disabled type="text" name="mobile"
                                                                 id="first_name" placeholder="Referee’s Job Titile"
                                                                 value="" required>
                                                         </div>
@@ -1939,42 +1894,42 @@
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
+                                                            <input class="form-control" disabled type="text" name="mobile"
                                                                 id="title" placeholder="Title" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
+                                                            <input class="form-control" disabled type="text" name="mobile"
                                                                 id="first_name" placeholder="First Name" value=""
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
+                                                            <input class="form-control" disabled  type="text" name="mobile"
                                                                 id="title" placeholder="Last Name" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="number" name="mobile"
+                                                            <input class="form-control" disabled  type="number" name="mobile"
                                                                 id="first_name" placeholder="Telephone" value=""
                                                                 required>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="email" name="mobile"
+                                                            <input class="form-control" disabled type="email" name="mobile"
                                                                 id="title" placeholder="Email" value="" required>
 
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
+                                                            <input class="form-control" disabled type="text" name="mobile"
                                                                 id="first_name" placeholder="Referee’s Job Titile"
                                                                 value="" required>
                                                         </div>

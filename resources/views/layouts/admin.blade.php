@@ -315,10 +315,12 @@
 });
 
     </script>
+<script>
 
-
-
-
+$(document).ready( function () {
+    $('#myTable').DataTable();
+} );
+</script>
 <!-- <script>
       $("document").ready(function(){
           $("td").removeClass("sorting sorting_desc sorting_asc");

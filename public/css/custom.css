@@ -1734,6 +1734,7 @@ div.dataTables_wrapper div.dataTables_info {
 
 .reference-form .form-group input {
     border-color: #686868;
+    background-color: #fff;
 }
 
 .reference-form .form-group input::placeholder {
@@ -2520,18 +2521,41 @@ textarea{
 .client-progress .progress-bar{
     background-color: #2E978C;
 }
+.revenue-color{
+    background-color: #2E978C !important;
+}
+.expenses-color{
+    background-color: #486796 !important;
+}
 .client-progress .progress-line{
     width: 280px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+.client-progress .progress-line::before, .client-progress .progress-line::after{
+    color: #fff;
+    font-size: 10px;
+}
+.client-progress .progress-line::before{
+    left: -4px;
+}
+.client-progress .progress-line::after{
+    bottom: -8px;
 }
 
-.revenue-txt{
+.revenue-txt, .expenses-txt{
     position: absolute;
     top: 95px;
     left: -6px;
     font-size: 19px;
+    color: #2E978C;
+}
+.expenses-txt{
+    color: #486796;
 }
 .revenue-bar-perm{
-    color: #000;
+    color: #fff;
+    font-weight: 600;
     position: absolute;
     z-index: 9999;
     bottom: -26px;
@@ -2539,14 +2563,200 @@ textarea{
     text-align: center;
 }
 .revenue-bar-locum{
-    color: #000;
+    color: #fff;
+    font-weight: 600;
     position: absolute;
     z-index: 9999;
     bottom: -26px;
     left: 154px;
     text-align: center;
 }
+.client-progress .candidate-date .form-group{
+    border: 2px solid #fff;
+}
+.client-progress .candidate-date i.fa-sort-down{
+    color: #fff;
+}
+.client-progress h3{
+    color: #fff !important;
+}
 .client-progress .edit-brn{
     margin-top: 50px;
 }
-/*  */
+.client-profile-left img{
+    image-rendering: -webkit-optimize-contrast;
+}
+.client-profile-left .candi-profile{
+    color: #10213F;
+    background-color: #E5E5E5;
+}
+.client-profile-left .card .btn{
+    background-color: #0B398A;
+    color: #fff;
+}
+.client-profile-left .card .card-text{
+    font-weight: 600;
+}
+
+.client-profile-left .profile-info {
+    background-color: #8A8787;
+    color: #fff;
+}
+.client-profile-left .profession-info {
+    background-color: #10213F;
+    color: #fff;
+}
+.client-profile-left  .profile-info ul li:first-child h3 {
+    margin-top: 7px;
+}
+.client-profile-left .profession-info h3 {
+    margin-top: 25px;
+}
+.client-profile-left .edit-brn .btn {
+    color: #10213F;
+    background-color: #fff;
+}
+.client-profile-right{
+    padding: 70px 40px !important;
+    padding-bottom: 11px !important;
+}
+.client-profile-right .profile-right-color{
+    background-color: #A41414 !important;
+}
+.client-profile-right .profile-details-d-none{
+    margin-top: 25px;
+}
+.client-profile-right .profile-details .card .card-title {
+    color: #10213F;
+}
+.client-profile-right .profile-details-upload{
+    border-radius: 15px;
+    background: #10213F;
+}
+.client-profile-right .profile-details-upload .profile-details .card-title, .client-profile-right .profile-details-upload .profile-details .card small{
+    color: #fff !important;
+}
+.client-profile-right .profile-right-edit{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.client-profile-right .right-profile-edit-btn {
+    padding-top: 100px;
+}
+
+.client-progress{
+    background-color: #10213F;
+}
+.client-progress .referrals-left h3{
+    background-color: #fff;
+}
+
+.client-progress-list .progress-color{
+    background-color: #87DED5 !important;   
+}
+.placed-candi-feed p{
+    font-size: 13px;
+    color: #fff;
+}
+.client-assign-to{
+    max-width: 100% !important;
+    margin-top: 44px;
+}
+.client-feedback-1{
+    margin-top: 30px;
+}
+.client-feedback-1 textarea{
+    background-color: #fff;
+}
+
+.client-testi-sec{
+    background-color: #10213F;
+}
+.client-testi-sec .testimonial-heading h3,.client-testi-sec .testimonial-txt p,.client-testi-sec .testimonial-upload .profile-details-upload, .client-testi-sec .candidate-date i.fa-sort-down{
+    color: #fff;
+}
+.client-testi-sec .edit-brn .btn{
+    background-color: #fff;
+}
+.client-testi-sec .edit-brn .btn{
+    color: #000;
+}
+
+
+/* client datatable start here */
+.main-contact-heading{
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+.main-contact-heading h3 {
+    font-size: 20px;
+    color: #171942;
+}
+.main-contact-table {
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 35%);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.main-contact-table .table{
+    border: none;
+}
+.main-contact-table .dataTables_scrollBody{
+    overflow: hidden;
+    border-bottom: 0px !important;
+}
+.main-contact-table .dataTables_filter{
+    display: none;
+}
+.main-contact-table table.dataTable tbody td.select-checkbox:before, .main-contact-table table.dataTable tbody th.select-checkbox:before{
+    display: none;
+
+}
+.main-contact-table .table thead tr:last-child{
+    color: #000;
+}
+.main-contact-table .dataTables_length select {
+    color: #fff;
+}
+.main-contact-table .dataTables_length select {
+    line-height: 1;
+    background: grey;
+    border-radius: 5px;
+    border: none;
+}
+.main-contact-table select.input-sm {
+    height: 37px;
+}
+.main-contact-table .dataTables_length label {
+    position: relative;
+}
+.main-contact-table .dataTables_length label::after {
+    content: "\f078";
+    position: absolute;
+    color: #fff;
+    top: 12px;
+    font-size: 9px;
+    right: 58px;
+    font-family: 'FontAwesome';
+}
+.main-contact-table .dataTables_paginate,.main-contact-table .dataTables_info{
+    padding-top: 40px;
+}
+.main-contact-table table.dataTable tbody tr {
+    border: 1px solid #d1d1d1 !important;
+}
+.main-contact-table table tbody td:first-child {
+    border-left: 2px solid #686868 !important;
+}
+.main-contact-table table tbody td:last-child {
+    border-right: 2px solid #686868 !important;
+}
+.main-contact-table table tbody td {
+    border-left: 0px solid #686868 !important;
+    border-right: 0px solid #686868 !important;
+    border-top: 2px solid #686868 !important;
+    border-bottom: 2px solid #686868 !important;
+}
+/* client datatable end  here */
