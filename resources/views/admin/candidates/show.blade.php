@@ -2262,9 +2262,9 @@
 
                                         <h3>Job Summary</h3>
 
-                                            <p class="summary-id">ID: AH5841</p>
+                                            <p class="summary-id">ID: {{$candidate->id}}</p>
                                             <div class="job-summary-eidt">
-                                            <p>{{$candidate->interview->Job_Summary ?? ''}}</p>
+                                            <p>{{$candidate->interview->job_summary ?? ''}}</p>
                                             <div class="summary-bottom">
                                                 <p>Last Updated Date 01st November, 2021</p>
                                                 <div class="edit-brn">
@@ -2275,10 +2275,12 @@
                                             </div>
                                         </div>
                                         <div class="job-summary-d-none">
-                                            <form action="" class="row">
+                                            <form action="{{url('update_interviewSummary')}}/{{$candidate->id}}" class="row" method="POST">
+                                                @csrf
+                                                {{-- <input type="hidden" name="id" value="{{$candidate->id}}"> --}}
                                                 <div class="col-md-12 profile-eidt-form-inner">
                                                     <label for="Job Summary">Job Summary Note</label>
-                                                    <textarea name="Job_Summary" id="Job_Summary" cols="76" rows="7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem est rerum placeat nobis voluptates fuga in laudantium cumque veniam! Suscipit at esse</textarea>
+                                                    <textarea name="job_summary" id="Job_Summary" cols="76" rows="7" >{{old('job_summary',$candidate->interview->job_summary)?? ''}}</textarea>
                                                 </div>
                                                 <div class="col-md-12 profile-eidt-form-btn">
                                                     <button class="btn back-btn">Back</button>
@@ -4624,7 +4626,7 @@
                                                                 </th>
                                                                 <td>
                                                                     <select class="form-select form-select-lg mb-3"
-                                                                        name="job_title"
+                                                                        name="job_location"
                                                                         aria-label=".form-select-lg example">
 
                                                                         <option value="one" <?= $candidate->interview? ($candidate->interview->job_location == "one"? "selected" : '') : '' ?>>One</option>

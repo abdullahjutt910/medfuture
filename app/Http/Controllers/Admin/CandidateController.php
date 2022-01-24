@@ -160,7 +160,7 @@ class CandidateController extends Controller
         $interview->medical_board_undertaking = $request->medical_board_undertaking;
         $interview->skill = $request->skill;
         $interview->employment_type = $request->employment_type;
-        $interview->Job_Summary = $request->Job_Summary;
+        $interview->job_summary = $request->job_summary;
         $interview->interview_notes = $request->interview_notes;
         $interview->save();
 
@@ -245,7 +245,7 @@ class CandidateController extends Controller
     {
         $candidate = Candidate::find($id);
         $candidate->title = $request->title;
-        $candidate->Profession = $request->Profession;
+        $candidate->profession = $request->profession;
         $candidate->devision = $request->devision;
         $candidate->senority = $request->senority;
         $candidate->specialty = $request->specialty;
@@ -297,11 +297,19 @@ class CandidateController extends Controller
         $interview->medical_board_condition = $request->medical_board_condition;
         $interview->medical_board_undertaking = $request->medical_board_undertaking;
         $interview->skill = $request->skill;
-        $interview->Job_Summary = $request->Job_Summary;
         $interview->interview_notes = $request->interview_notes;
         $interview->save();
         return back();
 
+    }
+    public function update_interviewSummary(Request $request,$id)
+    {
+
+        $interviewsumery = Interview::where('candidate_id',$id)->first();
+        // dd($request->all());
+        $interviewsumery->job_summary = $request->job_summary;
+        $interviewsumery->save();
+        return back();
     }
 
     public function show(Candidate $candidate)

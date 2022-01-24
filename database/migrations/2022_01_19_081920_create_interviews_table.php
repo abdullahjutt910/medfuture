@@ -38,7 +38,7 @@ class CreateInterviewsTable extends Migration
             $table->string('interview_notes')->nullable();
             $table->string('employment_type')->nullable();
             $table->string('program_type')->nullable();
-            $table->string('Job_Summary')->nullable();
+            $table->string('job_summary')->nullable();
             $table->timestamps();
         });
     }
