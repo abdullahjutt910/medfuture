@@ -671,6 +671,7 @@ tr.no-row {
 }
 
 .table thead tr:last-child th:first-child{
+    border-radius: 10px 0px 0px 10px;
     vertical-align: middle !important;
 }
 table.dataTable tbody td.select-checkbox:before, table.dataTable tbody th.select-checkbox:before{
@@ -2483,16 +2484,69 @@ textarea{
 .padd-20{
     padding: 0px 20px;
 }
+.gray-color{
+    background-color: gray !important;
+}
 /*//////////////////////////////////// Single Candidate Profile   styling end here /////////////////////////////////////*/
 
 
 
 
 /* client profile start here*/
-.client-progress{
-    display: none;
+.company-icon{
+    width: 30px !important;
+}
+
+.revenue-bar{
+    position: relative;
+    margin-top: 70px;
+}
+.client-progress .candidate-progress-bar{
+    margin-left: 80px;
 }
 .client-progress .candidate-progress-bar .progress{
-    margin-right: 50px !important;
+    margin-right: 0px !important;
+    margin-left: 45px !important;
+    width: 48px !important;
+    height: 170px !important;
+
+}
+.client-progress .bar-txt{
+    left: 0px;
+    font-size: 24px;
+    color: #fff;
+    bottom: 70px;
+}
+.client-progress .progress-bar{
+    background-color: #2E978C;
+}
+.client-progress .progress-line{
+    width: 280px;
+}
+
+.revenue-txt{
+    position: absolute;
+    top: 95px;
+    left: -6px;
+    font-size: 19px;
+}
+.revenue-bar-perm{
+    color: #000;
+    position: absolute;
+    z-index: 9999;
+    bottom: -26px;
+    left: 43px;
+    text-align: center;
+}
+.revenue-bar-locum{
+    color: #000;
+    position: absolute;
+    z-index: 9999;
+    bottom: -26px;
+    left: 154px;
+    text-align: center;
+}
+.client-progress .edit-brn{
+    margin-top: 50px;
 }
 /*  */

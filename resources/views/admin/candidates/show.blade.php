@@ -996,15 +996,15 @@
                                                     </a>
                                                     <a href="#">
                                                         <img src="{{asset('img/dashboard/Download.png')}}"
-                                                            class="img-fluid" alt="download">
+                                                            class="img-fluid gray-color" alt="download">
                                                     </a>
                                                     <a href="#">
                                                         <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                            class="img-fluid" alt="Upload">
+                                                            class="img-fluid gray-color" alt="Upload">
                                                     </a>
                                                     <a href="#">
                                                         <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                            class="img-fluid" alt="Delete-Trash">
+                                                            class="img-fluid gray-color" alt="Delete-Trash">
                                                     </a>
                                                 </div>
                                             </div>
@@ -1059,15 +1059,15 @@
                                                     </a>
                                                     <a href="#">
                                                         <img src="{{asset('img/dashboard/Download.png')}}"
-                                                            class="img-fluid" alt="download">
+                                                            class="img-fluid gray-color" alt="download">
                                                     </a>
                                                     <a href="#">
                                                         <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                            class="img-fluid" alt="Upload">
+                                                            class="img-fluid gray-color" alt="Upload">
                                                     </a>
                                                     <a href="#">
                                                         <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                            class="img-fluid" alt="Delete-Trash">
+                                                            class="img-fluid gray-color" alt="Delete-Trash">
                                                     </a>
                                                 </div>
                                             </div>
@@ -1118,12 +1118,12 @@
                                                 <div class="profile-buttons">
                                                     <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                         alt="Eye">
-                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
+                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
                                                         alt="download">
-                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid"
+                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
                                                         alt="Upload">
                                                     <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                        class="img-fluid" alt="Delete-Trash">
+                                                        class="img-fluid gray-color" alt="Delete-Trash">
                                                 </div>
                                             </div>
                                         </div>
@@ -1173,12 +1173,12 @@
                                                 <div class="profile-buttons">
                                                     <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                         alt="Eye">
-                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
+                                                    <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
                                                         alt="download">
-                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid"
+                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
                                                         alt="Upload">
                                                     <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                        class="img-fluid" alt="Delete-Trash">
+                                                        class="img-fluid gray-color" alt="Delete-Trash">
                                                 </div>
                                             </div>
                                         </div>
@@ -1188,7 +1188,7 @@
 
                                 </div>
                                 <div class="edit-brn">
-                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                    <button class="btn files-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
                                             class="img-fluid" alt="Edit-img"> Edit</button>
                                 </div>
                                 <div class="forms-colored-div">
@@ -2161,15 +2161,15 @@
                                                                     </a>
                                                                     <a href="#">
                                                                     <img src="{{asset('img/dashboard/Download.png')}}"
-                                                                        class="img-fluid" alt="download">
+                                                                        class="img-fluid gray-color" alt="download">
                                                                     </a>
                                                                     <a href="#">
                                                                     <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                                        class="img-fluid" alt="Upload">
+                                                                        class="img-fluid gray-color" alt="Upload">
                                                                     </a>
                                                                     <a href="#">
                                                                     <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                                        class="img-fluid" alt="Delete-Trash">
+                                                                        class="img-fluid gray-color" alt="Delete-Trash">
                                                                         </a>
                                                                 </div>
                                                             </div>
@@ -2203,19 +2203,19 @@
                                                                 <div class="profile-buttons">
                                                                     <a href="#">
                                                                     <img src="{{asset('img/dashboard/Eye.png')}}"
-                                                                        class="img-fluid" alt="Eye">
+                                                                        class="img-fluid " alt="Eye">
                                                                         </a>
                                                                         <a href="#">
                                                                     <img src="{{asset('img/dashboard/Download.png')}}"
-                                                                        class="img-fluid" alt="download">
+                                                                        class="img-fluid gray-color" alt="download">
                                                                     </a>
                                                                     <a href="#">
                                                                     <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                                        class="img-fluid" alt="Upload">
+                                                                        class="img-fluid gray-color" alt="Upload">
                                                                     </a>
                                                                     <a href="#">
                                                                     <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                                        class="img-fluid" alt="Delete-Trash">
+                                                                        class="img-fluid gray-color" alt="Delete-Trash">
                                                                         </a>
                                                                 </div>
                                                             </div>
@@ -2253,15 +2253,15 @@
                                                                     </a>
                                                                     <a href="#">
                                                                     <img src="{{asset('img/dashboard/Download.png')}}"
-                                                                        class="img-fluid" alt="download">
+                                                                        class="img-fluid gray-color" alt="download">
                                                                     </a>
                                                                     <a href="#">
                                                                     <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                                        class="img-fluid" alt="Upload">
+                                                                        class="img-fluid gray-color" alt="Upload">
                                                                     </a>
                                                                     <a href="#">
                                                                     <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                                        class="img-fluid" alt="Delete-Trash">
+                                                                        class="img-fluid gray-color" alt="Delete-Trash">
                                                                     </a>
                                                                 </div>
                                                             </div>
@@ -2269,7 +2269,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="edit-brn">
-                                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                                                    <button class="btn refere-doc-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
                                                             class="img-fluid" alt="Edit-img"> Edit</button>
                                                 </div>
                                             </div>
@@ -6520,18 +6520,6 @@
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
                                                             </tr>
-<<<<<<< HEAD
-
-=======
-                                                            <tr>
-                                                                <th>
-                                                                    Training Program Type
-                                                                </th>
-                                                                <td  class="padd-8">
-                                                                    Training Program Type
-                                                                </td>
-                                                            </tr>
->>>>>>> 2090d1ae4ab656fd4cabd5fcbc20e9eb7fc7d10f
                                                             <tr>
                                                                 <th>
                                                                     Medical Board Conditions
@@ -6643,15 +6631,15 @@
                                                                         </a>
                                                                         <a href="#">
                                                                             <img src="{{asset('img/dashboard/Download.png')}}"
-                                                                                class="img-fluid" alt="download">
+                                                                                class="img-fluid gray-color" alt="download">
                                                                         </a>
                                                                         <a href="#">
                                                                             <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                                                class="img-fluid" alt="Upload">
+                                                                                class="img-fluid gray-color" alt="Upload">
                                                                         </a>
                                                                         <a href="#">
                                                                             <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                                                class="img-fluid" alt="Delete-Trash">
+                                                                                class="img-fluid gray-color" alt="Delete-Trash">
                                                                         </a>
                                                                     </div>
                                                                 </div>
@@ -6689,15 +6677,15 @@
                                                                         </a>
                                                                         <a href="#">
                                                                         <img src="{{asset('img/dashboard/Download.png')}}"
-                                                                            class="img-fluid" alt="download">
+                                                                            class="img-fluid gray-color" alt="download">
                                                                         </a>
                                                                         <a href="#">
                                                                         <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                                            class="img-fluid" alt="Upload">
+                                                                            class="img-fluid gray-color" alt="Upload">
                                                                         </a>
                                                                         <a href="#">
                                                                         <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                                            class="img-fluid" alt="Delete-Trash">
+                                                                            class="img-fluid gray-color" alt="Delete-Trash">
                                                                         </a>
                                                                     </div>
                                                                 </div>
@@ -6735,15 +6723,15 @@
                                                                         </a>
                                                                         <a href="#">
                                                                         <img src="{{asset('img/dashboard/Download.png')}}"
-                                                                            class="img-fluid" alt="download">
+                                                                            class="img-fluid gray-color" alt="download">
                                                                         </a>
                                                                         <a href="#">
                                                                         <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                                            class="img-fluid" alt="Upload">
+                                                                            class="img-fluid gray-color" alt="Upload">
                                                                         </a>
                                                                         <a href="#">
                                                                         <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                                            class="img-fluid" alt="Delete-Trash">
+                                                                            class="img-fluid gray-color" alt="Delete-Trash">
                                                                         </a>
                                                                     </div>
                                                                 </div>
@@ -6751,7 +6739,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="edit-brn">
-                                                        <button class="btn"><img
+                                                        <button class="btn audio-edit-btn"><img
                                                                 src=" {{asset('img/dashboard/Edit.png')}}"
                                                                 class="img-fluid" alt="Edit-img"> Edit</button>
                                                     </div>
@@ -6860,11 +6848,11 @@
                                                     <img src="http://127.0.0.1:8000/img/dashboard/Eye.png"
                                                         class="img-fluid" alt="Eye">
                                                     <img src="http://127.0.0.1:8000/img/dashboard/Download.png"
-                                                        class="img-fluid" alt="download">
+                                                        class="img-fluid gray-color" alt="download">
                                                     <img src="http://127.0.0.1:8000/img/dashboard/Upload.png"
-                                                        class="img-fluid" alt="Upload">
+                                                        class="img-fluid gray-color" alt="Upload">
                                                     <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png"
-                                                        class="img-fluid" alt="Delete-Trash">
+                                                        class="img-fluid gray-color" alt="Delete-Trash">
                                                 </div>
                                             </div>
                                         </div>
@@ -7039,15 +7027,15 @@
                     width="100%">
                     <thead>
                         <tr>
-                            <th class="th-sm">Title
+                            <th class="th-sm">Date
                             </th>
-                            <th class="th-sm">Clients
+                            <th class="th-sm">Type
                             </th>
-                            <th class="th-sm">Owner
+                            <th class="th-sm">Entered
                             </th>
-                            <th class="th-sm">Added
+                            <th class="th-sm">Regarding
                             </th>
-                            <th class="th-sm submit-table-head">Submitted
+                            <th class="th-sm submit-table-head">Notes
                             </th>
                             <th class="th-sm">Action
                             </th>

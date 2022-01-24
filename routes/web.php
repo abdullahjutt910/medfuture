@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CandidateController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Admin\ClientController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\frontend\PostController;
 use App\Http\Controllers\frontend\MainController;
@@ -65,6 +66,9 @@ Route::post('update1/{id}',[CandidateController::class,'update1']);
 Route::post('update2/{id}',[CandidateController::class,'update2']);
 Route::post('update3/{id}',[CandidateController::class,'update3']);
 Route::post('update_interview/{id}',[CandidateController::class,'updateInterview'])->name('interview');
+Route::get('add_client',[ClientController::class,'index'])->name('add_client');
+Route::get('show_client',[ClientController::class,'show'])->name('show_client');
+
 
 
 

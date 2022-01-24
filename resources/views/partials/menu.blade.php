@@ -97,6 +97,41 @@
                     </ul>
                 </li>
             @endcan
+
+            <li class="treeview">
+                    <a href="#">
+                        <i class="fa-fw far fa-user">
+
+                        </i>
+                        <span class="menu-txt">{{ trans('Client Management') }}</span>
+                        <span class="pull-right-container"><i class="fa fa-fw fa-angle-left pull-right"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+                        @can('candidate_access')
+                        <hr class="hr-line">
+                            <li class="{{ request()->is("admin/candidates") || request()->is("admin/candidates/*") ? "active" : "" }}">
+                                <a href="{{ route("add_client") }}">
+                                    <i class="fa-fw fas fa-user-plus">
+
+                                    </i>
+                                    <span>Add Client</span>
+
+                                </a>
+                            </li>
+                        @endcan
+                        @can('view_candidate_access')
+                        <hr class="hr-line">
+                            <li class="{{ request()->is("admin/view-candidates") || request()->is("admin/view-candidates/*") ? "active" : "" }}">
+                                <a href="{{ route("show_client") }}">
+                                    <i class="fa-fw fas fa-user-friends"></i>
+                                    <span>{{ trans('cruds.viewCandidate.title') }}</span>
+                                </a>
+                            </li>
+                        <hr class="hr-line">
+                        @endcan
+                    </ul>
+                </li>
+
             @if(file_exists(app_path('Http/Controllers/Auth/ChangePasswordController.php')))
                 @can('profile_password_edit')
                     <li class="{{ request()->is('profile/password') || request()->is('profile/password/*') ? 'active' : '' }}">
