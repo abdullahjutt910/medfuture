@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Admin;
 
 use Gate;
 use App\Models\User;
+use App\Models\Progbar;
+use App\Models\Progress;
 use App\Models\Candidate;
 use App\Models\Interview;
 use Illuminate\Http\Request;
@@ -163,6 +165,24 @@ class CandidateController extends Controller
         $interview->interview_notes = $request->interview_notes;
         $interview->save();
 
+        $progbar = new Progbar();
+        $progbar->candidate_id = $candidate->id;
+        $progbar->contacted = $request->contacted;
+        $progbar->submissions = $request->submissions;
+        $progbar->initial_screening = $request->initial_screening;
+        $progbar->short_listed = $request->short_listed;
+        $progbar->shelved = $request->shelved;
+        $progbar->job_matching = $request->job_matching;
+        $progbar->declined = $request->declined;
+        $progbar->interviews = $request->interviews;
+        $progbar->due_Check = $request->due_Check;
+        $progbar->offered = $request->offered;
+        $progbar->rejected = $request->rejected;
+        $progbar->placed = $request->placed;
+        $progbar->archived = $request->archived;
+        $progbar->testimony = $request->testimony;
+        $progbar->save();
+
         return redirect()->route('admin.candidates.index');
     }
 
@@ -302,6 +322,29 @@ class CandidateController extends Controller
         return back();
 
     }
+    public function updateProgress(Request $request,$id)
+    {
+
+        $progbar = Progbar::where('candidate_id',$id)->first();
+        // $progress = Progress::find($id)->where('candidate_id',$progress->$id)->first();
+        // dd($request->all());
+        $progbar->contacted = $request->contacted;
+        $progbar->initial_screening = $request->initial_screening;
+        $progbar->short_listed = $request->short_listed;
+        $progbar->submissions = $request->submissions;
+        $progbar->shelved = $request->shelved;
+        $progbar->job_matching = $request->job_matching;
+        $progbar->declined = $request->declined;
+        $progbar->interviews = $request->interviews;
+        $progbar->due_check = $request->due_check;
+        $progbar->offered = $request->offered;
+        $progbar->rejected = $request->rejected;
+        $progbar->placed = $request->placed;
+        $progbar->archived = $request->archived;
+        $progbar->testimony = $request->testimony;
+        $progbar->save();
+        return back();
+    }
     public function update_interviewsummary(Request $request,$id)
     {
 
@@ -315,7 +358,7 @@ class CandidateController extends Controller
     public function show(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-         $candidates = $candidate->with('candidate_profile','interview')->first();
+         $candidates = $candidate->with('candidate_profile','interview','progress')->first();
         //dd($candidates);
         return view('admin.candidates.show', compact('candidate'));
     }
@@ -325,14 +368,6 @@ class CandidateController extends Controller
         abort_if(Gate::denies('candidate_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
         $candidate->delete();
 
-        return back();
-    }
-    public function update_interviewsummary(Request $request,$id)
-    {
-        $interviewsumery = Interview::where('candidate_id',$id)->first();
-        // dd($request->all());
-        $interviewsumery->job_summary = $request->job_summary;
-        $interviewsumery->save();
         return back();
     }
 
