@@ -997,7 +997,7 @@
                                                         <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                             alt="Eye" >
                                                     </a>
-                                                    <a href="#">
+                                                    <a href="{{asset('img/dashboard/Download.png')}}" download>
                                                         <img src="{{asset('img/dashboard/Download.png')}}"
                                                             class="img-fluid gray-color" alt="download">
                                                     </a>
@@ -1012,10 +1012,7 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
                                     </div>
-
                                 </div>
                                 <div class="row profile-details-upload">
                                     <div class="col-md-12">
@@ -1060,7 +1057,7 @@
                                                         <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                             alt="Eye">
                                                     </a>
-                                                    <a href="#">
+                                                    <a href="{{asset('img/dashboard/Download.png')}}" download>
                                                         <img src="{{asset('img/dashboard/Download.png')}}"
                                                             class="img-fluid gray-color" alt="download">
                                                     </a>
@@ -1075,10 +1072,7 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
                                     </div>
-
                                 </div>
                                 <div class="row profile-details-upload">
                                     <div class="col-md-12">
@@ -1094,7 +1088,8 @@
                                                             <div class="card-body">
                                                                 <h5 class="card-title">{{$candidate->privacy_concerns ?? 'no file'}}</h5>
                                                                 <p class="card-text"><small
-                                                                        class="text-muted">58KB</small></p>
+                                                                        class="text-muted">
+                                                                        58KB</small></p>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1123,19 +1118,22 @@
                                                         <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                             alt="Eye">
                                                     </a>
+                                                    <a href="{{asset('img/dashboard/Download.png')}}" download>
                                                     <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
                                                         alt="download">
+                                                    </a>
+                                                    <a href="#">
                                                     <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
                                                         alt="Upload">
+                                                    </a>
+                                                    <a href="#">
                                                     <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                                         class="img-fluid gray-color" alt="Delete-Trash">
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
-
-
                                     </div>
-
                                 </div>
                                 <div class="row profile-details-upload">
                                     <div class="col-md-12">
@@ -1176,21 +1174,26 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
+                                                    <a href="#">
                                                     <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                         alt="Eye">
+                                                    </a>
+                                                        <a href="{{asset('img/dashboard/Download.png')}}" download>
                                                     <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
                                                         alt="download">
+                                                        </a>
+                                                        <a href="#">
                                                     <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
                                                         alt="Upload">
+                                                        </a>
+                                                        <a href="#">
                                                     <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                                         class="img-fluid gray-color" alt="Delete-Trash">
+                                                        </a>
                                                 </div>
                                             </div>
                                         </div>
-
-
                                     </div>
-
                                 </div>
                                 <div class="edit-brn">
                                     <button class="btn files-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
@@ -6960,7 +6963,6 @@
                                         <input type="submit" class="btn" placeholder="Submit">
                                     </div>
                             </div>
-
                         </form>
                     </div>
                 </div>
@@ -6970,43 +6972,40 @@
                     <input type="submit" class="btn" placeholder="Submit">
                     </div>
                 </div>
-
             </div>
             <div class="forms-colored-div">
                 <div class="blue"></div>
                 <div class="purple"></div>
                 <div class="pink"></div>
             </div>
+
+
+
             <div class="candidate-profile-table activity-heading">
                 <div class="testimonial-heading ">
                     <h3>Activity</h3>
                 </div>
-                <table id="dtActivity" class="table  table-striped table-bordered table-sm" cellspacing="0"
+                <table id="dtActivity" class="table table-striped table-bordered table-sm" cellspacing="0"
                     width="100%">
                     <thead>
                         <tr>
-                            <th class="th-sm">Date
-                            </th>
-                            <th class="th-sm">Type
-                            </th>
-                            <th class="th-sm">Entered
-                            </th>
-                            <th class="th-sm">Regarding
-                            </th>
-                            <th class="th-sm submit-table-head">Notes
-                            </th>
-                            <th class="th-sm">Action
-                            </th>
+                            <th class="th-sm">Date </th>
+                            <th class="th-sm">Type_1 </th>
+                            <th class="th-sm">Type_2</th>
+                            <th class="th-sm submit-table-head">Notes </th>
+                            {{-- <th class="th-sm">Action </th> --}}
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="activity-data">
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2011/04/25</td>
-                            <td>$320,800</td>
+                            <td>{{$candidate->activebar->updated_at ?? ''}}</td>
+                            <td>{{$candidate->activebar->activity_type ?? ''}}</td>
+                            <td>{{$candidate->activebar->activity_type_2 ?? ''}}</td>
+                            <td>{{$candidate->activebar->activity_note ?? ''}}</td>
+                            {{-- <td>
+                                <a href="{{ url('update_activity')}}/{{$candidate->id}}"><button class="btn btn-primary"> Edit</button></a>
+                                <a href="{{ url('delete_activity')}}/{{$candidate->id}}"><button class="fav-icon-pen btn btn-danger"> Delete</button></a>
+                            </td> --}}
                         </tr>
                         <tr class="activity-data-d-none">
                             <td><input type="text" value="Tiger Nixon"></td>
@@ -7019,7 +7018,7 @@
                                 alt="calendar-icon">
                             </td>
                             <td><input type="number" value="320800"></td>
-                    </tr>
+                        </tr>
                     </tbody>
                 </table>
                 <div class="pipeline-btn activity-btn-d-none">
@@ -7027,14 +7026,15 @@
                         <button class="btn add-activity-btn">Add Activity </button>
                     </div>
                     <div class="edit-brn">
-                        <button class="btn activity-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
+                        <button class="btn activity-edit-btn"><img src="{{asset('img/dashboard/Edit.png')}}" class="img-fluid"
                                 alt="Edit-img"> Edit</button>
                     </div>
                     <div class="popup-activity">
-                        <form action="" class="activity-form row">
+                        <form action="{{ url('update_activity')}}/{{$candidate->id}}" method="POST" class="activity-form row">
+                            @csrf
                             <div class="col-md-8 profile-eidt-form-inner form-group">
-                                    <select name="placement_term" id="placement_term" class="form-control">
-                                        <option value="Other " selected diable > Other </option>
+                                    <select name="activity_type" id="activity_type" class="form-control" value="{{old('activity_type',$candidate->activebar->activity_type ?? '')}}">
+                                        <option value="Other" selected diable> Other </option>
                                         <option value="Contacted">Contacted</option>
                                         <option value="Initial Screening">Initial Screening</option>
                                         <option value="Short Listed">Short Listed</option>
@@ -7052,34 +7052,27 @@
                                     <i class="fas fa-sort-down"></i>
                             </div>
                             <div class="col-md-8 profile-eidt-form-inner form-group">
-                                    <select name="placement_term" id="placement_term" class="form-control">
+                                    <select name="activity_type_2" id="placement_term" class="form-control" value="{{old('activity_type_2',$candidate->activebar->activity_type_2 ?? '')}}">
                                         <option value="General" selected diable > General </option>
                                         <option value="Contacted">Contacted</option>
                                         <option value="Initial Screening">Initial Screening</option>
-                                        <!-- <option value="Short Listed">Short Listed</option>
                                         <option value="Shelved">Shelved</option>
                                         <option value="Job Matching">Job Matching</option>
                                         <option value="Submissions">Submissions</option>
                                         <option value="Declined">Declined</option>
                                         <option value="Interviews">Interviews</option>
-                                        <option value="Due Diligence Check">Due Diligence Check</option>
-                                        <option value="Rejected / Accepted">Rejected / Accepted</option>
-                                        <option value="Placed">Placed</option>
-                                        <option value="Archived">Archived</option>
-                                        <option value="Testimony">Testimony</option> -->
                                     </select>
                                     <i class="fas fa-sort-down"></i>
                             </div>
                             <div class="col-md-8 profile-eidt-form-inner">
-                            <textarea name="activity-textarea" id="activity-textarea" cols="30" rows="5" placeholder="Your Notes"></textarea>
+                            <textarea name="activity_note" id="activity-textarea" cols="30" rows="5" placeholder="Your Notes" value="{{old('activity_note',$candidate->activebar->activity_note ?? '')}}"></textarea>
                             </div>
                                 <div class=" col-md-12 activity-form-back-btn">
                                     <div class=" profile-eidt-form-btn">
                                         <button class="btn back-btn cancel-btn">Cancel</button>
-                                        <input type="submit" class="btn" placeholder="Submit">
+                                        <input name="submit" type="submit" class="btn" placeholder="Submit">
                                     </div>
                             </div>
-
                         </form>
                     </div>
                 </div>
@@ -7089,8 +7082,11 @@
                     <input type="submit" class="btn" placeholder="Submit">
                     </div>
                 </div>
-
             </div>
+
+
+
+
             <div class="forms-colored-div">
                 <div class="blue"></div>
                 <div class="purple"></div>
