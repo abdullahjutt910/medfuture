@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Admin;
 use Gate;
 use App\Models\User;
 use App\Models\Progbar;
-use App\Models\Progress;
 use App\Models\Candidate;
 use App\Models\Interview;
 use Illuminate\Http\Request;
@@ -19,6 +18,7 @@ use App\Http\Requests\UpdateCandidateRequest;
 use Symfony\Component\HttpFoundation\Response;
 use App\Http\Requests\MassDestroyCandidateRequest;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
+use App\Models\Activebar;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class CandidateController extends Controller
@@ -184,6 +184,13 @@ class CandidateController extends Controller
         $progbar->testimony = $request->testimony;
         $progbar->save();
 
+        $activebar = new Activebar;
+        $activebar->candidate_id = $candidate->id;
+        $activebar->activity_type = $request->activity_type;
+        $activebar->activity_type_2 = $request->activity_type_2;
+        $activebar->activity_note = $request->activity_note;
+        $activebar->save();
+
         return redirect()->route('admin.candidates.index');
     }
 
@@ -293,8 +300,8 @@ class CandidateController extends Controller
         $candidate->placement_term = $request->placement_term;
         $candidate->save();
         // dd($request->all());
-        $interview = Interview::where('candidate_id',$candidate->id)->first();
 
+        $interview = Interview::where('candidate_id',$candidate->id)->first();
         // $interview->candidate_id = $candidate->id;
         $interview->start_date = $request->start_date;
         $interview->end_date = $request->end_date;
@@ -344,6 +351,17 @@ class CandidateController extends Controller
         $progbar->archived = $request->archived;
         $progbar->testimony = $request->testimony;
         $progbar->save();
+        return back();
+    }
+    public function updateActivity(Request $request,$id)
+    {   
+        $activebar = Activebar::where('candidate_id',$id)->first();
+        $candidate = Candidate::find($id);
+        $activebar->candidate_id = $candidate->id;
+        $activebar->activity_type = $request->activity_type;
+        $activebar->activity_type_2 = $request->activity_type_2;
+        $activebar->activity_note = $request->activity_note;
+        $activebar->save();
         return back();
     }
     public function update_interviewsummary(Request $request,$id)
@@ -456,5 +474,8 @@ class CandidateController extends Controller
         return back();
     }
 
-
+    public function deleteActivity($id){
+        Activebar::find($id)->delete();
+        return back();
+    }
 }

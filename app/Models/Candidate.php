@@ -1403,6 +1403,11 @@ class Candidate extends Model implements HasMedia
         return $this->belongsTo(Progbar::class,'id','candidate_id');
     }
 
+    public function activebar()
+    {
+        return $this->belongsTo(Activebar::class,'id','candidate_id');
+    }
+
     protected function serializeDate(DateTimeInterface $date)
     {
         return $date->format('Y-m-d H:i:s');

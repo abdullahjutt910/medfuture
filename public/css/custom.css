@@ -2843,6 +2843,6 @@ textarea{
     background-color: #fff;
 }
 .job-client-details .card-text{
-    color: #686868;
+    /* color: #686868; */
 }
 /* view job end here */
