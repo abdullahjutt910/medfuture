@@ -2359,15 +2359,15 @@
                                                                     Profession
                                                                 </th>
                                                                 <td>
-                                                                    {{-- <select class="profession-doctor form-select form-select-lg mb-3"
+                                                                {{-- <select class="profession-doctor form-select form-select-lg mb-3"
                                                                         name="profession"
                                                                         aria-label=".form-select-lg example">
                                                                         <option value="Doctor">Doctor</option>
                                                                         <option value="Nurse">Nurse</option>
                                                                         <option value="Allied Health Professionals">Allied Health Professionals</option>
                                                                         <option value="Healthcare Executives">Healthcare Executives</option>
-                                                                        <!-- <option value="Dentists">Dentists</option> -->
-                                                                    </select> --}}
+                                                                    </select>   --}}
+
                                                                     {{$candidate->profession ?? ''}}
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
@@ -2447,7 +2447,7 @@
                                                                 </th>
                                                                 <td>
                                                                     {{$candidate->senority ?? ''}}
-                                                                    <select class="seniority-doctor-d-none form-select form-select-lg mb-3"
+                                                                    <!-- <select class="seniority-doctor-d-none form-select form-select-lg mb-3"
                                                                         name="senority"
                                                                         aria-label=".form-select-lg example">
                                                                         <option value="Internship - PGY Year 1 ">
@@ -2507,7 +2507,7 @@
                                                                             Director of Nursing Practice (DNP)</option>
                                                                         <option value="Chief Nursing Officer (CNO)">
                                                                             Chief Nursing Officer (CNO)</option>
-                                                                    </select>
+                                                                    </select> -->
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
                                                             </tr>
@@ -2517,7 +2517,7 @@
                                                                 </th>
                                                                 <td>
                                                                     {{$candidate->specialty ?? ''}}
-                                                                    <select class="doctor-specialty-d-none form-select form-select-lg mb-3"
+                                                                    <!-- <select class="doctor-specialty-d-none form-select form-select-lg mb-3"
                                                                         name="specialty"
                                                                         aria-label=".form-select-lg example">
                                                                         <option value="Anaesthetics">Anaesthetics
@@ -2603,7 +2603,7 @@
                                                                         <option value="Speech-pathology">Speech-pathology</option>
                                                                     </select>
                                                                     <select
-                                                                        class="form-select form-select-lg mb-3 HE-Specialty-d-none"
+                                                                        class="HE-Specialty-d-none form-select form-select-lg mb-3 "
                                                                         name="specialty"
                                                                         aria-label=".form-select-lg example">
                                                                         <option value="Business Managers">Business Managers</option>
@@ -2614,7 +2614,7 @@
                                                                         <option value="Practice Manager">Practice Manager</option>
                                                                         <option value="Professional Management Consultants">Professional Management Consultants</option>
 
-                                                                    </select>
+                                                                    </select> -->
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
                                                             </tr>
@@ -4328,9 +4328,7 @@
                                                                     Profession
                                                                 </th>
                                                                 <td>
-                                                                    <select class="form-select form-select-lg mb-3"
-                                                                        name="profession"
-                                                                        aria-label=".form-select-lg example">
+                                                                    <select class="profession-doctor form-select form-select-lg mb-3" name="profession" aria-label=".form-select-lg example">
                                                                         <option value="Doctor" {{old ('profession',$candidate->profession == "Doctor")? "selected" : ""}}>Doctor</option>
                                                                         <option value="Nurse" {{old ('profession',$candidate->profession == "Nurse")? "selected" : ""}}>Nurse</option>
                                                                         <option value="Allied Health Professionals" {{old ('profession',$candidate->profession == "Allied Health Professionals")? "selected" : ""}}>Allied Health Professionals</option>
@@ -4413,7 +4411,7 @@
                                                                     Seniority
                                                                 </th>
                                                                 <td>
-                                                                    <select class="form-select form-select-lg mb-3"
+                                                                    <select class="seniority-doctor-d-none form-select form-select-lg mb-3"
                                                                         name="senority"
                                                                         aria-label=".form-select-lg example">
                                                                         <option value="Internship - PGY Year 1" {{old('senority',$candidate->senority == "Internship - PGY Year 1")? "selected" : ""}}>
@@ -4446,7 +4444,7 @@
                                                                         <option value="Consultant" {{old('senority',$candidate->senority == "Consultant")? "selected" : ""}}>Consultant</option>
                                                                     </select>
                                                                     <select
-                                                                        class="form-select form-select-lg mb-3 nurse-seniority-d-none"
+                                                                        class="nurse-seniority-d-none form-select form-select-lg mb-3 "
                                                                         name="senority"
                                                                         aria-label=".form-select-lg example">
                                                                         <option value="PCA / AIN / Care Worker" {{old('senority',$candidate->senority == "PCA / AIN / Care Worker")? "selected" : ""}}>PCA /
@@ -4483,7 +4481,7 @@
                                                                     Specialty
                                                                 </th>
                                                                 <td>
-                                                                    <select class="form-select form-select-lg mb-3"
+                                                                    <select class="doctor-specialty-d-none form-select form-select-lg mb-3"
                                                                         name="specialty"
                                                                         aria-label=".form-select-lg example">
                                                                         <option value="Anaesthetics" {{old('specialty',$candidate->specialty == "Anaesthetics")? "selected" : ""}}>Anaesthetics
@@ -6751,37 +6749,10 @@
                                         <button class="btn testimonial-edit-btn"><img
                                                 src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
                                                 alt="Edit-img"> Edit</button>
-                                        <button class="btn"><img src=" {{asset('img/dashboard/Delete-Chat.png')}}"
+                                        <button class="btn testimonial-remove-btn"><img src=" {{asset('img/dashboard/Delete-Chat.png')}}"
                                                 class="img-fluid" alt="Edit-img"> Remove</button>
                                     </div>
-                                </div>
-                                <div class="testimonial-txt-d-none">
-                                    <form action="" class="row">
-                                        <div class="col-md-12 profile-eidt-form-inner">
-                                            <label for="Job Summary Note">Job Summary Note</label>
-                                            <textarea name="Job_Summary_Note" id="Job_Summary_Note" cols="140" rows="7">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem est rerum placeat nobis voluptates fuga in laudantium cumque veniam! Suscipit at esse
-                                        </textarea>
-                                        </div>
-                                        <div class="col-md-4 profile-eidt-form-inner">
-                                            <label for="Testimonial Note Name">Testimonial Note Name</label>
-                                            <input class="form-control" type="text" name="Testimonial_Note_Name"
-                                                id="Testimonial_Note_Name" value="KIM CHING">
-                                        </div>
-                                        <div class="col-md-4 profile-eidt-form-inner form-group">
-                                            <label for="Testimonial Note Date">Testimonial Note Date</label>
-                                            <input class="form-control date" type="calander" name="dob" placeholder=""
-                                                id="Testimonial_Note_Date" value="2022-01-15">
-                                            <img src="{{asset('img/dashboard/calendar-icon.png')}}" class="calendar"
-                                                alt="calendar-icon">
-                                        </div>
-                                        <div class="col-md-12 profile-eidt-form-btn">
-                                            <button class="btn back-btn">Back</button>
-                                            <input type="submit" class="btn" placeholder="Submit">
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="row testimonial-upload">
+                                    <div class="row testimonial-upload">
                                     <div class="col-md-5">
                                         <div class="row profile-details profile-details-upload">
                                             <div class="col-md-8">
@@ -6803,19 +6774,99 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons">
+                                                
+                                                        <a href="#">
                                                     <img src="http://127.0.0.1:8000/img/dashboard/Eye.png"
                                                         class="img-fluid" alt="Eye">
+                                                        </a>
+                                                        <a href="#">
                                                     <img src="http://127.0.0.1:8000/img/dashboard/Download.png"
                                                         class="img-fluid gray-color" alt="download">
+                                                        </a>
+                                                        <a href="#">
                                                     <img src="http://127.0.0.1:8000/img/dashboard/Upload.png"
                                                         class="img-fluid gray-color" alt="Upload">
+                                                        </a>
+                                                        <a href="#">
                                                     <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png"
                                                         class="img-fluid gray-color" alt="Delete-Trash">
+                                                        </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </div>
+                                <div class="testimonial-txt-d-none">
+                                    <form action="" class="row">
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="Job Summary Note">Job Summary Note</label>
+                                            <textarea name="Job_Summary_Note" id="Job_Summary_Note" cols="140" rows="7">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem est rerum placeat nobis voluptates fuga in laudantium cumque veniam! Suscipit at esse
+                                        </textarea>
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner">
+                                            <label for="Testimonial Note Name">Testimonial Note Name</label>
+                                            <input class="form-control" type="text" name="Testimonial_Note_Name"
+                                                id="Testimonial_Note_Name" value="KIM CHING">
+                                        </div>
+                                        <div class="col-md-4 profile-eidt-form-inner form-group">
+                                            <label for="Testimonial Note Date">Testimonial Note Date</label>
+                                            <input class="form-control date" type="calander" name="dob" placeholder=""
+                                                id="Testimonial_Note_Date" value="2022-01-15">
+                                            <img src="{{asset('img/dashboard/calendar-icon.png')}}" class="calendar"
+                                                alt="calendar-icon">
+                                        </div>
+                                        <div class="row testimonial-upload">
+                                    <div class="col-md-5">
+                                        <div class="row profile-details profile-details-upload">
+                                            <div class="col-md-8">
+                                                <div class="card mb-3">
+                                                    <div class="row g-0">
+                                                        <div class="col-md-1 card-img">
+                                                            <img src="http://127.0.0.1:8000/img/dashboard/MP3.png"
+                                                                class="img-fluid pdf-upload rounded-start" alt="...">
+                                                        </div>
+                                                        <div class="col-md-11 padd-l-0">
+                                                            <div class="card-body">
+                                                                <h5 class="card-title">Referee Report 3 .pdf</h5>
+                                                                <p class="card-text"><small class="text-muted">56KB |
+                                                                        12/3/2021</small></p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="profile-buttons">
+                                                    <a href="#">
+                                                    <img src="http://127.0.0.1:8000/img/dashboard/Eye.png"
+                                                        class="img-fluid" alt="Eye">
+                                                        </a>
+                                                        <a href="#">
+                                                    <img src="http://127.0.0.1:8000/img/dashboard/Download.png"
+                                                        class="img-fluid gray-color" alt="download">
+                                                        </a>
+                                                        <a href="#">
+                                                    <img src="http://127.0.0.1:8000/img/dashboard/Upload.png"
+                                                        class="img-fluid gray-color" alt="Upload">
+                                                        </a>
+                                                        <a href="#">
+                                                    <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png"
+                                                        class="img-fluid gray-color" alt="Delete-Trash">
+                                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                        <div class="col-md-12 profile-eidt-form-btn">
+                                            <button class="btn back-btn">Back</button>
+                                            <input type="submit" class="btn" placeholder="Submit">
+                                        </div>
+                                    </form>
+                                </div>
+                                
                             </div>
 
                         </div>

@@ -1003,6 +1003,7 @@ div.dataTables_wrapper div.dataTables_info {
     color: #fff;
     width: 150px;
     height: 50px;
+    margin-left: 10px;
     border-radius: 7px;
     font-family: "roboto", sans-serif !important;
     font-weight: 600;
@@ -2256,6 +2257,9 @@ textarea{
 .profile-eidt-form, .profile-details-eidt-form, .assign-eidt-form, .reference-form-inner-d-none, .counter-circle-form, .interview-form-d-none, .job-summary-d-none,.testimonial-txt-d-none,.pipeline-data-d-none{
     display: none;
 }
+.testimonial-txt-d-none{
+    padding-bottom: 30px;
+}
 .profile-eidt-form form{
     margin: 0;
     padding: 20px;
@@ -2341,10 +2345,9 @@ textarea{
 }
 
 
-.doctor-specialty-d-none, .nurse-seniority-d-none, .nurse-specialty-d-none, .AHP-Specialty-d-none, .HE-Specialty-d-none{
+.seniority-doctor-d-none , .nurse-seniority-d-none,.doctor-specialty-d-none , .nurse-specialty-d-none, .AHP-Specialty-d-none, .HE-Specialty-d-none{
     display: none;
 }
-
 .candidate-profile-table .dataTables_length label{
     position: relative;
 }
@@ -2682,8 +2685,17 @@ textarea{
 .client-testi-sec .edit-brn .btn{
     color: #000;
 }
-
-
+.client-icon-buttons {
+    padding: 0px !important;
+    padding-bottom: 10px !important;
+}
+.client-icon-buttons img{
+    background-color: transparent !important;
+    border: 2px solid #fff;
+}
+.mt-10{
+    margin-top: 10px !important;
+}
 /* client datatable start here */
 .main-contact-heading{
     padding-top: 20px;
@@ -2699,9 +2711,11 @@ textarea{
     box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 35%);
     padding-left: 10px;
     padding-right: 10px;
+    padding-bottom: 30px;
+    margin-top: 50px;
 }
 .main-contact-table .table{
-    border: none;
+    border: none !important;
 }
 .main-contact-table .dataTables_scrollBody{
     overflow: hidden;
@@ -2726,6 +2740,9 @@ textarea{
     border-radius: 5px;
     border: none;
 }
+.main-contact-table .check-box{
+    display: none;
+}
 .main-contact-table select.input-sm {
     height: 37px;
 }
@@ -2742,7 +2759,7 @@ textarea{
     font-family: 'FontAwesome';
 }
 .main-contact-table .dataTables_paginate,.main-contact-table .dataTables_info{
-    padding-top: 40px;
+    padding-top: 40px !important;
 }
 .main-contact-table table.dataTable tbody tr {
     border: 1px solid #d1d1d1 !important;
@@ -2759,4 +2776,73 @@ textarea{
     border-top: 2px solid #686868 !important;
     border-bottom: 2px solid #686868 !important;
 }
+
+.job-order-table table{
+    border: none;
+}
+/* archives-table start */
+.archives-table{
+    position: relative;
+    padding-top: 30px;
+}
+.archives-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F0F1F3;
+    padding: 15px 10px;
+}
+.archives-heading h3{
+    margin: 0px;
+    font-size: 20px;
+}
+.archives-flex .candidate-date{
+    padding: 0px;
+}
+.archives-flex .form-group{
+    margin: 0px;
+}
+.archives-flex .date-background{
+    top: 7px;
+}
+.archives-flex .candidate-date i.fa-sort-down{
+    top: 9px;
+}
+.doc-type-txt{
+    font-size: 16px;
+    color: #000;
+    padding: 38px 10px;
+    padding-bottom: 15px;
+}
+.action-buttons{
+    padding: 0px;
+}
+.action-buttons a:first-child img{
+    margin-left: 0px;
+}
+.archives-table .table thead th:last-child {
+    text-align: right;
+}
+.main-contact-table .table thead th{
+    font-weight: 400;
+}
+/* archives-table end */
+.activity-table thead th{
+        font-weight: 400 !important;
+}
 /* client datatable end  here */
+
+
+
+/* view job start here */
+.view-job{
+        box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+}
+.job-client-details{
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+    background-color: #fff;
+}
+.job-client-details .card-text{
+    color: #686868;
+}
+/* view job end here */

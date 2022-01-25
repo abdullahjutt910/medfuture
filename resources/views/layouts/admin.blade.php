@@ -317,10 +317,19 @@
     </script>
 <script>
 
+
+// datatables for clients view
+
 $(document).ready( function () {
-    $('#myTable').DataTable();
-} );
+    $('#MainContact').DataTable();
+    $('#BillingContact').DataTable();
+    $('#JobOrders').DataTable();
+    $('#PlacementHistory').DataTable();
+    $('#Archives').DataTable();
+
+});
 </script>
+
 <!-- <script>
       $("document").ready(function(){
           $("td").removeClass("sorting sorting_desc sorting_asc");
@@ -377,32 +386,30 @@ $(document).ready( function () {
 
 
         //  select options change
-        $(".interview-edit-btn").click(function(){
-        $('.interview-table td .profession-doctor').change(function () {
+        $('.profession-doctor').change(function () {
         var text = $('option:selected', this).text();
         if(text === "Doctor"){
-          $(".interview-table  .doctor-specialty-d-none").show();
-          $(".interview-table .nurse-specialty-d-none, .interview-table .AHP-Specialty-d-none, .interview-table .HE-Specialty-d-none").hide();
-          $(".interview-table .seniority-doctor-d-none").show();
-          $(".interview-table .nurse-seniority-d-none").hide();
-         }
+          $(" .doctor-specialty-d-none").show();
+          $(" .nurse-specialty-d-none,.AHP-Specialty-d-none, .HE-Specialty-d-none").hide();
+          $(" .seniority-doctor-d-none").show();
+          $(" .nurse-seniority-d-none").hide();
+        }
         if(text === "Nurse"){
-          $(".interview-table .nurse-specialty-d-none").show();
-          $(".interview-table .doctor-specialty-d-none, .interview-table .AHP-Specialty-d-none, .interview-table .HE-Specialty-d-none").hide();
-          $(".interview-table .nurse-seniority-d-none").show();
-          $(".interview-table .seniority-doctor-d-none").hide();
+          $(" .nurse-specialty-d-none").show();
+          $(".doctor-specialty-d-none,  .AHP-Specialty-d-none, .HE-Specialty-d-none").hide();
+          $(" .nurse-seniority-d-none").show();
+          $(" .seniority-doctor-d-none").hide();
          }
          if(text === "Allied Health Professionals"){
-          $(".interview-table  .AHP-Specialty-d-none").show();
-          $(".interview-table .doctor-specialty-d-none, .interview-table .nurse-specialty-d-none, .interview-table .HE-Specialty-d-none").hide();
+          $("  .AHP-Specialty-d-none").show();
+          $(" .doctor-specialty-d-none,  .nurse-specialty-d-none,  .HE-Specialty-d-none").hide();
          }
          if(text === "Healthcare Executives"){
-          $(".interview-table .HE-Specialty-d-none").show();
-          $(".interview-table .doctor-specialty-d-none, .interview-table .AHP-Specialty-d-none, .interview-table .nurse-specialty-d-none").hide();
+          $(" .HE-Specialty-d-none").show();
+          $(" .doctor-specialty-d-none,  .AHP-Specialty-d-none,  .nurse-specialty-d-none").hide();
          }
 
         });
-      });
         // counter background color change
 
         var counter_num_1 = $(".Contacted.percent p").html();
@@ -534,6 +541,7 @@ $(document).ready( function () {
       $(".testimonial-edit-btn").click(function(){
         $(".testimonial-txt-edit").hide();
         $(".testimonial-txt-d-none").show();
+        $(".profile-details-upload .profile-buttons img").removeClass("gray-color");
       });
       
       $(".back-btn").click(function(){
@@ -542,7 +550,7 @@ $(document).ready( function () {
       });
 
       $(".testimonial-remove-btn").click(function(){
-        $(".testimonial-txt").hide();
+        $(".testimonial-txt").hide();        
       });
 
 

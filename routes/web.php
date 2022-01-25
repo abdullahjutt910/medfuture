@@ -8,6 +8,11 @@ use App\Http\Controllers\frontend\PostController;
 use App\Http\Controllers\frontend\MainController;
 
 Route::redirect('/', '/login');
+Route::get('migrate', function () {
+    Artisan::call('migrate:fresh --seed');
+
+    return 'Successfully Migrated !';
+});
 Route::get('/home', function () {
     if (session('status')) {
         return redirect()->route('admin.home')->with('status', session('status'));

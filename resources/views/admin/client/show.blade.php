@@ -17,8 +17,11 @@
                         <!-- <h4> {{ trans('global.create') }} {{ trans('cruds.candidate.title_singular') }}</h4> -->
                     </div>
                     <div class="dashbord-button">
-                        <a href="#" class="btn dashbord-btn dashbord-primary ">
-                            <h3>Dashboard</h3>
+                    <a href="#" class="btn dashbord-btn dashbord-primary ">
+                            <h3>Admin Access</h3>
+                        </a>
+                        <a href="#" class="btn dashbord-btn dashbord-primary">
+                            <h3 class="mt-10">Dashboard</h3>
                         </a>
                         <a href="#" class="btn candidate-dash-btn dashbord-primary">
                             <h3>Candidate <br> Dashboard </h3>
@@ -598,7 +601,7 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-2 card-img">
-                                                            <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                            <img src="{{asset('img/dashboard/PDF-1.png')}}"
                                                                 class="img-fluid pdf-upload rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-10 padd-12">
@@ -615,12 +618,12 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-1 card-img">
-                                                            <img src="{{asset('img/dashboard/Calendar.png')}}"
+                                                            <img src="{{asset('img/dashboard/Calendar-1.png')}}"
                                                                 class="img-fluid rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-11 padd-12">
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Applied Date</h5>
+                                                                <h5 class="card-title">Updated Date</h5>
                                                                 <p class="card-text"><small
                                                                         class="text-muted">12/1/2021</small></p>
                                                             </div>
@@ -629,7 +632,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="profile-buttons">
+                                                <div class="profile-buttons client-icon-buttons">
                                                     <a href="#">
                                                         <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                             alt="Eye">
@@ -661,7 +664,7 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-2 card-img">
-                                                            <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                            <img src="{{asset('img/dashboard/PDF-1.png')}}"
                                                                 class="img-fluid pdf-upload rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-10 padd-12">
@@ -678,12 +681,12 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-1 card-img">
-                                                            <img src="{{asset('img/dashboard/Calendar.png')}}"
+                                                            <img src="{{asset('img/dashboard/Calendar-1.png')}}"
                                                                 class="img-fluid rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-11 padd-12">
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Applied Date</h5>
+                                                                <h5 class="card-title">Updated Date</h5>
                                                                 <p class="card-text"><small
                                                                         class="text-muted">12/1/2021</small></p>
                                                             </div>
@@ -692,7 +695,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="profile-buttons">
+                                                <div class="profile-buttons client-icon-buttons">
                                                     <a href="#">
                                                         <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                             alt="Eye">
@@ -724,7 +727,7 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-2 card-img">
-                                                            <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                            <img src="{{asset('img/dashboard/PDF-1.png')}}"
                                                                 class="img-fluid  pdf-upload rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-10 padd-12">
@@ -741,12 +744,12 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-1 card-img">
-                                                            <img src="{{asset('img/dashboard/Calendar.png')}}"
+                                                            <img src="{{asset('img/dashboard/Calendar-1.png')}}"
                                                                 class="img-fluid rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-11 padd-12">
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Applied Date</h5>
+                                                                <h5 class="card-title">Updated Date</h5>
                                                                 <p class="card-text"><small
                                                                         class="text-muted">12/1/2021</small></p>
                                                             </div>
@@ -755,7 +758,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="profile-buttons">
+                                                <div class="profile-buttons client-icon-buttons">
                                                     <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                         alt="Eye">
                                                     <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
@@ -1370,7 +1373,7 @@
                                                                             </div>
                                                                             <div class="col-md-11 padd-l-0">
                                                                                 <div class="card-body">
-                                                                                    <h5 class="card-title">Candidate Feedback 1 .pdf</h5>
+                                                                                    <h5 class="card-title">Candidate Feedback 2 .pdf</h5>
                                                                                     <p class="card-text"><small
                                                                                             class="text-muted">32KB | 12/3/2021 </small></p>
                                                                                 </div>
@@ -1437,7 +1440,7 @@
                                                                             </div>
                                                                             <div class="col-md-11 padd-l-0">
                                                                                 <div class="card-body">
-                                                                                    <h5 class="card-title">Candidate Feedback 1 .pdf</h5>
+                                                                                    <h5 class="card-title">Candidate Feedback 3 .pdf</h5>
                                                                                     <p class="card-text"><small
                                                                                             class="text-muted">32KB | 12/3/2021 </small></p>
                                                                                 </div>
@@ -1777,36 +1780,18 @@
                                                                     <i class="fas fa-lock"></i>
                                                                 </td>
                                                             </tr>
-                                                            <tr>
+                                                            <!-- <tr>
                                                                 <th>
                                                                     Gender
                                                                 </th>
                                                                 <td>
                                                                 </td>
-                                                            </tr>
+                                                            </tr> -->
                                                             <tr>
                                                                 <th>
                                                                     Mobile
                                                                 </th>
                                                                 <td>
-                                                                    <i class="fas fa-lock"></i>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>
-                                                                    Profession
-                                                                </th>
-                                                                <td>
-                                                                    {{-- <select class="profession-doctor form-select form-select-lg mb-3"
-                                                                        name="profession"
-                                                                        aria-label=".form-select-lg example">
-                                                                        <option value="Doctor">Doctor</option>
-                                                                        <option value="Nurse">Nurse</option>
-                                                                        <option value="Allied Health Professionals">Allied Health Professionals</option>
-                                                                        <option value="Healthcare Executives">Healthcare Executives</option>
-                                                                        <!-- <option value="Dentists">Dentists</option> -->
-                                                                    </select> --}}
-                                                                    <i class="fas fa-sort-down"></i>
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -1877,6 +1862,39 @@
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
                                                             </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Category
+                                                                </th>
+                                                                <td>
+                                                                    {{-- <select class="profession-doctor form-select form-select-lg mb-3"
+                                                                        name="profession"
+                                                                        aria-label=".form-select-lg example">
+                                                                        <option value="Doctor">Doctor</option>
+                                                                        <option value="Nurse">Nurse</option>
+                                                                        <option value="Allied Health Professionals">Allied Health Professionals</option>
+                                                                        <option value="Healthcare Executives">Healthcare Executives</option>
+                                                                    </select> --}}
+                                                                    <i class="fas fa-sort-down"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <!-- <tr>
+                                                                <th>
+                                                                    Profession
+                                                                </th>
+                                                                <td>
+                                                                    {{-- <select class="profession-doctor form-select form-select-lg mb-3"
+                                                                        name="profession"
+                                                                        aria-label=".form-select-lg example">
+                                                                        <option value="Doctor">Doctor</option>
+                                                                        <option value="Nurse">Nurse</option>
+                                                                        <option value="Allied Health Professionals">Allied Health Professionals</option>
+                                                                        <option value="Healthcare Executives">Healthcare Executives</option>
+                                                                    </select> --}}
+                                                                    <i class="fas fa-sort-down"></i>
+                                                                </td>
+                                                            </tr> -->
+                                                           
                                                             <tr>
                                                             <th>
                                                                     Seniority
@@ -2072,13 +2090,13 @@
                                                             </tr>
                                                             <tr>
                                                                 <th>
-                                                                    Distance
+                                                                    Talent Profession
                                                                 </th>
                                                                 <td>
 
                                                                 </td>
                                                             </tr>
-                                                            <tr>
+                                                            <!-- <tr>
                                                                 <th>
                                                                     Job Seeking location
                                                                 </th>
@@ -2093,7 +2111,7 @@
                                                                     </select> --}}
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
-                                                            </tr>
+                                                            </tr> -->
                                                             <tr>
                                                                 <td colspan="2" class="disc-width"></td>
                                                                 <td></td>
@@ -2147,11 +2165,11 @@
                                                                 <td class="padd-8">
                                                                 </td>
                                                             </tr>
-                                                            <tr>
+                                                            <!--<tr>
                                                                 <td colspan="2" class="disc-width"></td>
                                                                 <td></td>
                                                             </tr>
-                                                            <tr>
+                                                             <tr>
                                                                 <th>
                                                                     Practise Licence Number
                                                                 </th>
@@ -2795,7 +2813,7 @@
                                                                     </select> --}}
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
-                                                            </tr>
+                                                            </tr> -->
                                                             <tr>
                                                                 <td colspan="2" class="disc-width"></td>
                                                                 <td></td>
@@ -3524,7 +3542,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <th>
-                                                                    Moratorium Restriction
+                                                                    Moratorium Exemption
                                                                 </th>
                                                                 <td>
                                                                     {{-- <select class="form-select form-select-lg mb-3"
@@ -3539,22 +3557,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <th>
-                                                                    Location Restrictions
-                                                                </th>
-                                                                <td>
-                                                                    {{-- <select class="form-select form-select-lg mb-3"
-                                                                        name="job_title"
-                                                                        aria-label=".form-select-lg example">
-                                                                        <option value="Yes" disabled>Yes</option>
-                                                                        <option value="No" disabled>No</option>
-                                                                        <option value="N/A" disabled>N/A</option>
-                                                                    </select> --}}
-                                                                    <i class="fas fa-sort-down"></i>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>
-                                                                    Training Program Requirement
+                                                                Rural Status
                                                                 </th>
                                                                 <td>
 
@@ -3569,16 +3572,31 @@
                                                                 </td>
                                                             </tr>
                                                             <tr>
+                                                                <th>
+                                                                Location Status
+                                                                </th>
+                                                                <td>
+                                                                    {{-- <select class="form-select form-select-lg mb-3"
+                                                                        name="job_title"
+                                                                        aria-label=".form-select-lg example">
+                                                                        <option value="Yes" disabled>Yes</option>
+                                                                        <option value="No" disabled>No</option>
+                                                                        <option value="N/A" disabled>N/A</option>
+                                                                    </select> --}}
+                                                                    <i class="fas fa-sort-down"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <!-- <tr>
                                                                 <th>
                                                                     Training Program Type
                                                                 </th>
                                                                 <td  class="padd-8">
 
                                                                 </td>
-                                                            </tr>
+                                                            </tr> -->
                                                             <tr>
                                                                 <th>
-                                                                    Medical Board Conditions
+                                                                Acceptable Training Program
                                                                 </th>
                                                                 <td>
 
@@ -3594,7 +3612,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <th>
-                                                                    Medical Board Undertakings
+                                                                    Supervision Available
                                                                 </th>
                                                                 <td>
 
@@ -4070,7 +4088,7 @@
                 <div class="main-contact-heading">
                     <h3>Main Contact</h3>
                 </div>
-                <table id="myTable" class="table  table-striped table-bordered table-sm" cellspacing="0"
+                <table id="MainContact" class="table  table-striped table-bordered table-sm" cellspacing="0"
                     width="100%">
                     <thead>
                         <tr>
@@ -4118,30 +4136,86 @@
                 <div class="purple"></div>
                 <div class="pink"></div>
             </div>
-            <!-- <div class="main-contact-table">
+
+            <div class="main-contact-table activity-heading">
+                <div class="main-contact-heading">
+                    <h3>Billing Contact</h3>
+                </div>
+                <table id="BillingContact" class="table  table-striped table-bordered table-sm" cellspacing="0"
+                    width="100%">
+                    <thead>
+                        <tr>
+                            <th class="th-sm">First Name
+                            </th>
+                            <th class="th-sm">Last Name
+                            </th>
+                            <th class="th-sm">Contact Number
+                            </th>
+                            <th class="th-sm">Mobile Number
+                            </th>
+                            <th class="th-sm submit-table-head">Email ID
+                            </th>
+                            <th class="th-sm">Designation
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="pipeline-data">
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="pipeline-data-d-none">
+                                <td><input type="text" value="Tiger Nixon"></td>
+                                <td><input type="text" value="System Architect"></td>
+                                <td><input type="text" value="Edinburgh"></td>
+                                <td><input type="number" value="61"></td>
+                                <td class="pipeline-date"><input class="form-control date" type="calander" name="Pipeline_Date" placeholder=""
+                                    id="Pipeline_Date" value="2022/04/25">
+                                    <img src="{{asset('img/dashboard/calendar-icon.png')}}" class="calendar"
+                                    alt="calendar-icon">
+                                </td>
+                                <td><input type="number" value="320800"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="forms-colored-div">
+                <div class="blue"></div>
+                <div class="purple"></div>
+                <div class="pink"></div>
+            </div>
+            <div class="main-contact-table activity-heading job-order-table">
                 <div class="main-contact-heading">
                     <h3>Job Orders</h3>
                 </div>
-                <table id="myTable" class="table  table-striped table-bordered table-sm" cellspacing="0"
+                <table id="JobOrders" class="table  table-striped table-bordered table-sm" cellspacing="0"
                     width="100%">
                     <thead>
                         <tr>
-                            <th class="th-sm">First Name
+                            <th class="th-sm">ID
                             </th>
-                            <th class="th-sm">Last Name
+                            <th class="th-sm">Title
                             </th>
-                            <th class="th-sm">Contact Number
+                            <th class="th-sm">Profession
                             </th>
-                            <th class="th-sm">Mobile Number
+                            <th class="th-sm">Post Date
                             </th>
-                            <th class="th-sm submit-table-head">Email ID
+                            <th class="th-sm submit-table-head">Rec Consultant
                             </th>
-                            <th class="th-sm">Designation
+                            <th class="th-sm">Owner
+                            </th>
+                            <th class="th-sm">Job Status
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="pipeline-data">
+                            <td>-</td>
                             <td>-</td>
                             <td>-</td>
                             <td>-</td>
@@ -4170,11 +4244,12 @@
                 <div class="purple"></div>
                 <div class="pink"></div>
             </div>
-            <div class="main-contact-table">
+
+            <div class="main-contact-table activity-heading">
                 <div class="main-contact-heading">
                     <h3>Placement History</h3>
                 </div>
-                <table id="myTable" class="table  table-striped table-bordered table-sm" cellspacing="0"
+                <table id="PlacementHistory" class="table  table-striped table-bordered table-sm" cellspacing="0"
                     width="100%">
                     <thead>
                         <tr>
@@ -4189,7 +4264,7 @@
                             <th class="th-sm submit-table-head">Last Name
                             </th>
                             <th class="th-sm">Profession
-                            </th>
+                            </th> 
                             <th class="th-sm">Activity Notes
                             </th>
                         </tr>
@@ -4224,41 +4299,68 @@
                 <div class="blue"></div>
                 <div class="purple"></div>
                 <div class="pink"></div>
-            </div> -->
+            </div>
 
-
-
-            <div class="candidate-profile-table activity-heading">
-                <div class="testimonial-heading">
-                    <h3>Job Order Pipeline</h3>
+            <div class="main-contact-table archives-table activity-heading">
+                <div class="archives-flex">
+                    <div class="archives-heading">
+                        <h3>Archives</h3>
+                    </div>
+                    <div class="candidate-date">
+                        <div class="form-group">
+                            <select class="form-control" name="title" id="title" required="">
+                                <option value="" selected="">2020-2021</option>
+                                <option value="2019-2020">2019-2020</option>
+                                <option value="2018-2019">2018-2019</option>
+                                <option value="2017-2018">2017-2018</option>
+                                <option value="2016-2017">2016-2017</option>
+                                <option value="2015-2016">2015-2016</option>
+                            </select>
+                                <i class="fas fa-sort-down"></i>
+                        </div>
+                        <span class="date-background"></span>
+                    </div>
                 </div>
-                <table id="dtpipeline" class="table  table-striped table-bordered table-sm" cellspacing="0"
+                <p class="doc-type-txt">Document Type List</p>
+                <table id="Archives" class="table  table-striped table-bordered table-sm" cellspacing="0"
                     width="100%">
                     <thead>
                         <tr>
-                            <th class="th-sm">Title
+                            <th class="th-sm">Document Required
                             </th>
-                            <th class="th-sm">Clients
+                            <th class="th-sm">Status
                             </th>
-                            <th class="th-sm">Owner
+                            <th class="th-sm">Uploaded On
                             </th>
-                            <th class="th-sm">Added
+                            <th class="th-sm">Expiry
                             </th>
-                            <th class="th-sm submit-table-head">Submitted
-                            </th>
-                            <th class="th-sm">Action
+                            <th class="th-sm submit-table-head">Action
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="pipeline-data">
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2022/04/25</td>
-                            <td>$320,800</td>
+                            <td>Company Profile</td>
+                            <td>To be provided</td>
+                            <td>05-11-2021</td>
+                            <td>05-11-2022</td>
+                            <td>
+                                <div class="profile-buttons action-buttons">
+                                    <a href="#">
+                                    <img src="http://127.0.0.1:8000/img/dashboard/Eye.png" class="img-fluid" alt="Eye">
+                                    </a>
+                                    <a href="#">
+                                    <img src="http://127.0.0.1:8000/img/dashboard/Download.png" class="img-fluid" alt="download">
+                                    </a>
+                                    <a href="#">
+                                    <img src="http://127.0.0.1:8000/img/dashboard/Upload.png" class="img-fluid" alt="Upload">
+                                    <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png" class="img-fluid" alt="Delete-Trash">
+                                    </a>
+                                </div>
+                            </td>
                         </tr>
+
+                        
                         <tr class="pipeline-data-d-none">
                                 <td><input type="text" value="Tiger Nixon"></td>
                                 <td><input type="text" value="System Architect"></td>
@@ -4274,111 +4376,17 @@
 
                     </tbody>
                 </table>
-                <div class="pipeline-btn pipeline-btn-d-none ">
-                    <div class="add-pipeline">
-                        <button class="btn add-pipeline-btn">Add This Candidate To Job Order Pipeline</button>
-                    </div>
-                    <div class="edit-brn">
-                        <button class="btn pipeline-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
-                                alt="Edit-img"> Edit</button>
-                    </div>
-                    <div class="popup-pipeline">
-                    <i class="fas fa-times cross-icon"></i>
-                         <h3>Add this candidate to the pipeline for a job order.</h3>
-                         <div class="padd-20">
-                         <p class="popup-pipeline-heading-1">Add this candidate to the pipeline for a job order.</p>
-                        <p>Search for a job order below, and then click on the job title to add the candidate to the selected job order pipeline.</p>
-                        <div>
-                            <form action="" class="row pipeline-search-form">
-                            <div class="col-md-6">
-                                <label for="search job title"> Search by Job Title:</label>
-                                <div class="pipeline-search">
-                                <input type="text" class="form-control">
-                                <span class="pipeline-search-txt search-job-title-btn">Go</span>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="search job title"> Search by Client Name:</label>
-                                <div class="pipeline-search">
-                                <input type="text" class="form-control">
-                                <span class="pipeline-search-txt search-client-btn">Go</span>
-                                </div>
-                            </div>
-                            </form>
-                        </div>  
-                        </div>                              
-                    </div>
-                    <div class="popup-pipeline-form">
-                        <form action="" class="pipeline-form row">
-                            <div class="col-md-8 profile-eidt-form-inner form-group">
-                                    <select name="placement_term" id="placement_term" class="form-control">
-                                        <option value="Other " selected diable > Other </option>
-                                        <option value="Contacted">Contacted</option>
-                                        <option value="Initial Screening">Initial Screening</option>
-                                        <option value="Short Listed">Short Listed</option>
-                                        <option value="Shelved">Shelved</option>
-                                        <option value="Job Matching">Job Matching</option>
-                                        <option value="Submissions">Submissions</option>
-                                        <option value="Declined">Declined</option>
-                                        <option value="Interviews">Interviews</option>
-                                        <option value="Due Diligence Check">Due Diligence Check</option>
-                                        <option value="Rejected / Accepted">Rejected / Accepted</option>
-                                        <option value="Placed">Placed</option>
-                                        <option value="Archived">Archived</option>
-                                        <option value="Testimony">Testimony</option>
-                                    </select>
-                                    <i class="fas fa-sort-down"></i>
-                            </div>
-                            <div class="col-md-8 profile-eidt-form-inner form-group">
-                                    <select name="placement_term" id="placement_term" class="form-control">
-                                        <option value="General" selected diable > General </option>
-                                        <option value="Contacted">Contacted</option>
-                                        <option value="Initial Screening">Initial Screening</option>
-                                        <!-- <option value="Short Listed">Short Listed</option>
-                                        <option value="Shelved">Shelved</option>
-                                        <option value="Job Matching">Job Matching</option>
-                                        <option value="Submissions">Submissions</option>
-                                        <option value="Declined">Declined</option>
-                                        <option value="Interviews">Interviews</option>
-                                        <option value="Due Diligence Check">Due Diligence Check</option>
-                                        <option value="Rejected / Accepted">Rejected / Accepted</option>
-                                        <option value="Placed">Placed</option>
-                                        <option value="Archived">Archived</option>
-                                        <option value="Testimony">Testimony</option> -->
-                                    </select>
-                                    <i class="fas fa-sort-down"></i>
-                            </div>
-                            <div class="col-md-8 profile-eidt-form-inner">
-                            <textarea name="activity-textarea" id="activity-textarea" cols="30" rows="5" placeholder="Your Notes"></textarea>
-                            </div>
-                                <div class=" col-md-12 activity-form-back-btn">
-                                    <div class=" profile-eidt-form-btn">
-                                        <button class="btn back-btn pipeline-cancel-btn">Cancel</button>
-                                        <input type="submit" class="btn" placeholder="Submit">
-                                    </div>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-                <div class="pipeline-back-btn">
-                    <div class="col-md-12 profile-eidt-form-btn">
-                    <button class="btn back-btn">Back</button>
-                    <input type="submit" class="btn" placeholder="Submit">
-                    </div>
-                </div>
-
             </div>
             <div class="forms-colored-div">
                 <div class="blue"></div>
                 <div class="purple"></div>
                 <div class="pink"></div>
             </div>
-            <div class="candidate-profile-table activity-heading">
+            <div class="candidate-profile-table activity-heading ">
                 <div class="testimonial-heading ">
                     <h3>Activity</h3>
                 </div>
-                <table id="dtActivity" class="table  table-striped table-bordered table-sm" cellspacing="0"
+                <table id="dtActivity" class=" activity-table table  table-striped table-bordered table-sm" cellspacing="0"
                     width="100%">
                     <thead>
                         <tr>
@@ -4416,7 +4424,7 @@
                                 alt="calendar-icon">
                             </td>
                             <td><input type="number" value="320800"></td>
-                    </tr>
+                        </tr>
                     </tbody>
                 </table>
                 <div class="pipeline-btn activity-btn-d-none">
