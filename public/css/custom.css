@@ -2027,15 +2027,15 @@ textarea{
 .candidate-profile-table table{
     border: none;
 }
-.candidate-profile-table .dataTables_paginate{
+/* .candidate-profile-table .dataTables_paginate{
     position: relative;
     bottom: 258px;
     right: 25px;
-}
+} */
 .candidate-profile-table .dataTables_filter{
     position: absolute;
     top: -58px;
-    right: 125px;
+    right: 50px;
 }
 .candidate-profile-table .dataTables_filter input{
     border-radius: 15px;
@@ -2043,13 +2043,14 @@ textarea{
     background-color: #F2F3F7;
     border: none;
 }
+/* 
 .candidate-profile-table .pagination .active{
     display: none;
 }
 .candidate-profile-table .dataTables_filter label{
     position: relative;
 }
-/* .candidate-profile-table .dataTables_filter label::before{
+.candidate-profile-table .dataTables_filter label::before{
     position: absolute;
     content: "\f002";
     left: 68px;
@@ -2059,7 +2060,7 @@ textarea{
     font-family: "FontAwesome";
     color: #BEC2CA;
 } */
-.candidate-profile-table .previous a, .candidate-profile-table .next a{
+/* .candidate-profile-table .previous a, .candidate-profile-table .next a{
     position: relative;
 }
 .candidate-profile-table .previous a::before, .candidate-profile-table .next a::before{
@@ -2072,26 +2073,23 @@ textarea{
 }
 .candidate-profile-table .next a::before{
     content: "\f054" !important;
-}
-.candidate-profile-table .dataTables_paginate .pagination .previous a,.candidate-profile-table .dataTables_paginate .pagination .next a{
+} */
+/* .candidate-profile-table .dataTables_paginate .pagination .previous a,.candidate-profile-table .dataTables_paginate .pagination .next a{
     background-color: transparent;
     color: #000;
     margin: 0px 8px;
     border-radius: 0px;
     border: none;
     font-size: 16px;
-}
-.candidate-profile-table .dataTables_paginate .pagination .active a {
+} */
+/* .candidate-profile-table .dataTables_paginate .pagination .active a {
     background-color: #fff;
     color: #10468E;
     border-radius: 10px;
     border: 2px solid #10468E;
     font-size: 16px;
     display: none;
-}
-/* .candidate-profile-table .pagination li:nth-child(2){
-    display: none;
-}  */
+} */
 .candidate-profile-table .dataTables_length select{
     line-height: 1;
     background: grey;
@@ -2839,10 +2837,82 @@ textarea{
         box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
 }
 .job-client-details{
+    margin-top: 15px;
+    padding: 25px 10px;
     box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
     background-color: #fff;
 }
+.job-client-details .card{
+    padding-top: 20px;
+}
 .job-client-details .card-text{
-    /* color: #686868; */
+    color: #686868;
+}
+.job-client-details h3{
+    font-size: 20px;
+    margin-top: 0px;
+}
+.job-client-details  .card-text{
+    font-size: 13px;
+    color: #686868;
+}
+.job-client-details-inner{
+    display: flex;
+    align-items: center;
+}
+.job-client-details img{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #0B5292;
+    border-radius: 50%;
+    padding: 4px;
+    image-rendering: -webkit-optimize-contrast;
+}
+.job-client-details .card-title{
+    color: #000;
+    margin: 0px;
+}
+
+.contact-detail{
+    margin-top: 38px;
+}
+
+
+.job-key-fetch{
+    padding: 35px 10px;
+    background-color: #fff;
+    margin-top: 15px;
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+}
+.job-key-fetch h3{
+    font-size: 20px;
+    color: #000;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.job-key-fetch h5{
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+.key-fetch-txt-box{
+    width: 100%;
+    height: 33px;
+    background: #fff;
+    position: relative;
+    border: 1px solid #000;
+}
+
+
+.job-detail{
+    background-color: #fff;
+    margin-top: 50px;
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+}
+.job-detail h3{
+    padding-top: 30px;
+    padding-bottom: 22px;
+    font-size: 20px;
+    color: #000;
 }
 /* view job end here */
