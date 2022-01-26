@@ -7024,10 +7024,11 @@
                     </thead>
                     <tbody>
                         <tr class="activity-data"> 
-                            <td>{{ $candidate->activebar->updated_at ?? ''}}</td>
-                            <td>{{ $candidate->activebar->activity_type ?? ''}}</td>
-                            <td>{{ $candidate->activebar->activity_type_2 ?? ''}}</td>
-                            <td>{{ $candidate->activebar->activity_note ?? ''}}</td>
+                            {{-- {{dd($candidate)}} --}}
+                            <td>{{$candidate->activebar->updated_at?? ''}}</td> 
+                            <td>{{$candidate->activebar->activity_type?? ''}}</td>
+                            <td>{{$candidate->activebar->activity_type_2?? ''}}</td>
+                            <td>{{$candidate->activebar->activity_note?? ''}}</td> 
                             <td>
                                 <div class="profile-buttons action-buttons">
                                     <a href="{{ url('update_activity')}}/{{$candidate->id}}">
