@@ -7043,7 +7043,7 @@
                             <th class="th-sm">Type_1 </th>
                             <th class="th-sm">Type_2</th>
                             <th class="th-sm submit-table-head">Notes </th>
-                            <th class="th-sm">Action </th>
+                            <th class="th-sm activity-action">Action </th>
                         </tr>
                     </thead>
                     <tbody>

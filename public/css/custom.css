@@ -311,7 +311,10 @@ select {
     display: none;
     -webkit-appearance: none;
 } */
-
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 /*//////////////////////////////////// header styling end here /////////////////////////////////////*/
 
 
@@ -2488,6 +2491,10 @@ textarea{
 }
 .gray-color{
     background-color: gray !important;
+}
+
+.activity-action{
+    text-align: right;
 }
 /*//////////////////////////////////// Single Candidate Profile   styling end here /////////////////////////////////////*/
 
