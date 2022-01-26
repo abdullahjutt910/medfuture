@@ -184,13 +184,6 @@ class CandidateController extends Controller
         $progbar->testimony = $request->testimony;
         $progbar->save();
 
-        $activebar = new Activebar;
-        $activebar->candidate_id = $candidate->id;
-        $activebar->activity_type = $request->activity_type;
-        $activebar->activity_type_2 = $request->activity_type_2;
-        $activebar->activity_note = $request->activity_note;
-        $activebar->save();
-
         return redirect()->route('admin.candidates.index');
     }
 
@@ -353,17 +346,7 @@ class CandidateController extends Controller
         $progbar->save();
         return back();
     }
-    public function updateActivity(Request $request,$id)
-    {   
-        $activebar = Activebar::where('candidate_id',$id)->first();
-        $candidate = Candidate::find($id);
-        $activebar->candidate_id = $candidate->id;
-        $activebar->activity_type = $request->activity_type;
-        $activebar->activity_type_2 = $request->activity_type_2;
-        $activebar->activity_note = $request->activity_note;
-        $activebar->save();
-        return back();
-    }
+    
     public function update_interviewsummary(Request $request,$id)
     {
 
@@ -377,7 +360,7 @@ class CandidateController extends Controller
     public function show(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-         $candidates = $candidate->with('candidate_profile','interview','progbar')->first();
+         $candidates = $candidate->with('candidate_profile','interview','progbar','activebar')->first();
         //dd($candidates);
         return view('admin.candidates.show', compact('candidate'));
     }
@@ -474,8 +457,35 @@ class CandidateController extends Controller
         return back();
     }
 
+    public function insertActivity(Request $request, $id)
+    {
+        $activebar = new Activebar;
+        $activebar->candidate_id = $id;
+        $activebar->activity_type = $request->activity_type;
+        $activebar->activity_type_2 = $request->activity_type_2;
+        $activebar->activity_note = $request->activity_note;
+        // dd($activebar);
+        $activebar->save();
+
+        return redirect()->route('admin.candidates.index');
+
+    }
+
+    public function updateActivity(Request $request,$id)
+    {   
+        $activebar = Activebar::where('candidate_id',$id)->first();
+        $candidate = Candidate::find($id);
+        $activebar->candidate_id = $candidate->id;
+        $activebar->activity_type = $request->activity_type;
+        $activebar->activity_type_2 = $request->activity_type_2;
+        $activebar->activity_note = $request->activity_note;
+        $activebar->save();
+        return back();
+    }
+    
     public function deleteActivity($id){
         Activebar::find($id)->delete();
         return back();
     }
+    
 }

@@ -15,7 +15,7 @@ class CreateActivebarsTable extends Migration
     {
         Schema::create('activebars', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('candidate_id')->unsigned();
+            $table->foreignId('candidate_id')->references('id')->on('candidates')->onDelete('cascade');
             $table->string('activity_type')->nullable();
             $table->string('activity_type_2')->nullable();
             $table->string('activity_note')->nullable();

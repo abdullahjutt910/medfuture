@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Carbon\Carbon;
 use \DateTimeInterface;
+use App\Models\Activebar;
 use App\Models\Interview;
 use App\Models\CandidateProfile;
 use Spatie\MediaLibrary\HasMedia;

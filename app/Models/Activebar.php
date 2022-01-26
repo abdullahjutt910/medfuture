@@ -13,4 +13,8 @@ class Activebar extends Model
         'activity_type_2',
         'activity_note',
     ];
+    public function activebar()
+    {
+        return $this->belongsTo(Candidate::class);
+    }
 }
