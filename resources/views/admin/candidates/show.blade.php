@@ -26,7 +26,6 @@
                     </div>
                 </div>
 
-
                 <section class="profile-sec">
                     <div class="container-fluid">
                         <div class="row">
@@ -6667,8 +6666,9 @@
                                                                                     <h5 class="card-title">Audio
                                                                                         Recording</h5>
                                                                                     <p class="card-text"><small
-                                                                                            class="text-muted">56KB |
-                                                                                            12/3/2021</small></p>
+                                                                                        class="text-muted">56KB |
+                                                                                        12/3/2021</small>
+                                                                                    </p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -6699,8 +6699,9 @@
                                                     </div>
                                                     <div class="edit-brn">
                                                         <button class="btn audio-edit-btn"><img
-                                                                src=" {{asset('img/dashboard/Edit.png')}}"
-                                                                class="img-fluid" alt="Edit-img"> Edit</button>
+                                                            src=" {{asset('img/dashboard/Edit.png')}}"
+                                                            class="img-fluid" alt="Edit-img"> Edit
+                                                        </button>
                                                     </div>
                                                 </div>
                                                 <div class="forms-colored-div">
@@ -6710,8 +6711,6 @@
                                                 </div>
                                             </div>
                                         </div>
-
-
                                     </div>
                                 </div>
                             </div>
@@ -6917,18 +6916,17 @@
                             <td>$320,800</td>
                         </tr>
                         <tr class="pipeline-data-d-none">
-                                <td><input type="text" value="Tiger Nixon"></td>
-                                <td><input type="text" value="System Architect"></td>
-                                <td><input type="text" value="Edinburgh"></td>
-                                <td><input type="number" value="61"></td>
-                                <td class="pipeline-date"><input class="form-control date" type="calander" name="Pipeline_Date" placeholder=""
-                                    id="Pipeline_Date" value="2022/04/25">
-                                    <img src="{{asset('img/dashboard/calendar-icon.png')}}" class="calendar"
-                                    alt="calendar-icon">
-                                </td>
-                                <td><input type="number" value="320800"></td>
+                            <td><input type="text" value="Tiger Nixon"></td>
+                            <td><input type="text" value="System Architect"></td>
+                            <td><input type="text" value="Edinburgh"></td>
+                            <td><input type="number" value="61"></td>
+                            <td class="pipeline-date"><input class="form-control date" type="calander" name="Pipeline_Date" placeholder=""
+                                id="Pipeline_Date" value="2022/04/25">
+                                <img src="{{asset('img/dashboard/calendar-icon.png')}}" class="calendar"
+                                alt="calendar-icon">
+                            </td>
+                            <td><input type="number" value="320800"></td>
                         </tr>
-
                     </tbody>
                 </table>
                 <div class="pipeline-btn pipeline-btn-d-none ">
@@ -6937,7 +6935,8 @@
                     </div>
                     <div class="edit-brn">
                         <button class="btn pipeline-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
-                                alt="Edit-img"> Edit</button>
+                            alt="Edit-img"> Edit
+                        </button>
                     </div>
                     <div class="popup-pipeline">
                     <i class="fas fa-times cross-icon"></i>
@@ -6991,11 +6990,11 @@
                                         <option value="General" selected diable > General </option>
                                         <option value="Contacted">Contacted</option>
                                         <option value="Initial Screening">Initial Screening</option>
-                                        <!-- <option value="Short Listed">Short Listed</option>
+                                        <option value="Short Listed">Short Listed</option>
                                         <option value="Shelved">Shelved</option>
                                         <option value="Job Matching">Job Matching</option>
                                         <option value="Submissions">Submissions</option>
-                                        <option value="Declined">Declined</option>
+                                        <!--  <option value="Declined">Declined</option>
                                         <option value="Interviews">Interviews</option>
                                         <option value="Due Diligence Check">Due Diligence Check</option>
                                         <option value="Rejected / Accepted">Rejected / Accepted</option>
@@ -7044,19 +7043,25 @@
                             <th class="th-sm">Type_1 </th>
                             <th class="th-sm">Type_2</th>
                             <th class="th-sm submit-table-head">Notes </th>
-                            {{-- <th class="th-sm">Action </th> --}}
+                            <th class="th-sm">Action </th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="activity-data">
-                            <td>{{$candidate->activebar->updated_at ?? ''}}</td>
-                            <td>{{$candidate->activebar->activity_type ?? ''}}</td>
-                            <td>{{$candidate->activebar->activity_type_2 ?? ''}}</td>
-                            <td>{{$candidate->activebar->activity_note ?? ''}}</td>
-                            {{-- <td>
-                                <a href="{{ url('update_activity')}}/{{$candidate->id}}"><button class="btn btn-primary"> Edit</button></a>
-                                <a href="{{ url('delete_activity')}}/{{$candidate->id}}"><button class="fav-icon-pen btn btn-danger"> Delete</button></a>
-                            </td> --}}
+                        <tr class="activity-data"> 
+                            <td>{{ $candidate->activebar->updated_at ?? ''}}</td>
+                            <td>{{ $candidate->activebar->activity_type ?? ''}}</td>
+                            <td>{{ $candidate->activebar->activity_type_2 ?? ''}}</td>
+                            <td>{{ $candidate->activebar->activity_note ?? ''}}</td>
+                            <td>
+                                <div class="profile-buttons action-buttons">
+                                    <a href="{{ url('update_activity')}}/{{$candidate->id}}">
+                                    <img src="http://127.0.0.1:8000/img/dashboard/Edit.png" class="img-fluid" alt="Eye">
+                                    </a>
+                                    <a href="{{ url('delete_activity')}}/{{$candidate->id}}">
+                                    <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png" class="img-fluid" alt="Delete-Trash">
+                                    </a>
+                                </div>
+                            </td>
                         </tr>
                         <tr class="activity-data-d-none">
                             <td><input type="text" value="Tiger Nixon"></td>
@@ -7081,10 +7086,10 @@
                                 alt="Edit-img"> Edit</button>
                     </div>
                     <div class="popup-activity">
-                        <form action="{{ url('update_activity')}}/{{$candidate->id}}" method="POST" class="activity-form row">
+                        <form action="{{ url('insert_activity')}}/{{$candidate->id}}" method="POST" class="activity-form row">
                             @csrf
                             <div class="col-md-8 profile-eidt-form-inner form-group">
-                                    <select name="activity_type" id="activity_type" class="form-control" value="{{old('activity_type',$candidate->activebar->activity_type ?? '')}}">
+                                    <select name="activity_type" id="activity_type" class="form-control" value="{{ old('activity_type',$candidate->activebar ? 'activity_type' : '') }}">
                                         <option value="Other" selected diable> Other </option>
                                         <option value="Contacted">Contacted</option>
                                         <option value="Initial Screening">Initial Screening</option>
@@ -7103,7 +7108,7 @@
                                     <i class="fas fa-sort-down"></i>
                             </div>
                             <div class="col-md-8 profile-eidt-form-inner form-group">
-                                    <select name="activity_type_2" id="placement_term" class="form-control" value="{{old('activity_type_2',$candidate->activebar->activity_type_2 ?? '')}}">
+                                    <select name="activity_type_2" id="placement_term" class="form-control" value="{{old('activity_type_2',$candidate->activebar ? 'activity_type_2' : '')}}">
                                         <option value="General" selected diable > General </option>
                                         <option value="Contacted">Contacted</option>
                                         <option value="Initial Screening">Initial Screening</option>
@@ -7116,7 +7121,7 @@
                                     <i class="fas fa-sort-down"></i>
                             </div>
                             <div class="col-md-8 profile-eidt-form-inner">
-                            <textarea name="activity_note" id="activity-textarea" cols="30" rows="5" placeholder="Your Notes" value="{{old('activity_note',$candidate->activebar->activity_note ?? '')}}"></textarea>
+                            <textarea name="activity_note" id="activity-textarea" cols="30" rows="5" placeholder="Your Notes" value="{{old('activity_note',$candidate->activebar ? 'activity_note' : '')}}"></textarea>
                             </div>
                                 <div class=" col-md-12 activity-form-back-btn">
                                     <div class=" profile-eidt-form-btn">

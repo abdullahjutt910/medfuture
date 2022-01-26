@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\frontend\MainController;
 use App\Http\Controllers\frontend\PostController;
+use App\Http\Controllers\Admin\ActivebarController;
 use App\Http\Controllers\Admin\CandidateController;
 
 Route::redirect('/', '/login');
@@ -75,7 +76,10 @@ Route::post('update_interview/{id}',[CandidateController::class,'updateInterview
 Route::post('update_interviewsummary/{id}',[CandidateController::class,'update_interviewsummary'])->name('update_interviewsummary');
 Route::get('add_client',[ClientController::class,'index'])->name('add_client');
 Route::get('show_client',[ClientController::class,'show'])->name('show_client');
+
 Route::post('update_progress/{id}',[CandidateController::class,'updateProgress'])->name('update_progress');
+
+Route::post('insert_activity/{id}',[CandidateController::class,'insertActivity'])->name('insert_activity');
 Route::post('update_activity/{id}',[CandidateController::class,'updateActivity'])->name('update_activity');
 Route::get('delete_activity/{id}',[CandidateController::class,'deleteActivity'])->name('delete_activity');
 
