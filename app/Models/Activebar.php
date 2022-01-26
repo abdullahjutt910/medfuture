@@ -15,6 +15,6 @@ class Activebar extends Model
     ];
     public function activebar()
     {
-        return $this->belongsTo(Candidate::class);
+        return $this->belongsToMany(Candidate::class);
     }
 }

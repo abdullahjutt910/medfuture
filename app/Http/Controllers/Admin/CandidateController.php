@@ -360,7 +360,7 @@ class CandidateController extends Controller
     public function show(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-         $candidates = $candidate->with('candidate_profile','interview','progbar','activebar')->first();
+         $candidates = $candidate->with('candidate_profile','interview','progbar','activebar','assignbar')->first();
         //dd($candidates);
         return view('admin.candidates.show', compact('candidate'));
     }
@@ -464,10 +464,10 @@ class CandidateController extends Controller
         $activebar->activity_type = $request->activity_type;
         $activebar->activity_type_2 = $request->activity_type_2;
         $activebar->activity_note = $request->activity_note;
-        // dd($activebar);
         $activebar->save();
 
-        return redirect()->route('admin.candidates.index');
+        return redirect()->back();
+        // return redirect()->route('admin.candidates.index');
 
     }
 

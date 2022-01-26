@@ -1278,7 +1278,6 @@
                                         <div class="pink"></div>
                                     </div>
                                 </div>
-
                                 <div class="row candidate-progress">
                                     <div class="col-md-12">
                                         <div class="candidate-date">
@@ -1384,8 +1383,6 @@
                                         <div class="pink"></div>
                                     </div>
                                 </div>
-
-
                                 <div class="row candidate-counter">
                                     <div class="col-md-12">
                                         <div class="candidate-date">
@@ -1638,7 +1635,6 @@
                                         <div class="pink"></div>
                                     </div>
                                 </div>
-
                                 <div class="row candidate-assign-to">
                                     <div class="col-md-12">
                                         <div class="candidate-assign-txt">
@@ -1660,15 +1656,14 @@
                                         </div>
                                         <div class="assign-form">
                                             <div class="assign-form-d-none">
-                                                <form action="" method="" class="assign-form-inner">
+
+
+                                                <form action="#" method="" class="assign-form-inner">
                                                     <div class="row">
                                                         <div class="col-md-12 form-group">
                                                             <label for="Candidate_Manager">Candidate Manager</label>
-                                                            <select class="form-select form-select-lg mb-3"
-                                                                name="job_title" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">Mary Rosella
-                                                                    Silva
-                                                                </option>
+                                                            <select class="form-select form-select-lg mb-3"disabled name="candidateManager" aria-label=".form-select-lg example">
+                                                                <option value="" disabled="" selected="">{{$candidate->assignbar->candidateManager?? ''}}</option>
                                                                 <option value="1">One</option>
                                                                 <option value="2">Two</option>
                                                                 <option value="3">Three</option>
@@ -1677,10 +1672,8 @@
                                                         </div>
                                                         <div class="col-md-12 form-group">
                                                             <label for="Recruitement">Recruitement Consultant</label>
-                                                            <select class="form-select form-select-lg mb-3"
-                                                                name="job_title" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">Username
-                                                                </option>
+                                                            <select class="form-select form-select-lg mb-3"disabled name="recruitementConsultant" aria-label=".form-select-lg example">
+                                                                <option value="" disabled="" selected="">{{$candidate->assignbar->recruitementConsultant?? ''}} </option>
                                                                 <option value="1">One</option>
                                                                 <option value="2">Two</option>
                                                                 <option value="3">Three</option>
@@ -1689,68 +1682,66 @@
                                                         </div>
                                                         <div class="col-md-12 form-group">
                                                             <label for="Administrator">Data Administrator</label>
-                                                            <select class="form-select form-select-lg mb-3"
-                                                                name="job_title" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">Purnima Purnima
-                                                                </option>
+                                                            <select class="form-select form-select-lg mb-3"disabled name="dataAdministrator" aria-label=".form-select-lg example">
+                                                                <option value="" disabled="" selected="">{{$candidate->assignbar->dataAdministrator?? ''}}</option>
                                                                 <option value="1">One</option>
                                                                 <option value="2">Two</option>
                                                                 <option value="3">Three</option>
                                                             </select>
                                                             <i class="fas fa-sort-down"></i>
                                                         </div>
-
                                                     </div>
                                                 </form>
                                                 <div class="edit-brn">
                                                     <button class="btn assign-edit-btn"><img
-                                                            src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
-                                                            alt="Edit-img"> Edit</button>
+                                                        src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
+                                                        alt="Edit-img"> Edit
+                                                    </button>
                                                 </div>
                                             </div>
                                             <div class="assign-eidt-form">
-                                                <form action="" method="" class="assign-form-edit assign-form-inner">
+                                                <form action="{{ url('insert_assign')}}/{{$candidate->id}}" method="POST" class="assign-form-edit assign-form-inner">
+                                                  @csrf
                                                     <div class="row">
                                                         <div class="col-md-12 form-group">
                                                             <label for="Candidate_Manager">Candidate Manager</label>
                                                             <select class="form-select form-select-lg mb-3"
-                                                                name="job_title" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">Mary Rosella
-                                                                    Silva
+                                                            name="candidateManager" aria-label=".form-select-lg example">
+                                                                <option value="" disabled="" selected="">{{$candidate->assignbar->candidateManager?? ''}}
                                                                 </option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
+                                                                <option value="One">One</option>
+                                                                <option value="Two">Two</option>
+                                                                <option value="Three">Three</option>
                                                             </select>
                                                             <i class="fas fa-sort-down"></i>
                                                         </div>
                                                         <div class="col-md-12 form-group">
                                                             <label for="Recruitement">Recruitement Consultant</label>
                                                             <select class="form-select form-select-lg mb-3"
-                                                                name="job_title" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">Username
+                                                            name="recruitementConsultant" aria-label=".form-select-lg example">
+                                                                <option value="" disabled="" selected="">{{$candidate->assignbar->recruitementConsultant ?? ''}}
                                                                 </option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
+                                                                <option value="One">One</option>
+                                                                <option value="Two">Two</option>
+                                                                <option value="Three">Three</option>
                                                             </select>
                                                             <i class="fas fa-sort-down"></i>
                                                         </div>
                                                         <div class="col-md-12 form-group">
                                                             <label for="Administrator">Data Administrator</label>
                                                             <select class="form-select form-select-lg mb-3"
-                                                                name="job_title" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">Purnima Purnima
+                                                            name="dataAdministrator" aria-label=".form-select-lg example">
+                                                                <option value="" disabled="" selected="">{{$candidate->assignbar->dataAdministrator ?? ''}}
                                                                 </option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
+                                                                <option value="One">One</option>
+                                                                <option value="Two">Two</option>
+                                                                <option value="Three">Three</option>
                                                             </select>
                                                             <i class="fas fa-sort-down"></i>
                                                         </div>
                                                         <div class="col-md-12 profile-eidt-form-btn">
                                                             <button class="btn back-btn">Back</button>
-                                                            <input type="submit" class="btn" placeholder="Submit">
+                                                            <input type="submit" name="submit" class="btn" placeholder="Submit">
                                                         </div>
                                                     </div>
                                                 </form>
@@ -2244,10 +2235,7 @@
                                     </div>
 
                                 </div>
-
                             </div>
-
-
                             <div class="col-md-7 job-summary">
                                 <div class="job-summary-inner">
                                     <div class="job-summary-top">
@@ -6879,10 +6867,7 @@
                         <div class="pink"></div>
                     </div>
                 </section>
-
-
             </div>
-
             <!-- counter end -->
             <div class="candidate-profile-table">
                 <div class="testimonial-heading">
@@ -6892,18 +6877,12 @@
                     width="100%">
                     <thead>
                         <tr>
-                            <th class="th-sm">Title
-                            </th>
-                            <th class="th-sm">Clients
-                            </th>
-                            <th class="th-sm">Owner
-                            </th>
-                            <th class="th-sm">Added
-                            </th>
-                            <th class="th-sm submit-table-head">Submitted
-                            </th>
-                            <th class="th-sm">Action
-                            </th>
+                            <th class="th-sm">Title</th>
+                            <th class="th-sm">Clients</th>
+                            <th class="th-sm">Owner</th>
+                            <th class="th-sm">Added</th>
+                            <th class="th-sm submit-table-head">Submitted</th>
+                            <th class="th-sm">Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -7028,9 +7007,6 @@
                 <div class="purple"></div>
                 <div class="pink"></div>
             </div>
-
-
-
             <div class="candidate-profile-table activity-heading">
                 <div class="testimonial-heading ">
                     <h3>Activity</h3>
@@ -7139,10 +7115,6 @@
                     </div>
                 </div>
             </div>
-
-
-
-
             <div class="forms-colored-div">
                 <div class="blue"></div>
                 <div class="purple"></div>
