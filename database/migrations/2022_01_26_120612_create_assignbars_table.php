@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateActivebarsTable extends Migration
+class CreateAssignbarsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateActivebarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('activebars', function (Blueprint $table) {
+        Schema::create('assignbars', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->foreignId('candidate_id')->references('id')->on('candidates')->onDelete('cascade');
-            $table->string('activity_type')->nullable();
-            $table->string('activity_type_2')->nullable();
-            $table->string('activity_note')->nullable();
+            $table->string('candidateManager')->nullable();
+            $table->string('recruitementConsultant')->nullable();
+            $table->string('dataAdministrator')->nullable();
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateActivebarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('activebars');
+        Schema::dropIfExists('assignbars');
     }
 }
