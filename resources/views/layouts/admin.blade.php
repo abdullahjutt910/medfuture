@@ -173,12 +173,13 @@
     <!-- toolbar start here -->
     <script>
        CKEDITOR.replace( 'content' );
-       CKEDITOR.editorConfig = function( config ) {
-        config.language = 'es';
-        config.uiColor = '#F7B42C';
-        config.height = 300;
-        config.toolbarCanCollapse = true;
-      };
+       CKEDITOR.replace( 'qualificate' );
+      //  CKEDITOR.editorConfig = function( config ) {
+      //   config.language = 'es';
+      //   config.uiColor = '#F7B42C';
+      //   config.height = 300;
+      //   config.toolbarCanCollapse = true;
+      // };
     </script>
     <!-- toolbar end here -->
   <!-- counter start here -->
@@ -341,7 +342,9 @@ $(document).ready( function () {
     $('#JobOrders').DataTable();
     $('#PlacementHistory').DataTable();
     $('#Archives').DataTable();
-
+    
+    // datatables for job view
+    $('#JobPost').DataTable();
 });
 </script>
 
@@ -624,6 +627,14 @@ $(document).ready( function () {
       $(".files-edit-btn, .refere-doc-edit-btn, .audio-edit-btn").click(function(){
         $(".profile-buttons img").removeClass("gray-color");
       })
+
+
+
+      // $(".position-dtil-hading").click(function(){
+      //   $('.position-hide').hide(); 
+      // $(this).parents('.view-job-right').find('.position-hide').toggle();
+      // })
+      
 
     })
 

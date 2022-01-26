@@ -2841,7 +2841,17 @@ textarea{
 
 /* view job start here */
 .view-job{
-        box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+    padding-bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+    background-color: #fff;
+}
+.view-job-left{
+    padding-right: 3px 
+}
+.view-job-right{
+    padding-left: 3px 
 }
 .job-client-details{
     margin-top: 15px;
@@ -2919,7 +2929,71 @@ textarea{
 .job-detail h3{
     padding-top: 30px;
     padding-bottom: 22px;
+    padding-left: 10px;
     font-size: 20px;
     color: #000;
+}
+.highlight-job{
+    margin-top: 50px;
+}
+.highlight-job h3{
+    margin: 0px;
+}
+.highlight-job .key-fetch-txt-box{
+    margin-top: 28px;
+}
+.position-dtil {
+    margin-top: 15px;
+    padding: 25px 10px;
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+    background-color: #fff;
+}
+.position-dtil h3{
+    font-size: 20px;
+    color: #000;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-image: url("../img/dashboard/sort_down.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    image-rendering: -webkit-optimize-contrast;
+}
+.position-dtil-inner{
+    margin-top: 20px;
+}
+.position-dtil-inner h4{
+    font-size: 14px;
+    color: #000;
+}
+.position-dtil-inner p{
+    font-size: 10px;
+    color: #686868;
+}
+
+.position-hide{
+    display: none;
+}
+/* tool bar css start here */
+.cke_top, .cke_bottom{
+    background: #E5E5E5 !important;
+}
+.cke_bottom{
+    border: none !important;
+}
+/* toolbar css end here */
+
+/* job post datatable */
+.job-post{
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+    background-color: #fff;
+}
+.job-post select{
+    background-image: url("../img/dashboard/sort_down.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    image-rendering: -webkit-optimize-contrast;
 }
 /* view job end here */
