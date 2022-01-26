@@ -11,8 +11,11 @@ class AssignbarController extends Controller
 {
     public function insertAssign(Request $request, $id)
     {
-        $assignbar = new Assignbar;
-        // dd($assignbar);
+        $assignbar = Assignbar::where('candidate_id',$id)->first();
+        if(is_null($assignbar))
+        {
+            $assignbar = new Assignbar;
+        }
         $assignbar->candidate_id = $id;
         $assignbar->candidateManager = $request->candidateManager;
         $assignbar->recruitementConsultant = $request->recruitementConsultant;

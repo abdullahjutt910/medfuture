@@ -1407,7 +1407,7 @@ class Candidate extends Model implements HasMedia
 
     public function activebar()
     {
-        return $this->belongsTo(Activebar::class,'id','candidate_id');
+        return $this->hasMany(Activebar::class);
     }
 
     public function assignbar()
