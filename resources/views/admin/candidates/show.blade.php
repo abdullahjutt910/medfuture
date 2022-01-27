@@ -1663,30 +1663,27 @@
                                                         <div class="col-md-12 form-group">
                                                             <label for="Candidate_Manager">Candidate Manager</label>
                                                             <select class="form-select form-select-lg mb-3"disabled name="candidateManager" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">{{$candidate->assignbar->candidateManager?? ''}}</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
+                                                                <option value="One" {{ (isset($candidate->assignbar->candidateManager) && ($candidate->assignbar->candidateManager == 'One'))?'selected':''  }}>One</option>
+                                                                <option value="Two" {{ (isset($candidate->assignbar->candidateManager) && ($candidate->assignbar->candidateManager == 'Two'))?'selected':''  }}>Two</option>
+                                                                <option value="Three" {{ (isset($candidate->assignbar->candidateManager) && ($candidate->assignbar->candidateManager == 'Three'))?'selected':''  }}>Three</option>
                                                             </select>
                                                             <i class="fas fa-sort-down"></i>
                                                         </div>
                                                         <div class="col-md-12 form-group">
                                                             <label for="Recruitement">Recruitement Consultant</label>
                                                             <select class="form-select form-select-lg mb-3"disabled name="recruitementConsultant" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">{{$candidate->assignbar->recruitementConsultant?? ''}} </option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
+                                                                <option value="One" {{ (isset($candidate->assignbar->recruitementConsultant) && ($candidate->assignbar->recruitementConsultant == 'One'))?'selected':''  }}>One</option>
+                                                            <option value="Two" {{ (isset($candidate->assignbar->recruitementConsultant) && ($candidate->assignbar->recruitementConsultant == 'Two'))?'selected':''  }}>Two</option>
+                                                            <option value="Three" {{ (isset($candidate->assignbar->recruitementConsultant) && ($candidate->assignbar->recruitementConsultant == 'Three'))?'selected':''  }}>Three</option>
                                                             </select>
                                                             <i class="fas fa-sort-down"></i>
                                                         </div>
                                                         <div class="col-md-12 form-group">
                                                             <label for="Administrator">Data Administrator</label>
                                                             <select class="form-select form-select-lg mb-3"disabled name="dataAdministrator" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">{{$candidate->assignbar->dataAdministrator?? ''}}</option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
+                                                                <option value="One" {{ (isset($candidate->assignbar->dataAdministrator) && ($candidate->assignbar->dataAdministrator == 'One'))?'selected':''  }}>One</option>
+                                                            <option value="Two" {{ (isset($candidate->assignbar->dataAdministrator) && ($candidate->assignbar->dataAdministrator == 'Two'))?'selected':''  }}>Two</option>
+                                                            <option value="Three" {{ (isset($candidate->assignbar->dataAdministrator) && ($candidate->assignbar->dataAdministrator == 'Three'))?'selected':''  }}>Three</option>
                                                             </select>
                                                             <i class="fas fa-sort-down"></i>
                                                         </div>
@@ -1707,11 +1704,9 @@
                                                             <label for="Candidate_Manager">Candidate Manager</label>
                                                             <select class="form-select form-select-lg mb-3"
                                                             name="candidateManager" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">{{$candidate->assignbar->candidateManager?? ''}}
-                                                                </option>
-                                                                <option value="One">One</option>
-                                                                <option value="Two">Two</option>
-                                                                <option value="Three">Three</option>
+                                                                <option value="One" {{ (isset($candidate->assignbar->candidateManager) && ($candidate->assignbar->candidateManager == 'One'))?'selected':''  }}>One</option>
+                                                                <option value="Two" {{ (isset($candidate->assignbar->candidateManager) && ($candidate->assignbar->candidateManager == 'Two'))?'selected':''  }}>Two</option>
+                                                                <option value="Three" {{ (isset($candidate->assignbar->candidateManager) && ($candidate->assignbar->candidateManager == 'Three'))?'selected':''  }}>Three</option>
                                                             </select>
                                                             <i class="fas fa-sort-down"></i>
                                                         </div>
@@ -1719,11 +1714,9 @@
                                                             <label for="Recruitement">Recruitement Consultant</label>
                                                             <select class="form-select form-select-lg mb-3"
                                                             name="recruitementConsultant" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">{{$candidate->assignbar->recruitementConsultant ?? ''}}
-                                                                </option>
-                                                                <option value="One">One</option>
-                                                                <option value="Two">Two</option>
-                                                                <option value="Three">Three</option>
+                                                            <option value="One" {{ (isset($candidate->assignbar->recruitementConsultant) && ($candidate->assignbar->recruitementConsultant == 'One'))?'selected':''  }}>One</option>
+                                                            <option value="Two" {{ (isset($candidate->assignbar->recruitementConsultant) && ($candidate->assignbar->recruitementConsultant == 'Two'))?'selected':''  }}>Two</option>
+                                                            <option value="Three" {{ (isset($candidate->assignbar->recruitementConsultant) && ($candidate->assignbar->recruitementConsultant == 'Three'))?'selected':''  }}>Three</option>
                                                             </select>
                                                             <i class="fas fa-sort-down"></i>
                                                         </div>
@@ -1731,11 +1724,9 @@
                                                             <label for="Administrator">Data Administrator</label>
                                                             <select class="form-select form-select-lg mb-3"
                                                             name="dataAdministrator" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">{{$candidate->assignbar->dataAdministrator ?? ''}}
-                                                                </option>
-                                                                <option value="One">One</option>
-                                                                <option value="Two">Two</option>
-                                                                <option value="Three">Three</option>
+                                                            <option value="One" {{ (isset($candidate->assignbar->dataAdministrator) && ($candidate->assignbar->dataAdministrator == 'One'))?'selected':''  }}>One</option>
+                                                            <option value="Two" {{ (isset($candidate->assignbar->dataAdministrator) && ($candidate->assignbar->dataAdministrator == 'Two'))?'selected':''  }}>Two</option>
+                                                            <option value="Three" {{ (isset($candidate->assignbar->dataAdministrator) && ($candidate->assignbar->dataAdministrator == 'Three'))?'selected':''  }}>Three</option>
                                                             </select>
                                                             <i class="fas fa-sort-down"></i>
                                                         </div>
@@ -7023,23 +7014,28 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="activity-data"> 
-                            {{-- {{dd($candidate)}} --}}
-                            <td>{{$candidate->activebar->updated_at?? ''}}</td> 
-                            <td>{{$candidate->activebar->activity_type?? ''}}</td>
-                            <td>{{$candidate->activebar->activity_type_2?? ''}}</td>
-                            <td>{{$candidate->activebar->activity_note?? ''}}</td> 
-                            <td>
-                                <div class="profile-buttons action-buttons">
-                                    <a href="{{ url('update_activity')}}/{{$candidate->id}}">
-                                    <img src="http://127.0.0.1:8000/img/dashboard/Edit.png" class="img-fluid" alt="Eye">
-                                    </a>
-                                    <a href="{{ url('delete_activity')}}/{{$candidate->id}}">
-                                    <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png" class="img-fluid" alt="Delete-Trash">
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
+                        @if (!is_null($candidate->activebar))
+                            @foreach ($candidate->activebar as $item)
+                            <tr class="activity-data"> 
+                                {{-- {{dd($candidate)}} --}}
+                                <td>{{$item->updated_at?? ''}}</td> 
+                                <td>{{$item->activity_type?? ''}}</td>
+                                <td>{{$item->activity_type_2?? ''}}</td>
+                                <td>{{$item->activity_note?? ''}}</td> 
+                                <td>
+                                    <div class="profile-buttons action-buttons">
+                                        <a href="{{ url('update_activity')}}/{{$candidate->id}}">
+                                        <img src="http://127.0.0.1:8000/img/dashboard/Edit.png" class="img-fluid" alt="Eye">
+                                        </a>
+                                        <a href="{{ url('delete_activity')}}/{{$candidate->id}}">
+                                        <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png" class="img-fluid" alt="Delete-Trash">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            @endforeach
+                        @endif
+                        
                         <tr class="activity-data-d-none">
                             <td><input type="text" value="Tiger Nixon"></td>
                             <td><input type="text" value="System Architect"></td>

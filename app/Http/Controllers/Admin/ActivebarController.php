@@ -37,6 +37,7 @@ class ActivebarController extends Controller
     }
     
     public function deleteActivity($id){
+        dd($id);
         Activebar::find($id)->delete();
         return back();
     }
