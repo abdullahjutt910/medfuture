@@ -3004,4 +3004,13 @@ textarea{
     padding-left: 18px;
     color: #999999;
 }
+
+.job-post-btn .btn{
+    background-color: #00326D;
+    color: #fff !important;
+    border-radius: 4px;
+    border: none;
+    padding: 4px 20px;
+    margin-right: 5px;
+}
 /* view job end here */
