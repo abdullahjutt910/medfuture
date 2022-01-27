@@ -5,11 +5,13 @@ namespace App\Http\Controllers\Admin;
 use Gate;
 use App\Models\User;
 use App\Models\Progbar;
+use App\Models\Activebar;
 use App\Models\Candidate;
 use App\Models\Interview;
 use Illuminate\Http\Request;
 use Intervention\Image\File;
 use App\Models\CandidateProfile;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -18,7 +20,6 @@ use App\Http\Requests\UpdateCandidateRequest;
 use Symfony\Component\HttpFoundation\Response;
 use App\Http\Requests\MassDestroyCandidateRequest;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
-use App\Models\Activebar;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class CandidateController extends Controller
@@ -191,7 +192,7 @@ class CandidateController extends Controller
     {
         abort_if(Gate::denies('candidate_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.candidates.edit', compact('candidate'));
+        return view('admin.candidates.edit', compact('candidate','activebar'));
     }
 
     public function update(UpdateCandidateRequest $request,$id)
@@ -361,7 +362,6 @@ class CandidateController extends Controller
     {
         abort_if(Gate::denies('candidate_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
          $candidates = $candidate->with('candidate_profile','interview','progbar','activebar','assignbar')->first();
-        //dd($candidates->activebar);
         return view('admin.candidates.show', compact('candidate'));
     }
 

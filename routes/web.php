@@ -81,7 +81,7 @@ Route::get('show_client',[ClientController::class,'show'])->name('show_client');
 Route::post('update_progress/{id}',[CandidateController::class,'updateProgress'])->name('update_progress');
 
 Route::post('insert_activity/{id}',[ActivebarController::class,'insertActivity'])->name('insert_activity');
-Route::post('update_activity/{id}',[ActivebarController::class,'updateActivity'])->name('update_activity');
+Route::get('update_activity/{id}',[ActivebarController::class,'updateActivity'])->name('update_activity');
 Route::get('delete_activity/{id}',[ActivebarController::class,'deleteActivity'])->name('delete_activity');
 
 Route::post('insert_assign/{id}',[AssignbarController::class,'insertAssign'])->name('insert_assign');

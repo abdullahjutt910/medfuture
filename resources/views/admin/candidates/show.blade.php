@@ -1656,8 +1656,6 @@
                                         </div>
                                         <div class="assign-form">
                                             <div class="assign-form-d-none">
-
-
                                                 <form action="#" method="" class="assign-form-inner">
                                                     <div class="row">
                                                         <div class="col-md-12 form-group">
@@ -7018,16 +7016,16 @@
                             @foreach ($candidate->activebar as $item)
                             <tr class="activity-data"> 
                                 {{-- {{dd($candidate)}} --}}
-                                <td>{{$item->updated_at?? ''}}</td> 
-                                <td>{{$item->activity_type?? ''}}</td>
-                                <td>{{$item->activity_type_2?? ''}}</td>
-                                <td>{{$item->activity_note?? ''}}</td> 
+                                <td>{{ $item->updated_at ?? '' }}</td> 
+                                <td>{{ $item->activity_type ?? '' }}</td>
+                                <td>{{ $item->activity_type_2 ?? '' }}</td>
+                                <td>{{ $item->activity_note ?? '' }}</td> 
                                 <td>
                                     <div class="profile-buttons action-buttons">
-                                        <a href="{{ url('update_activity')}}/{{$candidate->id}}">
+                                        <a href="{{ url('update_activity')}}/{{$item->id}}">
                                         <img src="http://127.0.0.1:8000/img/dashboard/Edit.png" class="img-fluid" alt="Eye">
                                         </a>
-                                        <a href="{{ url('delete_activity')}}/{{$candidate->id}}">
+                                        <a href="{{ url('delete_activity')}}/{{$item->id}}">
                                         <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png" class="img-fluid" alt="Delete-Trash">
                                         </a>
                                     </div>

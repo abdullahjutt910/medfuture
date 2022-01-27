@@ -20,8 +20,6 @@ class ActivebarController extends Controller
         $activebar->save();
 
         return redirect()->back();
-        // return redirect()->route('admin.candidates.index');
-
     }
 
     public function updateActivity(Request $request,$id)
@@ -37,7 +35,6 @@ class ActivebarController extends Controller
     }
     
     public function deleteActivity($id){
-        dd($id);
         Activebar::find($id)->delete();
         return back();
     }
