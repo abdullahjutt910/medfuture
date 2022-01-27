@@ -30,7 +30,7 @@ class CandidateController extends Controller
 
         abort_if(Gate::denies('candidate_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        $candidates = Candidate::with(['media','candidate_profile'])->get();
+        $candidates = Candidate::with(['media','candidate_profile'])->orderedBy('id')->get();
 
         $count = Candidate::with(['media'])->get()->count();
         return view('admin.candidates.index', compact('candidates', 'count'));
