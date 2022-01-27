@@ -7024,10 +7024,10 @@
                                 <td>{{$item->activity_note?? ''}}</td> 
                                 <td>
                                     <div class="profile-buttons action-buttons">
-                                        <a href="{{ url('update_activity')}}/{{$activebar->id}}">
+                                        <a href="{{ url('update_activity')}}/{{$candidate->id}}">
                                         <img src="http://127.0.0.1:8000/img/dashboard/Edit.png" class="img-fluid" alt="Eye">
                                         </a>
-                                        <a href="{{ url('delete_activity')}}/{{$activebar->id}}">
+                                        <a href="{{ url('delete_activity')}}/{{$candidate->id}}">
                                         <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png" class="img-fluid" alt="Delete-Trash">
                                         </a>
                                     </div>
