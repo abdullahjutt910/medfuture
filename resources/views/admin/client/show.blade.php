@@ -17,8 +17,11 @@
                         <!-- <h4> {{ trans('global.create') }} {{ trans('cruds.candidate.title_singular') }}</h4> -->
                     </div>
                     <div class="dashbord-button">
-                        <a href="#" class="btn dashbord-btn dashbord-primary ">
-                            <h3>Dashboard</h3>
+                    <a href="#" class="btn dashbord-btn dashbord-primary ">
+                            <h3>Admin Access</h3>
+                        </a>
+                        <a href="#" class="btn dashbord-btn dashbord-primary">
+                            <h3 class="mt-10">Dashboard</h3>
                         </a>
                         <a href="#" class="btn candidate-dash-btn dashbord-primary">
                             <h3>Candidate <br> Dashboard </h3>
@@ -30,7 +33,7 @@
                 <section class="profile-sec">
                     <div class="container-fluid">
                         <div class="row">
-                            <div class="col-md-4 profile-left">
+                            <div class="col-md-4 profile-left client-profile-left">
                                 <div class="profile-information">
                                     <div class="card candi-profile">
                                         <img src=" {{asset('img/dashboard/company-logo.png')}}"
@@ -96,14 +99,14 @@
                                         </ul>
                                         <div class="edit-brn">
                                             <button class="btn candidate-edit-btn"><img
-                                                    src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
+                                                    src=" {{asset('img/dashboard/penciel-client.png')}}" class="img-fluid"
                                                     alt="Edit-img"> Edit</button>
                                         </div>
 
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-8 profile-right">
+                            <div class="col-md-8 profile-right client-profile-right">
                                 <div class="profile-right-color"></div>
                                 <div class="profile-details-d-none">
                                     <div class="row profile-details">
@@ -584,7 +587,7 @@
 
 
                                     <div class="edit-brn">
-                                        <button class="btn profile-right-edit"><img
+                                        <button class="btn profile-right-edit "><img
                                                 src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
                                                 alt="Edit-img"> Edit</button>
                                     </div>
@@ -598,7 +601,7 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-2 card-img">
-                                                            <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                            <img src="{{asset('img/dashboard/PDF-1.png')}}"
                                                                 class="img-fluid pdf-upload rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-10 padd-12">
@@ -615,12 +618,12 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-1 card-img">
-                                                            <img src="{{asset('img/dashboard/Calendar.png')}}"
+                                                            <img src="{{asset('img/dashboard/Calendar-1.png')}}"
                                                                 class="img-fluid rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-11 padd-12">
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Applied Date</h5>
+                                                                <h5 class="card-title">Updated Date</h5>
                                                                 <p class="card-text"><small
                                                                         class="text-muted">12/1/2021</small></p>
                                                             </div>
@@ -629,7 +632,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="profile-buttons">
+                                                <div class="profile-buttons client-icon-buttons">
                                                     <a href="#">
                                                         <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                             alt="Eye">
@@ -661,7 +664,7 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-2 card-img">
-                                                            <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                            <img src="{{asset('img/dashboard/PDF-1.png')}}"
                                                                 class="img-fluid pdf-upload rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-10 padd-12">
@@ -678,12 +681,12 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-1 card-img">
-                                                            <img src="{{asset('img/dashboard/Calendar.png')}}"
+                                                            <img src="{{asset('img/dashboard/Calendar-1.png')}}"
                                                                 class="img-fluid rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-11 padd-12">
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Applied Date</h5>
+                                                                <h5 class="card-title">Updated Date</h5>
                                                                 <p class="card-text"><small
                                                                         class="text-muted">12/1/2021</small></p>
                                                             </div>
@@ -692,7 +695,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="profile-buttons">
+                                                <div class="profile-buttons client-icon-buttons">
                                                     <a href="#">
                                                         <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                             alt="Eye">
@@ -724,7 +727,7 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-2 card-img">
-                                                            <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                            <img src="{{asset('img/dashboard/PDF-1.png')}}"
                                                                 class="img-fluid  pdf-upload rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-10 padd-12">
@@ -741,12 +744,12 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-1 card-img">
-                                                            <img src="{{asset('img/dashboard/Calendar.png')}}"
+                                                            <img src="{{asset('img/dashboard/Calendar-1.png')}}"
                                                                 class="img-fluid rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-11 padd-12">
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Applied Date</h5>
+                                                                <h5 class="card-title">Updated Date</h5>
                                                                 <p class="card-text"><small
                                                                         class="text-muted">12/1/2021</small></p>
                                                             </div>
@@ -755,7 +758,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                                <div class="profile-buttons">
+                                                <div class="profile-buttons client-icon-buttons">
                                                     <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                         alt="Eye">
                                                     <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
@@ -772,7 +775,7 @@
                                     </div>
 
                                 </div>
-                                <div class="edit-brn">
+                                <div class="edit-brn right-profile-edit-btn">
                                     <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
                                             class="img-fluid" alt="Edit-img"> Edit</button>
                                 </div>
@@ -815,14 +818,14 @@
                                             <div class="candidate-progress-bar">
                                                 <span class="progress-line"></span>
                                                 <div class="progress vertical">
-                                                    <div class="progress-bar Contacted" role="progressbar" aria-valuenow="0"
+                                                    <div class="progress-bar revenue-color" role="progressbar" aria-valuenow="0"
                                                         aria-valuemin="0" aria-valuemax="100"><span
                                                             class="bar-txt">A$20</span></div>
                                                 </div>
                                                 <span class="revenue-bar-perm">Permanent</span>
 
                                                 <div class="progress vertical">
-                                                    <div class="progress-bar Int-scr" role="progressbar" aria-valuenow="25"
+                                                    <div class="progress-bar revenue-color" role="progressbar" aria-valuenow="25"
                                                         aria-valuemin="0" aria-valuemax="100"><span
                                                             class="bar-txt">A$10</span></div>
                                                 </div>
@@ -835,21 +838,21 @@
                                             <div class="candidate-progress-bar">
                                                 <span class="progress-line"></span>
                                                 <div class="progress vertical">
-                                                    <div class="progress-bar Contacted" role="progressbar" aria-valuenow="0"
+                                                    <div class="progress-bar expenses-color" role="progressbar" aria-valuenow="0"
                                                         aria-valuemin="0" aria-valuemax="100"><span
                                                             class="bar-txt">A$20</span></div>
                                                 </div>
                                                 <span class="revenue-bar-perm">Promotional</span>
 
                                                 <div class="progress vertical">
-                                                    <div class="progress-bar Int-scr" role="progressbar" aria-valuenow="25"
+                                                    <div class="progress-bar expenses-color" role="progressbar" aria-valuenow="25"
                                                         aria-valuemin="0" aria-valuemax="100"><span
                                                             class="bar-txt">A$10</span></div>
                                                 </div>
                                                 <span class="revenue-bar-locum">Refunds</span>
 
                                             </div>
-                                            <span class="revenue-txt">Expenses</span>
+                                            <span class="revenue-txt expenses-txt">Expenses</span>
                                         </div>
                                         <div class="edit-brn">
                                             <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
@@ -862,7 +865,7 @@
                                         <div class="pink"></div>
                                     </div>
                                 </div>
-                                <div class="row candidate-progress">
+                                <div class="row candidate-progress client-progress-list">
                                     <div class="col-md-12">
                                         <div class="candidate-date">
                                             <div class="form-group">
@@ -1222,131 +1225,6 @@
                                     </div>
                                 </div>
 
-                                <div class="row candidate-assign-to">
-                                    <div class="col-md-12">
-                                        <div class="candidate-assign-txt">
-                                            <div class="candidate-date">
-                                                <div class="form-group">
-                                                    <select class="form-control" name="title" id="title" required="">
-                                                        <option value="" selected="">2020-2021</option>
-                                                        <option value="2019-2020">2019-2020</option>
-                                                        <option value="2018-2019">2018-2019</option>
-                                                        <option value="2017-2018">2017-2018</option>
-                                                        <option value="2016-2017">2016-2017</option>
-                                                        <option value="2015-2016">2015-2016</option>
-                                                    </select>
-                                                    <i class="fas fa-sort-down"></i>
-                                                </div>
-                                                <span class="date-background"></span>
-                                            </div>
-                                            <h3>Assigned to</h3>
-                                        </div>
-                                        <div class="assign-form">
-                                            <div class="assign-form-d-none">
-                                                <form action="" method="" class="assign-form-inner">
-                                                    <div class="row">
-                                                        <div class="col-md-12 form-group">
-                                                            <label for="Candidate_Manager">Candidate Manager</label>
-                                                            <select class="form-select form-select-lg mb-3"
-                                                                name="job_title" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">Mary Rosella
-                                                                    Silva
-                                                                </option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                            <i class="fas fa-sort-down"></i>
-                                                        </div>
-                                                        <div class="col-md-12 form-group">
-                                                            <label for="Recruitement">Recruitement Consultant</label>
-                                                            <select class="form-select form-select-lg mb-3"
-                                                                name="job_title" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">Username
-                                                                </option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                            <i class="fas fa-sort-down"></i>
-                                                        </div>
-                                                        <div class="col-md-12 form-group">
-                                                            <label for="Administrator">Data Administrator</label>
-                                                            <select class="form-select form-select-lg mb-3"
-                                                                name="job_title" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">Purnima Purnima
-                                                                </option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                            <i class="fas fa-sort-down"></i>
-                                                        </div>
-
-                                                    </div>
-                                                </form>
-                                                <div class="edit-brn">
-                                                    <button class="btn assign-edit-btn"><img
-                                                            src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
-                                                            alt="Edit-img"> Edit</button>
-                                                </div>
-                                            </div>
-                                            <div class="assign-eidt-form">
-                                                <form action="" method="" class="assign-form-edit assign-form-inner">
-                                                    <div class="row">
-                                                        <div class="col-md-12 form-group">
-                                                            <label for="Candidate_Manager">Candidate Manager</label>
-                                                            <select class="form-select form-select-lg mb-3"
-                                                                name="job_title" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">Mary Rosella
-                                                                    Silva
-                                                                </option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                            <i class="fas fa-sort-down"></i>
-                                                        </div>
-                                                        <div class="col-md-12 form-group">
-                                                            <label for="Recruitement">Recruitement Consultant</label>
-                                                            <select class="form-select form-select-lg mb-3"
-                                                                name="job_title" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">Username
-                                                                </option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                            <i class="fas fa-sort-down"></i>
-                                                        </div>
-                                                        <div class="col-md-12 form-group">
-                                                            <label for="Administrator">Data Administrator</label>
-                                                            <select class="form-select form-select-lg mb-3"
-                                                                name="job_title" aria-label=".form-select-lg example">
-                                                                <option value="" disabled="" selected="">Purnima Purnima
-                                                                </option>
-                                                                <option value="1">One</option>
-                                                                <option value="2">Two</option>
-                                                                <option value="3">Three</option>
-                                                            </select>
-                                                            <i class="fas fa-sort-down"></i>
-                                                        </div>
-                                                        <div class="col-md-12 profile-eidt-form-btn">
-                                                            <button class="btn back-btn">Back</button>
-                                                            <input type="submit" class="btn" placeholder="Submit">
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="forms-colored-div">
-                                        <div class="blue"></div>
-                                        <div class="purple"></div>
-                                        <div class="pink"></div>
-                                    </div>
-                                </div>
-
                                 <div class="row notification-btns">
                                     <div class="col-md-4">
                                         <button class="btn">
@@ -1367,8 +1245,10 @@
                                 <div class="row candidate-reference">
                                     <div class="col-md-12 padd-l-0">
                                         <div class="reference-txt">
+                                            <div class="placed-candi-feed">
                                             <h3>Placed Candidate Feedback</h3>
                                             <p>(Internal Usage Only )</p>
+                                            </div>
                                             <div class="reference-lock">
                                                 <img src=" {{asset('img/dashboard/Lock.png')}}" class="img-fluid"
                                                     alt="Edit-img">
@@ -1391,141 +1271,207 @@
                                         </div>
                                         <div class="reference-form">
                                             <form action="submit" method="post" class="reference-form-inner">
-                                                <h4>Referee 1</h4>
-                                                <div class="row">
-                                                    <div class="col-md-6">
+                                                <div class="row client-feedback-1">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="Title" value="" required>
-
+                                                            <input class="form-control" disabled type="text" name="candidate_name"
+                                                                id="candidate_name" placeholder="Candidate Name 1" value="" required>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="First Name" value=""
+                                                            <input class="form-control" disabled type="text" name="placement_date"
+                                                                id="placement_date" placeholder="Placement Date" value=""
                                                                 required>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="Last Name" value="" required>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="number" name="mobile"
-                                                                id="first_name" placeholder="Telephone" value=""
-                                                                required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="email" name="mobile"
-                                                                id="title" placeholder="Email" value="" required>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="Referee’s Job Titile"
-                                                                value="" required>
+                                                          <textarea name="candi-feedback" disabled id="candi-feedback" cols="52" rows="5"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h4>Referee 2</h4>
-                                                <div class="row">
-                                                    <div class="col-md-6">
+                                                <div class="referee-document">
+                                                    <div class="row profile-details-upload">
+                                                        <div class="col-md-12">
+                                                            <div class="row profile-details">
+                                                                <div class="col-md-8">
+                                                                    <div class="card mb-3">
+                                                                        <div class="row g-0">
+                                                                            <div class="col-md-1 card-img">
+                                                                                <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                                                    class="img-fluid pdf-upload rounded-start"
+                                                                                    alt="...">
+                                                                            </div>
+                                                                            <div class="col-md-11 padd-l-0">
+                                                                                <div class="card-body">
+                                                                                    <h5 class="card-title">Candidate Feedback 1 .pdf</h5>
+                                                                                    <p class="card-text"><small
+                                                                                            class="text-muted">32KB | 12/3/2021 </small></p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="profile-buttons">
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Eye.png')}}"
+                                                                            class="img-fluid" alt="Eye">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Download.png')}}"
+                                                                            class="img-fluid" alt="download">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                                            class="img-fluid" alt="Upload">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                                            class="img-fluid" alt="Delete-Trash">
+                                                                            </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>  
+                                                
+                                                <div class="row client-feedback-1">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="Title" value="" required>
+                                                            <input class="form-control" disabled type="text" name="candidate_name"
+                                                                id="candidate_name" placeholder="Candidate Name 2" value="" required>
 
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="First Name" value=""
+                                                            <input class="form-control" disabled type="text" name="placement_date"
+                                                                id="placement_date" placeholder="Placement Date" value=""
                                                                 required>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="Last Name" value="" required>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="number" name="mobile"
-                                                                id="first_name" placeholder="Telephone" value=""
-                                                                required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="email" name="mobile"
-                                                                id="title" placeholder="Email" value="" required>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="Referee’s Job Titile"
-                                                                value="" required>
+                                                          <textarea name="candi-feedback" disabled id="candi-feedback" cols="52" rows="5"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h4>Referee 3</h4>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="Title" value="" required>
-
+                                                <div class="referee-document">
+                                                    <div class="row profile-details-upload">
+                                                        <div class="col-md-12">
+                                                            <div class="row profile-details">
+                                                                <div class="col-md-8">
+                                                                    <div class="card mb-3">
+                                                                        <div class="row g-0">
+                                                                            <div class="col-md-1 card-img">
+                                                                                <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                                                    class="img-fluid pdf-upload rounded-start"
+                                                                                    alt="...">
+                                                                            </div>
+                                                                            <div class="col-md-11 padd-l-0">
+                                                                                <div class="card-body">
+                                                                                    <h5 class="card-title">Candidate Feedback 2 .pdf</h5>
+                                                                                    <p class="card-text"><small
+                                                                                            class="text-muted">32KB | 12/3/2021 </small></p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="profile-buttons">
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Eye.png')}}"
+                                                                            class="img-fluid" alt="Eye">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Download.png')}}"
+                                                                            class="img-fluid" alt="download">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                                            class="img-fluid" alt="Upload">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                                            class="img-fluid" alt="Delete-Trash">
+                                                                            </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                </div> 
+                                                
+                                                <div class="row client-feedback-1">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="First Name" value=""
+                                                            <input class="form-control" disabled type="text" name="candidate_name"
+                                                                id="candidate_name" placeholder="Candidate Name 3" value="" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <input class="form-control" disabled type="text" name="placement_date"
+                                                                id="placement_date" placeholder="Placement Date" value=""
                                                                 required>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="Last Name" value="" required>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="number" name="mobile"
-                                                                id="first_name" placeholder="Telephone" value=""
-                                                                required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="email" name="mobile"
-                                                                id="title" placeholder="Email" value="" required>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="Referee’s Job Titile"
-                                                                value="" required>
+                                                          <textarea name="candi-feedback" disabled id="candi-feedback" cols="52" rows="5"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="referee-document">
+                                                    <div class="row profile-details-upload">
+                                                        <div class="col-md-12">
+                                                            <div class="row profile-details">
+                                                                <div class="col-md-8">
+                                                                    <div class="card mb-3">
+                                                                        <div class="row g-0">
+                                                                            <div class="col-md-1 card-img">
+                                                                                <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                                                    class="img-fluid pdf-upload rounded-start"
+                                                                                    alt="...">
+                                                                            </div>
+                                                                            <div class="col-md-11 padd-l-0">
+                                                                                <div class="card-body">
+                                                                                    <h5 class="card-title">Candidate Feedback 3 .pdf</h5>
+                                                                                    <p class="card-text"><small
+                                                                                            class="text-muted">32KB | 12/3/2021 </small></p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="profile-buttons">
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Eye.png')}}"
+                                                                            class="img-fluid" alt="Eye">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Download.png')}}"
+                                                                            class="img-fluid" alt="download">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                                            class="img-fluid" alt="Upload">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                                            class="img-fluid" alt="Delete-Trash">
+                                                                            </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
                                                 <div class="edit-brn">
                                                     <button class="btn reference-edit-btn"><img
                                                             src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
@@ -1533,292 +1479,213 @@
                                                 </div>
                                             </form>
                                             <form action="submit" method="post" class="reference-form-inner-d-none">
-                                                <h4>Referee 1</h4>
-                                                <div class="row">
-                                                    <div class="col-md-6">
+                                            <div class="row client-feedback-1">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="" value="Title" required>
+                                                            <input class="form-control" type="text" name="candidate_name"
+                                                                id="candidate_name" placeholder="Candidate Name 1" value="" required>
 
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="" value="First Name"
+                                                            <input class="form-control" type="text" name="placement_date"
+                                                                id="placement_date" placeholder="Placement Date" value=""
                                                                 required>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="" value="Last Name" required>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="number" name="mobile"
-                                                                id="first_name" placeholder="" value="Telephone"
-                                                                required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="email" name="mobile"
-                                                                id="title" placeholder="" value="Email" required>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder=""
-                                                                value="Referee’s Job Titile" required>
+                                                          <textarea name="candi-feedback" id="candi-feedback" cols="52" rows="5"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h4>Referee 2</h4>
-                                                <div class="row">
-                                                    <div class="col-md-6">
+                                                <div class="referee-document">
+                                                    <div class="row profile-details-upload">
+                                                        <div class="col-md-12">
+                                                            <div class="row profile-details">
+                                                                <div class="col-md-8">
+                                                                    <div class="card mb-3">
+                                                                        <div class="row g-0">
+                                                                            <div class="col-md-1 card-img">
+                                                                                <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                                                    class="img-fluid pdf-upload rounded-start"
+                                                                                    alt="...">
+                                                                            </div>
+                                                                            <div class="col-md-11 padd-l-0">
+                                                                                <div class="card-body">
+                                                                                    <h5 class="card-title">Candidate Feedback 1 .pdf</h5>
+                                                                                    <p class="card-text"><small
+                                                                                            class="text-muted">32KB | 12/3/2021 </small></p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="profile-buttons">
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Eye.png')}}"
+                                                                            class="img-fluid" alt="Eye">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Download.png')}}"
+                                                                            class="img-fluid" alt="download">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                                            class="img-fluid" alt="Upload">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                                            class="img-fluid" alt="Delete-Trash">
+                                                                            </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>  
+                                                
+                                                <div class="row client-feedback-1">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="Title" value="" required>
+                                                            <input class="form-control" type="text" name="candidate_name"
+                                                                id="candidate_name" placeholder="Candidate Name 2" value="" required>
 
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="" value="First Name"
+                                                            <input class="form-control" type="text" name="placement_date"
+                                                                id="placement_date" placeholder="Placement Date" value=""
                                                                 required>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="" value="Last Name" required>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="number" name="mobile"
-                                                                id="first_name" placeholder="" value="Telephone"
-                                                                required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="email" name="mobile"
-                                                                id="title" placeholder="" value="Email" required>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder=""
-                                                                value="Referee’s Job Titile" required>
+                                                          <textarea name="candi-feedback" id="candi-feedback" cols="52" rows="5"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h4>Referee 3</h4>
-                                                <div class="row">
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="" value="Title" required>
-
+                                                <div class="referee-document">
+                                                    <div class="row profile-details-upload">
+                                                        <div class="col-md-12">
+                                                            <div class="row profile-details">
+                                                                <div class="col-md-8">
+                                                                    <div class="card mb-3">
+                                                                        <div class="row g-0">
+                                                                            <div class="col-md-1 card-img">
+                                                                                <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                                                    class="img-fluid pdf-upload rounded-start"
+                                                                                    alt="...">
+                                                                            </div>
+                                                                            <div class="col-md-11 padd-l-0">
+                                                                                <div class="card-body">
+                                                                                    <h5 class="card-title">Candidate Feedback 1 .pdf</h5>
+                                                                                    <p class="card-text"><small
+                                                                                            class="text-muted">32KB | 12/3/2021 </small></p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="profile-buttons">
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Eye.png')}}"
+                                                                            class="img-fluid" alt="Eye">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Download.png')}}"
+                                                                            class="img-fluid" alt="download">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                                            class="img-fluid" alt="Upload">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                                            class="img-fluid" alt="Delete-Trash">
+                                                                            </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                </div> 
+                                                
+                                                <div class="row client-feedback-1">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder="" value="First Name"
+                                                            <input class="form-control" type="text" name="candidate_name"
+                                                                id="candidate_name" placeholder="Candidate Name 3" value="" required>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <input class="form-control" type="text" name="placement_date"
+                                                                id="placement_date" placeholder="Placement Date" value=""
                                                                 required>
                                                         </div>
                                                     </div>
-                                                    <div class="col-md-6">
+                                                    <div class="col-md-12">
                                                         <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="title" placeholder="" value="Last Name" required>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="number" name="mobile"
-                                                                id="first_name" placeholder="" value="Telephone"
-                                                                required>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="email" name="mobile"
-                                                                id="title" placeholder="" value="Email" required>
-
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="form-group">
-                                                            <input class="form-control" type="text" name="mobile"
-                                                                id="first_name" placeholder=""
-                                                                value="Referee’s Job Titile" required>
+                                                          <textarea name="candi-feedback" id="candi-feedback" cols="52" rows="5"></textarea>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div class="referee-document">
+                                                    <div class="row profile-details-upload">
+                                                        <div class="col-md-12">
+                                                            <div class="row profile-details">
+                                                                <div class="col-md-8">
+                                                                    <div class="card mb-3">
+                                                                        <div class="row g-0">
+                                                                            <div class="col-md-1 card-img">
+                                                                                <img src="{{asset('img/dashboard/PDF.png')}}"
+                                                                                    class="img-fluid pdf-upload rounded-start"
+                                                                                    alt="...">
+                                                                            </div>
+                                                                            <div class="col-md-11 padd-l-0">
+                                                                                <div class="card-body">
+                                                                                    <h5 class="card-title">Candidate Feedback 1 .pdf</h5>
+                                                                                    <p class="card-text"><small
+                                                                                            class="text-muted">32KB | 12/3/2021 </small></p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-4">
+                                                                    <div class="profile-buttons">
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Eye.png')}}"
+                                                                            class="img-fluid" alt="Eye">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Download.png')}}"
+                                                                            class="img-fluid" alt="download">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                                            class="img-fluid" alt="Upload">
+                                                                        </a>
+                                                                        <a href="#">
+                                                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                                            class="img-fluid" alt="Delete-Trash">
+                                                                            </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
                                                 <div class="col-md-12 profile-eidt-form-btn">
                                                     <button class="btn back-btn">Back</button>
                                                     <input type="submit" class="btn" placeholder="Submit">
                                                 </div>
                                             </form>
-
-                                            <div class="referee-document">
-                                                <h4>Referee Documents</h4>
-                                                <div class="row profile-details-upload">
-                                                    <div class="col-md-12">
-                                                        <div class="row profile-details">
-                                                            <div class="col-md-8">
-                                                                <div class="card mb-3">
-                                                                    <div class="row g-0">
-                                                                        <div class="col-md-1 card-img">
-                                                                            <img src="{{asset('img/dashboard/PDF.png')}}"
-                                                                                class="img-fluid pdf-upload rounded-start"
-                                                                                alt="...">
-                                                                        </div>
-                                                                        <div class="col-md-11 padd-l-0">
-                                                                            <div class="card-body">
-                                                                                <h5 class="card-title">Referee Report 1
-                                                                                    .pdf</h5>
-                                                                                <p class="card-text"><small
-                                                                                        class="text-muted">32KB |
-                                                                                        12/3/2021 </small></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="profile-buttons">
-                                                                    <a href="#">
-                                                                    <img src="{{asset('img/dashboard/Eye.png')}}"
-                                                                        class="img-fluid" alt="Eye">
-                                                                    </a>
-                                                                    <a href="#">
-                                                                    <img src="{{asset('img/dashboard/Download.png')}}"
-                                                                        class="img-fluid" alt="download">
-                                                                    </a>
-                                                                    <a href="#">
-                                                                    <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                                        class="img-fluid" alt="Upload">
-                                                                    </a>
-                                                                    <a href="#">
-                                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                                        class="img-fluid" alt="Delete-Trash">
-                                                                        </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row profile-details-upload">
-                                                    <div class="col-md-12">
-                                                        <div class="row profile-details">
-                                                            <div class="col-md-8">
-                                                                <div class="card mb-3">
-                                                                    <div class="row g-0">
-                                                                        <div class="col-md-1 card-img">
-                                                                            <img src="{{asset('img/dashboard/Video-File.png')}}"
-                                                                                class="img-fluid pdf-upload rounded-start"
-                                                                                alt="...">
-                                                                        </div>
-                                                                        <div class="col-md-11 padd-l-0">
-                                                                            <div class="card-body">
-                                                                                <h5 class="card-title">Referee Report 2
-                                                                                    .pdf</h5>
-                                                                                <p class="card-text"><small
-                                                                                        class="text-muted">32KB |
-                                                                                        12/3/2021</small></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="profile-buttons">
-                                                                    <a href="#">
-                                                                    <img src="{{asset('img/dashboard/Eye.png')}}"
-                                                                        class="img-fluid" alt="Eye">
-                                                                        </a>
-                                                                        <a href="#">
-                                                                    <img src="{{asset('img/dashboard/Download.png')}}"
-                                                                        class="img-fluid" alt="download">
-                                                                    </a>
-                                                                    <a href="#">
-                                                                    <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                                        class="img-fluid" alt="Upload">
-                                                                    </a>
-                                                                    <a href="#">
-                                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                                        class="img-fluid" alt="Delete-Trash">
-                                                                        </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row profile-details-upload">
-                                                    <div class="col-md-12">
-                                                        <div class="row profile-details">
-                                                            <div class="col-md-8">
-                                                                <div class="card mb-3">
-                                                                    <div class="row g-0">
-                                                                        <div class="col-md-1 card-img">
-                                                                            <img src="{{asset('img/dashboard/MP3.png')}}"
-                                                                                class="img-fluid pdf-upload rounded-start"
-                                                                                alt="...">
-                                                                        </div>
-                                                                        <div class="col-md-11 padd-l-0">
-                                                                            <div class="card-body">
-                                                                                <h5 class="card-title">Referee Report 3
-                                                                                    .pdf</h5>
-                                                                                <p class="card-text"><small
-                                                                                        class="text-muted">56KB |
-                                                                                        12/3/2021</small></p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="col-md-4">
-                                                                <div class="profile-buttons">
-                                                                    <a href="#">
-                                                                    <img src="{{asset('img/dashboard/Eye.png')}}"
-                                                                        class="img-fluid" alt="Eye">
-                                                                    </a>
-                                                                    <a href="#">
-                                                                    <img src="{{asset('img/dashboard/Download.png')}}"
-                                                                        class="img-fluid" alt="download">
-                                                                    </a>
-                                                                    <a href="#">
-                                                                    <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                                        class="img-fluid" alt="Upload">
-                                                                    </a>
-                                                                    <a href="#">
-                                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                                        class="img-fluid" alt="Delete-Trash">
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="edit-brn">
-                                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
-                                                            class="img-fluid" alt="Edit-img"> Edit</button>
-                                                </div>
-                                            </div>
                                         </div>
                                         <div class="forms-colored-div">
                                             <div class="blue"></div>
@@ -1850,7 +1717,7 @@
                                             <span class="date-background"></span>
                                         </div>
 
-                                        <h3>Recent Remarks</h3>
+                                        <h3>Job Profile Summery</h3>
                                        
                                             <p class="summary-id">ID: AH5841</p>
                                             <div class="job-summary-eidt">
@@ -1884,7 +1751,7 @@
                                     <div class="row">
                                         <div class="col-md-12 interview">
                                             <div class="interview-inner">
-                                                <h3> Current Vacancy</h3>
+                                                <h3> Interview Notes</h3>
                                                 <p>Last Updated Date 01st November, 2021</p>
                                                 <div class="interview-table">
                                                     <table class="table table-bordered table-striped">
@@ -1913,36 +1780,18 @@
                                                                     <i class="fas fa-lock"></i>
                                                                 </td>
                                                             </tr>
-                                                            <tr>
+                                                            <!-- <tr>
                                                                 <th>
                                                                     Gender
                                                                 </th>
                                                                 <td>
                                                                 </td>
-                                                            </tr>
+                                                            </tr> -->
                                                             <tr>
                                                                 <th>
                                                                     Mobile
                                                                 </th>
                                                                 <td>
-                                                                    <i class="fas fa-lock"></i>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>
-                                                                    Profession
-                                                                </th>
-                                                                <td>
-                                                                    {{-- <select class="profession-doctor form-select form-select-lg mb-3"
-                                                                        name="profession"
-                                                                        aria-label=".form-select-lg example">
-                                                                        <option value="Doctor">Doctor</option>
-                                                                        <option value="Nurse">Nurse</option>
-                                                                        <option value="Allied Health Professionals">Allied Health Professionals</option>
-                                                                        <option value="Healthcare Executives">Healthcare Executives</option>
-                                                                        <!-- <option value="Dentists">Dentists</option> -->
-                                                                    </select> --}}
-                                                                    <i class="fas fa-sort-down"></i>
                                                                 </td>
                                                             </tr>
                                                             <tr>
@@ -2013,6 +1862,39 @@
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
                                                             </tr>
+                                                            <tr>
+                                                                <th>
+                                                                    Category
+                                                                </th>
+                                                                <td>
+                                                                    {{-- <select class="profession-doctor form-select form-select-lg mb-3"
+                                                                        name="profession"
+                                                                        aria-label=".form-select-lg example">
+                                                                        <option value="Doctor">Doctor</option>
+                                                                        <option value="Nurse">Nurse</option>
+                                                                        <option value="Allied Health Professionals">Allied Health Professionals</option>
+                                                                        <option value="Healthcare Executives">Healthcare Executives</option>
+                                                                    </select> --}}
+                                                                    <i class="fas fa-sort-down"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <!-- <tr>
+                                                                <th>
+                                                                    Profession
+                                                                </th>
+                                                                <td>
+                                                                    {{-- <select class="profession-doctor form-select form-select-lg mb-3"
+                                                                        name="profession"
+                                                                        aria-label=".form-select-lg example">
+                                                                        <option value="Doctor">Doctor</option>
+                                                                        <option value="Nurse">Nurse</option>
+                                                                        <option value="Allied Health Professionals">Allied Health Professionals</option>
+                                                                        <option value="Healthcare Executives">Healthcare Executives</option>
+                                                                    </select> --}}
+                                                                    <i class="fas fa-sort-down"></i>
+                                                                </td>
+                                                            </tr> -->
+                                                           
                                                             <tr>
                                                             <th>
                                                                     Seniority
@@ -2208,13 +2090,13 @@
                                                             </tr>
                                                             <tr>
                                                                 <th>
-                                                                    Distance
+                                                                    Talent Profession
                                                                 </th>
                                                                 <td>
 
                                                                 </td>
                                                             </tr>
-                                                            <tr>
+                                                            <!-- <tr>
                                                                 <th>
                                                                     Job Seeking location
                                                                 </th>
@@ -2229,7 +2111,7 @@
                                                                     </select> --}}
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
-                                                            </tr>
+                                                            </tr> -->
                                                             <tr>
                                                                 <td colspan="2" class="disc-width"></td>
                                                                 <td></td>
@@ -2283,11 +2165,11 @@
                                                                 <td class="padd-8">
                                                                 </td>
                                                             </tr>
-                                                            <tr>
+                                                            <!--<tr>
                                                                 <td colspan="2" class="disc-width"></td>
                                                                 <td></td>
                                                             </tr>
-                                                            <tr>
+                                                             <tr>
                                                                 <th>
                                                                     Practise Licence Number
                                                                 </th>
@@ -2931,7 +2813,7 @@
                                                                     </select> --}}
                                                                     <i class="fas fa-sort-down"></i>
                                                                 </td>
-                                                            </tr>
+                                                            </tr> -->
                                                             <tr>
                                                                 <td colspan="2" class="disc-width"></td>
                                                                 <td></td>
@@ -3660,7 +3542,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <th>
-                                                                    Moratorium Restriction
+                                                                    Moratorium Exemption
                                                                 </th>
                                                                 <td>
                                                                     {{-- <select class="form-select form-select-lg mb-3"
@@ -3675,22 +3557,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <th>
-                                                                    Location Restrictions
-                                                                </th>
-                                                                <td>
-                                                                    {{-- <select class="form-select form-select-lg mb-3"
-                                                                        name="job_title"
-                                                                        aria-label=".form-select-lg example">
-                                                                        <option value="Yes" disabled>Yes</option>
-                                                                        <option value="No" disabled>No</option>
-                                                                        <option value="N/A" disabled>N/A</option>
-                                                                    </select> --}}
-                                                                    <i class="fas fa-sort-down"></i>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <th>
-                                                                    Training Program Requirement
+                                                                Rural Status
                                                                 </th>
                                                                 <td>
 
@@ -3705,16 +3572,31 @@
                                                                 </td>
                                                             </tr>
                                                             <tr>
+                                                                <th>
+                                                                Location Status
+                                                                </th>
+                                                                <td>
+                                                                    {{-- <select class="form-select form-select-lg mb-3"
+                                                                        name="job_title"
+                                                                        aria-label=".form-select-lg example">
+                                                                        <option value="Yes" disabled>Yes</option>
+                                                                        <option value="No" disabled>No</option>
+                                                                        <option value="N/A" disabled>N/A</option>
+                                                                    </select> --}}
+                                                                    <i class="fas fa-sort-down"></i>
+                                                                </td>
+                                                            </tr>
+                                                            <!-- <tr>
                                                                 <th>
                                                                     Training Program Type
                                                                 </th>
                                                                 <td  class="padd-8">
 
                                                                 </td>
-                                                            </tr>
+                                                            </tr> -->
                                                             <tr>
                                                                 <th>
-                                                                    Medical Board Conditions
+                                                                Acceptable Training Program
                                                                 </th>
                                                                 <td>
 
@@ -3730,7 +3612,7 @@
                                                             </tr>
                                                             <tr>
                                                                 <th>
-                                                                    Medical Board Undertakings
+                                                                    Supervision Available
                                                                 </th>
                                                                 <td>
 
@@ -3748,9 +3630,8 @@
                                                                 <td colspan="2">
                                                                     <div class="mb-3 text-area">
                                                                         <label for="exampleFormControlTextarea1"
-                                                                            class="form-label">Skills &
-                                                                            Interests</label>
-                                                                        <textarea class="form-control"
+                                                                            class="form-label">Variety of Services</label>
+                                                                        <textarea class="form-control" disabled
                                                                             id="exampleFormControlTextarea1"
 
                                                                     rows="3">skills </textarea>
@@ -3762,8 +3643,8 @@
                                                                 <td colspan="2">
                                                                     <div class="mb-3 text-area">
                                                                         <label for="exampleFormControlTextarea1"
-                                                                            class="form-label">Interviewer Notes</label>
-                                                                        <textarea class="form-control"
+                                                                            class="form-label">Client Manager Notes</label>
+                                                                        <textarea class="form-control" disabled
                                                                             id="exampleFormControlTextarea1"
                                                                             rows="3">
                                                                             Interviewer
@@ -3810,7 +3691,7 @@
                                                     <span class="date-background"></span>
                                                 </div>
                                                 <div class="audio-video-file">
-                                                    <h4>Audio or Video File Recording</h4>
+                                                    <h4>Current Vacancy</h4>
                                                     <div class="row profile-details-upload">
                                                         <div class="col-md-12">
                                                             <div class="row profile-details">
@@ -3824,8 +3705,7 @@
                                                                             </div>
                                                                             <div class="col-md-11 padd-l-0">
                                                                                 <div class="card-body">
-                                                                                    <h5 class="card-title">Primary
-                                                                                        Interview Sheet .pdf</h5>
+                                                                                    <h5 class="card-title">Current Vacancy 1 .pdf</h5>
                                                                                     <p class="card-text"><small
                                                                                             class="text-muted">58KB |
                                                                                             12/3/2021</small></p>
@@ -3870,8 +3750,7 @@
                                                                             </div>
                                                                             <div class="col-md-11 padd-l-0">
                                                                                 <div class="card-body">
-                                                                                    <h5 class="card-title">Video
-                                                                                        Recording</h5>
+                                                                                    <h5 class="card-title">Current Vacancy 2 .pdf</h5>
                                                                                     <p class="card-text"><small
                                                                                             class="text-muted">32KB |
                                                                                             12/3/2021</small></p>
@@ -3916,8 +3795,7 @@
                                                                             </div>
                                                                             <div class="col-md-11 padd-l-0">
                                                                                 <div class="card-body">
-                                                                                    <h5 class="card-title">Audio
-                                                                                        Recording</h5>
+                                                                                    <h5 class="card-title">Current Vacancy 3 .pdf</h5>
                                                                                     <p class="card-text"><small
                                                                                             class="text-muted">56KB |
                                                                                             12/3/2021</small></p>
@@ -3962,8 +3840,130 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div class="row candidate-assign-to client-assign-to">
+                                        <div class="col-md-12">
+                                        <div class="candidate-assign-txt">
+                                            <div class="candidate-date">
+                                                <div class="form-group">
+                                                    <select class="form-control" name="title" id="title" required="">
+                                                        <option value="" selected="">2020-2021</option>
+                                                        <option value="2019-2020">2019-2020</option>
+                                                        <option value="2018-2019">2018-2019</option>
+                                                        <option value="2017-2018">2017-2018</option>
+                                                        <option value="2016-2017">2016-2017</option>
+                                                        <option value="2015-2016">2015-2016</option>
+                                                    </select>
+                                                    <i class="fas fa-sort-down"></i>
+                                                </div>
+                                                <span class="date-background"></span>
+                                            </div>
+                                            <h3>Assigned to</h3>
+                                        </div>
+                                        <div class="assign-form">
+                                            <div class="assign-form-d-none">
+                                                <form action="" method="" class="assign-form-inner">
+                                                    <div class="row">
+                                                        <div class="col-md-12 form-group">
+                                                            <label for="Candidate_Manager">Candidate Manager</label>
+                                                            <select class="form-select form-select-lg mb-3"
+                                                                name="job_title" aria-label=".form-select-lg example">
+                                                                <option value="" disabled="" selected="">Mary Rosella
+                                                                    Silva
+                                                                </option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <i class="fas fa-sort-down"></i>
+                                                        </div>
+                                                        <div class="col-md-12 form-group">
+                                                            <label for="Recruitement">Recruitement Consultant</label>
+                                                            <select class="form-select form-select-lg mb-3"
+                                                                name="job_title" aria-label=".form-select-lg example">
+                                                                <option value="" disabled="" selected="">Username
+                                                                </option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <i class="fas fa-sort-down"></i>
+                                                        </div>
+                                                        <div class="col-md-12 form-group">
+                                                            <label for="Administrator">Data Administrator</label>
+                                                            <select class="form-select form-select-lg mb-3"
+                                                                name="job_title" aria-label=".form-select-lg example">
+                                                                <option value="" disabled="" selected="">Purnima Purnima
+                                                                </option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <i class="fas fa-sort-down"></i>
+                                                        </div>
 
-
+                                                    </div>
+                                                </form>
+                                                <div class="edit-brn">
+                                                    <button class="btn assign-edit-btn"><img
+                                                            src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
+                                                            alt="Edit-img"> Edit</button>
+                                                </div>
+                                            </div>
+                                            <div class="assign-eidt-form">
+                                                <form action="" method="" class="assign-form-edit assign-form-inner">
+                                                    <div class="row">
+                                                        <div class="col-md-12 form-group">
+                                                            <label for="Candidate_Manager">Candidate Manager</label>
+                                                            <select class="form-select form-select-lg mb-3"
+                                                                name="job_title" aria-label=".form-select-lg example">
+                                                                <option value="" disabled="" selected="">Mary Rosella
+                                                                    Silva
+                                                                </option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <i class="fas fa-sort-down"></i>
+                                                        </div>
+                                                        <div class="col-md-12 form-group">
+                                                            <label for="Recruitement">Recruitement Consultant</label>
+                                                            <select class="form-select form-select-lg mb-3"
+                                                                name="job_title" aria-label=".form-select-lg example">
+                                                                <option value="" disabled="" selected="">Username
+                                                                </option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <i class="fas fa-sort-down"></i>
+                                                        </div>
+                                                        <div class="col-md-12 form-group">
+                                                            <label for="Administrator">Data Administrator</label>
+                                                            <select class="form-select form-select-lg mb-3"
+                                                                name="job_title" aria-label=".form-select-lg example">
+                                                                <option value="" disabled="" selected="">Purnima Purnima
+                                                                </option>
+                                                                <option value="1">One</option>
+                                                                <option value="2">Two</option>
+                                                                <option value="3">Three</option>
+                                                            </select>
+                                                            <i class="fas fa-sort-down"></i>
+                                                        </div>
+                                                        <div class="col-md-12 profile-eidt-form-btn">
+                                                            <button class="btn back-btn">Back</button>
+                                                            <input type="submit" class="btn" placeholder="Submit">
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="forms-colored-div">
+                                        <div class="blue"></div>
+                                        <div class="purple"></div>
+                                        <div class="pink"></div>
                                     </div>
                                 </div>
                             </div>
@@ -3971,7 +3971,7 @@
                     </div>
                 </section>
 
-                <section class="testimonial-sec">
+                <section class="testimonial-sec client-testi-sec">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12">
@@ -4002,9 +4002,9 @@
                                     </div>
                                     <div class="edit-brn">
                                         <button class="btn testimonial-edit-btn"><img
-                                                src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
+                                                src=" {{asset('img/dashboard/penciel-client.png')}}" class="img-fluid"
                                                 alt="Edit-img"> Edit</button>
-                                        <button class="btn"><img src=" {{asset('img/dashboard/Delete-Chat.png')}}"
+                                        <button class="btn"><img src=" {{asset('img/dashboard/deleted_message.png')}}"
                                                 class="img-fluid" alt="Edit-img"> Remove</button>
                                     </div>
                                 </div>
@@ -4041,12 +4041,12 @@
                                                 <div class="card mb-3">
                                                     <div class="row g-0">
                                                         <div class="col-md-1 card-img">
-                                                            <img src="http://127.0.0.1:8000/img/dashboard/MP3.png"
+                                                            <img src="http://127.0.0.1:8000/img/dashboard/PDF.png"
                                                                 class="img-fluid pdf-upload rounded-start" alt="...">
                                                         </div>
                                                         <div class="col-md-11 padd-l-0">
                                                             <div class="card-body">
-                                                                <h5 class="card-title">Referee Report 3 .pdf</h5>
+                                                                <h5 class="card-title">Testimonial .pdf</h5>
                                                                 <p class="card-text"><small class="text-muted">56KB |
                                                                         12/3/2021</small></p>
                                                             </div>
@@ -4084,36 +4084,36 @@
             </div>
 
             <!-- counter end -->
-            <div class="candidate-profile-table">
-                <div class="testimonial-heading">
-                    <h3>Job Order Pipeline</h3>
+            <div class="main-contact-table">
+                <div class="main-contact-heading">
+                    <h3>Main Contact</h3>
                 </div>
-                <table id="dtpipeline" class="table  table-striped table-bordered table-sm" cellspacing="0"
+                <table id="MainContact" class="table  table-striped table-bordered table-sm" cellspacing="0"
                     width="100%">
                     <thead>
                         <tr>
-                            <th class="th-sm">Title
+                            <th class="th-sm">First Name
                             </th>
-                            <th class="th-sm">Clients
+                            <th class="th-sm">Last Name
                             </th>
-                            <th class="th-sm">Owner
+                            <th class="th-sm">Contact Number
                             </th>
-                            <th class="th-sm">Added
+                            <th class="th-sm">Mobile Number
                             </th>
-                            <th class="th-sm submit-table-head">Submitted
+                            <th class="th-sm submit-table-head">Email ID
                             </th>
-                            <th class="th-sm">Action
+                            <th class="th-sm">Designation
                             </th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr class="pipeline-data">
-                            <td>Tiger Nixon</td>
-                            <td>System Architect</td>
-                            <td>Edinburgh</td>
-                            <td>61</td>
-                            <td>2022/04/25</td>
-                            <td>$320,800</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
                         </tr>
                         <tr class="pipeline-data-d-none">
                                 <td><input type="text" value="Tiger Nixon"></td>
@@ -4130,111 +4130,263 @@
 
                     </tbody>
                 </table>
-                <div class="pipeline-btn pipeline-btn-d-none ">
-                    <div class="add-pipeline">
-                        <button class="btn add-pipeline-btn">Add This Candidate To Job Order Pipeline</button>
-                    </div>
-                    <div class="edit-brn">
-                        <button class="btn pipeline-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
-                                alt="Edit-img"> Edit</button>
-                    </div>
-                    <div class="popup-pipeline">
-                    <i class="fas fa-times cross-icon"></i>
-                         <h3>Add this candidate to the pipeline for a job order.</h3>
-                         <div class="padd-20">
-                         <p class="popup-pipeline-heading-1">Add this candidate to the pipeline for a job order.</p>
-                        <p>Search for a job order below, and then click on the job title to add the candidate to the selected job order pipeline.</p>
-                        <div>
-                            <form action="" class="row pipeline-search-form">
-                            <div class="col-md-6">
-                                <label for="search job title"> Search by Job Title:</label>
-                                <div class="pipeline-search">
-                                <input type="text" class="form-control">
-                                <span class="pipeline-search-txt search-job-title-btn">Go</span>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="search job title"> Search by Client Name:</label>
-                                <div class="pipeline-search">
-                                <input type="text" class="form-control">
-                                <span class="pipeline-search-txt search-client-btn">Go</span>
-                                </div>
-                            </div>
-                            </form>
-                        </div>  
-                        </div>                              
-                    </div>
-                    <div class="popup-pipeline-form">
-                        <form action="" class="pipeline-form row">
-                            <div class="col-md-8 profile-eidt-form-inner form-group">
-                                    <select name="placement_term" id="placement_term" class="form-control">
-                                        <option value="Other " selected diable > Other </option>
-                                        <option value="Contacted">Contacted</option>
-                                        <option value="Initial Screening">Initial Screening</option>
-                                        <option value="Short Listed">Short Listed</option>
-                                        <option value="Shelved">Shelved</option>
-                                        <option value="Job Matching">Job Matching</option>
-                                        <option value="Submissions">Submissions</option>
-                                        <option value="Declined">Declined</option>
-                                        <option value="Interviews">Interviews</option>
-                                        <option value="Due Diligence Check">Due Diligence Check</option>
-                                        <option value="Rejected / Accepted">Rejected / Accepted</option>
-                                        <option value="Placed">Placed</option>
-                                        <option value="Archived">Archived</option>
-                                        <option value="Testimony">Testimony</option>
-                                    </select>
-                                    <i class="fas fa-sort-down"></i>
-                            </div>
-                            <div class="col-md-8 profile-eidt-form-inner form-group">
-                                    <select name="placement_term" id="placement_term" class="form-control">
-                                        <option value="General" selected diable > General </option>
-                                        <option value="Contacted">Contacted</option>
-                                        <option value="Initial Screening">Initial Screening</option>
-                                        <!-- <option value="Short Listed">Short Listed</option>
-                                        <option value="Shelved">Shelved</option>
-                                        <option value="Job Matching">Job Matching</option>
-                                        <option value="Submissions">Submissions</option>
-                                        <option value="Declined">Declined</option>
-                                        <option value="Interviews">Interviews</option>
-                                        <option value="Due Diligence Check">Due Diligence Check</option>
-                                        <option value="Rejected / Accepted">Rejected / Accepted</option>
-                                        <option value="Placed">Placed</option>
-                                        <option value="Archived">Archived</option>
-                                        <option value="Testimony">Testimony</option> -->
-                                    </select>
-                                    <i class="fas fa-sort-down"></i>
-                            </div>
-                            <div class="col-md-8 profile-eidt-form-inner">
-                            <textarea name="activity-textarea" id="activity-textarea" cols="30" rows="5" placeholder="Your Notes"></textarea>
-                            </div>
-                                <div class=" col-md-12 activity-form-back-btn">
-                                    <div class=" profile-eidt-form-btn">
-                                        <button class="btn back-btn pipeline-cancel-btn">Cancel</button>
-                                        <input type="submit" class="btn" placeholder="Submit">
-                                    </div>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-                <div class="pipeline-back-btn">
-                    <div class="col-md-12 profile-eidt-form-btn">
-                    <button class="btn back-btn">Back</button>
-                    <input type="submit" class="btn" placeholder="Submit">
-                    </div>
-                </div>
-
             </div>
             <div class="forms-colored-div">
                 <div class="blue"></div>
                 <div class="purple"></div>
                 <div class="pink"></div>
             </div>
-            <div class="candidate-profile-table activity-heading">
+
+            <div class="main-contact-table activity-heading">
+                <div class="main-contact-heading">
+                    <h3>Billing Contact</h3>
+                </div>
+                <table id="BillingContact" class="table  table-striped table-bordered table-sm" cellspacing="0"
+                    width="100%">
+                    <thead>
+                        <tr>
+                            <th class="th-sm">First Name
+                            </th>
+                            <th class="th-sm">Last Name
+                            </th>
+                            <th class="th-sm">Contact Number
+                            </th>
+                            <th class="th-sm">Mobile Number
+                            </th>
+                            <th class="th-sm submit-table-head">Email ID
+                            </th>
+                            <th class="th-sm">Designation
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="pipeline-data">
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="pipeline-data-d-none">
+                                <td><input type="text" value="Tiger Nixon"></td>
+                                <td><input type="text" value="System Architect"></td>
+                                <td><input type="text" value="Edinburgh"></td>
+                                <td><input type="number" value="61"></td>
+                                <td class="pipeline-date"><input class="form-control date" type="calander" name="Pipeline_Date" placeholder=""
+                                    id="Pipeline_Date" value="2022/04/25">
+                                    <img src="{{asset('img/dashboard/calendar-icon.png')}}" class="calendar"
+                                    alt="calendar-icon">
+                                </td>
+                                <td><input type="number" value="320800"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="forms-colored-div">
+                <div class="blue"></div>
+                <div class="purple"></div>
+                <div class="pink"></div>
+            </div>
+            <div class="main-contact-table activity-heading job-order-table">
+                <div class="main-contact-heading">
+                    <h3>Job Orders</h3>
+                </div>
+                <table id="JobOrders" class="table  table-striped table-bordered table-sm" cellspacing="0"
+                    width="100%">
+                    <thead>
+                        <tr>
+                            <th class="th-sm">ID
+                            </th>
+                            <th class="th-sm">Title
+                            </th>
+                            <th class="th-sm">Profession
+                            </th>
+                            <th class="th-sm">Post Date
+                            </th>
+                            <th class="th-sm submit-table-head">Rec Consultant
+                            </th>
+                            <th class="th-sm">Owner
+                            </th>
+                            <th class="th-sm">Job Status
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="pipeline-data">
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="pipeline-data-d-none">
+                                <td><input type="text" value="Tiger Nixon"></td>
+                                <td><input type="text" value="System Architect"></td>
+                                <td><input type="text" value="Edinburgh"></td>
+                                <td><input type="number" value="61"></td>
+                                <td class="pipeline-date"><input class="form-control date" type="calander" name="Pipeline_Date" placeholder=""
+                                    id="Pipeline_Date" value="2022/04/25">
+                                    <img src="{{asset('img/dashboard/calendar-icon.png')}}" class="calendar"
+                                    alt="calendar-icon">
+                                </td>
+                                <td><input type="number" value="320800"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="forms-colored-div">
+                <div class="blue"></div>
+                <div class="purple"></div>
+                <div class="pink"></div>
+            </div>
+
+            <div class="main-contact-table activity-heading">
+                <div class="main-contact-heading">
+                    <h3>Placement History</h3>
+                </div>
+                <table id="PlacementHistory" class="table  table-striped table-bordered table-sm" cellspacing="0"
+                    width="100%">
+                    <thead>
+                        <tr>
+                            <th class="th-sm">Date
+                            </th>
+                            <th class="th-sm">Candidate ID
+                            </th>
+                            <th class="th-sm">Job Title
+                            </th>
+                            <th class="th-sm">First Name
+                            </th>
+                            <th class="th-sm submit-table-head">Last Name
+                            </th>
+                            <th class="th-sm">Profession
+                            </th> 
+                            <th class="th-sm">Activity Notes
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="pipeline-data">
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                        <tr class="pipeline-data-d-none">
+                                <td><input type="text" value="Tiger Nixon"></td>
+                                <td><input type="text" value="System Architect"></td>
+                                <td><input type="text" value="Edinburgh"></td>
+                                <td><input type="number" value="61"></td>
+                                <td class="pipeline-date"><input class="form-control date" type="calander" name="Pipeline_Date" placeholder=""
+                                    id="Pipeline_Date" value="2022/04/25">
+                                    <img src="{{asset('img/dashboard/calendar-icon.png')}}" class="calendar"
+                                    alt="calendar-icon">
+                                </td>
+                                <td><input type="number" value="320800"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="forms-colored-div">
+                <div class="blue"></div>
+                <div class="purple"></div>
+                <div class="pink"></div>
+            </div>
+
+            <div class="main-contact-table archives-table activity-heading">
+                <div class="archives-flex">
+                    <div class="archives-heading">
+                        <h3>Archives</h3>
+                    </div>
+                    <div class="candidate-date">
+                        <div class="form-group">
+                            <select class="form-control" name="title" id="title" required="">
+                                <option value="" selected="">2020-2021</option>
+                                <option value="2019-2020">2019-2020</option>
+                                <option value="2018-2019">2018-2019</option>
+                                <option value="2017-2018">2017-2018</option>
+                                <option value="2016-2017">2016-2017</option>
+                                <option value="2015-2016">2015-2016</option>
+                            </select>
+                                <i class="fas fa-sort-down"></i>
+                        </div>
+                        <span class="date-background"></span>
+                    </div>
+                </div>
+                <p class="doc-type-txt">Document Type List</p>
+                <table id="Archives" class="table  table-striped table-bordered table-sm" cellspacing="0"
+                    width="100%">
+                    <thead>
+                        <tr>
+                            <th class="th-sm">Document Required
+                            </th>
+                            <th class="th-sm">Status
+                            </th>
+                            <th class="th-sm">Uploaded On
+                            </th>
+                            <th class="th-sm">Expiry
+                            </th>
+                            <th class="th-sm submit-table-head">Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="pipeline-data">
+                            <td>Company Profile</td>
+                            <td>To be provided</td>
+                            <td>05-11-2021</td>
+                            <td>05-11-2022</td>
+                            <td>
+                                <div class="profile-buttons action-buttons">
+                                    <a href="#">
+                                    <img src="http://127.0.0.1:8000/img/dashboard/Eye.png" class="img-fluid" alt="Eye">
+                                    </a>
+                                    <a href="#">
+                                    <img src="http://127.0.0.1:8000/img/dashboard/Download.png" class="img-fluid" alt="download">
+                                    </a>
+                                    <a href="#">
+                                    <img src="http://127.0.0.1:8000/img/dashboard/Upload.png" class="img-fluid" alt="Upload">
+                                    <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png" class="img-fluid" alt="Delete-Trash">
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+
+                        
+                        <tr class="pipeline-data-d-none">
+                                <td><input type="text" value="Tiger Nixon"></td>
+                                <td><input type="text" value="System Architect"></td>
+                                <td><input type="text" value="Edinburgh"></td>
+                                <td><input type="number" value="61"></td>
+                                <td class="pipeline-date"><input class="form-control date" type="calander" name="Pipeline_Date" placeholder=""
+                                    id="Pipeline_Date" value="2022/04/25">
+                                    <img src="{{asset('img/dashboard/calendar-icon.png')}}" class="calendar"
+                                    alt="calendar-icon">
+                                </td>
+                                <td><input type="number" value="320800"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="forms-colored-div">
+                <div class="blue"></div>
+                <div class="purple"></div>
+                <div class="pink"></div>
+            </div>
+            <div class="candidate-profile-table activity-heading ">
                 <div class="testimonial-heading ">
                     <h3>Activity</h3>
                 </div>
-                <table id="dtActivity" class="table  table-striped table-bordered table-sm" cellspacing="0"
+                <table id="dtActivity" class=" activity-table table  table-striped table-bordered table-sm" cellspacing="0"
                     width="100%">
                     <thead>
                         <tr>
@@ -4272,7 +4424,7 @@
                                 alt="calendar-icon">
                             </td>
                             <td><input type="number" value="320800"></td>
-                    </tr>
+                        </tr>
                     </tbody>
                 </table>
                 <div class="pipeline-btn activity-btn-d-none">

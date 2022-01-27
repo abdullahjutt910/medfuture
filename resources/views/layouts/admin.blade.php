@@ -20,6 +20,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/admin-lte/2.4.3/css/skins/_all-skins.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{{ asset('ckeditor/contents.css') }}">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet" />
     <link href="{{ asset('css/dashboard-responsive.css') }}" rel="stylesheet" />
     @yield('styles')
@@ -157,15 +158,30 @@
     <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/pdfmake.min.js"></script>
     <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.18/build/vfs_fonts.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
-    <script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/classic/ckeditor.js"></script>
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/16.0.0/classic/ckeditor.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.5/js/select2.full.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.5.1/min/dropzone.min.js"></script>
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+    <!-- <script src="https://cdn.ckeditor.com/ckeditor5/31.1.0/classic/ckeditor.js"></script> -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js'></script>
+    <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
 
+
+    <!-- toolbar start here -->
+    <script>
+       CKEDITOR.replace( 'content' );
+       CKEDITOR.replace( 'qualificate' );
+      //  CKEDITOR.editorConfig = function( config ) {
+      //   config.language = 'es';
+      //   config.uiColor = '#F7B42C';
+      //   config.height = 300;
+      //   config.toolbarCanCollapse = true;
+      // };
+    </script>
+    <!-- toolbar end here -->
   <!-- counter start here -->
   <script type='text/javascript'>
     !function(a){a.fn.percentageLoader=function(b){this.each(function(){function q(){p.customAttributes.arc=function(a,b,c){var h,d=360/b*a,e=(90-d)*Math.PI/180,f=j+c*Math.cos(e),g=k-c*Math.sin(e);return h=b==a?[["M",j,k-c],["A",c,c,0,1,1,j-.01,k-c]]:[["M",j,k-c],["A",c,c,0,+(d>180),1,f,g]],{path:h}},p.path().attr({arc:[100,100,l],"stroke-width":d.strokeWidth,stroke:d.bgColor}),e&&(m=p.path().attr({arc:[.01,100,l],"stroke-width":d.strokeWidth,stroke:d.ringColor,cursor:"pointer"}),r(e,100,l,m,2)),n=p.text(j,k,e).attr({font:d.fontWeight+" "+d.fontSize+" Lato",fill:d.textColor})}function r(a,b,c,d){f?d.animate({arc:[a,b,c]},900,">"):a&&a!=b?d.animate({arc:[a,b,c]},750,"elastic"):(a=b,d.animate({arc:[a,b,c]},750,"bounce",function(){d.attr({arc:[0,b,c]})}))}var c=a(this),d=a.extend({},a.fn.percentageLoader.defaultConfig,b),e=parseInt(c.children(d.valElement).text()),f=!0,h=parseInt(c.css("width")),i=parseInt(c.css("height")),j=h/2,k=i/2,l=j-d.strokeWidth/2,m=null,n=null,p=Raphael(this,h,i);q()})},a.fn.percentageLoader.defaultConfig={valElement:"p",strokeWidth:20,bgColor:"#D9D9D9",ringColor:"#686868",textColor:"#9A9A9A",fontSize:"33px",fontWeight:"normal"}}(jQuery);
@@ -315,9 +331,22 @@
 });
 
     </script>
+<script>
 
 
+// datatables for clients view
 
+$(document).ready( function () {
+    $('#MainContact').DataTable();
+    $('#BillingContact').DataTable();
+    $('#JobOrders').DataTable();
+    $('#PlacementHistory').DataTable();
+    $('#Archives').DataTable();
+    
+    // datatables for job view
+    $('#JobPost').DataTable();
+});
+</script>
 
 <!-- <script>
       $("document").ready(function(){
@@ -353,8 +382,8 @@
          }
          });
 
-         $(".candidate-profile-table .pagination .previous a").html(" ");
-         $(".candidate-profile-table .pagination .next a").html(" ");
+        //  $(".candidate-profile-table .pagination .previous a").html(" ");
+        //  $(".candidate-profile-table .pagination .next a").html(" ");
         //  $(".candidate-profile-table #dtpipeline_filter label").html('<input type="search" class="form-control input-sm" placeholder="" aria-controls="dtpipeline">');
 
           
@@ -367,40 +396,38 @@
         $(".dt-button-collecton").append('abc');
         })
         
-        $(".candidate-profile-table .dataTables_filter input").keypress(function(){
-          console.log("click");
-          $(".pagination .previous a").html("");
-          $(".pagination .next a").html("");
-        })
+        // $(".candidate-profile-table .dataTables_filter input").keypress(function(){
+        //   console.log("click");
+        //   $(".pagination .previous a").html("");
+        //   $(".pagination .next a").html("");
+        // })
 
 
         //  select options change
-        $(".interview-edit-btn").click(function(){
-        $('.interview-table td .profession-doctor').change(function () {
+        $('.profession-doctor').change(function () {
         var text = $('option:selected', this).text();
         if(text === "Doctor"){
-          $(".interview-table  .doctor-specialty-d-none").show();
-          $(".interview-table .nurse-specialty-d-none, .interview-table .AHP-Specialty-d-none, .interview-table .HE-Specialty-d-none").hide();
-          $(".interview-table .seniority-doctor-d-none").show();
-          $(".interview-table .nurse-seniority-d-none").hide();
-         }
+          $(" .doctor-specialty-d-none").show();
+          $(" .nurse-specialty-d-none,.AHP-Specialty-d-none, .HE-Specialty-d-none").hide();
+          $(" .seniority-doctor-d-none").show();
+          $(" .nurse-seniority-d-none").hide();
+        }
         if(text === "Nurse"){
-          $(".interview-table .nurse-specialty-d-none").show();
-          $(".interview-table .doctor-specialty-d-none, .interview-table .AHP-Specialty-d-none, .interview-table .HE-Specialty-d-none").hide();
-          $(".interview-table .nurse-seniority-d-none").show();
-          $(".interview-table .seniority-doctor-d-none").hide();
+          $(" .nurse-specialty-d-none").show();
+          $(".doctor-specialty-d-none,  .AHP-Specialty-d-none, .HE-Specialty-d-none").hide();
+          $(" .nurse-seniority-d-none").show();
+          $(" .seniority-doctor-d-none").hide();
          }
          if(text === "Allied Health Professionals"){
-          $(".interview-table  .AHP-Specialty-d-none").show();
-          $(".interview-table .doctor-specialty-d-none, .interview-table .nurse-specialty-d-none, .interview-table .HE-Specialty-d-none").hide();
+          $("  .AHP-Specialty-d-none").show();
+          $(" .doctor-specialty-d-none,  .nurse-specialty-d-none,  .HE-Specialty-d-none").hide();
          }
          if(text === "Healthcare Executives"){
-          $(".interview-table .HE-Specialty-d-none").show();
-          $(".interview-table .doctor-specialty-d-none, .interview-table .AHP-Specialty-d-none, .interview-table .nurse-specialty-d-none").hide();
+          $(" .HE-Specialty-d-none").show();
+          $(" .doctor-specialty-d-none,  .AHP-Specialty-d-none,  .nurse-specialty-d-none").hide();
          }
 
         });
-      });
         // counter background color change
 
         var counter_num_1 = $(".Contacted.percent p").html();
@@ -532,6 +559,7 @@
       $(".testimonial-edit-btn").click(function(){
         $(".testimonial-txt-edit").hide();
         $(".testimonial-txt-d-none").show();
+        $(".profile-details-upload .profile-buttons img").removeClass("gray-color");
       });
       
       $(".back-btn").click(function(){
@@ -540,7 +568,7 @@
       });
 
       $(".testimonial-remove-btn").click(function(){
-        $(".testimonial-txt").hide();
+        $(".testimonial-txt").hide();        
       });
 
 
@@ -600,15 +628,18 @@
         $(".profile-buttons img").removeClass("gray-color");
       })
 
+
+
+      // $(".position-dtil-hading").click(function(){
+      //   $('.position-hide').hide(); 
+      // $(this).parents('.view-job-right').find('.position-hide').toggle();
+      // })
+      
+
     })
 
     </script>
 
-    <!-- <script>
-       $("window").load(function(){
-        $(".candidate-profile-table .previous").addClass("abc");
-      })
-    </script> -->
 
     @yield('scripts')
 </body>

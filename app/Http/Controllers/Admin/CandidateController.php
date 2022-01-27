@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Gate;
 use App\Models\User;
 use App\Models\Progbar;
-use App\Models\Progress;
+use App\Models\Activebar;
+use App\Models\Assignbar;
 use App\Models\Candidate;
 use App\Models\Interview;
 use Illuminate\Http\Request;
@@ -93,6 +94,9 @@ class CandidateController extends Controller
         $candidate->visa_type = $request->visa_type;
         $candidate->work_rights_status = $request->work_rights_status;
         $candidate->profession_login = $request->profession_login;
+        $candidate->candidate_manager = $request->candidate_manager;
+        $candidate->recruitement = $request->recruitement;
+        $candidate->administrator = $request->administrator;
         $candidate->username = $request->username;
         $candidate->password = $request->password;
 
@@ -184,6 +188,21 @@ class CandidateController extends Controller
         $progbar->testimony = $request->testimony;
         $progbar->save();
 
+        $activebar = new Activebar;
+        $activebar->activity_type = $request->activity_type;
+        $activebar->activity_type_2 = $request->activity_type_2;
+        $activebar->activity_note = $request->activity_note;
+        $activebar->save();
+
+        // $assignbar = new Assignbar;
+        // // dd($assignbar);
+        // $assignbar->candidate_id = $candidate->id;
+        // $assignbar->candidateManager = $request->candidateManager;
+        // $assignbar->recruitementConsultant = $request->recruitementConsultant;
+        // $assignbar->dataAdministrator = $request->dataAdministrator;
+        // $assignbar->save();
+
+
         return redirect()->route('admin.candidates.index');
     }
 
@@ -265,7 +284,7 @@ class CandidateController extends Controller
     {
         $candidate = Candidate::find($id);
         $candidate->title = $request->title;
-        $candidate->Profession = $request->Profession;
+        $candidate->profession = $request->profession;
         $candidate->devision = $request->devision;
         $candidate->senority = $request->senority;
         $candidate->specialty = $request->specialty;
@@ -293,8 +312,8 @@ class CandidateController extends Controller
         $candidate->placement_term = $request->placement_term;
         $candidate->save();
         // dd($request->all());
-        $interview = Interview::where('candidate_id',$candidate->id)->first();
 
+        $interview = Interview::where('candidate_id',$candidate->id)->first();
         // $interview->candidate_id = $candidate->id;
         $interview->start_date = $request->start_date;
         $interview->end_date = $request->end_date;
@@ -346,6 +365,18 @@ class CandidateController extends Controller
         $progbar->save();
         return back();
     }
+    // public function updateAssign(Request $request,$id)
+    // {
+    //     $assignbar = Assignbar::where('candidate_id',$id)->first();
+    //     $candidate = Candidate::find($id);
+    //     $assignbar->candidate_id = $candidate->id;
+    //     $assignbar->candidateManager = $request->candidateManager;
+    //     $assignbar->recruitementConsultant = $request->recruitementConsultant;
+    //     $assignbar->dataAdministrator = $request->dataAdministrator;
+    //     $assignbar->save();
+    //     return back();
+    // }
+
     public function update_interviewsummary(Request $request,$id)
     {
 
@@ -359,11 +390,11 @@ class CandidateController extends Controller
     public function show(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-         $candidates = $candidate->with('candidate_profile','interview','progbar')->first();
+         $candidates = $candidate->with('candidate_profile','interview','progbar','activebar')->first();
         //dd($candidates);
         return view('admin.candidates.show', compact('candidate'));
     }
-
+//dd($candidates);//dd($candidates);
     public function destroy(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
@@ -411,6 +442,15 @@ class CandidateController extends Controller
         $candidate->save();
         return back();
     }
+    public function updateActivity(Request $request,$id)
+    {
+        $activebar =Activebar::where('candidate_id',$id)->first();
+        $activebar->activity_type = $request->activity_type;
+        $activebar->activity_type_2 = $request->activity_type_2;
+        $activebar->activity_note = $request->activity_note;
+        $activebar->save();
+        return back();
+    }
     public function update2(Request $request,$id)
     {
         $candidate = Candidate::find($id);
@@ -455,6 +495,7 @@ class CandidateController extends Controller
         $candidate_profile->save();
         return back();
     }
+
 
 
 }

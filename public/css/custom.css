@@ -311,7 +311,10 @@ select {
     display: none;
     -webkit-appearance: none;
 } */
-
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
 /*//////////////////////////////////// header styling end here /////////////////////////////////////*/
 
 
@@ -1003,6 +1006,7 @@ div.dataTables_wrapper div.dataTables_info {
     color: #fff;
     width: 150px;
     height: 50px;
+    margin-left: 10px;
     border-radius: 7px;
     font-family: "roboto", sans-serif !important;
     font-weight: 600;
@@ -1734,6 +1738,7 @@ div.dataTables_wrapper div.dataTables_info {
 
 .reference-form .form-group input {
     border-color: #686868;
+    background-color: #fff;
 }
 
 .reference-form .form-group input::placeholder {
@@ -2025,15 +2030,15 @@ textarea{
 .candidate-profile-table table{
     border: none;
 }
-.candidate-profile-table .dataTables_paginate{
+/* .candidate-profile-table .dataTables_paginate{
     position: relative;
     bottom: 258px;
     right: 25px;
-}
+} */
 .candidate-profile-table .dataTables_filter{
     position: absolute;
     top: -58px;
-    right: 125px;
+    right: 50px;
 }
 .candidate-profile-table .dataTables_filter input{
     border-radius: 15px;
@@ -2041,13 +2046,14 @@ textarea{
     background-color: #F2F3F7;
     border: none;
 }
+/* 
 .candidate-profile-table .pagination .active{
     display: none;
 }
 .candidate-profile-table .dataTables_filter label{
     position: relative;
 }
-/* .candidate-profile-table .dataTables_filter label::before{
+.candidate-profile-table .dataTables_filter label::before{
     position: absolute;
     content: "\f002";
     left: 68px;
@@ -2057,7 +2063,7 @@ textarea{
     font-family: "FontAwesome";
     color: #BEC2CA;
 } */
-.candidate-profile-table .previous a, .candidate-profile-table .next a{
+/* .candidate-profile-table .previous a, .candidate-profile-table .next a{
     position: relative;
 }
 .candidate-profile-table .previous a::before, .candidate-profile-table .next a::before{
@@ -2070,26 +2076,23 @@ textarea{
 }
 .candidate-profile-table .next a::before{
     content: "\f054" !important;
-}
-.candidate-profile-table .dataTables_paginate .pagination .previous a,.candidate-profile-table .dataTables_paginate .pagination .next a{
+} */
+/* .candidate-profile-table .dataTables_paginate .pagination .previous a,.candidate-profile-table .dataTables_paginate .pagination .next a{
     background-color: transparent;
     color: #000;
     margin: 0px 8px;
     border-radius: 0px;
     border: none;
     font-size: 16px;
-}
-.candidate-profile-table .dataTables_paginate .pagination .active a {
+} */
+/* .candidate-profile-table .dataTables_paginate .pagination .active a {
     background-color: #fff;
     color: #10468E;
     border-radius: 10px;
     border: 2px solid #10468E;
     font-size: 16px;
     display: none;
-}
-/* .candidate-profile-table .pagination li:nth-child(2){
-    display: none;
-}  */
+} */
 .candidate-profile-table .dataTables_length select{
     line-height: 1;
     background: grey;
@@ -2255,6 +2258,9 @@ textarea{
 .profile-eidt-form, .profile-details-eidt-form, .assign-eidt-form, .reference-form-inner-d-none, .counter-circle-form, .interview-form-d-none, .job-summary-d-none,.testimonial-txt-d-none,.pipeline-data-d-none{
     display: none;
 }
+.testimonial-txt-d-none{
+    padding-bottom: 30px;
+}
 .profile-eidt-form form{
     margin: 0;
     padding: 20px;
@@ -2340,10 +2346,9 @@ textarea{
 }
 
 
-.doctor-specialty-d-none, .nurse-seniority-d-none, .nurse-specialty-d-none, .AHP-Specialty-d-none, .HE-Specialty-d-none{
+.seniority-doctor-d-none , .nurse-seniority-d-none,.doctor-specialty-d-none , .nurse-specialty-d-none, .AHP-Specialty-d-none, .HE-Specialty-d-none{
     display: none;
 }
-
 .candidate-profile-table .dataTables_length label{
     position: relative;
 }
@@ -2487,6 +2492,10 @@ textarea{
 .gray-color{
     background-color: gray !important;
 }
+
+.activity-action{
+    text-align: right;
+}
 /*//////////////////////////////////// Single Candidate Profile   styling end here /////////////////////////////////////*/
 
 
@@ -2520,18 +2529,41 @@ textarea{
 .client-progress .progress-bar{
     background-color: #2E978C;
 }
+.revenue-color{
+    background-color: #2E978C !important;
+}
+.expenses-color{
+    background-color: #486796 !important;
+}
 .client-progress .progress-line{
     width: 280px;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+.client-progress .progress-line::before, .client-progress .progress-line::after{
+    color: #fff;
+    font-size: 10px;
+}
+.client-progress .progress-line::before{
+    left: -4px;
+}
+.client-progress .progress-line::after{
+    bottom: -8px;
 }
 
-.revenue-txt{
+.revenue-txt, .expenses-txt{
     position: absolute;
     top: 95px;
     left: -6px;
     font-size: 19px;
+    color: #2E978C;
+}
+.expenses-txt{
+    color: #486796;
 }
 .revenue-bar-perm{
-    color: #000;
+    color: #fff;
+    font-weight: 600;
     position: absolute;
     z-index: 9999;
     bottom: -26px;
@@ -2539,14 +2571,429 @@ textarea{
     text-align: center;
 }
 .revenue-bar-locum{
-    color: #000;
+    color: #fff;
+    font-weight: 600;
     position: absolute;
     z-index: 9999;
     bottom: -26px;
     left: 154px;
     text-align: center;
 }
+.client-progress .candidate-date .form-group{
+    border: 2px solid #fff;
+}
+.client-progress .candidate-date i.fa-sort-down{
+    color: #fff;
+}
+.client-progress h3{
+    color: #fff !important;
+}
 .client-progress .edit-brn{
     margin-top: 50px;
 }
-/*  */
+.client-profile-left img{
+    image-rendering: -webkit-optimize-contrast;
+}
+.client-profile-left .candi-profile{
+    color: #10213F;
+    background-color: #E5E5E5;
+}
+.client-profile-left .card .btn{
+    background-color: #0B398A;
+    color: #fff;
+}
+.client-profile-left .card .card-text{
+    font-weight: 600;
+}
+
+.client-profile-left .profile-info {
+    background-color: #8A8787;
+    color: #fff;
+}
+.client-profile-left .profession-info {
+    background-color: #10213F;
+    color: #fff;
+}
+.client-profile-left  .profile-info ul li:first-child h3 {
+    margin-top: 7px;
+}
+.client-profile-left .profession-info h3 {
+    margin-top: 25px;
+}
+.client-profile-left .edit-brn .btn {
+    color: #10213F;
+    background-color: #fff;
+}
+.client-profile-right{
+    padding: 70px 40px !important;
+    padding-bottom: 11px !important;
+}
+.client-profile-right .profile-right-color{
+    background-color: #A41414 !important;
+}
+.client-profile-right .profile-details-d-none{
+    margin-top: 25px;
+}
+.client-profile-right .profile-details .card .card-title {
+    color: #10213F;
+}
+.client-profile-right .profile-details-upload{
+    border-radius: 15px;
+    background: #10213F;
+}
+.client-profile-right .profile-details-upload .profile-details .card-title, .client-profile-right .profile-details-upload .profile-details .card small{
+    color: #fff !important;
+}
+.client-profile-right .profile-right-edit{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.client-profile-right .right-profile-edit-btn {
+    padding-top: 100px;
+}
+
+.client-progress{
+    background-color: #10213F;
+}
+.client-progress .referrals-left h3{
+    background-color: #fff;
+}
+
+.client-progress-list .progress-color{
+    background-color: #87DED5 !important;   
+}
+.placed-candi-feed p{
+    font-size: 13px;
+    color: #fff;
+}
+.client-assign-to{
+    max-width: 100% !important;
+    margin-top: 44px;
+}
+.client-feedback-1{
+    margin-top: 30px;
+}
+.client-feedback-1 textarea{
+    background-color: #fff;
+}
+
+.client-testi-sec{
+    background-color: #10213F;
+}
+.client-testi-sec .testimonial-heading h3,.client-testi-sec .testimonial-txt p,.client-testi-sec .testimonial-upload .profile-details-upload, .client-testi-sec .candidate-date i.fa-sort-down{
+    color: #fff;
+}
+.client-testi-sec .edit-brn .btn{
+    background-color: #fff;
+}
+.client-testi-sec .edit-brn .btn{
+    color: #000;
+}
+.client-icon-buttons {
+    padding: 0px !important;
+    padding-bottom: 10px !important;
+}
+.client-icon-buttons img{
+    background-color: transparent !important;
+    border: 2px solid #fff;
+}
+.mt-10{
+    margin-top: 10px !important;
+}
+/* client datatable start here */
+.main-contact-heading{
+    padding-top: 20px;
+    padding-bottom: 35px;
+}
+.main-contact-heading h3 {
+    font-size: 20px;
+    color: #171942;
+}
+.main-contact-table {
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 35%);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+    margin-top: 50px;
+}
+.main-contact-table .table{
+    border: none !important;
+}
+.main-contact-table .dataTables_scrollBody{
+    overflow: hidden;
+    border-bottom: 0px !important;
+}
+.main-contact-table .dataTables_filter{
+    display: none;
+}
+.main-contact-table table.dataTable tbody td.select-checkbox:before, .main-contact-table table.dataTable tbody th.select-checkbox:before{
+    display: none;
+
+}
+.main-contact-table .table thead tr:last-child{
+    color: #000;
+}
+.main-contact-table .dataTables_length select {
+    color: #fff;
+}
+.main-contact-table .dataTables_length select {
+    line-height: 1;
+    background: grey;
+    border-radius: 5px;
+    border: none;
+}
+.main-contact-table .check-box{
+    display: none;
+}
+.main-contact-table select.input-sm {
+    height: 37px;
+}
+.main-contact-table .dataTables_length label {
+    position: relative;
+}
+.main-contact-table .dataTables_length label::after {
+    content: "\f078";
+    position: absolute;
+    color: #fff;
+    top: 12px;
+    font-size: 9px;
+    right: 58px;
+    font-family: 'FontAwesome';
+}
+.main-contact-table .dataTables_paginate,.main-contact-table .dataTables_info{
+    padding-top: 40px !important;
+}
+.main-contact-table table.dataTable tbody tr {
+    border: 1px solid #d1d1d1 !important;
+}
+.main-contact-table table tbody td:first-child {
+    border-left: 2px solid #686868 !important;
+}
+.main-contact-table table tbody td:last-child {
+    border-right: 2px solid #686868 !important;
+}
+.main-contact-table table tbody td {
+    border-left: 0px solid #686868 !important;
+    border-right: 0px solid #686868 !important;
+    border-top: 2px solid #686868 !important;
+    border-bottom: 2px solid #686868 !important;
+}
+
+.job-order-table table{
+    border: none;
+}
+/* archives-table start */
+.archives-table{
+    position: relative;
+    padding-top: 30px;
+}
+.archives-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F0F1F3;
+    padding: 15px 10px;
+}
+.archives-heading h3{
+    margin: 0px;
+    font-size: 20px;
+}
+.archives-flex .candidate-date{
+    padding: 0px;
+}
+.archives-flex .form-group{
+    margin: 0px;
+}
+.archives-flex .date-background{
+    top: 7px;
+}
+.archives-flex .candidate-date i.fa-sort-down{
+    top: 9px;
+}
+.doc-type-txt{
+    font-size: 16px;
+    color: #000;
+    padding: 38px 10px;
+    padding-bottom: 15px;
+}
+.action-buttons{
+    padding: 0px;
+}
+.action-buttons a:first-child img{
+    margin-left: 0px;
+}
+.archives-table .table thead th:last-child {
+    text-align: right;
+}
+.main-contact-table .table thead th{
+    font-weight: 400;
+}
+/* archives-table end */
+.activity-table thead th{
+        font-weight: 400 !important;
+}
+/* client datatable end  here */
+
+
+
+/* view job start here */
+.view-job{
+    padding-bottom: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+    background-color: #fff;
+}
+.view-job-left{
+    padding-right: 3px 
+}
+.view-job-right{
+    padding-left: 3px 
+}
+.job-client-details{
+    margin-top: 15px;
+    padding: 25px 10px;
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+    background-color: #fff;
+}
+.job-client-details .card{
+    padding-top: 20px;
+}
+.job-client-details .card-text{
+    color: #686868;
+}
+.job-client-details h3{
+    font-size: 20px;
+    margin-top: 0px;
+}
+.job-client-details  .card-text{
+    font-size: 13px;
+    color: #686868;
+}
+.job-client-details-inner{
+    display: flex;
+    align-items: center;
+}
+.job-client-details img{
+    width: 30px;
+    height: 30px;
+    border: 1px solid #0B5292;
+    border-radius: 50%;
+    padding: 4px;
+    image-rendering: -webkit-optimize-contrast;
+}
+.job-client-details .card-title{
+    color: #000;
+    margin: 0px;
+}
+
+.contact-detail{
+    margin-top: 38px;
+}
+
+
+.job-key-fetch{
+    padding: 35px 10px;
+    background-color: #fff;
+    margin-top: 15px;
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+}
+.job-key-fetch h3{
+    font-size: 20px;
+    color: #000;
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+.job-key-fetch h5{
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+.key-fetch-txt-box{
+    width: 100%;
+    height: 33px;
+    background: #fff;
+    position: relative;
+    border: 1px solid #000;
+}
+
+
+.job-detail{
+    background-color: #fff;
+    margin-top: 50px;
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+}
+.job-detail h3{
+    padding-top: 30px;
+    padding-bottom: 22px;
+    padding-left: 10px;
+    font-size: 20px;
+    color: #000;
+}
+.highlight-job{
+    margin-top: 50px;
+}
+.highlight-job h3{
+    margin: 0px;
+}
+.highlight-job .key-fetch-txt-box{
+    margin-top: 28px;
+}
+.position-dtil {
+    margin-top: 15px;
+    padding: 25px 10px;
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+    background-color: #fff;
+}
+.position-dtil h3{
+    font-size: 20px;
+    color: #000;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-image: url("../img/dashboard/sort_down.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    image-rendering: -webkit-optimize-contrast;
+}
+.position-dtil-inner{
+    margin-top: 20px;
+}
+.position-dtil-inner h4{
+    font-size: 14px;
+    color: #000;
+}
+.position-dtil-inner p{
+    font-size: 10px;
+    color: #686868;
+}
+
+.position-hide{
+    display: none;
+}
+/* tool bar css start here */
+.cke_top, .cke_bottom{
+    background: #E5E5E5 !important;
+}
+.cke_bottom{
+    border: none !important;
+}
+/* toolbar css end here */
+
+/* job post datatable */
+.job-post{
+    padding-bottom: 40px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+    background-color: #fff;
+}
+.job-post select{
+    background-image: url("../img/dashboard/sort_down.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    image-rendering: -webkit-optimize-contrast;
+}
+/* view job end here */
