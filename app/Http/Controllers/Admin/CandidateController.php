@@ -5,11 +5,14 @@ namespace App\Http\Controllers\Admin;
 use Gate;
 use App\Models\User;
 use App\Models\Progbar;
+use App\Models\Activebar;
+use App\Models\Assignbar;
 use App\Models\Candidate;
 use App\Models\Interview;
 use Illuminate\Http\Request;
 use Intervention\Image\File;
 use App\Models\CandidateProfile;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -18,7 +21,6 @@ use App\Http\Requests\UpdateCandidateRequest;
 use Symfony\Component\HttpFoundation\Response;
 use App\Http\Requests\MassDestroyCandidateRequest;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
-use App\Models\Activebar;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class CandidateController extends Controller
@@ -93,6 +95,9 @@ class CandidateController extends Controller
         $candidate->visa_type = $request->visa_type;
         $candidate->work_rights_status = $request->work_rights_status;
         $candidate->profession_login = $request->profession_login;
+        $candidate->candidate_manager = $request->candidate_manager;
+        $candidate->recruitement = $request->recruitement;
+        $candidate->administrator = $request->administrator;
         $candidate->username = $request->username;
         $candidate->password = $request->password;
 
@@ -184,6 +189,17 @@ class CandidateController extends Controller
         $progbar->testimony = $request->testimony;
         $progbar->save();
 
+
+
+        // $assignbar = new Assignbar;
+        // // dd($assignbar);
+        // $assignbar->candidate_id = $candidate->id;
+        // $assignbar->candidateManager = $request->candidateManager;
+        // $assignbar->recruitementConsultant = $request->recruitementConsultant;
+        // $assignbar->dataAdministrator = $request->dataAdministrator;
+        // $assignbar->save();
+
+
         return redirect()->route('admin.candidates.index');
     }
 
@@ -191,7 +207,7 @@ class CandidateController extends Controller
     {
         abort_if(Gate::denies('candidate_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.candidates.edit', compact('candidate'));
+        return view('admin.candidates.edit', compact('candidate','activebar'));
     }
 
     public function update(UpdateCandidateRequest $request,$id)
@@ -265,7 +281,7 @@ class CandidateController extends Controller
     {
         $candidate = Candidate::find($id);
         $candidate->title = $request->title;
-        $candidate->Profession = $request->Profession;
+        $candidate->profession = $request->profession;
         $candidate->devision = $request->devision;
         $candidate->senority = $request->senority;
         $candidate->specialty = $request->specialty;
@@ -346,7 +362,18 @@ class CandidateController extends Controller
         $progbar->save();
         return back();
     }
-    
+    // public function updateAssign(Request $request,$id)
+    // {
+    //     $assignbar = Assignbar::where('candidate_id',$id)->first();
+    //     $candidate = Candidate::find($id);
+    //     $assignbar->candidate_id = $candidate->id;
+    //     $assignbar->candidateManager = $request->candidateManager;
+    //     $assignbar->recruitementConsultant = $request->recruitementConsultant;
+    //     $assignbar->dataAdministrator = $request->dataAdministrator;
+    //     $assignbar->save();
+    //     return back();
+    // }
+
     public function update_interviewsummary(Request $request,$id)
     {
 
@@ -360,11 +387,11 @@ class CandidateController extends Controller
     public function show(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-         $candidates = $candidate->with('candidate_profile','interview','progbar','activebar','assignbar')->first();
-        //dd($candidates->activebar);
+         $candidates = $candidate->with('candidate_profile','interview','progbar','activebar')->first();
+        //dd($candidates);
         return view('admin.candidates.show', compact('candidate'));
     }
-
+//dd($candidates);//dd($candidates);
     public function destroy(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
@@ -410,6 +437,15 @@ class CandidateController extends Controller
         $candidate->recruitement = $request->recruitement;
         $candidate->administrator = $request->administrator;
         $candidate->save();
+        return back();
+    }
+    public function updateActivity(Request $request,$id)
+    {
+        $activebar =Activebar::where('candidate_id',$id)->first();
+        $activebar->activity_type = $request->activity_type;
+        $activebar->activity_type_2 = $request->activity_type_2;
+        $activebar->activity_note = $request->activity_note;
+        $activebar->save();
         return back();
     }
     public function update2(Request $request,$id)
@@ -458,5 +494,5 @@ class CandidateController extends Controller
     }
 
 
-    
+
 }

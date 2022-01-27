@@ -83,7 +83,3 @@ Route::post('update_progress/{id}',[CandidateController::class,'updateProgress']
 Route::post('insert_activity/{id}',[ActivebarController::class,'insertActivity'])->name('insert_activity');
 Route::post('update_activity/{id}',[ActivebarController::class,'updateActivity'])->name('update_activity');
 Route::get('delete_activity/{id}',[ActivebarController::class,'deleteActivity'])->name('delete_activity');
-
-Route::post('insert_assign/{id}',[AssignbarController::class,'insertAssign'])->name('insert_assign');
-Route::post('update_assign/{id}',[AssignbarController::class,'updateAssign'])->name('update_assign');
-Route::get('delete_assign/{id}',[AssignbarController::class,'deleteAssign'])->name('delete_assign');

@@ -69,7 +69,8 @@
                         @can('candidate_access')
                         <hr class="hr-line">
                             <li class="{{ request()->is("admin/candidates") || request()->is("admin/candidates/*") ? "active" : "" }}">
-                                <a href="{{ route("admin.candidates.index") }}">
+                                {{-- <a href="{{ route("admin.candidates.index") }}"> --}}
+                                <a href="{{ route('admin.candidates.create') }}">
                                     <i class="fa-fw fas fa-user-plus">
                                     </i>
                                     <span>{{ trans('cruds.candidate.title') }}</span>
@@ -79,7 +80,8 @@
                         @can('view_candidate_access')
                         <hr class="hr-line">
                             <li class="{{ request()->is("admin/view-candidates") || request()->is("admin/view-candidates/*") ? "active" : "" }}">
-                                <a href="{{ route("admin.view-candidates.index") }}">
+                                {{-- <a href="{{ route("admin.view-candidates.index") }}"> --}}
+                                <a href="{{ route("admin.candidates.index") }}">
                                     <i class="fa-fw fas fa-user-friends">
                                     </i>
                                     <span>{{ trans('cruds.viewCandidate.title') }}</span>

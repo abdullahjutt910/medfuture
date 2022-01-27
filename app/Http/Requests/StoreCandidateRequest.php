@@ -17,63 +17,63 @@ class StoreCandidateRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => [
-                'required',
-            ],
-            'first_name' => [
-                'string',
-                'required',
-            ],
-            'last_name' => [
-                'string',
-                'required',
-            ],
-            'gender' => [
-                'required',
-            ],
-            'dob' => [
-                'required',
-                'date_format:' . config('panel.date_format'),
-            ],
-            'mobile' => [
-                'string',
-                'required',
-            ],
-            'home' => [
-                'string',
-                'required',
-            ],
-            'work' => [
-                'string',
-                'required',
-            ],
-            'email' => [
-                'required',
-            ],
-            'address_1' => [
-                'string',
-                'nullable',
-            ],
-            'address_2' => [
-                'string',
-                'nullable',
-            ],
-            'distance_to_main' => [
-                'string',
-                'nullable',
-            ],
-            'post_code' => [
-                'string',
-                'nullable',
-            ],
-            'medical_school' => [
-                'string',
-                'nullable',
-            ],
-            'username' => [
-                'string',
-                'nullable',
-            ],
+            // 'title' => [
+            //     'required',
+            // ],
+            // 'first_name' => [
+            //     'string',
+            //     'required',
+            // ],
+            // 'last_name' => [
+            //     'string',
+            //     'required',
+            // ],
+            // 'gender' => [
+            //     'required',
+            // ],
+            // 'dob' => [
+            //     'required',
+            //     'date_format:' . config('panel.date_format'),
+            // ],
+            // 'mobile' => [
+            //     'string',
+            //     'required',
+            // ],
+            // 'home' => [
+            //     'string',
+            //     'required',
+            // ],
+            // 'work' => [
+            //     'string',
+            //     'required',
+            // ],
+            // 'email' => [
+            //     'required',
+            // ],
+            // 'address_1' => [
+            //     'string',
+            //     'nullable',
+            // ],
+            // 'address_2' => [
+            //     'string',
+            //     'nullable',
+            // ],
+            // 'distance_to_main' => [
+            //     'string',
+            //     'nullable',
+            // ],
+            // 'post_code' => [
+            //     'string',
+            //     'nullable',
+            // ],
+            // 'medical_school' => [
+            //     'string',
+            //     'nullable',
+            // ],
+            // 'username' => [
+            //     'string',
+            //     'nullable',
+            // ],
         ];
     }
 }
