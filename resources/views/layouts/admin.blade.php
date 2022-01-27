@@ -100,17 +100,15 @@
                 </div>
                 <div class="nav-profile">
                   <span>
-                    <p>Peter Adams</p>
-                    <p>peter23@gmail.com</p>
+                    <p>{{ auth()->user()->name }}</p>
+                    <p>{{ auth()->user()->email }}</p>
                   </span>
                     <img src="{{asset('img/dashboard/profile_img.png')}}" alt="profile_img">
                 </div>
 
             </nav>
         </header>
-
         @include('partials.menu')
-
         <div class="content-wrapper" style="min-height: 960px;">
             @if(session('message'))
                 <div class="row" style='padding:20px 20px 0 20px;'>
