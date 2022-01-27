@@ -2984,16 +2984,24 @@ textarea{
 
 /* job post datatable */
 .job-post{
-    padding-bottom: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 40px 10px;
+    margin-top: 50px;
     box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
     background-color: #fff;
+}
+.job-post-row h5{
+    margin-top: 0px;
 }
 .job-post select{
     background-image: url("../img/dashboard/sort_down.png");
     background-repeat: no-repeat;
     background-position: right;
     image-rendering: -webkit-optimize-contrast;
+}
+.job-post #post-note{
+    width: 100%;
+    padding-top: 25px;
+    padding-left: 18px;
+    color: #999999;
 }
 /* view job end here */

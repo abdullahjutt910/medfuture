@@ -526,57 +526,81 @@
                     </div>
                 </div>
             </div>
+            <div class="forms-colored-div">
+                <div class="blue"></div>
+                <div class="purple"></div>
+                <div class="pink"></div>
+            </div>
         </div>
         <div class="col-md-12">
             <div class="job-post">
+                <div class="row job-post-row">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <h5>Verified Status</h5>
+                            <select class="form-control" name="gender" id="gender" required="">
+                                <option value="" disabled="" selected="">No</option>
+                                <option value="Male">No</option>
+                                <option value="Female">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <h5>Posted Status</h5>
+                            <select class="form-control" name="gender" id="gender" required="">
+                                <option value="" disabled="" selected="">No</option>
+                                <option value="Male">No</option>
+                                <option value="Female">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <h5>Status Management</h5>
+                            <select class="form-control" name="gender" id="gender" required="">
+                                <option value="" disabled="" selected="">No</option>
+                                <option value="Male">No</option>
+                                <option value="Female">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <h5>Priority Status</h5>
+                            <select class="form-control" name="gender" id="gender" required="">
+                                <option value="" disabled="" selected="">No</option>
+                                <option value="Male">No</option>
+                                <option value="Female">Yes</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <textarea name="post-note" id="post-note" cols="30" rows="10">Internal Notes</textarea>
+                   </div>
+                </div>
+
                 <div class="row">
                     <div class="col-md-3">
-                        <div class="form-group">
-                            <label for="Verified-Status">Verified Status</label>
-                            <select class="form-control" name="gender" id="gender" required="">
-                                <option value="" disabled="" selected="">No</option>
-                                <option value="Male">No</option>
-                                <option value="Female">Yes</option>
-                            </select>
+                        <div class="job-post-btn">
+                            <a href="#" class="btn job-back-btn">
+                                Back
+                            </a>
+                            <a href="#" class="btn job-edit-btn">
+                                Edit
+                            </a>
+                            <a href="#" class="btn job-update-btn">
+                                Update
+                            </a>
                         </div>
                     </div>
+                    <div class="col-md-6"></div>
                     <div class="col-md-3">
-                        <div class="form-group">
-                            <label for="Posted-Status">Posted Status</label>
-                            <select class="form-control" name="gender" id="gender" required="">
-                                <option value="" disabled="" selected="">No</option>
-                                <option value="Male">No</option>
-                                <option value="Female">Yes</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label for="Status-Management">Status Management</label>
-                            <select class="form-control" name="gender" id="gender" required="">
-                                <option value="" disabled="" selected="">No</option>
-                                <option value="Male">No</option>
-                                <option value="Female">Yes</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="form-group">
-                            <label for="Priority-Status">Priority Status</label>
-                            <select class="form-control" name="gender" id="gender" required="">
-                                <option value="" disabled="" selected="">No</option>
-                                <option value="Male">No</option>
-                                <option value="Female">Yes</option>
-                            </select>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="job-post-inner">
                         
-                    
-        
+                    </div>
                 </div>
+                
             </div>
             <div class="forms-colored-div">
                 <div class="blue"></div>
