@@ -335,80 +335,7 @@
                     <div class="table-responsive table-cus">
                         <table class=" table table-bordered table-striped table-hover datatable datatable-Candidate">
                             <thead>
-                                <!-- <tr class="no-row">
-                                    <td>
 
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td>
-
-                                    </td>
-                                    <td >
-
-                                    </td>
-                                    <td >
-
-                                    </td>
-
-                                </tr> -->
                                 <tr class="no-row">
                                     <td>
                                     </td>
@@ -926,6 +853,9 @@
                                     <th>
                                         {{ trans('Country') }}
                                     </th>
+                                    {{-- <th>
+                                        {{ trans('ABN') }}
+                                    </th> --}}
                                     <th>
                                         {{ trans('Postcode') }}
                                     </th>
@@ -956,6 +886,9 @@
                                     <th>
                                         {{ trans('Devision') }}
                                     </th>
+                                    {{-- <th>
+                                        {{ trans('Grade') }}
+                                    </th> --}}
                                     <th>
                                         {{ trans('Senority') }}
                                     </th>
@@ -974,7 +907,11 @@
                                     <th>
                                         {{ trans('Medical School') }}
                                     </th>
+                                    {{-- <th>
+                                        {{ trans('Ownership type') }}
+                                    </th> --}}
                                     <th>
+
                                         {{ trans('Practice Country') }}
                                     </th>
                                     <th>
@@ -1022,6 +959,9 @@
                                     <th>
                                         {{ trans('Privacy Concerns') }}
                                     </th>
+                                    {{-- <th>
+                                        {{ trans('Status') }}
+                                    </th> --}}
                                     <th>
                                         Action
                                     </th>

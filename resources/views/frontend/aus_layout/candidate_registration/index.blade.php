@@ -762,7 +762,7 @@
                                  </div>
                                  <div class=" upload-resume">
                                      <span class="upload-icon"></span>
-                                     <input type="file" name="cv_document" class="form-control" placeholder="UPLOAD RESUME">
+                                     <input type="file" name="cv_document" class="form-control" placeholder="UPLOAD RESUME" required>
                                      <span class="upload-btn"><img src="img/upload.png" alt="">UPLOAD RESUME</span>
                                      <div class="forms-colored-div">
                                          <div class="blue"></div>

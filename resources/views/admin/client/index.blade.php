@@ -31,6 +31,9 @@
                             <input type="text" name="xyz" class="form-control" placeholder="First Name">
                         </div>
                     </div>
+                    <div class="col-md-12 profile-eidt-form-btn">
+                        <input type="submit" name="submit" class="btn" placeholder="Submit">
+                    </div>
                 </form>
             <table class="table-primary  table table-bordered ">
                 <thead>
