@@ -51,10 +51,20 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- <form action="#" method="submit">
+                    <div class="form-group">
+                <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                </div>
+                <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                
+                </form> -->
                 <!-- <div class="row">
                     <div class="search-filter-candidate">
                     <div class="box-bg-shadow">
                         <div class="box-inner">
+                            <form action="#" method="submit"></form>
                             <table class="table">
                                 <thead>
                                 <tr>
@@ -319,6 +329,8 @@
                     </div>
                     </div>
                 </div> -->
+
+
                 <div class="panel-body">
                     <div class="table-responsive table-cus">
                         <table class=" table table-bordered table-striped table-hover datatable datatable-Candidate">

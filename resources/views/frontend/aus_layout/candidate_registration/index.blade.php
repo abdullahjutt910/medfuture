@@ -180,8 +180,8 @@
                                      <input type="text" class="form-control form-control-lg" name="last_name"  list="datalistOptions" id="exampleDataList" value="" placeholder="Last name">
                                  </div>
                                  <div class="col-lg-6 col-md-12 col-sm-12">
-                                     <input type="date" class="form-control form-control-lg" name="dob"  list="datalistOptions" id="exampleDataList" value="" placeholder="Date of birth">
-                                 </div>
+                                     <input type="date" class="form-control form-control-lg" name="dob" id="DOB" value="" placeholder="Date of birth">
+                                </div>
                                  <div class="col-lg-6 col-md-12 col-sm-12">
                                      <input type="email" class="form-control form-control-lg" name="email" list="datalistOptions" id="exampleDataList" value="" placeholder="Email Address">
                                  </div>
@@ -440,7 +440,7 @@
                                  </div>
                                  <div class="col-lg-6 col-md-12 col-sm-12">
                                      <span class="select-arrow profession-select"></span>
-                                     <select class="form-select form-select-lg boder-btm1 single-selected"  name="specialty" aria-label=".form-select-lg example">
+                                     <!-- <select class="form-select form-select-lg boder-btm1 single-selected"  name="specialty" aria-label=".form-select-lg example">
                                          <option selected="" disabled>Specialty</option>
                                          <option value="Anaesthetics">Anaesthetics</option>
                                          <option value="Emergency Medicine ">Emergency Medicine </option>
@@ -454,11 +454,127 @@
                                          <option value="Psychiatry ">Psychiatry </option>
                                          <option value="Radiology">Radiology</option>
                                          <option value="Surgery ">Surgery </option>
-                                     </select>
+                                     </select> -->
+                                     <select class="doctor-specialty-d-none form-select form-select-lg mb-3"
+                                        name="specialty"
+                                        aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Specialty</option>
+                                        <option value="Anaesthetics">Anaesthetics
+                                        </option>
+                                        <option value="Emergency Medicine ">Emergency
+                                            Medicine </option>
+                                        <option value="General Practice ">General
+                                            Practice
+                                        </option>
+                                        <option value="Gastroenterologist">
+                                            Gastroenterologist</option>
+                                        <option value="Intensive care ">Intensive care
+                                        </option>
+                                        <option value="Medicine">Medicine</option>
+                                        <option value="Obtetrics &amp; Gynaecology ">
+                                            Obtetrics &amp; Gynaecology </option>
+                                        <option value="Pathologist">Pathologist</option>
+                                        <option value="Peadiatrics">Peadiatrics</option>
+                                        <option value="Psychiatry ">Psychiatry </option>
+                                        <option value="Radiology">Radiology</option>
+                                        <option value="Surgery ">Surgery </option>
+                                    </select>
+                                    <select
+                                        class="form-select form-select-lg mb-3 nurse-specialty-d-none"
+                                        name="specialty"
+                                        aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Specialty</option>
+                                        <option value="Accident / Emergency / Critical Care & ICU Nurse">
+                                            Accident / Emergency / Critical Care & ICU Nurse
+                                        </option>
+                                        <option value="Age Care ">Age Care </option>
+                                        <option value="Anaesthetic/ Theatre Technician">Anaesthetic/ Theatre Technician
+
+                                        </option>
+                                        <option value="Assistance in Nurse">
+                                            Assistance in Nurse
+                                        </option>
+                                        <option value="Care Worker">Care Worker
+
+                                        </option>
+                                        <option value="Community Mental Health " >Community Mental Health
+                                        </option>
+                                        <option value="Community NDIS ">Community NDIS</option>
+                                        <option value="CSSD ">CSSD</option>
+                                        <option value="Educators & Facilitators ">Educators & Facilitators
+                                        </option>
+                                        <option value="General Medical & Surgical">General Medical & Surgical
+                                        </option>
+                                        <option value="Instrument Technician">Instrument Technician
+                                        </option>
+                                        <option value="Mental Health, Forensic & Correctional">
+                                            Mental Health, Forensic & Correctional
+                                        </option>
+                                        <option value="Midwife & Neo - Natal">Midwife & Neo - Natal</option>
+                                        <option value="Orderly">Orderly</option>
+                                        <option value="Paediatric & PICU">Paediatric & PICU</option>
+                                        <option value="Practice Nurse">Practice Nurse</option>
+                                        <option value="Rural & Remote">Rural & Remote</option>
+                                        <option value="Theatre & Recovery">Theatre & Recovery</option>
+
+                                    </select>
+                                    <select
+                                        class="form-select form-select-lg mb-3 AHP-Specialty-d-none"
+                                        name="specialty"
+                                        aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Specialty</option>
+                                        <option value="Allergologist">
+                                            Allergologist
+                                        </option>
+                                        <option value="Arts Therapist">Arts Therapist</option>
+                                        <option value="Audiologist">Audiologist
+                                        </option>
+                                        <option value="Chiropractor">
+                                        Chiropractor
+                                        </option>
+                                        <option value="Dietitians">Dietitians
+
+                                        </option>
+                                        <option value="Exercise Physiologist">Exercise Physiologist
+                                        </option>
+                                        <option value="Genetic Counsellor">Genetic Counsellor</option>
+                                        <option value="Medical Radiologist">Medical Radiologist</option>
+                                        <option value="Music Therapist">Music Therapist
+                                        </option>
+                                        <option value="Occupational Therapist">Occupational Therapist
+                                        </option>
+                                        <option value="Optometrist" >Optometrist
+                                        </option>
+                                        <option value="Orthotist and prosthetist">Orthotist and prosthetist</option>
+                                        <option value="Osteopathist">Osteopathist</option>
+                                        <option value="Perfusionist">Perfusionist</option>
+                                        <option value="Physiotherapist">Physiotherapist</option>
+                                        <option value="Podiatrist">Podiatrist</option>
+                                        <option value="Psychologist">Psychologist</option>
+                                        <option value="Psychology & Mental health">Psychology & Mental health</option>
+                                        <option value="Rehabilitation Counsellor">Rehabilitation Counsellor</option>
+                                        <option value="Sonographer">Sonographer</option>
+                                        <option value="Specialist service">Specialist service</option>
+                                        <option value="Speech-pathology">Speech-pathology</option>
+                                    </select>
+                                    <select
+                                        class="form-select form-select-lg mb-3 HE-Specialty-d-none"
+                                        name="specialty"
+                                        aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Specialty</option>
+                                        <option value="Business Managers">Business Managers</option>
+                                        <option value="General Managers" >General Managers</option>
+                                        <option value="Medical Administrators">Medical Administrators</option>
+                                        <option value="Medical Director">Medical Director</option>
+                                        <option value="Medical Receptionist">Medical Receptionist</option>
+                                        <option value="Practice Manager">Practice Manager</option>
+                                        <option value="Professional Management Consultants">Professional Management Consultants</option>
+
+                                    </select>
                                  </div>
                                  <div class="col-lg-6 col-md-12 col-sm-12">
                                      <span class="select-arrow profession-select"></span>
-                                     <select class="form-select form-select-lg boder-btm1 single-selected" name="senority"  aria-label=".form-select-lg example">
+                                     <!-- <select class="form-select form-select-lg boder-btm1 single-selected" name="senority"  aria-label=".form-select-lg example">
                                          <option selected="" disabled>Senority / Grade / Band</option>
                                          <option value="Internship - PGY Year 1 " >Internship - PGY Year 1 </option>
                                          <option value="Junior House Officer - PGY Year 2 " >Junior House Officer - PGY Year 2 </option>
@@ -466,20 +582,174 @@
                                          <option value="Principal Health Officer – PGY Year 4 " >Principal Health Officer – PGY Year 4 </option>
                                          <option value="Registrars" >Registrars</option>
                                          <option value="Consultant" >Consultant</option>
-                                     </select>
+                                     </select> -->
+                                     <select class="seniority-doctor-d-none form-select form-select-lg mb-3"
+                                        name="senority"
+                                        aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Senority / Grade / Band</option>
+                                        <option value="Internship - PGY Year 1">
+                                            Internship
+                                            - PGY Year 1 </option>
+                                        <option
+                                            value="Junior House Officer - PGY Year 2 ">
+                                            Junior House Officer - PGY Year 2 </option>
+                                        <option
+                                            value="Senior House Officer - PGY Year 3 ">
+                                            Senior House Officer - PGY Year 3 </option>
+                                        <option
+                                            value="Principal Health Officer – PGY Year 4 ">
+                                            Principal Health Officer – PGY Year 4
+                                        </option>
+                                        <option value="Registrars" >Registrars</option>
+                                        <option value="Senior Registrar" >Senior
+                                            Registrar</option>
+                                        <option value="Provisional Fellowship Year" >
+                                            Provisional Fellowship Year</option>
+                                        <option value="General Practitioner" >General
+                                            Practitioner</option>
+                                        <option value="Specialist">Specialist</option>
+                                        <option value="Staff Specialists">Staff
+                                            Specialists</option>
+                                        <option value="Senior Medical Officer">Senior
+                                            Medical Officer</option>
+                                        <option value="Visiting Medical Officer" >
+                                            Visiting Medical Officer</option>
+                                        <option value="Consultant" >Consultant</option>
+                                    </select>
+                                    <select class="nurse-seniority-d-none form-select form-select-lg mb-3"
+                                        name="senority"
+                                        aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Senority / Grade / Band</option>
+                                        <option value="PCA / AIN / Care Worker" >PCA /
+                                            AIN / Care Worker</option>
+                                        <option value="Enrolled Nurse (EN)">Enrolled
+                                            Nurse (EN)</option>
+                                        <option value="Endorsed Enrolled Nurse (EEN)" >
+                                            Endorsed Enrolled Nurse (EEN)</option>
+                                        <option value="Registered Nurse (RN)">Registered
+                                            Nurse (RN)</option>
+                                        <option
+                                            value="Advanced Practice Nurse / Nurse Practitioner">
+                                            Advanced Practice Nurse / Nurse Practitioner
+                                        </option>
+                                        <option value="Specialist">Specialist </option>
+                                        <option
+                                            value="Specialist Nurse / Clinical Nurse Specialist" >
+                                            Specialist Nurse / Clinical Nurse Specialist
+                                        </option>
+                                        <option value="Midwives">Midwives</option>
+                                        <option value="Nurse Manager">Nurse Manager
+                                        </option>
+                                        <option
+                                            value="Director of Nursing Practice (DNP)">
+                                            Director of Nursing Practice (DNP)</option>
+                                        <option value="Chief Nursing Officer (CNO)">
+                                            Chief Nursing Officer (CNO)</option>
+                                    </select>
+                                    <select class="seniority-AHP-d-none form-select form-select-lg mb-3"
+                                        name="senority"
+                                        aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Senority / Grade / Band</option>
+                                        <option value="Provisional Pychologist">Provisional Pychologist</option>
+                                        <option value="Psychologist">Psychologist</option>
+                                        <option value="Senior Psychologist">Senior Psychologist</option>
+                                        <option value="Provisional Physciotherapist">Provisional Physciotherapist</option>
+                                        <option value="Physciotherapist">Physciotherapist</option>
+                                        <option value="Senior Physciotherapist">Senior Physciotherapist</option>
+                                        <option value="Provisional Podiatrist">Provisional Podiatrist</option>
+                                        <option value="Podiatrist">Podiatrist</option>
+                                        <option value="Senior Podiatrist">Senior Podiatrist</option>
+                                        <option value="Provisional Speech Therapist">Provisional Speech Therapist</option>
+                                        <option value="Speech Therapist">Speech Therapist</option>
+                                        <option value="Senior Speech Therapist">Senior Speech Therapist</option>
+                                        <option value="Provisional Occupational Therapist">Provisional Occupational Therapist</option>
+                                        <option value="Occupational Therapist">Occupational Therapist</option>
+                                        <option value="Senios Occupational Therapist">Senios Occupational Therapist</option>
+                                        <option value="Dentist">Dentist</option>
+                                        <option value="Senior Dentist">Senior Dentist</option>
+                                        <option value="Dentistry Specialist">Dentistry Specialist</option>
+                                        <option value="Provisional Occupational Therapist">Provisional Occupational Therapist</option>
+                                        <option value="Occupational Therapist">Occupational Therapist</option>
+                                        <option value="Senior Occupational Therapist">Senior Occupational Therapist</option>
+                                        <option value="Provisional Dietitians">Provisional Dietitians</option>
+                                        <option value="Dietitians">Dietitians</option>
+                                        <option value="Senior Dietitians">Senior Dietitians</option>
+                                    </select>
+                                    <select class="seniority-HE-d-none form-select form-select-lg mb-3"
+                                        name="senority"
+                                        aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Senority / Grade / Band</option>
+                                        <option value="Business Managers ">Business Managers </option>
+                                        <option value="General Managers ">General Managers </option>
+                                        <option value="Medical Administrators ">Medical Administrators </option>
+                                        <option value="Medical Director ">Medical Director </option>
+                                        <option value="Medical Receptionist">Medical Receptionist</option>
+                                        <option value="Practice Manager">Practice Manager</option>
+                                        <option value="Professional Management Consultants ">Professional Management Consultants </option>          
+                                    </select>
                                  </div>
 
                                  <div class="col-lg-6 col-md-12 col-sm-12">
                                      <span class="select-arrow profession-select"></span>
-                                     <select class="form-select form-select-lg boder-btm1 single-selected" name="professional_division"  aria-label=".form-select-lg example">
+                                     <select class="form-select form-select-lg boder-btm1 single-selected" name="devision"  aria-label=".form-select-lg example">
                                          <option selected="" disabled>Professional Division</option>
-                                         <option value="Internship - PGY Year 1 " >Internship - PGY Year 1 </option>
-                                         <option value="Junior House Officer - PGY Year 2 " >Junior House Officer - PGY Year 2 </option>
-                                         <option value="Senior House Officer - PGY Year 3 " >Senior House Officer - PGY Year 3 </option>
-                                         <option value="Principal Health Officer – PGY Year 4 " >Principal Health Officer – PGY Year 4 </option>
-                                         <option value="Registrars" >Registrars</option>
-                                         <option value="Consultant" >Consultant</option>
-                                     </select>
+                                        <option value="General Practitioners">General
+                                            Practitioners </option>
+                                        <option value="Healthcare Executives" >
+                                            Healthcare
+                                            Executives </option>
+                                        <option value="Hospital Doctors" >Hospital
+                                            Doctors
+                                        </option>
+                                        <option value="Locum Doctors" >Locum Doctors
+                                        </option>
+                                        <option value="Nurses &amp; Carers">Nurses &amp;
+                                            Carers</option>
+                                        <option value="Allergologist">Allergologist
+                                        </option>
+                                        <option value="Arts Therapist ">Arts Therapist
+                                        </option>
+                                        <option value="Audiologist">Audiologist</option>
+                                        <option value="Chiropractor">Chiropractor
+                                        </option>
+                                        <option value="Dietitians">Dietitians </option>
+                                        <option value="Exercise Physiologist">Exercise
+                                            Physiologist </option>
+                                        <option value="Genetic Counsellor">Genetic
+                                            Counsellor</option>
+                                        <option value="Medical Radiologist" >Medical
+                                            Radiologist </option>
+                                        <option value="Music Therapist">Music Therapist
+                                        </option>
+                                        <option value="Occupational Therapist">
+                                            Occupational
+                                            Therapist</option>
+                                        <option value="Optometrist">Optometrist</option>
+                                        <option value="Orthotist and prosthetist">
+                                            Orthotist
+                                            and prosthetist</option>
+                                        <option value="Osteopathist">Osteopathist
+                                        </option>
+                                        <option value="Perfusionist">Perfusionist
+                                        </option>
+                                        <option value="Physiotherapist">Physiotherapist
+                                        </option>
+                                        <option value="Podiatrist">Podiatrist</option>
+                                        <option value="Psychologist">Psychologist
+                                        </option>
+                                        <option value="Psychology &amp; Mental health">
+                                            Psychology &amp; Mental health</option>
+                                        <option value="Rehabilitation Counsellor">
+                                            Rehabilitation Counsellor </option>
+                                        <option value="Sonographer">Sonographer</option>
+                                        <option value="Specialist service">Specialist
+                                            service</option>
+                                        <option value="Speech-pathology">
+                                            Speech-pathology
+                                        </option>
+                                        <option value="Midwife">Midwife</option>
+                                        <option value="Dentists">Dentists</option>
+                        </select>
                                  </div>
                                  
                                  <span class="registration-form-line"></span>

@@ -2469,3 +2469,8 @@ input[type=number] {
     margin-right: -2px;
     padding: 0px;
 }
+
+
+ .nurse-seniority-d-none , .nurse-specialty-d-none, .AHP-Specialty-d-none, .HE-Specialty-d-none, .seniority-AHP-d-none, .seniority-HE-d-none{
+    display: none;
+}
