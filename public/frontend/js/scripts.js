@@ -56,6 +56,36 @@ $(document).ready(function () {
         $(".sec-adv-search").hide();
         $(".sec-adv-search-detail").hide();
     });
+
+
+
+    // candidate profession filter
+    $('.profession-doctor-filter').change(function () {
+        var text = $('option:selected', this).text();
+        if(text === "Doctor"){
+          $(" .doctor-specialty-d-none").show();
+          $(" .nurse-specialty-d-none,.AHP-Specialty-d-none, .HE-Specialty-d-none").hide();
+          $(" .seniority-doctor-d-none").show();
+          $(" .nurse-seniority-d-none").hide();
+        }
+        if(text === "Nurse"){
+          $(" .nurse-specialty-d-none").show();
+          $(".doctor-specialty-d-none,  .AHP-Specialty-d-none, .HE-Specialty-d-none").hide();
+          $(" .nurse-seniority-d-none").show();
+          $(" .seniority-doctor-d-none").hide();
+         }
+         if(text === "Allied Health Professionals"){
+          $("  .AHP-Specialty-d-none").show();
+          $(" .doctor-specialty-d-none,  .nurse-specialty-d-none,  .HE-Specialty-d-none").hide();
+         }
+         if(text === "Healthcare Executives"){
+          $(" .HE-Specialty-d-none").show();
+          $(" .doctor-specialty-d-none,  .AHP-Specialty-d-none,  .nurse-specialty-d-none").hide();
+         }
+
+        });
+
+        
 });
 
 // candidate slider start here

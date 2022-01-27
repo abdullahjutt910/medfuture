@@ -580,27 +580,37 @@
                         <textarea name="post-note" id="post-note" cols="30" rows="10">Internal Notes</textarea>
                    </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="job-post-btn">
-                            <a href="#" class="btn job-back-btn">
-                                Back
-                            </a>
-                            <a href="#" class="btn job-edit-btn">
-                                Edit
-                            </a>
-                            <a href="#" class="btn job-update-btn">
-                                Update
-                            </a>
+                <div class="job-post-bottom">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="job-post-btn">
+                                <a href="#" class="btn job-back-btn">
+                                    Back
+                                </a>
+                                <a href="#" class="btn job-edit-btn">
+                                    Edit
+                                </a>
+                                <a href="#" class="btn job-update-btn">
+                                    Update
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-3"></div>
+                        <div class="col-md-5">
+                            <div class="job-post-btn job-post-right-btn ">
+                                <a href="#" class="btn job-previw-btn">
+                                    Post Preview
+                                </a>
+                                <a href="#" class="btn job-re-post-btn">
+                                    Re - Post
+                                </a>
+                                <a href="#" class="btn job-delete-btn">
+                                    Delete
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-md-5"></div>
-                    <div class="col-md-4">
-                        
-                    </div>
                 </div>
-                
             </div>
             <div class="forms-colored-div">
                 <div class="blue"></div>
@@ -608,7 +618,102 @@
                 <div class="pink"></div>
             </div>
         </div>
-        <div class="col-md-12"></div>
+        <div class="col-md-12">
+            <a href="#" class="btn job-post-back-btn">
+                Back
+            </a>
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+                    <div class="col-md-6 job-post-left">
+                        <div class="external-post">
+                            <h3>EXTERNAL POSTING</h3>
+                            <div class="external-post-line"></div>
+                            <div class="social-check-box">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">
+                                        Facebook
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">
+                                        Instagram
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">
+                                        LinkedIn
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckIndeterminate">
+                                    <label class="form-check-label" for="flexCheckIndeterminate">
+                                        Twitter
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="job-ext-post-btn">
+                                <a href="#" class="btn">
+                                    Update External Posting                              
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 job-assign-to">
+                        <div class="external-post">
+                            <h3>ASSIGNED TO</h3>
+                            <div class="external-post-line"></div>
+
+                            <div class="row job-post-assign-to">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <h5>Job Manager</h5>
+                                        <select class="form-control" name="gender" id="gender" required="">
+                                            <option value="" disabled="" selected="">Client Manager</option>
+                                            <option value="Male">No</option>
+                                            <option value="Female">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <h5>Recruitment Consultant</h5>
+                                        <select class="form-control" name="gender" id="gender" required="">
+                                            <option value="" disabled="" selected="">Recruitment Consultant</option>
+                                            <option value="Male">No</option>
+                                            <option value="Female">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <h5>Data Administrator</h5>
+                                        <select class="form-control" name="gender" id="gender" required="">
+                                            <option value="" disabled="" selected="">Data Administrator</option>
+                                            <option value="Male">No</option>
+                                            <option value="Female">Yes</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="job-ext-post-btn">
+                                <a href="#" class="btn">
+                                    Assign                              
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="job-candi-pipeline">
+                <h3>CANDIDATE PIPELINE</h3>
+            </div>
+        </div>
     </div>
 </div>
 

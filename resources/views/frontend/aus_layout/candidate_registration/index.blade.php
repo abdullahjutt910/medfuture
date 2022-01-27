@@ -151,13 +151,12 @@
                                  </div>
                                  <div class="col-12">
                                      <span class="select-arrow profession-select"></span>
-                                     <select class="form-select form-select-lg boder-btm1 single-selected" name="title" required aria-label=".form-select-lg example">
+                                     <select class="profession-doctor-filter form-select form-select-lg boder-btm1 single-selected" name="title" required aria-label=".form-select-lg example">
                                          <option selected="" disabled>Profession</option>
                                          <option value="Doctor">Doctor</option>
                                          <option value="Nurse">Nurse</option>
                                          <option value="Allied Health Professionals">Allied Health Professionals</option>
                                          <option value="Healthcare Executives">Healthcare Executives</option>
-                                         <option value="Dentists">Dentists</option>
                                      </select>
                                  </div>
                                  <div class="col-lg-6 col-md-12 col-sm-12">
@@ -422,13 +421,14 @@
                                      </select>
                                  </div>
                                  <div class="col-lg-6 col-md-12 col-sm-12">
-                                     <span class="select-arrow country-select-arrow"></span>
+                                 <input type="text" class="form-control form-control-lg" name="post_code" list="datalistOptions" id="exampleDataList" value="" placeholder="Post Code">
+                                     <!-- <span class="select-arrow country-select-arrow"></span>
                                      <select class="form-select form-select-lg boder-btm1 four-selected"  name="post_code"  aria-label=".form-select-lg example">
-                                         <option selected="">Post Code</option>
+                                         <option selected="" disabled>Post Code</option>
                                          <option value="1">One</option>
                                          <option value="2">Two</option>
                                          <option value="3">Three</option>
-                                     </select>
+                                     </select> -->
                                  </div>
                                  <div class="personal-info proftion-info">
                                      <h4>Professional Information</h4>
@@ -468,14 +468,26 @@
                                          <option value="Consultant" >Consultant</option>
                                      </select>
                                  </div>
-                                 <span class="registration-form-line"></span>
-                                 <div class="col-lg-6 col-md-12 col-sm-12 how_did">
+
+                                 <div class="col-lg-6 col-md-12 col-sm-12">
                                      <span class="select-arrow profession-select"></span>
+                                     <select class="form-select form-select-lg boder-btm1 single-selected" name="professional_division"  aria-label=".form-select-lg example">
+                                         <option selected="" disabled>Professional Division</option>
+                                         <option value="Internship - PGY Year 1 " >Internship - PGY Year 1 </option>
+                                         <option value="Junior House Officer - PGY Year 2 " >Junior House Officer - PGY Year 2 </option>
+                                         <option value="Senior House Officer - PGY Year 3 " >Senior House Officer - PGY Year 3 </option>
+                                         <option value="Principal Health Officer – PGY Year 4 " >Principal Health Officer – PGY Year 4 </option>
+                                         <option value="Registrars" >Registrars</option>
+                                         <option value="Consultant" >Consultant</option>
+                                     </select>
+                                 </div>
+                                 
+                                 <span class="registration-form-line"></span>
+                                 <div class="col-lg-12 col-md-12 col-sm-12 how_did">
                                      <select class="form-select form-select-lg boder-btm1 single-selected" name="work_rights_status" aria-label=".form-select-lg example">
-                                         <option selected="" disabled>your work status</option>
-                                         <option value="No Limits" >No Limits</option>
-                                         <option value="Limited Working Hours" >Limited Working Hours</option>
-                                         <option value="No Working Rights" >No Working Rights</option>
+                                         <option selected="" disabled>How Did you here about us</option>
+                                         <option value="Facebook">Facebook</option>
+                                         <option value="Google">Google</option>
                                      </select>
                                  </div>
                                  <div class=" upload-resume">

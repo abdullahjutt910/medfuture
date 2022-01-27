@@ -403,7 +403,7 @@ $(document).ready( function () {
         // })
 
 
-        //  select options change
+        //  profession select options change
         $('.profession-doctor').change(function () {
         var text = $('option:selected', this).text();
         if(text === "Doctor"){
