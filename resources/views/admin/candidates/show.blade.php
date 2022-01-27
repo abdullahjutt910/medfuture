@@ -478,8 +478,6 @@
                                         </div>
                                         <div class="assign-form">
                                             <div class="assign-form-d-none">
-
-
                                                 <form action="#" method="" class="assign-form-inner">
                                                     <div class="row">
                                                         <div class="col-md-12 form-group">
@@ -490,7 +488,7 @@
                                                                 <option value="2">Two</option>
                                                                 <option value="3">Three</option>
                                                             </select>
-                                                            <i class="fas fa-sort-down"></i>
+
                                                         </div>
                                                         <div class="col-md-12 form-group">
                                                             <label for="Recruitement">Recruitement Consultant</label>
@@ -500,7 +498,7 @@
                                                                 <option value="2">Two</option>
                                                                 <option value="3">Three</option>
                                                             </select>
-                                                            <i class="fas fa-sort-down"></i>
+
                                                         </div>
                                                         <div class="col-md-12 form-group">
                                                             <label for="Administrator">Data Administrator</label>
@@ -510,7 +508,7 @@
                                                                 <option value="2">Two</option>
                                                                 <option value="3">Three</option>
                                                             </select>
-                                                            <i class="fas fa-sort-down"></i>
+
                                                         </div>
                                                     </div>
                                                 </form>
@@ -954,23 +952,28 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="activity-data">
-                            {{-- {{dd($candidate)}} --}}
-                            <td>{{$candidate->activebar->updated_at?? ''}}</td>
-                            <td>{{$candidate->activebar->activity_type?? ''}}</td>
-                            <td>{{$candidate->activebar->activity_type_2?? ''}}</td>
-                            <td>{{$candidate->activebar->activity_note?? ''}}</td>
-                            <td>
-                                <div class="profile-buttons action-buttons">
-                                    <a href="{{ url('update_activity')}}/{{$candidate->id}}">
-                                    <img src="http://127.0.0.1:8000/img/dashboard/Edit.png" class="img-fluid" alt="Eye">
-                                    </a>
-                                    <a href="{{ url('delete_activity')}}/{{$candidate->id}}">
-                                    <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png" class="img-fluid" alt="Delete-Trash">
-                                    </a>
-                                </div>
-                            </td>
-                        </tr>
+                        @if (!is_null($candidate->activebar))
+                            @foreach ($candidate->activebar as $item)
+                            <tr class="activity-data">
+                                {{-- {{dd($candidate)}} --}}
+                                <td>{{ $item->updated_at ?? '' }}</td>
+                                <td>{{ $item->activity_type ?? '' }}</td>
+                                <td>{{ $item->activity_type_2 ?? '' }}</td>
+                                <td>{{ $item->activity_note ?? '' }}</td>
+                                <td>
+                                    <div class="profile-buttons action-buttons">
+                                        <a href="{{ url('update_activity')}}/{{$item->id}}">
+                                        <img src="http://127.0.0.1:8000/img/dashboard/Edit.png" class="img-fluid" alt="Eye">
+                                        </a>
+                                        <a href="{{ url('delete_activity')}}/{{$item->id}}">
+                                        <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png" class="img-fluid" alt="Delete-Trash">
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            @endforeach
+                        @endif
+
                         <tr class="activity-data-d-none">
                             <td><input type="text" value="Tiger Nixon"></td>
                             <td><input type="text" value="System Architect"></td>

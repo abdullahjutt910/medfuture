@@ -12,6 +12,7 @@ use App\Models\Interview;
 use Illuminate\Http\Request;
 use Intervention\Image\File;
 use App\Models\CandidateProfile;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -188,11 +189,7 @@ class CandidateController extends Controller
         $progbar->testimony = $request->testimony;
         $progbar->save();
 
-        $activebar = new Activebar;
-        $activebar->activity_type = $request->activity_type;
-        $activebar->activity_type_2 = $request->activity_type_2;
-        $activebar->activity_note = $request->activity_note;
-        $activebar->save();
+
 
         // $assignbar = new Assignbar;
         // // dd($assignbar);
@@ -210,7 +207,7 @@ class CandidateController extends Controller
     {
         abort_if(Gate::denies('candidate_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.candidates.edit', compact('candidate'));
+        return view('admin.candidates.edit', compact('candidate','activebar'));
     }
 
     public function update(UpdateCandidateRequest $request,$id)
