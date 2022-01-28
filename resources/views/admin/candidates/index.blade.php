@@ -95,8 +95,75 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="city" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Suburb/City</option>    
-                                        <option value="Australia ">Australia</option>
-                                        <option value="Australia ">nz </option>
+                                        <option value="Sydney">Sydney</option>
+                                        <option value="Coffs Harbour">Coffs Harbour</option>
+                                        <option value="Sunshine Coast">Sunshine Coast</option>
+                                        <option value="Central Coast">Central Coast</option>
+                                        <option value="Cairns">Cairns</option>
+                                        <option value="Townsville">Townsville</option>
+                                        <option value="Ipswich">Ipswich</option>
+                                        <option value="Penrith">Penrith</option>
+                                        <option value="New Castle">New Castle</option>
+                                        <option value="Hervey Bay">Hervey Bay</option>
+                                        <option value="Geelong">Geelong</option>
+                                        <option value="Dubbo">Dubbo</option>
+                                        <option value="Liverpool">Liverpool</option>
+                                        <option value="Ballarat">Ballarat</option>
+                                        <option value="Blue Mountains">Blue Mountains</option>
+                                        <option value="Canberra">Canberra</option>
+                                        <option value="Hobart">Hobart</option>
+                                        <option value="Launceston">Launceston</option>
+                                        <option value="Bundaberg">Bundaberg</option>
+                                        <option value="Albury">Albury</option>
+                                        <option value="Wangaratta ">Wangaratta </option>
+                                        <option value="Wollongong ">Wollongong </option>
+                                        <option value="Bendigo">Bendigo</option>
+                                        <option value="Grafton">Grafton</option>
+                                        <option value="Mackay">Mackay</option>
+                                        <option value="Darwin">Darwin</option>
+                                        <option value="Bunbury ">Bunbury </option>
+                                        <option value="Gladstone ">Gladstone </option>
+                                        <option value="Wagga Wagga ">Wagga Wagga </option>
+                                        <option value="Toowoomba ">Toowoomba </option>
+                                        <option value="Lismore ">Lismore </option>
+                                        <option value="Campbelltown ">Campbelltown </option>
+                                        <option value="Orange">Orange</option>
+                                        <option value="Tamworth ">Tamworth </option>
+                                        <option value="Byron bay">Byron bay</option>
+                                        <option value="Hills District Suburbs ">Hills District Suburbs </option>
+                                        <option value="Bathurst">Bathurst</option>
+                                        <option value="Goulbun">Goulbun</option>
+                                        <option value="Shepparton">Shepparton</option>
+                                        <option value="Mildura">Mildura</option>
+                                        <option value="Katherine">Katherine</option>
+                                        <option value="South West ">South West </option>
+                                        <option value="North West">North West</option>
+                                        <option value="Central West">Central West</option>
+                                        <option value="Busselton">Busselton</option>
+                                        <option value="Gold Coast - North">Gold Coast - North</option>
+                                        <option value="Gold Coast - South">Gold Coast - South</option>
+                                        <option value="North Adelaide">North Adelaide</option>
+                                        <option value="South Adelaide">South Adelaide</option>
+                                        <option value="Warragul">Warragul</option>
+                                        <option value="Sale">Sale</option>
+                                        <option value="Bairnsdale ">Bairnsdale </option>
+                                        <option value="Philip Island">Philip Island</option>
+                                        <option value="Moe">Moe</option>
+                                        <option value="Mornington Penninsula">Mornington Penninsula</option>
+                                        <option value="Kalgoorlie ">Kalgoorlie </option>
+                                        <option value="Geraldton ">Geraldton </option>
+                                        <option value="Moonee">Moonee</option>
+                                        <option value="Morwell">Morwell</option>
+                                        <option value="San Jose">San Jose</option>
+                                        <option value="East Perth ">East Perth </option>
+                                        <option value="Brisbane South ">Brisbane South </option>
+                                        <option value="Rutherford">Rutherford</option>
+                                        <option value="Eastern Melbour ">Eastern Melbour </option>
+                                        <option value="Yarra">Yarra</option>
+                                        <option value="Port Pirie ">Port Pirie </option>
+                                        <option value="Port Lincoln">Port Lincoln</option>
+                                        <option value="Devonport">Devonport</option>
+                                        <option value="Alice Springs">Alice Springs</option>
                                     </select>
                                 </div>
                             </div>
@@ -104,8 +171,16 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="state" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">State</option>    
-                                        <option value="Australia ">Australia</option>
-                                        <option value="Australia ">nz </option>
+                                        <option value="New South Wales (NSW)">New South Wales (NSW)</option>
+                                        <option value="Australian Capital Territory (ACT)">Australian Capital Territory (ACT)</option>
+                                        <option value="South Australia (SA)">South Australia (SA)</option>
+                                        <option value="Queensland (QLD)">Queensland (QLD)</option>
+                                        <option value="Western Australia (WA)">Western Australia (WA)</option>
+                                        <option value="Victoria (VIC)">Victoria (VIC)</option>
+                                        <option value="Tasmania (TAS)">Tasmania (TAS)</option>
+                                        <option value="Northern Territory (NT)">Northern Territory (NT)</option>
+                                        <option value="Venezuela">Venezuela</option>
+                                        <option value="Venezuela">Venezuela</option>
                                     </select>
                                 </div>
                             </div>
@@ -133,8 +208,8 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="registered" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Registered</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
                                     </select>
                                 </div>
                             </div>
@@ -142,8 +217,8 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="verified" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Verified</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
                                     </select>
                                 </div>
                             </div>
@@ -161,8 +236,33 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="source-name" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Source Name</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Active jobs">Active jobs</option>
+                                        <option value="Medfuture Direct Registration">Medfuture Direct Registration</option>
+                                        <option value="Medfuture Job Apply">Medfuture Job Apply</option>
+                                        <option value="Medfuture Quick Job Apply">Medfuture Quick Job Apply</option>
+                                        <option value="Adzuna">Adzuna </option>
+                                        <option value="CareerOne">CareerOne</option>
+                                        <option value="Direct Job Board">Direct Job Board </option>
+                                        <option value="Black Pearl">Black Pearl</option>
+                                        <option value="Direct Mail">Direct Mail</option>
+                                        <option value="Friends">Friends </option>
+                                        <option value="Recruitment Consultant">Recruitment Consultant</option>
+                                        <option value="Indeed">Indeed </option>
+                                        <option value="Jooble">Jooble</option>
+                                        <option value="Jora">Jora</option>
+                                        <option value="Linkedin">Linkedin </option>
+                                        <option value="Medhire">Medhire </option>
+                                        <option value="Mycarieer">Mycarieer</option>
+                                        <option value="Online Chat">Online Chat</option>
+                                        <option value="Other">Other</option>
+                                        <option value="Quick Apply Job">Quick Apply Job </option>
+                                        <option value="Referal">Referal</option>
+                                        <option value="Referred By Doctor">Referred By Doctor</option>
+                                        <option value="Referred By Friend">Referred By Friend</option>
+                                        <option value="Seek">Seek</option>
+                                        <option value="SEO">SEO</option>
+                                        <option value="Twk">Twk</option>
+                                        <option value="Twitter">Twitter</option>
                                     </select>
                                 </div>
                             </div>
@@ -175,8 +275,10 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="availability" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Availability</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Active">Active</option>
+                                        <option value="In Active">In Active</option>
+                                        <option value="Active">Not Known</option>
+                                        <option value="In Active">Lost</option>
                                     </select>
                                 </div>
                             </div>
@@ -185,8 +287,18 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="working-status" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Working Status</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Awaiting Review">Awaiting Review</option>
+                                        <option value="Contacted">Contacted</option>
+                                        <option value="CV Submitted">CV Submitted</option>
+                                        <option value="Declined">Declined</option>
+                                        <option value="Do Not Contact">Do Not Contact</option>
+                                        <option value="Interview">Interview</option>
+                                        <option value="Not Contacted">Not Contacted</option>
+                                        <option value="Offer">Offer</option>
+                                        <option value="Phone / Direct Screen">Phone / Direct Screen</option>
+                                        <option value="Rejected">Rejected</option>
+                                        <option value="Reviewed">Reviewed</option>
+                                        <option value="Short Listed">Short Listed</option>
                                     </select>
                                 </div>
                             </div>
@@ -194,8 +306,8 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="local-graduate" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Local Graduate</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
                                     </select>
                                 </div>
                             </div>
@@ -212,36 +324,50 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="source-type" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Source Type</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Social Media Platforms">Social Media Platforms</option>
+                                        <option value="External Job Board">External Job Board</option>
+                                        <option value="Medfuture">Medfuture</option>
+                                        <option value="Referral">Referral</option>
+                                        <option value="Email Marketing">Email Marketing</option>
+                                        <option value="Search Engine">Search Engine</option>
+                                        <option value="Headhunting">Headhunting</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="candidate-manager" aria-label=".form-select-lg example">
+                                <div class="form-group">
+                                    <input  class="form-control" type="text" name="candidate-manager" placeholder="Candidate Manager">
+                                </div>
+                                    <!-- <select class="form-control form-select-lg mb-3" name="candidate-manager" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Candidate Manager</option>    
                                         <option value="Australia ">Yes</option>
                                         <option value="Australia ">No </option>
-                                    </select>
+                                    </select> -->
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="recruitment-consultant" aria-label=".form-select-lg example">
+                                <div class="form-group">
+                                    <input  class="form-control" type="text" name="recruitment-consultant" placeholder="Recruitment Consultant">
+                                </div>
+                                    <!-- <select class="form-control form-select-lg mb-3" name="recruitment-consultant" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Recruitment Consultant</option>    
                                         <option value="Australia ">Yes</option>
                                         <option value="Australia ">No </option>
-                                    </select>
+                                    </select> -->
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="data-administrator" aria-label=".form-select-lg example">
+                                <div class="form-group">
+                                    <input  class="form-control" type="text" name="data-administrator" placeholder="Data Administrator">
+                                </div>
+                                    <!-- <select class="form-control form-select-lg mb-3" name="data-administrator" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Data Administrator</option>    
                                         <option value="Australia ">Yes</option>
                                         <option value="Australia ">No </option>
-                                    </select>
+                                    </select> -->
                                 </div>
                             </div>
                             <div class="col-md-2">
@@ -253,8 +379,8 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="registration-body" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Registration Body</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="AHPRA">AHPRA</option>
+                                        <option value="GMC">GMC</option>
                                     </select>
                                 </div>
                             </div>
@@ -267,17 +393,47 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="grade" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Grade</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Platinum">Platinum</option>
+                                        <option value="Diamond">Diamond</option>
+                                        <option value="Gold">Gold</option>
+                                        <option value="Silver">Silver</option>
+                                        <option value="Bronz">Bronz</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="division" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Division</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="" disabled="" selected="">Division</option>
+                                        <option value="General Practitioners">General Practitioners </option>
+                                        <option value="Healthcare Executives">Healthcare Executives </option>
+                                        <option value="Hospital Doctors">Hospital Doctors </option>
+                                        <option value="Locum Doctors">Locum Doctors</option>
+                                        <option value="Nurses &amp; Carers">Nurses &amp; Carers</option>
+                                        <option value="Allergologist">Allergologist</option>
+                                        <option value="Arts Therapist">Arts Therapist </option>
+                                        <option value="Audiologist">Audiologist</option>
+                                        <option value="Chiropractor">Chiropractor </option>
+                                        <option value="Dietitians">Dietitians </option>
+                                        <option value="Exercise Physiologist">Exercise Physiologist</option>
+                                        <option value="Genetic Counsellor">Genetic Counsellor</option>
+                                        <option value="Medical Radiologist">Medical Radiologist</option>
+                                        <option value="Music Therapist">Music Therapist</option>
+                                        <option value="Occupational Therapist">Occupational Therapist</option>
+                                        <option value="Optometrist">Optometrist</option>
+                                        <option value="Orthotist and prosthetist">Orthotist and prosthetist</option>
+                                        <option value="Osteopathist">Osteopathist</option>
+                                        <option value="Perfusionist">Perfusionist</option>
+                                        <option value="Physiotherapist">Physiotherapist</option>
+                                        <option value="Podiatrist">Podiatrist</option>
+                                        <option value="Psychologist">Psychologist</option>
+                                        <option value="Psychology &amp; Mental health">Psychology &amp; Mental health</option>
+                                        <option value="Rehabilitation Counsellor">Rehabilitation Counsellor </option>
+                                        <option value="Sonographer">Sonographer</option>
+                                        <option value="Specialist service">Specialist service</option>
+                                        <option value="Speech-pathology">Speech-pathology</option>
+                                        <option value="Midwife">Midwife</option>
+                                        <option value="Dentists">Dentists</option>
                                     </select>
                                 </div>
                             </div>
@@ -290,8 +446,10 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="profession" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Profession</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Doctor">Doctor</option>
+                                        <option value="Nurse">Nurse</option>
+                                        <option value="Allied Health Professionals">Allied Health Professionals</option>
+                                        <option value="Healthcare Executives">Healthcare Executives</option>
                                     </select>
                                 </div>
                             </div>
@@ -299,8 +457,32 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="seniority" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Seniority</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Internship - PGY Year 1">
+                                            Internship
+                                            - PGY Year 1 </option>
+                                        <option value="Junior House Officer - PGY Year 2 ">
+                                            Junior House Officer - PGY Year 2 </option>
+                                        <option value="Senior House Officer - PGY Year 3 " selected="">
+                                            Senior House Officer - PGY Year 3 </option>
+                                        <option value="Principal Health Officer – PGY Year 4 ">
+                                            Principal Health Officer – PGY Year 4
+                                        </option>
+                                        <option value="Registrars">Registrars</option>
+                                        <option value="Senior Registrar">Senior
+                                            Registrar</option>
+                                        <option value="Provisional Fellowship Year">
+                                            Provisional Fellowship Year</option>
+                                        <option value="General Practitioner">General
+                                            Practitioner</option>
+                                        <option value="Specialist">Specialist</option>
+                                        <option value="Staff Specialists">Staff
+                                            Specialists</option>
+                                        <option value="Senior Medical Officer">Senior
+                                            Medical Officer</option>
+                                        <option value="Visiting Medical Officer">
+                                            Visiting Medical Officer</option>
+                                        <option value="Consultant">Consultant</option>
+                        
                                     </select>
                                 </div>
                             </div>
@@ -308,8 +490,8 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="engagement-type" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Engagement Type</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Full Time">Full Time</option>
+                                        <option value="Part Time">Part Time</option>
                                     </select>
                                 </div>
                             </div>
@@ -327,8 +509,8 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="engagement-term" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Engagement Term</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Full Time">Full Time</option>
+                                        <option value="Part Time">Part Time</option>
                                     </select>
                                 </div>
                             </div>
@@ -336,8 +518,8 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="employment-type" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Employment Type</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Full Time">Full Time</option>
+                                        <option value="Part Time">Part Time</option>
                                     </select>
                                 </div>
                             </div>
@@ -345,8 +527,8 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="registration-via" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Registration Via</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Direct">Direct</option>
+                                        <option value="Back-end">Back-end</option>
                                     </select>
                                 </div>
                             </div>
@@ -354,27 +536,39 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="status" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Status</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
+                                        <option value="Awaiting Review">Awaiting Review</option>
+                                        <option value="Contacted">Contacted</option>
+                                        <option value="CV Submitted">CV Submitted</option>
+                                        <option value="Declined">Declined</option>
+                                        <option value="Do Not Contact">Do Not Contact</option>
+                                        <option value="Interview">Interview</option>
+                                        <option value="Not Contacted">Not Contacted</option>
+                                        <option value="Offer">Offer</option>
+                                        <option value="Phone / Direct Screen">Phone / Direct Screen</option>
+                                        <option value="Rejected">Rejected</option>
+                                        <option value="Reviewed">Reviewed</option>
+                                        <option value="Short Listed">Short Listed</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="created-date" aria-label=".form-select-lg example">
+                                    <input class="form-control" type="date" name="created-date" placeholder="Created Date">
+                                    <!-- <select class="form-control form-select-lg mb-3" name="created-date" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Created Date</option>    
                                         <option value="Australia ">Yes</option>
                                         <option value="Australia ">No </option>
-                                    </select>
+                                    </select> -->
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="Map Address" aria-label=".form-select-lg example">
+                                <input class="form-control" type="text" name="map-address" placeholder="Map Address">
+                                    <!-- <select class="form-control form-select-lg mb-3" name="map-address" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Map Address</option>    
                                         <option value="Australia ">Yes</option>
                                         <option value="Australia ">No </option>
-                                    </select>
+                                    </select> -->
                                 </div>
                             </div>
 
