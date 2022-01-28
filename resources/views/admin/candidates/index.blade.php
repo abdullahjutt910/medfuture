@@ -1144,9 +1144,9 @@
                                     <th>
                                         {{ trans('Country') }}
                                     </th>
-                                    {{-- <th>
+                                    <th>
                                         {{ trans('ABN') }}
-                                    </th> --}}
+                                    </th>
                                     <th>
                                         {{ trans('Postcode') }}
                                     </th>
@@ -1292,6 +1292,7 @@
                                         <td>
                                             {{ $candidate->address_2 ?? '' }}
                                         </td>
+
                                         <td>
                                             {{ $candidate->state ?? '' }}
                                         </td>
@@ -1300,6 +1301,9 @@
                                         </td>
                                         <td>
                                             {{ $candidate->country ?? '' }}
+                                        </td>
+                                        <td>
+                                            ksbfkl
                                         </td>
                                         <td>
                                             {{ $candidate->post_code ?? '' }}

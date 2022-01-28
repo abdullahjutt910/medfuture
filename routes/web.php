@@ -7,20 +7,21 @@ use App\Http\Controllers\Admin\ClientController;
 use App\Http\Controllers\frontend\MainController;
 use App\Http\Controllers\frontend\PostController;
 use App\Http\Controllers\Admin\ActivebarController;
-use App\Http\Controllers\Admin\AssignbarController;
 use App\Http\Controllers\Admin\CandidateController;
+use App\Http\Controllers\Admin\ReferenceController;
 
 Route::redirect('/', '/login');
+
 Route::get('migrate', function () {
     Artisan::call('migrate:fresh --seed');
 
     return 'Successfully Migrated !';
 });
+
 Route::get('/home', function () {
     if (session('status')) {
         return redirect()->route('admin.home')->with('status', session('status'));
     }
-
     return redirect()->route('admin.home');
 });
 
@@ -60,8 +61,7 @@ Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 
     }
 });
 
-// frontend
-
+//--------------------------------- frontend -------------------------------
 Route::get('/',[MainController::class,'index'])->name('front.home');
 Route::get('index1_AUS',[MainController::class,'aus'])->name('front.australia');
 Route::get('index1_NZ',[MainController::class,'newzeeland'])->name('front.newzeeland');
@@ -75,11 +75,16 @@ Route::post('update2/{id}',[CandidateController::class,'update2']);
 Route::post('update3/{id}',[CandidateController::class,'update3']);
 Route::post('update_interview/{id}',[CandidateController::class,'updateInterview'])->name('interview');
 Route::post('update_interviewsummary/{id}',[CandidateController::class,'update_interviewsummary'])->name('update_interviewsummary');
+Route::post('update_progress/{id}',[CandidateController::class,'updateProgress'])->name('update_progress');
 Route::get('add_client',[ClientController::class,'index'])->name('add_client');
 Route::get('show_client',[ClientController::class,'show'])->name('show_client');
 
-Route::post('update_progress/{id}',[CandidateController::class,'updateProgress'])->name('update_progress');
-
+//--------------------------------- Activity ---------------------------------
 Route::post('insert_activity/{id}',[ActivebarController::class,'insertActivity'])->name('insert_activity');
 Route::post('update_activity/{id}',[ActivebarController::class,'updateActivity'])->name('update_activity');
 Route::get('delete_activity/{id}',[ActivebarController::class,'deleteActivity'])->name('delete_activity');
+
+//--------------------------------- References -------------------------------
+Route::post('insert_reference/{id}',[ReferenceController::class,'insertReference'])->name('insert_reference');
+Route::post('update_reference/{id}',[ReferenceController::class,'updateReference'])->name('update_reference');
+Route::get('delete_reference/{id}',[ReferenceController::class,'deleteReference'])->name('delete_reference');

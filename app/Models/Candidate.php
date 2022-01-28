@@ -1409,6 +1409,10 @@ class Candidate extends Model implements HasMedia
     {
         return $this->hasMany(Activebar::class);
     }
+    public function reference()
+    {
+        return $this->hasMany(Reference::class);
+    }
 
     // public function assignbar()
     // {

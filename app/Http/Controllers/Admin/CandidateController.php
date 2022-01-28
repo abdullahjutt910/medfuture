@@ -387,7 +387,7 @@ class CandidateController extends Controller
     public function show(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-         $candidates = $candidate->with('candidate_profile','interview','progbar','activebar')->first();
+         $candidates = $candidate->with('candidate_profile','interview','progbar','activebar','reference')->first();
         //dd($candidates);
         return view('admin.candidates.show', compact('candidate'));
     }
