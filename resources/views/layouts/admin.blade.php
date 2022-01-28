@@ -387,7 +387,7 @@ $(document).ready( function () {
           
         $(document).on('click', '.hide-search', function() {
         $(this).toggleClass("plus-toggle");
-          $(".search-fields").toggleClass("search-fields-toggle");
+          $(".search-filter-form-inner").toggleClass("search-fields-toggle");
         })
         $(document).on('click', '.candidate-panel', function() {
         $(".dt-button-collection .buttons-columnVisibility").hide();
