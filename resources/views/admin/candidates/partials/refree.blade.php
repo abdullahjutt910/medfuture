@@ -27,37 +27,37 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="title[]" id="title" placeholder="Title"
-                                value="" required>
+                             value="{{ old('title[]',$candidate->reference[0]->title ?? '') }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" id="first_name" placeholder="First Name"
-                                name="first_name[]" required>
+                                name="first_name[]" value="{{ old('first_name',$candidate->reference[0]->first_name ?? '') }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="last_name[]" id="title"
-                                placeholder="Last Name" value="" required>
+                                placeholder="Last Name" value="{{ old('last_name',$candidate->reference[0]->last_name ?? '') }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="number" name="telephone[]" id="first_name"
-                                placeholder="Telephone" value="" required>
+                                placeholder="Telephone" value="{{ old('telephone',$candidate->reference[0]->telephone ?? '') }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="email" name="email[]" id="title" placeholder="Email"
-                                value="" required>
+                         value="{{ old('email',$candidate->reference[0]->email ?? '') }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="job_title[]" id="first_name"
-                                placeholder="Referee’s Job Titile" value="" required>
+                                placeholder="Referee’s Job Titile" value="{{ old('job_title',$candidate->reference[0]->job_title ?? '') }}">
                         </div>
                     </div>
                 </div>
@@ -66,37 +66,37 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="title[]" id="title" placeholder="Title"
-                                value="" required>
+                             value="{{ old('title[]',$candidate->reference[1]->title ?? '') }}" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" id="first_name" placeholder="First Name"
-                                name="first_name[]" required>
+                                name="first_name[]" value="{{ old('first_name[]',$candidate->reference[1]->first_name ?? '') }}" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="last_name[]" id="title"
-                                placeholder="Last Name" value="" required>
+                                placeholder="Last Name" value="{{ old('last_name[]',$candidate->reference[1]->last_name ?? '') }}" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="number" name="telephone[]" id="first_name"
-                                placeholder="Telephone" value="" required>
+                                placeholder="Telephone" value="{{ old('telephone[]',$candidate->reference[1]->telephone ?? '') }}" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="email" name="email[]" id="title" placeholder="Email"
-                                value="" required>
+                             value="{{ old('email[]',$candidate->reference[1]->email ?? '') }}" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="job_title[]" id="first_name"
-                                placeholder="Referee’s Job Titile" value="" required>
+                                placeholder="Referee’s Job Titile" value="{{ old('job_title[]',$candidate->reference[1]->job_title ?? '') }}" required>
                         </div>
                     </div>
                 </div>
@@ -105,37 +105,37 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="title[]" id="title" placeholder="Title"
-                                value="" required>
+                             value="{{ old('title[]',$candidate->reference[2]->title ?? '') }}" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" id="first_name" placeholder="First Name"
-                                name="first_name[]" required>
+                                name="first_name[]" value="{{ old('first_name[]',$candidate->reference[2]->first_name ?? '') }}" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="last_name[]" id="title"
-                                placeholder="Last Name" value="" required>
+                                placeholder="Last Name" value="{{ old('last_name[]',$candidate->reference[2]->last_name ?? '') }}" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="number" name="telephone[]" id="first_name"
-                                placeholder="Telephone" value="" required>
+                                placeholder="Telephone" value="{{ old('telephone[]',$candidate->reference[2]->telephone ?? '') }}" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="email" name="email[]" id="title" placeholder="Email"
-                                value="" required>
+                             value="{{ old('email[]',$candidate->reference[2]->email ?? '') }}" required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="job_title[]" id="first_name"
-                                placeholder="Referee’s Job Titile" value="" required>
+                                placeholder="Referee’s Job Titile" value="{{ old('job_title[]',$candidate->reference[2]->job_title ?? '') }}" required>
                         </div>
                     </div>
                 </div>
@@ -144,6 +144,7 @@
                             class="img-fluid" alt="Edit-img"> Edit</button>
                 </div>
             </form>
+
             <form action="{{ url('insert_reference') }}/{{  $candidate->id ?? '' }}" method="post"
                 class="reference-form-inner-d-none">
                 @csrf
@@ -152,37 +153,37 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="title[]" id="title" placeholder="Title"
-                                value="" required>
+                                required value="{{ old('title[]',$candidate->reference[0]->title ?? '') }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" id="first_name" placeholder="First Name"
-                                name="first_name[]" required>
+                                name="first_name[]" required value="{{ old('first_name',$candidate->reference[0]->first_name ?? '') }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="last_name[]" id="title"
-                                placeholder="Last Name" value="" required>
+                                placeholder="Last Name" required value="{{ old('last_name',$candidate->reference[0]->last_name ?? '') }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="number" name="telephone[]" id="first_name"
-                                placeholder="Telephone" value="" required>
+                                placeholder="Telephone" required value="{{ old('telephone',$candidate->reference[0]->telephone ?? '') }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="email" name="email[]" id="title" placeholder="Email"
-                                value="" required>
+                            required value="{{ old('email',$candidate->reference[0]->email ?? '') }}">
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="job_title[]" id="first_name"
-                                placeholder="Referee’s Job Titile" value="" required>
+                                placeholder="Referee’s Job Titile" required value="{{ old('job_title',$candidate->reference[0]->job_title ?? '') }}">
                         </div>
                     </div>
                 </div>
@@ -191,38 +192,37 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="title[]" id="title" placeholder="Title"
-                                value="" required>
+                                value="{{ old('title[]',$candidate->reference[1]->title ?? '') }}" >
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" id="first_name" placeholder="First Name"
-                                name="first_name[]" required>
+                                name="first_name[]" value="{{ old('first_name[]',$candidate->reference[1]->first_name ?? '') }}" >
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="last_name[]" id="title"
-                                placeholder="Last Name" value="" required>
+                                placeholder="Last Name" value="{{ old('last_name[]',$candidate->reference[1]->last_name ?? '') }}" >
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="number" name="telephone[]" id="first_name"
-                                placeholder="Telephone" value="" required>
+                                placeholder="Telephone" value="{{ old('telephone[]',$candidate->reference[1]->telephone ?? '') }}" >
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="email" name="email[]" id="title" placeholder="Email"
-                                value="" required>
-
+                                value="{{ old('email[]',$candidate->reference[1]->email ?? '') }}" >
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="job_title[]" id="first_name"
-                                placeholder="Referee’s Job Titile" value="" required>
+                                placeholder="Referee’s Job Titile" value="{{ old('job_title[]',$candidate->reference[1]->job_title ?? '') }}" >
                         </div>
                     </div>
                 </div>
@@ -231,39 +231,37 @@
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="title[]" id="title" placeholder="Title"
-                                value="" required>
+                                value="{{ old('title[]',$candidate->reference[2]->title ?? '') }}" >
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" id="first_name" placeholder="First Name"
-                                name="first_name[]" required>
+                                name="first_name[]" value="{{ old('first_name[]',$candidate->reference[2]->first_name ?? '') }}" >
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="last_name[]" id="title"
-                                placeholder="Last Name" value="" required>
-
+                                placeholder="Last Name" value="{{ old('last_name[]',$candidate->reference[2]->last_name ?? '') }}" >
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="number" name="telephone[]" id="first_name"
-                                placeholder="Telephone" value="" required>
+                                placeholder="Telephone" value="{{ old('telephone[]',$candidate->reference[2]->telephone ?? '') }}" >
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="email" name="email[]" id="title" placeholder="Email"
-                                value="" required>
-
+                                value="{{ old('email[]',$candidate->reference[2]->email ?? '') }}" >
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
                             <input class="form-control" type="text" name="job_title[]" id="first_name"
-                                placeholder="Referee’s Job Titile" value="" required>
+                                placeholder="Referee’s Job Titile" value="{{ old('job_title[]',$candidate->reference[2]->job_title ?? '') }}" >
                         </div>
                     </div>
                 </div>

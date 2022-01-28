@@ -7,6 +7,7 @@ use \DateTimeInterface;
 use App\Models\Activebar;
 // use App\Models\Assignbar;
 use App\Models\Interview;
+use App\Models\Reference;
 use App\Models\CandidateProfile;
 use Spatie\MediaLibrary\HasMedia;
 use Illuminate\Database\Eloquent\Model;
@@ -1409,9 +1410,15 @@ class Candidate extends Model implements HasMedia
     {
         return $this->hasMany(Activebar::class);
     }
+    
     public function reference()
     {
         return $this->hasMany(Reference::class);
+    }
+
+    public function testimonial()
+    {
+        return $this->belongsTo(Testimonial::class);
     }
 
     // public function assignbar()

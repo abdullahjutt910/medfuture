@@ -100,8 +100,8 @@
                 </div>
                 <div class="nav-profile">
                   <span>
-                    <p>{{ auth()->user()->name }}</p>
-                    <p>{{ auth()->user()->email }}</p>
+                    <p>{{ auth()->user()->name ?? ''}}</p>
+                    <p>{{ auth()->user()->email ?? ''}}</p>
                   </span>
                     <img src="{{asset('img/dashboard/profile_img.png')}}" alt="profile_img">
                 </div>
@@ -340,7 +340,7 @@ $(document).ready( function () {
     $('#JobOrders').DataTable();
     $('#PlacementHistory').DataTable();
     $('#Archives').DataTable();
-    
+
     // datatables for job view
     $('#JobPost').DataTable();
 });
@@ -384,16 +384,16 @@ $(document).ready( function () {
         //  $(".candidate-profile-table .pagination .next a").html(" ");
         //  $(".candidate-profile-table #dtpipeline_filter label").html('<input type="search" class="form-control input-sm" placeholder="" aria-controls="dtpipeline">');
 
-          
+
         $(document).on('click', '.hide-search', function() {
         $(this).toggleClass("plus-toggle");
-          $(".search-filter-form-inner").toggleClass("search-fields-toggle");
+          $(".hide-show").toggleClass("search-fields-toggle");
         })
         $(document).on('click', '.candidate-panel', function() {
         $(".dt-button-collection .buttons-columnVisibility").hide();
         $(".dt-button-collecton").append('abc');
         })
-        
+
         // $(".candidate-profile-table .dataTables_filter input").keypress(function(){
         //   console.log("click");
         //   $(".pagination .previous a").html("");
@@ -485,7 +485,7 @@ $(document).ready( function () {
         if(counter_num_14 > 0) {
           $('.progress-bar.Testimony').addClass('progress-color');
         }
- 
+
 
       $(".candidate-edit-btn").click(function(){
         $(".profile-information").hide();
@@ -523,12 +523,12 @@ $(document).ready( function () {
         $(".reference-form-inner-d-none").hide();
         $(".reference-form-inner").show();
       });
-     
+
       $(".counter-edit-btn").click(function(){
         $(".counter-circle-d-none").hide();
         $(".counter-circle-form").show();
       });
-      
+
       $(".back-btn").click(function(){
         $(".counter-circle-form").hide();
         $(".counter-circle-d-none").show();
@@ -538,7 +538,7 @@ $(document).ready( function () {
         $(".interview-table").hide();
         $(".interview-form-d-none").show();
       });
-      
+
       $(".back-btn").click(function(){
         $(".interview-form-d-none").hide();
         $(".interview-table").show();
@@ -548,7 +548,7 @@ $(document).ready( function () {
         $(".job-summary-eidt").hide();
         $(".job-summary-d-none").show();
       });
-      
+
       $(".back-btn").click(function(){
         $(".interview-form-d-none").hide();
         $(".interview-table").show();
@@ -559,14 +559,14 @@ $(document).ready( function () {
         $(".testimonial-txt-d-none").show();
         $(".profile-details-upload .profile-buttons img").removeClass("gray-color");
       });
-      
+
       $(".back-btn").click(function(){
         $(".testimonial-txt-d-none").hide();
         $(".testimonial-txt-edit").show();
       });
 
       $(".testimonial-remove-btn").click(function(){
-        $(".testimonial-txt").hide();        
+        $(".testimonial-txt").hide();
       });
 
 
@@ -576,7 +576,7 @@ $(document).ready( function () {
         $(".pipeline-data-d-none").show();
         $(".pipeline-back-btn").css("display", "flex");
       });
-      
+
       $(".back-btn").click(function(){
         $(".pipeline-data-d-none").hide();
         $(".pipeline-back-btn").hide();
@@ -590,7 +590,7 @@ $(document).ready( function () {
         $(".activity-data-d-none").show();
         $(".activity-back-btn").css("display", "flex");
       });
-      
+
       $(".back-btn").click(function(){
         $(".activity-data-d-none").hide();
         $(".activity-back-btn").hide();
@@ -611,13 +611,13 @@ $(document).ready( function () {
       $(".pipeline-cancel-btn").click(function(){
         $(".popup-pipeline-form").hide();
       })
-      
-    
+
+
 
       $(".add-activity-btn").click(function(){
         $(".popup-activity").show();
       })
-      
+
       $(".cancel-btn").click(function(){
         $(".popup-activity").hide();
       })
@@ -629,10 +629,10 @@ $(document).ready( function () {
 
 
       // $(".position-dtil-hading").click(function(){
-      //   $('.position-hide').hide(); 
+      //   $('.position-hide').hide();
       // $(this).parents('.view-job-right').find('.position-hide').toggle();
       // })
-      
+
 
     })
 
