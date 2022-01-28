@@ -9,6 +9,7 @@ use App\Http\Controllers\frontend\PostController;
 use App\Http\Controllers\Admin\ActivebarController;
 use App\Http\Controllers\Admin\CandidateController;
 use App\Http\Controllers\Admin\ReferenceController;
+use App\Http\Controllers\Admin\TestimonialController;
 
 Route::redirect('/', '/login');
 
@@ -89,5 +90,7 @@ Route::post('insert_reference/{id}',[ReferenceController::class,'insertReference
 Route::post('update_reference/{id}',[ReferenceController::class,'updateReference'])->name('update_reference');
 Route::get('delete_reference/{id}',[ReferenceController::class,'deleteReference'])->name('delete_reference');
 
-
-
+//--------------------------------- Testimonial -------------------------------
+Route::post('insert_testimonial/{id}',[TestimonialController::class,'insertTestimonial'])->name('insert_testimonial');
+Route::post('update_testimonial/{id}',[TestimonialController::class,'updateTestimonial'])->name('update_testimonial');
+Route::get('delete_testimonial/{id}',[TestimonialController::class,'deleteTestimonial'])->name('delete_testimonial');
