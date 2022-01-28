@@ -88,3 +88,6 @@ Route::get('delete_activity/{id}',[ActivebarController::class,'deleteActivity'])
 Route::post('insert_reference/{id}',[ReferenceController::class,'insertReference'])->name('insert_reference');
 Route::post('update_reference/{id}',[ReferenceController::class,'updateReference'])->name('update_reference');
 Route::get('delete_reference/{id}',[ReferenceController::class,'deleteReference'])->name('delete_reference');
+
+
+

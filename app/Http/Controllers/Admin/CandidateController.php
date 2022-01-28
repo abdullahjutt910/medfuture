@@ -400,6 +400,11 @@ class CandidateController extends Controller
         return back();
     }
 
+    // public function deleteActivity($id){
+    //     Activebar::find($id)->delete();
+    //     return back();
+    // }
+
     public function massDestroy(MassDestroyCandidateRequest $request)
     {
         Candidate::whereIn('id', request('ids'))->delete();
