@@ -51,6 +51,286 @@
                         </ul>
                     </div>
                 </div>
+
+                <!-- <form action="#" method="submit">
+                    <div class="form-group">
+                <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                </div>
+                <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                
+                </form> -->
+                <!-- <div class="row">
+                    <div class="search-filter-candidate">
+                    <div class="box-bg-shadow">
+                        <div class="box-inner">
+                            <form action="#" method="submit"></form>
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::TITLE_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        </td>
+                                        <td>
+                                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::GENDER_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        </td>
+                                        <td>
+                                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        </td>
+                                        <td>
+                                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        </td>
+                                        <td>
+                                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        </td>
+                                        <td>
+                                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        </td>
+                                        <td>
+                                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        </td>
+                                        <td>
+                                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::TOWN_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::STATE_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                    </tr>
+                                        <tr>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::DISTRICT_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::COUNTRY_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::MAIN_CITY_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::PROFESSION_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::DEVISION_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::SENORITY_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::SPECIALTY_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::PROFESSIONAL_QUALIFICATION_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::GRADUATION_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::COUNTRY_OF_PRIMARY_DEGREE_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::PRACTICE_COUNTRY_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::PRACTICE_LICENSING_BODY_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::LICENSE_TYPE_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::EXPERIENCE_FROM_HOME_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::EXPERIENCE_FROM_RESIDING_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::RECOGNISED_COMPARABLE_EXPERIENCE_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::CURRENT_EMPLOYMENT_STATUS_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::COUNTRY_OF_CITIZENSHIP_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::COUNTRY_OF_RESIDENCE_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::VISA_TYPE_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::WORK_RIGHTS_STATUS_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <select class="search" strict="true">
+                                                <option value>{{ trans('global.all') }}</option>
+                                                @foreach(App\Models\Candidate::PROFESSION_LOGIN_SELECT as $key => $item)
+                                                    <option value="{{ $item }}">{{ $item }}</option>
+                                                @endforeach
+                                            </select>
+                                        </td>
+                                        <td>
+                                            <input class="search" type="text" placeholder="{{ trans('global.search') }}">
+                                        </td>
+
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="forms-colored-div">
+                                    <div class="blue"></div>
+                                    <div class="purple"></div>
+                                    <div class="pink"></div>
+                                </div>
+                    </div>
+                    </div>
+                </div> -->
+
+
                 <div class="panel-body">
                     <div class="table-responsive table-cus">
                         <table class=" table table-bordered table-striped table-hover datatable datatable-Candidate">
