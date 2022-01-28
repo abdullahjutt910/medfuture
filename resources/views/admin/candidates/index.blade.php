@@ -224,7 +224,11 @@
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <input  class="form-control" type="text" name="cv" placeholder="CV">
+                                    <select class="form-control form-select-lg mb-3" name="cv" aria-label=".form-select-lg example">
+                                            <option value="" disabled="" selected="">CV</option>    
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="col-md-2">
@@ -444,7 +448,7 @@
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="profession" aria-label=".form-select-lg example">
+                                    <select class="profession-doctor form-control form-select-lg mb-3" name="profession" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Profession</option>    
                                         <option value="Doctor">Doctor</option>
                                         <option value="Nurse">Nurse</option>
@@ -455,6 +459,110 @@
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
+                                <!-- <select class="seniority-doctor-d-none form-select form-select-lg mb-3"
+                                        name="senority"
+                                        aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Senority / Grade / Band</option>
+                                        <option value="Internship - PGY Year 1">
+                                            Internship
+                                            - PGY Year 1 </option>
+                                        <option
+                                            value="Junior House Officer - PGY Year 2 ">
+                                            Junior House Officer - PGY Year 2 </option>
+                                        <option
+                                            value="Senior House Officer - PGY Year 3 ">
+                                            Senior House Officer - PGY Year 3 </option>
+                                        <option
+                                            value="Principal Health Officer – PGY Year 4 ">
+                                            Principal Health Officer – PGY Year 4
+                                        </option>
+                                        <option value="Registrars" >Registrars</option>
+                                        <option value="Senior Registrar" >Senior
+                                            Registrar</option>
+                                        <option value="Provisional Fellowship Year" >
+                                            Provisional Fellowship Year</option>
+                                        <option value="General Practitioner" >General
+                                            Practitioner</option>
+                                        <option value="Specialist">Specialist</option>
+                                        <option value="Staff Specialists">Staff
+                                            Specialists</option>
+                                        <option value="Senior Medical Officer">Senior
+                                            Medical Officer</option>
+                                        <option value="Visiting Medical Officer" >
+                                            Visiting Medical Officer</option>
+                                        <option value="Consultant" >Consultant</option>
+                                    </select>
+                                    <select class="nurse-seniority-d-none form-select form-select-lg mb-3"
+                                        name="senority"
+                                        aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Senority / Grade / Band</option>
+                                        <option value="PCA / AIN / Care Worker" >PCA /
+                                            AIN / Care Worker</option>
+                                        <option value="Enrolled Nurse (EN)">Enrolled
+                                            Nurse (EN)</option>
+                                        <option value="Endorsed Enrolled Nurse (EEN)" >
+                                            Endorsed Enrolled Nurse (EEN)</option>
+                                        <option value="Registered Nurse (RN)">Registered
+                                            Nurse (RN)</option>
+                                        <option
+                                            value="Advanced Practice Nurse / Nurse Practitioner">
+                                            Advanced Practice Nurse / Nurse Practitioner
+                                        </option>
+                                        <option value="Specialist">Specialist </option>
+                                        <option
+                                            value="Specialist Nurse / Clinical Nurse Specialist" >
+                                            Specialist Nurse / Clinical Nurse Specialist
+                                        </option>
+                                        <option value="Midwives">Midwives</option>
+                                        <option value="Nurse Manager">Nurse Manager
+                                        </option>
+                                        <option
+                                            value="Director of Nursing Practice (DNP)">
+                                            Director of Nursing Practice (DNP)</option>
+                                        <option value="Chief Nursing Officer (CNO)">
+                                            Chief Nursing Officer (CNO)</option>
+                                    </select>
+                                    <select class="seniority-AHP-d-none form-select form-select-lg mb-3"
+                                        name="senority"
+                                        aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Senority / Grade / Band</option>
+                                        <option value="Provisional Pychologist">Provisional Pychologist</option>
+                                        <option value="Psychologist">Psychologist</option>
+                                        <option value="Senior Psychologist">Senior Psychologist</option>
+                                        <option value="Provisional Physciotherapist">Provisional Physciotherapist</option>
+                                        <option value="Physciotherapist">Physciotherapist</option>
+                                        <option value="Senior Physciotherapist">Senior Physciotherapist</option>
+                                        <option value="Provisional Podiatrist">Provisional Podiatrist</option>
+                                        <option value="Podiatrist">Podiatrist</option>
+                                        <option value="Senior Podiatrist">Senior Podiatrist</option>
+                                        <option value="Provisional Speech Therapist">Provisional Speech Therapist</option>
+                                        <option value="Speech Therapist">Speech Therapist</option>
+                                        <option value="Senior Speech Therapist">Senior Speech Therapist</option>
+                                        <option value="Provisional Occupational Therapist">Provisional Occupational Therapist</option>
+                                        <option value="Occupational Therapist">Occupational Therapist</option>
+                                        <option value="Senios Occupational Therapist">Senios Occupational Therapist</option>
+                                        <option value="Dentist">Dentist</option>
+                                        <option value="Senior Dentist">Senior Dentist</option>
+                                        <option value="Dentistry Specialist">Dentistry Specialist</option>
+                                        <option value="Provisional Occupational Therapist">Provisional Occupational Therapist</option>
+                                        <option value="Occupational Therapist">Occupational Therapist</option>
+                                        <option value="Senior Occupational Therapist">Senior Occupational Therapist</option>
+                                        <option value="Provisional Dietitians">Provisional Dietitians</option>
+                                        <option value="Dietitians">Dietitians</option>
+                                        <option value="Senior Dietitians">Senior Dietitians</option>
+                                    </select>
+                                    <select class="seniority-HE-d-none form-select form-select-lg mb-3"
+                                        name="senority"
+                                        aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Senority / Grade / Band</option>
+                                        <option value="Business Managers ">Business Managers </option>
+                                        <option value="General Managers ">General Managers </option>
+                                        <option value="Medical Administrators ">Medical Administrators </option>
+                                        <option value="Medical Director ">Medical Director </option>
+                                        <option value="Medical Receptionist">Medical Receptionist</option>
+                                        <option value="Practice Manager">Practice Manager</option>
+                                        <option value="Professional Management Consultants ">Professional Management Consultants </option>          
+                                    </select> -->
                                     <select class="form-control form-select-lg mb-3" name="seniority" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Seniority</option>    
                                         <option value="Internship - PGY Year 1">
@@ -462,7 +570,7 @@
                                             - PGY Year 1 </option>
                                         <option value="Junior House Officer - PGY Year 2 ">
                                             Junior House Officer - PGY Year 2 </option>
-                                        <option value="Senior House Officer - PGY Year 3 " selected="">
+                                        <option value="Senior House Officer - PGY Year 3 ">
                                             Senior House Officer - PGY Year 3 </option>
                                         <option value="Principal Health Officer – PGY Year 4 ">
                                             Principal Health Officer – PGY Year 4
@@ -490,8 +598,10 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="engagement-type" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Engagement Type</option>    
-                                        <option value="Full Time">Full Time</option>
-                                        <option value="Part Time">Part Time</option>
+                                        <option value="Casual">Casual</option>
+                                        <option value="Contract">Contract</option>
+                                        <option value="Locum">Locum</option>
+                                        <option value="Permanent">Permanent</option>
                                     </select>
                                 </div>
                             </div>
@@ -508,9 +618,10 @@
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="engagement-term" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Engagement Term</option>    
-                                        <option value="Full Time">Full Time</option>
-                                        <option value="Part Time">Part Time</option>
+                                        <option value="" disabled="" selected="">Employment Term</option>    
+                                        <option value="3">Agency Worker Placement</option>
+                                        <option value="2">Contractor Placement</option>
+                                        <option value="1">Salaried Placement</option>
                                     </select>
                                 </div>
                             </div>
@@ -536,18 +647,8 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="status" aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Status</option>    
-                                        <option value="Awaiting Review">Awaiting Review</option>
-                                        <option value="Contacted">Contacted</option>
-                                        <option value="CV Submitted">CV Submitted</option>
-                                        <option value="Declined">Declined</option>
-                                        <option value="Do Not Contact">Do Not Contact</option>
-                                        <option value="Interview">Interview</option>
-                                        <option value="Not Contacted">Not Contacted</option>
-                                        <option value="Offer">Offer</option>
-                                        <option value="Phone / Direct Screen">Phone / Direct Screen</option>
-                                        <option value="Rejected">Rejected</option>
-                                        <option value="Reviewed">Reviewed</option>
-                                        <option value="Short Listed">Short Listed</option>
+                                        <option value="Enable">Enable</option>
+                                        <option value="Disable">Disable</option>
                                     </select>
                                 </div>
                             </div>
@@ -561,7 +662,7 @@
                                     </select> -->
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                 <input class="form-control" type="text" name="map-address" placeholder="Map Address">
                                     <!-- <select class="form-control form-select-lg mb-3" name="map-address" aria-label=".form-select-lg example">
