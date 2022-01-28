@@ -1036,9 +1036,10 @@
                             </div>
                                 <div class=" col-md-12 activity-form-back-btn">
                                     <div class=" profile-eidt-form-btn">
-                                        <button class="btn back-btn cancel-btn">Cancel</button>
+                                        <button type="reset" value="reset" class="btn back-btn cancel-btn">Cancel</button>
                                         <input name="submit" type="submit" class="btn" placeholder="Submit">
                                     </div>
+                                </div>
                             </div>
                         </form>
                     </div>
