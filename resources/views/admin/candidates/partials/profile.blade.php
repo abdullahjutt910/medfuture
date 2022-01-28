@@ -905,6 +905,7 @@
         @php
             $fileSize = \File::size(public_path('files/'. $candidate->cv_document));
         @endphp
+        @endif
         <div class="row profile-details-upload">
             <div class="col-md-12">
                 <div class="row profile-details">
@@ -919,7 +920,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{$candidate->cv_document ?? 'no file'}}</h5>
                                         <p class="card-text"><small
-                                                class="text-muted">{{ round(($fileSize/1024),2) }}KB</small></p>
+                                                class="text-muted">{{ round(($fileSize/1024),2)}}KB</small></p>
                                     </div>
                                 </div>
                             </div>
@@ -965,11 +966,12 @@
                 </div>
             </div>
         </div>
-        @endif
+
         @if (!empty($candidate->registration_form_document) && !is_null($candidate->registration_form_document))
         @php
             $fileSize = \File::size(public_path('files/'. $candidate->registration_form_document));
         @endphp
+         @endif
         <div class="row profile-details-upload">
             <div class="col-md-12">
                 <div class="row profile-details">
@@ -984,7 +986,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{$candidate->registration_form_document ?? 'no file'}}</h5>
                                         <p class="card-text"><small
-                                                class="text-muted">{{ round(($fileSize/1024),2) }}KB</small></p>
+                                                class="text-muted">{{ round(($fileSize/1024),2)}}KB</small></p>
                                     </div>
                                 </div>
                             </div>
@@ -1030,11 +1032,12 @@
                 </div>
             </div>
         </div>
-        @endif
+
         @if (!empty($candidate->privacy_concerns) && !is_null($candidate->privacy_concerns))
         @php
             $fileSize = \File::size(public_path('files/'. $candidate->privacy_concerns));
         @endphp
+        @endif
         <div class="row profile-details-upload">
             <div class="col-md-12">
                 <div class="row profile-details">
@@ -1096,11 +1099,12 @@
                 </div>
             </div>
         </div>
-        @endif
+
         @if (!empty($candidate->cv_document) && !is_null($candidate->cv_document))
         @php
             $fileSize = \File::size(public_path('files/'. $candidate->cv_document));
         @endphp
+        @endif
         <div class="row profile-details-upload">
             <div class="col-md-12">
                 <div class="row profile-details">
@@ -1161,7 +1165,7 @@
                 </div>
             </div>
         </div>
-        @endif
+
         <div class="edit-brn">
             <button class="btn files-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
                     class="img-fluid" alt="Edit-img"> Edit</button>
