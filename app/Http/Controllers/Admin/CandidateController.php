@@ -21,6 +21,7 @@ use App\Http\Requests\UpdateCandidateRequest;
 use Symfony\Component\HttpFoundation\Response;
 use App\Http\Requests\MassDestroyCandidateRequest;
 use App\Http\Controllers\Traits\MediaUploadingTrait;
+use App\Models\Reference;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class CandidateController extends Controller
@@ -387,11 +388,11 @@ class CandidateController extends Controller
     public function show(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-         $candidates = $candidate->with('candidate_profile','interview','progbar','activebar','reference')->first();
-        //dd($candidates);
+         $candidates = $candidate->with('candidate_profile','interview','progbar','activebar','reference','testimonial')->first();
+        // dd(Reference::get());
+        // dd($candidate);
         return view('admin.candidates.show', compact('candidate'));
     }
-//dd($candidates);//dd($candidates);
     public function destroy(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
