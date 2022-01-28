@@ -3,12 +3,10 @@
         <div class="reference-txt">
             <h3>Reference</h3>
             <div class="reference-lock">
-                <img src=" {{asset('img/dashboard/Lock.png')}}" class="img-fluid"
-                    alt="Edit-img">
+                <img src=" {{asset('img/dashboard/Lock.png')}}" class="img-fluid" alt="Edit-img">
                 <div class="candidate-date">
                     <div class="form-group">
-                        <select class="form-control" name="title" id="title"
-                            required="">
+                        <select class="form-control" name="#" id="title" required="">
                             <option value="" selected="">2020-2021</option>
                             <option value="2019-2020">2019-2020</option>
                             <option value="2018-2019">2018-2019</option>
@@ -28,44 +26,38 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="title[]"
-                                id="title" placeholder="Title" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text"
-                                id="first_name" placeholder="First Name" name="first_name[]"
-                                required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text" name="last_name[]"
-                                id="title" placeholder="Last Name" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="number" name="telephone[]"
-                                id="first_name" placeholder="Telephone" value=""
-                                required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="email" name="email[]"
-                                id="title" placeholder="Email" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text" name="job_title[]"
-                                id="first_name" placeholder="Referee’s Job Titile"
+                            <input class="form-control" type="text" name="title[]" id="title" placeholder="Title"
                                 value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" id="first_name" placeholder="First Name"
+                                name="first_name[]" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="last_name[]" id="title"
+                                placeholder="Last Name" value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="number" name="telephone[]" id="first_name"
+                                placeholder="Telephone" value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="email" name="email[]" id="title" placeholder="Email"
+                                value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="job_title[]" id="first_name"
+                                placeholder="Referee’s Job Titile" value="" required>
                         </div>
                     </div>
                 </div>
@@ -73,44 +65,38 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="title[]"
-                                id="title" placeholder="Title" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text"
-                                id="first_name" placeholder="First Name" name="first_name[]"
-                                required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text" name="last_name[]"
-                                id="title" placeholder="Last Name" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="number" name="telephone[]"
-                                id="first_name" placeholder="Telephone" value=""
-                                required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="email" name="email[]"
-                                id="title" placeholder="Email" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text" name="job_title[]"
-                                id="first_name" placeholder="Referee’s Job Titile"
+                            <input class="form-control" type="text" name="title[]" id="title" placeholder="Title"
                                 value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" id="first_name" placeholder="First Name"
+                                name="first_name[]" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="last_name[]" id="title"
+                                placeholder="Last Name" value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="number" name="telephone[]" id="first_name"
+                                placeholder="Telephone" value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="email" name="email[]" id="title" placeholder="Email"
+                                value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="job_title[]" id="first_name"
+                                placeholder="Referee’s Job Titile" value="" required>
                         </div>
                     </div>
                 </div>
@@ -118,97 +104,85 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="title[]"
-                                id="title" placeholder="Title" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text"
-                                id="first_name" placeholder="First Name" name="first_name[]"
-                                required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text" name="last_name[]"
-                                id="title" placeholder="Last Name" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="number" name="telephone[]"
-                                id="first_name" placeholder="Telephone" value=""
-                                required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="email" name="email[]"
-                                id="title" placeholder="Email" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text" name="job_title[]"
-                                id="first_name" placeholder="Referee’s Job Titile"
+                            <input class="form-control" type="text" name="title[]" id="title" placeholder="Title"
                                 value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" id="first_name" placeholder="First Name"
+                                name="first_name[]" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="last_name[]" id="title"
+                                placeholder="Last Name" value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="number" name="telephone[]" id="first_name"
+                                placeholder="Telephone" value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="email" name="email[]" id="title" placeholder="Email"
+                                value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="job_title[]" id="first_name"
+                                placeholder="Referee’s Job Titile" value="" required>
                         </div>
                     </div>
                 </div>
                 <div class="edit-brn">
-                    <button class="btn reference-edit-btn"><img
-                            src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
-                            alt="Edit-img"> Edit</button>
+                    <button class="btn reference-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
+                            class="img-fluid" alt="Edit-img"> Edit</button>
                 </div>
             </form>
-            <form action="{{ url('insert_reference') }}/{{  $candidate->id ?? '' }}" method="post" class="reference-form-inner-d-none">
+            <form action="{{ url('insert_reference') }}/{{  $candidate->id ?? '' }}" method="post"
+                class="reference-form-inner-d-none">
                 @csrf
                 <h4>Referee 1</h4>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="title[]"
-                                id="title" placeholder="Title" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text"
-                                id="first_name" placeholder="First Name" name="first_name[]"
-                                required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text" name="last_name[]"
-                                id="title" placeholder="Last Name" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="number" name="telephone[]"
-                                id="first_name" placeholder="Telephone" value=""
-                                required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="email" name="email[]"
-                                id="title" placeholder="Email" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text" name="job_title[]"
-                                id="first_name" placeholder="Referee’s Job Titile"
+                            <input class="form-control" type="text" name="title[]" id="title" placeholder="Title"
                                 value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" id="first_name" placeholder="First Name"
+                                name="first_name[]" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="last_name[]" id="title"
+                                placeholder="Last Name" value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="number" name="telephone[]" id="first_name"
+                                placeholder="Telephone" value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="email" name="email[]" id="title" placeholder="Email"
+                                value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="job_title[]" id="first_name"
+                                placeholder="Referee’s Job Titile" value="" required>
                         </div>
                     </div>
                 </div>
@@ -216,44 +190,39 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="title[]"
-                                id="title" placeholder="Title" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text"
-                                id="first_name" placeholder="First Name" name="first_name[]"
-                                required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text" name="last_name[]"
-                                id="title" placeholder="Last Name" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="number" name="telephone[]"
-                                id="first_name" placeholder="Telephone" value=""
-                                required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="email" name="email[]"
-                                id="title" placeholder="Email" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text" name="job_title[]"
-                                id="first_name" placeholder="Referee’s Job Titile"
+                            <input class="form-control" type="text" name="title[]" id="title" placeholder="Title"
                                 value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" id="first_name" placeholder="First Name"
+                                name="first_name[]" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="last_name[]" id="title"
+                                placeholder="Last Name" value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="number" name="telephone[]" id="first_name"
+                                placeholder="Telephone" value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="email" name="email[]" id="title" placeholder="Email"
+                                value="" required>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="job_title[]" id="first_name"
+                                placeholder="Referee’s Job Titile" value="" required>
                         </div>
                     </div>
                 </div>
@@ -261,44 +230,40 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="title[]"
-                                id="title" placeholder="Title" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text"
-                                id="first_name" placeholder="First Name" name="first_name[]"
-                                required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text" name="last_name[]"
-                                id="title" placeholder="Last Name" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="number" name="telephone[]"
-                                id="first_name" placeholder="Telephone" value=""
-                                required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="email" name="email[]"
-                                id="title" placeholder="Email" value="" required>
-
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <input class="form-control" type="text" name="job_title[]"
-                                id="first_name" placeholder="Referee’s Job Titile"
+                            <input class="form-control" type="text" name="title[]" id="title" placeholder="Title"
                                 value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" id="first_name" placeholder="First Name"
+                                name="first_name[]" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="last_name[]" id="title"
+                                placeholder="Last Name" value="" required>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="number" name="telephone[]" id="first_name"
+                                placeholder="Telephone" value="" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="email" name="email[]" id="title" placeholder="Email"
+                                value="" required>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" type="text" name="job_title[]" id="first_name"
+                                placeholder="Referee’s Job Titile" value="" required>
                         </div>
                     </div>
                 </div>
@@ -318,16 +283,18 @@
                                     <div class="row g-0">
                                         <div class="col-md-1 card-img">
                                             <img src="{{asset('img/dashboard/PDF.png')}}"
-                                                class="img-fluid pdf-upload rounded-start"
-                                                alt="...">
+                                                class="img-fluid pdf-upload rounded-start" alt="...">
                                         </div>
                                         <div class="col-md-11 padd-l-0">
                                             <div class="card-body">
-                                                <h5 class="card-title">Referee Report 1
-                                                    .pdf</h5>
-                                                <p class="card-text"><small
-                                                        class="text-muted">32KB |
-                                                        12/3/2021 </small></p>
+                                                <h5 class="card-title">
+                                                    Referee Report 1 .pdf
+                                                </h5>
+                                                <p class="card-text">
+                                                    <small class="text-muted">
+                                                        32KB | 12/3/2021 
+                                                    </small>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -336,21 +303,20 @@
                             <div class="col-md-4">
                                 <div class="profile-buttons">
                                     <a href="#">
-                                    <img src="{{asset('img/dashboard/Eye.png')}}"
-                                        class="img-fluid" alt="Eye">
+                                        <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
                                     </a>
                                     <a href="#">
-                                    <img src="{{asset('img/dashboard/Download.png')}}"
-                                        class="img-fluid gray-color" alt="download">
+                                        <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
+                                            alt="download">
                                     </a>
                                     <a href="#">
-                                    <img src="{{asset('img/dashboard/Upload.png')}}"
-                                        class="img-fluid gray-color" alt="Upload">
+                                        <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
+                                            alt="Upload">
                                     </a>
                                     <a href="#">
-                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                        class="img-fluid gray-color" alt="Delete-Trash">
-                                        </a>
+                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                            class="img-fluid gray-color" alt="Delete-Trash">
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -364,16 +330,18 @@
                                     <div class="row g-0">
                                         <div class="col-md-1 card-img">
                                             <img src="{{asset('img/dashboard/Video-File.png')}}"
-                                                class="img-fluid pdf-upload rounded-start"
-                                                alt="...">
+                                                class="img-fluid pdf-upload rounded-start" alt="...">
                                         </div>
                                         <div class="col-md-11 padd-l-0">
                                             <div class="card-body">
-                                                <h5 class="card-title">Referee Report 2
-                                                    .pdf</h5>
-                                                <p class="card-text"><small
-                                                        class="text-muted">32KB |
-                                                        12/3/2021</small></p>
+                                                <h5 class="card-title">
+                                                    Referee Report 2 .pdf
+                                                </h5>
+                                                <p class="card-text">
+                                                    <small class="text-muted">
+                                                        32KB | 12/3/2021
+                                                    </small>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -382,21 +350,20 @@
                             <div class="col-md-4">
                                 <div class="profile-buttons">
                                     <a href="#">
-                                    <img src="{{asset('img/dashboard/Eye.png')}}"
-                                        class="img-fluid " alt="Eye">
-                                        </a>
-                                        <a href="#">
-                                    <img src="{{asset('img/dashboard/Download.png')}}"
-                                        class="img-fluid gray-color" alt="download">
+                                        <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid " alt="Eye">
                                     </a>
                                     <a href="#">
-                                    <img src="{{asset('img/dashboard/Upload.png')}}"
-                                        class="img-fluid gray-color" alt="Upload">
+                                        <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
+                                            alt="download">
                                     </a>
                                     <a href="#">
-                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                        class="img-fluid gray-color" alt="Delete-Trash">
-                                        </a>
+                                        <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
+                                            alt="Upload">
+                                    </a>
+                                    <a href="#">
+                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                            class="img-fluid gray-color" alt="Delete-Trash">
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -410,16 +377,18 @@
                                     <div class="row g-0">
                                         <div class="col-md-1 card-img">
                                             <img src="{{asset('img/dashboard/MP3.png')}}"
-                                                class="img-fluid pdf-upload rounded-start"
-                                                alt="...">
+                                                class="img-fluid pdf-upload rounded-start" alt="...">
                                         </div>
                                         <div class="col-md-11 padd-l-0">
                                             <div class="card-body">
-                                                <h5 class="card-title">Referee Report 3
-                                                    .pdf</h5>
-                                                <p class="card-text"><small
-                                                        class="text-muted">56KB |
-                                                        12/3/2021</small></p>
+                                                <h5 class="card-title">
+                                                    Referee Report 3 .pdf
+                                                </h5>
+                                                <p class="card-text">
+                                                    <small class="text-muted">
+                                                        56KB | 12/3/2021
+                                                    </small>
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -428,20 +397,19 @@
                             <div class="col-md-4">
                                 <div class="profile-buttons">
                                     <a href="#">
-                                    <img src="{{asset('img/dashboard/Eye.png')}}"
-                                        class="img-fluid" alt="Eye">
+                                        <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid" alt="Eye">
                                     </a>
                                     <a href="#">
-                                    <img src="{{asset('img/dashboard/Download.png')}}"
-                                        class="img-fluid gray-color" alt="download">
+                                        <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
+                                            alt="download">
                                     </a>
                                     <a href="#">
-                                    <img src="{{asset('img/dashboard/Upload.png')}}"
-                                        class="img-fluid gray-color" alt="Upload">
+                                        <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
+                                            alt="Upload">
                                     </a>
                                     <a href="#">
-                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                        class="img-fluid gray-color" alt="Delete-Trash">
+                                        <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                            class="img-fluid gray-color" alt="Delete-Trash">
                                     </a>
                                 </div>
                             </div>
