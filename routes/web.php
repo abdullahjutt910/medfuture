@@ -9,6 +9,7 @@ use App\Http\Controllers\frontend\PostController;
 use App\Http\Controllers\Admin\ActivebarController;
 use App\Http\Controllers\Admin\AssignbarController;
 use App\Http\Controllers\Admin\CandidateController;
+use App\Http\Controllers\Admin\ReferenceController;
 
 Route::redirect('/', '/login');
 Route::get('migrate', function () {
@@ -83,3 +84,7 @@ Route::post('update_progress/{id}',[CandidateController::class,'updateProgress']
 Route::post('insert_activity/{id}',[ActivebarController::class,'insertActivity'])->name('insert_activity');
 Route::post('update_activity/{id}',[ActivebarController::class,'updateActivity'])->name('update_activity');
 Route::get('delete_activity/{id}',[ActivebarController::class,'deleteActivity'])->name('delete_activity');
+
+Route::post('insert_reference/{id}',[ReferenceController::class,'insertReference'])->name('insert_reference');
+Route::post('update_reference/{id}',[ReferenceController::class,'updateReference'])->name('update_reference');
+Route::get('delete_reference/{id}',[ReferenceController::class,'deleteReference'])->name('delete_reference');

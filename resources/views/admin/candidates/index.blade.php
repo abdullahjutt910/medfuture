@@ -280,12 +280,7 @@
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Candidate ID') }}">
-                                        <!-- <select class="search" strict="true">
-                                            <option value>{{ trans('global.all') }}</option>
-                                            @foreach(App\Models\Candidate::TITLE_SELECT as $key => $item)
-                                            <option value="{{ $item }}">{{ $item }}</option>
-                                            @endforeach
-                                        </select> -->
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('First Name') }}">
@@ -293,9 +288,6 @@
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Last Name') }}">
                                     </td>
-                                    <!-- <td>
-                                    <input class="search" type="text" placeholder="{{ trans('email') }}">
-                                    </td> -->
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Gender') }}">
 
@@ -573,9 +565,9 @@
                                     <th>
                                         {{ trans('Country') }}
                                     </th>
-                                    {{-- <th>
+                                    <th>
                                         {{ trans('ABN') }}
-                                    </th> --}}
+                                    </th>
                                     <th>
                                         {{ trans('Postcode') }}
                                     </th>
@@ -723,6 +715,7 @@
                                         <td>
                                             {{ $candidate->address_2 ?? '' }}
                                         </td>
+
                                         <td>
                                             {{ $candidate->state ?? '' }}
                                         </td>
@@ -731,6 +724,9 @@
                                         </td>
                                         <td>
                                             {{ $candidate->country ?? '' }}
+                                        </td>
+                                        <td>
+                                            ksbfkl
                                         </td>
                                         <td>
                                             {{ $candidate->post_code ?? '' }}

@@ -165,49 +165,50 @@
                             alt="Edit-img"> Edit</button>
                 </div>
             </form>
-            <form action="submit" method="post" class="reference-form-inner-d-none">
+            <form action="{{ url('insert_reference') }}/{{  $candidate->id ?? '' }}" method="post" class="reference-form-inner-d-none">
+                @csrf
                 <h4>Referee 1</h4>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="mobile"
-                                id="title" placeholder="" value="Title" required>
+                            <input class="form-control" type="text" name="title[]"
+                                id="title" placeholder="Title" value="" required>
 
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="mobile"
-                                id="first_name" placeholder="" value="First Name"
+                            <input class="form-control" type="text"
+                                id="first_name" placeholder="First Name" name="first_name[]"
                                 required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="mobile"
-                                id="title" placeholder="" value="Last Name" required>
+                            <input class="form-control" type="text" name="last_name[]"
+                                id="title" placeholder="Last Name" value="" required>
 
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="number" name="mobile"
-                                id="first_name" placeholder="" value="Telephone"
+                            <input class="form-control" type="number" name="telephone[]"
+                                id="first_name" placeholder="Telephone" value=""
                                 required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="email" name="mobile"
-                                id="title" placeholder="" value="Email" required>
+                            <input class="form-control" type="email" name="email[]"
+                                id="title" placeholder="Email" value="" required>
 
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="mobile"
-                                id="first_name" placeholder=""
-                                value="Referee’s Job Titile" required>
+                            <input class="form-control" type="text" name="job_title[]"
+                                id="first_name" placeholder="Referee’s Job Titile"
+                                value="" required>
                         </div>
                     </div>
                 </div>
@@ -215,44 +216,44 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="mobile"
+                            <input class="form-control" type="text" name="title[]"
                                 id="title" placeholder="Title" value="" required>
 
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="mobile"
-                                id="first_name" placeholder="" value="First Name"
+                            <input class="form-control" type="text"
+                                id="first_name" placeholder="First Name" name="first_name[]"
                                 required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="mobile"
-                                id="title" placeholder="" value="Last Name" required>
+                            <input class="form-control" type="text" name="last_name[]"
+                                id="title" placeholder="Last Name" value="" required>
 
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="number" name="mobile"
-                                id="first_name" placeholder="" value="Telephone"
+                            <input class="form-control" type="number" name="telephone[]"
+                                id="first_name" placeholder="Telephone" value=""
                                 required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="email" name="mobile"
-                                id="title" placeholder="" value="Email" required>
+                            <input class="form-control" type="email" name="email[]"
+                                id="title" placeholder="Email" value="" required>
 
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="mobile"
-                                id="first_name" placeholder=""
-                                value="Referee’s Job Titile" required>
+                            <input class="form-control" type="text" name="job_title[]"
+                                id="first_name" placeholder="Referee’s Job Titile"
+                                value="" required>
                         </div>
                     </div>
                 </div>
@@ -260,44 +261,44 @@
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="mobile"
-                                id="title" placeholder="" value="Title" required>
+                            <input class="form-control" type="text" name="title[]"
+                                id="title" placeholder="Title" value="" required>
 
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="mobile"
-                                id="first_name" placeholder="" value="First Name"
+                            <input class="form-control" type="text"
+                                id="first_name" placeholder="First Name" name="first_name[]"
                                 required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="mobile"
-                                id="title" placeholder="" value="Last Name" required>
+                            <input class="form-control" type="text" name="last_name[]"
+                                id="title" placeholder="Last Name" value="" required>
 
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="number" name="mobile"
-                                id="first_name" placeholder="" value="Telephone"
+                            <input class="form-control" type="number" name="telephone[]"
+                                id="first_name" placeholder="Telephone" value=""
                                 required>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="email" name="mobile"
-                                id="title" placeholder="" value="Email" required>
+                            <input class="form-control" type="email" name="email[]"
+                                id="title" placeholder="Email" value="" required>
 
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="form-group">
-                            <input class="form-control" type="text" name="mobile"
-                                id="first_name" placeholder=""
-                                value="Referee’s Job Titile" required>
+                            <input class="form-control" type="text" name="job_title[]"
+                                id="first_name" placeholder="Referee’s Job Titile"
+                                value="" required>
                         </div>
                     </div>
                 </div>
