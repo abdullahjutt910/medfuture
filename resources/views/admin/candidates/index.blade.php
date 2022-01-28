@@ -52,346 +52,9 @@
                     </div>
                 </div>
 
-               
-                <div class="search-filter-form">
-                    <form action="#" method="">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="candidate-id" placeholder="Candidate ID">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="fname" placeholder="First Name">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="lname" placeholder="Last Name">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="email" name="email" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="gender" placeholder="Gender">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="address-1" placeholder="Address 1">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="address-2" placeholder="Address 2">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="city" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Suburb/City</option>    
-                                        <option value="Australia ">Australia</option>
-                                        <option value="Australia ">nz </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="state" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">State</option>    
-                                        <option value="Australia ">Australia</option>
-                                        <option value="Australia ">nz </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="country" placeholder="Country">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="post-code" placeholder="Post Code">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="mobile-number" placeholder="Mobile Number">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="work-phone" placeholder="Work Phone">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="registered" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Registered</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="verified" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Verified</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="cv" placeholder="CV">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="privacy-term" placeholder="Privacy Term">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="source-name" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Source Name</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="cdf" placeholder="CDF">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="availability" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Availability</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
 
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="working-status" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Working Status</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="local-graduate" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Local Graduate</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="img" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">IMG</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="source-type" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Source Type</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="candidate-manager" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Candidate Manager</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="recruitment-consultant" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Recruitment Consultant</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="data-administrator" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Data Administrator</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="primary-interview-date" placeholder="Primary Interview Date">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="registration-body" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Registration Body</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="type-of-registration" placeholder="Type of Registration">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="grade" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Grade</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="division" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Division</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="visa-status" placeholder="Visa Status">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="profession" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Profession</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="seniority" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Seniority</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="engagement-type" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Engagement Type</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="home-phone" placeholder="Home Phone">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <input  class="form-control" type="text" name="prof-qualification" placeholder="Prof Qualification">
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="engagement-term" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Engagement Term</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="employment-type" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Employment Type</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="registration-via" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Registration Via</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="status" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Status</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="created-date" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Created Date</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col-md-2">
-                                <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="Map Address" aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Map Address</option>    
-                                        <option value="Australia ">Yes</option>
-                                        <option value="Australia ">No </option>
-                                    </select>
-                                </div>
-                            </div>
+               @include('admin.candidates.partials.search')
 
-                            
-                        </div>
-                         <div class="row">
-                            <div class="col-md-12">
-                                <div class="search-form-bottom">
-                                    <button class="btn search-form-btn" type="submit" >Search</button>
-                                    <button class="btn search-form-reset" type="reset" >Reset</button>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </form>
-                </div>
-                    
 
                 <!-- <div class="row">
                     <div class="search-filter-candidate">
@@ -674,7 +337,7 @@
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Candidate ID') }}">
-                                       
+
                                     </td>
                                     <td>
                                         <input class="search" type="text" placeholder="{{ trans('First Name') }}">
@@ -684,7 +347,7 @@
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Gender') }}">
-                                       
+
                                     </td>
                                     <td>
                                     </td>
@@ -735,7 +398,7 @@
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Candidate ID') }}">
-                                       
+
                                     </td>
                                     <td>
                                         <input class="search" type="text" placeholder="{{ trans('First Name') }}">
@@ -745,7 +408,7 @@
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Gender') }}">
-                                     
+
                                     </td>
                                     <td>
                                     </td>
@@ -873,7 +536,7 @@
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Candidate ID') }}">
-                                       
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('First Name') }}">
@@ -881,7 +544,7 @@
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Last Name') }}">
                                     </td>
-                                  
+
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Gender') }}">
 
@@ -982,7 +645,7 @@
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Recognised Comparable Experience') }}">
-                                       
+
                                     </td>
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('CURRENT EMPLOYMENT STATUS') }}">
@@ -1256,7 +919,7 @@
                                     <th>
                                         Action
                                     </th>
-                                    
+
                                 </tr>
 
                             </thead>
@@ -1422,14 +1085,14 @@
                                             <a class="btn btn-xs"
                                                 href="{{ route('admin.candidates.edit', $candidate->id) }}">
                                                 <i class="fas fa-pencil-alt"></i>
-                                               
+
                                             </a>
                                             @endcan
                                             @can('candidate_show')
                                             <a class="btn btn-xs"
                                                 href="{{ route('admin.candidates.show', $candidate->id) }}">
                                                 <i class="far fa-eye"></i>
-                                               
+
                                             </a>
                                             @endcan
                                             @can('candidate_edit')
@@ -1460,7 +1123,7 @@
                     </div>
                 </div>
 
-            
+
             </div>
 
 
