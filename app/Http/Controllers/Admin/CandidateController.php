@@ -215,9 +215,9 @@ class CandidateController extends Controller
         }
 
         //Home Phone
-        if($request->has('engagement_term') && !empty($request->engagement_term))
+        if($request->has('engagement_type') && !empty($request->engagement_type))
         {
-            $candidates->where('engagement_term', 'LIKE', "%{$request->get('engagement_term')}%");
+            $candidates->where('engagement_type', 'LIKE', "%{$request->get('engagement_type')}%");
         }
 
         //Prof Qualification
@@ -330,6 +330,7 @@ class CandidateController extends Controller
         $candidate->candidate_manager = $request->candidate_manager;
         $candidate->recruitement = $request->recruitement;
         $candidate->administrator = $request->administrator;
+        $candidate->employment_type = $request->employment_type;
         $candidate->username = $request->username;
         $candidate->password = $request->password;
 
@@ -533,12 +534,12 @@ class CandidateController extends Controller
         $candidate->experience_from_residing = $request->experience_from_residing;
         $candidate->recognised_comparable_experience = $request->recognised_comparable_experience;
         $candidate->current_employment_status = $request->current_employment_status;
-        $candidate->engagement_term = $request->engagement_term;
+        $candidate->engagement_type = $request->engagement_type;
         $candidate->country_of_citizenship = $request->country_of_citizenship;
         $candidate->country_of_residence = $request->country_of_residence;
         $candidate->visa_type = $request->visa_type;
         $candidate->work_rights_status = $request->work_rights_status;
-        $candidate->placement_term = $request->placement_term;
+        $candidate->employment_type = $request->employment_type;
         $candidate->save();
         // dd($request->all());
 
@@ -550,7 +551,6 @@ class CandidateController extends Controller
         $interview->job_location = $request->job_location;
         $interview->practise_licence_number = $request->practise_licence_number;
         $interview->licence_board = $request->licence_board;
-        $interview->employment_type = $request->employment_type;
         $interview->gross_salary = $request->gross_salary;
         $interview->hourly_rate_expectation = $request->hourly_rate_expectation;
         $interview->billing_share = $request->billing_share;
@@ -665,11 +665,11 @@ class CandidateController extends Controller
         $candidate->mobile = $request->mobile;
         $candidate->home = $request->home;
         $candidate->email = $request->email;
-        $candidate->engagement_term = $request->engagement_term;
-        $candidate->placement_term = $request->placement_term;
+        $candidate->engagement_type = $request->engagement_type;
+        $candidate->employment_term = $request->employment_term;
+        $candidate->employment_type = $request->employment_type;
         $candidate->office_number = $request->office_number;
         $candidate->Profession = $request->Profession;
-        $candidate->current_employment_status = $request->current_employment_status;
         $candidate->candidate_manager = $request->candidate_manager;
         $candidate->recruitement = $request->recruitement;
         $candidate->administrator = $request->administrator;

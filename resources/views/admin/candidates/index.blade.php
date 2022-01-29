@@ -340,13 +340,13 @@
                                         {{ $candidate->specialty ?? '' }}
                                     </td>
                                     <td>
-                                        {{$candidate->engagement_term ?? ''}}
+                                        {{$candidate->engagement_type ?? ''}}
                                     </td>
                                     <td>
-                                        {{$candidate->placement_term ?? ''}}
+                                        {{$candidate->employment_term ?? ''}}
                                     </td>
                                     <td>
-                                        {{$candidate->interview->employment_type ?? ''}}
+                                        {{$candidate->employment_type ?? ''}}
                                     </td>
                                     <td>
                                         {{$candidate->candidate_profile->registration_via ?? ''}}

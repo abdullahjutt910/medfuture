@@ -800,7 +800,7 @@
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <select class="form-control form-select-lg mb-3" name="engagement_term"
+                                    <select class="form-control form-select-lg mb-3" name="engagement_type"
                                         aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Engagement Type</option>
                                         <option value="Casual">Casual</option>
