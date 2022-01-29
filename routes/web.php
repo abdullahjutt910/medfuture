@@ -94,3 +94,5 @@ Route::get('delete_reference/{id}',[ReferenceController::class,'deleteReference'
 Route::post('insert_testimonial/{id}',[TestimonialController::class,'insertTestimonial'])->name('insert_testimonial');
 Route::post('update_testimonial/{id}',[TestimonialController::class,'updateTestimonial'])->name('update_testimonial');
 Route::get('delete_testimonial/{id}',[TestimonialController::class,'deleteTestimonial'])->name('delete_testimonial');
+Route::get('cv_delete/{id}',[CandidateController::class,'cv_delete']);
+

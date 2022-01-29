@@ -949,7 +949,7 @@
                                 <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                     alt="Eye" >
                             </a>
-                            <a href="{{asset('img/dashboard/Download.png')}}" download>
+                            <a href="{{ url('files/'. $candidate->cv_document ?? 'no file') }}" download>
                                 <img src="{{asset('img/dashboard/Download.png')}}"
                                     class="img-fluid gray-color" alt="download">
                             </a>
@@ -957,7 +957,7 @@
                                 <img src="{{asset('img/dashboard/Upload.png')}}"
                                     class="img-fluid gray-color" alt="Upload">
                             </a>
-                            <a href="#">
+                            <a href="{{ url('cv_delete', $candidate->id) }}">
                                 <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                     class="img-fluid gray-color" alt="Delete-Trash">
                             </a>
@@ -1015,7 +1015,7 @@
                                 <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                     alt="Eye">
                             </a>
-                            <a href="{{asset('img/dashboard/Download.png')}}" download>
+                            <a href="{{url('files/'. $candidate->registration_form_document ?? 'no file')}}" download>
                                 <img src="{{asset('img/dashboard/Download.png')}}"
                                     class="img-fluid gray-color" alt="download">
                             </a>
@@ -1082,7 +1082,7 @@
                                 <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                     alt="Eye">
                             </a>
-                            <a href="{{asset('img/dashboard/Download.png')}}" download>
+                            <a href="{{ url('files/'. $candidate->privacy_concerns ?? 'no file') }}" download>
                             <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
                                 alt="download">
                             </a>
@@ -1144,17 +1144,19 @@
                     </div>
                     <div class="col-md-4">
                         <div class="profile-buttons">
-                            <a href="#">
+                            <a href="{{url('files/'. $candidate->cv_document ?? 'no file')}}" target="blank">
                             <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                 alt="Eye">
                             </a>
-                                <a href="{{asset('img/dashboard/Download.png')}}" download>
+                                <a href="{{url('files/'. $candidate->cv_document ?? 'no file')}}" download>
                             <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
                                 alt="download">
                                 </a>
                                 <a href="#">
+
                             <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
                                 alt="Upload">
+
                                 </a>
                                 <a href="#">
                             <img src="{{asset('img/dashboard/Delete-Trash.png')}}"

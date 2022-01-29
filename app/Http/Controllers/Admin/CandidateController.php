@@ -37,7 +37,8 @@ class CandidateController extends Controller
         //ID
         if($request->has('candidate_id') && !empty($request->candidate_id))
         {
-            $candidates->where('id', '=',$request->candidate_id);
+            $candidates->where('id', 'LIKE', "%{$request->get('candidate_id')}%");
+
         }
         //First Name
         if($request->has('fname') && !empty($request->fname))
@@ -727,6 +728,16 @@ class CandidateController extends Controller
         $candidate_profile->visa_status = $request->visa_status;
         $candidate_profile->save();
         return back();
+    }
+
+    public function cv_delete(Request $request, $id)
+    {
+
+       $cv = Candidate::find($id);
+        $cv->cv_document=null;
+        $cv->save();
+        return redirect()->back();
+
     }
 
 
