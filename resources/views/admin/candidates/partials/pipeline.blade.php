@@ -132,7 +132,8 @@
     </div>
 </div>
 <div class="forms-colored-div">
-    <div class="blue"></div>
-    <div class="purple"></div>
-    <div class="pink"></div>
-</div>
+        <div class="blue"></div>
+        <div class="purple"></div>
+        <div class="pink"></div>
+    </div>
+

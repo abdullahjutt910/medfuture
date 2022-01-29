@@ -1229,7 +1229,7 @@ div.dataTables_wrapper div.dataTables_info {
     right: 0;
     width: 260px;
     height: 18px;
-    background-color: #C09513;
+    /* background-color: #C09513; */
 }
 
 .profile-right .forms-colored-div,
@@ -2013,8 +2013,13 @@ textarea{
     color: #fff;
     background-color: #fff;
 }
-
-
+.single-candidate .panel-heading{
+    background-color: #fff !important;
+    padding-bottom: 0px !important;
+}
+.single-candidate .profile-sec{
+    margin-top: 30px;
+}
 /* table  start here*/
 .candidate-profile-table{
     position: relative;
@@ -2263,6 +2268,9 @@ textarea{
 .testimonial-txt-d-none{
     padding-bottom: 30px;
 }
+.profile-eidt-form-inner textarea{
+    width: 100%;
+}
 .profile-eidt-form form{
     margin: 0;
     padding: 20px;
@@ -2346,7 +2354,9 @@ textarea{
 .testimonial-txt-d-none .calendar{
     top: 32px;
 }
-
+.testimonial-txt-d-none .profile-details-upload {
+    margin-left: 15px;
+}
 
 .seniority-doctor-d-none , .nurse-seniority-d-none,.doctor-specialty-d-none , .nurse-specialty-d-none, .AHP-Specialty-d-none, .HE-Specialty-d-none{
     display: none;
@@ -3169,8 +3179,15 @@ textarea{
 .diamond{
     background-color: #b9f2ff !important;
 }
+/* upload icon css */
+.upload_link{
+    text-decoration:none;
+}
+#upload{
+    display:none
+}
 
-/* candidate view all css start here */
+/* ///////////////////////////////////////////////////// candidate view all css start here//////////////////// */
 
 .content {
     background-color: #fff !important;

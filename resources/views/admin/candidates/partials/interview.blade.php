@@ -2908,12 +2908,15 @@
                             </a>
                             <a href="#">
                                 <img src="{{asset('img/dashboard/Download.png')}}"
-                                    class="img-fluid gray-color" alt="download">
+                                    class="img-fluid" alt="download">
                             </a>
-                            <a href="#">
-                                <img src="{{asset('img/dashboard/Upload.png')}}"
-                                    class="img-fluid gray-color" alt="Upload">
-                            </a>
+                            <div class="upload-icon-link">
+                                        <input id="upload" type="file" name="upload"/>
+                                        <a href="#" class="upload_link">
+                                            <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                class="img-fluid gray-color" alt="Upload">
+                                        </a>
+                            </div>
                             <a href="#">
                                 <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                     class="img-fluid gray-color" alt="Delete-Trash">
@@ -2954,12 +2957,15 @@
                             </a>
                             <a href="#">
                             <img src="{{asset('img/dashboard/Download.png')}}"
-                                class="img-fluid gray-color" alt="download">
+                                class="img-fluid" alt="download">
                             </a>
-                            <a href="#">
-                            <img src="{{asset('img/dashboard/Upload.png')}}"
-                                class="img-fluid gray-color" alt="Upload">
-                            </a>
+                            <div class="upload-icon-link">
+                                        <input id="upload" type="file" name="upload"/>
+                                        <a href="#" class="upload_link">
+                                            <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                class="img-fluid gray-color" alt="Upload">
+                                        </a>
+                            </div>
                             <a href="#">
                             <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                 class="img-fluid gray-color" alt="Delete-Trash">
@@ -3001,12 +3007,15 @@
                             </a>
                             <a href="#">
                             <img src="{{asset('img/dashboard/Download.png')}}"
-                                class="img-fluid gray-color" alt="download">
+                                class="img-fluid " alt="download">
                             </a>
-                            <a href="#">
-                            <img src="{{asset('img/dashboard/Upload.png')}}"
-                                class="img-fluid gray-color" alt="Upload">
-                            </a>
+                            <div class="upload-icon-link">
+                                        <input id="upload" type="file" name="upload"/>
+                                        <a href="#" class="upload_link">
+                                            <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                class="img-fluid gray-color" alt="Upload">
+                                        </a>
+                            </div>
                             <a href="#">
                             <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                 class="img-fluid gray-color" alt="Delete-Trash">

@@ -319,9 +319,7 @@
                                         {{$candidate->candidate_profile->registration_type ?? ''}}
                                     </td>
                                     <td>
-                                        <div class="candi-grade">
-                                            {{$candidate->candidate_profile->profile_grade ?? ''}}
-                                        </div>
+                                        <div class="candi-grade">{{$candidate->candidate_profile->profile_grade ?? ''}}</div>
                                     </td>
                                     <td>
                                         {{ $candidate->devision ?? '' }}

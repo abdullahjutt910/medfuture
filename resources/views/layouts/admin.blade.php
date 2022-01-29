@@ -557,12 +557,12 @@ $(document).ready( function () {
       $(".testimonial-edit-btn").click(function(){
         $(".testimonial-txt-edit").hide();
         $(".testimonial-txt-d-none").show();
-        $(".profile-details-upload .profile-buttons img").removeClass("gray-color");
       });
 
       $(".back-btn").click(function(){
         $(".testimonial-txt-d-none").hide();
         $(".testimonial-txt-edit").show();
+        $(".testimonial-upload .profile-buttons .gray-color-add ").addClass("gray-color")
       });
 
       $(".testimonial-remove-btn").click(function(){
@@ -622,16 +622,90 @@ $(document).ready( function () {
         $(".popup-activity").hide();
       })
 
-      $(".files-edit-btn, .refere-doc-edit-btn, .audio-edit-btn").click(function(){
-        $(".profile-buttons img").removeClass("gray-color");
-      })
+// upload icon gray color remove
+      $(".files-edit-btn").click(function(){
+        $(".profile-right .profile-buttons img").removeClass("gray-color");
+
+        $(function(){
+            $(".upload_link").on('click', function(e){
+                e.preventDefault();
+                $("#upload:hidden").trigger('click');
+            });
+          });
+      });
+
+      $(".refere-doc-edit-btn").click(function(){
+        $(".referee-document .profile-buttons img").removeClass("gray-color");
+        
+        $(function(){
+            $(".upload_link").on('click', function(e){
+                e.preventDefault();
+                $("#upload:hidden").trigger('click');
+            });
+          });
+      });
+      $(".audio-edit-btn").click(function(){
+        $(".audio-video-file .profile-buttons img").removeClass("gray-color");
+        
+        $(function(){
+            $(".upload_link").on('click', function(e){
+                e.preventDefault();
+                $("#upload:hidden").trigger('click');
+            });
+          });
+      });
+      $(".testimonial-edit-btn").click(function(){
+        $(".testimonial-upload .profile-buttons img").removeClass("gray-color");
+        
+        $(function(){
+            $(".upload_link").on('click', function(e){
+                e.preventDefault();
+                $("#upload:hidden").trigger('click');
+            });
+          });
+      });
 
 
-
-      // $(".position-dtil-hading").click(function(){
-      //   $('.position-hide').hide();
-      // $(this).parents('.view-job-right').find('.position-hide').toggle();
-      // })
+// profile grade color change
+$(function () {
+        var grade_text = $(".profile-grade-txt").text();
+        if(grade_text === "Platinum"){
+          $(".profile-right-color").addClass("platinum");
+        }
+        if(grade_text === "Diamond"){
+          $(".profile-right-color").addClass("diamond");
+        }
+        if(grade_text === "Gold"){
+          $(".profile-right-color").addClass("gold");
+        }
+        if(grade_text === "Silver"){
+          $(".profile-right-color").addClass("silver");
+        }
+        if(grade_text === "Bronz"){
+          $(".profile-right-color").addClass("bronz");
+        }
+    });
+// profile grade color change
+$(function () {
+        var candi_grade_text = $(".datatable-Candidate tbody tr .candi-grade").text();
+        console.log(candi_grade_text);
+        if(candi_grade_text === "Platinum"){
+          $(".candi-grade").addClass("platinum");
+        }
+        if(candi_grade_text === "Diamond"){
+          $(".candi-grade").addClass("diamond");
+        }
+        if(candi_grade_text === "Gold"){
+          $(".candi-grade").addClass("gold");
+        }
+        if(candi_grade_text === "Silver"){
+          $(".candi-grade").addClass("silver");
+        }
+        if(candi_grade_text === "Bronz"){
+          $(".candi-grade").addClass("bronz");
+        }
+    });
+    
 
 
     })

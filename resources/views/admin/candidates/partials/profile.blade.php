@@ -534,8 +534,8 @@
                             <div class="col-md-11">
                                 <div class="card-body">
                                     <h5 class="card-title">Profile Grade</h5>
-                                    <p class="card-text"><small
-                                            class="text-muted">{{$candidate->candidate_profile->profile_grade ?? '' }}</small>
+                                    <p class="card-text">
+                                        <small class="text-muted profile-grade-txt">{{$candidate->candidate_profile->profile_grade ?? '' }}</small>
                                     </p>
                                 </div>
                             </div>
@@ -956,12 +956,15 @@
                             </a>
                             <a href="{{ url('files/'. $candidate->cv_document ?? 'no file') }}" download>
                                 <img src="{{asset('img/dashboard/Download.png')}}"
-                                    class="img-fluid gray-color" alt="download">
+                                    class="img-fluid" alt="download">
                             </a>
-                            <a href="#">
-                                <img src="{{asset('img/dashboard/Upload.png')}}"
-                                    class="img-fluid gray-color" alt="Upload">
-                            </a>
+                            <div class="upload-icon-link">
+                                <input id="upload" type="file" name="upload-file"/>
+                                <a href="#" class="upload_link">
+                                    <img src="{{asset('img/dashboard/Upload.png')}}"
+                                        class="img-fluid gray-color" alt="Upload">
+                                </a>
+                            </div>
                             <a href="{{ url('cv_delete', $candidate->id) }}">
                                 <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                     class="img-fluid gray-color" alt="Delete-Trash">
@@ -1026,12 +1029,15 @@
                             </a>
                             <a href="{{url('files/'. $candidate->registration_form_document ?? 'no file')}}" download>
                                 <img src="{{asset('img/dashboard/Download.png')}}"
-                                    class="img-fluid gray-color" alt="download">
+                                    class="img-fluid" alt="download">
                             </a>
-                            <a href="#">
-                                <img src="{{asset('img/dashboard/Upload.png')}}"
-                                    class="img-fluid gray-color" alt="Upload">
-                            </a>
+                            <div class="upload-icon-link">
+                                <input id="upload" type="file" name="upload-file"/>
+                                <a href="#" class="upload_link">
+                                    <img src="{{asset('img/dashboard/Upload.png')}}"
+                                        class="img-fluid gray-color" alt="Upload">
+                                </a>
+                            </div>
                             <a href="{{ url('form_delete', $candidate->id) }}">
                                 <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                     class="img-fluid gray-color" alt="Delete-Trash">
@@ -1095,13 +1101,16 @@
                                     alt="Eye">
                             </a>
                             <a href="{{ url('files/'. $candidate->privacy_concerns ?? 'no file') }}" download>
-                            <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
+                            <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid "
                                 alt="download">
                             </a>
-                            <a href="#">
-                            <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
-                                alt="Upload">
-                            </a>
+                            <div class="upload-icon-link">
+                                <input id="upload" type="file" name="upload-file"/>
+                                <a href="#" class="upload_link">
+                                    <img src="{{asset('img/dashboard/Upload.png')}}"
+                                        class="img-fluid gray-color" alt="Upload">
+                                </a>
+                            </div>
                             <a href="{{ url('privacy_delete', $candidate->id) }}">
                             <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                 class="img-fluid gray-color" alt="Delete-Trash">
@@ -1165,15 +1174,16 @@
                                 alt="Eye">
                             </a>
                                 <a href="{{url('files/'. $candidate->cv_document ?? 'no file')}}" download>
-                            <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
+                            <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
                                 alt="download">
                                 </a>
-                                <a href="#">
-
-                            <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
-                                alt="Upload">
-
-                                </a>
+                                <div class="upload-icon-link">
+                                    <input id="upload" type="file" name="upload"/>
+                                    <a href="#" class="upload_link">
+                                        <img src="{{asset('img/dashboard/Upload.png')}}"
+                                            class="img-fluid gray-color" alt="Upload">
+                                    </a>
+                                </div>
                                 <a href="{{ url('cv_delete', $candidate->id) }}">
                             <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                 class="img-fluid gray-color" alt="Delete-Trash">

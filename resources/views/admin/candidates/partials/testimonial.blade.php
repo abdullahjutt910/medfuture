@@ -1,4 +1,4 @@
-
+    <div class="candidate-profile-table">
         <div class="row">
             <div class="col-md-12">
                 <div class="testimonial-heading">
@@ -65,15 +65,18 @@
                                         </a>
                                         <a href="#">
                                             <img src="http://127.0.0.1:8000/img/dashboard/Download.png"
-                                                class="img-fluid gray-color" alt="download">
+                                                class="img-fluid" alt="download">
                                         </a>
-                                        <a href="#">
-                                            <img src="http://127.0.0.1:8000/img/dashboard/Upload.png"
-                                                class="img-fluid gray-color" alt="Upload">
-                                        </a>
+                                        <div class="upload-icon-link">
+                                            <input id="upload" type="file" name="upload"/>
+                                            <a href="#" class="upload_link">
+                                                <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                    class="img-fluid gray-color gray-color-add" alt="Upload">
+                                            </a>
+                                        </div>
                                         <a href="#">
                                             <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png"
-                                                class="img-fluid gray-color" alt="Delete-Trash">
+                                                class="img-fluid gray-color gray-color-add" alt="Delete-Trash">
                                         </a>
                                     </div>
                                 </div>
@@ -138,12 +141,15 @@
                                             </a>
                                             <a href="#">
                                                 <img src="http://127.0.0.1:8000/img/dashboard/Download.png"
-                                                    class="img-fluid gray-color" alt="download">
+                                                    class="img-fluid" alt="download">
                                             </a>
-                                            <a href="#">
-                                                <img src="http://127.0.0.1:8000/img/dashboard/Upload.png"
-                                                    class="img-fluid gray-color" alt="Upload">
-                                            </a>
+                                            <div class="upload-icon-link">
+                                                <input id="upload" type="file" name="upload"/>
+                                                <a href="#" class="upload_link">
+                                                    <img src="{{asset('img/dashboard/Upload.png')}}"
+                                                        class="img-fluid gray-color" alt="Upload">
+                                                </a>
+                                            </div>
                                             <a href="#">
                                                 <img src="http://127.0.0.1:8000/img/dashboard/Delete-Trash.png"
                                                     class="img-fluid gray-color" alt="Delete-Trash">
@@ -161,4 +167,4 @@
                 </div>
             </div>
         </div>
-    
+    </div>
