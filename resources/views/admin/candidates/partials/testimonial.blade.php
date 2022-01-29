@@ -1,5 +1,4 @@
-<section class="testimonial-sec">
-    <div class="container-fluid">
+
         <div class="row">
             <div class="col-md-12">
                 <div class="testimonial-heading">
@@ -88,18 +87,23 @@
                         <div class="col-md-12 profile-eidt-form-inner">
                             <label for="Job Summary Note">Job Summary Note</label>
                             <textarea name="testimonial_summary" id="Job_Summary_Note" cols="100" 
-                            rows="5">{{$candidate->testimonial->testimonial_summary ?? ''}}
+                            rows="5">
+                            {{ $candidate->testimonial[0]->testimonial_summary ?? '' }} 
                         </textarea>
                         </div>
                         <div class="col-md-4 profile-eidt-form-inner">
                             <label for="Testimonial Note Name">Testimonial Note Name</label>
                             <input class="form-control" type="text" name="testimonial_name"
-                                id="Testimonial_Note_Name" value="{{old('start_date',$candidate->testimonial->testimonial_name ?? '')}}">
+                                id="Testimonial_Note_Name" value="
+                                {{ $candidate->testimonial[0]->testimonial_name ?? '' }} 
+                                ">
                         </div>
                         <div class="col-md-4 profile-eidt-form-inner form-group">
                             <label for="Testimonial Note Date">Testimonial Note Date</label>
                             <input class="form-control date" type="calander" name="testimonial_date" placeholder=""
-                                id="Testimonial_Note_Date" value="{{old('start_date',$candidate->testimonial->testimonial_date ?? '')}}">
+                                id="Testimonial_Note_Date" value="
+                                {{ $candidate->testimonial[0]->testimonial_date ?? ''}}
+                                ">
                             <img src="{{asset('img/dashboard/calendar-icon.png')}}" class="calendar"
                                 alt="calendar-icon">
                         </div>
@@ -157,10 +161,4 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="forms-colored-div">
-        <div class="blue"></div>
-        <div class="purple"></div>
-        <div class="pink"></div>
-    </div>
-</section>
+    

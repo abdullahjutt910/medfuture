@@ -129,8 +129,11 @@
     /* .notification-btns .btn {
         width: 190px;
     } */
-    /* .search-filter-form .col-md-2{
-        width: 8.33333333%;
-    } */
+    .search-filter-form-inner .col-md-2{
+        width: 12.5%;
+    }
+    .search-filter-form-inner .col-md-4{
+        width: 25%;
+    }
 
 }

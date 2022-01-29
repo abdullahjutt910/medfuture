@@ -3169,31 +3169,150 @@ textarea{
 }
 
 /* candidate view all css start here */
-.search-fields, .dt-buttons, .no-row{
+
+.content {
+    background-color: #fff !important;
+}
+.panel {
+    background-color: #fff !important;
+}
+.dataTables_wrapper{
+    background-color: #fff !important;
+}
+.search-fields,.dt-buttons, .no-row{
     display: none;
 }
-.search-filter-form{
-    padding: 10px;
+.search-filter-main{
+    position: relative;
+    padding-bottom: 15px !important;
+    box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
+}
+.search-filter-top{
+    background-color: #D5D5D5;
+    padding: 22px 7px;
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    margin-bottom: 0px !important;
+    font-family: 'Lato', sans-serif !important;
+}
+.search-filter-top-left {
+    text-align: left;
+}
+.search-filter-top-right{
+    text-align: right;
+}
+.search-filter-top .btn, .search-filter-top select{
+    color: #00326D;
+    background-color: #fff;
+    width: 110px;
+    margin-right: 10px;
+    height: 50px;
+    border-radius: 7px;
+    font-size: 13px;
+    border: none !important;
+    font-weight: 600;
+    text-align: center;
+}
+.search-filter-top select{
+    background-image: url(../img/dashboard/sort_down.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    image-rendering: -webkit-optimize-contrast;
+}
+.work-status-select{
+    display: inline-block;
+    vertical-align: top;
+}
+.panel-select{
+    display: inline-block;
+    vertical-align: top;
+}
+.print-btn, .excel-btn{
+    position: relative;
+}
+.print-btn::after {
+    position: absolute;
+    content: "";
+    background: url(../img/dashboard/Print.png) no-repeat;
+    background-size: contain;
+    width: 17px;
+    height: 17px;
+    right: 15px;
+    image-rendering: -webkit-optimize-contrast;
+}
+.excel-btn::after {
+        position: absolute;
+        content: "";
+        background: url(../img/dashboard/Microsoft_Excel.png) no-repeat;
+        background-size: contain;
+        width: 17px;
+        height: 17px;
+        right: 15px;
+        image-rendering: -webkit-optimize-contrast;
+}
+.hide-search{
+    width: 45px !important;
+    position: relative;
+}
+.hide-search::after{
+    position: absolute;
+    content: "\f068";
+    width: 20px;
+    height: 20px;
+    right: 13px;
+    top: 18px;
+    font-size: 12px;
+    image-rendering: -webkit-optimize-contrast;
+    font-family: "FontAwesome";
+}
+.plus-toggle::after{
+    position: absolute;
+    content: "\f067" !important;
+    width: 20px;
+    height: 20px;
+    right: 13px;
+    top: 18px;
+    font-size: 12px;
+    image-rendering: -webkit-optimize-contrast;
+    font-family: "FontAwesome";
+}
+.search-filter-form-inner{
+    padding: 20px 20px;
     background-color: #fff;
 }
-.search-filter-form select{
+.search-filter-form-inner select{
     font-size: 12px;
     color: #000;
+    border: 1px solid #686868 !important;
     background-image: url(../img/dashboard/sort_down.png);
     background-repeat: no-repeat;
     background-size: 15px;
     background-position: right;
     image-rendering: -webkit-optimize-contrast;
+    padding: 6px 5px !important;
+
 }
-.search-filter-form input::placeholder{
+.search-filter-form-inner .form-control{
+    padding: 6px 5px !important;
+}
+.search-filter-form-inner input::placeholder{
     font-size: 12px;
     color: #000;
 }
-.search-filter-form .form-control{
+.search-filter-form-inner input{
+    border: 1px solid #686868 !important;
+}
+.search-filter-form-inner .form-control{
     font-size: 12px;
+}
+.search-filter-form-inner .form-group {
+    margin-bottom: 30px;
 }
 .search-form-bottom{ 
     text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
 }
 .search-form-bottom .btn{
     padding: 9px 33px;
@@ -3209,8 +3328,8 @@ textarea{
 .search-form-bottom .search-form-btn{
     background-image: url(../img/dashboard/search-2.png);
     background-repeat: no-repeat;
-    background-position: 4px;
-    background-size: 25px;
+    background-position: 4px 11px;
+    background-size: 21px;
     image-rendering: -webkit-optimize-contrast;
 }
 .search-form-bottom .search-form-reset{

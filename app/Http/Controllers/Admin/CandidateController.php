@@ -619,7 +619,7 @@ class CandidateController extends Controller
     public function show(Candidate $candidate)
     {
         abort_if(Gate::denies('candidate_show'), Response::HTTP_FORBIDDEN, '403 Forbidden');
-         $candidates = $candidate->with('candidate_profile','interview','progbar','activebar','reference','testimonial')->first();
+         $candidate = $candidate->with('candidate_profile','interview','progbar','activebar','reference','testimonial')->first();
         // dd(Reference::get());
         // dd($candidate);
         return view('admin.candidates.show', compact('candidate'));
@@ -732,12 +732,24 @@ class CandidateController extends Controller
 
     public function cv_delete(Request $request, $id)
     {
-
        $cv = Candidate::find($id);
         $cv->cv_document=null;
         $cv->save();
-        return redirect()->back();
-
+        return back();
+    }
+    public function form_delete(Request $request, $id)
+    {
+       $cv = Candidate::find($id);
+        $cv->registeration_form_document=null;
+        $cv->save();
+        return back();
+    }
+    public function privacy_delete(Request $request, $id)
+    {
+       $cv = Candidate::find($id);
+        $cv->privacy_concerns=null;
+        $cv->save();
+        return back();
     }
 
 

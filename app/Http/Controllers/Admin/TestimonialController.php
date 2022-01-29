@@ -11,30 +11,17 @@ class TestimonialController extends Controller
 {
     public function insertTestimonial(Request $request, $id)
     {
-        
-        if(Testimonial::first('testimonial_summary') == null)
+        $testimonial = Testimonial::where('candidate_id',$id)->first();
+        if(is_null($testimonial))
         {
-            
-        $testimonial = new Testimonial;
+            $testimonial = new Testimonial;
+        }
         $testimonial->candidate_id = $id;
         $testimonial->testimonial_summary = $request->testimonial_summary;
         $testimonial->testimonial_name = $request->testimonial_name;
         $testimonial->testimonial_date = $request->testimonial_date;
         // $testimonial->testimonial_cv = $request->testimonial_cv;
         $testimonial->save();
-        }
-        else{
-            
-        $testimonial = Testimonial::where('candidate_id',$id)->first();
-        $candidate = Candidate::find($id);
-        $testimonial->candidate_id = $candidate->id;
-        // $testimonial->candidate_id = $id;
-        $testimonial->testimonial_summary = $request->testimonial_summary;
-        $testimonial->testimonial_name = $request->testimonial_name;
-        $testimonial->testimonial_date = $request->testimonial_date;
-        // $testimonial->testimonial_cv = $request->testimonial_cv;
-        $testimonial->save();
-        }
         return redirect()->back();
     }
 

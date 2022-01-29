@@ -1,7 +1,6 @@
 @extends('layouts.admin')
 @section('content')
 <div class="content">
-
     <div class="row candidate-all">
         <div class="col-lg-12">
             <div class="panel panel-default">
@@ -51,8 +50,6 @@
                         </ul>
                     </div>
                 </div>
-
-
 
 
                @include('admin.candidates.partials.search')
@@ -263,6 +260,9 @@
                                             @endforeach
                                         </select>
                                     </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
 
                                 <tr class="search-fields">
@@ -404,6 +404,11 @@
                                     <td>
                                     <input class="search" type="text" placeholder="{{ trans('Username') }}">
                                     </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td class="total-candi">
@@ -505,6 +510,16 @@
                                     </td>
                                     <td>
                                     </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td>
+                                    </td>
                                 </tr>
 
                                 <tr>
@@ -541,22 +556,26 @@
                                     <th>
                                         {{ trans('Country') }}
                                     </th>
-                                    <th>
+                                    <!-- <th>
                                         {{ trans('ABN') }}
-                                    </th>
+                                    </th> -->
                                     <th>
                                         {{ trans('Postcode') }}
                                     </th>
                                     <th>
                                         {{ trans('Mobile Number') }}
                                     </th>
+                                    <!-- <th>
+                                        {{ trans('Home Phone') }}
+                                    </th>  -->
                                     <th>
+                                        {{ trans('Work Phone') }}
+                                    </th>
+                                    <!--
+                                        <th>
                                         {{ trans('DOB') }}
-                                    </th>
-                                    <th>
-                                        {{ trans('Work') }}
-                                    </th>
-                                    <th>
+                                    </th> -->
+                                    <!-- <th>
                                         {{ trans('Distance To main') }}
                                     </th>
                                     <th>
@@ -568,6 +587,7 @@
                                     <th>
                                         {{ trans('Main City') }}
                                     </th>
+                                    -->
                                     <th>
                                         {{ trans('Registered') }}
                                     </th>
@@ -575,7 +595,10 @@
                                         {{ trans('Verified') }}
                                     </th>
                                     <th>
-                                        {{ trans('privacy Term') }}
+                                        {{ trans('CV') }}
+                                    </th>
+                                    <th>
+                                        {{ trans('Privacy Term') }}
                                     </th>
                                     <th>
                                         {{ trans('Source Name') }}
@@ -590,32 +613,59 @@
                                         {{ trans('Working Status') }}
                                     </th>
                                     <th>
+                                        {{ trans('Local Graduate') }}
+                                    </th>
+                                    <th>
+                                        {{ trans('IMG') }}
+                                    </th>
+                                    <th>
                                         {{ trans('Source Type') }}
+                                    </th>
+                                    <th>
+                                        {{ trans('Prof Qualification') }}
                                     </th>
                                     <th>
                                         {{ trans('Candidate Manager') }}
                                     </th>
                                     <th>
-                                        {{ trans('Recruitment Consultant') }}
+                                        {{ trans('Rec Consultant') }}
                                     </th>
                                     <th>
                                         {{ trans('Data Administrator') }}
+                                    </th>
+                                    <th>
+                                        {{ trans('Primary Interview Date') }}
                                     </th>
 
                                     <th>
                                         {{ trans('Registration Body') }}
                                     </th>
                                     <th>
-                                        {{ trans('Registration Type') }}
+                                        {{ trans('Type of Registration') }}
                                     </th>
                                     <th>
-                                        {{ trans('Profile Grade') }}
+                                        {{ trans('Grade') }}
                                     </th>
                                     <th>
-                                        {{ trans('Engagement Term') }}
+                                        {{ trans('Division') }}
                                     </th>
                                     <th>
-                                        {{ trans('Placement Term') }}
+                                        {{ trans('Visa Status') }}
+                                    </th>
+                                    <th>
+                                        {{ trans('Profession') }}
+                                    </th>
+                                    <th>
+                                        {{ trans('Seniority') }}
+                                    </th>
+                                    <th>
+                                        {{ trans('Specialty') }}
+                                    </th>
+                                    <th>
+                                        {{ trans('Engagement Type') }}
+                                    </th>
+                                    <th>
+                                        {{ trans('Employment Term') }}
                                     </th>
                                     <th>
                                         {{ trans('Employment Type') }}
@@ -624,9 +674,15 @@
                                         {{ trans('Registration Via') }}
                                     </th>
                                     <th>
+                                        {{ trans('Status') }}
+                                    </th>
+                                    <th>
                                         {{ trans('Created Date') }}
                                     </th>
                                     <th>
+                                        Action
+                                    </th>
+                                    <!-- <th>
                                         {{ trans('Profession') }}
                                     </th>
                                     <th>
@@ -707,10 +763,7 @@
                                     </th>
                                     {{-- <th>
                                         {{ trans('Status') }}
-                                    </th> --}}
-                                    <th>
-                                        Action
-                                    </th>
+                                    </th> --}} -->
 
                                 </tr>
 
@@ -751,14 +804,16 @@
                                         <td>
                                             {{ $candidate->state ?? '' }}
                                         </td>
+
                                         <td>
-                                            {{ $candidate->home ?? '' }}
+                                            map address
                                         </td>
+                                         <!--
+                                         <td>
+                                            {{ $candidate->home ?? '' }}
+                                        </td> -->
                                         <td>
                                             {{ $candidate->country ?? '' }}
-                                        </td>
-                                        <td>
-                                            ksbfkl
                                         </td>
                                         <td>
                                             {{ $candidate->post_code ?? '' }}
@@ -766,17 +821,19 @@
                                         <td>
                                             {{ $candidate->mobile ?? '' }}
                                         </td>
-                                        <td>
+                                        <!-- <td>
                                             {{ $candidate->dob ?? '' }}
                                         </td>
-
+                                        <td>
+                                            home phone
+                                        </td>
+                                        -->
 
                                         <td>
                                             {{ $candidate->work ?? '' }}
                                         </td>
 
-
-                                        <td>
+                                        <!-- <td>
                                             {{ $candidate->distance_to_main ?? '' }}
                                         </td>
                                         <td>
@@ -789,12 +846,15 @@
 
                                         <td>
                                             {{ $candidate->main_city ?? '' }}
-                                        </td>
+                                        </td> -->
                                         <td>
                                             {{$candidate->candidate_profile->register ?? ''}}
                                         </td>
                                         <td>
                                             {{$candidate->candidate_profile->verified ?? ''}}
+                                        </td>
+                                        <td>
+                                            cv
                                         </td>
                                         <td>
                                             {{$candidate->candidate_profile->privacy_term ?? ''}}
@@ -812,16 +872,29 @@
                                             {{$candidate->candidate_profile->working_status ?? ''}}
                                         </td>
                                         <td>
+                                            local graduate
+                                        </td>
+                                        <td>
+                                            IMG
+                                        </td>
+
+                                        <td>
                                             {{$candidate->candidate_profile->source_type ?? ''}}
                                         </td>
                                         <td>
-                                            {{$candidate->candidate_manager ?? ''}}
+                                            prof qualification
+                                        </td>
+                                        <td>
+                                            <!-- {{$candidate->candidate_manager ?? ''}} -->
                                         </td>
                                         <td>
                                             {{$candidate->recruitement ?? ''}}
                                         </td>
                                         <td>
                                             {{$candidate->administrator ?? ''}}
+                                        </td>
+                                        <td>
+                                            privacy interview date
                                         </td>
                                         <td>
                                             {{$candidate->candidate_profile->registeration_body ?? ''}}
@@ -831,6 +904,22 @@
                                         </td>
                                         <td>
                                             {{$candidate->candidate_profile->profile_grade ?? ''}}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->devision ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->visa_type ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->profession ?? '' }}
+                                        </td>
+
+                                        <td>
+                                            {{ $candidate->senority ?? '' }}
+                                        </td>
+                                        <td>
+                                            {{ $candidate->specialty ?? '' }}
                                         </td>
                                         <td>
                                             {{$candidate->engagement_term ?? ''}}
@@ -845,21 +934,13 @@
                                             {{$candidate->candidate_profile->registration_via ?? ''}}
                                         </td>
                                         <td>
+                                            status
+                                        </td>
+                                        <td>
                                             {{$candidate->created_at ?? ''}}
                                         </td>
-                                        <td>
-                                            {{ $candidate->profession ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $candidate->devision ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $candidate->senority ?? '' }}
-                                        </td>
-                                        <td>
-                                            {{ $candidate->specialty ?? '' }}
-                                        </td>
-                                        <td>
+
+                                        <!-- <td>
                                             {{ $candidate->professional_qualification ?? '' }}
                                         </td>
                                         <td>
@@ -898,9 +979,7 @@
                                         <td>
                                             {{ $candidate->country_of_residence ?? '' }}
                                         </td>
-                                        <td>
-                                            {{ $candidate->visa_type ?? '' }}
-                                        </td>
+
                                         <td>
                                             {{ $candidate->work_rights_status ?? '' }}
                                         </td>
@@ -926,45 +1005,45 @@
                                             @if($candidate->privacy_concerns)
                                             <a href="{{ url('files/'. $candidate->privacy_concerns) }}" target="_blank">{{ trans('global.view_file') }}</a>
                                             @endif
-                                        </td>
+                                        </td> -->
                                         <td class="candidate-crud-list-btn ">
-                                        <span class="three-dots btn btn-xs"><i class="fas fa-ellipsis-v"></i></span>
-                                        <div class="candidate-update v-hide">
-                                            @can('candidate_edit')
-                                            <a class="btn btn-xs"
-                                                href="{{ route('admin.candidates.edit', $candidate->id) }}">
-                                                <i class="fas fa-pencil-alt"></i>
+                                            <span class="three-dots btn btn-xs"><i class="fas fa-ellipsis-v"></i></span>
+                                            <div class="candidate-update v-hide">
+                                                @can('candidate_edit')
+                                                <a class="btn btn-xs"
+                                                    href="{{ route('admin.candidates.edit', $candidate->id) }}">
+                                                    <i class="fas fa-pencil-alt"></i>
 
-                                            </a>
-                                            @endcan
-                                            @can('candidate_show')
-                                            <a class="btn btn-xs"
-                                                href="{{ route('admin.candidates.show', $candidate->id) }}">
-                                                <i class="far fa-eye"></i>
+                                                </a>
+                                                @endcan
+                                                @can('candidate_show')
+                                                <a class="btn btn-xs"
+                                                    href="{{ route('admin.candidates.show', $candidate->id) }}">
+                                                    <i class="far fa-eye"></i>
 
-                                            </a>
-                                            @endcan
-                                            @can('candidate_edit')
-                                            <a class="btn btn-xs"
-                                                href="{{ route('admin.candidates.edit', $candidate->id) }}">
-                                                <i class="fas fa-upload"></i>
-                                            </a>
-                                            @endcan
-                                            @can('candidate_delete')
-                                            <form action="{{ route('admin.candidates.destroy', $candidate->id) }}"
-                                                method="POST"
-                                                onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
-                                                style="display: inline-block;">
-                                                <input type="hidden" name="_method" value="DELETE">
-                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                                <button type="submit" class="btn btn-xs">
-                                                    <i class="far fa-trash-alt"></i>
-                                                </button>
-                                            </form>
-                                            @endcan
-                                        </div>
-                                    </td>
-
+                                                </a>
+                                                @endcan
+                                                @can('candidate_edit')
+                                                <a class="btn btn-xs"
+                                                    href="{{ route('admin.candidates.edit', $candidate->id) }}">
+                                                    <i class="fas fa-upload"></i>
+                                                </a>
+                                                @endcan
+                                                @can('candidate_delete')
+                                                <form action="{{ route('admin.candidates.destroy', $candidate->id) }}"
+                                                    method="POST"
+                                                    onsubmit="return confirm('{{ trans('global.areYouSure') }}');"
+                                                    style="display: inline-block;">
+                                                    <input type="hidden" name="_method" value="DELETE">
+                                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                    <button type="submit" class="btn btn-xs">
+                                                        <i class="far fa-trash-alt"></i>
+                                                    </button>
+                                                </form>
+                                                @endcan
+                                            </div>
+                                        </td>
+                                        <td></td>
                                     </tr>
                                     @endforeach
                                 </tbody>

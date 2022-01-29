@@ -634,8 +634,16 @@
                         </div>
                     </div>
                 </section>
-
-                @include('admin.candidates.partials.testimonial')
+                <section class="testimonial-sec">
+                    <div class="container-fluid">
+                        @include('admin.candidates.partials.testimonial')
+                    </div>
+                    <div class="forms-colored-div">
+                    <div class="blue"></div>
+                    <div class="purple"></div>
+                    <div class="pink"></div>
+                </div>
+                </section>
             </div>
             <!-- counter end -->
             @include('admin.candidates.partials.pipeline')

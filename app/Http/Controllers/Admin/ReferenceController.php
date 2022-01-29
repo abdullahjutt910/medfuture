@@ -14,6 +14,7 @@ class ReferenceController extends Controller
         $data = $_POST;
         if(count($data['title']) > 0)
         {
+            Reference::where('candidate_id',$id)->delete();
             for($i = 0; $i < count($data['title']);$i++)
             {
                 if(
@@ -35,7 +36,6 @@ class ReferenceController extends Controller
                     $reference->job_title = $data['job_title'][$i];
                     $reference->save();
                 }
-
             }
         }
         return back();
