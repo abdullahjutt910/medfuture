@@ -7,6 +7,7 @@ textarea {
     width: 100% !important;
 }
 
+
 table.dataTable tbody td.select-checkbox::before,
 table.dataTable tbody td.select-checkbox::after,
 table.dataTable tbody th.select-checkbox::before,
@@ -86,6 +87,7 @@ table.dataTable thead .sorting_desc {
 /* https://fontawesome.com/v5.15/icons/chevron-circle-left?style=solid */
 body{
     font-family: 'lato', sans-serif !important;
+    margin: 0px !important;
 }
 @font-face {
     font-family: Calibri;
