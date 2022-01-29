@@ -60,7 +60,7 @@
                         <div class="row">
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <input class="form-control" type="text" name="candidate-id"
+                                    <input class="form-control" type="number" name="candidate-id"
                                         placeholder="Candidate ID">
                                 </div>
                             </div>
@@ -207,7 +207,7 @@
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <input class="form-control" type="text" name="work" placeholder="Work">
+                                    <input class="form-control" type="text" name="work" placeholder="Work Phone">
                                 </div>
                             </div>
                             <div class="col-md-2">
@@ -348,8 +348,38 @@
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <div class="form-group">
-                                        <input class="form-control" type="text" name="candidate_manager"
-                                            placeholder="Candidate Manager">
+                                        <select class="form-control form-select-lg mb-3" name="candidate_manager"
+                                            aria-label=".form-select-lg example">
+                                            <option value="" disabled="" selected="">Candidate Manager</option>
+                                            <option value="Anjali Amanda Fernando">Anjali Amanda Fernando</option>
+                                            <option value="Azra Medfuture">Azra Medfuture</option>
+                                            <option value="Belinda Medfuture">Belinda Medfuture</option>
+                                            <option value="Charith Marcus">Charith Marcus</option>
+                                            <option value="Chathuri Disanayake">Chathuri Disanayake</option>
+                                            <option value="Dinukshi Perera">Dinukshi Perera</option>
+                                            <option value="Isuri Galhena">Isuri Galhena</option>
+                                            <option value="Keerthana Rajasekaram">Keerthana Rajasekaram</option>
+                                            <option value="Kethmini Fernando">Kethmini Fernando</option>
+                                            <option value="Madhurshana Arunasalam">Madhurshana Arunasalam</option>
+                                            <option value="Mary Roshella Silva">Mary Roshella Silva</option>
+                                            <option value="Michael Medfuture">Michael Medfuture</option>
+                                            <option value="Nigel Ransford Slemmermann">Nigel Ransford Slemmermann
+                                            </option>
+                                            <option value="Niraj Chenthoran">Niraj Chenthoran</option>
+                                            <option value="Nuwanga Yainne">Nuwanga Yainne</option>
+                                            <option value="Prashanthi">Prashanthi </option>
+                                            <option value="Priyalini Ravichandran">Priyalini Ravichandran</option>
+                                            <option value="Ragavi Vinojan">Ragavi Vinojan</option>
+                                            <option value="Rudra Mahendran">Rudra Mahendran</option>
+                                            <option value="Saly Medfuture">Saly Medfuture</option>
+                                            <option value="SARANGA LAKMINI">SARANGA LAKMINI</option>
+                                            <option value="Selma Sadikovic">Selma Sadikovic</option>
+                                            <option value="Shajenth Sathananthan">Shajenth Sathananthan</option>
+                                            <option value="Sherinka Chandiram">Sherinka Chandiram</option>
+                                            <option value="Shilpa Sreeja">Shilpa Sreeja</option>
+                                            <option value="Sree Ranju">Sree Ranju</option>
+                                            <option value="Uttara Chandratreya">Uttara Chandratreya</option>
+                                        </select>
                                     </div>
 
                                 </div>
@@ -357,8 +387,40 @@
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <div class="form-group">
-                                        <input class="form-control" type="text" name="recruitement"
-                                            placeholder="Recruitment Consultant">
+                                        <!-- <input class="form-control" type="text" name="recruitement"
+                                            placeholder="Recruitment Consultant"> -->
+                                        <select class="form-control form-select-lg mb-3" name="recruitement"
+                                            aria-label=".form-select-lg example">
+                                            <option value="" disabled="" selected="">Recruitment Consultant</option>
+                                            <option value="Anjali Amanda Fernando">Anjali Amanda Fernando</option>
+                                            <option value="Azra Medfuture">Azra Medfuture</option>
+                                            <option value="Belinda Medfuture">Belinda Medfuture</option>
+                                            <option value="Charith Marcus">Charith Marcus</option>
+                                            <option value="Chathuri Disanayake">Chathuri Disanayake</option>
+                                            <option value="Dinukshi Perera">Dinukshi Perera</option>
+                                            <option value="Isuri Galhena">Isuri Galhena</option>
+                                            <option value="Keerthana Rajasekaram">Keerthana Rajasekaram</option>
+                                            <option value="Kethmini Fernando">Kethmini Fernando</option>
+                                            <option value="Madhurshana Arunasalam">Madhurshana Arunasalam</option>
+                                            <option value="Mary Roshella Silva">Mary Roshella Silva</option>
+                                            <option value="Michael Medfuture">Michael Medfuture</option>
+                                            <option value="Nigel Ransford Slemmermann">Nigel Ransford Slemmermann
+                                            </option>
+                                            <option value="Niraj Chenthoran">Niraj Chenthoran</option>
+                                            <option value="Nuwanga Yainne">Nuwanga Yainne</option>
+                                            <option value="Prashanthi">Prashanthi </option>
+                                            <option value="Priyalini Ravichandran">Priyalini Ravichandran</option>
+                                            <option value="Ragavi Vinojan">Ragavi Vinojan</option>
+                                            <option value="Rudra Mahendran">Rudra Mahendran</option>
+                                            <option value="Saly Medfuture">Saly Medfuture</option>
+                                            <option value="SARANGA LAKMINI">SARANGA LAKMINI</option>
+                                            <option value="Selma Sadikovic">Selma Sadikovic</option>
+                                            <option value="Shajenth Sathananthan">Shajenth Sathananthan</option>
+                                            <option value="Sherinka Chandiram">Sherinka Chandiram</option>
+                                            <option value="Shilpa Sreeja">Shilpa Sreeja</option>
+                                            <option value="Sree Ranju">Sree Ranju</option>
+                                            <option value="Uttara Chandratreya">Uttara Chandratreya</option>
+                                        </select>
                                     </div>
 
                                 </div>
@@ -366,8 +428,24 @@
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <div class="form-group">
-                                        <input class="form-control" type="text" name="administrator"
-                                            placeholder="Data Administrator">
+                                        <!-- <input class="form-control" type="text" name="administrator"
+                                            placeholder="Data Administrator"> -->
+                                        <select class="form-control form-select-lg mb-3" name="administrator"
+                                            aria-label=".form-select-lg example">
+                                            <option value="" disabled="" selected="">Data Administrator</option>
+                                            <option value="Alisha Quib">Alisha Quib</option>
+                                            <option value="Arzana Medfuture">Arzana Medfuture</option>
+                                            <option value="Avijit Brahma">Avijit Brahma</option>
+                                            <option value="Imesha Imesha">Imesha Imesha</option>
+                                            <option value="john doe">john doe</option>
+                                            <option value="Navod Abey">Navod Abey</option>
+                                            <option value="Nawsar Fathima Anusha">Nawsar Fathima Anusha</option>
+                                            <option value="Purnima purnima">Purnima purnima</option>
+                                            <option value="Sharanya Ramachandran">Sharanya Ramachandran</option>
+                                            <option value="Udayanga Dasunpriya">Udayanga Dasunpriya</option>
+                                            <option value="Website Development Medfuture">Website Development Medfuture
+                                            </option>
+                                        </select>
                                     </div>
 
                                 </div>
@@ -459,10 +537,9 @@
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
-
-                                    <select class="form-control form-select-lg mb-3" name="senority"
-                                        aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Seniority</option>
+                                    <select class="seniority-doctor form-control form-select-lg mb-3"
+                                        name="senority" aria-label=".form-select-lg example">
+                                        <option value="" selected="" disabled="">Senority</option>
                                         <option value="Internship - PGY Year 1">
                                             Internship
                                             - PGY Year 1 </option>
@@ -488,15 +565,202 @@
                                         <option value="Visiting Medical Officer">
                                             Visiting Medical Officer</option>
                                         <option value="Consultant">Consultant</option>
+                                    </select>
+                                    <!-- <select class="nurse-seniority-d-none form-control form-select-lg mb-3"
+                                        name="senority" aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Senority</option>
+                                        <option value="PCA / AIN / Care Worker">PCA /
+                                            AIN / Care Worker</option>
+                                        <option value="Enrolled Nurse (EN)">Enrolled
+                                            Nurse (EN)</option>
+                                        <option value="Endorsed Enrolled Nurse (EEN)">
+                                            Endorsed Enrolled Nurse (EEN)</option>
+                                        <option value="Registered Nurse (RN)">Registered
+                                            Nurse (RN)</option>
+                                        <option value="Advanced Practice Nurse / Nurse Practitioner">
+                                            Advanced Practice Nurse / Nurse Practitioner
+                                        </option>
+                                        <option value="Specialist">Specialist </option>
+                                        <option value="Specialist Nurse / Clinical Nurse Specialist">
+                                            Specialist Nurse / Clinical Nurse Specialist
+                                        </option>
+                                        <option value="Midwives">Midwives</option>
+                                        <option value="Nurse Manager">Nurse Manager
+                                        </option>
+                                        <option value="Director of Nursing Practice (DNP)">
+                                            Director of Nursing Practice (DNP)</option>
+                                        <option value="Chief Nursing Officer (CNO)">
+                                            Chief Nursing Officer (CNO)</option>
+                                    </select>
+                                    <select class="seniority-AHP-d-none form-control form-select-lg mb-3"
+                                        name="senority" aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Senority</option>
+                                        <option value="Provisional Pychologist">Provisional Pychologist</option>
+                                        <option value="Psychologist">Psychologist</option>
+                                        <option value="Senior Psychologist">Senior Psychologist</option>
+                                        <option value="Provisional Physciotherapist">Provisional Physciotherapist
+                                        </option>
+                                        <option value="Physciotherapist">Physciotherapist</option>
+                                        <option value="Senior Physciotherapist">Senior Physciotherapist</option>
+                                        <option value="Provisional Podiatrist">Provisional Podiatrist</option>
+                                        <option value="Podiatrist">Podiatrist</option>
+                                        <option value="Senior Podiatrist">Senior Podiatrist</option>
+                                        <option value="Provisional Speech Therapist">Provisional Speech Therapist
+                                        </option>
+                                        <option value="Speech Therapist">Speech Therapist</option>
+                                        <option value="Senior Speech Therapist">Senior Speech Therapist</option>
+                                        <option value="Provisional Occupational Therapist">Provisional Occupational
+                                            Therapist</option>
+                                        <option value="Occupational Therapist">Occupational Therapist</option>
+                                        <option value="Senios Occupational Therapist">Senios Occupational Therapist
+                                        </option>
+                                        <option value="Dentist">Dentist</option>
+                                        <option value="Senior Dentist">Senior Dentist</option>
+                                        <option value="Dentistry Specialist">Dentistry Specialist</option>
+                                        <option value="Provisional Occupational Therapist">Provisional Occupational
+                                            Therapist</option>
+                                        <option value="Occupational Therapist">Occupational Therapist</option>
+                                        <option value="Senior Occupational Therapist">Senior Occupational Therapist
+                                        </option>
+                                        <option value="Provisional Dietitians">Provisional Dietitians</option>
+                                        <option value="Dietitians">Dietitians</option>
+                                        <option value="Senior Dietitians">Senior Dietitians</option>
+                                    </select>
+                                    <select class="seniority-HE-d-none form-control form-select-lg mb-3" name="senority"
+                                        aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Senority</option>
+                                        <option value="Business Managers ">Business Managers </option>
+                                        <option value="General Managers ">General Managers </option>
+                                        <option value="Medical Administrators ">Medical Administrators </option>
+                                        <option value="Medical Director ">Medical Director </option>
+                                        <option value="Medical Receptionist">Medical Receptionist</option>
+                                        <option value="Practice Manager">Practice Manager</option>
+                                        <option value="Professional Management Consultants ">Professional Management
+                                            Consultants </option>
+                                    </select> -->
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+
+
+                                    <select class="doctor-specialty form-control form-select-lg mb-3"
+                                        name="specialty" aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Specialty</option>
+                                        <option value="Anaesthetics">Anaesthetics
+                                        </option>
+                                        <option value="Emergency Medicine ">Emergency
+                                            Medicine </option>
+                                        <option value="General Practice ">General
+                                            Practice
+                                        </option>
+                                        <option value="Gastroenterologist">
+                                            Gastroenterologist</option>
+                                        <option value="Intensive care ">Intensive care
+                                        </option>
+                                        <option value="Medicine">Medicine</option>
+                                        <option value="Obtetrics &amp; Gynaecology ">
+                                            Obtetrics &amp; Gynaecology </option>
+                                        <option value="Pathologist">Pathologist</option>
+                                        <option value="Peadiatrics">Peadiatrics</option>
+                                        <option value="Psychiatry ">Psychiatry </option>
+                                        <option value="Radiology">Radiology</option>
+                                        <option value="Surgery ">Surgery </option>
+                                    </select>
+                                    <!-- <select class="form-control form-select-lg mb-3 nurse-specialty-d-none"
+                                        name="specialty" aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Specialty</option>
+                                        <option value="Accident / Emergency / Critical Care & ICU Nurse">
+                                            Accident / Emergency / Critical Care & ICU Nurse
+                                        </option>
+                                        <option value="Age Care ">Age Care </option>
+                                        <option value="Anaesthetic/ Theatre Technician">Anaesthetic/ Theatre Technician
+
+                                        </option>
+                                        <option value="Assistance in Nurse">
+                                            Assistance in Nurse
+                                        </option>
+                                        <option value="Care Worker">Care Worker
+
+                                        </option>
+                                        <option value="Community Mental Health ">Community Mental Health
+                                        </option>
+                                        <option value="Community NDIS ">Community NDIS</option>
+                                        <option value="CSSD ">CSSD</option>
+                                        <option value="Educators & Facilitators ">Educators & Facilitators
+                                        </option>
+                                        <option value="General Medical & Surgical">General Medical & Surgical
+                                        </option>
+                                        <option value="Instrument Technician">Instrument Technician
+                                        </option>
+                                        <option value="Mental Health, Forensic & Correctional">
+                                            Mental Health, Forensic & Correctional
+                                        </option>
+                                        <option value="Midwife & Neo - Natal">Midwife & Neo - Natal</option>
+                                        <option value="Orderly">Orderly</option>
+                                        <option value="Paediatric & PICU">Paediatric & PICU</option>
+                                        <option value="Practice Nurse">Practice Nurse</option>
+                                        <option value="Rural & Remote">Rural & Remote</option>
+                                        <option value="Theatre & Recovery">Theatre & Recovery</option>
 
                                     </select>
+                                    <select class="form-control form-select-lg mb-3 AHP-Specialty-d-none"
+                                        name="specialty" aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Specialty</option>
+                                        <option value="Allergologist">
+                                            Allergologist
+                                        </option>
+                                        <option value="Arts Therapist">Arts Therapist</option>
+                                        <option value="Audiologist">Audiologist
+                                        </option>
+                                        <option value="Chiropractor">
+                                            Chiropractor
+                                        </option>
+                                        <option value="Dietitians">Dietitians
+
+                                        </option>
+                                        <option value="Exercise Physiologist">Exercise Physiologist
+                                        </option>
+                                        <option value="Genetic Counsellor">Genetic Counsellor</option>
+                                        <option value="Medical Radiologist">Medical Radiologist</option>
+                                        <option value="Music Therapist">Music Therapist
+                                        </option>
+                                        <option value="Occupational Therapist">Occupational Therapist
+                                        </option>
+                                        <option value="Optometrist">Optometrist
+                                        </option>
+                                        <option value="Orthotist and prosthetist">Orthotist and prosthetist</option>
+                                        <option value="Osteopathist">Osteopathist</option>
+                                        <option value="Perfusionist">Perfusionist</option>
+                                        <option value="Physiotherapist">Physiotherapist</option>
+                                        <option value="Podiatrist">Podiatrist</option>
+                                        <option value="Psychologist">Psychologist</option>
+                                        <option value="Psychology & Mental health">Psychology & Mental health</option>
+                                        <option value="Rehabilitation Counsellor">Rehabilitation Counsellor</option>
+                                        <option value="Sonographer">Sonographer</option>
+                                        <option value="Specialist service">Specialist service</option>
+                                        <option value="Speech-pathology">Speech-pathology</option>
+                                    </select>
+                                    <select class="form-control form-select-lg mb-3 HE-Specialty-d-none"
+                                        name="specialty" aria-label=".form-select-lg example">
+                                        <option selected="" disabled>Specialty</option>
+                                        <option value="Business Managers">Business Managers</option>
+                                        <option value="General Managers">General Managers</option>
+                                        <option value="Medical Administrators">Medical Administrators</option>
+                                        <option value="Medical Director">Medical Director</option>
+                                        <option value="Medical Receptionist">Medical Receptionist</option>
+                                        <option value="Practice Manager">Practice Manager</option>
+                                        <option value="Professional Management Consultants">Professional Management
+                                            Consultants</option>
+
+                                    </select> -->
                                 </div>
                             </div>
                             <div class="col-md-2">
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="engagement_term"
                                         aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">Engagement Term</option>
+                                        <option value="" disabled="" selected="">Engagement Type</option>
                                         <option value="Casual">Casual</option>
                                         <option value="Contract">Contract</option>
                                         <option value="Locum">Locum</option>
@@ -519,7 +783,7 @@
                                 <div class="form-group">
                                     <select class="form-control form-select-lg mb-3" name="placement_term"
                                         aria-label=".form-select-lg example">
-                                        <option value="" disabled="" selected="">placement Term</option>
+                                        <option value="" disabled="" selected="">Employment Term</option>
                                         <option value="3">Agency Worker Placement</option>
                                         <option value="2">Contractor Placement</option>
                                         <option value="1">Salaried Placement</option>
