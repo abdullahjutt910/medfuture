@@ -1418,7 +1418,7 @@ class Candidate extends Model implements HasMedia
 
     public function testimonial()
     {
-        return $this->belongsTo(Testimonial::class);
+        return $this->hasMany(Testimonial::class);
     }
 
     // public function assignbar()
