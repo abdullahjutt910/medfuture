@@ -3335,3 +3335,87 @@ textarea{
 .search-form-bottom .search-form-reset{
     background-color: #686868;
 }
+
+.candi-working-status{
+    background-color: #79BBA7;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 13px;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+    height: 29px;
+}
+.candi-grade{
+    background-color: #2E8D71;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 13px;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+    height: 29px;
+}
+
+/* switcher */
+
+.candi-status .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .candi-status  .switch input { 
+
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  
+  .candi-status  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #BFBFBF;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .candi-status  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #686868;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .candi-status input:checked + .slider {
+    background-color: #10468E;
+  }
+  
+  .candi-status input:focus + .slider {
+    box-shadow: 0 0 1px #10468E;
+  }
+  
+  .candi-status  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .candi-status .slider.round {
+    border-radius: 34px;
+  }
+  
+  .candi-status .slider.round:before {
+    border-radius: 50%;
+  }
