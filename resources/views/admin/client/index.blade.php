@@ -14,48 +14,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12">
-            <div class="view-job pad-top-30">
-                <form action="#" method="#">
-                    <div class="row">
-                        <div class="col-md-3 form-group">
-                            <input type="text" name="fname" class="form-control" placeholder="First Name">
-                        </div>
-                        <div class="col-md-3 form-group">
-                            <input type="text" name="lname" class="form-control" placeholder="Last Name">
-                        </div>
-                        <div class="col-md-3 form-group">
-                            <input type="text" name="abc" class="form-control" placeholder="First Name">
-                        </div>
-                        <div class="col-md-3 form-group">
-                            <input type="text" name="xyz" class="form-control" placeholder="First Name">
-                        </div>
-                    </div>
-                    <div class="col-md-12 profile-eidt-form-btn">
-                        <input type="submit" name="submit" class="btn" placeholder="Submit">
-                    </div>
-                </form>
-            <table class="table-primary  table table-bordered ">
-                <thead>
-                    <tr>
-                        <td>FName</td>
-                        <td>LName</td>
-                        <td>abc</td>
-                        <td>abc</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>FName</td>
-                        <td>LName</td>
-                        <td>abc</td>
-                        <td>abc</td>
-                    </tr>
-                </tbody>
-            </table>
-            </div>
-        </div>
-
+        
 
         <div class="col-md-12">
             <div class="view-job">
