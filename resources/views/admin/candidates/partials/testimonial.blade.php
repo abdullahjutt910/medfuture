@@ -25,11 +25,14 @@
                         <p>{{ $candidate->testimonial[0]->testimonial_date ?? ''}}</p>
                     </div>
                     <div class="edit-brn">
-                        <button class="btn testimonial-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
-                                class="img-fluid" alt="Edit-img"> Edit</button>
-                        <button class="btn testimonial-remove-btn"><img
-                                src=" {{asset('img/dashboard/Delete-Chat.png')}}" class="img-fluid" alt="Edit-img">
-                            Remove</button>
+                        <button class="btn testimonial-edit-btn">
+                            <img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid" alt="Edit-img">
+                            Edit
+                        </button>
+                        <a href="{{ url('delete_testimonial')}}/{{$candidate->id}}" class="btn testimonial-remove-btn">
+                            <img src=" {{asset('img/dashboard/Delete-Chat.png')}}" class="img-fluid" alt="Edit-img">
+                            Remove
+                        </a>
                     </div>
                     <div class="row testimonial-upload">
                         <div class="col-md-5">

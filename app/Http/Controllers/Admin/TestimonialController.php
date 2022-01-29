@@ -38,8 +38,9 @@ class TestimonialController extends Controller
         return back();
     }
     
-    public function deleteTesimonial($id){
-        Testimonial::find($id)->delete();
+    public function destroy($id){
+        
+        Testimonial::where('candidate_id',$id)->find($id)->delete();
         return back();
     }
 }
