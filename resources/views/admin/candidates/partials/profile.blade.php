@@ -39,16 +39,16 @@
                         <p>{{$candidate->profession}}</p>
                     </li>
                     <li>
-                        <h3>Engagement Term</h3>
-                        <p>{{$candidate->engagement_term}}</p>
+                        <h3>Engagement Type</h3>
+                        <p>{{$candidate->engagement_type}}</p>
                     </li>
                     <li>
                         <h3>Employement Type</h3>
-                        <p>{{$candidate->current_employment_status}}</p>
+                        <p>{{$candidate->employment_type}}</p>
                     </li>
                     <li>
-                        <h3>Placement Type</h3>
-                        <p>{{$candidate->placement_term}}</p>
+                        <h3>Employment Term</h3>
+                        <p>{{$candidate->employment_term}}</p>
                     </li>
                 </ul>
                 <div class="edit-brn">
@@ -116,26 +116,25 @@
 
                 </div>
                 <div class="col-md-12 profile-eidt-form-inner">
-                    <label for="engagement_term">Engagement Term</label>
-                    <select name="engagement_term" id="engagement_term" class="form-control">
-                        <option value="Full Time" {{ old('engagement_term',$candidate->engagement_term =="Full Time")? "selected" : "" }} >Full Time</option>
-                        <option value="Part Time" {{ old('engagement_term',$candidate->engagement_term =="Part Time")? "selected" : "" }} >Part Time</option>
+                    <label for="engagement_type">Engagement Type</label>
+                    <select name="engagement_type" id="engagement_type" class="form-control">
+                        <option value="Full Time" {{ old('engagement_type',$candidate->engagement_type =="Full Time")? "selected" : "" }} >Full Time</option>
+                        <option value="Part Time" {{ old('engagement_type',$candidate->engagement_type =="Part Time")? "selected" : "" }} >Part Time</option>
                     </select>
 
                 </div>
                 <div class="col-md-12 profile-eidt-form-inner">
-                    <label for="current_employment_status">current employment status</label>
-                    <input class="form-control" type="text" name="current_employment_status"
-                        id="current_employment_status" value="{{ old('current_employment_status', $candidate->
-                        current_employment_status) }}">
+                    <label for="employment_type">Employment Type</label>
+                    <input class="form-control" type="text" name="employment_type"
+                        id="employment_type" value="{{ old('employment_type', $candidate->employment_type) }}">
 
                 </div>
 
                 <div class="col-md-12 profile-eidt-form-inner">
-                    <label for="placement_term">Placement Type</label>
-                    <select name="placement_term" id="placement_term" class="form-control">
-                        <option value="Introductory Placement  " {{ old('placement_term',$candidate->placement_term =="Introductory Placement  ")? "selected" : "" }} >Introductory Placement  </option>
-                        <option value="Agency Work Force    " {{ old('placement_term',$candidate->placement_term =="Agency Work Force    ")? "selected" : "" }} >Agency Work Force    </option>
+                    <label for="employment_term">Placement Type</label>
+                    <select name="employment_term" id="employment_term" class="form-control">
+                        <option value="Introductory Placement  " {{ old('employment_term',$candidate->employment_term =="Introductory Placement  ")? "selected" : "" }} >Introductory Placement  </option>
+                        <option value="Agency Work Force    " {{ old('employment_term',$candidate->employment_term =="Agency Work Force    ")? "selected" : "" }} >Agency Work Force    </option>
                     </select>
 
                 </div>

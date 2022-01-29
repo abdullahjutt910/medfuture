@@ -315,7 +315,7 @@
                         Engagement Type
                     </th>
                     <td>
-                        {{$candidate->engagement_term ?? ''}}
+                        {{$candidate->engagement_type ?? ''}}
 
                         <i class="fas fa-sort-down"></i>
                     </td>
@@ -325,17 +325,18 @@
                         Employment Term
                     </th>
                     <td>
-                        {{$candidate->interview->employment_type ?? ''}}
+                        {{$candidate->employment_term ?? ''}}
+
 
                         <i class="fas fa-sort-down"></i>
                     </td>
                 </tr>
                 <tr>
                     <th>
-                        Placement Type
+                        Employment Type
                     </th>
                     <td>
-                        {{$candidate->placement_term ?? ''}}
+                        {{$candidate->employment_type ?? ''}}
 
                         <i class="fas fa-sort-down"></i>
                     </td>
@@ -2042,9 +2043,9 @@
                         Engagement Type
                     </th>
                     <td>
-                        <select name="engagement_term" id="engagement_term" class="form-control">
-                            <option value="Full Time" {{ old('engagement_term',$candidate->engagement_term =="Full Time")? "selected" : "" }} >Full Time</option>
-                            <option value="Part Time" {{ old('engagement_term',$candidate->engagement_term =="Part Time")? "selected" : "" }} >Part Time</option>
+                        <select name="engagement_type" id="engagement_type" class="form-control">
+                            <option value="Full Time" {{ old('engagement_type',$candidate->engagement_type =="Full Time")? "selected" : "" }} >Full Time</option>
+                            <option value="Part Time" {{ old('engagement_type',$candidate->engagement_type =="Part Time")? "selected" : "" }} >Part Time</option>
                         </select>
                     </td>
                 </tr>
