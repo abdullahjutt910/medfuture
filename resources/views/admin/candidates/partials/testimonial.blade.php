@@ -20,11 +20,9 @@
                 </div>
                 <div class="testimonial-txt-edit">
                     <div class="testimonial-txt">
-                        <p>"Medfuture takes time to understand our need as a medical center and
-                            successfully
-                            place great practitioner that match our value and ethos"
-                        </p>
-                        <p>– KIM CHING, FEBRUARY 21, 2021</p>
+                        <p>{{ $candidate->testimonial[0]->testimonial_summary ?? '' }}</p>
+                        <p><b>{{ $candidate->testimonial[0]->testimonial_name ?? '' }}</b></p> 
+                        <p>{{ $candidate->testimonial[0]->testimonial_date ?? ''}}</p>
                     </div>
                     <div class="edit-brn">
                         <button class="btn testimonial-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
