@@ -916,11 +916,16 @@
                                     <img src="{{asset('img/dashboard/PDF.png')}}"
                                         class="img-fluid pdf-upload rounded-start" alt="...">
                                 </div>
+
                                 <div class="col-md-10 padd-12">
                                     <div class="card-body">
                                         <h5 class="card-title">{{$candidate->cv_document ?? 'no file'}}</h5>
                                         <p class="card-text"><small
-                                                class="text-muted">{{ round(($fileSize/1024),2)}}KB</small></p>
+                                                class="text-muted">
+                                                @if(!empty($fileSize))
+                                                {{{round(($fileSize/1024),2)}}}
+                                                @endif
+                                            </small></p>
                                     </div>
                                 </div>
                             </div>
@@ -949,7 +954,7 @@
                                 <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                     alt="Eye" >
                             </a>
-                            <a href="{{asset('img/dashboard/Download.png')}}" download>
+                            <a href="{{ url('files/'. $candidate->cv_document ?? 'no file') }}" download>
                                 <img src="{{asset('img/dashboard/Download.png')}}"
                                     class="img-fluid gray-color" alt="download">
                             </a>
@@ -957,7 +962,7 @@
                                 <img src="{{asset('img/dashboard/Upload.png')}}"
                                     class="img-fluid gray-color" alt="Upload">
                             </a>
-                            <a href="#">
+                            <a href="{{ url('cv_delete', $candidate->id) }}">
                                 <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                     class="img-fluid gray-color" alt="Delete-Trash">
                             </a>
@@ -969,7 +974,7 @@
 
         @if (!empty($candidate->registration_form_document) && !is_null($candidate->registration_form_document))
         @php
-            $fileSize = \File::size(public_path('files/'. $candidate->registration_form_document));
+            $fileSize1 = \File::size(public_path('files/'. $candidate->registration_form_document));
         @endphp
          @endif
         <div class="row profile-details-upload">
@@ -986,7 +991,11 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{$candidate->registration_form_document ?? 'no file'}}</h5>
                                         <p class="card-text"><small
-                                                class="text-muted">{{ round(($fileSize/1024),2)}}KB</small></p>
+                                            class="text-muted">
+                                            @if(!empty($fileSize1))
+                                            {{{round(($fileSize1/1024),2)}}}
+                                            @endif
+                                        </small></p>
                                     </div>
                                 </div>
                             </div>
@@ -1015,7 +1024,7 @@
                                 <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                     alt="Eye">
                             </a>
-                            <a href="{{asset('img/dashboard/Download.png')}}" download>
+                            <a href="{{url('files/'. $candidate->registration_form_document ?? 'no file')}}" download>
                                 <img src="{{asset('img/dashboard/Download.png')}}"
                                     class="img-fluid gray-color" alt="download">
                             </a>
@@ -1023,7 +1032,7 @@
                                 <img src="{{asset('img/dashboard/Upload.png')}}"
                                     class="img-fluid gray-color" alt="Upload">
                             </a>
-                            <a href="#">
+                            <a href="{{ url('form_delete', $candidate->id) }}">
                                 <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                     class="img-fluid gray-color" alt="Delete-Trash">
                             </a>
@@ -1035,7 +1044,7 @@
 
         @if (!empty($candidate->privacy_concerns) && !is_null($candidate->privacy_concerns))
         @php
-            $fileSize = \File::size(public_path('files/'. $candidate->privacy_concerns));
+            $fileSize2 = \File::size(public_path('files/'. $candidate->privacy_concerns));
         @endphp
         @endif
         <div class="row profile-details-upload">
@@ -1052,8 +1061,11 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{$candidate->privacy_concerns ?? 'no file'}}</h5>
                                         <p class="card-text"><small
-                                                class="text-muted">
-                                                {{ round(($fileSize/1024),2) }}KB</small></p>
+                                            class="text-muted">
+                                            @if(!empty($fileSize2))
+                                            {{{round(($fileSize2/1024),2)}}}
+                                            @endif
+                                        </small></p>
                                     </div>
                                 </div>
                             </div>
@@ -1082,7 +1094,7 @@
                                 <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                     alt="Eye">
                             </a>
-                            <a href="{{asset('img/dashboard/Download.png')}}" download>
+                            <a href="{{ url('files/'. $candidate->privacy_concerns ?? 'no file') }}" download>
                             <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
                                 alt="download">
                             </a>
@@ -1090,7 +1102,7 @@
                             <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
                                 alt="Upload">
                             </a>
-                            <a href="#">
+                            <a href="{{ url('privacy_delete', $candidate->id) }}">
                             <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                 class="img-fluid gray-color" alt="Delete-Trash">
                             </a>
@@ -1119,7 +1131,11 @@
                                     <div class="card-body">
                                         <h5 class="card-title">{{$candidate->cv_document ?? 'no file'}}</h5>
                                         <p class="card-text"><small
-                                                class="text-muted">{{ round(($fileSize/1024),2) }}KB</small></p>
+                                            class="text-muted">
+                                            @if(!empty($fileSize))
+                                            {{{round(($fileSize/1024),2)}}}
+                                            @endif
+                                        </small></p>
                                     </div>
                                 </div>
                             </div>
@@ -1144,19 +1160,21 @@
                     </div>
                     <div class="col-md-4">
                         <div class="profile-buttons">
-                            <a href="#">
+                            <a href="{{url('files/'. $candidate->cv_document ?? 'no file')}}" target="blank">
                             <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                 alt="Eye">
                             </a>
-                                <a href="{{asset('img/dashboard/Download.png')}}" download>
+                                <a href="{{url('files/'. $candidate->cv_document ?? 'no file')}}" download>
                             <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid gray-color"
                                 alt="download">
                                 </a>
                                 <a href="#">
+
                             <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
                                 alt="Upload">
+
                                 </a>
-                                <a href="#">
+                                <a href="{{ url('cv_delete', $candidate->id) }}">
                             <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
                                 class="img-fluid gray-color" alt="Delete-Trash">
                                 </a>

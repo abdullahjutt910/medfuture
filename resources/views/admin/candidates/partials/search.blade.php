@@ -36,8 +36,50 @@
                                     <select class="form-select form-select-lg mb-3" name="registered"
                                         aria-label=".form-select-lg example">
                                         <option value="" disabled="" selected="">Panel</option>
-                                        <option value="candidate-id">Candidate Id</option>
+                                        <option value="candidate-id">Candidate ID</option>
                                         <option value="first-name">First Name</option>
+                                        <option value="first-name">Last Name</option>
+                                        <option value="Email">Email</option>
+                                        <option value="Gender">Gender</option>
+                                        <option value="Address 1">Address 1</option>
+                                        <option value="Address 2">Address 2</option>
+                                        <option value="State/Region">State/Region</option>
+                                        <option value="Map Address">Map Address</option>
+                                        <option value="Country">Country</option>
+                                        <option value="Postcode">Postcode</option>
+                                        <option value="Mobile Number">Mobile Number</option>
+                                        <option value="Home Phone">Home Phone</option>
+                                        <option value="Work Phone">Work Phone</option>
+                                        <option value="Registered">Registered</option>
+                                        <option value="Verified">Verified</option>
+                                        <option value="CV">CV</option>
+                                        <option value="Privacy Term">Privacy Term</option>
+                                        <option value="Source Name">Source Name</option>
+                                        <option value="CDF">CDF</option>
+                                        <option value="Availability">Availability</option>
+                                        <option value="Working Status">Working Status</option>
+                                        <option value="Local Graduate">Local Graduate</option>
+                                        <option value="IMG">IMG</option>
+                                        <option value="Source Type">Source Type</option>
+                                        <option value="Prof Qualification">Prof Qualification</option>
+                                        <option value="Candidate Manager">Candidate Manager</option>
+                                        <option value="Rec Consultant">Rec Consultant</option>
+                                        <option value="Data Administrator">Data Administrator</option>
+                                        <option value="Primary Interview Date">Primary Interview Date</option>
+                                        <option value="Registration Body">Registration Body</option>
+                                        <option value="Type of Registration">Type of Registration</option>
+                                        <option value="Grade">Grade</option>
+                                        <option value="Division">Division</option>
+                                        <option value="Visa Status">Visa Status</option>
+                                        <option value="Profession">Profession</option>
+                                        <option value="Seniority">Seniority</option>
+                                        <option value="Specialty">Specialty</option>
+                                        <option value="Engagement Type">Engagement Type</option>
+                                        <option value="Employment Term">Employment Term</option>
+                                        <option value="Employment Type">Employment Type</option>
+                                        <option value="Registration Via">Registration Via</option>
+                                        <option value="Status">Status</option>
+                                        <option value="Created Date">Created Date</option>
                                     </select>
                                 </div>
                                 <div class="panel-select">
@@ -60,7 +102,7 @@
                         <div class="row">
                             <div class="col-md-2">
                                 <div class="form-group">
-                                    <input class="form-control" type="number" name="candidate-id"
+                                    <input class="form-control" type="number" name="candidate_id"
                                         placeholder="Candidate ID">
                                 </div>
                             </div>
