@@ -514,7 +514,7 @@ h5 {
 }
 
 
-/* 
+/*
 .dz-message span {
     font-size: 20px;
 } */
@@ -683,10 +683,6 @@ table.dataTable tbody td.select-checkbox:before, table.dataTable tbody th.select
     margin-left: -12px;
 }
 
-.filters-bar ul li:first-child a {
-    background-color: #686868;
-}
-
 .filters-bar ul a:hover,
 .filters-bar ul a:active{
     color: #fff !important;
@@ -853,7 +849,7 @@ table.dataTable tbody tr{
 .datatable-Candidate tbody tr .candidate-crud-list-btn form .btn{
     color: red;
 }
-.datatable-Candidate tbody tr .candidate-crud-list-btn .btn:focus-visible,.datatable-Candidate tbody tr .candidate-crud-list-btn .btn:active,.datatable-Candidate tbody tr .candidate-crud-list-btn .btn:focus{ 
+.datatable-Candidate tbody tr .candidate-crud-list-btn .btn:focus-visible,.datatable-Candidate tbody tr .candidate-crud-list-btn .btn:active,.datatable-Candidate tbody tr .candidate-crud-list-btn .btn:focus{
     outline: none;
     background-color: transparent;
     box-shadow: none;
@@ -1202,7 +1198,7 @@ div.dataTables_wrapper div.dataTables_info {
     align-items: center;
     padding: 6px 0px;
     justify-content: end;
-    
+
 }
 
 .padd-12 {
@@ -1554,7 +1550,7 @@ div.dataTables_wrapper div.dataTables_info {
 .prog-inner {
     position: absolute;
     bottom: 0;
-    transform: rotate( 
+    transform: rotate(
 -90deg
  );
     white-space: nowrap;
@@ -2053,7 +2049,7 @@ textarea{
     background-color: #F2F3F7;
     border: none;
 }
-/* 
+/*
 .candidate-profile-table .pagination .active{
     display: none;
 }
@@ -2118,10 +2114,10 @@ textarea{
 .pipeline-btn{
     display: flex;
     align-items: center;
-    justify-content: space-between;  
+    justify-content: space-between;
     padding-top: 30px;
     padding-bottom: 30px;
-    
+
 }
 .add-pipeline .btn{
     background-color: #00326D;
@@ -2152,7 +2148,7 @@ textarea{
 }
 .percent svg text{
     font-family: 'lato', sans-serif !important;
-}  
+}
 /* counter end here */
 .dt-buttons .buttons-print{
     position: relative;
@@ -2673,7 +2669,7 @@ textarea{
 }
 
 .client-progress-list .progress-color{
-    background-color: #87DED5 !important;   
+    background-color: #87DED5 !important;
 }
 .placed-candi-feed p{
     font-size: 13px;
@@ -2860,10 +2856,10 @@ textarea{
     background-color: #fff;
 }
 .view-job-left{
-    padding-right: 3px 
+    padding-right: 3px
 }
 .view-job-right{
-    padding-left: 3px 
+    padding-left: 3px
 }
 .job-client-details{
     margin-top: 15px;
@@ -3035,29 +3031,29 @@ textarea{
     image-rendering: -webkit-optimize-contrast;
 }
 .job-post-btn .job-back-btn{
-    background-color: #778695;    
+    background-color: #778695;
     background-image: url("../img/dashboard/back-arrow.png");
-    
+
 }
 .job-post-btn .job-edit-btn{
-    background-color: #022D71;    
+    background-color: #022D71;
     background-image: url("../img/dashboard/Edit.png");
 }
 .job-post-btn .job-update-btn{
-    background-color: #0B5794;    
+    background-color: #0B5794;
     background-image: url("../img/dashboard/update-rotation.png");
 }
 .job-post-btn .job-previw-btn{
-    background-color: #EDD329;    
+    background-color: #EDD329;
     background-image: url("../img/dashboard/eye-black.png");
-    
+
 }
 .job-post-btn .job-re-post-btn{
-    background-color: #075C9C;    
+    background-color: #075C9C;
     background-image: url("../img/dashboard/email-send-1.png");
 }
 .job-post-btn .job-delete-btn{
-    background-color: #AA1F3C;    
+    background-color: #AA1F3C;
     background-image: url("../img/dashboard/Delete-Trash.png");
 }
 .job-post-right-btn {
@@ -3120,7 +3116,7 @@ textarea{
     padding: 6px 20px;
     padding-left: 25px !important;
     margin-right: 5px;
-    background-color: #075C9C;    
+    background-color: #075C9C;
     background-image: url("../img/dashboard/email-send-1.png");
     background-repeat: no-repeat;
     background-position: 3px;
@@ -3130,7 +3126,7 @@ textarea{
 .job-post-assign-to h5{
     font-size: 13px;
     color: #000;
-    margin-top: 0px;    
+    margin-top: 0px;
 }
 .job-post-assign-to select{
     font-size: 11px;
@@ -3327,7 +3323,7 @@ textarea{
 .search-filter-form-inner .form-group {
     margin-bottom: 30px;
 }
-.search-form-bottom{ 
+.search-form-bottom{
     text-align: right;
     position: absolute;
     bottom: 0;
@@ -3384,14 +3380,14 @@ textarea{
     width: 60px;
     height: 34px;
   }
-  
-  .candi-status  .switch input { 
+
+  .candi-status  .switch input {
 
     opacity: 0 !important;
     width: 0 !important;
     height: 0 !important;
   }
-  
+
   .candi-status  .slider {
     position: absolute;
     cursor: pointer;
@@ -3403,7 +3399,7 @@ textarea{
     -webkit-transition: .4s;
     transition: .4s;
   }
-  
+
   .candi-status  .slider:before {
     position: absolute;
     content: "";
@@ -3415,26 +3411,26 @@ textarea{
     -webkit-transition: .4s;
     transition: .4s;
   }
-  
+
   .candi-status input:checked + .slider {
     background-color: #10468E;
   }
-  
+
   .candi-status input:focus + .slider {
     box-shadow: 0 0 1px #10468E;
   }
-  
+
   .candi-status  input:checked + .slider:before {
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
   }
-  
+
   /* Rounded sliders */
   .candi-status .slider.round {
     border-radius: 34px;
   }
-  
+
   .candi-status .slider.round:before {
     border-radius: 50%;
   }

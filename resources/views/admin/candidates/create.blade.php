@@ -862,7 +862,7 @@
                                             <div class="upload-add-candi">
                                                 <input type="file" name="cv_document" class="form-control" required>
 
-                                                <span  class="upload-add-candi-txt"><p>Drop files here to upload</p></span>
+                                                <span  class="upload-add-candi-txt"><p>Upload Cv</p></span>
                                                 <div class="upload-icon">
                                                     <i class="fas fa-arrow-up"></i>
                                                     <p>Upload</p>
@@ -882,7 +882,7 @@
                                         <div class="form-group {{ $errors->has('registration_form_document') ? 'has-error' : '' }}">
                                         <div class="upload-add-candi">
                                             <input type="file" name="registration_form_document" class="form-control" required>
-                                            <span  class="upload-add-candi-txt"><p>Drop files here to upload</p></span>
+                                            <span  class="upload-add-candi-txt"><p>Registration Form</p></span>
                                                 <div class="upload-icon">
                                                     <i class="fas fa-arrow-up"></i>
                                                     <p>Upload</p>
@@ -901,7 +901,7 @@
                                         <div class="form-group {{ $errors->has('privacy_concerns') ? 'has-error' : '' }}">
                                         <div class="upload-add-candi">
                                             <input type="file" name="privacy_concerns" class="form-control" required>
-                                            <span  class="upload-add-candi-txt"><p>Drop files here to upload</p></span>
+                                            <span  class="upload-add-candi-txt"><p>Privacy Concerns</p></span>
                                                 <div class="upload-icon">
                                                     <i class="fas fa-arrow-up"></i>
                                                     <p>Upload</p>

@@ -918,7 +918,7 @@
 
                                 <div class="col-md-10 padd-12">
                                     <div class="card-body">
-                                        <h5 class="card-title">{{$candidate->cv_document ?? 'no file'}}</h5>
+                                        <h5 class="card-title">Orignal Cv</h5>
                                         <p class="card-text"><small
                                                 class="text-muted">
                                                 @if(!empty($fileSize))
@@ -950,8 +950,8 @@
                     <div class="col-md-4">
                         <div class="profile-buttons">
                             <a href="{{ url('files/'. $candidate->cv_document ?? 'no file') }}" target="_blank">
-                                <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
-                                    alt="Eye" >
+                                 <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
+                               alt="Eye" >
                             </a>
                             <a href="{{ url('files/'. $candidate->cv_document ?? 'no file') }}" download>
                                 <img src="{{asset('img/dashboard/Download.png')}}"
@@ -974,7 +974,82 @@
             </div>
         </div>
 
-        @if (!empty($candidate->registration_form_document) && !is_null($candidate->registration_form_document))
+        @if (!empty($candidate->cv_document) && !is_null($candidate->cv_document))
+            @php
+                $fileSize = \File::size(public_path('files/'. $candidate->cv_document));
+            @endphp
+        @endif
+        <div class="row profile-details-upload">
+            <div class="col-md-12">
+                <div class="row profile-details">
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-2 card-img">
+                                    <img src="{{asset('img/dashboard/PDF.png')}}"
+                                         class="img-fluid  pdf-upload rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-10 padd-12">
+                                    <div class="card-body">
+                                        <h5 class="card-title">CV on MedFuture Format</h5>
+                                        <p class="card-text"><small
+                                                class="text-muted">
+                                                @if(!empty($fileSize))
+                                                    {{{round(($fileSize/1024),2)}}}
+                                                @endif
+                                            </small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-1 card-img">
+                                    <img src="{{asset('img/dashboard/Calendar.png')}}"
+                                         class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-11 padd-12">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Applied Date</h5>
+                                        <p class="card-text"><small
+                                                class="text-muted">{{$candidate->created_at ?? ''}}</small></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="profile-buttons">
+                            <a href="{{url('files/'. $candidate->cv_document ?? 'no file')}}" target="blank">
+                                <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
+                                     alt="Eye">
+                            </a>
+                            <a href="{{url('files/'. $candidate->cv_document ?? 'no file')}}" download>
+                                <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
+                                     alt="download">
+                            </a>
+                            <div class="upload-icon-link">
+                                <input id="upload" type="file" name="upload"/>
+                                <a href="#" class="upload_link">
+                                    <img src="{{asset('img/dashboard/Upload.png')}}"
+                                         class="img-fluid gray-color" alt="Upload">
+                                </a>
+                            </div>
+                            <a href="{{ url('cv_delete', $candidate->id) }}">
+                                <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                     class="img-fluid gray-color" alt="Delete-Trash">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    @if (!empty($candidate->registration_form_document) && !is_null($candidate->registration_form_document))
         @php
             $fileSize1 = \File::size(public_path('files/'. $candidate->registration_form_document));
         @endphp
@@ -991,7 +1066,7 @@
                                 </div>
                                 <div class="col-md-10 padd-12">
                                     <div class="card-body">
-                                        <h5 class="card-title">{{$candidate->registration_form_document ?? 'no file'}}</h5>
+                                        <h5 class="card-title"> Candidate Registration Form</h5>
                                         <p class="card-text"><small
                                             class="text-muted">
                                             @if(!empty($fileSize1))
@@ -1064,7 +1139,7 @@
                                 </div>
                                 <div class="col-md-10 padd-12">
                                     <div class="card-body">
-                                        <h5 class="card-title">{{$candidate->privacy_concerns ?? 'no file'}}</h5>
+                                        <h5 class="card-title">Privacy Concerns</h5>
                                         <p class="card-text"><small
                                             class="text-muted">
                                             @if(!empty($fileSize2))
@@ -1120,78 +1195,6 @@
             </div>
         </div>
 
-        @if (!empty($candidate->cv_document) && !is_null($candidate->cv_document))
-        @php
-            $fileSize = \File::size(public_path('files/'. $candidate->cv_document));
-        @endphp
-        @endif
-        <div class="row profile-details-upload">
-            <div class="col-md-12">
-                <div class="row profile-details">
-                    <div class="col-md-4">
-                        <div class="card mb-3">
-                            <div class="row g-0">
-                                <div class="col-md-2 card-img">
-                                    <img src="{{asset('img/dashboard/PDF.png')}}"
-                                        class="img-fluid  pdf-upload rounded-start" alt="...">
-                                </div>
-                                <div class="col-md-10 padd-12">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{$candidate->cv_document ?? 'no file'}}</h5>
-                                        <p class="card-text"><small
-                                            class="text-muted">
-                                            @if(!empty($fileSize))
-                                            {{{round(($fileSize/1024),2)}}}
-                                            @endif
-                                        </small></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-3">
-                            <div class="row g-0">
-                                <div class="col-md-1 card-img">
-                                    <img src="{{asset('img/dashboard/Calendar.png')}}"
-                                        class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-md-11 padd-12">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Applied Date</h5>
-                                        <p class="card-text"><small
-                                                class="text-muted">{{$candidate->created_at ?? ''}}</small></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="profile-buttons">
-                            <a href="{{url('files/'. $candidate->cv_document ?? 'no file')}}" target="blank">
-                            <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
-                                alt="Eye">
-                            </a>
-                                <a href="{{url('files/'. $candidate->cv_document ?? 'no file')}}" download>
-                            <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
-                                alt="download">
-                                </a>
-                                <div class="upload-icon-link">
-                                    <input id="upload" type="file" name="upload"/>
-                                    <a href="#" class="upload_link">
-                                        <img src="{{asset('img/dashboard/Upload.png')}}"
-                                            class="img-fluid gray-color" alt="Upload">
-                                    </a>
-                                </div>
-                                <a href="{{ url('cv_delete', $candidate->id) }}">
-                            <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                class="img-fluid gray-color" alt="Delete-Trash">
-                                </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="edit-brn">
             <button class="btn files-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}"

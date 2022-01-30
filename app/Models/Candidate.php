@@ -254,6 +254,7 @@ class Candidate extends Model implements HasMedia
         'Nurses & Carers' => 'Nurses & Carers',
         'Allergologist' => 'Allergologist',
         'Arts Therapist ' => 'Arts Therapist ',
+        'AHP - HSS' => 'AHP / HSS',
         'Audiologist' => 'Audiologist',
         'Chiropractor ' => 'Chiropractor ',
         'Dietitians ' => 'Dietitians ',
@@ -1309,12 +1310,6 @@ class Candidate extends Model implements HasMedia
         'deleted_at',
     ];
 
-    protected $appends = [
-        'cv_document',
-        'registration_form_document',
-        'privacy_concerns',
-    ];
-
     protected $fillable = [
         'title',
         'user_id',
@@ -1410,7 +1405,14 @@ class Candidate extends Model implements HasMedia
     {
         return $this->hasMany(Activebar::class);
     }
-    
+     public  function  shortform($form){
+         $shortForm = "";
+         $words = explode(" ", $form);
+         foreach ($words as $word){
+              $shortForm .= $word[0];
+         }
+        return  $shortForm;
+     }
     public function reference()
     {
         return $this->hasMany(Reference::class);

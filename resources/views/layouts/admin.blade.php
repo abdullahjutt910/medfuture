@@ -636,7 +636,7 @@ $(document).ready( function () {
 
       $(".refere-doc-edit-btn").click(function(){
         $(".referee-document .profile-buttons img").removeClass("gray-color");
-        
+
         $(function(){
             $(".upload_link").on('click', function(e){
                 e.preventDefault();
@@ -646,7 +646,7 @@ $(document).ready( function () {
       });
       $(".audio-edit-btn").click(function(){
         $(".audio-video-file .profile-buttons img").removeClass("gray-color");
-        
+
         $(function(){
             $(".upload_link").on('click', function(e){
                 e.preventDefault();
@@ -656,7 +656,7 @@ $(document).ready( function () {
       });
       $(".testimonial-edit-btn").click(function(){
         $(".testimonial-upload .profile-buttons img").removeClass("gray-color");
-        
+
         $(function(){
             $(".upload_link").on('click', function(e){
                 e.preventDefault();
@@ -705,7 +705,7 @@ $(function () {
           $(".candi-grade").addClass("bronz");
         }
     });
-    
+
 
 
     })
@@ -714,6 +714,7 @@ $(function () {
 
 
     @yield('scripts')
+    @stack('after-scripts')
 </body>
 
 </html>

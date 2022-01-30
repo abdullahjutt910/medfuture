@@ -573,6 +573,7 @@
                                         </button>
                                     </div>
                                 </div>
+
                                @include('admin.candidates.partials.refree')
 
                             </div>
@@ -643,12 +644,12 @@
                         <div class="pink"></div>
                     </div>
                     </div>
-                    
+
                 </section>
                 @include('admin.candidates.partials.pipeline')
             </div>
             <!-- counter end -->
-           
+
         </div>
     </div>
 </div>
