@@ -62,6 +62,8 @@ class CreateCandidatesTable extends Migration
             $table->string('candidate_manager')->nullable();
             $table->string('recruitement')->nullable();
             $table->string('administrator')->nullable();
+            $table->string('candidate_id')->nullable();
+
             $table->timestamps();
             $table->softDeletes();
         });

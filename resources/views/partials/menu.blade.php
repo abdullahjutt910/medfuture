@@ -91,10 +91,49 @@
                         @endcan
                     </ul>
                 </li>
-
-
             @endcan
+            @can('jobs_manangement_access')
 
+                <li class="treeview">
+                    <a href="#">
+                        <i class="fa-fw fas fa-briefcase">
+
+                        </i>
+                        <span>{{ trans('cruds.jobsManangement.title') }}</span>
+                        <span class="pull-right-container"><i class="fa fa-fw fa-angle-left pull-right"></i></span>
+                    </a>
+                    <ul class="treeview-menu">
+
+                        @can('job_create')
+                            <hr class="hr-line">
+                            <li
+                                class="{{ request()->is("admin/jobs") || request()->is("admin/jobs/*") ? "active" : "" }}">
+                                {{-- <a href="{{ route("admin.view-candidates.index") }}"> --}}
+                                <a  href="{{ route("admin.jobs.create") }}">
+                                    <i class="fa-fw fas fa-user-friends">
+                                    </i>
+                                    <span>Add Job</span>
+                                </a>
+                            </li>
+                            <hr class="hr-line">
+                        @endcan
+                        @can('job_access')
+                            <li
+                                class="{{ request()->is("admin/jobs") || request()->is("admin/jobs/*") ? "active" : "" }}">
+                                {{-- <a href="{{ route("admin.view-candidates.index") }}"> --}}
+                                <a  href="{{ route("admin.jobs.index") }}">
+                                    <i class="fa-fw fas fa-user-friends">
+                                    </i>
+                                    <span>{{ trans('cruds.job.title') }}</span>
+                                </a>
+                            </li>
+                            <hr class="hr-line">
+                        @endcan
+
+
+                    </ul>
+                </li>
+            @endcan
             <li class="treeview">
                     <a href="#">
                         <i class="fa-fw far fa-user">

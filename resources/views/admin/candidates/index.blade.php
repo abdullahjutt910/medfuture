@@ -1,5 +1,10 @@
 @extends('layouts.admin')
 @section('content')
+    <style>
+        .filter-active{
+            background-color:#686868 !important;
+        }
+    </style>
 <div class="content">
     <div class="row candidate-all">
         <div class="col-lg-12">
@@ -13,8 +18,7 @@
                         <div class="col-lg-12">
                             <a class="btn btn-success" href="{{ route('admin.candidates.create') }}">
                                 Add New
-                                <!-- {{ trans('global.add') }} {{ trans('cruds.candidate.title_singular') }} -->
-
+                                  <!-- {{ trans('global.add') }} {{ trans('cruds.candidate.title_singular') }} -->
                                 <i class="fas fa-plus"></i>
                             </a>
                         </div>
@@ -25,26 +29,28 @@
                     <div class="col-md-12">
                         <ul>
                             <li>
-                                <a href="#" class="btn btn-filter"> All </a>
+                                <a  href="{{route('admin.filter.candidates')}}" class="btn btn-filter  {{ request('slug') == "" ? 'filter-active':'' }} "> All </a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-filter"> GP Unit </a>
+                                <a href="{{route('admin.filter.candidates', 'GP')}}" class="btn btn-filter {{ request('slug') == "GP" ? 'filter-active':'' }}">
+
+                                    GP Unit </a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-filter"> Hospital Unit </a>
+                                <a href="{{route('admin.filter.candidates','HU')}}" class="btn btn-filter {{ request('slug') == "HU" ? 'filter-active':'' }}"> Hospital Unit </a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-filter"> Locum Unit </a>
+                                <a href="{{route('admin.filter.candidates','LU')}}" class="btn btn-filter {{ request('slug') == "LU" ? 'filter-active':'' }}"> Locum Unit </a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-filter"> Nursing Unit </a>
+                                <a href="{{route('admin.filter.candidates','NU')}}" class="btn btn-filter {{ request('slug') == "NU" ? 'filter-active':'' }}"> Nursing Unit </a>
                             </li>
 
                             <li>
-                                <a href="#" class="btn btn-filter white-space-nor"> AHP - HSS Unit </a>
+                                <a href="{{route('admin.filter.candidates','A-H')}}" class="btn btn-filter white-space-nor {{ request('slug') == "A-H" ? 'filter-active':'' }}"> AHP - HSS Unit </a>
                             </li>
                             <li>
-                                <a href="#" class="btn btn-filter white-space-nor"> Healthcare Executive Units </a>
+                                <a href="{{route('admin.filter.candidates' ,'HEU')}}" class="btn btn-filter white-space-nor {{ request('slug') == "HEU" ? 'filter-active':'' }}"> Healthcare Executive Units </a>
                             </li>
 
                         </ul>
@@ -207,10 +213,9 @@
                                 @foreach($candidates as $key => $candidate)
                                 <tr data-entry-id="{{ $candidate->id }}">
                                     <td>
-
                                     </td>
                                     <td>
-                                        {!! $candidate->profession !!} {{ $candidate->id ?? '' }}
+                                      {{ $candidate->candidate_id ?? '' }}
                                     </td>
                                     <td>
                                         <a class="btn btn-xs candi-name-color"
