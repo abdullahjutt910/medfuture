@@ -440,7 +440,7 @@ class CandidateController extends Controller
     {
         abort_if(Gate::denies('candidate_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
-        return view('admin.candidates.edit', compact('candidate','activebar'));
+        return view('admin.candidates.edit', compact('candidate'));
     }
 
     public function update(UpdateCandidateRequest $request,$id)

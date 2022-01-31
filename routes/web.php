@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
 use App\Http\Controllers\Admin\ClientController;
+use App\Http\Controllers\Admin\JobController;
 use App\Http\Controllers\frontend\MainController;
 use App\Http\Controllers\frontend\PostController;
 use App\Http\Controllers\Admin\ActivebarController;
@@ -98,3 +99,10 @@ Route::get('delete_testimonial/{id}',[TestimonialController::class,'destroy'])->
 Route::get('cv_delete/{id}',[CandidateController::class,'cv_delete']);
 Route::get('form_delete/{id}',[CandidateController::class,'form_delete']);
 Route::get('privacy_delete/{id}',[CandidateController::class,'privacy_delete']);
+
+//.................................Job...........................................
+
+Route::post('create_job',[JobController::class,'create'])->name('create_job');
+Route::get('index_job',[JobController::class,'index'])->name('index_job');
+Route::post('edit_job',[JobController::class,'edit'])->name('edit_job');
+

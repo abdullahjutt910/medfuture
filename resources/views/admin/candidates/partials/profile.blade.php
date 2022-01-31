@@ -133,8 +133,8 @@
                 <div class="col-md-12 profile-eidt-form-inner">
                     <label for="employment_term">Placement Type</label>
                     <select name="employment_term" id="employment_term" class="form-control">
-                        <option value="Introductory Placement  " {{ old('employment_term',$candidate->employment_term =="Introductory Placement  ")? "selected" : "" }} >Introductory Placement  </option>
-                        <option value="Agency Work Force    " {{ old('employment_term',$candidate->employment_term =="Agency Work Force    ")? "selected" : "" }} >Agency Work Force    </option>
+                        <option value="Introductory Placement" {{ old('employment_term',$candidate->employment_term =="Introductory Placement  ")? "selected" : "" }} >Introductory Placement  </option>
+                        <option value="Agency Work Force" {{ old('employment_term',$candidate->employment_term =="Agency Work Force    ")? "selected" : "" }} >Agency Work Force    </option>
                     </select>
 
                 </div>

@@ -172,6 +172,8 @@
     <script>
        CKEDITOR.replace( 'content' );
        CKEDITOR.replace( 'qualificate' );
+       CKEDITOR.replace( 'term_cond' );
+       CKEDITOR.replace( 'loc_job_contact' );
       //  CKEDITOR.editorConfig = function( config ) {
       //   config.language = 'es';
       //   config.uiColor = '#F7B42C';
