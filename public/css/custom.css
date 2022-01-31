@@ -304,8 +304,8 @@ ul {
 }
 
 select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
 }
 
 /* .interview table input[type="date"]::-webkit-inner-spin-button,
@@ -2941,7 +2941,7 @@ textarea{
     margin-top: 50px;
     box-shadow: 0px 0px 22px 0px rgb(14 14 14 / 15%);
 }
-.job-detail h3{
+.job-detail h3,.job-detail .tool-bar label{
     padding-top: 30px;
     padding-bottom: 22px;
     padding-left: 10px;
@@ -3263,6 +3263,9 @@ textarea{
 }
 .print-btn, .excel-btn{
     position: relative;
+    padding: 16px;
+    text-align: left !important;
+    padding-left: 25px;
 }
 .print-btn::after {
     position: absolute;
@@ -3456,6 +3459,8 @@ textarea{
 
 
 
+
+  
   /* add locum job css start here  */
   .work-locate-check{
     display: flex;
@@ -3478,4 +3483,21 @@ textarea{
   } */
   .locum-job-dtil h5{
     font-weight: 600;
+  }
+
+  .add-qa{
+    text-align: left;
+    padding-left: 15px;
+  }
+  .add-qa a{
+    background-color: #00326D;
+    color: #fff !important;
+    border-radius: 5px;
+    border: none;
+  }
+  .add-qa a:hover,  .add-qa a:focus{
+    background-color: #778695;
+  }
+  .tool-bar .form-group{
+      margin-bottom: 0px;
   }

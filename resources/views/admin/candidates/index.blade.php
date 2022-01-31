@@ -5,6 +5,7 @@
             background-color:#686868 !important;
         }
     </style>
+    
 <div class="content">
     <div class="row candidate-all">
         <div class="col-lg-12">
@@ -59,7 +60,7 @@
 
 
                 @include('admin.candidates.partials.search')
-
+                <!-- ajaxTable -->
 
                 <div class="panel-body">
                     <div class="table-responsive table-cus">
@@ -373,7 +374,6 @@
                                             <a class="btn btn-xs"
                                                 href="{{ route('admin.candidates.edit', $candidate->id) }}">
                                                 <i class="fas fa-pencil-alt"></i>
-
                                             </a>
                                             @endcan
                                             @can('candidate_show')

@@ -129,10 +129,10 @@
     /* .notification-btns .btn {
         width: 190px;
     } */
-    .search-filter-form-inner .col-md-2{
+    .search-filter-form-inner .col-md-3{
         width: 12.5%;
     }
-    .search-filter-form-inner .col-md-4{
+    .search-filter-form-inner .col-md-6{
         width: 25%;
     }
 
