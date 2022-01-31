@@ -47,11 +47,25 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'namespace' => 'Admin', 'mi
     Route::delete('candidates/destroy', 'CandidateController@massDestroy')->name('candidates.massDestroy');
     Route::post('candidates/media', 'CandidateController@storeMedia')->name('candidates.storeMedia');
     Route::post('candidates/ckmedia', 'CandidateController@storeCKEditorImages')->name('candidates.storeCKEditorImages');
+
+    //filters and exports
+    Route::get('candidates/filters/{slug?}/{export?}', 'CandidateController@index')->name('filter.candidates');
+
     Route::resource('candidates', 'CandidateController');
 
     // View Candidates
     Route::delete('view-candidates/destroy', 'ViewCandidatesController@massDestroy')->name('view-candidates.massDestroy');
     Route::resource('view-candidates', 'ViewCandidatesController');
+
+
+    Route::delete('jobs/destroy', 'JobsController@massDestroy')->name('jobs.massDestroy');
+    Route::post('jobs/media', 'JobsController@storeMedia')->name('jobs.storeMedia');
+    Route::post('jobs/ckmedia', 'JobsController@storeCKEditorImages')->name('jobs.storeCKEditorImages');
+    Route::resource('jobs', 'JobsController');
+
+    // Question
+    Route::resource('questions', 'QuestionController', ['except' => ['create', 'store', 'edit', 'update', 'show', 'destroy']]);
+
 });
 Route::group(['prefix' => 'profile', 'as' => 'profile.', 'namespace' => 'Auth', 'middleware' => ['auth']], function () {
     // Change password

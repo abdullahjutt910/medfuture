@@ -21,7 +21,9 @@ class ViewCandidatesController extends Controller
 
     public function create()
     {
-        abort_if(Gate::denies('view_candidate_create'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('view_candidate_create'),
+            Response::HTTP_FORBIDDEN, '403 Forbidden');
+
 
         return view('admin.viewCandidates.create');
     }
@@ -29,13 +31,13 @@ class ViewCandidatesController extends Controller
     public function store(StoreViewCandidateRequest $request)
     {
         $viewCandidate = ViewCandidate::create($request->all());
-
         return redirect()->route('admin.view-candidates.index');
     }
 
     public function edit(ViewCandidate $viewCandidate)
     {
-        abort_if(Gate::denies('view_candidate_edit'), Response::HTTP_FORBIDDEN, '403 Forbidden');
+        abort_if(Gate::denies('view_candidate_edit'),
+            Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         return view('admin.viewCandidates.edit', compact('viewCandidate'));
     }

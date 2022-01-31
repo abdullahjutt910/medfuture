@@ -18,7 +18,7 @@
                         First Name
                     </th>
                     <td>
-                        <i class="fas fa-lock"></i>
+                      {{$candidate->first_name}}  <i class="fas fa-lock"></i>
                     </td>
                 </tr>
                 <tr>
@@ -26,7 +26,7 @@
                         Last Name
                     </th>
                     <td>
-                        <i class="fas fa-lock"></i>
+                        {{$candidate->last_name}}   <i class="fas fa-lock"></i>
                     </td>
                 </tr>
                 <tr>
@@ -34,7 +34,7 @@
                         Gender
                     </th>
                     <td>
-                        <i class="fas fa-lock"></i>
+                        {{$candidate->gender}}     <i class="fas fa-lock"></i>
                     </td>
                 </tr>
                 <tr>
@@ -42,7 +42,7 @@
                         Mobile
                     </th>
                     <td>
-                        <i class="fas fa-lock"></i>
+                        {{$candidate->mobile}}  <i class="fas fa-lock"></i>
                     </td>
                 </tr>
                 <tr>

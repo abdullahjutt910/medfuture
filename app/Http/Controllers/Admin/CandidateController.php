@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Exports\CandidateExport;
 use Gate;
 use App\Models\User;
 use App\Models\Progbar;
@@ -30,242 +31,26 @@ class CandidateController extends Controller
 
     public function index(Request $request)
     {
+
         abort_if(Gate::denies('candidate_access'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
         $candidates = Candidate::with(['media','candidate_profile']);
+        $candidates = $this->filter( $request , $candidates);
 
-        //ID
-        if($request->has('candidate_id') && !empty($request->candidate_id))
+        if ($request->export && $request->export=="excel")
         {
-            $candidates->where('id', 'LIKE', "%{$request->get('candidate_id')}%");
-
-        }
-        //First Name
-        if($request->has('fname') && !empty($request->fname))
-        {
-            $candidates->where('first_name', 'LIKE', "%{$request->get('fname')}%");
-        }
-        //Last Name
-        if($request->has('lname') && !empty($request->lname))
-        {
-            $candidates->where('last_name', 'LIKE', "%{$request->get('lname')}%");
-        }
-        //Email
-        if($request->has('email') && !empty($request->email))
-        {
-            $candidates->where('email', 'LIKE', "%{$request->get('email')}%");
+            return (new CandidateExport($candidates))->download('candidates.csv');
         }
 
-        //gender
-        if($request->has('gender') && !empty($request->gender))
+        if ($request->export && $request->export=="pdf")
         {
-            $candidates->where('gender', 'LIKE', "%{$request->get('gender')}%");
+            return (new  CandidateExport($candidates))->download('candidates.pdf', \Maatwebsite\Excel\Excel::DOMPDF);
+
         }
 
-        //Address 1
-        if($request->has('address_1') && !empty($request->address_1))
-        {
-            $candidates->where('address_1', 'LIKE', "%{$request->get('address_1')}%");
-        }
-        // Address 2
-        if($request->has('address_2') && !empty($request->address_2))
-        {
-            $candidates->where('address_2', 'LIKE', "%{$request->get('address_2')}%");
-        }
-         //City
-         if($request->has('main_city') && !empty($request->main_city))
-        {
-            $candidates->where('main_city', 'LIKE', "%{$request->get('main_city')}%");
-        }
-
-        //state
-        if($request->has('state') && !empty($request->state))
-        {
-            $candidates->where('state', 'LIKE', "%{$request->get('state')}%");
-        }
-
-        //country
-        if($request->has('country') && !empty($request->country))
-        {
-            $candidates->where('country', 'LIKE', "%{$request->get('country')}%");
-        }
-
-        //Post Code
-        if($request->has('post_code') && !empty($request->post_code))
-        {
-            $candidates->where('post_code', 'LIKE', "%{$request->get('post_code')}%");
-        }
-
-        //Mobile number
-        if($request->has('mobile') && !empty($request->mobile))
-        {
-            $candidates->where('mobile', 'LIKE', "%{$request->get('mobile')}%");
-        }
-
-        //Work Phone
-        if($request->has('work') && !empty($request->work))
-        {
-            $candidates->where('work', 'LIKE', "%{$request->get('work')}%");
-        }
-
-        //Registered
-        if($request->has('register') && !empty($request->register))
-        {
-            $candidates->where('register', 'LIKE', "%{$request->get('register')}%");
-        }
-
-        //Verified
-        if($request->has('verified') && !empty($request->verified))
-        {
-            $candidates->where('verified', 'LIKE', "%{$request->get('verified')}%");
-        }
-
-        //CV
-        if($request->has('cv_document') && !empty($request->cv_document))
-        {
-            $candidates->where('cv_document', 'LIKE', "%{$request->get('cv_document')}%");
-        }
-        //Privacy Term
-        if($request->has('privacy_term') && !empty($request->privacy_term))
-        {
-            $candidates->where('privacy_term', 'LIKE', "%{$request->get('privacy_term')}%");
-        }
-        //Source name
-        if($request->has('source_name') && !empty($request->source_name))
-        {
-            $candidates->where('source_name', 'LIKE', "%{$request->get('source_name')}%");
-        }
-
-        //CDF
-        if($request->has('CDF') && !empty($request->CDF))
-        {
-            $candidates->where('CDF', 'LIKE', "%{$request->get('CDF')}%");
-        }
-
-        //Availability
-        if($request->has('availability') && !empty($request->availability))
-        {
-            $candidates->where('availability', 'LIKE', "%{$request->get('availability')}%");
-        }
-
-        //Working Status
-        if($request->has('working_status') && !empty($request->working_status))
-        {
-            $candidates->where('working_status', 'LIKE', "%{$request->get('working_status')}%");
-        }
-
-        //Local Graduate
-        if($request->has('graduation') && !empty($request->graduation))
-        {
-            $candidates->where('graduation', 'LIKE', "%{$request->get('graduation')}%");
-        }
-
-        //Source Type
-        if($request->has('source_name') && !empty($request->source_name))
-        {
-            $candidates->where('source_name', 'LIKE', "%{$request->get('source_name')}%");
-        }
-
-        //Candidate Manager
-        if($request->has('candidate_manager') && !empty($request->candidate_manager))
-        {
-            $candidates->where('candidate_manager', 'LIKE', "%{$request->get('candidate_manager')}%");
-        }
-
-        //Recruitment Consultant
-        if($request->has('recruitement') && !empty($request->recruitement))
-        {
-            $candidates->where('recruitement', 'LIKE', "%{$request->get('recruitement')}%");
-        }
-
-        //Data Administrator
-        if($request->has('administrator') && !empty($request->administrator))
-        {
-            $candidates->where('administrator', 'LIKE', "%{$request->get('administrator')}%");
-        }
-
-        //Division
-        if($request->has('registeration_body') && !empty($request->registeration_body))
-        {
-            $candidates->where('registeration_body', 'LIKE', "%{$request->get('registeration_body')}%");
-        }
-
-        //Visa status
-        if($request->has('devision') && !empty($request->devision))
-        {
-            $candidates->where('devision', 'LIKE', "%{$request->get('devision')}%");
-        }
-
-        //Profession
-        if($request->has('visa_status') && !empty($request->visa_status))
-        {
-            $candidates->where('visa_status', 'LIKE', "%{$request->get('visa_status')}%");
-        }
-
-        //senority
-        if($request->has('profession') && !empty($request->profession))
-        {
-            $candidates->where('profession', 'LIKE', "%{$request->get('profession')}%");
-        }
-
-        //Engagment Type
-        if($request->has('senority') && !empty($request->senority))
-        {
-            $candidates->where('senority', 'LIKE', "%{$request->get('senority')}%");
-        }
-
-        //Home Phone
-        if($request->has('engagement_type') && !empty($request->engagement_type))
-        {
-            $candidates->where('engagement_type', 'LIKE', "%{$request->get('engagement_type')}%");
-        }
-
-        //Prof Qualification
-        if($request->has('home') && !empty($request->home))
-        {
-            $candidates->where('home', 'LIKE', "%{$request->get('home')}%");
-        }
-
-        //Engagment Term
-        if($request->has('professional_qualification') && !empty($request->professional_qualification))
-        {
-            $candidates->where('professional_qualification', 'LIKE', "%{$request->get('professional_qualification')}%");
-        }
-
-        //Employment term
-        if($request->has('employment_type') && !empty($request->employment_type))
-        {
-            $candidates->where('employment_type', 'LIKE', "%{$request->get('employment_type')}%");
-        }
-
-        //Registration via
-        if($request->has('placement_term') && !empty($request->placement_term))
-        {
-            $candidates->where('placement_term', 'LIKE', "%{$request->get('placement_term')}%");
-        }
-
-        //Status
-        if($request->has('registration_via') && !empty($request->registration_via))
-        {
-            $candidates->where('registration_via', 'LIKE', "%{$request->get('registration_via')}%");
-        }
-
-        //Map Address
-        if($request->has('created_at') && !empty($request->created_at))
-        {
-            $candidates->where('created_at', 'LIKE', "%{$request->get('created_at')}%");
-        }
-
-        //created date
-        if($request->has('address_1') && !empty($request->address_1))
-        {
-            $candidates->where('address_1', 'LIKE', "%{$request->get('address_1')}%");
-        }
         $candidates = $candidates->get();
 
-        $count = Candidate::with(['media'])->get()->count();
-
-
+        $count = DB::table('candidates')->count();
 
         return view('admin.candidates.index', compact('candidates', 'count'));
     }
@@ -331,9 +116,9 @@ class CandidateController extends Controller
         $candidate->recruitement = $request->recruitement;
         $candidate->administrator = $request->administrator;
         $candidate->employment_type = $request->employment_type;
+        $candidate->candidate_id = $candidate->shortform($request->devision).$user->id;
         $candidate->username = $request->username;
         $candidate->password = $request->password;
-
 
         if($request->hasfile('cv_document')) {
             $file = $request->file('cv_document')->getClientOriginalName();
@@ -655,6 +440,7 @@ class CandidateController extends Controller
 
         return response()->json(['id' => $media->id, 'url' => $media->getUrl()], Response::HTTP_CREATED);
     }
+
     public function update1(Request $request,$id)
     {
         $candidate = Candidate::find($id);
@@ -676,6 +462,8 @@ class CandidateController extends Controller
         $candidate->save();
         return back();
     }
+
+
     public function updateActivity(Request $request,$id)
     {
         $activebar =Activebar::where('candidate_id',$id)->first();
@@ -694,6 +482,7 @@ class CandidateController extends Controller
         $candidate->save();
         return back();
     }
+
     public function update3(Request $request,$id)
     {
         $candidate = Candidate::find($id);
@@ -729,7 +518,6 @@ class CandidateController extends Controller
         $candidate_profile->save();
         return back();
     }
-
     public function cv_delete(Request $request, $id)
     {
        $cv = Candidate::find($id);
@@ -737,6 +525,7 @@ class CandidateController extends Controller
         $cv->save();
         return back();
     }
+
     public function form_delete(Request $request, $id)
     {
        $cv = Candidate::find($id);
@@ -750,6 +539,24 @@ class CandidateController extends Controller
         $cv->privacy_concerns=null;
         $cv->save();
         return back();
+    }
+
+
+    public  function filter($request , $candidates){
+
+        if (isset($request->slug) && $request->slug != "all")
+        {
+            $candidates->where('candidate_id', 'LIKE','%'. $request->slug .'%');
+        }
+        $searched = array();
+        parse_str($request->getQueryString(), $searched);
+        foreach ($searched as $key  => $value)
+        {
+            if ($value != "") {
+                $candidates->where($key, 'LIKE','%'. $value .'%');
+            }
+        }
+      return $candidates;
     }
 
 
