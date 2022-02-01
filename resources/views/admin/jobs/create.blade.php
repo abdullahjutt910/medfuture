@@ -96,12 +96,8 @@
                                                             {{ $label }}</option>
                                                         @endforeach -->
                                                     </select>
-                                                    @if ($errors->has('devision'))
-                                                    <span class="help-block" role="alert">{{ $errors->first('devision')
-                                                        }}</span>
-                                                    @endif
-                                                    <span class="help-block">{{
-                                                        trans('cruds.job.fields.devision_helper') }}</span>
+
+
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
