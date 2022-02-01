@@ -163,7 +163,7 @@
                             class="{{ request()->is('admin/view-candidates') || request()->is('admin/view-candidates/*') ? 'active' : '' }}">
                             <a href="{{ route('show_client') }}">
                                 <i class="fa-fw fas fa-user-friends"></i>
-                                <span>{{ trans('cruds.viewCandidate.title') }}</span>
+                                <span>View Client</span>
                             </a>
                         </li>
                         <hr class="hr-line">

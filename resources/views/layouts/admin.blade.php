@@ -708,9 +708,23 @@ $(function () {
         }
     });
 
-
-
-    })
+// single job view 
+    $(".position-detil-click").click(function(){
+      $(".position-detil-click .position-hide").toggleClass("position-hide-show");
+    });
+    $(".location-feature-click").click(function(){
+      $(".location-feature-click .position-hide").toggleClass("position-hide-show");
+    });
+    $(" .center-hosptl-click").click(function(){
+      $(".center-hosptl-click .position-hide").toggleClass("position-hide-show");
+    });
+    $(".offer-benefit-click").click(function(){
+      $(".offer-benefit-click .position-hide").toggleClass("position-hide-show");
+    });
+    $(".provided-click").click(function(){
+      $(".provided-click .position-hide").toggleClass("position-hide-show");
+    });
+})
 
     </script>
 

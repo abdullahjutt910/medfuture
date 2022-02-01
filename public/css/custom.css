@@ -393,6 +393,7 @@ h5 {
 .panel {
     border: 0px !important;
     box-shadow: none;
+    margin-bottom: 0px;
 }
 
 .panel-body {
@@ -2988,6 +2989,13 @@ textarea{
 .position-hide{
     display: none;
 }
+.position-hide-show{
+    display: block;
+}
+.position-detil-click,.location-feature-click, .center-hosptl-click, .offer-benefit-click, .provided-click{
+    cursor: pointer;
+} 
+
 /* tool bar css start here */
 .cke_top, .cke_bottom{
     background: #E5E5E5 !important;
@@ -3462,6 +3470,13 @@ textarea{
 
   
   /* add locum job css start here  */
+  .job-add-form select,  .job-edit-main-form select{
+    background-image: url(../img/dashboard/sort_down.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: right;
+    image-rendering: -webkit-optimize-contrast;
+  }
   .work-locate-check{
     display: flex;
     align-items: center;
@@ -3498,6 +3513,9 @@ textarea{
   .add-qa a:hover,  .add-qa a:focus{
     background-color: #778695;
   }
-  .tool-bar .form-group{
-      margin-bottom: 0px;
+  .tool-bar .form-group,  .tool-bar .help-block {
+      margin: 0px;
+  }
+  .locum-job-dtil #questions-container #e-q1{
+    padding: 15px;
   }

@@ -4,7 +4,7 @@
     @foreach ($questions as $question)
     <div id="e-q{{ $question->id }}" class="row">
         <input name="question_id[]" type="hidden" value="{{ $question->id }}">
-        <div class="form-group col-md-5 {{ $errors->has('question') ? 'has-error' : '' }}">
+        <div class="form-group col-md-6 {{ $errors->has('question') ? 'has-error' : '' }}">
             <label for="question">{{ trans('cruds.question.fields.question') }}</label>
             <input class="form-control" type="text" name="question[]" id="question"
                 value="{{ old('question', isset($question) ? $question->question : '') }}">
@@ -13,7 +13,7 @@
             @endif
             <span class="help-block">{{ trans('cruds.question.fields.question_helper') }}</span>
         </div>
-        <div class="form-group col-md-5 {{ $errors->has('answer') ? 'has-error' : '' }}">
+        <div class="form-group col-md-6 {{ $errors->has('answer') ? 'has-error' : '' }}">
             <label for="answer">{{ trans('cruds.question.fields.answer') }}</label>
             <input class="form-control" type="text" name="answer[]" id="answer"
                 value="{{ old('answer', isset($question) ? $question->answer : '') }}">
@@ -23,7 +23,7 @@
             <span class="help-block">{{ trans('cruds.question.fields.answer_helper') }}</span>
         </div>
     </div>
-    <div class="form-group col-md-2">
+    <div class="form-group col-md-12">
         <a class="btn btn-danger" onclick="removeQuestion({{ $question->id }})"> X </a>
     </div>
     @endforeach
