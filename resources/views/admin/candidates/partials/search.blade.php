@@ -261,11 +261,11 @@
                                     <select class="form-control" name="town" id="town">
                                         <option value disabled {{ old('town', null)===null ? 'selected' : '' }}>{{
                                             trans('Suburb/Town') }}</option>
-                                        @foreach(App\Models\Candidate::TOWN_SELECT as $key => $label)
+                                        <!-- @foreach(App\Models\Candidate::TOWN_SELECT as $key => $label)
                                         <option value="{{ $key }}" {{ old('town', '' )===(string) $key ? 'selected' : ''
                                             }}>
                                             {{ $label }}</option>
-                                        @endforeach
+                                        @endforeach -->
                                     </select>
 
                                     @if($errors->has('town'))
@@ -301,11 +301,11 @@
                                         <option value disabled {{ old('district', null)===null ? 'selected' : '' }}>{{
                                             trans('Sub-Regions/district') }}
                                         </option>
-                                        @foreach(App\Models\Candidate::DISTRICT_SELECT as $key =>
+                                        <!-- @foreach(App\Models\Candidate::DISTRICT_SELECT as $key =>
                                         $label)
                                         <option value="{{ $key }}" {{ old('district', '' )===(string) $key ? 'selected'
                                             : '' }}>{{ $label }}</option>
-                                        @endforeach
+                                        @endforeach -->
                                     </select>
 
                                     @if($errors->has('district'))
@@ -371,7 +371,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="form-group {{ $errors->has('profession') ? 'has-error' : '' }}">
-                                    <select class="form-control" name="profession" id="profession">
+                                    <select class="profession-doctor form-control" name="profession" id="profession">
                                         <option value disabled {{ old('profession', null)===null ? 'selected' : '' }}>{{
                                             trans('profession') }}</option>
                                         @foreach(App\Models\Candidate::PROFESSION_SELECT as $key => $label)
@@ -414,11 +414,11 @@
                                     <select class="form-control" name="senority" id="senority">
                                         <option value disabled {{ old('senority', null)===null ? 'selected' : '' }}>{{
                                             trans('senority') }}</option>
-                                        @foreach(App\Models\Candidate::SENORITY_SELECT as $key => $label)
+                                        <!-- @foreach(App\Models\Candidate::SENORITY_SELECT as $key => $label)
                                         <option value="{{ $key }}" {{ old('senority', '' )===(string) $key ? 'selected'
                                             : '' }}>
                                             {{ $label }}</option>
-                                        @endforeach
+                                        @endforeach -->
                                     </select>
 
                                     @if($errors->has('senority'))

@@ -210,7 +210,7 @@
                 </ul>
             </li>
             @endcan
-          
+<!--           
             @can('candidates_management_access')
             <li class="treeview">
                 <a href="#">
@@ -249,10 +249,10 @@
             </li>
 
 
-            @endcan
+            @endcan -->
 
 
-            <li class="treeview">
+            <!-- <li class="treeview">
                 <a href="#">
                     <i class="fa-fw far fa-user">
 
@@ -306,7 +306,7 @@
                     </i>
                     {{ trans('global.logout') }}
                 </a>
-            </li>
+            </li> -->
         </ul>
     </section>
 </aside>

@@ -2362,7 +2362,7 @@ textarea{
     margin-left: 15px;
 }
 
-.seniority-doctor-d-none , .nurse-seniority-d-none,.doctor-specialty-d-none , .nurse-specialty-d-none, .AHP-Specialty-d-none, .HE-Specialty-d-none{
+.nurse-seniority-d-none, .seniority-AHP-d-none,.seniority-HE-d-none , .nurse-specialty-d-none, .AHP-Specialty-d-none, .HE-Specialty-d-none{
     display: none;
 }
 .candidate-profile-table .dataTables_length label{
@@ -3188,19 +3188,19 @@ textarea{
 }
 
 .platinum{
-    background-color: #e5e4e2 !important;
-}
-.silver{
-    background-color: #C0C0C0 !important;
-}
-.gold{
     background-color: #FFD700 !important;
 }
+.silver{
+    background-color: #FFA500 !important;
+}
+.gold{
+    background-color: #0000FF !important;
+}
 .bronz{
-    background-color: #CD7F32 !important;
+    background-color: #FF0000 !important;
 }
 .diamond{
-    background-color: #b9f2ff !important;
+    background-color: #00FF00 !important;
 }
 /* upload icon css */
 .upload_link{
