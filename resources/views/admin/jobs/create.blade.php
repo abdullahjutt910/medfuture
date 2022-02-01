@@ -78,11 +78,7 @@
                                                 <div
                                                     class="form-group {{ $errors->has('devision') ? 'has-error' : '' }}">
                                                     <!-- <label>{{ trans('cruds.job.fields.devision') }}</label> -->
-                                                    <select class="form-control" placeholder="Devision" name="devision"
-                                                        id="devision">
-                                                        <option value disabled {{ old('devision', null)===null
-                                                            ? 'selected' : '' }}>
-                                                            {{ trans('Devision') }}</option>
+                                                    <select class="form-control" placeholder="Devision" name="devision" id="devision">
                                                         <option value="General Practitioners">General
                                                             Practitioners </option>
                                                         <option value="Healthcare Executives">
@@ -140,18 +136,9 @@
                                                         <option value="Midwife">Midwife</option>
                                                         <option value="Dentists">Dentists</option>
 
-                                                        <!-- @foreach (App\Models\Job::DEVISION_SELECT as $key => $label)
-                                                        <option value="{{ $key }}" {{ old('devision', '' )===(string)
-                                                            $key ? 'selected' : '' }}>
-                                                            {{ $label }}</option>
-                                                        @endforeach -->
                                                     </select>
-                                                    @if ($errors->has('devision'))
-                                                    <span class="help-block" role="alert">{{ $errors->first('devision')
-                                                        }}</span>
-                                                    @endif
-                                                    <span class="help-block">{{
-                                                        trans('cruds.job.fields.devision_helper') }}</span>
+
+
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
