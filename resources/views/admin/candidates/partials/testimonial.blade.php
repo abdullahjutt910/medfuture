@@ -162,7 +162,7 @@
                         </div>
                         <div class="col-md-12 profile-eidt-form-btn">
                             <button type="reset" class="btn back-btn">Back</button>
-                            <input type="submit" class="btn" placeholder="Submit">
+                            <input type="submit" class="btn" value="Update">
                         </div>
                     </form>
                 </div>

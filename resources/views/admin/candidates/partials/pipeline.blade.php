@@ -118,7 +118,7 @@
                     <div class=" col-md-12 activity-form-back-btn">
                         <div class=" profile-eidt-form-btn">
                             <button class="btn back-btn pipeline-cancel-btn">Cancel</button>
-                            <input type="submit" class="btn" placeholder="Submit">
+                            <input type="submit" class="btn" value="Submit">
                         </div>
                 </div>
             </form>
@@ -127,7 +127,7 @@
     <div class="pipeline-back-btn">
         <div class="col-md-12 profile-eidt-form-btn">
         <button class="btn back-btn">Back</button>
-        <input type="submit" class="btn" placeholder="Submit">
+        <input type="submit" class="btn" value="Update">
         </div>
     </div>
 </div>

@@ -2858,7 +2858,7 @@
         </table>
         <div class="col-md-12 profile-eidt-form-btn">
             <button class="btn back-btn">Back</button>
-            <input type="submit" class="btn" placeholder="Submit">
+            <input type="submit" class="btn" value="Update">
         </div>
     </form>
     <div class="candidate-date">

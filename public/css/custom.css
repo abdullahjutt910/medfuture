@@ -2273,7 +2273,7 @@ textarea{
     padding: 20px;
 }
 .profile-eidt-form select{
-    background-image: url(../img/dashboard/search-2.png);
+    background-image: url(../img/dashboard/sort_down.png);
     background-repeat: no-repeat;
     background-position: right;
     background-size: 15px;
@@ -2521,7 +2521,13 @@ textarea{
 .company-icon{
     width: 30px !important;
 }
-
+.client-profile-edit-form select{
+    background-image: url(../img/dashboard/sort_down.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: right;
+    image-rendering: -webkit-optimize-contrast;
+}
 .revenue-bar{
     position: relative;
     margin-top: 70px;
@@ -2711,7 +2717,7 @@ textarea{
     padding-bottom: 10px !important;
 }
 .client-icon-buttons img{
-    background-color: transparent !important;
+    background-color: transparent;
     border: 2px solid #fff;
 }
 .mt-10{

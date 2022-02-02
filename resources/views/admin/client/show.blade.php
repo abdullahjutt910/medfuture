@@ -12,7 +12,7 @@
                         <a class="btn btn-default back-candidate" href="#">
                             <div class="less-then-icon"> <i class="fas fa-chevron-left"></i> </div>
                         </a>
-                        <h4>View Candidate Profile</h4>
+                        <h4>View Client Profile</h4>
 
                         <!-- <h4> {{ trans('global.create') }} {{ trans('cruds.candidate.title_singular') }}</h4> -->
                     </div>
@@ -104,6 +104,156 @@
                                                     class="img-fluid" alt="Edit-img"> Edit</button>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="profile-eidt-form">
+                                    <form action="" class="row" method="POST"
+                                        enctype="multipart/form-data">
+                                        @csrf
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="register_company_name">Register Company Name</label>
+                                            <select class="form-control" name="register_company_name" id="register_company_name">
+                                                <option value="" disabled="" selected="">
+                                                    Register Company Name
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="company_name">Company Name</label>
+                                            <input class="form-control" type="text" name="company_name" id="company_name"
+                                                value="Company Name">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="abn_number">ABN Number</label>
+                                            <input class="form-control" type="number" name="abn_number" id="abn_number"
+                                                value="ABN Number">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="office_address">Office Address</label>
+                                            <input class="form-control" type="text" name="office_address" id="office_address"
+                                                value="Office Address">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="mobile_number">Mobile Number</label>
+                                            <input class="form-control" type="number" name="mobile_number" id="mobile_number"
+                                                value="Mobile Number">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="office_number">Office Number</label>
+                                            <input class="form-control" type="number" name="abn_number" id="abn_number"
+                                                value="Office Number">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="email">Email</label>
+                                            <input class="form-control" type="email" name="email" id="email"
+                                                value="Email">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="website">Website</label>
+                                            <input class="form-control" type="url" name="website" id="website"
+                                                value="Website">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="google_address_link">Google Address Link</label>
+                                            <input class="form-control" type="url" name="google_address_link" id="google_address_link"
+                                                value="Google Address Link">
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="category">Category</label>
+                                            <select class="form-control" name="cetagory" id="cetagory">
+                                                <option value="" disabled="" selected="">
+                                                    Cetagory</option>
+                                                <option value="Aboriginal And Torres Strait Islander Health ">
+                                                    Aboriginal And Torres Strait Islander Health </option>
+                                                <option value="Aged Care Information/Referral ">Aged Care
+                                                    Information/Referral </option>
+                                                <option value="Audiological Service">Audiological Service
+                                                </option>
+                                                <option value="Diabetic Education">Diabetic Education</option>
+                                                <option value="Dietetics">Dietetics</option>
+                                                <option value="Disability Information/Referral">Disability
+                                                    Information/Referral</option>
+                                                <option value="Drug And Alcohol Counselling">Drug And Alcohol
+                                                    Counselling</option>
+                                                <option value="Drug And Alcohol Support Group">Drug And Alcohol
+                                                    Support Group</option>
+                                                <option value="Exercise Physiology">Exercise Physiology</option>
+                                                <option value="General Dental Practice">General Dental Practice
+                                                </option>
+                                                <option value="General Practice">General Practice</option>
+                                                <option value="Generalist Counselling">Generalist Counselling
+                                                </option>
+                                                <option value="Health Information/Referral">Health
+                                                    Information/Referral</option>
+                                                <option value="Mental Health">Mental Health</option>
+                                                <option value="Mental Health Information And Referral">Mental
+                                                    Health Information And Referral</option>
+                                                <option value="Optometry">Optometry</option>
+                                                <option value="Pharmacy">Pharmacy</option>
+                                                <option value="Physiotherapy">Physiotherapy</option>
+                                                <option value="Podiatry">Podiatry</option>
+                                                <option value="Psychology">Psychology</option>
+                                                <option value="Respite Care">Respite Care</option>
+                                                <option value="Support Group">Support Group</option>
+                                                <option value="Emergency Department">Emergency Department
+                                                </option>
+                                                <option value="Hospital">Hospital</option>
+                                                <option value="Occupational Therapy">Occupational Therapy
+                                                </option>
+                                                <option value="Social Work">Social Work</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                                <label for="division">Division</label>
+                                            <select class="form-control" name="division" id="division">
+                                                <option value="" disabled="" selected="">
+                                                    Division</option>
+                                                <option value="AHP/ HSS">AHP/ HSS</option>
+                                                <option value="General Practitioners">General Practitioners</option>
+                                                <option value="Healthcare Executives">Healthcare Executives</option>
+                                                <option value="Hospital Doctors">Hospital Doctors</option>
+                                                <option value="Locum Doctors">Locum Doctors</option>
+                                                <option value="Allergologist">Allergologist</option>
+                                                <option value="Nursing Agency ">Nursing Agency</option>
+                                            </select>
+                                        </div>
+
+
+                                        <div class="col-md-12 profile-eidt-form-inner">
+                                            <label for="placement_type">Placement Type</label>
+                                            <select class="form-control" name="placement_type" id="placement_type">
+                                                <option value="" disabled="" selected="">
+                                                    Placement Type</option>
+                                                <option value="Introductory Placement">Introductory Placement</option>
+                                                <option value="Agency Work Force">Agency Work Force</option>
+                                                <option value="Any">Any</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-md-12 profile-eidt-form-inner">
+                                        <label for="ownership_type">Ownership Type</label>
+                                        <select class="form-control" name="ownership_type" id="ownership_type">
+                                            <option value="" disabled="" selected="">
+                                                Ownership Type</option>
+                                            <option value="Corporate">Corporate</option>
+                                            <option value="Government">Government</option>
+                                            <option value="Group">Group</option>
+                                            <option value="Individual Proprietorship">Individual Proprietorship
+                                            </option>
+                                            <option value="Non Profit">Non Profit</option>
+                                            <option value="Other">Other</option>
+                                            <option value="Private">Private</option>
+                                        </select>
+                                    </div>
+                                <div class="col-md-12 profile-eidt-form-inner">
+                                    <label for="branch_subsidiaries_count">Branch | Subsidiaries Count</label>
+                                    <input class="form-control" type="number" name="branch_subsidiaries_count" id="branch_subsidiaries_count"
+                                        value="Branch | Subsidiaries Count">
+                                </div>
+                                <div class="col-md-12 profile-eidt-form-btn">
+                                    <button class="btn back-btn">Back</button>
+                                    <input type="submit" class="btn" value="Update">
+                                </div>
+                                    </form>
                                 </div>
                             </div>
                             <div class="col-md-8 profile-right client-profile-right">
@@ -597,7 +747,514 @@
                                     </div>
                                 </div>
 
+                                <div class="profile-details-eidt-form client-profile-edit-form">
+                                    <form action="" class="row select-dropdown" method="post">
+                                        @csrf
+                                        <div class="col-md-4 form-group">
+                                            <label for="register">Registered Company Name</label>
+                                            <select class="form-control form-select-lg mb-3 abc" name="register"
+                                                aria-label=".form-select-lg example">
+                                                <option value disabled selected>Registered Company Name</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="trade_name">Trade Name</label>
+                                            <input class="form-control" type="text" name="trade_name"
+                                                placeholder="trade_name" id="trade_name" value="">
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="abn">ABN</label>
+                                            <input class="form-control" type="number" name="abn" placeholder="abn"
+                                                id="abn" value="abn">
+                                        </div>
 
+                                        <div
+                                            class="col-md-4 form-group {{ $errors->has('division') ? 'has-error' : '' }}">
+                                            <label for="division">{{ trans('cruds.job.fields.division') }}</label>
+                                            <select class="form-control" name="division" id="division">
+                                                <option value disabled {{ old('division', null)===null ? 'selected' : ''
+                                                    }}>
+                                                    {{ trans('Division') }}</option>
+                                                <option value="AHP/ HSS">AHP/ HSS</option>
+                                                <option value="General Practitioners">General Practitioners</option>
+                                                <option value="Healthcare Executives">Healthcare Executives</option>
+                                                <option value="Hospital Doctors">Hospital Doctors</option>
+                                                <option value="Locum Doctors">Locum Doctors</option>
+                                                <option value="Allergologist">Allergologist</option>
+                                                <option value="Nursing Agency ">Nursing Agency</option>
+                                            </select>
+                                            @if ($errors->has('division'))
+                                            <span class="help-block" role="alert">{{ $errors->first('division')
+                                                }}</span>
+                                            @endif
+                                            <span class="help-block">{{
+                                                trans('cruds.job.fields.division_helper')
+                                                }}</span>
+                                        </div>
+                                        <div
+                                            class="col-md-4 form-group {{ $errors->has('cetagory') ? 'has-error' : '' }}">
+                                            <label for="cetagory">{{ trans('cruds.job.fields.cetagory') }}</label>
+                                            <select class="form-control" name="cetagory" id="cetagory">
+                                                <option value disabled {{ old('cetagory', null)===null ? 'selected' : ''
+                                                    }}>
+                                                    {{ trans('Cetagory') }}</option>
+                                                <option value="Aboriginal And Torres Strait Islander Health ">
+                                                    Aboriginal And Torres Strait Islander Health </option>
+                                                <option value="Aged Care Information/Referral ">Aged Care
+                                                    Information/Referral </option>
+                                                <option value="Audiological Service">Audiological Service
+                                                </option>
+                                                <option value="Diabetic Education">Diabetic Education</option>
+                                                <option value="Dietetics">Dietetics</option>
+                                                <option value="Disability Information/Referral">Disability
+                                                    Information/Referral</option>
+                                                <option value="Drug And Alcohol Counselling">Drug And Alcohol
+                                                    Counselling</option>
+                                                <option value="Drug And Alcohol Support Group">Drug And Alcohol
+                                                    Support Group</option>
+                                                <option value="Exercise Physiology">Exercise Physiology</option>
+                                                <option value="General Dental Practice">General Dental Practice
+                                                </option>
+                                                <option value="General Practice">General Practice</option>
+                                                <option value="Generalist Counselling">Generalist Counselling
+                                                </option>
+                                                <option value="Health Information/Referral">Health
+                                                    Information/Referral</option>
+                                                <option value="Mental Health">Mental Health</option>
+                                                <option value="Mental Health Information And Referral">Mental
+                                                    Health Information And Referral</option>
+                                                <option value="Optometry">Optometry</option>
+                                                <option value="Pharmacy">Pharmacy</option>
+                                                <option value="Physiotherapy">Physiotherapy</option>
+                                                <option value="Podiatry">Podiatry</option>
+                                                <option value="Psychology">Psychology</option>
+                                                <option value="Respite Care">Respite Care</option>
+                                                <option value="Support Group">Support Group</option>
+                                                <option value="Emergency Department">Emergency Department
+                                                </option>
+                                                <option value="Hospital">Hospital</option>
+                                                <option value="Occupational Therapy">Occupational Therapy
+                                                </option>
+                                                <option value="Social Work">Social Work</option>
+                                                <!-- @foreach (App\Models\Job::CETAGORY_SELECT as $key => $label)
+                                                        <option value="{{ $key }}" {{ old('cetagory', '' )===(string)
+                                                            $key ? 'selected' : '' }}>
+                                                            {{ $label }}</option>
+                                                        @endforeach -->
+                                            </select>
+                                            @if ($errors->has('cetagory'))
+                                            <span class="help-block" role="alert">{{ $errors->first('cetagory')
+                                                }}</span>
+                                            @endif
+                                            <span class="help-block">{{
+                                                trans('cruds.job.fields.cetagory_helper') }}</span>
+                                        </div>
+                                        <div
+                                            class="col-md-4 form-group {{ $errors->has('bussiness_service') ? 'has-error' : '' }}">
+                                            <label for="bussiness_service">{{
+                                                trans('cruds.job.fields.bussiness_service') }}</label>
+                                            <select class="form-control" name="bussiness_service"
+                                                id="bussiness_service">
+                                                <option value disabled {{ old('bussiness_service', null)===null
+                                                    ? 'selected' : '' }}>
+                                                    {{ trans('Bussiness Service') }}</option>
+                                                option value="Aged Care">Aged Care</option>
+                                                <option value="Allied Health">Allied Health</option>
+                                                <option value="Alternative & Complementary Therapies">
+                                                    Alternative & Complementary Therapies</option>
+                                                <option value="Cancer Service">Cancer Service</option>
+                                                <option value="Child, Family">Child, Family</option>
+                                                <option value="Community Care">Community Care</option>
+                                                <option value="Community Care - Aboriginal and Torres Strait Islander">
+                                                    Community Care - Aboriginal and Torres Strait Islander
+                                                </option>
+                                                <option value="Community Care - Accommodation">Community Care -
+                                                    Accommodation</option>
+                                                <option value="Community Care - Cardiac Rehabilitation">
+                                                    Community Care - Cardiac Rehabilitation</option>
+                                                <option value="Community Care - Home Support">Community Care -
+                                                    Home Support</option>
+                                                <option value="Community Care - Renal Dialysis">Community Care -
+                                                    Renal Dialysis</option>
+                                                <option value="Counselling">Counselling</option>
+                                                <option value="Dental">Dental</option>
+                                                <option value="Disability Support">Disability Support</option>
+                                                <option value="Drug/Alcohol">Drug/Alcohol</option>
+                                                <option value="General Practice/GP">General Practice/GP</option>
+                                                <option value="Health Information/Referral/Support">Health
+                                                    Information/Referral/Support</option>
+                                                <option value="Hospital">Hospital</option>
+                                                <option value="Mental Health">Mental Health</option>
+                                                <option value="Nurse Led Clinic">Nurse Led Clinic</option>
+                                                <option value="Pain Management">Pain Management</option>
+                                                <option value="Pharmacy">Pharmacy</option>
+                                                <option value="Physical Activity & Recreation">Physical Activity
+                                                    & Recreation</option>
+                                                <option value="Respite/Carer Support">Respite/Carer Support
+                                                </option>
+                                                <option value="Specialist Clinical Pathology">Specialist
+                                                    Clinical Pathology</option>
+                                                <option value="Specialist Medical">Specialist Medical</option>
+                                                <option value="Specialist Obstetrics & Gynaecology">Specialist
+                                                    Obstetrics & Gynaecology</option>
+                                                <option value="Specialist Paediatric">Specialist Paediatric
+                                                </option>
+                                                <option value="Specialist Radiology/Imaging">Specialist
+                                                    Radiology/Imaging</option>
+                                                <option value="Specialist Surgical">Specialist Surgical</option>
+                                                <option value="Support Groups">Support Groups</option>
+                                                <option value="Transport">Transport</option>
+                                                <!-- @foreach (App\Models\Job::BUSSINESS_SERVICE_SELECT as $key =>
+                                                        $label)
+                                                        <option value="{{ $key }}" {{ old('bussiness_service', ''
+                                                            )===(string) $key ? 'selected' : '' }}>
+                                                            {{ $label }}</option>
+                                                        @endforeach -->
+                                            </select>
+                                            @if ($errors->has('bussiness_service'))
+                                            <span class="help-block" role="alert">{{
+                                                $errors->first('bussiness_service') }}</span>
+                                            @endif
+                                            <span class="help-block">{{
+                                                trans('cruds.job.fields.bussiness_service_helper') }}</span>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="registered">Registered</label>
+                                            <select class="form-control" name="registered" id="registered">
+                                                <option value disabled>Registered</option>
+                                                <option value="">Verified</option>
+                                                <option value="4">Agreed</option>
+                                                <option value="6">Audited</option>
+                                                <option value="11">Black Listed</option>
+                                                <option value="2" selected="selected">Contacted</option>
+                                                <option value="9">Declined</option>
+                                                <option value="12">Do not Contact</option>
+                                                <option value="8">Hold</option>
+                                                <option value="7">Listed</option>
+                                                <option value="1">Not Contacted</option>
+                                                <option value="3">Proposed</option>
+                                                <option value="10">Rejected</option>
+                                                <option value="5">Verified</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="registration_by">Registration by</label>
+                                            <input class="form-control" type="number" name="registered_by"
+                                                id="registered_by" value="Registration by">
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="verified">Verified</label>
+                                            <select class="form-control" name="verified" id="verified">
+                                                <option value disabled>Verified</option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="privacy_term">Privacy Term</label>
+                                            <select class="form-control" name="privacy_term" id="privacy_term">
+                                                <option value disabled>Privacy Term</option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="term_condition">Terms and Conditions</label>
+                                            <select class="form-control" name="term_condition" id="term_condition">
+                                                <option value disabled>Terms and Conditions</option>
+                                                <option value="Yes">Yes</option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="working_status">Working Status</label>
+                                            <select class="form-control" name="working_status" id="working_status">
+                                                <option value disabled>Terms and Conditions</option>
+                                                <option value="Awaiting Review" selected="">Awaiting Review
+                                                </option>
+                                                <option value="Contacted">Contacted</option>
+                                                <option value="CV Submitted">CV Submitted
+                                                </option>
+                                                <option value="Declined">Declined</option>
+                                                <option value="Do Not Contact">Do Not Contact
+                                                </option>
+                                                <option value="Interview">Interview</option>
+                                                <option value="Not Contacted">Not Contacted
+                                                </option>
+                                                <option value="Offer">Offer</option>
+                                                <option value="Phone / Direct Screen">Phone /
+                                                    Direct Screen</option>
+                                                <option value="Rejected">Rejected</option>
+                                                <option value="Reviewed">Reviewed</option>
+                                                <option value="Short Listed">Short Listed
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="profile_grade">Grade</label>
+                                            <select class="form-control" name="profile_grade" id="profile_grade">
+                                                <option value disabled>Grade</option>
+                                                <option value="Platinum">Platinum</option>
+                                                <option value="Diamond" selected="">Diamond</option>
+                                                <option value="Gold">Gold</option>
+                                                <option value="Silver">Silver</option>
+                                                <option value="Bronz">Bronz</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="main_city">Capital City</label>
+                                            <select class="form-control form-select-lg mb-3" name="main_city"
+                                                aria-label=".form-select-lg example">
+                                                <option value disabled>Capital City</option>
+                                                <option value="Sydney ">Sydney </option>
+                                                <option value="Coffs Harbour">Coffs Harbour</option>
+                                                <option value="Sunshine Coast">Sunshine Coast</option>
+                                                <option value="Central Coast">Central Coast</option>
+                                                <option value="Cairns">Cairns</option>
+                                                <option value="Townsville">Townsville</option>
+                                                <option value="Ipswich">Ipswich </option>
+                                                <option value="Penrith">Penrith</option>
+                                                <option value="New Castle">New Castle</option>
+                                                <option value="Hervey Bay">Hervey Bay </option>
+                                                <option value="Geelong">Geelong </option>
+                                                <option value="Dubbo">Dubbo </option>
+                                                <option value="Liverpool">Liverpool </option>
+                                                <option value="Ballarat">Ballarat </option>
+                                                <option value="Blue Mountains">Blue Mountains </option>
+                                                <option value="Canberra">Canberra </option>
+                                                <option value="Hobart">Hobart </option>
+                                                <option value="Launceston">Launceston </option>
+                                                <option value="Bundaberg">Bundaberg </option>
+                                                <option value="Albury">Albury </option>
+                                                <option value="Wangaratta ">Wangaratta </option>
+                                                <option value="Wollongong ">Wollongong </option>
+                                                <option value="Bendigo ">Bendigo </option>
+                                                <option value="Grafton ">Grafton </option>
+                                                <option value="Mackay ">Mackay </option>
+                                                <option value="Darwin ">Darwin </option>
+                                                <option value="Bunbury ">Bunbury </option>
+                                                <option value="Gladstone ">Gladstone </option>
+                                                <option value="Wagga Wagga ">Wagga Wagga </option>
+                                                <option value="Toowoomba ">Toowoomba </option>
+                                                <option value="Lismore ">Lismore </option>
+                                                <option value="Campbelltown ">Campbelltown </option>
+                                                <option value="Orange ">Orange </option>
+                                                <option value="Tamworth ">Tamworth </option>
+                                                <option value="Byron bay ">Byron bay </option>
+                                                <option value="Port Macquaire ">Port Macquaire </option>
+                                                <option value="Hills main_city Suburbs ">Hills main_city Suburbs
+                                                </option>
+                                                <option value="Bathurst ">Bathurst </option>
+                                                <option value="Goulbun ">Goulbun </option>
+                                                <option value="Shepparton ">Shepparton </option>
+                                                <option value="Mildura ">Mildura </option>
+                                                <option value="Katherine ">Katherine </option>
+                                                <option value="South West ">South West </option>
+                                                <option value="North West ">North West </option>
+                                                <option value="Central West ">Central West </option>
+                                                <option value="Busselton ">Busselton </option>
+                                                <option value="Gold Coast - North ">Gold Coast - North </option>
+                                                <option value="Gold Coast - South ">Gold Coast - South </option>
+                                                <option value="North Adelaide ">North Adelaide </option>
+                                                <option value="South Adelaide ">South Adelaide </option>
+                                                <option value="Warragul ">Warragul </option>
+                                                <option value="Sale ">Sale </option>
+                                                <option value="Bairnsdale ">Bairnsdale </option>
+                                                <option value="Philip Island ">Philip Island </option>
+                                                <option value="Moe ">Moe </option>
+                                                <option value="Mornington Penninsula ">Mornington Penninsula </option>
+                                                <option value="Kalgoorlie ">Kalgoorlie </option>
+                                                <option value="Geraldton ">Geraldton </option>
+                                                <option value="Moonee " selected="">Moonee </option>
+                                                <option value="Morwell ">Morwell </option>
+                                                <option value="San Jose ">San Jose </option>
+                                                <option value="East Perth ">East Perth </option>
+                                                <option value="Brisbane South  ">Brisbane South </option>
+                                                <option value="Rutherford ">Rutherford </option>
+                                                <option value="Eastern Melbour ">Eastern Melbour </option>
+                                                <option value="Yarra ">Yarra </option>
+                                                <option value="Port Pirie ">Port Pirie </option>
+                                                <option value="Port Lincoln ">Port Lincoln </option>
+                                                <option value="Devonport ">Devonport </option>
+                                                <option value="Alice Springs ">Alice Springs </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="location_status">Location Status</label>
+                                            <select class="form-control form-select-lg mb-3" name="location_status"
+                                                aria-label=".form-select-lg example">
+                                                <option value disabled>Location Status</option>
+                                                <option value="Inner Metro">Inner Metro </option>
+                                                <option value="Outer Metro">Outer Metro</option>
+                                                <option value="Remote Area">Remote Area</option>
+                                                <option value="Rural">Rural</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-4 form-group">
+                                            <label for="signed_date">Signed Date</label>
+                                            <input class="form-control" type="date" name="signed_date" id="signed_date"
+                                                value="Signed Date">
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="client_manager">Client Manager</label>
+                                            <select class="form-control form-select-lg mb-3" name="client_manager"
+                                                aria-label=".form-select-lg example">
+                                                <option value disabled>Client Manager</option>
+                                                <option value="18269">Azra Medfuture</option>
+                                                <option value="8263">Belinda Medfuture</option>
+                                                <option value="17840">Charith Marcus</option>
+                                                <option value="16039">Chathuri Disanayake</option>
+                                                <option value="16316">Dinukshi Perera</option>
+                                                <option value="17839">Isuri Galhena</option>
+                                                <option value="18393">Keerthana Rajasekaram</option>
+                                                <option value="14530">Kethmini Fernando</option>
+                                                <option value="16521">Madhurshana Arunasalam</option>
+                                                <option value="16802">Mary Roshella Silva</option>
+                                                <option value="18517">Michael Medfuture</option>
+                                                <option value="16904">Nigel Ransford Slemmermann</option>
+                                                <option value="1584">Niraj Chenthoran</option>
+                                                <option value="18738">Nuwanga Yainne</option>
+                                                <option value="15887">Prashanthi </option>
+                                                <option value="18169">Priyalini Ravichandran</option>
+                                                <option value="16358">Ragavi Vinojan</option>
+                                                <option value="4585">Rudra Mahendran</option>
+                                                <option value="18516">Saly Medfuture</option>
+                                                <option value="14555">SARANGA LAKMINI</option>
+                                                <option value="2505">Selma Sadikovic</option>
+                                                <option value="14776">Shajenth Sathananthan</option>
+                                                <option value="18739">Sherinka Chandiram</option>
+                                                <option value="13453">Shilpa Sreeja</option>
+                                                <option value="1586">Sree Ranju</option>
+                                                <option value="18265">Uttara Chandratreya</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="rec_consultant">Rec Consultant</label>
+                                            <select class="form-control form-select-lg mb-3" name="rec_consultant"
+                                                aria-label=".form-select-lg example">
+                                                <option value disabled>Rec Consultant</option>
+                                                <option value="18737">Anjali Amanda Fernando</option>
+                                                <option value="18269">Azra Medfuture</option>
+                                                <option value="8263" selected="selected">Belinda Medfuture</option>
+                                                <option value="17840">Charith Marcus</option>
+                                                <option value="16039">Chathuri Disanayake</option>
+                                                <option value="16316">Dinukshi Perera</option>
+                                                <option value="17839">Isuri Galhena</option>
+                                                <option value="18393">Keerthana Rajasekaram</option>
+                                                <option value="14530">Kethmini Fernando</option>
+                                                <option value="16521">Madhurshana Arunasalam</option>
+                                                <option value="16802">Mary Roshella Silva</option>
+                                                <option value="18517">Michael Medfuture</option>
+                                                <option value="16904">Nigel Ransford Slemmermann</option>
+                                                <option value="1584">Niraj Chenthoran</option>
+                                                <option value="18738">Nuwanga Yainne</option>
+                                                <option value="15887">Prashanthi </option>
+                                                <option value="18169">Priyalini Ravichandran</option>
+                                                <option value="16358">Ragavi Vinojan</option>
+                                                <option value="4585">Rudra Mahendran</option>
+                                                <option value="18516">Saly Medfuture</option>
+                                                <option value="14555">SARANGA LAKMINI</option>
+                                                <option value="2505">Selma Sadikovic</option>
+                                                <option value="14776">Shajenth Sathananthan</option>
+                                                <option value="18739">Sherinka Chandiram</option>
+                                                <option value="13453">Shilpa Sreeja</option>
+                                                <option value="1586">Sree Ranju</option>
+                                                <option value="18265">Uttara Chandratreya</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="access_status">Access Status</label>
+                                            <select class="form-control form-select-lg mb-3" name="access_status"
+                                                aria-label=".form-select-lg example">
+                                                <option value disabled>Access Status</option>
+                                                <option value="Enable">Enable </option>
+                                                <option value="Disable">Disable</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="email">Email - Verify</label>
+                                            <select class="form-control form-select-lg mb-3" name="email"
+                                                aria-label=".form-select-lg example">
+                                                <option value disabled>Email - Verify</option>
+                                                <option value="Enable">Enable </option>
+                                                <option value="Disable">Disable</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="registration_via">Registration Via</label>
+                                            <select class="form-control form-select-lg mb-3" name="registration_via"
+                                                aria-label=".form-select-lg example">
+                                                <option value disabled>Registration Via</option>
+                                                <option value="Direct">Direct </option>
+                                                <option value="Back-end">Back-end</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="active">Active</label>
+                                            <select class="form-control form-select-lg mb-3" name="active"
+                                                aria-label=".form-select-lg example">
+                                                <option value="Active">Active</option>
+                                                <option value="In Active">In Active </option>
+                                                <option value="Not Known">Not Known</option>
+                                                <option value="Lost">Lost</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="relationship_status">Relationship Status</label>
+                                            <select class="form-control form-select-lg mb-3" name="relationship_status"
+                                                aria-label=".form-select-lg example">
+                                                <option value disabled>Relationship Status</option>
+                                                <option value="Single">Single </option>
+                                                <option value="Married">Married</option>
+                                                <option value="Widowed">Widowed</option>
+                                                <option value="Separated">Separated</option>
+                                                <option value="Divorced">Divorced</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="service_agreement_agreed">Service Agreement Agreed</label>
+                                            <select class="form-control form-select-lg mb-3"
+                                                name="service_agreement_agreed" aria-label=".form-select-lg example">
+                                                <option value disabled>Service Agreement Agreed</option>
+                                                <option value="Yes">Yes </option>
+                                                <option value="No">No</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="agreed_date">Agreed Date</label>
+                                            <select class="form-control form-select-lg mb-3" name="agreed_date"
+                                                aria-label=".form-select-lg example">
+                                                <option value disabled>Agreed Date</option>
+                                                <option value="Enable">Enable </option>
+                                                <option value="Disable">Disable</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="agreed_month">Agreed Month</label>
+                                            <select class="form-control form-select-lg mb-3" name="agreed_month"
+                                                aria-label=".form-select-lg example">
+                                                <option value disabled>Agreed Month</option>
+                                                <option value="Enable">Enable </option>
+                                                <option value="Disable">Disable</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label for="agreed_year">Agreed Year</label>
+                                            <select class="form-control form-select-lg mb-3" name="agreed_year"
+                                                aria-label=".form-select-lg example">
+                                                <option value disabled>Agreed Year</option>
+                                                <option value="Direct">Direct</option>
+                                                <option value="Back-end">Back-end</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-md-12 profile-eidt-form-btn">
+                                            <button class="btn back-btn">Back</button>
+                                            <input type="submit" class="btn" value="Update">
+                                        </div>
+                                    </form>
+                                </div>
                                 <div class="row profile-details-upload">
                                     <div class="col-md-12">
                                         <div class="row profile-details">
@@ -645,13 +1302,16 @@
                                                         <img src="{{asset('img/dashboard/Download.png')}}"
                                                             class="img-fluid" alt="download">
                                                     </a>
-                                                    <a href="#">
-                                                        <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                            class="img-fluid" alt="Upload">
-                                                    </a>
+                                                    <div class="upload-icon-link">
+                                                        <input id="upload" type="file" name="upload-file" />
+                                                        <a href="#" class="upload_link">
+                                                            <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
+                                                                alt="Upload">
+                                                        </a>
+                                                    </div>
                                                     <a href="#">
                                                         <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                            class="img-fluid" alt="Delete-Trash">
+                                                            class="gray-color img-fluid" alt="Delete-Trash">
                                                     </a>
                                                 </div>
                                             </div>
@@ -708,13 +1368,16 @@
                                                         <img src="{{asset('img/dashboard/Download.png')}}"
                                                             class="img-fluid" alt="download">
                                                     </a>
-                                                    <a href="#">
-                                                        <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                            class="img-fluid" alt="Upload">
-                                                    </a>
+                                                    <div class="upload-icon-link">
+                                                        <input id="upload" type="file" name="upload-file" />
+                                                        <a href="#" class="upload_link">
+                                                            <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
+                                                                alt="Upload">
+                                                        </a>
+                                                    </div>
                                                     <a href="#">
                                                         <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                            class="img-fluid" alt="Delete-Trash">
+                                                            class="gray-color img-fluid" alt="Delete-Trash">
                                                     </a>
                                                 </div>
                                             </div>
@@ -763,14 +1426,26 @@
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="profile-buttons client-icon-buttons">
+                                                    <a href="#">
                                                     <img src="{{asset('img/dashboard/Eye.png')}}" class="img-fluid"
                                                         alt="Eye">
+                                                        </a>
+                                                        <a href="#">
                                                     <img src="{{asset('img/dashboard/Download.png')}}" class="img-fluid"
                                                         alt="download">
-                                                    <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid"
-                                                        alt="Upload">
-                                                    <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                        class="img-fluid" alt="Delete-Trash">
+                                                    </a>
+
+                                                        <div class="upload-icon-link">
+                                                            <input id="upload" type="file" name="upload-file" />
+                                                            <a href="#" class="upload_link">
+                                                                <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
+                                                                    alt="Upload">
+                                                            </a>
+                                                        </div>
+                                                        <a href="#">
+                                                            <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
+                                                                class="gray-color img-fluid" alt="Delete-Trash">
+                                                        </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -780,8 +1455,8 @@
 
                                 </div>
                                 <div class="edit-brn right-profile-edit-btn">
-                                    <button class="btn"><img src=" {{asset('img/dashboard/Edit.png')}}"
-                                            class="img-fluid" alt="Edit-img"> Edit</button>
+                                    <button class="btn files-edit-btn"><img src=" {{asset('img/dashboard/Edit.png')}}" class="img-fluid"
+                                            alt="Edit-img"> Edit</button>
                                 </div>
                                 <div class="forms-colored-div">
                                     <div class="blue"></div>
@@ -1217,7 +1892,7 @@
                                                 </div>
                                                 <div class="col-md-12 profile-eidt-form-btn">
                                                     <button class="btn back-btn">Back</button>
-                                                    <input type="submit" class="btn" placeholder="Submit">
+                                                    <input type="submit" class="btn" value="Update">
                                                 </div>
                                             </form>
                                         </div>
@@ -1711,7 +2386,7 @@
                                                 </div>
                                                 <div class="col-md-12 profile-eidt-form-btn">
                                                     <button class="btn back-btn">Back</button>
-                                                    <input type="submit" class="btn" placeholder="Submit">
+                                                    <input type="submit" class="btn" value="Update">
                                                 </div>
                                             </form>
                                         </div>
@@ -1772,7 +2447,7 @@
                                                 </div>
                                                 <div class="col-md-12 profile-eidt-form-btn">
                                                     <button class="btn back-btn">Back</button>
-                                                    <input type="submit" class="btn" placeholder="Submit">
+                                                    <input type="submit" class="btn" value="Update">
                                                 </div>
                                             </form>
                                         </div>
@@ -3803,13 +4478,16 @@
                                                                             <img src="{{asset('img/dashboard/Download.png')}}"
                                                                                 class="img-fluid" alt="download">
                                                                         </a>
-                                                                        <a href="#">
-                                                                            <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                                                class="img-fluid" alt="Upload">
-                                                                        </a>
+                                                                        <div class="upload-icon-link">
+                                                                            <input id="upload" type="file" name="upload-file" />
+                                                                            <a href="#" class="upload_link">
+                                                                                <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
+                                                                                    alt="Upload">
+                                                                            </a>
+                                                                        </div>
                                                                         <a href="#">
                                                                             <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                                                class="img-fluid" alt="Delete-Trash">
+                                                                                class="gray-color img-fluid" alt="Delete-Trash">
                                                                         </a>
                                                                     </div>
                                                                 </div>
@@ -3849,13 +4527,16 @@
                                                                             <img src="{{asset('img/dashboard/Download.png')}}"
                                                                                 class="img-fluid" alt="download">
                                                                         </a>
-                                                                        <a href="#">
-                                                                            <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                                                class="img-fluid" alt="Upload">
-                                                                        </a>
+                                                                        <div class="upload-icon-link">
+                                                                            <input id="upload" type="file" name="upload-file" />
+                                                                            <a href="#" class="upload_link">
+                                                                                <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
+                                                                                    alt="Upload">
+                                                                            </a>
+                                                                        </div>
                                                                         <a href="#">
                                                                             <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                                                class="img-fluid" alt="Delete-Trash">
+                                                                                class="gray-color img-fluid" alt="Delete-Trash">
                                                                         </a>
                                                                     </div>
                                                                 </div>
@@ -3895,13 +4576,16 @@
                                                                             <img src="{{asset('img/dashboard/Download.png')}}"
                                                                                 class="img-fluid" alt="download">
                                                                         </a>
-                                                                        <a href="#">
-                                                                            <img src="{{asset('img/dashboard/Upload.png')}}"
-                                                                                class="img-fluid" alt="Upload">
-                                                                        </a>
+                                                                        <div class="upload-icon-link">
+                                                                            <input id="upload" type="file" name="upload-file" />
+                                                                            <a href="#" class="upload_link">
+                                                                                <img src="{{asset('img/dashboard/Upload.png')}}" class="img-fluid gray-color"
+                                                                                    alt="Upload">
+                                                                            </a>
+                                                                        </div>
                                                                         <a href="#">
                                                                             <img src="{{asset('img/dashboard/Delete-Trash.png')}}"
-                                                                                class="img-fluid" alt="Delete-Trash">
+                                                                                class="gray-color img-fluid" alt="Delete-Trash">
                                                                         </a>
                                                                     </div>
                                                                 </div>
@@ -3909,7 +4593,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="edit-brn">
-                                                        <button class="btn"><img
+                                                        <button class="btn audio-edit-btn"><img
                                                                 src=" {{asset('img/dashboard/Edit.png')}}"
                                                                 class="img-fluid" alt="Edit-img"> Edit</button>
                                                     </div>
@@ -4034,7 +4718,7 @@
                                                         </div>
                                                         <div class="col-md-12 profile-eidt-form-btn">
                                                             <button class="btn back-btn">Back</button>
-                                                            <input type="submit" class="btn" placeholder="Submit">
+                                                            <input type="submit" class="btn" value="Update">
                                                         </div>
                                                     </div>
                                                 </form>
@@ -4111,7 +4795,7 @@
                                         </div>
                                         <div class="col-md-12 profile-eidt-form-btn">
                                             <button class="btn back-btn">Back</button>
-                                            <input type="submit" class="btn" placeholder="Submit">
+                                            <input type="submit" class="btn" value="Update">
                                         </div>
                                     </form>
                                 </div>
@@ -4565,7 +5249,7 @@
                             <div class=" col-md-12 activity-form-back-btn">
                                 <div class=" profile-eidt-form-btn">
                                     <button class="btn back-btn cancel-btn">Cancel</button>
-                                    <input type="submit" class="btn" placeholder="Submit">
+                                    <input type="submit" class="btn" value="Submit">
                                 </div>
                             </div>
 
@@ -4575,7 +5259,7 @@
                 <div class="activity-back-btn">
                     <div class="col-md-12 profile-eidt-form-btn">
                         <button class="btn back-btn">Back</button>
-                        <input type="submit" class="btn" placeholder="Submit">
+                        <input type="submit" class="btn" value="Update">
                     </div>
                 </div>
 
