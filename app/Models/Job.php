@@ -122,6 +122,7 @@ class Job extends Model implements HasMedia
 
     protected $fillable = [
         'company_name',
+        'string_job_id',
         'trade_name',
         'abn',
         'devision',
