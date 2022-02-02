@@ -37,7 +37,6 @@ class JobsController extends Controller
 
     public function store(StoreJobRequest $request)
     {
-
         $job = Job::create($request->all());
         $job->string_job_id = $job->shortform($request->devision) .$job->id;
         $job->save();

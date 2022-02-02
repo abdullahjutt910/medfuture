@@ -83,75 +83,21 @@
                                                         <option value disabled {{ old('devision', null)===null
                                                             ? 'selected' : '' }}>
                                                             {{ trans('Devision') }}</option>
-                                                        <option value="General Practitioners">General
-                                                            Practitioners </option>
-                                                        <option value="Healthcare Executives">
-                                                            Healthcare
-                                                            Executives </option>
-                                                        <option value="Hospital Doctors">Hospital
-                                                            Doctors
-                                                        </option>
-                                                        <option value="Locum Doctors">Locum Doctors
-                                                        </option>
-                                                        <option value="Nurses &amp; Carers">Nurses &amp;
-                                                            Carers</option>
-                                                        <option value="Allergologist">Allergologist
-                                                        </option>
-                                                        <option value="Arts Therapist ">Arts Therapist
-                                                        </option>
-                                                        <option value="Audiologist">Audiologist</option>
-                                                        <option value="Chiropractor">Chiropractor
-                                                        </option>
-                                                        <option value="Dietitians">Dietitians </option>
-                                                        <option value="Exercise Physiologist">Exercise
-                                                            Physiologist </option>
-                                                        <option value="Genetic Counsellor">Genetic
-                                                            Counsellor</option>
-                                                        <option value="Medical Radiologist">Medical
-                                                            Radiologist </option>
-                                                        <option value="Music Therapist">Music Therapist
-                                                        </option>
-                                                        <option value="Occupational Therapist">
-                                                            Occupational
-                                                            Therapist</option>
-                                                        <option value="Optometrist">Optometrist</option>
-                                                        <option value="Orthotist and prosthetist">
-                                                            Orthotist
-                                                            and prosthetist</option>
-                                                        <option value="Osteopathist">Osteopathist
-                                                        </option>
-                                                        <option value="Perfusionist">Perfusionist
-                                                        </option>
-                                                        <option value="Physiotherapist">Physiotherapist
-                                                        </option>
-                                                        <option value="Podiatrist">Podiatrist</option>
-                                                        <option value="Psychologist">Psychologist
-                                                        </option>
-                                                        <option value="Psychology &amp; Mental health">
-                                                            Psychology &amp; Mental health</option>
-                                                        <option value="Rehabilitation Counsellor">
-                                                            Rehabilitation Counsellor </option>
-                                                        <option value="Sonographer">Sonographer</option>
-                                                        <option value="Specialist service">Specialist
-                                                            service</option>
-                                                        <option value="Speech-pathology">
-                                                            Speech-pathology
-                                                        </option>
-                                                        <option value="Midwife">Midwife</option>
-                                                        <option value="Dentists">Dentists</option>
-
+                                                        <option value="AHP/ HSS">AHP/ HSS</option>
+                                                        <option value="General Practitioners">General Practitioners</option>
+                                                        <option value="Healthcare Executives">Healthcare Executives</option>
+                                                        <option value="Hospital Doctors">Hospital Doctors</option>
+                                                        <option value="Locum Doctors">Locum Doctors</option>
+                                                        <option value="Allergologist">Allergologist</option>
+                                                        <option value="Nursing Agency ">Nursing Agency</option>
                                                         <!-- @foreach (App\Models\Job::DEVISION_SELECT as $key => $label)
                                                         <option value="{{ $key }}" {{ old('devision', '' )===(string)
                                                             $key ? 'selected' : '' }}>
                                                             {{ $label }}</option>
                                                         @endforeach -->
                                                     </select>
-                                                    @if ($errors->has('devision'))
-                                                    <span class="help-block" role="alert">{{ $errors->first('devision')
-                                                        }}</span>
-                                                    @endif
-                                                    <span class="help-block">{{
-                                                        trans('cruds.job.fields.devision_helper') }}</span>
+
+
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
@@ -162,6 +108,45 @@
                                                         <option value disabled {{ old('cetagory', null)===null
                                                             ? 'selected' : '' }}>
                                                             {{ trans('Cetagory') }}</option>
+
+                                                        <option value="Aboriginal And Torres Strait Islander Health ">
+                                                            Aboriginal And Torres Strait Islander Health </option>
+                                                        <option value="Aged Care Information/Referral ">Aged Care
+                                                            Information/Referral </option>
+                                                        <option value="Audiological Service">Audiological Service
+                                                        </option>
+                                                        <option value="Diabetic Education">Diabetic Education</option>
+                                                        <option value="Dietetics">Dietetics</option>
+                                                        <option value="Disability Information/Referral">Disability
+                                                            Information/Referral</option>
+                                                        <option value="Drug And Alcohol Counselling">Drug And Alcohol
+                                                            Counselling</option>
+                                                        <option value="Drug And Alcohol Support Group">Drug And Alcohol
+                                                            Support Group</option>
+                                                        <option value="Exercise Physiology">Exercise Physiology</option>
+                                                        <option value="General Dental Practice">General Dental Practice
+                                                        </option>
+                                                        <option value="General Practice">General Practice</option>
+                                                        <option value="Generalist Counselling">Generalist Counselling
+                                                        </option>
+                                                        <option value="Health Information/Referral">Health
+                                                            Information/Referral</option>
+                                                        <option value="Mental Health">Mental Health</option>
+                                                        <option value="Mental Health Information And Referral">Mental
+                                                            Health Information And Referral</option>
+                                                        <option value="Optometry">Optometry</option>
+                                                        <option value="Pharmacy">Pharmacy</option>
+                                                        <option value="Physiotherapy">Physiotherapy</option>
+                                                        <option value="Podiatry">Podiatry</option>
+                                                        <option value="Psychology">Psychology</option>
+                                                        <option value="Respite Care">Respite Care</option>
+                                                        <option value="Support Group">Support Group</option>
+                                                        <option value="Emergency Department">Emergency Department
+                                                        </option>
+                                                        <option value="Hospital">Hospital</option>
+                                                        <option value="Occupational Therapy">Occupational Therapy
+                                                        </option>
+                                                        <option value="Social Work">Social Work</option>
                                                         <!-- @foreach (App\Models\Job::CETAGORY_SELECT as $key => $label)
                                                         <option value="{{ $key }}" {{ old('cetagory', '' )===(string)
                                                             $key ? 'selected' : '' }}>
@@ -185,6 +170,53 @@
                                                         <option value disabled {{ old('bussiness_service', null)===null
                                                             ? 'selected' : '' }}>
                                                             {{ trans('Bussiness Service') }}</option>
+                                                        <option value="Aged Care">Aged Care</option>
+                                                        <option value="Allied Health">Allied Health</option>
+                                                        <option value="Alternative & Complementary Therapies">
+                                                            Alternative & Complementary Therapies</option>
+                                                        <option value="Cancer Service">Cancer Service</option>
+                                                        <option value="Child, Family">Child, Family</option>
+                                                        <option value="Community Care">Community Care</option>
+                                                        <option
+                                                            value="Community Care - Aboriginal and Torres Strait Islander">
+                                                            Community Care - Aboriginal and Torres Strait Islander
+                                                        </option>
+                                                        <option value="Community Care - Accommodation">Community Care -
+                                                            Accommodation</option>
+                                                        <option value="Community Care - Cardiac Rehabilitation">
+                                                            Community Care - Cardiac Rehabilitation</option>
+                                                        <option value="Community Care - Home Support">Community Care -
+                                                            Home Support</option>
+                                                        <option value="Community Care - Renal Dialysis">Community Care -
+                                                            Renal Dialysis</option>
+                                                        <option value="Counselling">Counselling</option>
+                                                        <option value="Dental">Dental</option>
+                                                        <option value="Disability Support">Disability Support</option>
+                                                        <option value="Drug/Alcohol">Drug/Alcohol</option>
+                                                        <option value="General Practice/GP">General Practice/GP</option>
+                                                        <option value="Health Information/Referral/Support">Health
+                                                            Information/Referral/Support</option>
+                                                        <option value="Hospital">Hospital</option>
+                                                        <option value="Mental Health">Mental Health</option>
+                                                        <option value="Nurse Led Clinic">Nurse Led Clinic</option>
+                                                        <option value="Pain Management">Pain Management</option>
+                                                        <option value="Pharmacy">Pharmacy</option>
+                                                        <option value="Physical Activity & Recreation">Physical Activity
+                                                            & Recreation</option>
+                                                        <option value="Respite/Carer Support">Respite/Carer Support
+                                                        </option>
+                                                        <option value="Specialist Clinical Pathology">Specialist
+                                                            Clinical Pathology</option>
+                                                        <option value="Specialist Medical">Specialist Medical</option>
+                                                        <option value="Specialist Obstetrics & Gynaecology">Specialist
+                                                            Obstetrics & Gynaecology</option>
+                                                        <option value="Specialist Paediatric">Specialist Paediatric
+                                                        </option>
+                                                        <option value="Specialist Radiology/Imaging">Specialist
+                                                            Radiology/Imaging</option>
+                                                        <option value="Specialist Surgical">Specialist Surgical</option>
+                                                        <option value="Support Groups">Support Groups</option>
+                                                        <option value="Transport">Transport</option>
                                                         <!-- @foreach (App\Models\Job::BUSSINESS_SERVICE_SELECT as $key =>
                                                         $label)
                                                         <option value="{{ $key }}" {{ old('bussiness_service', ''
@@ -574,7 +606,7 @@
                                             <select class="form-control" name="district" id="district">
                                                 <option value disabled {{ old('district', null)===null ? 'selected' : ''
                                                     }}>
-                                                    {{ trans('Sub- Region | District') }}</option>
+                                                    {{ trans('Sub-Region | District') }}</option>
                                                 <!-- @foreach (App\Models\Job::DISTRICT_SELECT as $key => $label)
                                                 <option value="{{ $key }}" {{ old('district', '' )===(string) $key
                                                     ? 'selected' : '' }}>
@@ -763,6 +795,14 @@
                                                 <option value disabled {{ old('ownership_type', null)===null
                                                     ? 'selected' : '' }}>
                                                     {{ trans('Ownership Type') }}</option>
+                                                <option value="Corporate">Corporate</option>
+                                                <option value="Government">Government</option>
+                                                <option value="Group">Group</option>
+                                                <option value="Individual Proprietorship">Individual Proprietorship
+                                                </option>
+                                                <option value="Non Profit">Non Profit</option>
+                                                <option value="Other">Other</option>
+                                                <option value="Private">Private</option>
                                                 <!-- @foreach (App\Models\Job::OWNERSHIP_TYPE_SELECT as $key => $label)
                                                 <option value="{{ $key }}" {{ old('ownership_type', '' )===(string) $key
                                                     ? 'selected' : '' }}>
@@ -808,7 +848,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group {{ $errors->has('profession') ? 'has-error' : '' }}">
                                             <!-- <label>{{ trans('cruds.job.fields.profession') }}</label> -->
-                                            <select class="form-control" name="profession" id="profession">
+                                            <select class="profession-doctor form-control" name="profession" id="profession">
                                                 <option value disabled {{ old('profession', null)===null ? 'selected'
                                                     : '' }}>
                                                     {{ trans('Profession') }}</option>
@@ -838,62 +878,13 @@
                                                 <option value disabled {{ old('division', null)===null ? 'selected' : ''
                                                     }}>
                                                     {{ trans('Division') }}</option>
-                                                <option value="General Practitioners">General
-                                                    Practitioners </option>
-                                                <option value="Healthcare Executives">
-                                                    Healthcare
-                                                    Executives </option>
-                                                <option value="Hospital Doctors">Hospital
-                                                    Doctors
-                                                </option>
-                                                <option value="Locum Doctors">Locum Doctors
-                                                </option>
-                                                <option value="Nurses &amp; Carers">Nurses &amp;
-                                                    Carers</option>
-                                                <option value="Allergologist">Allergologist
-                                                </option>
-                                                <option value="Arts Therapist ">Arts Therapist
-                                                </option>
-                                                <option value="Audiologist">Audiologist</option>
-                                                <option value="Chiropractor">Chiropractor
-                                                </option>
-                                                <option value="Dietitians">Dietitians </option>
-                                                <option value="Exercise Physiologist">Exercise
-                                                    Physiologist </option>
-                                                <option value="Genetic Counsellor">Genetic
-                                                    Counsellor</option>
-                                                <option value="Medical Radiologist">Medical
-                                                    Radiologist </option>
-                                                <option value="Music Therapist">Music Therapist
-                                                </option>
-                                                <option value="Occupational Therapist">
-                                                    Occupational
-                                                    Therapist</option>
-                                                <option value="Optometrist">Optometrist</option>
-                                                <option value="Orthotist and prosthetist">
-                                                    Orthotist
-                                                    and prosthetist</option>
-                                                <option value="Osteopathist">Osteopathist
-                                                </option>
-                                                <option value="Perfusionist">Perfusionist
-                                                </option>
-                                                <option value="Physiotherapist">Physiotherapist
-                                                </option>
-                                                <option value="Podiatrist">Podiatrist</option>
-                                                <option value="Psychologist">Psychologist
-                                                </option>
-                                                <option value="Psychology &amp; Mental health">
-                                                    Psychology &amp; Mental health</option>
-                                                <option value="Rehabilitation Counsellor">
-                                                    Rehabilitation Counsellor </option>
-                                                <option value="Sonographer">Sonographer</option>
-                                                <option value="Specialist service">Specialist
-                                                    service</option>
-                                                <option value="Speech-pathology">
-                                                    Speech-pathology
-                                                </option>
-                                                <option value="Midwife">Midwife</option>
-                                                <option value="Dentists">Dentists</option>
+                                                    <option value="AHP/ HSS">AHP/ HSS</option>
+                                                    <option value="General Practitioners">General Practitioners</option>
+                                                    <option value="Healthcare Executives">Healthcare Executives</option>
+                                                    <option value="Hospital Doctors">Hospital Doctors</option>
+                                                    <option value="Locum Doctors">Locum Doctors</option>
+                                                    <option value="Allergologist">Allergologist</option>
+                                                    <option value="Nursing Agency ">Nursing Agency</option>
                                                 <!-- @foreach (App\Models\Job::DIVISION_SELECT as $key => $label)
                                                 <option value="{{ $key }}" {{ old('division', '' )===(string) $key
                                                     ? 'selected' : '' }}>
@@ -910,36 +901,121 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group {{ $errors->has('specialty') ? 'has-error' : '' }}">
-                                            <!-- <label>{{ trans('cruds.job.fields.specialty') }}</label> -->
-                                            <select class="form-control" name="specialty" id="specialty">
+                                             <select class="form-control doctor-specialty-d-none" name="specialty" id="specialty">
                                                 <option value disabled {{ old('specialty', null)===null ? 'selected'
                                                     : '' }}>
                                                     {{ trans('Specialty') }}</option>
-                                                <option value="Anaesthetics">Anaesthetics
-                                                </option>
-                                                <option value="Emergency Medicine ">Emergency
-                                                    Medicine </option>
-                                                <option value="General Practice ">General
-                                                    Practice
-                                                </option>
-                                                <option value="Gastroenterologist">
-                                                    Gastroenterologist</option>
-                                                <option value="Intensive care ">Intensive care
-                                                </option>
-                                                <option value="Medicine">Medicine</option>
-                                                <option value="Obtetrics &amp; Gynaecology ">
-                                                    Obtetrics &amp; Gynaecology </option>
-                                                <option value="Pathologist">Pathologist</option>
-                                                <option value="Peadiatrics">Peadiatrics</option>
-                                                <option value="Psychiatry ">Psychiatry </option>
-                                                <option value="Radiology">Radiology</option>
-                                                <option value="Surgery ">Surgery </option>
-                                                <!-- @foreach (App\Models\Job::SPECIALTY_SELECT as $key => $label)
-                                                <option value="{{ $key }}" {{ old('specialty', '' )===(string) $key
-                                                    ? 'selected' : '' }}>
-                                                    {{ $label }}</option>
-                                                @endforeach -->
-                                            </select>
+                                            <option value="Anaesthetics">Anaesthetics
+                                            </option>
+                                            <option value="Emergency Medicine ">Emergency
+                                                Medicine </option>
+                                            <option value="General Practice ">General
+                                                Practice
+                                            </option>
+                                            <option value="Gastroenterologist">
+                                                Gastroenterologist</option>
+                                            <option value="Intensive care ">Intensive care
+                                            </option>
+                                            <option value="Medicine">Medicine</option>
+                                            <option value="Obtetrics &amp; Gynaecology ">
+                                                Obtetrics &amp; Gynaecology </option>
+                                            <option value="Pathologist">Pathologist</option>
+                                            <option value="Peadiatrics">Peadiatrics</option>
+                                            <option value="Psychiatry ">Psychiatry </option>
+                                            <option value="Radiology">Radiology</option>
+                                            <option value="Surgery ">Surgery </option>
+                                        </select>
+                                        <select class="form-control nurse-specialty-d-none" name="specialty" id="specialty">
+                                                <option value disabled {{ old('specialty', null)===null ? 'selected'
+                                                    : '' }}>
+                                                    {{ trans('Specialty') }}</option>
+                                            <option value="Accident / Emergency / Critical Care & ICU Nurse">
+                                                Accident / Emergency / Critical Care & ICU Nurse
+                                            </option>
+                                            <option value="Age Care ">Age Care </option>
+                                            <option value="Anaesthetic/ Theatre Technician">Anaesthetic/ Theatre Technician
+    
+                                            </option>
+                                            <option value="Assistance in Nurse">
+                                                Assistance in Nurse
+                                            </option>
+                                            <option value="Care Worker">Care Worker
+    
+                                            </option>
+                                            <option value="Community Mental Health " >Community Mental Health
+                                            </option>
+                                            <option value="Community NDIS ">Community NDIS</option>
+                                            <option value="CSSD ">CSSD</option>
+                                            <option value="Educators & Facilitators ">Educators & Facilitators
+                                            </option>
+                                            <option value="General Medical & Surgical">General Medical & Surgical
+                                            </option>
+                                            <option value="Instrument Technician">Instrument Technician
+                                            </option>
+                                            <option value="Mental Health, Forensic & Correctional">
+                                                Mental Health, Forensic & Correctional
+                                            </option>
+                                            <option value="Midwife & Neo - Natal">Midwife & Neo - Natal</option>
+                                            <option value="Orderly">Orderly</option>
+                                            <option value="Paediatric & PICU">Paediatric & PICU</option>
+                                            <option value="Practice Nurse">Practice Nurse</option>
+                                            <option value="Rural & Remote">Rural & Remote</option>
+                                            <option value="Theatre & Recovery">Theatre & Recovery</option>
+    
+                                        </select>
+                                        <select class="form-control AHP-Specialty-d-none" name="specialty" id="specialty">
+                                                <option value disabled {{ old('specialty', null)===null ? 'selected'
+                                                    : '' }}>
+                                                    {{ trans('Specialty') }}</option>
+                                            <option value="Allergologist">
+                                                Allergologist
+                                            </option>
+                                            <option value="Arts Therapist">Arts Therapist</option>
+                                            <option value="Audiologist">Audiologist
+                                            </option>
+                                            <option value="Chiropractor">
+                                            Chiropractor
+                                            </option>
+                                            <option value="Dietitians">Dietitians
+    
+                                            </option>
+                                            <option value="Exercise Physiologist">Exercise Physiologist
+                                            </option>
+                                            <option value="Genetic Counsellor">Genetic Counsellor</option>
+                                            <option value="Medical Radiologist">Medical Radiologist</option>
+                                            <option value="Music Therapist">Music Therapist
+                                            </option>
+                                            <option value="Occupational Therapist">Occupational Therapist
+                                            </option>
+                                            <option value="Optometrist" >Optometrist
+                                            </option>
+                                            <option value="Orthotist and prosthetist">Orthotist and prosthetist</option>
+                                            <option value="Osteopathist">Osteopathist</option>
+                                            <option value="Perfusionist">Perfusionist</option>
+                                            <option value="Physiotherapist">Physiotherapist</option>
+                                            <option value="Podiatrist">Podiatrist</option>
+                                            <option value="Psychologist">Psychologist</option>
+                                            <option value="Psychology & Mental health">Psychology & Mental health</option>
+                                            <option value="Rehabilitation Counsellor">Rehabilitation Counsellor</option>
+                                            <option value="Sonographer">Sonographer</option>
+                                            <option value="Specialist service">Specialist service</option>
+                                            <option value="Speech-pathology">Speech-pathology</option>
+                                        </select>
+                                        <select class="form-control HE-Specialty-d-none" name="specialty" id="specialty">
+                                                <option value disabled {{ old('specialty', null)===null ? 'selected'
+                                                    : '' }}>
+                                                    {{ trans('Specialty') }}</option>
+                                            <option value="Business Managers">Business Managers</option>
+                                            <option value="General Managers" >General Managers</option>
+                                            <option value="Medical Administrators">Medical Administrators</option>
+                                            <option value="Medical Director">Medical Director</option>
+                                            <option value="Medical Receptionist">Medical Receptionist</option>
+                                            <option value="Practice Manager">Practice Manager</option>
+                                            <option value="Professional Management Consultants">Professional Management Consultants</option>
+    
+                                        </select>
+
+                                            
                                             @if ($errors->has('specialty'))
                                             <span class="help-block" role="alert">{{ $errors->first('specialty')
                                                 }}</span>
@@ -950,42 +1026,113 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group {{ $errors->has('seniority') ? 'has-error' : '' }}">
-                                            <!-- <label>{{ trans('cruds.job.fields.seniority') }}</label> -->
-                                            <select class="form-control" name="seniority" id="seniority">
+                                           
+                                            <select class="seniority-doctor-d-none form-control" name="seniority" id="seniority">
                                                 <option value disabled {{ old('seniority', null)===null ? 'selected'
                                                     : '' }}>
                                                     {{ trans('Seniority') }}</option>
-                                                <option value="Internship - PGY Year 1">
-                                                    Internship
-                                                    - PGY Year 1 </option>
-                                                <option value="Junior House Officer - PGY Year 2 ">
-                                                    Junior House Officer - PGY Year 2 </option>
-                                                <option value="Senior House Officer - PGY Year 3 ">
-                                                    Senior House Officer - PGY Year 3 </option>
-                                                <option value="Principal Health Officer – PGY Year 4 ">
-                                                    Principal Health Officer – PGY Year 4
-                                                </option>
-                                                <option value="Registrars">Registrars</option>
-                                                <option value="Senior Registrar">Senior
-                                                    Registrar</option>
-                                                <option value="Provisional Fellowship Year">
-                                                    Provisional Fellowship Year</option>
-                                                <option value="General Practitioner">General
-                                                    Practitioner</option>
-                                                <option value="Specialist">Specialist</option>
-                                                <option value="Staff Specialists">Staff
-                                                    Specialists</option>
-                                                <option value="Senior Medical Officer">Senior
-                                                    Medical Officer</option>
-                                                <option value="Visiting Medical Officer">
-                                                    Visiting Medical Officer</option>
-                                                <option value="Consultant">Consultant</option>
-                                                <!-- @foreach (App\Models\Job::SENIORITY_SELECT as $key => $label)
-                                                <option value="{{ $key }}" {{ old('seniority', '' )===(string) $key
-                                                    ? 'selected' : '' }}>
-                                                    {{ $label }}</option>
-                                                @endforeach -->
-                                            </select>
+                                            <option value="Internship - PGY Year 1">
+                                                Internship
+                                                - PGY Year 1 </option>
+                                            <option
+                                                value="Junior House Officer - PGY Year 2 ">
+                                                Junior House Officer - PGY Year 2 </option>
+                                            <option
+                                                value="Senior House Officer - PGY Year 3 ">
+                                                Senior House Officer - PGY Year 3 </option>
+                                            <option
+                                                value="Principal Health Officer – PGY Year 4 ">
+                                                Principal Health Officer – PGY Year 4
+                                            </option>
+                                            <option value="Registrars" >Registrars</option>
+                                            <option value="Senior Registrar" >Senior
+                                                Registrar</option>
+                                            <option value="Provisional Fellowship Year" >
+                                                Provisional Fellowship Year</option>
+                                            <option value="General Practitioner" >General
+                                                Practitioner</option>
+                                            <option value="Specialist">Specialist</option>
+                                            <option value="Staff Specialists">Staff
+                                                Specialists</option>
+                                            <option value="Senior Medical Officer">Senior
+                                                Medical Officer</option>
+                                            <option value="Visiting Medical Officer" >
+                                                Visiting Medical Officer</option>
+                                            <option value="Consultant" >Consultant</option>
+                                        </select>
+                                        <select class="nurse-seniority-d-none form-control" name="seniority" id="seniority">
+                                                <option value disabled {{ old('seniority', null)===null ? 'selected'
+                                                    : '' }}>
+                                                    {{ trans('Seniority') }}</option>
+                                            <option value="PCA / AIN / Care Worker" >PCA /
+                                                AIN / Care Worker</option>
+                                            <option value="Enrolled Nurse (EN)">Enrolled
+                                                Nurse (EN)</option>
+                                            <option value="Endorsed Enrolled Nurse (EEN)" >
+                                                Endorsed Enrolled Nurse (EEN)</option>
+                                            <option value="Registered Nurse (RN)">Registered
+                                                Nurse (RN)</option>
+                                            <option
+                                                value="Advanced Practice Nurse / Nurse Practitioner">
+                                                Advanced Practice Nurse / Nurse Practitioner
+                                            </option>
+                                            <option value="Specialist">Specialist </option>
+                                            <option
+                                                value="Specialist Nurse / Clinical Nurse Specialist" >
+                                                Specialist Nurse / Clinical Nurse Specialist
+                                            </option>
+                                            <option value="Midwives">Midwives</option>
+                                            <option value="Nurse Manager">Nurse Manager
+                                            </option>
+                                            <option
+                                                value="Director of Nursing Practice (DNP)">
+                                                Director of Nursing Practice (DNP)</option>
+                                            <option value="Chief Nursing Officer (CNO)">
+                                                Chief Nursing Officer (CNO)</option>
+                                        </select>
+                                        <select class="seniority-AHP-d-none form-control" name="seniority" id="seniority">
+                                                <option value disabled {{ old('seniority', null)===null ? 'selected'
+                                                    : '' }}>
+                                                    {{ trans('Seniority') }}</option>
+                                            <option value="Provisional Pychologist">Provisional Pychologist</option>
+                                            <option value="Psychologist">Psychologist</option>
+                                            <option value="Senior Psychologist">Senior Psychologist</option>
+                                            <option value="Provisional Physciotherapist">Provisional Physciotherapist</option>
+                                            <option value="Physciotherapist">Physciotherapist</option>
+                                            <option value="Senior Physciotherapist">Senior Physciotherapist</option>
+                                            <option value="Provisional Podiatrist">Provisional Podiatrist</option>
+                                            <option value="Podiatrist">Podiatrist</option>
+                                            <option value="Senior Podiatrist">Senior Podiatrist</option>
+                                            <option value="Provisional Speech Therapist">Provisional Speech Therapist</option>
+                                            <option value="Speech Therapist">Speech Therapist</option>
+                                            <option value="Senior Speech Therapist">Senior Speech Therapist</option>
+                                            <option value="Provisional Occupational Therapist">Provisional Occupational Therapist</option>
+                                            <option value="Occupational Therapist">Occupational Therapist</option>
+                                            <option value="Senios Occupational Therapist">Senios Occupational Therapist</option>
+                                            <option value="Dentist">Dentist</option>
+                                            <option value="Senior Dentist">Senior Dentist</option>
+                                            <option value="Dentistry Specialist">Dentistry Specialist</option>
+                                            <option value="Provisional Occupational Therapist">Provisional Occupational Therapist</option>
+                                            <option value="Occupational Therapist">Occupational Therapist</option>
+                                            <option value="Senior Occupational Therapist">Senior Occupational Therapist</option>
+                                            <option value="Provisional Dietitians">Provisional Dietitians</option>
+                                            <option value="Dietitians">Dietitians</option>
+                                            <option value="Senior Dietitians">Senior Dietitians</option>
+                                        </select>
+                                        <select class="seniority-HE-d-none form-control" name="seniority" id="seniority">
+                                                <option value disabled {{ old('seniority', null)===null ? 'selected'
+                                                    : '' }}>
+                                                    {{ trans('Seniority') }}</option>
+                                            <option value="Business Managers ">Business Managers </option>
+                                            <option value="General Managers ">General Managers </option>
+                                            <option value="Medical Administrators ">Medical Administrators </option>
+                                            <option value="Medical Director ">Medical Director </option>
+                                            <option value="Medical Receptionist">Medical Receptionist</option>
+                                            <option value="Practice Manager">Practice Manager</option>
+                                            <option value="Professional Management Consultants ">Professional Management Consultants </option>          
+                                        </select>
+
+
                                             @if ($errors->has('seniority'))
                                             <span class="help-block" role="alert">{{ $errors->first('seniority')
                                                 }}</span>
@@ -1023,6 +1170,7 @@
                                                     {{ trans('Placement Type') }}</option>
                                                 <option value="Introductory Placement">Introductory Placement</option>
                                                 <option value="Agency Work Force">Agency Work Force</option>
+                                                <option value="Any">Any</option>
                                                 <!-- @foreach (App\Models\Job::PLACEMENT_TYPE_SELECT as $key => $label)
                                                 <option value="{{ $key }}" {{ old('placement_type', '' )===(string) $key
                                                     ? 'selected' : '' }}>
@@ -1071,6 +1219,7 @@
                                                 <option value="Salaried">Salaried</option>
                                                 <option value="Contractor">Contractor</option>
                                                 <option value="Casual or Locum">Casual or Locum</option>
+                                                <option value="Any">Any</option>
                                                 <!-- @foreach (App\Models\Job::EMPLOYMENT_TYPE_SELECT as $key => $label)
                                                 <option value="{{ $key }}" {{ old('employment_type', '' )===(string)
                                                     $key ? 'selected' : '' }}>
@@ -1323,7 +1472,7 @@
                                             <select class="form-control" name="district" id="district">
                                                 <option value disabled {{ old('district', null)===null ? 'selected' : ''
                                                     }}>
-                                                    {{ trans('Sub- Region | District') }}</option>
+                                                    {{ trans('Sub-Region | District') }}</option>
                                                 <!-- @foreach (App\Models\Job::DISTRICT_SELECT as $key => $label)
                                                 <option value="{{ $key }}" {{ old('district', '' )===(string) $key
                                                     ? 'selected' : '' }}>
@@ -1809,7 +1958,8 @@
                                     <!-- <h3>Terms and Condition</h3> -->
 
                                     <div class="tool-bar">
-                                        <div class="form-group {{ $errors->has('terms_and_condition') ? 'has-error' : '' }}">
+                                        <div
+                                            class="form-group {{ $errors->has('terms_and_condition') ? 'has-error' : '' }}">
                                             <label for="terms_and_condition">{{
                                                 trans('cruds.job.fields.terms_and_condition') }}</label>
                                             <textarea class="form-control ckeditor" name="terms_and_condition"
@@ -1878,11 +2028,34 @@
                                                 <option value disabled {{ old('client_manager', null)===null
                                                     ? 'selected' : '' }}>
                                                     {{ trans('Client Manager') }}</option>
-                                                <!-- @foreach (App\Models\Job::CLIENT_MANAGER_SELECT as $key => $label)
-                                <option value="{{ $key }}" {{ old('client_manager', '' )===(string) $key ? 'selected'
-                                    : '' }}>
-                                    {{ $label }}</option>
-                                @endforeach -->
+                                                <option value="18737">Anjali Amanda Fernando</option>
+                                                <option value="18269">Azra Medfuture</option>
+                                                <option value="8263">Belinda Medfuture</option>
+                                                <option value="17840">Charith Marcus</option>
+                                                <option value="16039">Chathuri Disanayake</option>
+                                                <option value="16316">Dinukshi Perera</option>
+                                                <option value="17839">Isuri Galhena</option>
+                                                <option value="18393">Keerthana Rajasekaram</option>
+                                                <option value="14530">Kethmini Fernando</option>
+                                                <option value="16521">Madhurshana Arunasalam</option>
+                                                <option value="16802">Mary Roshella Silva</option>
+                                                <option value="18517">Michael Medfuture</option>
+                                                <option value="16904">Nigel Ransford Slemmermann</option>
+                                                <option value="1584">Niraj Chenthoran</option>
+                                                <option value="18738">Nuwanga Yainne</option>
+                                                <option value="15887">Prashanthi </option>
+                                                <option value="18169">Priyalini Ravichandran</option>
+                                                <option value="16358">Ragavi Vinojan</option>
+                                                <option value="4585">Rudra Mahendran</option>
+                                                <option value="18516">Saly Medfuture</option>
+                                                <option value="14555">SARANGA LAKMINI</option>
+                                                <option value="2505">Selma Sadikovic</option>
+                                                <option value="14776">Shajenth Sathananthan</option>
+                                                <option value="18739">Sherinka Chandiram</option>
+                                                <option value="13453">Shilpa Sreeja</option>
+                                                <option value="1586">Sree Ranju</option>
+                                                <option value="18265">Uttara Chandratreya</option>
+
                                             </select>
                                             @if ($errors->has('client_manager'))
                                             <span class="help-block" role="alert">{{ $errors->first('client_manager')
@@ -1920,6 +2093,18 @@
                                                 <option value disabled {{ old('data_administrator', null)===null
                                                     ? 'selected' : '' }}>
                                                     {{ trans('Data Administrator') }}</option>
+                                                <option value="18527">Alisha Quib</option>
+                                                <option value="18168">Arzana Medfuture</option>
+                                                <option value="14039">Avijit Brahma</option>
+                                                <option value="8226">Imesha Imesha</option>
+                                                <option value="16953">john doe</option>
+                                                <option value="16701">Navod Abey</option>
+                                                <option value="18736">Nawsar Fathima Anusha</option>
+                                                <option value="8225">Purnima purnima</option>
+                                                <option value="18884">Selina Foenander</option>
+                                                <option value="16907">Sharanya Ramachandran</option>
+                                                <option value="17841">Udayanga Dasunpriya</option>
+                                                <option value="17795">Website Development Medfuture</option>
                                                 <!-- @foreach (App\Models\Job::DATA_ADMINISTRATOR_SELECT as $key => $label)
                                 <option value="{{ $key }}" {{ old('data_administrator', '' )===(string) $key
                                     ? 'selected' : '' }}>

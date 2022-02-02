@@ -9,7 +9,7 @@
             <input class="form-control" type="text" name="question[]" id="question"
                 value="{{ old('question', isset($question) ? $question->question : '') }}">
             @if ($errors->has('question'))
-            <span class="help-block" role="alert">{{ $errors->first('question') }}</span>
+             <span class="help-block" role="alert">{{ $errors->first('question') }}</span>
             @endif
             <span class="help-block">{{ trans('cruds.question.fields.question_helper') }}</span>
         </div>
@@ -61,9 +61,7 @@
         var question = $('#question-fields').clone();
         // $('#questions-container').append(question);
         $('#questions-container').prepend(question);
-        
     }
-
     function removeQuestion(id) {
         $('#e-q' + id).remove();
     }
